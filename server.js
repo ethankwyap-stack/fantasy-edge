@@ -10,7 +10,20 @@ const ANALYSIS_PATH = path.join(__dirname, 'draft-analysis.json');
 const ANALYSIS = fs.readFileSync(ANALYSIS_PATH); // static read for Vercel tracing
 
 const PORT = process.env.PORT || 4650;
+const SECRET = espn.loadEnv().APP_SECRET;
 http.createServer((req, res) => {
+  // secret-link gate: visit /?key=SECRET once, cookie remembers you
+  if (SECRET) {
+    const key = new URL(req.url, 'http://x').searchParams.get('key');
+    if (key === SECRET) {
+      res.writeHead(302, { 'Set-Cookie': `fe_key=${SECRET}; Path=/; Max-Age=31536000; HttpOnly; SameSite=Lax`, Location: '/' });
+      return res.end();
+    }
+    if (!(req.headers.cookie || '').includes('fe_key=' + SECRET)) {
+      res.statusCode = 401;
+      return res.end('Fantasy Edge is private. Open the secret link you were given (ends in ?key=...).');
+    }
+  }
   if (req.url.startsWith('/api/espn')) return espn(req, res);
   if (req.url.startsWith('/draft-analysis.json')) {
     res.setHeader('Content-Type', 'application/json');

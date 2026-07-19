@@ -70,6 +70,15 @@ function weekProj(p, week) {
   return s ? +s.appliedTotal.toFixed(1) : 0;
 }
 
+async function sleeperNames() {
+  // ponytail: the full Sleeper dump is ~5MB; cache just id→name for 24h
+  try { const c = JSON.parse(localStorage.sn); if (Date.now() - c.t < 864e5) return c.d; } catch {}
+  const all = await fetch('https://api.sleeper.app/v1/players/nfl').then(r=>r.json()).catch(()=>({}));
+  const d = {}; for (const id in all) if (all[id].full_name) d[id] = all[id].full_name;
+  try { localStorage.sn = JSON.stringify({t: Date.now(), d}); } catch {}
+  return d;
+}
+
 async function load() {
   try {
     const filter = encodeURIComponent(JSON.stringify({players:{limit:400, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
@@ -99,10 +108,9 @@ async function load() {
     }
     S.players.sort((a,b) => b._vbd - a._vbd);
     // Sleeper trending — match by name
-    const sleeperIds = trending.map(t => t.player_id);
-    if (sleeperIds.length) {
-      const all = await fetch('https://api.sleeper.app/v1/players/nfl').then(r=>r.json()).catch(()=>({}));
-      for (const t of trending) { const sp = all[t.player_id]; if (sp) S.trending[(sp.full_name||'').toLowerCase()] = t.count; }
+    if (trending.length) {
+      const names = await sleeperNames();
+      for (const t of trending) { const n = names[t.player_id]; if (n) S.trending[n.toLowerCase()] = t.count; }
     }
     render();
   } catch (e) { $('#view').innerHTML = '<div class="err">Error: '+e+'<br><br>Check .env has LEAGUE_ID, ESPN_S2, SWID — see README.</div>'; }
@@ -194,12 +202,10 @@ const views = {
     let out = teamPicker() + '<h2>Where each team is strong (total positive VBD by position) — trade your surplus into their gap</h2><table><tr><th>Team</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>Idea</th></tr>';
     for (const t of S.teams) {
       const n = need(t);
-      const idea = t.id===S.myTeamId ? '(you)' : ['RB','WR'].map(pos => {
-        const iHave = sum(mine[pos]), theyHave = sum(n[pos]);
-        const other = pos==='RB'?'WR':'RB';
-        if (sum(mine[pos]) > sum(n[pos])*1.5 && sum(n[other]) > sum(mine[other])*1.5) return `Your ${pos} for their ${other}`;
-        return null;
-      }).filter(Boolean).join('; ') || '—';
+      const P = ['RB','WR','TE'];
+      const idea = t.id===S.myTeamId ? '(you)' : P.flatMap(pos => P.filter(o => o!==pos).map(other =>
+        sum(mine[pos]) > sum(n[pos])*1.5 && sum(n[other]) > sum(mine[other])*1.5 ? `Your ${pos} for their ${other}` : null
+      )).filter(Boolean).join('; ') || '—';
       out += `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${t.name||t.location+' '+t.nickname}</td><td>${Math.round(sum(n.QB))}</td><td>${Math.round(sum(n.RB))}</td><td>${Math.round(sum(n.WR))}</td><td>${Math.round(sum(n.TE))}</td><td>${idea}</td></tr>`;
     }
     return out + '</table>';

@@ -25,3 +25,6 @@ LIVE at https://fantasy-edge-lyart.vercel.app (Vercel team scope `ethan16`, proj
 - waiver-alert.js dry-runs without ANTHROPIC_API_KEY (`node --env-file=.env scripts/waiver-alert.js`): does all free fetches, logs the prompt, saves state, stops before Claude.
 - Alert cron is PDT-pinned UTC (`0 14-23,0-4`); drifts 1h after the Nov PST switch — accepted.
 - ESPN weekly actuals: `statSourceId=0`, stat ids 58=targets, 53=receptions, 23=rush att; use X-Fantasy-Filter `filterStatsForTopScoringPeriodIds` on kona_player_info. NFL schedules: `seasons/{yr}?view=proTeamSchedules_wl` → proTeams[].proGamesByScoringPeriod.
+- Secret-link gate: `/?key=$APP_SECRET` (in `.env` + Vercel env) sets HttpOnly cookie `fe_key`; all routes incl. /api/espn 401 without it. New device/browser needs the full link once.
+- Sleeper full-player dump (~5MB) is cached in localStorage (`sn`, 24h TTL) as id→name only — don't refetch it per refresh.
+- If localhost:4650 misbehaves after a code change: check `lsof -ti:4650` for an orphaned `node server.js` (PPID 1) blocking the KeepAlive LaunchAgent (`launchctl list` shows exit 1). Kill the orphan; launchd restarts fresh.
