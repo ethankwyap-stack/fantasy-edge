@@ -10,15 +10,8 @@ ESPN fantasy football helper suite for Ethan's private PPR league (ID 916578979,
 - LaunchAgent plist created: `~/Library/LaunchAgents/com.ethanyap.fantasy-edge.plist` (always-on localhost:4650). NOT yet loaded.
 - Two local commits exist; no remote yet.
 
-## REMAINING STEPS (in order)
-1. Ethan runs (blocked for the agent by permissions):
-   `cd ~/fantasy-edge && gh repo create fantasy-edge --private --source=. --push`
-2. Ethan runs:
-   `launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.ethanyap.fantasy-edge.plist`
-   then verify http://localhost:4650 loads.
-3. Agent sets repo secrets from `.env`: LEAGUE_ID, SWID, ESPN_S2 (`gh secret set`).
-4. Ethan pastes 3 values the agent cannot read (they live only in stock-agent's GitHub secrets): **ANTHROPIC_API_KEY**, **TELEGRAM_BOT_TOKEN**, **TELEGRAM_CHAT_ID** (stock-agent calls the token `TELEGRAM_TOKEN`). Set them as fantasy-edge repo secrets.
-5. Trigger a test run: `gh workflow run waiver-alert.yml` then confirm the Telegram message arrives on Ethan's phone. Not done until that's observed.
+## REMAINING STEPS
+None — all completed Jul 19 2026. Repo pushed (github.com/ethankwyap-stack/fantasy-edge), LaunchAgent loaded (localhost:4650 → 200), all 6 secrets set (new dedicated "Fantasy Bot" instead of reusing stock-agent's finance bot; fresh Anthropic key), workflow test run succeeded and Telegram message received.
 
 ## Key gotchas (also in CLAUDE.md)
 - ESPN projections: `stats[]` entry with `statSourceId=1 && seasonId=2026`; `scoringPeriodId=0` = season, `=N` = week N. Without the seasonId filter you grab last season.

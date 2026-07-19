@@ -49,13 +49,14 @@ async function main() {
     model: 'claude-opus-4-8',
     max_tokens: 1024,
     thinking: { type: 'adaptive' },
-    system: 'You are an expert PPR fantasy football advisor. Recommend at most 3 concrete moves (e.g. "Add X, drop Y", "Start A over B", "Monitor C\'s injury"). If no move is clearly worth making, say "No moves today." Be terse — this goes to a phone notification. No markdown.',
+    system: 'You are an expert PPR fantasy football advisor. Recommend at most 3 concrete moves (e.g. "Add X, drop Y", "Start A over B", "Monitor C\'s injury"), each with a one-line reason and a conviction score 1-5. Only include moves scoring 4+ (a clear, substantial edge: breakout usage change, injury opening a starting role, must-add before waivers clear). Routine churn, marginal upgrades, and "worth monitoring" chatter do NOT qualify. If nothing scores 4+, reply with exactly NO_ALERT and nothing else. Be terse — this goes to a phone notification. No markdown.',
     messages: [{
       role: 'user',
       content: `Week ${week}. My roster:\n${rosterLines.join('\n') || '(empty — league has not drafted yet; only mention pre-draft-relevant notes)'}\n\nTrending free agents in my league:\n${freeAgents.join('\n') || '(none)'}`
     }],
   });
-  const advice = response.content.filter(b => b.type === 'text').map(b => b.text).join('\n');
+  const advice = response.content.filter(b => b.type === 'text').map(b => b.text).join('\n').trim();
+  if (advice === 'NO_ALERT' || advice.startsWith('NO_ALERT')) return console.log('No substantial moves — staying silent.');
 
   await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
