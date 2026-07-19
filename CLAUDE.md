@@ -3,7 +3,7 @@
 ESPN fantasy football (PPR, private league) helper suite: draft board (VBD, manual tap), start/sit, waiver finder w/ Sleeper trending, trade finder. Zero cost.
 
 ## Stack
-Plain HTML/JS single page (`index.html`), Node proxy for ESPN cookies (`api/espn.js`, Vercel-function-shaped), local server `server.js`, daily Telegram waiver alert via GitHub Actions.
+Plain HTML/JS single page (`index.html`), Node proxy for ESPN cookies (`api/espn.js`, Vercel-function-shaped), local server `server.js`, hourly (7am–9pm PT) change-driven Telegram waiver alert via GitHub Actions — diffs Sleeper trending + roster injuries against state.json (actions/cache) and only calls Claude on changes; dedups sent advice.
 
 ## Live deployment
 LIVE at https://fantasy-edge-lyart.vercel.app (Vercel team scope `ethan16`, project fantasy-edge; env vars LEAGUE_ID, ESPN_S2, SWID, SEASON set in production). Deploy: `vercel deploy --prod --yes`. Alerts: GitHub Actions secrets (same + ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID — reuse stock-agent bot; note stock-agent names its token secret TELEGRAM_TOKEN).
@@ -21,3 +21,7 @@ LIVE at https://fantasy-edge-lyart.vercel.app (Vercel team scope `ethan16`, proj
 - Headless verification: playwright-core + system Chrome (`channel:'chrome'`), driver at scratchpad drive.js pattern.
 - Sleeper trending players matched to ESPN by lowercase full name — DST/name-suffix mismatches expected, cosmetic only.
 - Draft board state (drafted/mine) lives in localStorage only.
+- Alert state (state.json: trending ids, injury map, sent-advice hashes) persists between Actions runs via actions/cache (`key: waiver-state-${{ github.run_id }}` + restore-keys prefix). Gitignored; delete it locally to force a "first run".
+- waiver-alert.js dry-runs without ANTHROPIC_API_KEY (`node --env-file=.env scripts/waiver-alert.js`): does all free fetches, logs the prompt, saves state, stops before Claude.
+- Alert cron is PDT-pinned UTC (`0 14-23,0-4`); drifts 1h after the Nov PST switch — accepted.
+- ESPN weekly actuals: `statSourceId=0`, stat ids 58=targets, 53=receptions, 23=rush att; use X-Fantasy-Filter `filterStatsForTopScoringPeriodIds` on kona_player_info. NFL schedules: `seasons/{yr}?view=proTeamSchedules_wl` → proTeams[].proGamesByScoringPeriod.
