@@ -1,7 +1,8 @@
 name: Waiver alert
 on:
   schedule:
-    - cron: '0 14 * * *'   # daily 7am PT
+    # ponytail: hourly 7am-9pm PDT pinned in UTC; drifts to 6am-8pm after Nov PST switch, acceptable
+    - cron: '0 14-23,0-4 * * *'
   workflow_dispatch:
 jobs:
   alert:
@@ -10,6 +11,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      - uses: actions/cache@v4
+        with:
+          path: state.json
+          key: waiver-state-${{ github.run_id }}
+          restore-keys: waiver-state-
       - run: npm install @anthropic-ai/sdk --no-fund --no-audit
       - run: node scripts/waiver-alert.js
         env:
