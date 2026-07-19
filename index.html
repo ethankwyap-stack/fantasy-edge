@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantasy Edge</title>
+<style>
+  :root { --bg:#0f1420; --card:#1a2233; --text:#e8ecf4; --dim:#8a94a8; --accent:#4ade80; --warn:#fbbf24; --bad:#f87171; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--text); font:15px/1.5 -apple-system,system-ui,sans-serif; padding:16px; }
+  h1 { font-size:20px; margin-bottom:12px; }
+  nav { display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; }
+  nav button { background:var(--card); color:var(--dim); border:0; padding:8px 16px; border-radius:8px; cursor:pointer; font-size:15px; }
+  nav button.on { background:var(--accent); color:#0f1420; font-weight:600; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; }
+  th, td { padding:7px 10px; text-align:left; font-size:14px; }
+  th { color:var(--dim); font-weight:600; border-bottom:1px solid #2a3450; cursor:default; }
+  tr:hover td { background:#222c44; }
+  .pos { font-weight:600; }
+  .pos-QB{color:#f87171} .pos-RB{color:#4ade80} .pos-WR{color:#60a5fa} .pos-TE{color:#fbbf24} .pos-K{color:#c084fc} .pos-DST{color:#94a3b8}
+  .drafted { opacity:.25; text-decoration:line-through; }
+  .mine td { background:#1e3a2a !important; }
+  .btn { background:#2a3450; color:var(--text); border:0; padding:4px 10px; border-radius:6px; cursor:pointer; font-size:13px; }
+  .btn.mine-btn { background:#14532d; }
+  .msg { color:var(--dim); padding:20px; }
+  .err { color:var(--bad); padding:20px; }
+  input[type=search] { background:var(--card); border:1px solid #2a3450; color:var(--text); padding:8px 12px; border-radius:8px; width:240px; margin-bottom:10px; font-size:15px; }
+  .badge { background:#2a3450; border-radius:6px; padding:1px 7px; font-size:12px; color:var(--warn); }
+  .section { margin-bottom:24px; }
+  h2 { font-size:16px; margin:16px 0 8px; color:var(--dim); }
+  .trend { color:var(--accent); font-size:12px; }
+  select { background:var(--card); color:var(--text); border:1px solid #2a3450; padding:6px 10px; border-radius:8px; font-size:14px; margin-bottom:10px; }
+</style>
+</head>
+<body>
+<h1>🏈 Fantasy Edge <span id="league" style="color:var(--dim);font-size:14px;font-weight:400"></span></h1>
+<nav>
+  <button data-tab="draft" class="on">Draft Board</button>
+  <button data-tab="lineup">Start/Sit</button>
+  <button data-tab="waivers">Waivers</button>
+  <button data-tab="trades">Trades</button>
+</nav>
+<div id="view" class="msg">Loading league data…</div>
+
+<script>
+const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
+// ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
+let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'' };
+
+const $ = s => document.querySelector(s);
+const espn = v => fetch('/api/espn?view='+v).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
+
+function seasonProj(p) {
+  // statSourceId 1 = projected, scoringPeriodId 0 = full season
+  const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===0 && s.seasonId===2026);
+  return s ? Math.round(s.appliedTotal) : 0;
+}
+function weekProj(p, week) {
+  const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===week && s.seasonId===2026);
+  return s ? +s.appliedTotal.toFixed(1) : 0;
+}
+
+async function load() {
+  try {
+    const filter = encodeURIComponent(JSON.stringify({players:{limit:400, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
+    const [league, playerData, trending] = await Promise.all([
+      espn('mTeam,mRoster,mSettings'),
+      fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
+      fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[])
+    ]);
+    S.week = league.scoringPeriodId || 1;
+    S.teams = league.teams || [];
+    const size = S.teams.length || 10;
+    REPL = {QB:Math.round(1.2*size), RB:Math.round(2.8*size), WR:Math.round(3.2*size), TE:Math.round(1.2*size), K:size, DST:size};
+    $('#league').textContent = (league.settings?.name||'') + ' · Week ' + S.week;
+    for (const t of S.teams) S.rosters[t.id] = (t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
+    // guess my team via SWID match on owners; fall back to picker
+    S.myTeamId = +localStorage.myTeam || S.teams[0]?.id;
+    S.players = (playerData.players||[]).map(x => x.player).filter(p => POS[p.defaultPositionId]);
+    // VBD: projection minus replacement-level projection at position
+    const byPos = {};
+    for (const p of S.players) (byPos[POS[p.defaultPositionId]] ||= []).push(p);
+    for (const pos in byPos) {
+      byPos[pos].sort((a,b) => seasonProj(b)-seasonProj(a));
+      const repl = seasonProj(byPos[pos][Math.min(REPL[pos], byPos[pos].length-1)] || {});
+      for (const p of byPos[pos]) p._vbd = seasonProj(p) - repl;
+    }
+    S.players.sort((a,b) => b._vbd - a._vbd);
+    // Sleeper trending — match by name
+    const sleeperIds = trending.map(t => t.player_id);
+    if (sleeperIds.length) {
+      const all = await fetch('https://api.sleeper.app/v1/players/nfl').then(r=>r.json()).catch(()=>({}));
+      for (const t of trending) { const sp = all[t.player_id]; if (sp) S.trending[(sp.full_name||'').toLowerCase()] = t.count; }
+    }
+    render();
+  } catch (e) { $('#view').innerHTML = '<div class="err">Error: '+e+'<br><br>Check .env has LEAGUE_ID, ESPN_S2, SWID — see README.</div>'; }
+}
+
+function toggle(set, key, id) { set.has(id) ? set.delete(id) : set.add(id); localStorage[key] = JSON.stringify([...set]); render(); }
+window.tDraft = id => toggle(S.drafted, 'd', id);
+window.tMine = id => { if (!S.mine.has(id)) S.drafted.add(id); toggle(S.mine, 'm', id); localStorage.d = JSON.stringify([...S.drafted]); };
+window.setTeam = id => { S.myTeamId = +id; localStorage.myTeam = id; render(); };
+
+function row(p, extra='') {
+  const pos = POS[p.defaultPositionId];
+  const tr = S.trending[(p.fullName||'').toLowerCase()];
+  return `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}">
+    <td>${p.fullName} ${tr?'<span class="trend">🔥'+tr+'</span>':''}</td>
+    <td class="pos pos-${pos}">${pos}</td>
+    <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>${extra}</tr>`;
+}
+
+const views = {
+  draft() {
+    const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search));
+    return `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
+    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th></th></tr><tbody id="tbody">${
+      list.slice(0,200).map(p => row(p, `<td><button class="btn" onclick="tDraft(${p.id})">✕</button> <button class="btn mine-btn" onclick="tMine(${p.id})">★</button></td>`)).join('')
+    }</tbody></table>`;
+  },
+  lineup() {
+    const roster = S.rosters[S.myTeamId] || [];
+    const rows = roster.map(p => ({p, w: weekProj(p, S.week)})).sort((a,b) => b.w - a.w);
+    if (!rows.length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
+    return teamPicker() + `<h2>Week ${S.week} — sorted by ESPN projection. Start from the top of each position.</h2>
+    <table><tr><th>Player</th><th>Pos</th><th>Wk ${S.week} Proj</th><th>Injury</th></tr>${
+      rows.map(({p,w}) => `<tr><td>${p.fullName}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
+    }</table>`;
+  },
+  waivers() {
+    const rostered = new Set(Object.values(S.rosters).flat().map(p => p.id));
+    const fa = S.players.filter(p => !rostered.has(p.id));
+    const hot = fa.filter(p => S.trending[(p.fullName||'').toLowerCase()]);
+    return `${hot.length?'<h2>🔥 Trending pickups (Sleeper add-counts, last 24h) still free in YOUR league</h2><table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th></tr>'+hot.map(p=>row(p)).join('')+'</table>':''}
+    <h2>Best available by rest-of-season value</h2>
+    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th></tr>${fa.slice(0,40).map(p=>row(p)).join('')}</table>`;
+  },
+  trades() {
+    const need = t => { // surplus/deficit of VBD by position vs league median
+      const by = {}; for (const p of S.rosters[t.id]||[]) { const pl = S.players.find(x=>x.id===p.id); (by[POS[p.defaultPositionId]] ||= []).push(pl?pl._vbd:0); }
+      return by;
+    };
+    const mine = need({id:S.myTeamId});
+    const sum = a => (a||[]).filter(v=>v>0).reduce((x,y)=>x+y,0);
+    let out = teamPicker() + '<h2>Where each team is strong (total positive VBD by position) — trade your surplus into their gap</h2><table><tr><th>Team</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>Idea</th></tr>';
+    for (const t of S.teams) {
+      const n = need(t);
+      const idea = t.id===S.myTeamId ? '(you)' : ['RB','WR'].map(pos => {
+        const iHave = sum(mine[pos]), theyHave = sum(n[pos]);
+        const other = pos==='RB'?'WR':'RB';
+        if (sum(mine[pos]) > sum(n[pos])*1.5 && sum(n[other]) > sum(mine[other])*1.5) return `Your ${pos} for their ${other}`;
+        return null;
+      }).filter(Boolean).join('; ') || '—';
+      out += `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${t.name||t.location+' '+t.nickname}</td><td>${Math.round(sum(n.QB))}</td><td>${Math.round(sum(n.RB))}</td><td>${Math.round(sum(n.WR))}</td><td>${Math.round(sum(n.TE))}</td><td>${idea}</td></tr>`;
+    }
+    return out + '</table>';
+  }
+};
+function teamPicker() {
+  return `<select onchange="setTeam(this.value)">${S.teams.map(t=>`<option value="${t.id}" ${t.id===S.myTeamId?'selected':''}>${t.name||t.location+' '+t.nickname}</option>`).join('')}</select> <span style="color:var(--dim);font-size:13px">← pick YOUR team</span><br>`;
+}
+function render() { $('#view').className=''; $('#view').innerHTML = views[S.tab](); }
+function renderBody() { if (S.tab==='draft') { const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search)); $('#tbody').innerHTML = list.slice(0,200).map(p => row(p, `<td><button class="btn" onclick="tDraft(${p.id})">✕</button> <button class="btn mine-btn" onclick="tMine(${p.id})">★</button></td>`)).join(''); } }
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => { document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); S.tab=b.dataset.tab; render(); });
+load();
+// ponytail: full reload every 5 min keeps data live; websockets overkill for daily-changing data
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>
