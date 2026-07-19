@@ -65,8 +65,8 @@ const SCHEMA = {
         required: ['name', 'tier', 'verdict', 'report', 'floor', 'ceiling', 'badges'],
         properties: {
           name: { type: 'string', description: 'exact player name as given' },
-          tier: { type: 'integer', minimum: 1, maximum: 8 },
-          verdict: { type: 'string', maxLength: 120 },
+          tier: { type: 'integer', description: '1-8 within position group' },
+          verdict: { type: 'string', description: 'one line, max 120 chars' },
           report: { type: 'string' },
           floor: { type: 'number' },
           ceiling: { type: 'number' },
