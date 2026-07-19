@@ -30,6 +30,15 @@
   h2 { font-size:16px; margin:16px 0 8px; color:var(--dim); }
   .trend { color:var(--accent); font-size:12px; }
   select { background:var(--card); color:var(--text); border:1px solid #2a3450; padding:6px 10px; border-radius:8px; font-size:14px; margin-bottom:10px; }
+  .tier { background:#2a3450; color:#60a5fa; border-radius:5px; padding:0 5px; font-size:11px; font-weight:700; }
+  .chip { background:#242e48; border:1px solid #2a3450; border-radius:6px; padding:0 6px; font-size:11px; color:var(--dim); white-space:nowrap; }
+  .chip.good { color:var(--accent); } .chip.risk { color:var(--bad); }
+  .tierbreak td { background:#0f1420 !important; color:#60a5fa; font-weight:700; font-size:12px; padding:3px 10px; border-top:2px solid #365a8c; }
+  .report td { background:#141b2c !important; color:var(--text); font-size:13px; line-height:1.55; padding:10px 14px; white-space:normal; }
+  .report b { color:var(--accent); }
+  .rangebar { position:relative; width:90px; height:8px; background:#2a3450; border-radius:4px; }
+  .rangebar .fill { position:absolute; height:100%; background:#365a8c; border-radius:4px; }
+  .rangebar .mark { position:absolute; top:-2px; width:2px; height:12px; background:var(--accent); }
 </style>
 </head>
 <body>
@@ -46,7 +55,7 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'' };
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set() };
 
 const $ = s => document.querySelector(s);
 const espn = v => fetch('/api/espn?view='+v).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
@@ -64,11 +73,13 @@ function weekProj(p, week) {
 async function load() {
   try {
     const filter = encodeURIComponent(JSON.stringify({players:{limit:400, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending] = await Promise.all([
+    const [league, playerData, trending, analysis] = await Promise.all([
       espn('mTeam,mRoster,mSettings'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
-      fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[])
+      fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
+      fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({}))
     ]);
+    S.analysis = analysis.players || {};
     S.week = league.scoringPeriodId || 1;
     S.teams = league.teams || [];
     const size = S.teams.length || 10;
@@ -111,14 +122,50 @@ function row(p, extra='') {
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>${extra}</tr>`;
 }
 
+const A = name => S.analysis[(name||'').toLowerCase()];
+const GOOD = new Set(['breakout','workhorse','elite','easy-playoffs','handcuff']);
+const RISK = new Set(['split-touches','depth-risk','injury-history','decline-risk','tough-playoffs','td-dependent']);
+window.tExp = id => { S.expanded.has(id) ? S.expanded.delete(id) : S.expanded.add(id); renderBody(); };
+
+function rangeBar(a) {
+  if (!a || a.ceiling == null) return '';
+  const max = S.maxCeil || 1;
+  const l = Math.max(0, a.floor/max*100), r = Math.min(100, a.ceiling/max*100);
+  const m = Math.min(100, (a.proj || (a.floor+a.ceiling)/2)/max*100);
+  return `<div class="rangebar" title="floor ${Math.round(a.floor)} · proj ${a.proj??'?'} · ceiling ${Math.round(a.ceiling)}">
+    <div class="fill" style="left:${l}%;width:${Math.max(2,r-l)}%"></div><div class="mark" style="left:${m}%"></div></div>`;
+}
+function drow(p) {
+  const a = A(p.fullName), pos = POS[p.defaultPositionId];
+  const tr = S.trending[(p.fullName||'').toLowerCase()];
+  const chips = (a?.badges||[]).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ');
+  let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}"${a?` onclick="tExp(${p.id})" style="cursor:pointer"`:''}>
+    <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips}</td>
+    <td class="pos pos-${pos}">${pos}</td>
+    <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
+    <td>${rangeBar(a)}</td>
+    <td><button class="btn" onclick="event.stopPropagation();tDraft(${p.id})">✕</button> <button class="btn mine-btn" onclick="event.stopPropagation();tMine(${p.id})">★</button></td></tr>`;
+  if (a && S.expanded.has(p.id)) out += `<tr class="report"><td colspan="6"><b>${a.verdict||''}</b><br>${a.report||''}<br><span style="color:var(--dim)">Range: ${Math.round(a.floor)} floor · ${a.proj??'?'} proj · ${Math.round(a.ceiling)} ceiling PPR pts</span></td></tr>`;
+  return out;
+}
+function draftRows() {
+  const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search)).slice(0,300);
+  S.maxCeil = Math.max(1, ...list.map(p => A(p.fullName)?.ceiling || 0));
+  // ponytail: overall list mixes position tiers — break rows fire when the running max tier deepens
+  let maxTier = 0, out = '';
+  for (const p of list) {
+    const a = A(p.fullName);
+    if (a && a.tier > maxTier) { maxTier = a.tier; out += `<tr class="tierbreak"><td colspan="6">Tier ${maxTier}</td></tr>`; }
+    out += drow(p);
+  }
+  return out;
+}
+
 const views = {
   draft() {
-    const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search));
     return `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
-    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
-    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th></th></tr><tbody id="tbody">${
-      list.slice(0,200).map(p => row(p, `<td><button class="btn" onclick="tDraft(${p.id})">✕</button> <button class="btn mine-btn" onclick="tMine(${p.id})">★</button></td>`)).join('')
-    }</tbody></table>`;
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
+    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
   },
   lineup() {
     const roster = S.rosters[S.myTeamId] || [];
@@ -162,7 +209,7 @@ function teamPicker() {
   return `<select onchange="setTeam(this.value)">${S.teams.map(t=>`<option value="${t.id}" ${t.id===S.myTeamId?'selected':''}>${t.name||t.location+' '+t.nickname}</option>`).join('')}</select> <span style="color:var(--dim);font-size:13px">← pick YOUR team</span><br>`;
 }
 function render() { $('#view').className=''; $('#view').innerHTML = views[S.tab](); }
-function renderBody() { if (S.tab==='draft') { const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search)); $('#tbody').innerHTML = list.slice(0,200).map(p => row(p, `<td><button class="btn" onclick="tDraft(${p.id})">✕</button> <button class="btn mine-btn" onclick="tMine(${p.id})">★</button></td>`)).join(''); } }
+function renderBody() { if (S.tab==='draft') $('#tbody').innerHTML = draftRows(); }
 document.querySelectorAll('nav button').forEach(b => b.onclick = () => { document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); S.tab=b.dataset.tab; render(); });
 load();
 // ponytail: full reload every 5 min keeps data live; websockets overkill for daily-changing data
