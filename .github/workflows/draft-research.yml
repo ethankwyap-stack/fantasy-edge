@@ -17,7 +17,8 @@ jobs:
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}
       - run: |
-          git config user.name github-actions
-          git config user.email github-actions@users.noreply.github.com
+          # commit as Ethan's account email — Vercel blocks deploys whose HEAD commit author it can't match
+          git config user.name ethankwyap-stack
+          git config user.email ethankw.yap@gmail.com
           git add draft-analysis.json
           git diff --cached --quiet && echo "nothing to commit" || (git commit -m "draft research $(date -u +%F)" && git push)
