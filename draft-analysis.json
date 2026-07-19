@@ -1,1 +1,3802 @@
-{}
+{
+ "generated": "2026-07-19T14:28:45.609Z",
+ "season": 2026,
+ "players": {
+  "bijan robinson": {
+   "tier": 1,
+   "verdict": "True dual-threat workhorse with rising target share; safest high-ceiling RB1 in the pool",
+   "report": "Bijan's line went from 20.1 to 21.8 PPG as his target load jumped to 103 (79 rec), signaling a receiving profile that keeps his PPR floor high even on tough matchups. He owns the backfield with only Brian Robinson as real change-of-pace competition, so a 350+ volume base repeats forward. The ceiling is a scoring title given 287 carries plus elite receiving; the floor is anchored by that pass-game usage. Playoff slate (@WSH, TB, NO) is neutral-to-friendly.",
+   "floor": 295,
+   "ceiling": 400,
+   "badges": [
+    "workhorse",
+    "elite"
+   ],
+   "proj": 352,
+   "rank": 1
+  },
+  "jahmyr gibbs": {
+   "tier": 1,
+   "verdict": "Explosive every-week producer; highest projection with elite receiving upside despite variance",
+   "report": "Gibbs posted back-to-back 363/367-point seasons at 21+ PPG while adding a 94-target campaign in 2025, cementing him as a bell-cow-plus receiving asset. The higher 13.1 weekly stdev reflects boom-bust splashes, but the median is elite. Pacheco arrives as a competitor but Gibbs retains lead touches and third-down work. Ceiling is the RB1 overall; floor stays strong on volume, and the wk15-17 slate (@MIN, NYG, @CHI) offers a soft close.",
+   "floor": 300,
+   "ceiling": 410,
+   "badges": [
+    "workhorse",
+    "elite"
+   ],
+   "proj": 365,
+   "rank": 2
+  },
+  "christian mccaffrey": {
+   "tier": 2,
+   "verdict": "When healthy the RB1 overall (417 in 2025), but age and injury history cap the floor",
+   "report": "CMC's 2025 was historic — 417 points, 24.5 PPG, 129 targets — proving the elite ceiling is fully intact when available. But the 2024 collapse (48 points on injury) is the cautionary tale, and at 9 years experience the games-missed risk is real. His backfield is uncontested, so volume isn't the concern — durability is. Draft him for the league-winning upside while pricing in weeks lost; the wk16 @KC playoff matchup is the one tough spot.",
+   "floor": 225,
+   "ceiling": 410,
+   "badges": [
+    "workhorse",
+    "injury-history",
+    "elite"
+   ],
+   "proj": 350,
+   "rank": 5
+  },
+  "jonathan taylor": {
+   "tier": 2,
+   "verdict": "High-volume rushing workhorse who rebounded to 21.3 PPG; limited pass game caps ceiling",
+   "report": "Taylor bounced back hard from 14.4 PPG in 2024 to 21.3 in 2025 on a massive 323-carry workload, though only 46 receptions keep him rush-dependent and volatile (12.1 stdev). He owns the Colts' backfield with only DJ Giddens behind him, so the carry volume repeats. Ceiling is a top-3 finish if TDs stay high; floor dips on game-script-dependent weeks with thin receiving. Playoff schedule (@TEN, CIN, @CLE) is manageable.",
+   "floor": 250,
+   "ceiling": 355,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 309,
+   "rank": 8
+  },
+  "de'von achane": {
+   "tier": 3,
+   "verdict": "Elite receiving back with 67-78 catches yearly; injury tag and offense quality are the risks",
+   "report": "Achane has strung together 300 and 323-point seasons at 17.6-19.0 PPG, driven by an 85-target receiving role that gives him a rock-solid PPR floor. The Questionable tag and Miami's uncertain offense are the concerns, but his backfield competition (Wright, Gordon) is negligible. Ceiling is a top-5 PPR back if the passing volume holds; floor is protected by receptions even in bad rushing weeks. The wk17 vs BUF close is the lone tough spot.",
+   "floor": 230,
+   "ceiling": 340,
+   "badges": [
+    "injury-history",
+    "workhorse"
+   ],
+   "proj": 293,
+   "rank": 9
+  },
+  "ashton jeanty": {
+   "tier": 3,
+   "verdict": "Bell-cow sophomore with 128 touches of receiving work; ascending role in year two",
+   "report": "Jeanty's rookie line (14.4 PPG, 245 points, 55 catches) was solid for a first-year back on a weak Raiders offense, and the 73-target usage points to a three-down role that should grow. He faces zero real backfield competition (Washington, Laube), so the volume is locked. Ceiling is a leap into low-end RB1 territory as the offense improves; floor is the same steady touch count. Playoff slate (DEN, TEN, @ARI) is neutral.",
+   "floor": 220,
+   "ceiling": 330,
+   "badges": [
+    "workhorse",
+    "breakout"
+   ],
+   "proj": 282,
+   "rank": 11
+  },
+  "james cook iii": {
+   "tier": 3,
+   "verdict": "Efficient volume riser (309 carries) but TD-dependent with modest 33-catch receiving share",
+   "report": "Cook climbed from 15.7 to 17.8 PPG as his carry load jumped to 309, but only 33 catches make him reliant on Buffalo's goal-line scoring for his ceiling. The Bills' potent offense supports touchdown equity, though it also spreads work. No listed competition means his volume is secure. Ceiling is a mid-RB1 finish if TDs spike; floor sags in low-scoring rushing weeks. Playoffs (CHI, @DEN, @MIA) are fine.",
+   "floor": 220,
+   "ceiling": 320,
+   "badges": [
+    "td-dependent",
+    "workhorse"
+   ],
+   "proj": 279,
+   "rank": 13
+  },
+  "jeremiyah love": {
+   "tier": 4,
+   "verdict": "Rookie with lead-back path in ARI; upside pick but veteran Conner lurks on depth chart",
+   "report": "Love enters as the projected Cardinals RB1 with no NFL data, so this is a projection-and-talent bet at ADP 18.6. The depth chart lists him ahead of Allgeier and notably veteran James Conner, which signals real committee risk that could cap early-season touches. Ceiling is a smash rookie season if he seizes the job outright; floor is a frustrating timeshare. The wk15-17 schedule (NYJ, @NO, LV) is one of the friendliest in the group.",
+   "floor": 175,
+   "ceiling": 300,
+   "badges": [
+    "rookie",
+    "split-touches",
+    "easy-playoffs"
+   ],
+   "proj": 279,
+   "rank": 14
+  },
+  "saquon barkley": {
+   "tier": 4,
+   "verdict": "2024 monster regressed to 13.7 PPG in 2025; volume secure but efficiency and age concerns",
+   "report": "Barkley's swing from 355 points (2024) to 232 (2025) is the story — the elite ceiling exists but the recent trend and 8 years of tread are worrying. He still commanded 280 carries behind a great line with Bigsby as the only competition, so touches remain plentiful. Ceiling is a return to top-5 if TD variance rebounds; floor is another efficiency-light season. Playoffs (SEA, HOU, @SF) are middling.",
+   "floor": 220,
+   "ceiling": 340,
+   "badges": [
+    "workhorse",
+    "decline-risk"
+   ],
+   "proj": 273,
+   "rank": 16
+  },
+  "derrick henry": {
+   "tier": 4,
+   "verdict": "Still a 300-carry TD machine but 10 years of tread and slipping PPG flag decline",
+   "report": "Henry dipped from 19.8 to 16.4 PPG as his production softened, and with just 15 catches he's entirely rush/TD-dependent. At 10 years experience the cliff risk is genuine, though Baltimore's offense and his 307-carry role keep the floor respectable. Ceiling is another RB1 line if the Ravens keep feeding him near the goal line; floor is a sharper age-driven fade. Playoffs (@PIT, CLE, @CIN) include two tough divisional matchups.",
+   "floor": 215,
+   "ceiling": 315,
+   "badges": [
+    "td-dependent",
+    "decline-risk",
+    "workhorse"
+   ],
+   "proj": 274,
+   "rank": 18
+  },
+  "omarion hampton": {
+   "tier": 4,
+   "verdict": "Second-year breakout candidate with three-down skills; limited 2025 sample is the caveat",
+   "report": "Hampton flashed a receiving role (35 targets, 32 catches) but only managed 8.0 PPG on 124 carries in a limited rookie usage, so 2026 is a projected role expansion to 279 points. He tops a shallow depth chart (Mitchell, Vidal), pointing to a lead job. Ceiling is a true RB1 breakout if the Chargers commit the volume; floor is a slower ramp given the thin track record. Playoff slate (SF, @MIA, KC) is on the tougher side.",
+   "floor": 200,
+   "ceiling": 320,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 279,
+   "rank": 20
+  },
+  "josh jacobs": {
+   "tier": 5,
+   "verdict": "Reliable volume back who slipped to 13.9 PPG; TD equity in GB offense keeps him relevant",
+   "report": "Jacobs fell from 17.2 to 13.9 PPG as his carries dropped to 234, and MarShawn Lloyd's presence hints at more shared work ahead. He still catches passes (36 rec) and benefits from Green Bay's scoring, giving a stable weekly floor. Ceiling is a bounce toward his 2024 line if he reclaims volume; floor is a fading committee role. Playoffs (MIA, @CHI, HOU) are favorable.",
+   "floor": 210,
+   "ceiling": 305,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 273,
+   "rank": 23
+  },
+  "chase brown": {
+   "tier": 5,
+   "verdict": "Ascending PPR asset with 69 catches; Bengals passing game props up a high floor",
+   "report": "Brown quietly posted 16.6 PPG with an outstanding 88-target, 69-reception receiving profile that anchors his PPR value regardless of rushing efficiency. His low 7.1 stdev signals week-to-week reliability. Perine is a minor threat but Brown owns the lead role. Ceiling is low-RB1 if Cincinnati's offense hums; floor is protected by receptions. Playoff schedule (@CAR, @IND, BAL) is mostly favorable outside the wk17 Ravens tilt.",
+   "floor": 215,
+   "ceiling": 320,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 272,
+   "rank": 25
+  },
+  "breece hall": {
+   "tier": 5,
+   "verdict": "Talented but usage eroding to 12.2 PPG; Allen/Davis committee caps the upside",
+   "report": "Hall's production has slid two straight years (14.2 to 12.2 PPG) as his receiving role shrank from 76 to 48 targets, and Braelon Allen's rise threatens further split touches. The talent for a bounce-back exists if the Jets funnel volume back to him. Ceiling is a mid-RB2 rebound; floor is a frustrating committee on a weak offense. Playoffs (@ARI, NE, MIN) offer decent matchups.",
+   "floor": 195,
+   "ceiling": 300,
+   "badges": [
+    "split-touches",
+    "decline-risk"
+   ],
+   "proj": 273,
+   "rank": 27
+  },
+  "kenneth walker iii": {
+   "tier": 5,
+   "verdict": "New KC home boosts TD upside but career-modest PPG and committee history temper the outlook",
+   "report": "Walker has hovered around 10-11 PPG the last two years with never-elite volume, but a move to Kansas City's high-scoring offense could raise his touchdown ceiling meaningfully. The new-team fit is unproven and KC has historically committee'd its backfield. Ceiling is a low-RB1 line if he becomes the featured back in a great offense; floor is another middling committee year. Playoffs (NE, SF, @LAC) are mixed.",
+   "floor": 190,
+   "ceiling": 310,
+   "badges": [
+    "new-team",
+    "split-touches",
+    "td-dependent"
+   ],
+   "proj": 273,
+   "rank": 30
+  },
+  "javonte williams": {
+   "tier": 6,
+   "verdict": "Rebounded to 14.3 PPG; Dallas lead role but crowded backfield and modest ceiling",
+   "report": "Williams recovered from a rough 9.3 PPG in 2024 to 14.3 in 2025 on a heavier 252-carry workload, showing the knee is behind him. Dallas's depth (Blue, Davis) creates split-touch risk, but he projects as the early-down lead. Ceiling is a steady RB2 in a good offense; floor is a committee squeeze if the rookies emerge. Playoffs (@LAR, JAX, NYG) include a soft wk17.",
+   "floor": 190,
+   "ceiling": 290,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 259,
+   "rank": 34
+  },
+  "kyren williams": {
+   "tier": 6,
+   "verdict": "Steady, low-variance volume back but declining projection and Corum threat cap ceiling",
+   "report": "Kyren has been remarkably consistent (16.0 then 15.5 PPG, sub-7 stdev) on massive carry counts, but his 2026 projection dropped to 232 as Blake Corum's role grows. The low variance gives a dependable floor. Ceiling is limited by the encroaching committee and modest receiving; floor is solid thanks to goal-line work. Playoffs (DAL, @SEA, @TB) are neutral.",
+   "floor": 180,
+   "ceiling": 270,
+   "badges": [
+    "split-touches",
+    "td-dependent"
+   ],
+   "proj": 232,
+   "rank": 35
+  },
+  "travis etienne jr.": {
+   "tier": 6,
+   "verdict": "Bounced back to 14.9 PPG; new NO team adds fit uncertainty but lead-back opportunity",
+   "report": "Etienne rebounded strongly from a dismal 7.7 PPG in 2024 to 14.9 in 2025, restoring RB2 relevance on decent volume (260 carries, 36 catches). Moving to New Orleans introduces new-team uncertainty around role and offensive quality. Ceiling is a low-RB2 if he locks the lead job; floor is a committee/low-scoring drag. Playoffs (@TB, ARI, @ATL) are workable.",
+   "floor": 170,
+   "ceiling": 280,
+   "badges": [
+    "new-team"
+   ],
+   "proj": 241,
+   "rank": 36
+  },
+  "cam skattebo": {
+   "tier": 7,
+   "verdict": "Intriguing rookie role but low 7.5 PPG sample, injury tag, and Tracy competition",
+   "report": "Skattebo's rookie line (7.5 PPG, 128 points) came on limited touches with a high 9.7 stdev, and the Questionable tag plus Tyrone Tracy's presence cloud his 2026 workload. The 32-target receiving usage is a bright spot for PPR. Ceiling is a breakout if he wins the NYG job outright; floor is a low-volume committee back on a poor offense. Playoffs (CLE, @DET, @DAL) skew tough.",
+   "floor": 150,
+   "ceiling": 285,
+   "badges": [
+    "rookie",
+    "split-touches",
+    "injury-history"
+   ],
+   "proj": 242,
+   "rank": 39
+  },
+  "bucky irving": {
+   "tier": 7,
+   "verdict": "2024 flash (14.4 PPG) cratered to 8.1 in 2025; injury and Gainwell competition raise flags",
+   "report": "Irving's sophomore slump (from 244 points to 139) plus a Questionable tag makes his 2026 a projection bet on a return to his rookie form. Kenny Gainwell's arrival adds real split-touch risk in Tampa's backfield. Ceiling is a rebound toward the 14+ PPG of 2024 if healthy and featured; floor is an injury-shortened committee season. Playoffs (NO, @ATL, LAR) are mostly favorable.",
+   "floor": 150,
+   "ceiling": 285,
+   "badges": [
+    "injury-history",
+    "split-touches",
+    "decline-risk"
+   ],
+   "proj": 217,
+   "rank": 43
+  },
+  "quinshon judkins": {
+   "tier": 2,
+   "verdict": "Rookie workhorse who commanded 230 carries; goal-line role gives real RB2 upside",
+   "report": "Judkins logged 230 carries and 26 grabs as a rookie for 10.0 PPG, and the 2026 projection of 225 signals an expanded workload as the clear lead back. His ceiling case is a true bell-cow with goal-line duties pushing him toward RB1 numbers; the floor is a modest committee if Sampson or Sanders siphon touches and the 'Questionable' tag lingers. Sampson (#2) is a legit change-of-pace threat, so passing-down work isn't guaranteed. A tough wk16 @BAL playoff spot is offset by a soft wk17 vs IND.",
+   "floor": 160,
+   "ceiling": 260,
+   "badges": [
+    "workhorse",
+    "injury-history",
+    "breakout"
+   ],
+   "proj": 225,
+   "rank": 46
+  },
+  "treveyon henderson": {
+   "tier": 2,
+   "verdict": "Explosive rookie with dual-threat profile; 12.1 PPG on limited carries points up",
+   "report": "Henderson averaged 12.1 PPG with 35 receptions on just 180 carries, a receiving-friendly usage that plays perfectly in PPR. The ceiling is a lead role if he seizes early-down work from an aging Stevenson, pushing 250+ points. The floor is a timeshare where Stevenson keeps the between-tackles carries, capping volume. A brutal wk15 @KC playoff draw hurts, but wk16 @NYJ and wk17 vs DEN are manageable.",
+   "floor": 160,
+   "ceiling": 265,
+   "badges": [
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 208,
+   "rank": 52
+  },
+  "d'andre swift": {
+   "tier": 2,
+   "verdict": "Back-to-back 210+ point seasons with low variance; the safest floor in this range",
+   "report": "Swift has posted 214 and 229 points in consecutive seasons at ~13 PPG with a tidy 7.0-ish stdev, the model of consistency. He handled 223 carries and 34 catches in 2025 with no real threat behind him (Monangai, Roschon), making his workhorse role secure. The ceiling isn't sky-high given Chicago's offense, but the floor is rock-solid as a weekly RB2. Playoff slate is mixed with a tough wk15 @BUF but a friendly wk17 vs DET.",
+   "floor": 175,
+   "ceiling": 255,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 212,
+   "rank": 61
+  },
+  "tony pollard": {
+   "tier": 3,
+   "verdict": "Reliable 240-carry volume and steady mid-11 PPG make him a dependable RB2",
+   "report": "Pollard is remarkably steady, delivering 11.8 then 10.9 PPG with the lowest stdev in this tier and a heavy 242-carry workload. Spears remains a passing-down complement but hasn't cut into Pollard's rushing dominance. The ceiling is limited by the shared backfield and offense, but the floor is high thanks to bankable volume. All three playoff matchups (IND, @LV, PIT) are neutral-to-favorable.",
+   "floor": 155,
+   "ceiling": 225,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 190,
+   "rank": 75
+  },
+  "jaylen warren": {
+   "tier": 3,
+   "verdict": "Broke out to 12.8 PPG but Dowdle's arrival threatens a true committee",
+   "report": "Warren leapt from 7.3 to 12.8 PPG with 40 catches and 211 carries, finally handling a lead role. The concern is Pittsburgh adding Rico Dowdle, who also produced 12.7 PPG, setting up a genuine split that caps both. If Warren wins the job outright he's a low-end RB2; if it's 50/50 he's a flex. Playoff schedule is fine with wk16 CAR and wk17 @TEN both soft.",
+   "floor": 145,
+   "ceiling": 235,
+   "badges": [
+    "split-touches",
+    "breakout"
+   ],
+   "proj": 191,
+   "rank": 80
+  },
+  "bhayshul tuten": {
+   "tier": 4,
+   "verdict": "Big projection leap on speed upside, but 5.2 PPG actual makes it a bet",
+   "report": "Tuten's 2026 projection of 205 is a massive jump from his 89-point, 5.2-PPG rookie line on just 83 carries. The bet is that Jacksonville hands the ascending speedster a featured role over a thin depth chart (Rodriguez, Allen). The ceiling is a breakout lead back if the volume materializes; the floor is another year as a rotational piece. Playoffs are neutral with wk17 vs WSH the best spot.",
+   "floor": 110,
+   "ceiling": 250,
+   "badges": [
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 205,
+   "rank": 60
+  },
+  "david montgomery": {
+   "tier": 4,
+   "verdict": "PPG dropped from 13.0 to 9.8 as Woody Marks emerges; committee decline risk",
+   "report": "Montgomery slid from 222 points (13.0 PPG) in 2024 to 167 (9.8) in 2025 with carries falling to 158, a worrying trend at age 29. Woody Marks is a rising complement who threatens to take the passing-down and eventually early-down work. The floor is a touchdown-dependent grinder; the ceiling requires goal-line volume in a good Houston offense. Playoff draw is average with a rough wk16 @PHI.",
+   "floor": 130,
+   "ceiling": 210,
+   "badges": [
+    "split-touches",
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 192,
+   "rank": 63
+  },
+  "chuba hubbard": {
+   "tier": 4,
+   "verdict": "Collapsed from 14.2 to 7.4 PPG; Brooks' return clouds the backfield",
+   "report": "Hubbard was a top-15 back in 2024 at 14.2 PPG but crashed to 7.4 in 2025 amid injury and reduced usage. With Jonathon Brooks returning from injury and Etienne added, Carolina's backfield is crowded. The ceiling is a bounce-back to lead-back volume if he stays healthy and holds off Brooks; the floor is an early-season timeshare. His wk5 bye means a clean playoff run with wk17 vs SEA notable.",
+   "floor": 120,
+   "ceiling": 230,
+   "badges": [
+    "decline-risk",
+    "split-touches"
+   ],
+   "proj": 185,
+   "rank": 64
+  },
+  "rico dowdle": {
+   "tier": 4,
+   "verdict": "Two straight ~12 PPG seasons but now splits Pittsburgh's backfield with Warren",
+   "report": "Dowdle quietly produced 198 then 216 points, both around 12 PPG, proving he can carry a load with 235+ carries. The problem is he's listed as Pittsburgh's RB2 behind Warren, a fresh committee that caps his volume. High weekly stdev (9.5) shows boom-bust tendencies. If he wins early-down work he's a flex-plus; if not he's a bench stash with the same soft wk16/17 playoff slate as Warren.",
+   "floor": 120,
+   "ceiling": 225,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 185,
+   "rank": 88
+  },
+  "rj harvey": {
+   "tier": 4,
+   "verdict": "Rookie posted 12.2 PPG on receiving work; Dobbins split limits the ceiling",
+   "report": "Harvey impressed with 47 catches and 12.2 PPG as a rookie, showing pass-catching chops in Denver's scheme. He's the RB2 behind Dobbins, but his receiving role gives him a stable PPR floor even in a committee. The ceiling opens if the aging Dobbins fades and Harvey takes over the lead. Playoff schedule is mixed with wk16 vs BUF the toughest.",
+   "floor": 120,
+   "ceiling": 220,
+   "badges": [
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 167,
+   "rank": 97
+  },
+  "jadarian price": {
+   "tier": 5,
+   "verdict": "Unproven rookie penciled as SEA RB1, but Charbonnet lurks; pure projection bet",
+   "report": "Price has no NFL data yet but carries a 194 projection and the RB1 depth label in Seattle. This is entirely a bet on draft capital and opportunity, with Zach Charbonnet a proven complement who will contest touches. The ceiling is a surprise lead-back season; the floor is a rookie committee where he's the flex-fringe piece. Extreme uncertainty makes him a boom-bust dart with a tough wk15 @PHI.",
+   "floor": 90,
+   "ceiling": 215,
+   "badges": [
+    "rookie",
+    "split-touches"
+   ],
+   "proj": 194,
+   "rank": 54
+  },
+  "aaron jones sr.": {
+   "tier": 5,
+   "verdict": "Crashed from 14.2 to 7.0 PPG; age and injury make the decline hard to ignore",
+   "report": "Jones was a top-tier RB2 in 2024 at 14.2 PPG but plummeted to 7.0 in 2025 on just 132 carries. At his age the receiving role (28 catches) offers some PPR floor, but the trend and durability concerns are real. The ceiling is a partial bounce-back if healthy; the floor is a marginalized veteran. Playoff schedule is solid with wk16 vs WSH and wk17 @NYJ favorable.",
+   "floor": 105,
+   "ceiling": 205,
+   "badges": [
+    "decline-risk",
+    "injury-history"
+   ],
+   "proj": 189,
+   "rank": 76
+  },
+  "kenny gainwell": {
+   "tier": 5,
+   "verdict": "73 catches drove 13.0 PPG, but he's Tampa's RB2 behind Bucky Irving now",
+   "report": "Gainwell's 2025 was a receiving outlier — 73 catches for 221 points — but that came in a specialized role that won't fully carry to Tampa. He's listed as the RB2 behind Bucky Irving, capping his rushing volume and touchdown upside. The ceiling is retaining a pass-catching specialist role worth flex value; the floor is a low-touch backup. High 9.1 stdev underscores the volatility.",
+   "floor": 90,
+   "ceiling": 195,
+   "badges": [
+    "depth-risk",
+    "split-touches"
+   ],
+   "proj": 172,
+   "rank": 85
+  },
+  "rachaad white": {
+   "tier": 5,
+   "verdict": "Fell to 8.4 PPG and now backs up Croskey-Merritt in Washington; role squeeze",
+   "report": "White declined from 11.7 to 8.4 PPG as his rushing role shrank, and he arrives in Washington as the RB2 behind Croskey-Merritt. His receiving ability (40 catches) keeps a PPR floor, but the backfield split limits upside. The ceiling requires an injury ahead of him or a receiving-back carve-out; the floor is a rotational piece. Playoff slate is decent with wk15 vs ATL.",
+   "floor": 105,
+   "ceiling": 185,
+   "badges": [
+    "split-touches",
+    "depth-risk"
+   ],
+   "proj": 175,
+   "rank": 87
+  },
+  "j.k. dobbins": {
+   "tier": 5,
+   "verdict": "Slid to 6.8 PPG with minimal receiving; Harvey timeshare and injury history",
+   "report": "Dobbins dropped to 6.8 PPG in 2025 with just 11 catches, a thin usage profile despite the RB1 label. Rookie RJ Harvey already outproduced him and looms as a co-lead, making this a true committee. The ceiling is a healthy season commanding early-down and goal-line work; the floor is his well-documented injury risk cutting the year short. Playoff draw includes a tough wk16 vs BUF.",
+   "floor": 95,
+   "ceiling": 195,
+   "badges": [
+    "injury-history",
+    "split-touches",
+    "td-dependent"
+   ],
+   "proj": 171,
+   "rank": 89
+  },
+  "rhamondre stevenson": {
+   "tier": 5,
+   "verdict": "Steady ~10.5 PPG but now RB2 behind Henderson; very high weekly variance",
+   "report": "Stevenson has posted back-to-back ~10 PPG seasons, but his carries fell to 130 and he's now behind rookie TreVeyon Henderson. His 10.0 stdev is the highest here, signaling wild week-to-week swings and touchdown dependence. The ceiling is short-yardage and goal-line value plus injury insurance; the floor is a fading committee back. A wk15 @KC playoff matchup is unappealing.",
+   "floor": 110,
+   "ceiling": 205,
+   "badges": [
+    "split-touches",
+    "td-dependent",
+    "decline-risk"
+   ],
+   "proj": 191,
+   "rank": 92
+  },
+  "jacory croskey-merritt": {
+   "tier": 5,
+   "verdict": "Rookie flashed 8.3 PPG and holds RB1 label, but White complicates the split",
+   "report": "Croskey-Merritt produced 140 points on 175 carries as a rookie and enters 2026 atop Washington's depth chart. His minimal receiving role (9 catches) caps PPR upside and Rachaad White's arrival threatens the passing-down and possibly early-down work. The ceiling is a lead-back breakout if he holds the job; the floor is a committee grind. Playoffs are fine with wk15 vs ATL.",
+   "floor": 90,
+   "ceiling": 190,
+   "badges": [
+    "split-touches",
+    "breakout"
+   ],
+   "proj": 152,
+   "rank": 111
+  },
+  "kyle monangai": {
+   "tier": 6,
+   "verdict": "Rookie produced behind Swift; valuable handcuff but limited standalone value",
+   "report": "Monangai posted 8.6 PPG on 169 carries as a rookie but sits firmly behind D'Andre Swift, who is entrenched as Chicago's workhorse. His value is primarily as a high-upside handcuff — if Swift misses time he'd inherit a strong role. The floor is minimal standalone touches; the ceiling requires an injury ahead of him. Playoff slate includes a tough wk15 @BUF.",
+   "floor": 80,
+   "ceiling": 180,
+   "badges": [
+    "handcuff",
+    "depth-risk"
+   ],
+   "proj": 176,
+   "rank": 99
+  },
+  "blake corum": {
+   "tier": 6,
+   "verdict": "Buried behind Kyren Williams; pure handcuff with league-winner upside on injury",
+   "report": "Corum's 7.2 PPG in 2025 came in a limited role behind Kyren Williams, and nothing about the depth chart suggests standalone value in 2026. He's a classic handcuff — draft him for the massive upside if Kyren goes down in the Rams' RB-friendly offense. The floor is near-zero weekly production; the ceiling is a lead-back windfall. Playoff matchups are neutral.",
+   "floor": 70,
+   "ceiling": 190,
+   "badges": [
+    "handcuff",
+    "depth-risk"
+   ],
+   "proj": 159,
+   "rank": 101
+  },
+  "jonathon brooks": {
+   "tier": 7,
+   "verdict": "Coming off major injury with no recent data; deep dart behind Hubbard",
+   "report": "Brooks has no usable data after missing time to injury and profiles as the RB2 behind Chuba Hubbard. The 145 projection reflects both talent and heavy uncertainty about his health and role. The ceiling is significant if he's fully recovered and Hubbard's decline continues, but the floor is a lost season or minimal touches. This is a late-round stash with real risk. Wk5 bye means a full playoff run available.",
+   "floor": 40,
+   "ceiling": 170,
+   "badges": [
+    "injury-history",
+    "depth-risk",
+    "split-touches"
+   ],
+   "proj": 145,
+   "rank": 106
+  },
+  "zach charbonnet": {
+   "tier": 1,
+   "verdict": "Highest actual production in this tier and elite Walker handcuff, but injury tag caps confidence",
+   "report": "Charbonnet posted 181 points (10.7 PPG) in 2025 and 187 (11.0) in 2024, easily the best two-year floor in this group even as the clear RB2. His ceiling is a top-15 back if the lead man misses time, given he's proven he can carry a full workload (184 carries) and catch (42 rec in 2024). The floor case is muted touches in a shared backfield plus the Questionable injury tag. Playoff slate is rough with @PHI in Week 15, but the standalone value is real.",
+   "floor": 108,
+   "ceiling": 225,
+   "badges": [
+    "handcuff",
+    "injury-history",
+    "tough-playoffs"
+   ],
+   "proj": 134,
+   "rank": 115
+  },
+  "tyjae spears": {
+   "tier": 2,
+   "verdict": "PPR-friendly pass-catching role behind Pollard gives a stable weekly floor with spike upside",
+   "report": "Spears caught 45 balls on 50 targets in 2025, a receiving profile that plays up in PPR and produced back-to-back seasons near 112-114 points despite limited carries. His ceiling comes if Pollard misses time, unlocking a three-down role, and his low weekly stdev (5.9) makes him a steadier bye-week fill than most here. The floor is capped by only 72 carries and Pollard's grip on early downs. Highest projection in the group at 149 reflects the reliable target share.",
+   "floor": 92,
+   "ceiling": 195,
+   "badges": [
+    "split-touches",
+    "handcuff"
+   ],
+   "proj": 149,
+   "rank": 113
+  },
+  "woody marks": {
+   "tier": 2,
+   "verdict": "Sophomore already earning 196 carries; clear path to more if the backfield thins",
+   "report": "Marks logged 151 points on 196 carries and 24 catches as a rookie, showing the team trusts him with volume in a committee. The ceiling is a lead-back ascension in year two with 8.9 PPG floor already banked and receiving upside (36 targets). The floor risk is a crowded depth chart and playoff road games at PHI and GB that are tough matchups. Solid dart with real standalone touches.",
+   "floor": 90,
+   "ceiling": 185,
+   "badges": [
+    "split-touches",
+    "handcuff"
+   ],
+   "proj": 128,
+   "rank": 112
+  },
+  "jordan mason": {
+   "tier": 2,
+   "verdict": "Proven bell-cow-when-needed behind Aaron Jones with league-winning injury upside",
+   "report": "Mason turned 159 carries into 129 points (7.6 PPG) in 2025 and has shown he can shoulder a full load when Jones sits. The ceiling is significant — if Jones (age, injury history) misses time, Mason is a weekly RB1 as demonstrated in his SF spot starts. The floor is thin passing-game work (14 catches) keeping him touchdown-and-volume dependent. One of the better standalone-plus-handcuff combos at this ADP.",
+   "floor": 85,
+   "ceiling": 195,
+   "badges": [
+    "handcuff",
+    "split-touches"
+   ],
+   "proj": 130,
+   "rank": 123
+  },
+  "alvin kamara": {
+   "tier": 3,
+   "verdict": "Massive 2024-to-2025 collapse (265 to 101 pts) signals steep age decline behind Etienne",
+   "report": "Kamara was a fantasy monster in 2024 (265 points, 68 catches) but cratered to 101 points at 5.9 PPG in 2025 as the workload thinned and age caught up. Now the RB2 behind Etienne at nine years of experience, his trajectory points down. The ceiling exists only via receiving usage (33 catches) if he reclaims passing downs, but the floor is a fading committee back. Playoff slate is manageable but the profile is a fade.",
+   "floor": 78,
+   "ceiling": 170,
+   "badges": [
+    "decline-risk",
+    "split-touches"
+   ],
+   "proj": 124,
+   "rank": 121
+  },
+  "tyrone tracy jr.": {
+   "tier": 3,
+   "verdict": "Two years of near-RB2 production (161, 182 pts) undervalued by an 80-point projection",
+   "report": "Tracy quietly produced 161 points (9.5 PPG) on 176 carries and 36 catches in 2025 after 182 the prior year, a genuine three-down workload. The ceiling is a bounce-back RB2 if he holds the job, and the receiving volume (48 targets) provides PPR safety. The floor concern is the depressed 80-point projection implying added competition and a shaky Giants offense. At rank 184 he's a value relative to his usage history.",
+   "floor": 62,
+   "ceiling": 175,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 80,
+   "rank": 184
+  },
+  "justice hill": {
+   "tier": 3,
+   "verdict": "Pure passing-down back behind Henry; targets give PPR relevance despite tiny run role",
+   "report": "Hill's value is almost entirely receiving — 42 catches on 51 targets in 2024 and 21 on 27 in 2025 with just 18-47 carries. The ceiling is 100-plus points if Henry misses time and Hill inherits early-down work, backed by a healthy 114 projection. The floor is a role-dependent flex with high weekly variance (7.0 stdev). Reliable target floor makes him a sneaky PPR bye filler.",
+   "floor": 58,
+   "ceiling": 150,
+   "badges": [
+    "split-touches",
+    "handcuff"
+   ],
+   "proj": 114,
+   "rank": 198
+  },
+  "isiah pacheco": {
+   "tier": 4,
+   "verdict": "Now buried behind Gibbs after two down years; touch competition kills the ceiling",
+   "report": "Pacheco slid to 87 points (5.1 PPG) in 2025 after a dismal 57 in 2024, and a move to Detroit lands him firmly behind Jahmyr Gibbs. The ceiling requires a Gibbs injury to matter, and even then the offense funnels through the star. The floor is a low-touch backup with minimal receiving work (19 catches). The 124 projection feels optimistic given the depth-chart reality.",
+   "floor": 52,
+   "ceiling": 128,
+   "badges": [
+    "new-team",
+    "decline-risk",
+    "depth-risk"
+   ],
+   "proj": 124,
+   "rank": 116
+  },
+  "brian robinson jr.": {
+   "tier": 4,
+   "verdict": "Fell off a cliff (160 to 63 pts) and changes teams; handcuff lottery ticket at best",
+   "report": "Robinson dropped from 160 points in 2024 to just 63 in 2025 as his role evaporated, and now he's on a new team in Atlanta with unclear standing. The ceiling is a return to 180-plus touches if he wins early-down work, which his 2024 profile shows he can handle. The floor is a marginalized backup with a 3.7 PPG output fresh in memory. The projection of 94 bakes in real uncertainty.",
+   "floor": 45,
+   "ceiling": 150,
+   "badges": [
+    "new-team",
+    "decline-risk"
+   ],
+   "proj": 94,
+   "rank": 149
+  },
+  "tank bigsby": {
+   "tier": 5,
+   "verdict": "Behind Saquon in Philly after his own production collapse; pure handcuff dart",
+   "report": "Bigsby crashed from 129 points in 2024 to 54 in 2025 and now sits behind Saquon Barkley, one of the least valuable backup spots in football. The ceiling only opens if Barkley misses extended time, at which point Bigsby's 168-carry 2024 shows he can produce. The floor is near-zero standalone value with only 3 catches. Touchdown-dependent and deep on the depth chart.",
+   "floor": 30,
+   "ceiling": 175,
+   "badges": [
+    "handcuff",
+    "td-dependent",
+    "depth-risk"
+   ],
+   "proj": 64,
+   "rank": 139
+  },
+  "braelon allen": {
+   "tier": 5,
+   "verdict": "Breece Hall handcuff whose 2025 usage vanished; upside tied entirely to an injury",
+   "report": "Allen fell to just 15 points in 2025 after a promising 85-point rookie year with receiving work, a discouraging usage trend. The ceiling is meaningful if Hall goes down given Allen's early-down build and prior 92 carries. The floor is essentially a bench stash with negligible standalone value. Draftable only as a Hall insurance policy.",
+   "floor": 22,
+   "ceiling": 155,
+   "badges": [
+    "handcuff",
+    "depth-risk"
+   ],
+   "proj": 87,
+   "rank": 157
+  },
+  "jordan james": {
+   "tier": 5,
+   "verdict": "CMC handcuff with no NFL data yet; McCaffrey's age makes the insurance valuable",
+   "report": "James has no recorded production but sits as the RB2 behind Christian McCaffrey in San Francisco. The ceiling is one of the more lucrative handcuff outcomes in football given CMC's extensive injury history and the Shanahan scheme's RB-friendliness. The floor is a zero-touch inactive if McCaffrey stays healthy. A speculative stash whose value is entirely contingent.",
+   "floor": 25,
+   "ceiling": 170,
+   "badges": [
+    "handcuff",
+    "depth-risk"
+   ],
+   "proj": 64,
+   "rank": 200
+  },
+  "chris rodriguez jr.": {
+   "tier": 5,
+   "verdict": "Ground-only grinder with 112 carries but no passing role; capped low-end flex",
+   "report": "Rodriguez managed 92 points on 112 carries in 2025 but caught just 3 passes, an unforgiving profile in PPR. The ceiling is limited touchdown-dependent flex value if he earns a bigger early-down share. The floor is a two-down committee back with a 71-point projection. Little pathway to weekly relevance.",
+   "floor": 40,
+   "ceiling": 118,
+   "badges": [
+    "td-dependent",
+    "depth-risk"
+   ],
+   "proj": 71,
+   "rank": 130
+  },
+  "keaton mitchell": {
+   "tier": 6,
+   "verdict": "Explosive but buried behind Hampton with an injury past; deep-league speculation",
+   "report": "Mitchell posted 55 points at 3.3 PPG in 2025 with modest touches behind the Chargers' lead back Omarion Hampton. The ceiling is home-run upside if given volume, thanks to his big-play ability. The floor is a low-snap backup with injury history clouding his availability. Only a deep-roster flier at rank 196.",
+   "floor": 30,
+   "ceiling": 112,
+   "badges": [
+    "handcuff",
+    "depth-risk",
+    "injury-history"
+   ],
+   "proj": 64,
+   "rank": 196
+  },
+  "mike washington jr.": {
+   "tier": 6,
+   "verdict": "Rookie with no data on a murky Raiders depth chart; pure lottery ticket",
+   "report": "Washington has no recorded production and enters as an unknown in the Las Vegas backfield. The ceiling is a surprise role if he outperforms camp expectations, reflected in a modest 65 projection. The floor is inactive-level with no proven usage. Strictly a late-round dart.",
+   "floor": 20,
+   "ceiling": 120,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 65,
+   "rank": 185
+  },
+  "ray davis": {
+   "tier": 6,
+   "verdict": "RB3 in Buffalo behind Cook and Ty Johnson; standalone value already faded",
+   "report": "Davis slipped from 116 points in 2024 to just 64 in 2025 as his role shrank behind James Cook. The ceiling is contingent on multiple injuries ahead of him given his 113-carry rookie capability. The floor is a deep bench back with a 38-point projection. Handcuff-only value in a crowded room.",
+   "floor": 20,
+   "ceiling": 118,
+   "badges": [
+    "handcuff",
+    "depth-risk"
+   ],
+   "proj": 38,
+   "rank": 191
+  },
+  "kaelon black": {
+   "tier": 7,
+   "verdict": "Rookie RB3 behind CMC and Jordan James; end-of-bench flier only",
+   "report": "Black has no NFL data and sits third on the 49ers depth chart behind McCaffrey and Jordan James. The ceiling requires multiple injuries to reach relevance. The floor is a practice-squad-level contributor with a 34-point projection. Deep dynasty stash at best.",
+   "floor": 10,
+   "ceiling": 90,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 34,
+   "rank": 201
+  },
+  "james conner": {
+   "tier": 8,
+   "verdict": "Projection of 0 and Questionable tag signal he's not expected to contribute in 2026",
+   "report": "Conner was elite in 2024 (254 points, 47 catches) but collapsed to 33 points in 2025 amid injury and now carries a 0 projection with a Questionable tag as the RB3. The ceiling requires a full healthy return that the data actively projects against. The floor is a non-factor or non-roster outcome. Avoid outside of the deepest formats.",
+   "floor": 0,
+   "ceiling": 75,
+   "badges": [
+    "decline-risk",
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 0,
+   "rank": 178
+  },
+  "kaytron allen": {
+   "tier": 8,
+   "verdict": "Rookie RB3 in Washington with a 16-point projection; essentially undraftable",
+   "report": "Allen has no data and sits third or lower on a crowded Commanders depth chart behind Croskey-Merritt and Rachaad White. The ceiling is a distant camp-riser scenario. The floor is off the fantasy radar entirely with a 16-point projection. Only a name to monitor, not to draft.",
+   "floor": 5,
+   "ceiling": 65,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 16,
+   "rank": 215
+  },
+  "nicholas singleton": {
+   "tier": 5,
+   "verdict": "Talented rookie stuck at RB3 behind Pollard/Spears; standalone value is thin barring injury.",
+   "report": "No NFL data yet as a rookie, and he lands in a crowded Titans backfield behind Tony Pollard and Tyjae Spears with a modest 20-point projection. His ceiling requires an injury ahead of him to unlock touches, and even then he'd split with Spears. Floor is near-zero fantasy relevance as a deep bench stash. Draft him only as a late lottery ticket in deep leagues.",
+   "floor": 8,
+   "ceiling": 75,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 20,
+   "rank": 216
+  },
+  "demond claiborne": {
+   "tier": 6,
+   "verdict": "Rookie buried behind Aaron Jones and Jordan Mason; almost purely a speculative stash.",
+   "report": "No pro production to lean on and a projection of just 24 points reflects a clogged Vikings depth chart with Jones and Mason ahead of him. Any relevance is contingent on multiple injuries clearing his path. The floor is negligible, and even the ceiling is capped by Mason's presence as the primary backup. This is a watch-list name, not a draftable asset in standard formats.",
+   "floor": 6,
+   "ceiling": 60,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 24,
+   "rank": 217
+  },
+  "jonah coleman": {
+   "tier": 6,
+   "verdict": "Rookie in a muddy Denver committee; upside exists but path to touches is unclear.",
+   "report": "With no data and a 41-point projection, Coleman sits at RB3 behind J.K. Dobbins and RJ Harvey in a Broncos backfield that already juggles multiple bodies. His ceiling depends on Dobbins' injury history opening a role, but Harvey and McLaughlin also compete for work. Floor is minimal standalone value. Purely a deep-league dart throw.",
+   "floor": 8,
+   "ceiling": 70,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 41,
+   "rank": 224
+  },
+  "seth mcgowan": {
+   "tier": 6,
+   "verdict": "Third-string Colt behind Taylor and Giddens; only matters if two go down.",
+   "report": "No pro film and a tiny 16-point projection tell the story: he's third on the depth chart behind workhorse Jonathan Taylor and DJ Giddens. The only path to fantasy value is an injury cascade. Floor is essentially waiver-wire irrelevance, and the ceiling is capped even in that scenario. Skip in all but the deepest dynasty formats.",
+   "floor": 4,
+   "ceiling": 45,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 16,
+   "rank": 225
+  },
+  "emmett johnson": {
+   "tier": 5,
+   "verdict": "Rookie behind Kenneth Walker with a 46-point projection hinting at some role.",
+   "report": "No NFL data yet, but the 46-point projection is among the higher marks for these deep rookies, suggesting the Chiefs may carve out a change-of-pace role. He sits behind Kenneth Walker with Demercado also in the mix, so touches will be scattered. Ceiling is contingent on a Walker injury given KC's offensive upside. Floor is a non-factor in most lineups.",
+   "floor": 10,
+   "ceiling": 80,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 46,
+   "rank": 226
+  },
+  "dylan sampson": {
+   "tier": 2,
+   "verdict": "Proven rookie touches (65 car/33 rec) make him a viable Judkins handcuff with pass-game floor.",
+   "report": "As a rookie in 2025 he logged 88 points on 65 carries and 33 catches across 17 games, showing a real pass-catching role that gives him standalone PPR value. He's the clear RB2 behind Quinshon Judkins, making him a priority handcuff with weekly flex appeal if injuries hit. The floor is a low-end committee back, and the ceiling spikes into RB2 territory if Judkins misses time. His 40 targets are the key differentiator among this tier.",
+   "floor": 55,
+   "ceiling": 150,
+   "badges": [
+    "handcuff",
+    "breakout"
+   ],
+   "proj": 87,
+   "rank": 228
+  },
+  "samaje perine": {
+   "tier": 3,
+   "verdict": "Steady veteran pass-catcher behind Chase Brown; reliable low-variance handcuff.",
+   "report": "Two straight 17-game seasons (81 and 78 points) with consistent receiving usage make him one of the safer floor plays here, aided by a low weekly stdev under 5. He's the clear backup to Chase Brown in a high-powered Bengals offense, so a Brown injury would vault his value considerably given his 84 carries and pass-game role in 2025. His floor is dependable but capped, and his age-driven ceiling is limited. A solid, if unexciting, handcuff.",
+   "floor": 45,
+   "ceiling": 130,
+   "badges": [
+    "handcuff"
+   ],
+   "proj": 101,
+   "rank": 229
+  },
+  "lequint allen jr.": {
+   "tier": 6,
+   "verdict": "Minimal 2025 role (1.5 ppg) with unclear depth chart; speculative only.",
+   "report": "His 25 points across 17 games at just 1.5 ppg shows he was barely used as a rookie, and the missing depth-chart data clouds his 2026 outlook. The 46-point projection implies some expected growth in role, but the actuals give little confidence. Floor is waiver-level, ceiling depends on a workload expansion that isn't guaranteed. A stash at best.",
+   "floor": 10,
+   "ceiling": 70,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 46,
+   "rank": 241
+  },
+  "jaylen wright": {
+   "tier": 5,
+   "verdict": "Explosive but buried behind Achane; touch-dependent boom-bust with low floor.",
+   "report": "Two years of low usage (27 then 48 points) as a runner with minimal receiving work (5 rec in 2025) cap his standalone value behind De'Von Achane. His high weekly stdev relative to his low PPG signals big-play dependency without volume. Ceiling is real if Achane misses time in Miami's up-tempo offense, but Ollie Gordon crowds the backup picture. Floor is negligible.",
+   "floor": 15,
+   "ceiling": 90,
+   "badges": [
+    "depth-risk",
+    "td-dependent"
+   ],
+   "proj": 43,
+   "rank": 242
+  },
+  "ollie gordon ii": {
+   "tier": 5,
+   "verdict": "Powerful Achane handcuff with 70 carries in 2025; goal-line upside if injury hits.",
+   "report": "His 54 points on 70 carries as a rookie flashed a between-the-tackles role that complements Achane's speed, giving him TD-leaning upside. He competes directly with Jaylen Wright for the backup job in Miami, muddying both players' paths. Ceiling arrives only with an Achane absence, at which point his early-down role could produce. Floor is a fringe roster stash.",
+   "floor": 15,
+   "ceiling": 95,
+   "badges": [
+    "handcuff",
+    "td-dependent"
+   ],
+   "proj": 35,
+   "rank": 243
+  },
+  "kimani vidal": {
+   "tier": 1,
+   "verdict": "Proven 8.4 ppg on 155 carries in 2025; best upside handcuff in this range behind Hampton.",
+   "report": "Vidal exploded for 118 points at 8.4 ppg on 155 carries and 16 catches over 14 games in 2025, showing legitimate workhorse ability when given the ball. Now behind Omarion Hampton, he's the top handcuff here with a clear RB1 role should Hampton miss time in a productive Chargers offense. His high 8.1 weekly stdev reflects usage swings, but the volume ceiling is far higher than anyone else in this tier. He's the one name here worth drafting for standalone-plus-upside value.",
+   "floor": 55,
+   "ceiling": 175,
+   "badges": [
+    "handcuff",
+    "breakout"
+   ],
+   "proj": 39,
+   "rank": 244
+  },
+  "adam randall": {
+   "tier": 6,
+   "verdict": "Rookie behind aging Henry and Justice Hill; deep dynasty stash only.",
+   "report": "No pro data and a 25-point projection reflect his RB3 status behind Derrick Henry and Justice Hill. His only path is a Henry injury, and even then Hill would likely lead in a committee. Floor is irrelevance, ceiling is speculative. One for the deepest of leagues given Henry's age-related decline risk down the road.",
+   "floor": 6,
+   "ceiling": 60,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 25,
+   "rank": 245
+  },
+  "marshawn lloyd": {
+   "tier": 4,
+   "verdict": "Talented Jacobs handcuff finally healthy; 65-point projection signals a real backup role.",
+   "report": "After a lost season, Lloyd carries a 65-point projection as the clear RB2 behind Josh Jacobs in Green Bay, the highest mark among these unproven backs. His ceiling is meaningful because a Jacobs injury would hand him a lead role in a strong offense. The floor is limited by Jacobs' durability and the presence of Chris Brooks and others. Injury history is the main caution flag here.",
+   "floor": 25,
+   "ceiling": 120,
+   "badges": [
+    "handcuff",
+    "injury-history"
+   ],
+   "proj": 65,
+   "rank": 246
+  },
+  "emari demercado": {
+   "tier": 5,
+   "verdict": "Consistent low-volume receiving back; steady floor but capped ceiling behind Walker.",
+   "report": "Back-to-back 55-58 point seasons with 13-16 catches show a defined but small pass-game role, now behind Kenneth Walker in a reshuffled backfield. His low PPG and modest usage limit standalone value, and the crowded KC depth chart with Emmett Johnson and Brashard Smith caps his upside. Floor is a reliable non-factor; ceiling requires a Walker injury. A deep PPR stash at best.",
+   "floor": 30,
+   "ceiling": 85,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 63,
+   "rank": 247
+  },
+  "jaydon blue": {
+   "tier": 6,
+   "verdict": "Minimal 2025 role behind Williams; explosive but unproven and third on chart.",
+   "report": "His 20 points at 1.2 ppg on 38 carries reflects a marginal rookie role, and he sits at RB3 behind Javonte Williams. The 47-point projection hints at a slightly expanded role, but the depth chart offers little clarity. Floor is waiver-wire, ceiling is a change-of-pace flier if injuries clear his path. Speculative only.",
+   "floor": 10,
+   "ceiling": 70,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 47,
+   "rank": 248
+  },
+  "trey benson": {
+   "tier": 7,
+   "verdict": "Projection of zero and Questionable tag with Love/Conner ahead — undraftable now.",
+   "report": "His 2026 projection of 0 combined with a Questionable injury designation and a demotion to RB4 behind Jeremiyah Love, Tyler Allgeier, and James Conner makes him essentially undraftable. Prior seasons (47 then 35 points) were already replacement-level. The floor is zero and even the ceiling requires health plus multiple injuries ahead. Avoid until his situation clarifies.",
+   "floor": 0,
+   "ceiling": 45,
+   "badges": [
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 0,
+   "rank": 249
+  },
+  "kaleb johnson": {
+   "tier": 7,
+   "verdict": "Projection of 5 and buried at RB3 behind Warren and Dowdle; off the radar.",
+   "report": "No usable data and a bottom-of-barrel 5-point projection reflect his RB3 status behind Jaylen Warren and Rico Dowdle in Pittsburgh. His path to touches is blocked by two established backs. Floor and ceiling are both near-irrelevant for 2026. Not worth a roster spot in standard formats.",
+   "floor": 2,
+   "ceiling": 40,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 5,
+   "rank": 250
+  },
+  "ty johnson": {
+   "tier": 2,
+   "verdict": "Reliable pass-catching Bill (24 rec, 5.9 ppg) with strong Cook-injury upside.",
+   "report": "Two straight productive seasons (92 then 100 points) with 24 catches in 2025 give him one of the highest and safest floors in this group thanks to a defined receiving role behind James Cook. His PPR value holds even in a committee, and a Cook injury would unlock significant volume in Buffalo's elite offense. The floor is a usable bye-week flex; the ceiling is RB2 numbers if pressed into a lead role. Age is a mild concern but usage remains steady.",
+   "floor": 50,
+   "ceiling": 135,
+   "badges": [
+    "handcuff"
+   ],
+   "proj": 85,
+   "rank": 251
+  },
+  "kyle juszczyk": {
+   "tier": 5,
+   "verdict": "Fullback with steady catches but a hard PPG ceiling; format-specific value only.",
+   "report": "His remarkably consistent 57-58 points across two seasons with 19-24 catches reflect a fixed fullback role with the lowest variance in this group. But that role caps his ceiling firmly, as he'll never see meaningful carries. Floor is dependable and ceiling is nearly identical — this is a flat, low-value profile. Only relevant in the deepest PPR or dynasty formats.",
+   "floor": 40,
+   "ceiling": 70,
+   "badges": [],
+   "proj": 46,
+   "rank": 252
+  },
+  "chris brooks": {
+   "tier": 6,
+   "verdict": "Low-usage RB3 in Green Bay behind Jacobs and Lloyd; minimal standalone value.",
+   "report": "His 33 points at 1.9 ppg in 2025 marked a step back from 2024, and he sits at RB3 behind Josh Jacobs and MarShawn Lloyd. His modest receiving role (13 catches) provides a sliver of PPR floor but no real upside. Ceiling requires multiple injuries ahead of him. A deep-league stash at most.",
+   "floor": 15,
+   "ceiling": 60,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 44,
+   "rank": 253
+  },
+  "george holani": {
+   "tier": 5,
+   "verdict": "Fourth-string Seattle RB with negligible 2025 role; pure roster filler in deep leagues.",
+   "report": "Holani logged just 15 points across 17 games in 2025 (0.9 PPG) on 22 carries and 2 targets, showing no standalone value. He sits fourth on the depth chart behind Price, Charbonnet, and Wilson, meaning multiple injuries are needed for relevance. The 2026 projection of 41 is generous given his usage floor. Only draftable as a very late speculative stash.",
+   "floor": 8,
+   "ceiling": 55,
+   "badges": [
+    "depth-risk",
+    "handcuff"
+   ],
+   "proj": 41,
+   "rank": 266
+  },
+  "isaiah davis": {
+   "tier": 3,
+   "verdict": "Trending up as Jets RB3; nice PPR pass-game flashes but stuck behind Hall and Allen.",
+   "report": "Davis nearly doubled his output from 2024 (46 pts) to 2025 (71 pts, 4.2 PPG) with growing receiving usage (28 targets, 21 rec). That receiving involvement gives him a PPR floor and standalone appeal if Breece Hall's workload dips or an injury opens the door. As RB3 behind Hall and Braelon Allen, week-to-week value is capped, but the upward trend is real. A worthwhile late dart with contingent upside.",
+   "floor": 25,
+   "ceiling": 95,
+   "badges": [
+    "breakout",
+    "depth-risk",
+    "handcuff"
+   ],
+   "proj": 39,
+   "rank": 267
+  },
+  "dj giddens": {
+   "tier": 3,
+   "verdict": "Direct handcuff to Jonathan Taylor with league-winning ceiling if JT misses time.",
+   "report": "Giddens has no NFL production yet but sits as the clear RB2 in Indianapolis behind a heavily-worked Jonathan Taylor. That handcuff role carries enormous contingent value — a Taylor injury would hand Giddens a workhorse job in a run-first scheme. The floor is near zero if Taylor stays healthy, making this a boom-or-bust stash. Playoff slate (@TEN, CIN, @CLE) is manageable if he ascends.",
+   "floor": 10,
+   "ceiling": 130,
+   "badges": [
+    "handcuff",
+    "depth-risk",
+    "rookie"
+   ],
+   "proj": 36,
+   "rank": 277
+  },
+  "malik davis": {
+   "tier": 4,
+   "verdict": "Dallas RB2 with modest 2025 carry share; limited PPR appeal behind Javonte Williams.",
+   "report": "Davis posted 41 points over 11 games (3.7 PPG) on 52 carries but minimal receiving work (2 rec), which caps his PPR ceiling. Listed as RB2 behind Javonte Williams, he'd need an injury ahead of him plus to fend off Jaydon Blue and others to matter. His role is fragile in a crowded backfield. Deep-league contingency only.",
+   "floor": 12,
+   "ceiling": 70,
+   "badges": [
+    "depth-risk",
+    "handcuff"
+   ],
+   "proj": 36,
+   "rank": 278
+  },
+  "sean tucker": {
+   "tier": 2,
+   "verdict": "Explosive Tampa backup with real production spikes; strong handcuff upside behind Irving.",
+   "report": "Tucker jumped from 69 points in 2024 to 91 (5.4 PPG) in 2025 on 86 carries, showing big-play ability reflected in a high weekly stdev of 8.0. As RB3 behind Bucky Irving and Kenny Gainwell, his standalone value is streaky, but a Irving injury would elevate him to a lead role in a good offense. The high variance means boom weeks and duds. A quality late-round stash with clear ceiling.",
+   "floor": 30,
+   "ceiling": 120,
+   "badges": [
+    "handcuff",
+    "breakout"
+   ],
+   "proj": 33,
+   "rank": 279
+  },
+  "trevor etienne": {
+   "tier": 5,
+   "verdict": "Fourth on the Panthers depth chart; barely used in 2025 with no clear path.",
+   "report": "Etienne managed just 12 points over 17 games (0.7 PPG) on 20 carries as a rookie, showing minimal opportunity. He sits fourth behind Hubbard, Brooks, and Dillon, needing a cascade of injuries to see meaningful touches. The projection of 32 assumes some role growth that isn't evident yet. Not draftable outside the deepest leagues.",
+   "floor": 6,
+   "ceiling": 50,
+   "badges": [
+    "depth-risk",
+    "rookie"
+   ],
+   "proj": 32,
+   "rank": 280
+  },
+  "emanuel wilson": {
+   "tier": 2,
+   "verdict": "Remarkably consistent two-year producer; usable flex depth with steady touch volume.",
+   "report": "Wilson has quietly produced 96 and 95 points in back-to-back seasons (5.6 PPG) on solid volume — 125 carries and 15 receptions in 2025. That consistency and receiving involvement give him a firmer floor than most in this tier. Oddly the 2026 projection of just 10 clashes with his track record, likely reflecting a new depth-chart position (RB3 behind Price and Charbonnet). If he wins touches again, he's a bye-week flex; if buried, he's droppable.",
+   "floor": 25,
+   "ceiling": 110,
+   "badges": [
+    "depth-risk",
+    "handcuff"
+   ],
+   "proj": 10,
+   "rank": 281
+  },
+  "will shipley": {
+   "tier": 3,
+   "verdict": "Premier handcuff to Saquon Barkley; near-zero floor but massive contingent ceiling.",
+   "report": "Shipley has minimal standalone production (18 pts in 2025, 1.0 PPG) but flashes pass-catching chops with 12 targets. His value is entirely tied to Saquon Barkley — a Barkley injury would make Shipley a locked-in RB1 in Philadelphia's elite offense. As RB3 behind Bigsby too, he must win the pecking order in that scenario. Pure lottery ticket with one of the highest ceilings in this range.",
+   "floor": 8,
+   "ceiling": 115,
+   "badges": [
+    "handcuff",
+    "depth-risk"
+   ],
+   "proj": 28,
+   "rank": 282
+  },
+  "devin singletary": {
+   "tier": 1,
+   "verdict": "Proven veteran producer with the highest recent output in this group; safest floor.",
+   "report": "Singletary led this cohort with 109 points (6.4 PPG) in 2025 and 97 in 2024, backed by strong receiving volume (18-21 receptions) that anchors a PPR floor. Now RB3 behind Skattebo and Tracy, his 2026 role is reduced, but his experience makes him the first man up on any injury. The consistent two-year track record and pass-game usage make him the most reliable dart in this range. Manageable playoff schedule adds to the appeal.",
+   "floor": 35,
+   "ceiling": 110,
+   "badges": [
+    "depth-risk",
+    "handcuff"
+   ],
+   "proj": 27,
+   "rank": 283
+  },
+  "hunter luepke": {
+   "tier": 4,
+   "verdict": "Pass-catching fullback with modest PPR utility; capped touch ceiling.",
+   "report": "Luepke improved to 37 points (2.2 PPG) in 2025 on 13 receptions, deriving nearly all value from the passing game (15 targets vs 16 carries). His fullback role gives him a sneaky-stable PPR floor but essentially no rushing upside. Listed deep on the depth chart, he's a touchdown-dependent flex at best. Only relevant in the deepest PPR formats.",
+   "floor": 18,
+   "ceiling": 50,
+   "badges": [
+    "td-dependent",
+    "depth-risk"
+   ],
+   "proj": 25,
+   "rank": 284
+  },
+  "puka nacua": {
+   "tier": 1,
+   "verdict": "League-winning target hog who exploded to 22.1 PPG; Adams arrival barely dents his alpha volume",
+   "report": "Nacua's 166 targets and 22.1 PPG in 2025 nearly doubled his 12.2 mark from an injury-shortened 2024, cementing him as the Rams' clear WR1 with elite reception volume in PPR. The ceiling is the overall WR1 finish if he sees 160+ targets again. The floor risk is Davante Adams siphoning red-zone looks and a checkable 11.1 weekly stdev, but Nacua's route dominance keeps his floor high. Playoff slate (DAL, @SEA, @TB) is manageable with a wk11 bye.",
+   "floor": 270,
+   "ceiling": 375,
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "proj": 356,
+   "rank": 3
+  },
+  "ja'marr chase": {
+   "tier": 1,
+   "verdict": "Two-year target monster with a 403-point ceiling season on record; safest elite WR",
+   "report": "Chase posted 403 points in 2024 and 314 in 2025 on 175-185 targets, proving repeatable top-two positional upside. The ceiling is a return to the 23+ PPG range if Burrow stays healthy all year. The floor is dinged only slightly by Tee Higgins commanding targets alongside him, but Chase remains the clear alpha. Playoff schedule (@CAR, @IND, BAL) is favorable outside the Ravens matchup.",
+   "floor": 275,
+   "ceiling": 390,
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "proj": 336,
+   "rank": 4
+  },
+  "jaxon smith-njigba": {
+   "tier": 1,
+   "verdict": "Breakout to 21.2 PPG with the lowest variance among elite WRs; ascending true WR1",
+   "report": "JSN jumped from 14.9 to 21.2 PPG in 2025 on 163 targets, and his 7.3 weekly stdev is remarkably low for a high-volume WR, signaling elite weekly reliability. The ceiling is a top-three finish as Seattle's undisputed WR1. The floor case is Cooper Kupp and Rashid Shaheed stealing looks, but neither threatens his target share. Playoff draw includes tough @PHI and @CAR trips.",
+   "floor": 265,
+   "ceiling": 365,
+   "badges": [
+    "elite",
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 327,
+   "rank": 6
+  },
+  "amon-ra st. brown": {
+   "tier": 1,
+   "verdict": "Metronome consistency at 18-19 PPG across two seasons; safest floor in the tier",
+   "report": "St. Brown has delivered 316 and 324 points in back-to-back years on 141-172 targets, the definition of a bankable PPR anchor. The ceiling is a top-three finish if Detroit's offense stays elite. The floor is exceptionally high given his slot volume and short-area target security. Jameson Williams remains the only threat but works a different area of the field; playoff slate (@MIN, NYG, @CHI) is fine.",
+   "floor": 270,
+   "ceiling": 355,
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "proj": 324,
+   "rank": 7
+  },
+  "ceedee lamb": {
+   "tier": 2,
+   "verdict": "Dropped to 11.8 PPG in 2025 and now shares targets with Pickens; bounce-back bet",
+   "report": "Lamb fell from 263 points in 2024 to just 201 in 2025 as target volume dipped to 117, a concerning trend now that George Pickens commands a real share. The ceiling is a return to 15+ PPG if Dak stays healthy and the offense concentrates through him. The floor risk is a genuine two-WR split capping his upside. Playoff draw (@LAR, JAX, NYG) is neutral with a late wk14 bye.",
+   "floor": 210,
+   "ceiling": 300,
+   "badges": [
+    "split-touches",
+    "decline-risk"
+   ],
+   "proj": 295,
+   "rank": 10
+  },
+  "justin jefferson": {
+   "tier": 2,
+   "verdict": "QB-crippled 2025 tanked him to 11.9 PPG; elite talent betting on better QB play",
+   "report": "Jefferson's 2025 collapse to 202 points was driven by dreadful Vikings QB play despite 141 targets, a stark drop from his 317-point 2024. The ceiling is a return to 18+ PPG as a target monster if Minnesota's passing game stabilizes. The floor is genuinely scary if the QB situation lingers, though his talent and 5.6 stdev floor volume help. Playoff slate (DET, WSH, @NYJ) offers upside spots.",
+   "floor": 215,
+   "ceiling": 320,
+   "badges": [
+    "elite",
+    "td-dependent"
+   ],
+   "proj": 293,
+   "rank": 12
+  },
+  "drake london": {
+   "tier": 2,
+   "verdict": "High-variance WR1 with injury flag; 16.5 PPG upside but 11.9 in a shaky 2025",
+   "report": "London's production swung from 281 points in 2024 to 202 in 2025 with a huge 12.0 weekly stdev, reflecting boom-bust dependence on game script and QB play. The ceiling is a return to 16+ PPG as Atlanta's clear alpha with 150+ targets. The floor is dragged down by the Questionable injury tag and inconsistent volume. Playoff draw (@WSH, TB, NO) is workable.",
+   "floor": 195,
+   "ceiling": 295,
+   "badges": [
+    "injury-history",
+    "td-dependent"
+   ],
+   "proj": 270,
+   "rank": 15
+  },
+  "rashee rice": {
+   "tier": 3,
+   "verdict": "Suspension/injury-shortened past seasons mask elite per-route upside in KC",
+   "report": "Rice managed only 8.8 PPG in a disrupted 2025 and 3.8 in 2024, but his role as Mahomes' preferred slot target gives massive upside when on the field. The ceiling is a 16+ PPG finish if he plays a full clean season as the clear WR1. The floor is depressed by the Questionable tag and Xavier Worthy competition. Playoff slate (NE, SF, @LAC) is fine with an early wk5 bye clearing his path.",
+   "floor": 150,
+   "ceiling": 275,
+   "badges": [
+    "injury-history",
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 270,
+   "rank": 17
+  },
+  "nico collins": {
+   "tier": 3,
+   "verdict": "Steady 13.3 PPG WR1 with low variance; ceiling capped by run-heavy offense",
+   "report": "Collins posted 226 points in 2025 on 120 targets with a tidy 7.6 stdev, a reliable if unspectacular WR1 in Houston. The ceiling is 15+ PPG if the Texans lean more pass and Higgins/Dell don't crowd the targets. The floor is solid given his entrenched role and target share. Playoff draw (JAX, @PHI, @GB) mixes a soft opener with two tougher road games.",
+   "floor": 195,
+   "ceiling": 275,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 249,
+   "rank": 19
+  },
+  "malik nabers": {
+   "tier": 3,
+   "verdict": "Torn-up 2025 (3.4 PPG) after a 274-point rookie year; discount buy on recovery",
+   "report": "Nabers dominated as a rookie with 274 points and 170 targets in 2024 before a 2025 injury wiped his season to 3.4 PPG across limited action. The ceiling is a return to 16+ PPG as the Giants' unquestioned alpha with elite target volume. The floor hinges on health, with a Questionable tag still lingering. Playoff slate (CLE, @DET, @DAL) is neutral to tough.",
+   "floor": 165,
+   "ceiling": 285,
+   "badges": [
+    "injury-history",
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 218,
+   "rank": 21
+  },
+  "chris olave": {
+   "tier": 3,
+   "verdict": "Bounced back to 15.8 PPG on 156 targets; reliable target hog when healthy",
+   "report": "Olave rebounded from an injury-marred 2024 (4.5 PPG) to a strong 15.8 PPG and 268 points in 2025 on heavy 156-target volume. The ceiling is a repeat 16+ PPG as New Orleans' clear WR1. The floor is his documented injury history and shaky QB play. Playoff draw (@TB, ARI, @ATL) is manageable with an early wk8 bye.",
+   "floor": 180,
+   "ceiling": 275,
+   "badges": [
+    "injury-history",
+    "workhorse"
+   ],
+   "proj": 245,
+   "rank": 26
+  },
+  "george pickens": {
+   "tier": 3,
+   "verdict": "Career-best 17.2 PPG in 2025 but now the clear WR2 behind Lamb in Dallas",
+   "report": "Pickens broke out to 292 points and 17.2 PPG in 2025, a major leap from 164 the prior year, showcasing big-play WR1 ceiling. The concern is Dallas's depth chart lists him behind CeeDee Lamb, threatening a target-share split going forward. The ceiling is 15+ PPG if Dak feeds both; the floor is a diminished secondary role. Playoff slate (@LAR, JAX, NYG) mirrors Lamb's.",
+   "floor": 175,
+   "ceiling": 270,
+   "badges": [
+    "split-touches",
+    "breakout",
+    "td-dependent"
+   ],
+   "proj": 239,
+   "rank": 28
+  },
+  "a.j. brown": {
+   "tier": 4,
+   "verdict": "New team in New England; steady 13 PPG but volatile role in unproven offense",
+   "report": "Brown put up 220 and 217 points the last two years but at a modest 13 PPG, and his move to New England introduces real usage uncertainty. The ceiling is a return to alpha WR1 form if the Patriots offense elevates and he commands 130+ targets. The floor is a stagnant offense limiting his 10.0-stdev boom-bust game. Playoff draw (@KC, @NYJ, DEN) is tough.",
+   "floor": 170,
+   "ceiling": 270,
+   "badges": [
+    "new-team",
+    "td-dependent"
+   ],
+   "proj": 248,
+   "rank": 29
+  },
+  "garrett wilson": {
+   "tier": 4,
+   "verdict": "Injury-wrecked 2025 (5.9 PPG) after a 252-point 2024; volume-based rebound bet",
+   "report": "Wilson cratered to 100 points in an injury-plagued 2025 but posted 252 on 154 targets in 2024, showing a high floor when healthy. The ceiling is a return to 14+ PPG as the Jets' unquestioned alpha with heavy volume. The floor is tied to QB play and offensive dysfunction. Playoff slate (@ARI, NE, MIN) offers some soft spots.",
+   "floor": 165,
+   "ceiling": 270,
+   "badges": [
+    "injury-history",
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 257,
+   "rank": 31
+  },
+  "tetairoa mcmillan": {
+   "tier": 4,
+   "verdict": "Solid 12.4 PPG rookie season; ascending sophomore as Carolina's clear WR1",
+   "report": "McMillan produced 211 points and 12.4 PPG as a rookie on 122 targets with a low 6.9 stdev, a strong foundation for a Year 2 leap. The ceiling is 15+ PPG if Carolina's passing volume grows and he consolidates target share. The floor is a still-developing offense and the Questionable injury tag. Playoff draw (CIN, @PIT, SEA) is neutral with an early wk5 bye.",
+   "floor": 170,
+   "ceiling": 270,
+   "badges": [
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 239,
+   "rank": 32
+  },
+  "devonta smith": {
+   "tier": 4,
+   "verdict": "Rock-steady 11.9 PPG WR2 in Philly; capped ceiling in a run-first, AJ-Brown-less offense",
+   "report": "Smith has posted near-identical 199 and 202 points the past two seasons at ~11.9 PPG, a dependable but low-ceiling WR2 profile. The ceiling is a modest bump to 14 PPG with AJ Brown gone and more targets available. The floor is secure given his entrenched role opposite a run-heavy scheme. Playoff slate (SEA, HOU, @SF) is average.",
+   "floor": 175,
+   "ceiling": 250,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 239,
+   "rank": 33
+  },
+  "zay flowers": {
+   "tier": 4,
+   "verdict": "Consistent 14.3 PPG with rushing usage; reliable WR1 in a run-heavy Ravens attack",
+   "report": "Flowers improved to 243 points and 14.3 PPG in 2025 with 118 targets plus 10 carries, offering a low 7.3-stdev floor. The ceiling is 16+ PPG if Baltimore leans more pass. The floor is limited by the Ravens' run-first identity capping total volume. Playoff draw (@PIT, CLE, @CIN) is division-heavy and tough.",
+   "floor": 185,
+   "ceiling": 265,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 239,
+   "rank": 37
+  },
+  "terry mclaurin": {
+   "tier": 5,
+   "verdict": "Injury-tanked 2025 (6.7 PPG) and age concerns; bounce-back only if healthy",
+   "report": "McLaurin collapsed to 114 points in 2025 after a 268-point 2024, largely injury-driven with target volume halved to 60. The ceiling is a return to 15+ PPG as Washington's clear WR1 if healthy. The floor is significant given the down year and aging profile at seven years' experience. Playoff slate (ATL, @MIN, @JAX) is manageable.",
+   "floor": 150,
+   "ceiling": 250,
+   "badges": [
+    "decline-risk",
+    "injury-history",
+    "td-dependent"
+   ],
+   "proj": 219,
+   "rank": 38
+  },
+  "tee higgins": {
+   "tier": 5,
+   "verdict": "Steady 12.4 PPG WR2 behind Chase; TD-dependent with high weekly variance",
+   "report": "Higgins delivered 212 points and 12.4 PPG in 2025, a consistent WR2 role but firmly behind Ja'Marr Chase for targets. The ceiling is 15+ PPG in a high-powered Bengals passing game with red-zone TD upside. The floor is a target split that limits his weekly reliability. Playoff draw (@CAR, @IND, BAL) matches Chase's slate.",
+   "floor": 165,
+   "ceiling": 250,
+   "badges": [
+    "split-touches",
+    "td-dependent"
+   ],
+   "proj": 218,
+   "rank": 40
+  },
+  "davante adams": {
+   "tier": 5,
+   "verdict": "Reliable 13 PPG at age 12 experience but firmly WR2 behind Nacua in LA",
+   "report": "Adams posted 223 and 241 points the last two years, still a dependable 13-14 PPG producer, but now plays second fiddle to Puka Nacua in Los Angeles. The ceiling is 15 PPG with Stafford feeding him red-zone looks. The floor is real decline risk given his age and a target hierarchy behind Nacua. Playoff slate (DAL, @SEA, @TB) is manageable.",
+   "floor": 160,
+   "ceiling": 245,
+   "badges": [
+    "split-touches",
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 233,
+   "rank": 42
+  },
+  "carnell tate": {
+   "tier": 3,
+   "verdict": "Rookie WR1 role in TEN but must beat out Ridley and Robinson for targets",
+   "report": "No NFL data yet, but a 211-point projection and 44th overall rank signal the market expects an immediate lead-perimeter role. The ceiling case is a rookie hitting 120+ targets in a target vacuum around a young offense. The floor is real, though: Calvin Ridley (#3) and Wan'Dale Robinson (#2) siphon volume, and rookie WRs are notoriously inconsistent. Playoff slate (IND, @LV, PIT) is manageable; treat as a boom-or-bust WR3 with upside.",
+   "floor": 108,
+   "ceiling": 248,
+   "badges": [
+    "rookie",
+    "breakout"
+   ],
+   "proj": 211,
+   "rank": 44
+  },
+  "ladd mcconkey": {
+   "tier": 2,
+   "verdict": "Elite slot separator; 2024 14.2 PPG shows the ceiling if health and QB play return",
+   "report": "McConkey posted 14.2 PPG on 112 targets as a rookie in 2024 before slipping to 10.6 on 106 targets in 2025, a volume-stable but efficiency-down year. He's the clear #1 target with only Quentin Johnston as competition, so the target floor is secure. The Questionable injury tag and week-to-week variance (stdev 7) are the concerns, plus a brutal Wk15 SF / Wk17 KC playoff finish. Ceiling is a return to top-15 WR; floor is a steady low-end WR2.",
+   "floor": 142,
+   "ceiling": 272,
+   "badges": [
+    "injury-history",
+    "tough-playoffs"
+   ],
+   "proj": 220,
+   "rank": 48
+  },
+  "emeka egbuka": {
+   "tier": 1,
+   "verdict": "Ascending rookie who commanded 127 targets; highest projection in this tier",
+   "report": "Egbuka drew 127 targets and 11.5 PPG as a rookie, elite volume that projects forward as Tampa's most reliable weapon. His 229 projection leads this group, and with Godwin (returning from injury) and McMillan behind him, he owns the alpha role. The floor is soft given rookie-to-sophomore variance (stdev 8.2) and Godwin's potential resurgence eating slot work. Ceiling is a top-12 breakout; the LAR/ATL/NO playoff slate is favorable.",
+   "floor": 162,
+   "ceiling": 285,
+   "badges": [
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 229,
+   "rank": 49
+  },
+  "jaylen waddle": {
+   "tier": 3,
+   "verdict": "New team in DEN with a strong QB, but shares the field with alpha Sutton",
+   "report": "Waddle bounced from 8.8 PPG (2024) to 11.4 (2025) and now moves to Denver as the RWR #1 on paper, though Courtland Sutton is the established target hog. The ceiling case is Waddle's speed thriving with a better QB and defenses keying on Sutton. The floor risk is a true target split holding him at low-end WR3 output. The Wk16 BUF playoff matchup is tough; Wk15 @LV and Wk17 @NE soften it.",
+   "floor": 140,
+   "ceiling": 250,
+   "badges": [
+    "new-team",
+    "split-touches"
+   ],
+   "proj": 213,
+   "rank": 50
+  },
+  "jameson williams": {
+   "tier": 1,
+   "verdict": "Consistent 12.9 PPG big-play threat with rushing usage in an elite offense",
+   "report": "Williams has strung together back-to-back 200-point seasons (12.5 then 12.9 PPG) with growing target and carry involvement in Detroit's high-powered attack. He plays behind Amon-Ra St. Brown but the offense supports two fantasy-relevant WRs. His high variance (stdev 8.7) is TD/big-play dependent, so the floor dips on quiet weeks. Ceiling is a WR1 breakout; the schedule is fine with a Wk16 NYG cupcake.",
+   "floor": 150,
+   "ceiling": 270,
+   "badges": [
+    "breakout",
+    "td-dependent"
+   ],
+   "proj": 209,
+   "rank": 53
+  },
+  "dj moore": {
+   "tier": 2,
+   "verdict": "Talented vet joining Buffalo/Allen but stepping into a crowded target picture",
+   "report": "Moore fell from a monster 238-point 2024 (140 targets) to just 170 points and 85 targets in 2025 as Chicago's offense sputtered. Now in Buffalo with Josh Allen, the ceiling is a target-share rebound and TD spike in a great offense. The floor is real: Khalil Shakir and Keon Coleman compete for looks and Allen spreads it around. His 15 carries show gadget usage that boosts the floor; Wk16 @DEN and Wk17 @MIA are neutral.",
+   "floor": 145,
+   "ceiling": 262,
+   "badges": [
+    "new-team",
+    "split-touches",
+    "decline-risk"
+   ],
+   "proj": 210,
+   "rank": 55
+  },
+  "luther burden iii": {
+   "tier": 5,
+   "verdict": "Rookie flashed slot ability (47 rec) but limited ceiling in a crowded CHI room",
+   "report": "Burden caught 47 of 60 targets for 7.5 PPG as a rookie, an efficient but low-volume debut. The ceiling case is a Year-2 leap with expanded route tree alongside Odunze in Chicago's ascending offense. The floor is a WR4/5 stuck behind Odunze in the pecking order with modest target share. The Wk15 @BUF playoff matchup is tough, though Wk16 GB and Wk17 DET offer upside spots.",
+   "floor": 108,
+   "ceiling": 228,
+   "badges": [
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 206,
+   "rank": 56
+  },
+  "rome odunze": {
+   "tier": 4,
+   "verdict": "Volume-driven WR1 in CHI but efficiency and TDs must catch up to targets",
+   "report": "Odunze has posted nearly identical 145/146-point seasons on 101 then 90 targets, showing he's the target leader but not yet efficient (8.5-8.6 PPG). His 2025 stdev spiked to 9.2, reflecting boom-bust splits. The ceiling is a Year-3 breakout if Caleb Williams elevates and the TD rate normalizes; the floor is another 8-PPG grind with Burden emerging beside him. Wk15 @BUF is a rough playoff opener.",
+   "floor": 130,
+   "ceiling": 242,
+   "badges": [
+    "breakout",
+    "td-dependent"
+   ],
+   "proj": 213,
+   "rank": 58
+  },
+  "marvin harrison jr.": {
+   "tier": 4,
+   "verdict": "Disappointing sophomore drop (11.6 to 7.5 PPG); buy-low bounce-back bet",
+   "report": "MHJ regressed from 11.6 PPG on 116 targets to just 7.5 on 73 targets in 2025, a steep and concerning decline tied to volume loss and QB questions. The ceiling remains high given his pedigree and a potential target rebound to WR1 territory. The floor is another frustrating season if the Arizona passing game stays broken. Late Wk14 bye and a soft Wk17 LV give playoff appeal; treat as a high-variance upside swing.",
+   "floor": 118,
+   "ceiling": 250,
+   "badges": [
+    "decline-risk",
+    "breakout"
+   ],
+   "proj": 194,
+   "rank": 59
+  },
+  "michael pittman jr.": {
+   "tier": 3,
+   "verdict": "Steady possession target moving to PIT; rebounded to 11.9 PPG in 2025",
+   "report": "Pittman bounced back to 11.9 PPG on 111 targets (80 catches) in 2025 after a down 2024, showing a reliable high-floor possession profile with low variance (stdev 7.3). Moving to Pittsburgh, he competes with DK Metcalf for looks but should own the short/intermediate role. The ceiling is capped by a run-leaning offense; the floor is a dependable PPR WR3. Wk15 BAL is tough but Wk16 CAR and Wk17 @TEN are friendly.",
+   "floor": 145,
+   "ceiling": 238,
+   "badges": [
+    "new-team",
+    "split-touches"
+   ],
+   "proj": 197,
+   "rank": 65
+  },
+  "jordyn tyson": {
+   "tier": 6,
+   "verdict": "Rookie buried behind Olave with a Questionable tag; deep upside dart",
+   "report": "No pro data, and Tyson enters as RWR #2 behind an established Chris Olave in New Orleans, with a Questionable injury designation clouding early availability. The ceiling is a rookie carving out WR2 volume if Olave misses time or the offense throws often. The floor is minimal target share and inconsistency typical of rookies. Playoff slate (@TB, ARI, @ATL) is average; a late-round stash, not a starter.",
+   "floor": 88,
+   "ceiling": 218,
+   "badges": [
+    "rookie",
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 188,
+   "rank": 66
+  },
+  "alec pierce": {
+   "tier": 4,
+   "verdict": "Deep-ball specialist with rising volume but boom-bust, TD-dependent profile",
+   "report": "Pierce climbed to 10.8 PPG on 84 targets in 2025, growing into Indy's field-stretcher role, but his high stdev (8.5) reflects a feast-or-famine week-to-week output. He's the LWR #1 with Josh Downs competing for volume, and a Questionable tag adds mild risk. The ceiling is a big-play WR2 line; the floor is several sub-5-point duds. Late Wk13 bye and a soft Wk16 CIN help the playoff outlook.",
+   "floor": 128,
+   "ceiling": 238,
+   "badges": [
+    "td-dependent",
+    "injury-history"
+   ],
+   "proj": 203,
+   "rank": 70
+  },
+  "dk metcalf": {
+   "tier": 2,
+   "verdict": "Reliable 11-PPG alpha in PIT with the lowest variance of the deep-threat WRs",
+   "report": "Metcalf has produced remarkably stable seasons (11.2 then 11.0 PPG) on ~100+ targets, and his relatively low stdev (6.8) gives him a solid weekly floor for a downfield receiver. He's Pittsburgh's LWR #1, though the addition of Pittman creates a genuine target split. The ceiling is a WR2 finish if the Steelers pass more; the floor is a steady mid-WR3. Wk15 BAL is tough but Wk16 CAR and Wk17 @TEN are plus matchups.",
+   "floor": 150,
+   "ceiling": 248,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 195,
+   "rank": 72
+  },
+  "mike evans": {
+   "tier": 5,
+   "verdict": "Aged vet (12 yrs) coming off an injury-ruined 5.0-PPG year; huge boom-bust range",
+   "report": "Evans cratered to 5.0 PPG in 2025 (likely injury-shortened production) after a monster 14.1-PPG, 240-point 2024, and now joins San Francisco at age deep into his career. The ceiling is a red-zone TD magnet re-emerging in a strong offense; the floor is a lost season if the body breaks down again. Aiyuk and Pearsall crowd the room, capping volume. Wk16 @KC is a tough playoff spot; a high-risk value dart.",
+   "floor": 90,
+   "ceiling": 250,
+   "badges": [
+    "new-team",
+    "decline-risk",
+    "injury-history",
+    "split-touches",
+    "td-dependent"
+   ],
+   "proj": 185,
+   "rank": 73
+  },
+  "courtland sutton": {
+   "tier": 2,
+   "verdict": "Proven 124-target alpha, but Waddle's arrival threatens the target monopoly",
+   "report": "Sutton posted 14.1 then 12.9 PPG on massive 135/124-target loads, establishing himself as Denver's clear go-to receiver with a strong, stable floor (stdev 7.1-7.3). The concern is Jaylen Waddle joining as a legit second option, which could trim his target ceiling. Even split, Sutton's red-zone role keeps him a WR2/3; the ceiling is another top-20 finish. Wk16 BUF is a rough playoff matchup, bracketed by softer @LV and @NE games.",
+   "floor": 155,
+   "ceiling": 262,
+   "badges": [
+    "split-touches",
+    "td-dependent"
+   ],
+   "proj": 204,
+   "rank": 74
+  },
+  "christian watson": {
+   "tier": 5,
+   "verdict": "Explosive but low-volume boom-bust WR in a spread-out GB offense",
+   "report": "Watson improved to 7.8 PPG in 2025 but on just 55 targets, and Green Bay's committee approach (Reed, Golden all competing) caps his volume. His high variance (stdev 8.6) makes him a TD-or-bust weekly play. The ceiling is a big-play WR3 if targets tick up; the floor is a bench-worthy WR5. Playoff slate is decent with Wk15 MIA and Wk17 HOU; a speculative late-round pick only.",
+   "floor": 98,
+   "ceiling": 228,
+   "badges": [
+    "td-dependent",
+    "split-touches",
+    "depth-risk"
+   ],
+   "proj": 186,
+   "rank": 79
+  },
+  "chris godwin jr.": {
+   "tier": 6,
+   "verdict": "Injury-plagued (4.9 PPG in 2025) with Egbuka now the alpha; recovery gamble",
+   "report": "Godwin fell to 4.9 PPG on just 51 targets in an injury-wrecked 2025, and Tampa's target hierarchy has shifted decisively to Emeka Egbuka. The ceiling is a healthy Godwin reclaiming a strong slot role for double-digit PPG. The floor is another lost or diminished season at age with lingering injury risk. His lowest-in-group 157 projection reflects the downside; a discount lottery ticket, not a reliable starter.",
+   "floor": 88,
+   "ceiling": 205,
+   "badges": [
+    "injury-history",
+    "decline-risk",
+    "split-touches"
+   ],
+   "proj": 157,
+   "rank": 81
+  },
+  "jakobi meyers": {
+   "tier": 5,
+   "verdict": "Ultra-consistent chains-mover, but demoted to WR3 role behind Thomas in JAX",
+   "report": "Meyers is one of the most stable WRs here (2025 stdev just 4.8 on 110 targets, 10.3 PPG), a genuine PPR floor play. The catch is Jacksonville's depth chart lists him as RWR #3 behind Brian Thomas and even Parker Washington, threatening his target share. The ceiling is a reliable WR3 if he retains volume; the floor is a marginalized possession role. Wk15 @HOU and Wk16 @DAL are tough playoff matchups.",
+   "floor": 140,
+   "ceiling": 218,
+   "badges": [
+    "new-team",
+    "split-touches",
+    "depth-risk"
+   ],
+   "proj": 182,
+   "rank": 82
+  },
+  "parker washington": {
+   "tier": 5,
+   "verdict": "Breakout 2025 (10.9 PPG) but crowded JAX room clouds repeat volume",
+   "report": "Washington jumped from 5.7 to 10.9 PPG on 95 targets in 2025, a legit emergence with added rushing usage. The problem is a jammed depth chart—Brian Thomas, Meyers, and rookie Travis Hunter all compete—making his target repeat uncertain. The ceiling is a WR3 if he holds the slot; the floor is squeezed back to a WR5 role. Wk15 @HOU / Wk16 @DAL are difficult playoff opponents.",
+   "floor": 110,
+   "ceiling": 222,
+   "badges": [
+    "breakout",
+    "split-touches",
+    "depth-risk"
+   ],
+   "proj": 188,
+   "rank": 83
+  },
+  "brian thomas jr.": {
+   "tier": 4,
+   "verdict": "2024's 16.7-PPG breakout crashed to 8.2 in 2025; highest ceiling, real bust risk",
+   "report": "Thomas exploded for 284 points (16.7 PPG) as a rookie in 2024, then collapsed to 8.2 PPG in 2025 amid QB regression and a crowded room. He remains the clear WR1 talent in Jacksonville with the group's best ceiling if the offense and efficiency rebound. The floor is scary given the 2025 drop and Hunter/Meyers/Washington competition for targets. Wk15 @HOU and Wk16 @DAL are tough, but the upside is worth the swing at this cost.",
+   "floor": 118,
+   "ceiling": 272,
+   "badges": [
+    "decline-risk",
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 176,
+   "rank": 84
+  },
+  "wan'dale robinson": {
+   "tier": 2,
+   "verdict": "140 targets two straight years makes him the safest PPR floor in this range despite low TD equity",
+   "report": "Robinson has seen exactly 140 targets and 92-93 receptions in back-to-back seasons, a rock-solid reception-driven PPR profile that carries forward regardless of QB. His 2025 PPG jumped to 12.8 from 10.7 as volume converted more efficiently, though a 3-TD ceiling caps the boom weeks. In Tennessee he's the entrenched slot behind Carnell Tate with Ridley now buried at WR3, so his target share is secure. The floor is genuinely high; the ceiling is limited by touchdown scarcity and a modest offense.",
+   "floor": 150,
+   "ceiling": 214,
+   "badges": [
+    "td-dependent",
+    "new-team"
+   ],
+   "proj": 174,
+   "rank": 86
+  },
+  "khalil shakir": {
+   "tier": 2,
+   "verdict": "Consistent ~10 PPG PPR slot volume; DJ Moore arrival is the only real threat to the floor",
+   "report": "Shakir has posted 76 and 72 catches on 95-100 targets in consecutive years with steady low-variance production near 10 PPG. That reliability is the appeal, though the addition of DJ Moore as the clear WR1 could nibble at his target share going forward. He remains the trusted slot in Buffalo's efficient passing game with Josh Allen elevating touchdown chances. Floor is dependable; ceiling caps out unless he sees more red-zone looks.",
+   "floor": 140,
+   "ceiling": 198,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 171,
+   "rank": 110
+  },
+  "michael wilson": {
+   "tier": 3,
+   "verdict": "Broke out to 13.0 PPG on 126 targets in 2025; volume is real but high variance and Harrison ahead",
+   "report": "Wilson nearly doubled his production in 2025 (13.0 PPG, 78 catches on 126 targets) after a quiet 7.3 PPG in 2024, a genuine breakout on real volume. The 10.3 weekly stdev signals boom-bust swings, and Marvin Harrison remains the alpha, so a target regression is plausible. If Arizona's offense keeps feeding him he's a WR3 value; if Harrison consolidates looks his floor drops fast. The upside case here is legitimate given last year's target count.",
+   "floor": 115,
+   "ceiling": 218,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 167,
+   "rank": 96
+  },
+  "josh downs": {
+   "tier": 3,
+   "verdict": "Reliable low-variance slot but PPG dipped from 10.8 to 8.0; needs volume to bounce back",
+   "report": "Downs slipped from 183 points and 10.8 PPG in 2024 to 136 and 8.0 in 2025 as his targets fell from 107 to 88. His low weekly stdev makes him a steady if unspectacular PPR contributor when healthy. He's the clear slot ahead of Pierce and NWI, so the role is secure, but Indy's run-heavy tendencies cap the ceiling. He's a safe late flier with modest upside if QB play improves.",
+   "floor": 118,
+   "ceiling": 186,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 165,
+   "rank": 100
+  },
+  "jordan addison": {
+   "tier": 3,
+   "verdict": "2024's 12.5 PPG shows the ceiling; 2025 dip and Jennings arrival cloud the target picture",
+   "report": "Addison flashed a 12.5 PPG WR2 season in 2024 before falling to 7.9 in 2025 as his catches dropped to 42 on 79 targets. His 10.5 stdev in the strong year shows big-play boom potential opposite Justin Jefferson. Jauan Jennings joining Minnesota adds real competition for the WR2 role, threatening his floor. If he reclaims volume he's a steal at this ADP; the range of outcomes is wide.",
+   "floor": 110,
+   "ceiling": 205,
+   "badges": [
+    "split-touches",
+    "breakout"
+   ],
+   "proj": 170,
+   "rank": 102
+  },
+  "xavier worthy": {
+   "tier": 3,
+   "verdict": "11.0 PPG in 2024 shows upside; 2025 injury year and Rice ahead make him a high-variance bet",
+   "report": "Worthy posted 11.0 PPG with 20 carries and gadget usage as a rookie in 2024 before dipping to 6.5 in an injury-shortened, Rice-returning 2025. He's listed Questionable, adding to the risk, but Mahomes and manufactured touches give him a real ceiling. Rashee Rice as WR1 caps his target share, so consistency is the concern. The playoff slate (NE, SF, @LAC) is manageable and his big-play ability makes him a worthwhile stash.",
+   "floor": 105,
+   "ceiling": 215,
+   "badges": [
+    "injury-history",
+    "split-touches"
+   ],
+   "proj": 173,
+   "rank": 104
+  },
+  "matthew golden": {
+   "tier": 4,
+   "verdict": "Highest projection in this range but only 4.1 PPG as a rookie in a crowded Packers room",
+   "report": "Golden's 2026 projection of 186 is the boldest here, betting on a Year 2 leap after a quiet rookie 4.1 PPG. Green Bay's committee is deeply crowded with Watson, Reed, and Williams all competing for targets, which suppressed everyone's floor. The talent and draft capital suggest breakout potential if he consolidates the WR1 role. But the data shows no production yet, so this is a projection-driven speculative pick.",
+   "floor": 95,
+   "ceiling": 198,
+   "badges": [
+    "split-touches",
+    "breakout"
+   ],
+   "proj": 186,
+   "rank": 94
+  },
+  "jayden reed": {
+   "tier": 4,
+   "verdict": "11.6 PPG in 2024 shows the ceiling; 2025 collapse to 2.9 (injury) in a crowded room is scary",
+   "report": "Reed was a productive 11.6 PPG dual-threat in 2024 with 20 carries before his 2025 cratered to 2.9 on just 22 targets amid injury. The crowded Packers depth chart with Watson, Golden, and Williams makes a full rebound uncertain. His gadget usage and big-play upside give him a real ceiling if healthy and featured. This is a boom-bust dart throw where the 2024 version is the dream and 2025 is the nightmare floor.",
+   "floor": 80,
+   "ceiling": 190,
+   "badges": [
+    "injury-history",
+    "split-touches"
+   ],
+   "proj": 171,
+   "rank": 114
+  },
+  "quentin johnston": {
+   "tier": 4,
+   "verdict": "Steady ~10 PPG both years but TD-dependent boom-bust behind Ladd McConkey",
+   "report": "Johnston has quietly delivered ~10 PPG in consecutive seasons but with high weekly stdev (8.4-8.7) reflecting heavy touchdown reliance. Ladd McConkey is the clear alpha, so Johnston lives on efficiency and red-zone scores rather than volume. His floor evaporates in weeks without a TD, and rookie Tre' Harris adds competition. He's a usable bye-week fill with spike-week upside but little consistency.",
+   "floor": 108,
+   "ceiling": 188,
+   "badges": [
+    "td-dependent",
+    "split-touches"
+   ],
+   "proj": 165,
+   "rank": 118
+  },
+  "romeo doubs": {
+   "tier": 4,
+   "verdict": "9.7 PPG in 2025 but changing teams to sit behind A.J. Brown limits the target ceiling",
+   "report": "Doubs improved to 9.7 PPG on 85 targets in 2025 but now lands in New England behind alpha A.J. Brown, a role change that clouds his usage. He's the slot/WR2 there, so a mid-volume role is plausible but the ceiling is capped by Brown's target dominance. The playoff schedule (@KC, @NYJ, DEN) is only fair. He's a touchdown-and-volume-dependent depth piece with modest upside.",
+   "floor": 105,
+   "ceiling": 182,
+   "badges": [
+    "new-team",
+    "split-touches"
+   ],
+   "proj": 171,
+   "rank": 119
+  },
+  "makai lemon": {
+   "tier": 5,
+   "verdict": "Intriguing rookie with a 173 projection but stuck behind DeVonta Smith with no NFL data",
+   "report": "Lemon carries a surprisingly bullish 173 projection for a rookie with zero pro reps, betting on immediate slot production in Philadelphia. He'd operate behind DeVonta Smith with Marquise Brown also in the mix, so the target path is unproven. The Eagles' run-heavy tendencies cap volume for secondary receivers. This is pure projection speculation with upside if he seizes the slot role early.",
+   "floor": 80,
+   "ceiling": 185,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 173,
+   "rank": 91
+  },
+  "ricky pearsall": {
+   "tier": 5,
+   "verdict": "5.2 PPG last year and now buried behind Evans and Aiyuk in a suddenly crowded SF room",
+   "report": "Pearsall has managed only around 5 PPG in both seasons, and San Francisco's addition of Mike Evans plus a returning Brandon Aiyuk crushes his target outlook. The 6.6 stdev shows he needs big plays to matter. He'd need multiple injuries ahead of him to become fantasy-relevant. Tough playoff draw (@LAC, @KC, PHI) further dents the appeal.",
+   "floor": 85,
+   "ceiling": 170,
+   "badges": [
+    "depth-risk",
+    "split-touches"
+   ],
+   "proj": 165,
+   "rank": 93
+  },
+  "kc concepcion": {
+   "tier": 5,
+   "verdict": "Listed as Browns slot WR1 as a rookie, but zero data and shaky QB/offense environment",
+   "report": "Concepcion is penciled in as Cleveland's top slot as a rookie, an intriguing role but with no NFL production to lean on. The Browns' offense and quarterback situation limit ceiling for any receiver there. Jeudy and Tillman crowd the depth chart even if Concepcion nominally sits atop the slot. This is a speculative rookie bet in a low-scoring context.",
+   "floor": 80,
+   "ceiling": 175,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 162,
+   "rank": 98
+  },
+  "jayden higgins": {
+   "tier": 5,
+   "verdict": "Solid 7.6 PPG rookie year but Collins and returning Tank Dell cap the ceiling in Houston",
+   "report": "Higgins put up a respectable 7.6 PPG with 41 catches on 68 targets as a rookie, showing he can command a role. Nico Collins dominates targets and Tank Dell's return further crowds the room, limiting his upside. Low weekly stdev (5.2) suggests a steady but unspectacular floor. He's a reasonable Year 2 developmental stash rather than a ceiling play.",
+   "floor": 90,
+   "ceiling": 168,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 142,
+   "rank": 126
+  },
+  "calvin ridley": {
+   "tier": 5,
+   "verdict": "14 PPG upside two years ago but 2025 collapse to 2.8 and demotion to WR3 signal decline",
+   "report": "Ridley cratered from 11.7 PPG on 120 targets in 2024 to just 2.8 on 36 targets in 2025, a stunning collapse now compounded by his fall to WR3 behind rookie Carnell Tate and Wan'Dale Robinson. At eight years experience the decline risk is real and the target path is blocked. The upside case relies on a Tate stumble reopening volume. This is a lottery ticket on a fading veteran.",
+   "floor": 75,
+   "ceiling": 175,
+   "badges": [
+    "decline-risk",
+    "depth-risk"
+   ],
+   "proj": 144,
+   "rank": 131
+  },
+  "jerry jeudy": {
+   "tier": 5,
+   "verdict": "14.2 PPG in 2024 collapsed to 7.1; now WR3 behind a rookie with an injury flag",
+   "report": "Jeudy's 2024 was excellent (14.2 PPG, 90 catches on 145 targets) but 2025 fell to 7.1 as Cleveland's QB carousel and offensive dysfunction sank efficiency. He's now listed WR3 behind rookie Concepcion and Boston with a Questionable tag, a troubling combination. The talent for a rebound exists if the target volume returns. But the depth-chart demotion and offense make this a risky bet.",
+   "floor": 85,
+   "ceiling": 188,
+   "badges": [
+    "decline-risk",
+    "injury-history"
+   ],
+   "proj": 138,
+   "rank": 137
+  },
+  "jalen coker": {
+   "tier": 6,
+   "verdict": "Low-volume WR2 in Carolina with ~5-6 PPG and little path to featured touches",
+   "report": "Coker has produced modest 5-6 PPG numbers on roughly 45 targets in both partial seasons, showing efficiency but no volume. Tetairoa McMillan is the clear alpha and the Panthers' passing game is limited overall. His 6.0 stdev means he's touchdown-dependent for any usable week. He's a deep-league dart with limited ceiling.",
+   "floor": 60,
+   "ceiling": 148,
+   "badges": [
+    "td-dependent",
+    "depth-risk"
+   ],
+   "proj": 148,
+   "rank": 122
+  },
+  "jalen mcmillan": {
+   "tier": 6,
+   "verdict": "8 PPG in 2024 but 2025 collapse to 1.8 with Egbuka and Godwin firmly ahead",
+   "report": "McMillan flashed 8.0 PPG in 2024 but disappeared in 2025 (1.8 PPG, 15 targets) as Tampa Bay's room reshuffled. He now sits at WR3 behind Egbuka and Godwin, a crowded picture with little target security. His 2024 spike weeks show latent big-play ability. This is a stash only if injuries ahead of him open a lane.",
+   "floor": 50,
+   "ceiling": 150,
+   "badges": [
+    "depth-risk",
+    "td-dependent"
+   ],
+   "proj": 133,
+   "rank": 127
+  },
+  "travis hunter": {
+   "tier": 7,
+   "verdict": "Two-way workload and 3.8 PPG rookie year make him a low-projection, high-uncertainty flier",
+   "report": "Hunter managed only 3.8 PPG on 45 targets as a rookie while splitting duties as a two-way player, and his 2026 projection of 113 reflects that ceiling drag. He's listed Questionable and sits at WR4 behind Thomas, Washington, and Meyers on the depth chart. The athletic upside is enormous but the offensive workload is capped by his defensive role. This is a name-value bet with an uncertain fantasy path.",
+   "floor": 50,
+   "ceiling": 150,
+   "badges": [
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 113,
+   "rank": 90
+  },
+  "omar cooper jr.": {
+   "tier": 7,
+   "verdict": "Deep rookie flier with 105 projection, no data, and an unclear depth-chart role in NY",
+   "report": "Cooper carries the lowest projection in this group (105) as a rookie with no professional data and no clear depth-chart standing. The Jets' offense provides limited support for a secondary rookie receiver. There's no usage trend to interpret, making this pure speculation. Only worth a very late dart in deep leagues.",
+   "floor": 40,
+   "ceiling": 118,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 105,
+   "rank": 124
+  },
+  "rashid shaheed": {
+   "tier": 2,
+   "verdict": "Ascending deep threat as SEA's clear WR2, but Kupp/JSN cap the target ceiling",
+   "report": "Shaheed nearly doubled his output in 2025 (157 pts, 8.7 PPG on 92 targets) after a down 2024, and his 92-target role as the #2 in Seattle behind JSN is legit. The ceiling is a big-play-fueled WR2 line if the deep game connects; the floor is boom-or-bust weeks with 5.7 stdev on a modest catch total. Kupp in the slot and Horton emerging squeeze the target floor a bit. Playoff draw is tough with @PHI in Week 15.",
+   "floor": 88,
+   "ceiling": 175,
+   "badges": [
+    "new-team",
+    "td-dependent"
+   ],
+   "proj": 144,
+   "rank": 143
+  },
+  "germie bernard": {
+   "tier": 4,
+   "verdict": "Rookie slot behind DK and Pittman — deep dart with unclear early role",
+   "report": "No pro data yet as a rookie, so the 127 projection is pure optimism for a SWR3 buried behind DK Metcalf and Michael Pittman. The ceiling requires an injury ahead of him or a rapid emergence into Pittsburgh's target rotation. The floor is minimal snaps and waiver-wire irrelevance. Pittsburgh's run-first identity and a crowded room make this a wait-and-see stash.",
+   "floor": 35,
+   "ceiling": 140,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 127,
+   "rank": 153
+  },
+  "chris bell": {
+   "tier": 6,
+   "verdict": "Questionable rookie in a thin Miami room — pure lottery ticket",
+   "report": "A rookie with no data and a Questionable injury tag, Bell is listed as LWR2 in a Miami group headlined only by Malik Washington. The projection of 89 is low even by dart standards, and the injury note dampens the floor further. Ceiling exists only if the offense flows through him after Hill's departure, but that's speculative. Not draftable in standard formats.",
+   "floor": 22,
+   "ceiling": 105,
+   "badges": [
+    "rookie",
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 89,
+   "rank": 154
+  },
+  "jauan jennings": {
+   "tier": 2,
+   "verdict": "Proven volume producer now buried behind Jefferson/Addison in Minnesota",
+   "report": "Jennings posted 211 pts (12.4 PPG) in 2024 and 173 (10.2 PPG) in 2025 on 90+ targets — genuine WR2 production. The concern is the move to Minnesota as the SWR3 behind Justin Jefferson and Jordan Addison, which severely caps his target floor. If injuries hit ahead of him or he wins the slot outright, the ceiling is startable; otherwise he's a touchdown-dependent depth piece. Track record earns the tier despite the crowded room.",
+   "floor": 75,
+   "ceiling": 160,
+   "badges": [
+    "new-team",
+    "depth-risk"
+   ],
+   "proj": 115,
+   "rank": 158
+  },
+  "denzel boston": {
+   "tier": 4,
+   "verdict": "Rookie WR2 in Cleveland with real target path but bad offense",
+   "report": "No pro data, but the 132 projection reflects a clear LWR2 role behind KC Concepcion in a Cleveland WR room lacking established stars. Ceiling is a surprise rookie contributor if targets consolidate; floor is a stagnant Browns passing game that suppresses everyone. The lack of a proven QB and offensive line concerns weigh on the outlook. A speculative upside stash in deeper leagues.",
+   "floor": 40,
+   "ceiling": 150,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 132,
+   "rank": 172
+  },
+  "darnell mooney": {
+   "tier": 3,
+   "verdict": "2024 breakout collapsed to 4.8 PPG in 2025 — bounce-back bet behind Nabers",
+   "report": "Mooney's whiplash trend — 193 pts (11.4 PPG) in 2024 down to 82 pts (4.8 PPG) in 2025 — makes him a pure volatility play. On the Giants he's the RWR3 behind Malik Nabers and Darius Slayton, so the target floor is thin. The ceiling is a return to WR3 form if the QB play stabilizes and targets open up; the floor is the 2025 disappearance repeating. High risk with real but unreliable upside.",
+   "floor": 52,
+   "ceiling": 148,
+   "badges": [
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 95,
+   "rank": 173
+  },
+  "stefon diggs": {
+   "tier": 7,
+   "verdict": "Productive in 2025 but unsigned free agent — undraftable until landing spot known",
+   "report": "Diggs put up 210 pts (12.4 PPG, 85 catches) in 2025, showing he can still produce, but as an unsigned free agent with a projection of 0 he's impossible to value. His ceiling depends entirely on signing with a team that grants him a real role. The floor is not signing meaningfully or landing in a committee. Monitor his signing before spending a pick.",
+   "floor": 0,
+   "ceiling": 175,
+   "badges": [
+    "new-team",
+    "decline-risk"
+   ],
+   "proj": 0,
+   "rank": 179
+  },
+  "antonio williams": {
+   "tier": 4,
+   "verdict": "Rookie slot with a target path behind only McLaurin in Washington",
+   "report": "No pro data, but the 116 projection reflects a plausible SWR2 role behind Terry McLaurin in a thin Washington room. The ceiling is a rookie who earns steady slot volume in a rising offense; the floor is the typical rookie slow start. Competition behind him is weak, which helps his path to snaps. A reasonable late-round upside dart.",
+   "floor": 40,
+   "ceiling": 138,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 116,
+   "rank": 180
+  },
+  "jalen nailor": {
+   "tier": 5,
+   "verdict": "Consistent low-end producer capped as Raiders' SWR2",
+   "report": "Nailor has been remarkably steady but low — 103 then 101 pts, around 6 PPG both years — as a complementary piece. In Las Vegas he's the SWR2 behind Tre Tucker and rookie Jack Bech, limiting his ceiling. The floor is his established ~6 PPG role; the upside is modest unless targets consolidate. A depth flier rather than a difference-maker.",
+   "floor": 48,
+   "ceiling": 118,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 115,
+   "rank": 182
+  },
+  "tre tucker": {
+   "tier": 1,
+   "verdict": "Ascending as the Raiders' clear WR1 — best floor/ceiling combo in this range",
+   "report": "Tucker improved from 129 pts (7.6 PPG) to 162 (9.5 PPG) while earning the RWR1 role in Las Vegas on 92 targets plus 11 carries. As the top option in a thin room, his target share and gadget usage give him the highest floor here and real WR2 upside. The 8.7 weekly stdev signals boom-bust weeks, but the volume trend is the story. A genuine breakout candidate worth reaching for.",
+   "floor": 100,
+   "ceiling": 185,
+   "badges": [
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 138,
+   "rank": 183
+  },
+  "adonai mitchell": {
+   "tier": 4,
+   "verdict": "Talented but unproductive; LWR3 behind Garrett Wilson caps immediate role",
+   "report": "Mitchell has yet to convert draft pedigree into production — just 88 pts (4.9 PPG) in 2025 on 74 targets shows efficiency problems. On the Jets he's the LWR3 behind Garrett Wilson, so the target path is congested. The ceiling is a third-year leap if the light comes on; the floor is more of the same inefficiency. Pure upside speculation at this cost.",
+   "floor": 40,
+   "ceiling": 142,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 116,
+   "rank": 190
+  },
+  "rashod bateman": {
+   "tier": 3,
+   "verdict": "TD-dependent Raven whose 2025 crashed after a solid 2024",
+   "report": "Bateman swung from 175 pts (10.3 PPG) in 2024 to a dismal 55 (3.3 PPG) in 2025, largely because his production was touchdown-driven on modest volume. Behind Zay Flowers he's the clear #2 but on a run-heavy Ravens offense with limited targets to spread. The ceiling is a TD-fueled return to WR3 relevance; the floor is the 2025 collapse repeating. Tough playoff slate (@PIT, @CIN) adds risk.",
+   "floor": 42,
+   "ceiling": 145,
+   "badges": [
+    "td-dependent",
+    "decline-risk"
+   ],
+   "proj": 123,
+   "rank": 194
+  },
+  "jaylin noel": {
+   "tier": 5,
+   "verdict": "SWR4 buried in a deep Houston room — minimal current path",
+   "report": "Noel managed just 68 pts (4.0 PPG) as a second-year slot behind Nico Collins, Jayden Higgins, and Tank Dell. That SWR4 designation means his target floor is very low unless multiple injuries strike. The ceiling requires a role opening up in Houston's crowded rotation. A stash-only profile in deep leagues.",
+   "floor": 38,
+   "ceiling": 118,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 104,
+   "rank": 195
+  },
+  "jack bech": {
+   "tier": 6,
+   "verdict": "Second-year LWR3 with minimal 2025 output — deep dart",
+   "report": "Bech's rookie-adjacent 2025 line (42 pts, 2.5 PPG on 29 targets) was negligible, and he sits as the LWR3 in Las Vegas behind Tucker and Nailor. The ceiling is a second-year jump if he climbs the depth chart; the floor is continued irrelevance. Low variance but also low output makes him a bench-only speculation. Not startable as drafted.",
+   "floor": 30,
+   "ceiling": 102,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 91,
+   "rank": 205
+  },
+  "deebo samuel": {
+   "tier": 7,
+   "verdict": "Productive dual-threat but unsigned FA — undraftable until he lands",
+   "report": "Deebo remained productive in 2025 (188 pts, 11.1 PPG with 17 carries) leveraging his hybrid role, but as an unsigned free agent projected at 0 he can't be valued. His ceiling depends heavily on landing a scheme that uses his rushing and short-target versatility. The floor is a diminished role or committee spot in a new offense. Wait for a signing before drafting.",
+   "floor": 0,
+   "ceiling": 170,
+   "badges": [
+    "new-team",
+    "decline-risk"
+   ],
+   "proj": 0,
+   "rank": 206
+  },
+  "tre' harris": {
+   "tier": 5,
+   "verdict": "Low-variance rookie producer stuck as Chargers' RWR3",
+   "report": "Harris posted a quiet 69 pts (4.1 PPG) with the lowest stdev in this group (2.9), reflecting a steady but tiny role. As the RWR3 behind Ladd McConkey and Quentin Johnston, his path to volume is limited. The ceiling is a second-year step forward if he passes Johnston; the floor is continued low usage. A depth stash with a rough Week 17 (KC) playoff matchup.",
+   "floor": 40,
+   "ceiling": 112,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 89,
+   "rank": 207
+  },
+  "isaac teslaa": {
+   "tier": 6,
+   "verdict": "Buried LWR3 in Detroit's loaded room — minimal opportunity",
+   "report": "TeSlaa managed 76 pts (4.5 PPG) on just 27 targets as a rookie, and the LWR3 role behind Amon-Ra St. Brown and Jameson Williams offers almost no target path. The ceiling requires injuries ahead of him in a high-powered offense; the floor is inactivity. Detroit's offense is good but the target hierarchy is set. Deep-league only.",
+   "floor": 30,
+   "ceiling": 100,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 73,
+   "rank": 208
+  },
+  "ryan flournoy": {
+   "tier": 5,
+   "verdict": "Emerged to 6.7 PPG in 2025 but SWR3 behind Lamb/Pickens limits ceiling",
+   "report": "Flournoy jumped from 18 pts as a rookie to 114 (6.7 PPG on 56 targets) in 2025, a real usage uptick. However, he sits as the SWR3 behind CeeDee Lamb and George Pickens, capping his target floor in a crowded Dallas room. The ceiling is a flex-worthy stretch if injuries open snaps; the floor is a rotational role. A modest late-round upside piece.",
+   "floor": 42,
+   "ceiling": 125,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 90,
+   "rank": 211
+  },
+  "brandon aiyuk": {
+   "tier": 7,
+   "verdict": "Injured (DNR) and now WR3 behind Evans/Pearsall — avoid until healthy",
+   "report": "Aiyuk's 2024 was already down (62 pts, 3.7 PPG) before his injury, and the DNR tag plus a projection of 0 signal serious health uncertainty. Even healthy, he's now the WR3 behind Mike Evans and Ricky Pearsall in San Francisco. The ceiling is a mid-season return to relevance if healthy; the floor is a lost season. Too risky to draft outside deep dynasty stashes.",
+   "floor": 0,
+   "ceiling": 118,
+   "badges": [
+    "injury-history",
+    "depth-risk",
+    "decline-risk"
+   ],
+   "proj": 0,
+   "rank": 212
+  },
+  "cooper kupp": {
+   "tier": 3,
+   "verdict": "Aging slot on a new team, declining but with proven PPR floor if targeted",
+   "report": "Kupp slid from 175 pts (10.3 PPG) in 2024 to 116 (6.8 PPG) in 2025 as age and volume declined, and he's now the SWR3 in Seattle behind JSN and Shaheed. His low 4.2 stdev in 2025 shows a steady-but-modest floor when he plays. The ceiling is a bounce-back if he earns steady slot targets; the floor is age-related fade and injury risk. Veteran reliability edges him above pure darts.",
+   "floor": 62,
+   "ceiling": 140,
+   "badges": [
+    "new-team",
+    "decline-risk",
+    "injury-history"
+   ],
+   "proj": 101,
+   "rank": 213
+  },
+  "malik washington": {
+   "tier": 1,
+   "verdict": "Ascending slot WR1 in Miami with Tyreek uncertain; clearest volume path in this tier",
+   "report": "Washington jumped from 3.2 PPG as a rookie to 6.9 in 2025 on 65 targets and 17 carries, showing rising trust and gadget usage. As the listed SWR #1 with Tyreek Hill a free agent, his target share could climb meaningfully in 2026, supporting the proj-106 ceiling. Floor is capped by low aDOT and a crowded young room (Bell, Wease, Reagor, Douglas), plus a tough Week 17 Bills matchup. Best combination of role certainty and upside among these deep darts.",
+   "floor": 80,
+   "ceiling": 175,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 106,
+   "rank": 232
+  },
+  "tank dell": {
+   "tier": 2,
+   "verdict": "Big-play talent behind Nico, but serious knee injury and depth log-jam cloud 2026",
+   "report": "Dell posted 8.2 PPG on 81 targets in 2024 before a devastating knee injury wiped out 2025. The explosive-play upside is real if healthy, but he's listed as the #3 slot behind Nico Collins and rookie Jayden Higgins with Noel and Hutchinson also present. Questionable tag and a full year lost make the floor near-zero, while the ceiling depends entirely on recovery and Houston target concentration. A road wk16 PHI/wk17 GB playoff slate adds difficulty.",
+   "floor": 25,
+   "ceiling": 150,
+   "badges": [
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 69,
+   "rank": 214
+  },
+  "zachariah branch": {
+   "tier": 2,
+   "verdict": "Explosive rookie return man behind London; niche now, upside if role expands",
+   "report": "No NFL production yet as a rookie, but Branch profiles as a dynamic gadget/return threat listed as Atlanta's #3 slot behind Drake London. The ceiling case is a designed-touch role that grows as the season progresses; the floor is minimal fantasy relevance behind London and Zaccheaus. A soft wk15 @WSH / wk16 TB / wk17 NO playoff run is a plus if he earns snaps. Pure late-round lottery ticket on athleticism.",
+   "floor": 30,
+   "ceiling": 120,
+   "badges": [
+    "rookie",
+    "easy-playoffs"
+   ],
+   "proj": 83,
+   "rank": 227
+  },
+  "kayshon boutte": {
+   "tier": 3,
+   "verdict": "Steady back-to-back 120+ point seasons, but A.J. Brown arrival squeezes the ceiling",
+   "report": "Boutte quietly delivered 122 and 124 PPR points the last two years at ~7.2-7.3 PPG with high weekly variance (7.3 stdev). The addition of A.J. Brown pushes him to the #3 role behind Brown and Doubs, denting his target floor. His ceiling is streamable WR4 spike weeks, but a brutal wk15 @KC playoff spot hurts. Reliable dart with a proven, if boom-bust, profile.",
+   "floor": 55,
+   "ceiling": 130,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 68,
+   "rank": 274
+  },
+  "ja'kobi lane": {
+   "tier": 3,
+   "verdict": "High-upside Ravens rookie with real path to snaps behind Flowers",
+   "report": "No pro data yet, but Lane is listed as Baltimore's RWR #3 behind Zay Flowers and Rashod Bateman, giving him a live path in a potent Lamar-led offense. The ceiling is a red-zone/vertical role that yields spike weeks; the floor is buried behind two established veterans. Proj 82 reflects genuine optimism for a rookie this deep. Late bye (wk13) then a tough divisional playoff slate (PIT/CIN) tempers the outlook.",
+   "floor": 30,
+   "ceiling": 120,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 82,
+   "rank": 263
+  },
+  "xavier legette": {
+   "tier": 3,
+   "verdict": "Regressed as a sophomore; McMillan arrival buries him on the depth chart",
+   "report": "Legette slid from 125 points as a rookie to 89 in 2025 (7.4 to 5.3 PPG) as efficiency cratered. Now listed as RWR #5 behind Tetairoa McMillan, Coker, and Metchie, his volume path looks thin. The ceiling requires injuries ahead of him; the floor is fantasy irrelevance. Draft capital keeps him rostered but the arrow points down.",
+   "floor": 45,
+   "ceiling": 120,
+   "badges": [
+    "decline-risk",
+    "depth-risk"
+   ],
+   "proj": 71,
+   "rank": 254
+  },
+  "jalen tolbert": {
+   "tier": 4,
+   "verdict": "Collapsed from 152 to 46 points; buried at LWR #5 in Miami",
+   "report": "Tolbert cratered from a useful 8.9 PPG (79 targets) in 2024 to just 2.7 PPG on 34 targets in 2025. Now on Miami as the listed #5 outside receiver, the depth chart offers almost no clear path. Proj-90 feels aspirational; the realistic outcome is deep-bench filler with occasional spike weeks. Needs multiple injuries ahead of him to matter.",
+   "floor": 30,
+   "ceiling": 105,
+   "badges": [
+    "decline-risk",
+    "depth-risk"
+   ],
+   "proj": 90,
+   "rank": 231
+  },
+  "keon coleman": {
+   "tier": 4,
+   "verdict": "Former first-rounder stuck behind DJ Moore addition; boom-bust and TD-reliant",
+   "report": "Coleman has hovered around 6 PPG both seasons (112 then 102 points) with high variance and heavy TD dependence in a Buffalo offense that spreads it around. The listed LWR #4 spot behind DJ Moore and Shakir caps his target ceiling. The upside is red-zone spikes with Josh Allen; the floor is weeks of single-digit output. Late-round upside swing more than a reliable contributor.",
+   "floor": 45,
+   "ceiling": 120,
+   "badges": [
+    "td-dependent",
+    "depth-risk"
+   ],
+   "proj": 60,
+   "rank": 265
+  },
+  "nick westbrook-ikhine": {
+   "tier": 4,
+   "verdict": "TD merchant whose 136-point 2024 crashed to 20 in 2025; new IND role uncertain",
+   "report": "NWI's fantasy value is almost entirely touchdown-driven — 136 points in 2024 evaporated to 20 in 2025 when the scores dried up. Now the listed RWR #3 in Indianapolis behind Pierce and Downs, his proj-96 leans heavily on TD regression working in his favor. The ceiling is a double-digit-TD spike season; the floor is total irrelevance as we saw last year. Extremely volatile bet.",
+   "floor": 25,
+   "ceiling": 130,
+   "badges": [
+    "td-dependent",
+    "decline-risk"
+   ],
+   "proj": 96,
+   "rank": 275
+  },
+  "pat bryant": {
+   "tier": 4,
+   "verdict": "Second-year Bronco flashed as rookie but sits fourth in a crowded room",
+   "report": "Bryant managed 4.4 PPG on 49 targets as a rookie, decent for a Day-2 pick, but is listed as SWR #4 behind Waddle, Sutton, Franklin, and Mims. The ceiling depends on injuries or a leap in year two; the floor is deep-bench stashing. Denver's offense can support a fourth option in spurts. Speculative developmental hold.",
+   "floor": 40,
+   "ceiling": 105,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 73,
+   "rank": 255
+  },
+  "dontayvion wicks": {
+   "tier": 5,
+   "verdict": "Dropped to Philly's WR4; behind Smith and Brown with no clear volume",
+   "report": "Wicks fell from 111 to 76 points (6.5 to 4.5 PPG) as Green Bay's committee squeezed him, and now he's listed as Philadelphia's LWR #4 behind DeVonta Smith and Marquise Brown. The path to targets is thin on a run-leaning offense. His ceiling is occasional deep-shot spikes; the floor is waiver material. Depth-chart darkness dominates.",
+   "floor": 35,
+   "ceiling": 100,
+   "badges": [
+    "depth-risk",
+    "new-team"
+   ],
+   "proj": 66,
+   "rank": 273
+  },
+  "tory horton": {
+   "tier": 5,
+   "verdict": "Speedy Seahawk with big-play flashes but buried behind JSN, Shaheed, Kupp",
+   "report": "Horton showed vertical juice (6.9 weekly stdev) but only 22 targets and 3.8 PPG as a rookie. Listed RWR #4 behind Smith-Njigba, Shaheed, and Kupp, plus a Questionable tag, he needs injuries to see the field. The ceiling is explosive spike weeks in a Sam Darnold offense; the floor is inactive. Deep dynasty-flavored stash.",
+   "floor": 30,
+   "ceiling": 100,
+   "badges": [
+    "depth-risk",
+    "injury-history"
+   ],
+   "proj": 65,
+   "rank": 262
+  },
+  "savion williams": {
+   "tier": 5,
+   "verdict": "Gadget athlete with minimal 2025 output; buried in deep Packers room",
+   "report": "Williams managed just 26 points (1.5 PPG) as a rookie despite 11 carries and 10 catches showing gadget intent. As GB's LWR #4 behind Watson, Reed, and Golden, standalone value is scarce. The ceiling hinges on designed-touch expansion in year two; the floor is negligible. Athletic upside dart only.",
+   "floor": 25,
+   "ceiling": 95,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 70,
+   "rank": 234
+  },
+  "caleb douglas": {
+   "tier": 5,
+   "verdict": "Miami rookie fourth on the outside; pure developmental flyer",
+   "report": "No pro data and listed as Miami's RWR #4 behind Washington, Bell, and Wease, Douglas is a deep developmental hold. The ceiling requires an opportunity opening in a Tua-led passing offense; the floor is a redshirt-type season. Questionable tag adds early risk. Ignore in most redraft formats.",
+   "floor": 20,
+   "ceiling": 95,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 80,
+   "rank": 230
+  },
+  "christian kirk": {
+   "tier": 6,
+   "verdict": "Veteran slot buried at WR5 in a jammed SF room; role has evaporated",
+   "report": "Kirk's production has declined to 3.4 PPG (58 points) in 2025 as injuries and role loss piled up. Now listed as SF's SWR #5 behind Evans, Pearsall, Aiyuk, and Stribling, there's essentially no target path. The ceiling requires multiple injuries ahead; the floor is off the fantasy radar. Name value only at this ADP.",
+   "floor": 30,
+   "ceiling": 85,
+   "badges": [
+    "depth-risk",
+    "decline-risk"
+   ],
+   "proj": 67,
+   "rank": 233
+  },
+  "de'zhaun stribling": {
+   "tier": 6,
+   "verdict": "49ers rookie fourth on depth chart; camp-body upside only",
+   "report": "No NFL data, listed as SF's LWR #4 behind Evans, Pearsall, and Aiyuk in a crowded veteran room. Path to fantasy relevance is remote barring an injury cascade. The ceiling is spot starts late in the year; the floor is inactive. Deep watch-list name.",
+   "floor": 20,
+   "ceiling": 90,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 62,
+   "rank": 237
+  },
+  "elijah sarratt": {
+   "tier": 6,
+   "verdict": "Ravens rookie behind Flowers, Bateman, and Lane; roster-clogged",
+   "report": "Sarratt has no pro production and sits fourth in Baltimore's WR pecking order behind Flowers, Bateman, and fellow rookie Lane. The Ravens' run-heavy scheme limits WR volume beyond the top two. Ceiling is occasional deep-ball weeks; floor is irrelevance. Late bye (wk13) and tough playoff slate offer no bonus.",
+   "floor": 20,
+   "ceiling": 90,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 59,
+   "rank": 272
+  },
+  "chris brazzell ii": {
+   "tier": 6,
+   "verdict": "Panthers depth WR with no depth-chart clarity; total dart throw",
+   "report": "No usable production data and no confirmed depth-chart role in Carolina behind McMillan, Coker, and Metchie. The ceiling requires a surprise camp rise; the floor is the practice squad. A wk15 CIN / wk16 @PIT / wk17 SEA playoff slate is unremarkable. Speculative only.",
+   "floor": 20,
+   "ceiling": 90,
+   "badges": [
+    "depth-risk",
+    "rookie"
+   ],
+   "proj": 61,
+   "rank": 235
+  },
+  "ted hurst iii": {
+   "tier": 6,
+   "verdict": "Tampa Bay deep flyer with no role or data; ignore in redraft",
+   "report": "No production data and no Sleeper depth match in a Buccaneers room. Any fantasy relevance would require a major training-camp breakthrough. The ceiling is fringe spot-start weeks; the floor is off-roster. Purely a deep-dynasty name at this rank.",
+   "floor": 20,
+   "ceiling": 90,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 65,
+   "rank": 264
+  },
+  "tyreek hill": {
+   "tier": 7,
+   "verdict": "Free agent with proj 0 and no team; landing spot dictates everything",
+   "report": "Hill's 218-point 2024 collapsed to 54 in 2025 on just 29 targets amid injury and a lost Miami role, and he enters 2026 as an unsigned free agent (proj 0). If he lands in a strong offense, the elite-speed ceiling remains real; if he stays unsigned or lands poorly, he's a zero. The Questionable tag and age-32 decline compound the uncertainty. Only draftable as a pure post-signing lottery ticket.",
+   "floor": 0,
+   "ceiling": 135,
+   "badges": [
+    "injury-history",
+    "decline-risk",
+    "new-team"
+   ],
+   "proj": 0,
+   "rank": 236
+  },
+  "darius slayton": {
+   "tier": 2,
+   "verdict": "Steady WR2 behind Nabers but capped, low-target field-stretcher — bench flier only",
+   "report": "Slayton posted 6.5 then 5.8 PPG across 2024-25 on 71 and 63 targets, a modest but stable role as the Giants' outside vertical option opposite Malik Nabers. His forward outlook is limited: with Nabers commanding volume and Mooney/Fields/Austin also in the mix, he's a TD-dependent complementary piece whose floor is barely startable. Ceiling comes on the occasional multi-catch deep game, but the low reception count in PPR keeps a lid on it. Playoff slate (CLE, @DET, @DAL) is neutral; questionable injury tag adds mild risk.",
+   "floor": 62,
+   "ceiling": 118,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 87,
+   "rank": 276
+  },
+  "dyami brown": {
+   "tier": 3,
+   "verdict": "Buried at WR6 in Washington with declining production — waiver-wire fodder",
+   "report": "Brown regressed from 4.0 PPG in 2024 to just 2.9 in 2025, and his depth-chart spot (#6 LWR) behind McLaurin, Williams, Lane and Jefferson signals a near-nonexistent projected role. His 37 targets and 20 catches offer almost nothing in PPR, and forward volume looks unlikely to grow given the crowded room. The only ceiling case is injuries ahead of him opening snaps. There's no reason to draft him in standard formats.",
+   "floor": 38,
+   "ceiling": 80,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 85,
+   "rank": 285
+  },
+  "jahan dotson": {
+   "tier": 3,
+   "verdict": "WR4 in Atlanta with two straight sub-3-PPG seasons — deep-league dart at best",
+   "report": "Dotson has failed to launch since the trade, managing 2.5 then 3.0 PPG on tiny target shares (33, 36) and just 18-19 catches each year. Sitting #4 on Atlanta's chart behind London, Zaccheaus and rookie Branch, his forward path to relevant volume is blocked. Low weekly stdev confirms consistent irrelevance rather than boom potential. Only a raft of injuries would make him rosterable.",
+   "floor": 34,
+   "ceiling": 76,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 84,
+   "rank": 295
+  },
+  "andrei iosivas": {
+   "tier": 1,
+   "verdict": "Bengals' WR3 with real red-zone upside behind Chase/Higgins — best contingent value here",
+   "report": "Iosivas flashed a 7.1 PPG, 120-point line in 2024 before dipping to 5.3 in 2025, but he retains the highest ceiling of this group as Cincinnati's slot option in a pass-heavy, high-scoring offense. With Chase and Higgins drawing coverage, his target quality is strong, and any Higgins absence (a recurring risk) would spike his value into flex territory. Floor is a fringe bench role, but 58-61 targets over two years shows a real defined job. The playoff slate is friendly (@CAR, @IND) with a tougher BAL finish in Week 17.",
+   "floor": 58,
+   "ceiling": 128,
+   "badges": [
+    "td-dependent",
+    "handcuff"
+   ],
+   "proj": 77,
+   "rank": 296
+  },
+  "trey mcbride": {
+   "tier": 1,
+   "verdict": "Elite target hog with league-winning ceiling; TE1 overall in PPR.",
+   "report": "McBride's 169 targets and 18.6 PPG in 2025 built on a strong 2024 (147 tgt, 14.7 PPG) confirm a genuine WR1-level workload from the TE spot. The ceiling is a scoring title given the volume; the floor stays high because he catches 120+ balls regardless of touchdown variance. Arizona's depth chart offers zero competition — Higgins and Reiman are afterthoughts, so the target funnel is secure. A clean bye (wk14) and manageable playoff slate (NYJ, @NO, LV) add to the appeal.",
+   "floor": 205,
+   "ceiling": 300,
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "proj": 252,
+   "rank": 22
+  },
+  "brock bowers": {
+   "tier": 1,
+   "verdict": "2025 dip looks injury-driven; elite 2024 rookie form is the true baseline.",
+   "report": "Bowers exploded as a rookie (153 tgt, 112 rec, 15.5 PPG) before a down 2025 (86 tgt, 10.4 PPG) that the high 10.5 stdev suggests was disrupted by injury or missed usage. The ceiling matches McBride's if healthy given his target-magnet role, and Vegas has no real TE competition behind him. The floor carries more risk than McBride because of the volatile 2025 and QB uncertainty. Playoff schedule (DEN, TEN, @ARI) is fine.",
+   "floor": 170,
+   "ceiling": 295,
+   "badges": [
+    "elite",
+    "breakout",
+    "injury-history"
+   ],
+   "proj": 240,
+   "rank": 24
+  },
+  "colston loveland": {
+   "tier": 2,
+   "verdict": "Ascending sophomore with rookie production and clear runway in Chicago.",
+   "report": "Loveland flashed as a rookie with 82 targets and 9.7 PPG, a strong Year 1 foundation pointing to a Year 2 leap. The ceiling is a top-five finish if the Bears' passing game funnels through him; the floor is muted by the presence of Cole Kmet still stealing snaps and touches. His target share should grow, but the two-TE setup caps his workhorse potential. A tough wk15 (@BUF) is offset by GB and DET at home to close.",
+   "floor": 150,
+   "ceiling": 250,
+   "badges": [
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 206,
+   "rank": 45
+  },
+  "tyler warren": {
+   "tier": 2,
+   "verdict": "Ultra-consistent rookie (4.7 stdev) with 112 targets and a locked-in role.",
+   "report": "Warren's rookie line — 112 targets, 76 rec, 11.1 PPG with a remarkably low 4.7 weekly stdev — makes him one of the safest young TEs in the pool. The floor is elite for the position because he sees volume every week; the ceiling depends on Indy's overall offensive efficiency and red-zone looks. He owns the Colts TE room outright with only Alie-Cox behind him. Playoff slate (@TEN, CIN, @CLE) is neutral.",
+   "floor": 162,
+   "ceiling": 248,
+   "badges": [
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 208,
+   "rank": 51
+  },
+  "harold fannin jr.": {
+   "tier": 3,
+   "verdict": "Productive rookie with 107 targets; upside tied to a shaky Cleveland offense.",
+   "report": "Fannin posted 107 targets and 11.0 PPG as a rookie, a genuine breakout foundation with modest 6.0 stdev consistency. The ceiling is a mid-range TE1 if Cleveland's QB play stabilizes; the floor is dragged down by one of the league's weakest passing environments. His depth chart is unclear but he clearly earned volume last year. Playoff matchups (@NYG, @BAL, IND) are mixed with a tough Baltimore game.",
+   "floor": 140,
+   "ceiling": 225,
+   "badges": [
+    "breakout",
+    "rookie"
+   ],
+   "proj": 187,
+   "rank": 62
+  },
+  "kyle pitts sr.": {
+   "tier": 3,
+   "verdict": "Finally delivered a real season (12.4 PPG, 118 tgt); breakout at last.",
+   "report": "Pitts nearly doubled his 2024 output (7.7 to 12.4 PPG) with 118 targets in 2025, the long-awaited season that matches his talent. The ceiling is top-five if Atlanta keeps feeding him; the 9.6 stdev signals boom-bust weeks that hurt the floor. No meaningful TE competition on the depth chart secures his role. Playoff slate (@WSH, TB, NO) is favorable.",
+   "floor": 135,
+   "ceiling": 240,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 185,
+   "rank": 71
+  },
+  "sam laporta": {
+   "tier": 3,
+   "verdict": "Talent is real but 2025 collapse (6.3 PPG) and injury tag cloud the outlook.",
+   "report": "LaPorta cratered from 10.3 PPG (2024) to just 6.3 on only 49 targets in 2025, a steep usage drop in a crowded Detroit offense. He carries a Questionable injury tag that raises games-missed risk. The ceiling is a rebound toward his rookie form if the offense re-prioritizes him; the floor is ugly given the target erosion. Bye wk6 with a decent playoff run (@MIN, NYG, @CHI).",
+   "floor": 110,
+   "ceiling": 225,
+   "badges": [
+    "injury-history",
+    "decline-risk"
+   ],
+   "proj": 189,
+   "rank": 77
+  },
+  "travis kelce": {
+   "tier": 3,
+   "verdict": "Steady 11+ PPG floor at 13 years but age caps ceiling; reliable TE2 value.",
+   "report": "Kelce held serve with 108 targets and 11.4 PPG in 2025, nearly identical to 2024, showing he's still a volume anchor in KC. The floor is safe thanks to consistent target share and low-ish 6.2 stdev; the ceiling is limited by age-related decline in explosiveness. He remains the unquestioned KC TE1 with only Noah Gray behind. Playoff schedule (NE, SF, @LAC) is playable.",
+   "floor": 140,
+   "ceiling": 205,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 177,
+   "rank": 95
+  },
+  "george kittle": {
+   "tier": 3,
+   "verdict": "Elite when healthy but 2025 dip and injury tag temper the projection.",
+   "report": "Kittle fell from 13.9 PPG (2024) to 9.5 in 2025 with reduced targets (69) and a high 9.5 stdev, and he carries a Questionable tag. The ceiling remains among the highest at the position given his big-play ability on a good offense; the floor is soft due to injury and volume risk. He's the clear SF TE1 with no threat behind him. Bye wk8, playoff slate (@LAC, @KC, PHI) leans tough.",
+   "floor": 120,
+   "ceiling": 240,
+   "badges": [
+    "injury-history",
+    "decline-risk"
+   ],
+   "proj": 190,
+   "rank": 107
+  },
+  "dallas goedert": {
+   "tier": 4,
+   "verdict": "Bounce-back 2025 (10.9 PPG) but low-volume Philly offense caps ceiling.",
+   "report": "Goedert nearly doubled his output from 2024 (6.1) to 10.9 PPG in 2025 on 82 targets, a solid rebound. The ceiling is capped by Philadelphia's run-heavy, spread-the-ball approach; the floor is stable when healthy but he's missed time historically. He leads a thin TE room with only Stowers and Calcaterra behind. Playoff schedule (SEA, HOU, @SF) is average.",
+   "floor": 120,
+   "ceiling": 210,
+   "badges": [
+    "injury-history"
+   ],
+   "proj": 177,
+   "rank": 108
+  },
+  "jake ferguson": {
+   "tier": 4,
+   "verdict": "Big 2025 rebound (11.1 PPG, 102 tgt) on high-volume Dallas passing game.",
+   "report": "Ferguson surged from 6.1 to 11.1 PPG in 2025 with 102 targets and 82 receptions, thriving as a reliable underneath option. The ceiling is a low-end TE1 if Dallas keeps throwing at volume; the moderate 6.9 stdev gives a reasonable floor. He owns the Cowboys TE job with no real competition. A late bye (wk14) and soft playoff slate (@LAR, JAX, NYG) are pluses.",
+   "floor": 120,
+   "ceiling": 210,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 167,
+   "rank": 109
+  },
+  "tucker kraft": {
+   "tier": 4,
+   "verdict": "2025 fell off (6.9 PPG) and Questionable tag; volatile rebound bet.",
+   "report": "Kraft dropped from 9.6 PPG (2024) to 6.9 in 2025 on just 44 targets with a very high 9.7 stdev, signaling boom-bust and reduced usage. He carries a Questionable injury tag that adds games-missed risk. The ceiling is a rebound if Green Bay concentrates targets, but Musgrave lurks in a committee. Playoff slate (MIA, @CHI, HOU) is neutral.",
+   "floor": 100,
+   "ceiling": 205,
+   "badges": [
+    "injury-history",
+    "decline-risk",
+    "split-touches"
+   ],
+   "proj": 162,
+   "rank": 120
+  },
+  "isaiah likely": {
+   "tier": 5,
+   "verdict": "New team (NYG) gives a fresh shot after buried 2025 role in Baltimore.",
+   "report": "Likely's 2025 was minimal (3.6 PPG, 37 tgt) behind Andrews, but a move to the Giants as their TE1 opens a path to volume. The ceiling is a low-end starter if he wins the target share over Theo Johnson; the floor is low given an unproven QB situation and his own inconsistent track record. His 2024 (7.3 PPG) shows some upside when involved. Playoff slate (CLE, @DET, @DAL) is mixed.",
+   "floor": 90,
+   "ceiling": 195,
+   "badges": [
+    "new-team",
+    "split-touches"
+   ],
+   "proj": 157,
+   "rank": 129
+  },
+  "t.j. hockenson": {
+   "tier": 5,
+   "verdict": "Low-ceiling steady option; 6.6 PPG floor in a crowded Minnesota offense.",
+   "report": "Hockenson managed just 6.6 PPG on 66 targets in 2025, an underwhelming return from a talent who's fought injuries. The low 4.4 stdev gives a predictable but modest floor; the ceiling requires a target-share jump that Jefferson, Addison and the RBs make unlikely. He's the clear TE1 with Josh Oliver as a blocker behind. Playoff slate (DET, WSH, @NYJ) is reasonable.",
+   "floor": 100,
+   "ceiling": 190,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 158,
+   "rank": 142
+  },
+  "kenyon sadiq": {
+   "tier": 6,
+   "verdict": "Rookie lottery ticket on NYJ with a Questionable tag and no track record.",
+   "report": "Sadiq enters as a rookie with zero NFL data and a Questionable injury tag, making him a pure projection play at ADP 148. The ceiling is a surprise rookie contributor if he beats out Mason Taylor for the lead role; the floor is near-zero fantasy value if he sits behind veterans. The depth chart is genuinely contested with Taylor and Ruckert. Late bye (wk13) and a fine playoff slate matter little given the uncertainty.",
+   "floor": 60,
+   "ceiling": 180,
+   "badges": [
+    "rookie",
+    "depth-risk",
+    "injury-history"
+   ],
+   "proj": 162,
+   "rank": 155
+  },
+  "mark andrews": {
+   "tier": 6,
+   "verdict": "Sharp 2025 decline (7.7 PPG) at age 30+; TD-dependent, fading role.",
+   "report": "Andrews slid from 11.1 to 7.7 PPG in 2025 even with 10 rushing attempts padding his line, a clear downtrend as Baltimore diversifies. The ceiling relies heavily on red-zone touchdowns given his shrinking target base; the floor is low if the scores dry up. He's still the nominal TE1 but the volume trend is worrisome. Playoff slate (@PIT, CLE, @CIN) is tough.",
+   "floor": 100,
+   "ceiling": 195,
+   "badges": [
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 169,
+   "rank": 162
+  },
+  "dalton kincaid": {
+   "tier": 6,
+   "verdict": "Modest 2025 (7.4 PPG); low-volume Buffalo passing game limits upside.",
+   "report": "Kincaid improved slightly to 7.4 PPG in 2025 but on just 49 targets, reflecting Buffalo's spread-the-wealth attack. The ceiling is a matchup-based streamer if the target share grows; the floor is low given how few looks he commands. Knox and Hawes chip into the TE snaps. Playoff slate (CHI, @DEN, @MIA) is playable.",
+   "floor": 90,
+   "ceiling": 185,
+   "badges": [
+    "split-touches"
+   ],
+   "proj": 156,
+   "rank": 165
+  },
+  "hunter henry": {
+   "tier": 6,
+   "verdict": "Quietly consistent 10.5 PPG in 2025; safe low-end streamer at 30+.",
+   "report": "Henry posted a solid 10.5 PPG on 87 targets in 2025, up from 8.6 in 2024, showing steady involvement in New England's offense. The floor is dependable given his volume and 7.1 stdev; the ceiling is capped by age and touchdown reliance. He faces no real TE competition on the depth chart. Playoff slate (@KC, @NYJ, DEN) is a bit tough for the finish.",
+   "floor": 110,
+   "ceiling": 190,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 150,
+   "rank": 186
+  },
+  "terrance ferguson": {
+   "tier": 7,
+   "verdict": "Buried rookie (3.1 PPG) behind a crowded LAR TE room; deep flier only.",
+   "report": "Ferguson barely registered as a rookie (25 tgt, 11 rec, 3.1 PPG) and sits atop a genuinely crowded Rams TE depth chart with Parkinson and Higbee. The ceiling requires a major Year 2 leap and target consolidation that isn't guaranteed; the floor is near-irrelevant fantasy production. This is a dynasty/upside stash more than a redraft asset. Playoff slate (DAL, @SEA, @TB) doesn't move the needle.",
+   "floor": 60,
+   "ceiling": 160,
+   "badges": [
+    "depth-risk",
+    "rookie"
+   ],
+   "proj": 136,
+   "rank": 192
+  },
+  "juwan johnson": {
+   "tier": 7,
+   "verdict": "Career-best 2025 (10.6 PPG, 102 tgt) but Fant addition threatens role.",
+   "report": "Johnson broke out in 2025 with 102 targets and 10.6 PPG at a very consistent 4.7 stdev, the best season of his career. The concern is the arrival of Noah Fant, which could split the TE targets and cap his 2026 volume. The ceiling is a repeat low-end TE1 if he holds the job; the floor drops if New Orleans' offense and QB play crater. Playoff slate (@TB, ARI, @ATL) is neutral.",
+   "floor": 100,
+   "ceiling": 190,
+   "badges": [
+    "breakout",
+    "split-touches"
+   ],
+   "proj": 143,
+   "rank": 193
+  },
+  "brenton strange": {
+   "tier": 1,
+   "verdict": "Undisputed JAX TE1 on a two-year upward arc with a clear target floor",
+   "report": "Strange bumped from 5.4 to 6.9 PPG and 53 to 60 targets year-over-year, and at just 3 years experience the arrow points up with a soft same-team depth chart (Boerkircher, Koziol) offering no threat. The ceiling case is a full-time role expanding toward 80+ targets and low-end TE1 numbers, matching his aggressive 142 projection. The floor is the modest but stable 6-7 PPG line he already posted, with low weekly variance (stdev 5.9). Playoff slate (@HOU, @DAL, WSH) is neutral; he's a reliable late-round streamer.",
+   "floor": 100,
+   "ceiling": 178,
+   "badges": [
+    "breakout",
+    "workhorse"
+   ],
+   "proj": 142,
+   "rank": 199
+  },
+  "dalton schultz": {
+   "tier": 1,
+   "verdict": "106-target 2025 makes him the safest floor in this tier if volume holds",
+   "report": "Schultz exploded to 10.5 PPG on 106 targets in 2025, nearly doubling his 2024 output and pacing this entire group in usage. The ceiling is a repeat top-8 finish given his entrenched HOU role and 82 catches; the floor is a regression toward his 2024 7.0 PPG if targets bleed back to the WRs. At 8 years experience the age/decline clock ticks, but no same-team TE (Klein, Moreau) threatens his role. Neutral playoff draw (JAX, @PHI, @GB); a strong volume-based value here.",
+   "floor": 112,
+   "ceiling": 186,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 133,
+   "rank": 210
+  },
+  "pat freiermuth": {
+   "tier": 2,
+   "verdict": "2025 crash from 168 to 114 pts clouds him, but a bounce-back is live",
+   "report": "Freiermuth's production tumbled from 9.9 PPG and 78 targets in 2024 to 6.7 PPG and 54 targets in 2025 amid PIT's offensive turnover. The ceiling is a return to that 2024 form if the passing game stabilizes and he reclaims red-zone looks; the floor is the diminished 2025 line repeating. Washington's growing role is a genuine target competitor within the room. Playoff schedule (BAL, CAR, @TEN) is manageable; a boom-or-modest streamer.",
+   "floor": 92,
+   "ceiling": 168,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 136,
+   "rank": 209
+  },
+  "chig okonkwo": {
+   "tier": 2,
+   "verdict": "New WSH home with 79 targets in 2025 and elite low-variance consistency",
+   "report": "Okonkwo posted 7.3 PPG on 79 targets with a tiny 4.3 weekly stdev, one of the steadiest floors in this pool across both seasons. The move to Washington's offense offers ceiling if he becomes a featured underneath outlet, though Sinnott lurks as a developing same-team option. The floor is his proven 6.7-7.3 PPG baseline. Playoff slate (ATL, @MIN, @JAX) is fine; a dependable, low-drama TE2/streamer.",
+   "floor": 95,
+   "ceiling": 152,
+   "badges": [
+    "new-team"
+   ],
+   "proj": 122,
+   "rank": 220
+  },
+  "aj barner": {
+   "tier": 2,
+   "verdict": "Doubled his output to 8.7 PPG with rushing usage, but injury tag caps confidence",
+   "report": "Barner leapt from 4.6 to 8.7 PPG and added 10 carries, showing real red-zone and rushing involvement in SEA's scheme. The ceiling is continued TD-driven upside with growing targets; the floor is dragged down by the Questionable injury tag and the emergence of Elijah Arroyo threatening snaps. Weekly variance (6.3) reflects TD-dependence. Tough Week 15 (@PHI) but overall a fine bet if healthy.",
+   "floor": 80,
+   "ceiling": 152,
+   "badges": [
+    "injury-history",
+    "td-dependent",
+    "split-touches"
+   ],
+   "proj": 114,
+   "rank": 259
+  },
+  "gunnar helm": {
+   "tier": 3,
+   "verdict": "Year-2 rookie ascender as TEN's clear TE1 with a clean depth chart",
+   "report": "Helm delivered 5.4 PPG on 55 targets as a rookie with very low variance (stdev 4.0), and at just 1 year experience he offers the classic second-year leap profile. The ceiling depends on TEN's offense improving and his target share climbing past 70; the floor is the quiet rookie baseline repeating. Depth chart (Bellinger, Granson) poses no threat to his lead role. Neutral playoff draw; a speculative upside stash.",
+   "floor": 78,
+   "ceiling": 142,
+   "badges": [
+    "breakout",
+    "rookie"
+   ],
+   "proj": 126,
+   "rank": 218
+  },
+  "oronde gadsden": {
+   "tier": 3,
+   "verdict": "Explosive rookie flashes but Njoku's arrival muddies the LAC target picture",
+   "report": "Gadsden's 7.7 PPG on 69 targets as a rookie came with the highest variance in the group (stdev 7.4), signaling boom-bust weeks. The ceiling is a true breakout if he holds the featured role; the major risk is David Njoku joining the room and splitting looks in a crowded LAC passing game. Tough playoff opener (SF) and a KC finish add scheduling concern. High-ceiling gamble with real touch-competition downside.",
+   "floor": 72,
+   "ceiling": 150,
+   "badges": [
+    "rookie",
+    "split-touches"
+   ],
+   "proj": 116,
+   "rank": 219
+  },
+  "cade otton": {
+   "tier": 3,
+   "verdict": "Proven TB volume but 2025 dip and Culp's presence trim the outlook",
+   "report": "Otton logged 81 targets and 7.2 PPG in 2025, down from 8.3 the prior year, showing a steady if unspectacular floor. The ceiling is a return toward that 8+ PPG range if TB leans on him again; the floor reflects his declining efficiency and rising weekly variance (6.0). No serious same-team threat, but the projection (102) is the lowest among the starters here. Favorable playoff finish (NO, @ATL, LAR) is a mild plus.",
+   "floor": 85,
+   "ceiling": 145,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 102,
+   "rank": 261
+  },
+  "evan engram": {
+   "tier": 3,
+   "verdict": "New DEN home and 76 targets keep him relevant despite age",
+   "report": "Engram drew 76 targets for 6.0 PPG in 2025 with tight variance (stdev 4.0), a PPR-friendly high-volume, low-yardage profile. The ceiling is a bump if Denver features him as a possession outlet; the floor is age-related fade at 9 years experience with no TD spikes. Depth chart is clear, so touches aren't threatened. Tough Week 16 (BUF); a safe-floor, capped-ceiling streamer.",
+   "floor": 78,
+   "ceiling": 132,
+   "badges": [
+    "new-team",
+    "decline-risk"
+   ],
+   "proj": 106,
+   "rank": 291
+  },
+  "mike gesicki": {
+   "tier": 4,
+   "verdict": "2025 collapse to 4.2 PPG makes him a pure bounce-back dart throw",
+   "report": "Gesicki cratered from 8.3 PPG and 83 targets in 2024 to 4.2 PPG and 42 targets in 2025 as CIN's passing distribution shifted. The ceiling is a full rebound to 2024 usage if health and target share return; the floor is the ugly 2025 line, with Erick All also competing for looks. High variance (5.2) on low volume is a red flag. Speculative upside only.",
+   "floor": 62,
+   "ceiling": 142,
+   "badges": [
+    "decline-risk",
+    "split-touches"
+   ],
+   "proj": 107,
+   "rank": 290
+  },
+  "greg dulcich": {
+   "tier": 4,
+   "verdict": "6.3 PPG in a 10-game sample; MIA TE1 with injury and role questions",
+   "report": "Dulcich managed 6.3 PPG on 33 targets over just 10 games in 2025, his lone real production sample given no 2024 data. The ceiling is a fully healthy season as Miami's lead TE pushing toward 60 targets; the floor is games-missed risk and an unproven full-season workload. Depth chart is soft, so opportunity exists if he stays on the field. Rough playoff bookends (@GB, BUF); a lottery ticket.",
+   "floor": 52,
+   "ceiling": 122,
+   "badges": [
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 119,
+   "rank": 260
+  },
+  "david njoku": {
+   "tier": 5,
+   "verdict": "Fell off a cliff in 2025 and now projects behind Gadsden in LAC",
+   "report": "Njoku plummeted from 8.7 PPG and 97 targets in 2024 to 5.1 PPG in 2025, and the LAC depth chart lists him as TE2 behind breakout rookie Gadsden. The ceiling requires him to reclaim the lead role, which the projection (85) doesn't buy; the floor is a timeshare afterthought. At 9 years experience with declining usage, the trend is bleak. Only draftable if you believe the veteran wins the job outright.",
+   "floor": 55,
+   "ceiling": 118,
+   "badges": [
+    "decline-risk",
+    "split-touches",
+    "depth-risk"
+   ],
+   "proj": 85,
+   "rank": 292
+  },
+  "michael mayer": {
+   "tier": 5,
+   "verdict": "Buried behind Brock Bowers; touches simply aren't there",
+   "report": "Mayer's 4.3 PPG on 50 targets in 2025 improved on his dismal 2024 but caps out low as the clear TE2 behind elite Brock Bowers. The ceiling is injury-contingent standalone value; the floor is near-irrelevance in most weeks. No path to volume exists while Bowers is healthy. A deep-league handcuff at best.",
+   "floor": 48,
+   "ceiling": 98,
+   "badges": [
+    "depth-risk",
+    "handcuff"
+   ],
+   "proj": 81,
+   "rank": 293
+  },
+  "jake tonges": {
+   "tier": 6,
+   "verdict": "Kittle backup with a Questionable tag and a 33-point projection",
+   "report": "Tonges posted 5.5 PPG in 2025 but sits firmly as SF's TE2 behind George Kittle, and the 33-point projection reflects minimal expected snaps. The ceiling only opens if Kittle misses time, at which point his high variance (6.6) hints at usable spike weeks. The floor is essentially zero fantasy relevance. His own Questionable tag compounds the risk; a pure handcuff dart.",
+   "floor": 22,
+   "ceiling": 88,
+   "badges": [
+    "depth-risk",
+    "handcuff",
+    "injury-history"
+   ],
+   "proj": 33,
+   "rank": 294
+  },
+  "josh allen": {
+   "tier": 1,
+   "verdict": "The unquestioned QB1 — elite dual-threat floor and ceiling, 100+ carries every year",
+   "report": "Allen posted 22.3 then 21.4 PPG across the last two seasons with a rock-solid 17-game track record and 100+ carries annually, the rushing floor that separates elite QBs. His 369 projection tops the position and his weekly stdev (11-12) reflects boom weeks rather than duds. Floor case is a top-3 finish; ceiling is the overall QB1 crown. No real threat behind him with Buechele/Allen as backups, and the wk15-17 slate (CHI, @DEN, @MIA) is manageable.",
+   "floor": 330,
+   "ceiling": 412,
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "proj": 369,
+   "rank": 41
+  },
+  "lamar jackson": {
+   "tier": 2,
+   "verdict": "430-point 2024 ceiling is league-winning, but the 2025 collapse to 12.6 PPG is a real flag",
+   "report": "Jackson's 2024 (25.3 PPG, 430 total, absurd 6.0 stdev) was the best fantasy QB season in years, but 2025 cratered to 12.6 PPG with rushing carries halved to 67 — a warning that his production hinges on health and mobility. The ceiling case matches or beats Allen; the floor case is what we saw last year. If the legs are back he's a set-and-forget QB1. Playoff draw (@PIT, CLE, @CIN) is division-heavy and tough.",
+   "floor": 250,
+   "ceiling": 420,
+   "badges": [
+    "elite",
+    "injury-history",
+    "tough-playoffs"
+   ],
+   "proj": 322,
+   "rank": 47
+  },
+  "jayden daniels": {
+   "tier": 2,
+   "verdict": "Elite rookie rushing floor (148 car in 2024) makes him a QB1 if healthy after 2025 washout",
+   "report": "Daniels' 2024 rookie year (20.9 PPG, 148 carries) showcased the rushing volume that gives QBs a sky-high fantasy floor, but 2025 collapsed to 6.7 PPG — almost certainly injury-driven given the same team and role. The ceiling is a top-5 finish built on legs; the floor is another lost season. No competition behind him with Mariota as QB2. Bounce-back is the bet, and the rushing profile makes it worth it at this ADP.",
+   "floor": 235,
+   "ceiling": 400,
+   "badges": [
+    "injury-history",
+    "breakout"
+   ],
+   "proj": 318,
+   "rank": 57
+  },
+  "drake maye": {
+   "tier": 3,
+   "verdict": "Legit breakout — 20.7 PPG with a tiny 5.2 stdev and 103 carries signals a weekly steady QB1",
+   "report": "Maye leaped from 10.4 PPG as a 2024 rookie to 20.7 in 2025 with an exceptionally low 5.2 weekly stdev — the most consistent QB profile in this group — plus 103 carries for a rushing floor. That consistency is his selling point: he rarely busts, giving a strong floor with a low-end QB1 ceiling. No competition on the depth chart. The playoff slate is rough (@KC, @NYJ, DEN all tough defenses), the main knock on an otherwise clean ascending profile.",
+   "floor": 275,
+   "ceiling": 365,
+   "badges": [
+    "breakout",
+    "tough-playoffs"
+   ],
+   "proj": 319,
+   "rank": 67
+  },
+  "jalen hurts": {
+   "tier": 3,
+   "verdict": "TD-dependent tush-push floor keeps him a steady QB1 despite modest passing volume",
+   "report": "Hurts delivered 18.5 then 17.6 PPG with 150 and 105 carries, his rushing near the goal line providing a reliable TD floor even in a run-first Eagles offense. The ceiling is capped by low passing volume, but the floor is dependable and he plays 17 games. No depth-chart concern behind him. His 320 projection reflects a safe QB1 with limited upside; playoff matchups (SEA, HOU, @SF) are middling.",
+   "floor": 270,
+   "ceiling": 360,
+   "badges": [
+    "td-dependent",
+    "workhorse"
+   ],
+   "proj": 320,
+   "rank": 69
+  },
+  "joe burrow": {
+   "tier": 3,
+   "verdict": "Elite passing ceiling (373 in 2024) but 2025 injury dropped him to 7.9 PPG — health is everything",
+   "report": "When healthy in 2024 Burrow was a top-3 fantasy QB at 21.9 PPG, but 2025 was wrecked by injury (7.9 PPG). With no rushing to fall back on, his floor is entirely tied to staying upright, and the injury history is now a pattern. The ceiling with Chase and Higgins is one of the highest in the league. His wk15-16 playoff draw (@CAR, @IND) is soft and could carry a title team.",
+   "floor": 205,
+   "ceiling": 390,
+   "badges": [
+    "injury-history",
+    "easy-playoffs"
+   ],
+   "proj": 304,
+   "rank": 68
+  },
+  "jaxson dart": {
+   "tier": 4,
+   "verdict": "Mobile second-year passer with 86 carries and QB2 upside as a cheap late flier",
+   "report": "Dart's debut season produced 14.2 PPG with 86 carries, a mobile profile that gives him fantasy relevance beyond his passing. The high 11.1 stdev reflects a boom-bust rookie; a year-two leap is plausible with the rushing floor. He's the clear starter with only Winston behind him. Ceiling is a back-end QB1 in a good week; floor is streamer territory. Playoff schedule (CLE, @DET, @DAL) is mixed.",
+   "floor": 230,
+   "ceiling": 345,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 301,
+   "rank": 78
+  },
+  "matthew stafford": {
+   "tier": 4,
+   "verdict": "Bounced back to 20.6 PPG in 2025 with elite weapons — quietly a value at this ADP",
+   "report": "Stafford rebounded from a down 2024 (12.6) to 20.6 PPG in 2025 with a low 6.8 stdev, a consistent pocket passer feeding an elite receiving corps. At age-37 the decline risk is real and he offers zero rushing, capping the floor. But the volume and efficiency give a low-end QB1 ceiling at a QB2 price. Playoff draw (DAL, @SEA, @TB) is manageable.",
+   "floor": 245,
+   "ceiling": 345,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 293,
+   "rank": 141
+  },
+  "brock purdy": {
+   "tier": 4,
+   "verdict": "Efficient when the offense is healthy but 2025 slid to 10.4 PPG with a volatile 12.1 stdev",
+   "report": "Purdy dropped from 15.7 PPG in 2024 to 10.4 in 2025 with a high 12.1 stdev, reflecting an offense hit by injuries around him. His ceiling depends entirely on his skill-position weapons being healthy; his floor is low given minimal rushing. He's the clear starter but a matchup-based streamer. The playoff slate (@LAC, @KC, PHI) is difficult.",
+   "floor": 220,
+   "ceiling": 320,
+   "badges": [
+    "tough-playoffs"
+   ],
+   "proj": 293,
+   "rank": 103
+  },
+  "dak prescott": {
+   "tier": 4,
+   "verdict": "Healthy 2025 (18.5 PPG) shows QB1 upside, but injury tag and no legs cap the range",
+   "report": "Prescott's 18.5 PPG in a full 2025 was a return to form after an injury-shortened 2024 (6.9), and the low 8.0 stdev is encouraging. With no rushing and a Questionable tag, his floor is fragile. The ceiling with CeeDee Lamb and Dallas's passing volume is a solid low-end QB1. Playoff matchups (@LAR, JAX, NYG) are neutral-to-favorable.",
+   "floor": 230,
+   "ceiling": 330,
+   "badges": [
+    "injury-history"
+   ],
+   "proj": 286,
+   "rank": 105
+  },
+  "trevor lawrence": {
+   "tier": 4,
+   "verdict": "Big 2025 leap to 19.9 PPG with 82 carries — an ascending streamer with QB1 weeks",
+   "report": "Lawrence jumped from 8.5 PPG in 2024 to 19.9 in 2025, adding a useful 82 carries that lifts his floor. The improved efficiency and rushing suggest a genuine step forward, offering back-end QB1 upside. Floor is streamer level if the passing regresses. No depth-chart concern; playoff draw (@HOU, @DAL, WSH) is a mixed bag.",
+   "floor": 240,
+   "ceiling": 335,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 287,
+   "rank": 117
+  },
+  "caleb williams": {
+   "tier": 4,
+   "verdict": "Improved to 18.7 PPG with 77 carries — a rising dual-threat with modest weekly variance",
+   "report": "Williams climbed from 15.0 to 18.7 PPG in year two with 77 carries and a stable 8.0 stdev, a promising trajectory for a young mobile QB. The rushing gives him a QB2-plus floor and a back-end QB1 ceiling as the offense matures. No competition behind him. The playoff slate is brutal though (@BUF, GB, DET), a real drag on his title-week value.",
+   "floor": 240,
+   "ceiling": 330,
+   "badges": [
+    "breakout",
+    "tough-playoffs"
+   ],
+   "proj": 282,
+   "rank": 125
+  },
+  "bo nix": {
+   "tier": 4,
+   "verdict": "Two straight ~18 PPG seasons with 80+ carries — reliable QB2 floor, health tag to watch",
+   "report": "Nix has been remarkably steady at 18.7 then 17.9 PPG with 83-92 carries and a low stdev, a dependable dual-threat profile. The rushing volume gives him a solid floor, but the ceiling is capped and he carries a Questionable tag. He's a fine matchup streamer with QB1 weeks. The playoff schedule (@LV, BUF, @NE) mixes one great and one tough draw.",
+   "floor": 250,
+   "ceiling": 330,
+   "badges": [
+    "injury-history"
+   ],
+   "proj": 295,
+   "rank": 128
+  },
+  "patrick mahomes": {
+   "tier": 4,
+   "verdict": "Steady ~16.7 PPG the last two years — name value exceeds current fantasy ceiling",
+   "report": "Mahomes has settled into 16.6-16.8 PPG, a fine real-life QB but merely a mid-QB2 in fantasy without gaudy passing numbers or heavy rushing. The 60+ carries add modest floor support, but a Questionable tag and Fields lurking add mild noise. Ceiling remains high if KC's passing volume spikes; floor is a safe streamer. Playoff draw (NE, SF, @LAC) is neutral.",
+   "floor": 250,
+   "ceiling": 330,
+   "badges": [
+    "injury-history"
+   ],
+   "proj": 290,
+   "rank": 136
+  },
+  "justin herbert": {
+   "tier": 4,
+   "verdict": "Ultra-consistent ~16.8 PPG with 80 carries — dependable QB2 with limited upside",
+   "report": "Herbert has been metronomic at 16.8-16.9 PPG across both seasons with a low stdev and a useful 80+ carries that support his floor. The consistency makes him a safe streamer, but the ceiling is muted by conservative game scripts. No depth-chart threat. Playoff slate (SF, @MIA, KC) is manageable.",
+   "floor": 245,
+   "ceiling": 320,
+   "badges": [],
+   "proj": 283,
+   "rank": 138
+  },
+  "jared goff": {
+   "tier": 5,
+   "verdict": "Steady 17.5 PPG pocket passer but zero rushing hard-caps the ceiling",
+   "report": "Goff produced 17.5 PPG in 2025 with elite weapons but a near-total lack of rushing (19 carries) leaves no floor cushion when TDs dry up. The ceiling is a back-end QB1 in a shootout; the floor is a low-end streamer. He's entrenched as the starter. Playoff schedule (@MIN, NYG, @CHI) is neutral. Fine as a late QB2 but nothing more.",
+   "floor": 235,
+   "ceiling": 320,
+   "badges": [],
+   "proj": 268,
+   "rank": 187
+  },
+  "baker mayfield": {
+   "tier": 5,
+   "verdict": "Dropped from 21.5 to 16.0 PPG in 2025 — regression risk with no rushing safety net",
+   "report": "Mayfield fell from a career 21.5 PPG in 2024 to 16.0 in 2025, and with only modest rushing his floor rests on passing efficiency. The 6.1 stdev is stable but the downward trend and TD-dependence are concerns. Ceiling is a low-end QB1 if the 2024 form returns. Playoff draw (NO, @ATL, LAR) is favorable, a small plus.",
+   "floor": 235,
+   "ceiling": 330,
+   "badges": [
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 265,
+   "rank": 188
+  },
+  "tyler shough": {
+   "tier": 6,
+   "verdict": "Rookie-year 9.3 PPG with modest rushing — deep-league dart throw only",
+   "report": "Shough's debut produced just 9.3 PPG, streamer-floor territory, though the 45 carries hint at some rushing upside if he develops. Competition from Rattler for the job adds uncertainty. The ceiling is a year-two leap into QB2 relevance; the floor is a bench arm. Playoff matchups (@TB, ARI, @ATL) are mixed. Only for the deepest leagues.",
+   "floor": 195,
+   "ceiling": 295,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 264,
+   "rank": 160
+  },
+  "kyler murray": {
+   "tier": 6,
+   "verdict": "2025 collapse to 4.6 PPG plus a move to MIN with McCarthy behind him — huge risk",
+   "report": "Murray's 2025 was a disaster at 4.6 PPG after a solid 17.5 in 2024, and the reported move to Minnesota with J.J. McCarthy as QB2 injects real job-security risk. The ceiling if he wins the job and rushes like 2024 (78 carries) is a QB2; the floor is a bench outcome. This is a bet on volatility. Playoff slate (DET, WSH, @NYJ) is neutral.",
+   "floor": 190,
+   "ceiling": 305,
+   "badges": [
+    "new-team",
+    "decline-risk",
+    "depth-risk"
+   ],
+   "proj": 251,
+   "rank": 166
+  },
+  "daniel jones": {
+   "tier": 6,
+   "verdict": "13.3 PPG in 2025 but Questionable tag and Richardson lurking make the job shaky",
+   "report": "Jones bounced to 13.3 PPG in 2025 with some rushing (45 carries), a serviceable streamer level, but a Questionable tag and Anthony Richardson behind him threaten his hold on the job. The ceiling is a matchup-based QB2; the floor is a benching. He offers little for standard leagues. Playoff draw (@TEN, CIN, @CLE) is mixed.",
+   "floor": 205,
+   "ceiling": 300,
+   "badges": [
+    "injury-history",
+    "depth-risk"
+   ],
+   "proj": 267,
+   "rank": 168
+  },
+  "jordan love": {
+   "tier": 1,
+   "verdict": "Two straight 13.8 PPG seasons plus rushing floor make him the safest streamer target here",
+   "report": "Love posted identical 235 and 234 point seasons (13.8 PPG) with rising rushing volume (25 to 47 carries), so his 259 projection reflects a stable, ascending profile. Ceiling case is a full-season 18+ PPG stretch if the GB pass game clicks, floor is his reliable low-double-digit output backed by legs. No real QB competition (Tyrod, McCord behind him) means workhorse security. Playoff slate (MIA, @CHI, HOU) is manageable and the wk11 bye is convenient.",
+   "floor": 215,
+   "ceiling": 295,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 259,
+   "rank": 202
+  },
+  "c.j. stroud": {
+   "tier": 2,
+   "verdict": "Young, mobile passer with a top projection; consistency dipped but rushing floor is real",
+   "report": "Stroud's PPG slid slightly from 13.0 to 12.3 but his 246 projection assumes a bounce-back with ~48-52 rushing attempts adding a floor. Ceiling is a return to efficient volume passing that lifts him into low-QB1 territory; floor is the 12 PPG steady he already delivers. He owns the HOU job outright (Mills, Mertz behind). Playoff draw of JAX, @PHI, @GB is mixed with two tough road spots in weeks 16-17.",
+   "floor": 195,
+   "ceiling": 285,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 246,
+   "rank": 204
+  },
+  "sam darnold": {
+   "tier": 2,
+   "verdict": "18 PPG in 2024 shows the ceiling; 2025 regression and SEA move add variance",
+   "report": "Darnold exploded for 308 points (18.1 PPG) in 2024 then regressed to 235 (13.8) in 2025, so his 242 projection splits the difference at a new stop in Seattle. Ceiling is a repeat of that top-5 rushing-aided 2024 line (67 carries that year); floor is mid-teens with turnover risk given his career volatility. He's the clear SEA starter over Milroe and Lock. A wk15 @PHI matchup is rough but LAR and @CAR round out a usable playoff run.",
+   "floor": 190,
+   "ceiling": 295,
+   "badges": [
+    "new-team"
+   ],
+   "proj": 242,
+   "rank": 221
+  },
+  "bryce young": {
+   "tier": 3,
+   "verdict": "Ascending arc (11.5 to 12.8 PPG) plus 54 carries gives late-round upside",
+   "report": "Young improved his PPG from 11.5 to 12.8 while cutting weekly variance and adding rushing volume (54 carries), a genuine forward-trending profile at age. His 238 projection banks on continued growth; ceiling is a 15+ PPG breakout with the added legs, floor is the ~12 PPG floor he settled into. Only Pickett sits behind him on the CAR chart. Early wk5 bye and a fine CIN/@PIT/SEA playoff mix.",
+   "floor": 175,
+   "ceiling": 270,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 238,
+   "rank": 222
+  },
+  "cam ward": {
+   "tier": 3,
+   "verdict": "Rookie-year 11 PPG with lowest variance in tier; sophomore leap is the bet",
+   "report": "Ward's rookie campaign (187 points, 11.0 PPG) came with the lowest weekly stdev (5.2) of any streamer here, showing steady if unspectacular output plus 39 carries. The 219 projection is conservative; ceiling is a second-year jump as the offense grows around him, floor is more of the same modest production. He's entrenched as TEN QB1 over Levis and Trubisky. Playoff schedule (IND, @LV, PIT) is neutral-to-favorable.",
+   "floor": 165,
+   "ceiling": 260,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 219,
+   "rank": 203
+  },
+  "geno smith": {
+   "tier": 3,
+   "verdict": "15.6 PPG in 2024 collapsed to 10.2 in 2025; new NYJ home caps the upside",
+   "report": "Geno's production cratered from 266 points (15.6 PPG) in 2024 to 174 (10.2) in 2025, and the 232 projection expects a partial rebound on the Jets. Ceiling is a return toward his 2024 form with the right supporting cast; floor is a repeat of the 2025 slump amplified by a weaker offense. He holds the job over Klubnik and Zappe but this is a clear age/decline situation. Wk13 bye and a workable @ARI/NE/MIN playoff run.",
+   "floor": 170,
+   "ceiling": 260,
+   "badges": [
+    "new-team",
+    "decline-risk"
+   ],
+   "proj": 232,
+   "rank": 268
+  },
+  "aaron rodgers": {
+   "tier": 3,
+   "verdict": "Steady 13.4 PPG but a 21-year vet with declining trend and a 218 projection",
+   "report": "Rodgers dipped from 15.1 to 13.4 PPG year over year, and his 218 projection is the honest read on a 21st-season passer with minimal rushing. Ceiling is a healthy full slate of mid-teens output behind a competent PIT line; floor is an injury-shortened or further-declined season with Rudolph/Howard waiting. He's the starter but the depth chart signals the front office is planning ahead. Wk15 BAL is a tough playoff opener before easier CAR/@TEN games.",
+   "floor": 165,
+   "ceiling": 250,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 218,
+   "rank": 269
+  },
+  "malik willis": {
+   "tier": 4,
+   "verdict": "238 projection is pure speculation off two 3.0 PPG backup seasons; huge uncertainty",
+   "report": "Willis has produced just 3.0 PPG in each of the last two years as a spot backup, so the 238 projection entirely bets on him seizing and holding the MIA starting job. Ceiling is a mobile QB1 breakout if the offense leans on his legs; floor is being benched for Ewers by midseason and returning to irrelevance. That competition (Ewers, Miller) is a live threat to his snaps. A brutal wk17 BUF playoff matchup dents his tournament appeal.",
+   "floor": 110,
+   "ceiling": 240,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 238,
+   "rank": 189
+  },
+  "jacoby brissett": {
+   "tier": 4,
+   "verdict": "placeholder",
+   "report": "placeholder",
+   "floor": 100,
+   "ceiling": 200,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 200,
+   "rank": 271
+  },
+  "fernando mendoza": {
+   "tier": 4,
+   "verdict": "Rookie with no NFL data and a 187 projection; Cousins looming behind him",
+   "report": "Mendoza is a true rookie with zero prior production, so his 187 projection is a projection of raw talent into an uncertain LV situation. Ceiling is a Ward-like rookie contribution with rushing juice; floor is being pulled for veteran Cousins if he struggles early. That Cousins/O'Connell depth behind him is a real leash-shortener. Late wk13 bye and a fine DEN/TEN/@ARI playoff draw offer marginal streaming value.",
+   "floor": 120,
+   "ceiling": 215,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 187,
+   "rank": 223
+  },
+  "deshaun watson": {
+   "tier": 5,
+   "verdict": "Listed as QB2 behind Sanders with a 124 projection; not draftable in standard leagues",
+   "report": "Watson's last data (4.5 PPG in 2024) was among the worst starter lines in the league, and he now sits behind Shedeur Sanders as CLE's QB2. The 124 projection assumes only spot duty; ceiling requires an injury ahead of him and even then his recent play offers little. Floor is essentially zero fantasy relevance on the bench. Purely a deep-league insurance flyer, not a stream.",
+   "floor": 35,
+   "ceiling": 150,
+   "badges": [
+    "depth-risk",
+    "decline-risk"
+   ],
+   "proj": 124,
+   "rank": 270
+  },
+  "tua tagovailoa": {
+   "tier": 5,
+   "verdict": "115 projection and a Penix logjam signal a shrinking role; avoid outside deep formats",
+   "report": "Tua's production fell from 10.7 to 9.5 PPG with virtually no rushing (20 carries), and his 115 projection plus Penix sitting at #2 suggests a tenuous grip on the ATL job. Ceiling is a healthy full season of low-end passing volume; floor is injury or benching that ends his fantasy value early given his documented durability concerns. High weekly variance (7.7-10.2 stdev) makes even his good weeks unreliable. Not worth a bench spot in most leagues.",
+   "floor": 55,
+   "ceiling": 165,
+   "badges": [
+    "injury-history",
+    "decline-risk"
+   ],
+   "proj": 115,
+   "rank": 297
+  },
+  "brandon aubrey": {
+   "tier": 1,
+   "verdict": "Elite leg with volume and range; only kicker worth drafting above streamer level",
+   "report": "Aubrey has posted 187 and 185 points across two straight full seasons, a level no other kicker approaches consistently. His elite range gives him a per-game ceiling that stands alone, and the Cowboys offense keeps him in scoring position often. Floor is capped by weekly variance (6.1 stdev) but he's played all 17 games both years. Playoff slate is neutral with a manageable trio; he's the one K worth a mid-round tie-breaker pick.",
+   "floor": 155,
+   "ceiling": 195,
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "proj": 172,
+   "rank": 132
+  },
+  "cameron dicker": {
+   "tier": 2,
+   "verdict": "Steady, accurate, low-variance producer on a competitive Chargers offense",
+   "report": "Dicker delivered 176 then 167 points with the lowest stdev among top options, making him one of the most reliable weekly floors at the position. The Chargers offense supplies enough drives to keep him relevant every week. Ceiling is limited without Aubrey's range, but the consistency is real. Playoff schedule (SF, @MIA, KC) is fine and his early bye (wk7) means no playoff bye conflict.",
+   "floor": 145,
+   "ceiling": 175,
+   "badges": [],
+   "proj": 162,
+   "rank": 145
+  },
+  "ka'imi fairbairn": {
+   "tier": 2,
+   "verdict": "High-volume Houston leg with top-tier 2025 output but real variance",
+   "report": "Fairbairn jumped to 190 points in 2025 after 166 the prior year, showing his upside when the Texans stall in the red zone and settle for kicks. That 6.5 stdev is the highest here, meaning boom-bust weeks. He's a proven 17-game workhorse with a decade of experience. Playoff draw (@PHI, @GB) has some tough spots but he's a fine target after the top two.",
+   "floor": 140,
+   "ceiling": 185,
+   "badges": [
+    "workhorse"
+   ],
+   "proj": 158,
+   "rank": 151
+  },
+  "jason myers": {
+   "tier": 3,
+   "verdict": "Big 2025 bounce-back but 2024 collapse shows the volatility risk",
+   "report": "Myers rebounded to a position-leading 195 points in 2025 after cratering to 136 in 2024, a swing that warns against expecting the high end. The Seahawks offense outlook drives his value and moderate stdev keeps weeks stable. Floor is a concern given the recent low. He's a reliable veteran with 17-game durability, but bank on the middle of his range rather than the peak.",
+   "floor": 135,
+   "ceiling": 180,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 158,
+   "rank": 152
+  },
+  "harrison mevis": {
+   "tier": 3,
+   "verdict": "Landed the Rams job; strong offense boosts a limited sample",
+   "report": "Mevis played just 9 games in 2025 at 9.0 ppg with no 2024 data, so the projection leans on the Rams' high-scoring offense rather than track record. The upside is real if he holds the job in a top-tier scoring attack. The floor is murky given inexperience and small sample. Playoff slate (DAL, @SEA, @TB) is manageable; he's a speculative streamer-plus.",
+   "floor": 128,
+   "ceiling": 170,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 160,
+   "rank": 156
+  },
+  "eddy pineiro": {
+   "tier": 4,
+   "verdict": "49ers offense lifts a modest leg; volume-dependent upside",
+   "report": "Pineiro improved to 139 points in 2025 from just 103 in 2024, benefiting from the 49ers offense generating chances. His higher stdev signals inconsistency and he missed a game in 2025. The ceiling depends entirely on SF staying healthy and driving into scoring range. Playoff road games (@LAC, @KC) are tougher; treat him as a mid-tier streamer.",
+   "floor": 125,
+   "ceiling": 165,
+   "badges": [],
+   "proj": 155,
+   "rank": 159
+  },
+  "cam little": {
+   "tier": 4,
+   "verdict": "Ascending young leg trending up two straight years",
+   "report": "Little climbed from 124 to 162 points across his first two seasons, a clear upward trajectory as the Jaguars offense grows. He's played all 17 games both years and offers young-leg range. Floor sits around low streamer output if Jacksonville stalls. Playoff schedule (@HOU, @DAL, WSH) is neutral; a fine late-round upside bet.",
+   "floor": 125,
+   "ceiling": 165,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 147,
+   "rank": 161
+  },
+  "jake bates": {
+   "tier": 4,
+   "verdict": "Low-variance Lions leg but touchdown-heavy offense caps kick volume",
+   "report": "Bates posted 158 then 145 points with the lowest stdev in the group, giving a stable but unexciting weekly line. The Lions' explosive offense often scores TDs rather than settling for field goals, which caps his ceiling. Durable across 17 games both seasons. Playoff draw is neutral; a safe floor play without much upside.",
+   "floor": 128,
+   "ceiling": 160,
+   "badges": [],
+   "proj": 146,
+   "rank": 163
+  },
+  "harrison butker": {
+   "tier": 5,
+   "verdict": "Name value outpaces recent output; KC scores TDs not FGs",
+   "report": "Butker rebounded to 144 points in 2025 after a dismal 96 in 2024, but the Chiefs' red-zone efficiency limits his kick volume. His low stdev keeps weeks stable but unspectacular. The floor is solid given KC's consistent scoring, the ceiling capped without extra-point volume converting to field goals. Playoff slate (NE, SF, @LAC) is fine; a middling streamer.",
+   "floor": 125,
+   "ceiling": 160,
+   "badges": [],
+   "proj": 148,
+   "rank": 170
+  },
+  "tyler loop": {
+   "tier": 5,
+   "verdict": "Rookie holding Ravens job in a strong offense; unproven but promising",
+   "report": "Loop delivered 140 points as a rookie across all 17 games, a solid debut in Baltimore's high-scoring attack. The upside is meaningful if the Ravens keep producing scoring drives. Floor carries second-year regression risk given the single-year sample. Playoff schedule (@PIT, @CIN) has divisional toughness but volume should carry him.",
+   "floor": 122,
+   "ceiling": 158,
+   "badges": [
+    "depth-risk"
+   ],
+   "proj": 146,
+   "rank": 171
+  },
+  "cairo santos": {
+   "tier": 6,
+   "verdict": "Improving Bears offense could lift a veteran leg with variance",
+   "report": "Santos rose from 105 to 127 points as the Bears offense showed signs of life, but his output remains low-end and his 5.1 stdev adds bust weeks. The ceiling depends on Chicago's continued offensive improvement. Floor is streamer-level. Playoff draw (@BUF, GB, DET) is one of the tougher slates here; back-end option.",
+   "floor": 118,
+   "ceiling": 150,
+   "badges": [],
+   "proj": 144,
+   "rank": 175
+  },
+  "will reichard": {
+   "tier": 6,
+   "verdict": "Young Vikings leg trending up; volume tied to offensive health",
+   "report": "Reichard improved from 125 to 158 points in his second year with reduced variance, a good developmental sign. The Vikings offense determines his ceiling and there's upside if they field a competent passing game. Floor sits at low-end streamer if the offense sputters. Playoff schedule (DET, WSH, @NYJ) is manageable; a fine late flier.",
+   "floor": 120,
+   "ceiling": 155,
+   "badges": [],
+   "proj": 142,
+   "rank": 176
+  },
+  "chris boswell": {
+   "tier": 6,
+   "verdict": "Big 2024 crashed to average in 2025; age and offense concerns",
+   "report": "Boswell fell from an elite 188 points in 2024 to just 147 in 2025, a steep drop that flags decline or offensive regression in Pittsburgh. His high stdev means volatile weeks. The ceiling exists given his 2024 peak but recent trend points down. Playoff slate (BAL, CAR, @TEN) is neutral; bank on the lower output.",
+   "floor": 120,
+   "ceiling": 155,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 143,
+   "rank": 177
+  },
+  "chase mclaughlin": {
+   "tier": 6,
+   "verdict": "Consistent Bucs leg with solid two-year track record",
+   "report": "McLaughlin posted 162 then 151 points across two full seasons, a reliable mid-pack producer in Tampa's competent offense. Moderate variance keeps him usable most weeks. Ceiling is limited but the floor is steady. His draft rank slid to 240 despite fine production, offering late-round value; playoff slate (NO, @ATL, LAR) is workable.",
+   "floor": 122,
+   "ceiling": 158,
+   "badges": [],
+   "proj": 142,
+   "rank": 240
+  },
+  "evan mcpherson": {
+   "tier": 7,
+   "verdict": "High-variance Bengals leg; strong offense but inconsistent output",
+   "report": "McPherson improved to 134 points in 2025 from a poor 88 in 2024, but his 5.9 stdev makes him a boom-bust weekly play. The Bengals' passing offense provides scoring-drive volume that gives real ceiling if he converts. Floor is shaky given the recent low. Playoff draw (@CAR, @IND, BAL) is mostly favorable; a lottery-ticket streamer.",
+   "floor": 115,
+   "ceiling": 155,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 142,
+   "rank": 257
+  },
+  "nick folk": {
+   "tier": 7,
+   "verdict": "Ancient veteran with a low ceiling on a mediocre offense",
+   "report": "Folk climbed to 126 points in 2025 with the lowest variance around, but the ceiling is minimal on Atlanta's offense and he's 19 years into his career. The floor is stable thanks to accuracy. There's little upside to chase here. Playoff schedule (@WSH, TB, NO) is fine; strictly a late-round streamer.",
+   "floor": 115,
+   "ceiling": 148,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 141,
+   "rank": 258
+  },
+  "trey smack": {
+   "tier": 8,
+   "verdict": "Rookie with no NFL data and a backup on roster; pure speculation",
+   "report": "Smack has zero pro data and faces Lucas Havrisik as listed competition, making his projection entirely conjecture. The Packers' strong offense provides upside if he wins and holds the job. The floor is a job-loss scenario, the widest downside here. Only draftable as a deep dart in the final rounds.",
+   "floor": 105,
+   "ceiling": 150,
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "proj": 144,
+   "rank": 288
+  },
+  "jake elliott": {
+   "tier": 8,
+   "verdict": "Declining output in a TD-heavy Eagles offense; lowest projection",
+   "report": "Elliott dropped from 133 to just 109 points in 2025, the weakest recent trend as Philadelphia's offense scores TDs and reduces his field-goal chances. Low variance but low ceiling makes him a floor-only play. There's little reason to expect a rebound given the offensive profile. Playoff slate (SEA, HOU, @SF) is neutral; last-tier streamer.",
+   "floor": 110,
+   "ceiling": 145,
+   "badges": [
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 136,
+   "rank": 289
+  },
+  "texans d/st": {
+   "tier": 1,
+   "verdict": "Elite pass rush and takeaway unit, top projection and lowest variance among DSTs",
+   "report": "Houston jumped from 8.2 PPG in 2024 to a strong 10.2 in 2025 while cutting weekly stdev to a remarkably low 3.7, signaling a reliable week-to-week floor rare for the position. The 128 projection leads the group and reflects a genuine top-tier defense built on pass rush and turnovers. Floor case is a consistent stream of respectable weeks; ceiling is elite if turnover luck spikes. Playoff slate is mixed with a soft JAX in wk15 but tougher road trips to PHI and GB in wks 16-17.",
+   "floor": 100,
+   "ceiling": 150,
+   "badges": [
+    "elite"
+   ],
+   "proj": 128,
+   "rank": 134
+  },
+  "broncos d/st": {
+   "tier": 1,
+   "verdict": "Top-tier sack machine, consistent two-year producer with high projection",
+   "report": "Denver posted 9.8 then 8.5 PPG across the last two years, both strong with sack-heavy scoring, and carries the group's highest projection at 131. Weekly stdev around 6.1-6.4 is average, so expect some boom-bust but a solid overall floor. Ceiling is a league-winning sack total if the front stays healthy. Playoff schedule is favorable with @LV and @NE bookending a tougher BUF matchup in wk16.",
+   "floor": 98,
+   "ceiling": 152,
+   "badges": [
+    "elite"
+   ],
+   "proj": 131,
+   "rank": 135
+  },
+  "seahawks d/st": {
+   "tier": 2,
+   "verdict": "Big 2025 leap to 10.9 PPG but high variance and tough wk15 at PHI",
+   "report": "Seattle nearly doubled its output from 7.1 PPG in 2024 to a group-leading 10.9 in 2025, though the 8.2 weekly stdev is the highest here, flagging heavy boom-bust dependence. The 121 projection tempers expectations with regression baked in. Ceiling is elite in the right matchups; floor drags on quiet weeks against good offenses. Playoff draw is rough with @PHI in wk15, though @CAR in wk17 is a plus streaming spot.",
+   "floor": 88,
+   "ceiling": 145,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 121,
+   "rank": 140
+  },
+  "rams d/st": {
+   "tier": 2,
+   "verdict": "Steady improvement and solid projection, decent playoff matchups",
+   "report": "Los Angeles climbed from 5.9 to 7.4 PPG and the 123 projection suggests continued improvement behind a strong pass rush. Weekly stdev in the mid-5s is manageable for the position. Ceiling is a top-8 finish if the front generates consistent pressure; floor is streamer-level output. Playoff schedule offers a friendly wk15 DAL but road trips to SEA and TB later.",
+   "floor": 90,
+   "ceiling": 140,
+   "badges": [],
+   "proj": 123,
+   "rank": 148
+  },
+  "steelers d/st": {
+   "tier": 2,
+   "verdict": "Down year in 2025 but 126 projection banks on rebound, strong playoff slate",
+   "report": "Pittsburgh slipped to 6.6 PPG in 2025 from 7.9 with elevated 7.2 stdev, but the 126 projection reflects belief in a bounce-back behind their veteran defensive core. The unit remains capable of takeaway bursts. Ceiling is top-6 if the turnover rate normalizes upward; floor is inconsistent single-digit weeks. Playoff schedule is appealing with home CAR in wk16 and @TEN in wk17.",
+   "floor": 88,
+   "ceiling": 140,
+   "badges": [
+    "easy-playoffs"
+   ],
+   "proj": 126,
+   "rank": 146
+  },
+  "eagles d/st": {
+   "tier": 3,
+   "verdict": "Consistent low-variance unit but modest ceiling and tough wk17 at SF",
+   "report": "Philadelphia has been steady around 7.4-8.1 PPG with a controlled 5.1 stdev, offering a reliable if unspectacular floor. The 107 projection places it in the middle tier without breakout upside. Ceiling depends on their front driving sacks; floor is safe streamer territory. Playoff draw is neutral with SEA and HOU at home before a tricky @SF in wk17.",
+   "floor": 82,
+   "ceiling": 128,
+   "badges": [],
+   "proj": 107,
+   "rank": 147
+  },
+  "patriots d/st": {
+   "tier": 3,
+   "verdict": "Massive 2025 turnaround from 2.8 to 7.8 PPG signals a real unit",
+   "report": "New England exploded from a dreadful 2.8 PPG in 2024 to 7.8 in 2025, a legitimate signal of an improving defense rather than noise. The 100 projection is cautious given the short track record. Ceiling is a mid-tier weekly starter; floor risks reverting if the roster overhaul stalls. Playoff schedule is unfriendly with @KC in wk15 and @NYJ in wk16 before a home DEN game.",
+   "floor": 72,
+   "ceiling": 118,
+   "badges": [
+    "breakout"
+   ],
+   "proj": 100,
+   "rank": 144
+  },
+  "ravens d/st": {
+   "tier": 4,
+   "verdict": "Name-brand unit fell to 4.5 PPG but 118 projection expects strong rebound",
+   "report": "Baltimore cratered to 4.5 PPG in 2025 with a high 7.4 stdev after 6.2 the prior year, yet the 118 projection bets heavily on a talent-driven rebound. The pedigree and pass rush give real upside if health returns. Ceiling is top-8; floor is another disappointing takeaway-starved season. Playoff slate is divisional and tough with @PIT, CLE, @CIN.",
+   "floor": 78,
+   "ceiling": 132,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 118,
+   "rank": 150
+  },
+  "lions d/st": {
+   "tier": 4,
+   "verdict": "Underwhelming production but 108 projection banks on offense-fueled game scripts",
+   "report": "Detroit has hovered near 5.4-5.9 PPG the last two years, modest for a team that plays with leads and forces desperation passing. The 108 projection sees streaming value from positive game scripts. Ceiling is decent in favorable matchups; floor is fringe-startable. Playoff schedule mixes @MIN, home NYG, and @CHI, a manageable set.",
+   "floor": 74,
+   "ceiling": 118,
+   "badges": [],
+   "proj": 108,
+   "rank": 174
+  },
+  "browns d/st": {
+   "tier": 4,
+   "verdict": "Big jump to 8.4 PPG in 2025, favorable wk15 and wk17 matchups",
+   "report": "Cleveland doubled output from 4.1 to 8.4 PPG in 2025, reflecting a strong defensive front that can carry despite offensive limitations. The 104 projection lags the actual but acknowledges variance. Ceiling is a top-10 sack unit; floor risks bad game scripts on a losing team. Playoff schedule helps with @NYG in wk15 and home IND in wk17 sandwiching a tough @BAL.",
+   "floor": 74,
+   "ceiling": 120,
+   "badges": [
+    "easy-playoffs"
+   ],
+   "proj": 104,
+   "rank": 167
+  },
+  "chargers d/st": {
+   "tier": 5,
+   "verdict": "Steady mid-single-digit producer, streamer with neutral schedule",
+   "report": "Los Angeles has been consistent at 6.9-7.0 PPG with average variance, a dependable stream-in option without top-tier upside. The 94 projection places it squarely in the back half. Ceiling is occasional big weeks; floor is replaceable production. Playoff slate features home SF and KC around a wk16 @MIA, mixed value.",
+   "floor": 66,
+   "ceiling": 110,
+   "badges": [],
+   "proj": 94,
+   "rank": 181
+  },
+  "vikings d/st": {
+   "tier": 5,
+   "verdict": "Solid 2025 but 72 projection signals sharp expected regression",
+   "report": "Minnesota produced 7.7 PPG in 2025 with a huge 8.6 stdev, yet the 72 projection is the lowest here, implying the model expects significant decline or scheme/personnel losses. That gap is a red flag for drafters. Ceiling is boom weeks if the pass rush holds; floor is bottom-tier. Playoff matchups include DET and @NYJ with a favorable WSH in wk16.",
+   "floor": 60,
+   "ceiling": 108,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 72,
+   "rank": 164
+  },
+  "chiefs d/st": {
+   "tier": 6,
+   "verdict": "Low variance but muted ceiling, easy wk15 vs NE",
+   "report": "Kansas City posted 5.2 PPG in 2025 with a tight 4.8 stdev, offering predictability but limited upside. The 100 projection expects a modest bounce. Ceiling is a fringe weekly starter; floor is streamer depth. Playoff schedule is favorable with home NE in wk15 before tougher SF and @LAC games.",
+   "floor": 68,
+   "ceiling": 112,
+   "badges": [],
+   "proj": 100,
+   "rank": 197
+  },
+  "packers d/st": {
+   "tier": 6,
+   "verdict": "Collapsed from 8.2 to 4.5 PPG, projection hopes for partial rebound",
+   "report": "Green Bay fell hard from 8.2 PPG in 2024 to just 4.5 in 2025, and the 89 projection only partially restores confidence. The talent exists but the recent trend is discouraging. Ceiling is a return to 2024 form; floor is another lost year. Playoff schedule offers home MIA and HOU around @CHI.",
+   "floor": 62,
+   "ceiling": 110,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 89,
+   "rank": 239
+  },
+  "jaguars d/st": {
+   "tier": 6,
+   "verdict": "Huge 2025 leap but 81 projection distrusts sustainability",
+   "report": "Jacksonville surged from 2.1 PPG in 2024 to 8.2 in 2025, an enormous swing the 81 projection is skeptical of sustaining. Volatility makes this a risky season-long anchor. Ceiling is another surprise top-15 unit; floor is a reversion to weak takeaway output. Playoff schedule is mixed with @HOU, @DAL, and home WSH.",
+   "floor": 60,
+   "ceiling": 106,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 81,
+   "rank": 169
+  },
+  "buccaneers d/st": {
+   "tier": 7,
+   "verdict": "Flat low-single-digit production, waiver-tier defense",
+   "report": "Tampa Bay has been stuck around 5.2-5.4 PPG both years with high variance, offering little reason to draft over streaming. The 93 projection is optimistic relative to actuals. Ceiling is sporadic big weeks; floor is bench material. Playoff schedule features home NO in wk15 and LAR in wk17 with @ATL between.",
+   "floor": 58,
+   "ceiling": 102,
+   "badges": [],
+   "proj": 93,
+   "rank": 238
+  },
+  "colts d/st": {
+   "tier": 7,
+   "verdict": "Consistently weak producer, low-priority late pick",
+   "report": "Indianapolis has managed just 4.4-4.8 PPG across two years with modest variance, marking it a bottom-tier fantasy unit. The 88 projection expects only marginal improvement. Ceiling is a few useful matchup weeks; floor is undraftable production. Playoff schedule includes @TEN and home CIN, streamable spots.",
+   "floor": 56,
+   "ceiling": 98,
+   "badges": [],
+   "proj": 88,
+   "rank": 256
+  },
+  "bears d/st": {
+   "tier": 7,
+   "verdict": "Flat 5.5 PPG output with high variance, streamer at best",
+   "report": "Chicago has produced a steady but unexciting 5.5-5.6 PPG with elevated stdev, offering boom-bust weeks without a reliable floor. The 84 projection reflects low expectations. Ceiling is occasional turnover-driven spikes; floor is deep-bench. Playoff schedule is rough with @BUF in wk15 before home GB and DET.",
+   "floor": 54,
+   "ceiling": 96,
+   "badges": [
+    "td-dependent"
+   ],
+   "proj": 84,
+   "rank": 287
+  },
+  "bengals d/st": {
+   "tier": 8,
+   "verdict": "Cratered to 2.8 PPG in 2025, avoid outside deep matchup streams",
+   "report": "Cincinnati bottomed out at 2.8 PPG in 2025 from 5.5, one of the worst fantasy defenses, and the 85 projection is generous. This is a last-resort unit. Ceiling requires a full scheme turnaround; floor is negative-adjacent weeks. Playoff schedule offers a soft @CAR in wk15 but @IND and home BAL after.",
+   "floor": 50,
+   "ceiling": 94,
+   "badges": [
+    "decline-risk"
+   ],
+   "proj": 85,
+   "rank": 286
+  },
+  "49ers d/st": {
+   "tier": 8,
+   "verdict": "Injury-ravaged unit fell to 3.6 PPG, deep-league flyer only",
+   "report": "San Francisco dropped from 4.9 to a dismal 3.6 PPG in 2025, reflecting an injury-decimated defense that lost its former elite ceiling. The 82 projection assumes some health recovery. Ceiling is a return toward relevance if the front gets healthy; floor is bottom-of-league. Playoff schedule is brutal with @LAC, @KC, and home PHI.",
+   "floor": 50,
+   "ceiling": 98,
+   "badges": [
+    "injury-history",
+    "decline-risk"
+   ],
+   "proj": 82,
+   "rank": 298
+  },
+  "jets d/st": {
+   "tier": 1,
+   "verdict": "Streamer-only DST with sharp production decline; playoff schedule offers NE matchup upside only",
+   "report": "The Jets D/ST collapsed from a respectable 5.2 PPG in 2024 to just 1.9 PPG in 2025, a steep decline that signals eroding pass-rush and takeaway production heading into 2026. The ceiling case leans on a soft Week 16 matchup vs NE and generally streamable spots, but the floor is ugly given last year's near-worthless output. Both DSTs share the same 81 projection and near-identical ADP, so this is a coin-flip late-round dart. Draft neither before your final pick, and be ready to stream based on weekly matchups.",
+   "floor": 55,
+   "ceiling": 100,
+   "badges": [
+    "decline-risk",
+    "td-dependent"
+   ],
+   "proj": 81,
+   "rank": 299
+  },
+  "saints d/st": {
+   "tier": 1,
+   "verdict": "Higher recent output than Jets but tough playoff slate; still just a late streamer",
+   "report": "New Orleans nearly doubled its scoring from 3.9 PPG in 2024 to 7.2 PPG in 2025 with lower weekly variance, making it the more reliable of these two on recent trend. The ceiling is a top-15 finish if the takeaway rate holds, but the floor is real given the difficult playoff schedule with road games @TB and @ATL bookending Week 16 vs ARI. Identical 81 projection and ADP to the Jets means this is purely a preference and matchup call. Grab it as a final-pick DST and monitor waivers for better weekly streams.",
+   "floor": 70,
+   "ceiling": 120,
+   "badges": [
+    "td-dependent",
+    "tough-playoffs"
+   ],
+   "proj": 81,
+   "rank": 300
+  }
+ }
+}
