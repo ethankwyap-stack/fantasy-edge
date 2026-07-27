@@ -39,6 +39,11 @@
   .rangebar { position:relative; width:90px; height:8px; background:#2a3450; border-radius:4px; }
   .rangebar .fill { position:absolute; height:100%; background:#365a8c; border-radius:4px; }
   .rangebar .mark { position:absolute; top:-2px; width:2px; height:12px; background:var(--accent); }
+  .slotbar { background:var(--card); border-radius:10px; padding:10px 12px; margin-bottom:10px; font-size:14px; }
+  .slotbar select { margin:0; }
+  .onclock { color:var(--accent); }
+  .tierbreak .gone { color:#f87171; font-weight:600; }
+  .tierbreak .safe { color:#4ade80; font-weight:600; }
 </style>
 </head>
 <body>
@@ -56,6 +61,19 @@ const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
 const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set() };
+
+// Snake draft: overall pick number of my r-th pick (1-indexed round), given my slot and league size.
+const snakePick = (r, slot, size) => r % 2 ? (r-1)*size + slot : r*size - slot + 1;
+console.assert(snakePick(1,2,12)===2 && snakePick(2,2,12)===23 && snakePick(3,2,12)===26 && snakePick(1,12,12)===12 && snakePick(2,12,12)===13, 'snakePick broken');
+
+// My next pick given how many players have already come off the board.
+function nextPick() {
+  const size = S.teams.length, slot = +localStorage.slot;
+  if (!size || !slot) return null;
+  const made = S.drafted.size, onClock = made + 1;
+  for (let r = 1; r <= 20; r++) { const n = snakePick(r, slot, size); if (n >= onClock) return {round:r, pick:n, away:n - onClock}; }
+  return null;
+}
 
 const $ = s => document.querySelector(s);
 const espn = v => fetch('/api/espn?view='+v).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
@@ -160,10 +178,18 @@ function draftRows() {
   const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search)).slice(0,300);
   S.maxCeil = Math.max(1, ...list.map(p => A(p.fullName)?.ceiling || 0));
   // ponytail: overall list mixes position tiers — break rows fire when the running max tier deepens
+  const left = {};
+  for (const p of list) { const a = A(p.fullName); if (a && !S.drafted.has(p.id)) left[a.tier] = (left[a.tier]||0) + 1; }
+  const np = nextPick();
   let maxTier = 0, out = '';
   for (const p of list) {
     const a = A(p.fullName);
-    if (a && a.tier > maxTier) { maxTier = a.tier; out += `<tr class="tierbreak"><td colspan="6">Tier ${maxTier}</td></tr>`; }
+    if (a && a.tier > maxTier) {
+      maxTier = a.tier;
+      const n = left[maxTier] || 0;
+      const gone = np && n <= np.away;
+      out += `<tr class="tierbreak"><td colspan="6">Tier ${maxTier} · ${n} left${np ? (gone ? ` <span class="gone">likely gone by your #${np.pick}</span>` : ` <span class="safe">should survive to #${np.pick}</span>`) : ''}</td></tr>`;
+    }
     out += drow(p);
   }
   return out;
@@ -171,7 +197,7 @@ function draftRows() {
 
 const views = {
   draft() {
-    return `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
+    return slotBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
     <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
     <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
   },
@@ -211,6 +237,17 @@ const views = {
     return out + '</table>';
   }
 };
+window.setSlot = v => { localStorage.slot = v; render(); };
+function slotBar() {
+  const size = S.teams.length, slot = +localStorage.slot, np = nextPick();
+  const opts = Array.from({length:size}, (_,i) => `<option value="${i+1}" ${i+1===slot?'selected':''}>${i+1}</option>`).join('');
+  const status = np
+    ? (np.away === 0 ? `<b class="onclock">YOU'RE ON THE CLOCK — pick #${np.pick} (round ${np.round})</b>`
+       : `Next up: <b>#${np.pick}</b> (round ${np.round}) · <b>${np.away}</b> pick${np.away===1?'':'s'} away · ${S.drafted.size} off the board`)
+    : 'Set your draft slot to see when you pick next.';
+  return `<div class="slotbar">Draft slot <select onchange="setSlot(this.value)"><option value="">—</option>${opts}</select>
+    <span style="color:var(--dim)">of ${size}</span> &nbsp; ${status}</div>`;
+}
 function teamPicker() {
   return `<select onchange="setTeam(this.value)">${S.teams.map(t=>`<option value="${t.id}" ${t.id===S.myTeamId?'selected':''}>${t.name||t.location+' '+t.nickname}</option>`).join('')}</select> <span style="color:var(--dim);font-size:13px">← pick YOUR team</span><br>`;
 }
