@@ -53,6 +53,12 @@
   .flabel { color:var(--dim); font-size:12px; }
   .brow { flex-basis:100%; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
   .dtag { display:inline-block; color:var(--bad); font-size:11px; text-decoration:none; }
+  .meta { color:var(--dim); font-size:11px; white-space:nowrap; }
+  .inj { border-radius:5px; padding:0 5px; font-size:11px; font-weight:700; }
+  .inj.out { background:#3b1d1d; color:#f87171; } .inj.qst { background:#3b2f14; color:var(--warn); }
+  .news { color:#93b4e8; font-size:12px; display:block; margin-top:6px; text-decoration:none; }
+  .news:hover { text-decoration:underline; }
+  .newsdate { color:var(--dim); }
 </style>
 </head>
 <body>
@@ -69,7 +75,7 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set(),
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set(), meta:{}, injuries:{}, news:{},
   // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
   pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
@@ -99,24 +105,41 @@ function weekProj(p, week) {
   return s ? +s.appliedTotal.toFixed(1) : 0;
 }
 
-async function sleeperNames() {
-  // ponytail: the full Sleeper dump is ~5MB; cache just id→name for 24h
-  try { const c = JSON.parse(localStorage.sn); if (Date.now() - c.t < 864e5) return c.d; } catch {}
+// Sleeper's dump is ~5MB but we already download it for trending names — keep the useful
+// fields too (age, experience, depth-chart slot, injury tag) instead of throwing them away.
+// Trimmed to active fantasy positions it's ~0.12MB, smaller than the old name-only cache.
+const FPOS = new Set(['QB','RB','WR','TE','K','DEF']);
+async function sleeperData() {
+  // ponytail: cache key is `sn2` — bumped from `sn` because the row shape changed; a stale
+  // `sn` would deserialize as strings and break every field lookup. Bump it again if it changes.
+  try { const c = JSON.parse(localStorage.sn2); if (Date.now() - c.t < 864e5) return c.d; } catch {}
+  delete localStorage.sn; // drop the old name-only cache so it isn't eating quota
   const all = await fetch('https://api.sleeper.app/v1/players/nfl').then(r=>r.json()).catch(()=>({}));
-  const d = {}; for (const id in all) if (all[id].full_name) d[id] = all[id].full_name;
-  try { localStorage.sn = JSON.stringify({t: Date.now(), d}); } catch {}
+  const d = {};
+  for (const id in all) {
+    const p = all[id];
+    if (!p.full_name || !FPOS.has(p.position) || p.active === false) continue;
+    d[id] = [p.full_name, p.age||0, p.years_exp??'', p.depth_chart_order??'', p.injury_status||'', p.team||''];
+  }
+  try { localStorage.sn2 = JSON.stringify({t: Date.now(), d}); } catch {}
   return d;
 }
 
 async function load() {
   try {
     const filter = encodeURIComponent(JSON.stringify({players:{limit:400, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending, analysis] = await Promise.all([
+    const [league, playerData, trending, analysis, injuries, news] = await Promise.all([
       espn('mTeam,mRoster,mSettings'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
-      fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({}))
+      fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({})),
+      fetch('/api/nfl?feed=injuries').then(r=>r.json()).catch(()=>({data:{}})),
+      fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]}))
     ]);
+    S.injuries = injuries.data || {};
+    // headline list per player, newest first (the feed already arrives newest first)
+    S.news = {};
+    for (const a of news.data || []) for (const n of a.p) (S.news[n] ||= []).push(a);
     S.analysis = analysis.players || {};
     S.week = league.scoringPeriodId || 1;
     S.teams = league.teams || [];
@@ -136,11 +159,13 @@ async function load() {
       for (const p of byPos[pos]) p._vbd = seasonProj(p) - repl;
     }
     S.players.sort((a,b) => b._vbd - a._vbd);
-    // Sleeper trending — match by name
-    if (trending.length) {
-      const names = await sleeperNames();
-      for (const t of trending) { const n = names[t.player_id]; if (n) S.trending[n.toLowerCase()] = t.count; }
+    // Sleeper dump — trending counts plus age/experience/depth-chart per player, matched by name
+    const sd = await sleeperData();
+    for (const id in sd) {
+      const [name, age, exp, depth, inj, team] = sd[id];
+      S.meta[name.toLowerCase()] = { age, exp, depth, inj, team };
     }
+    for (const t of trending) { const r = sd[t.player_id]; if (r) S.trending[r[0].toLowerCase()] = t.count; }
     render();
   } catch (e) { $('#view').innerHTML = '<div class="err">Error: '+e+'<br><br>Check .env has LEAGUE_ID, ESPN_S2, SWID — see README.</div>'; }
 }
@@ -164,6 +189,24 @@ const GOOD = new Set(['breakout','workhorse','elite','easy-playoffs','handcuff']
 const RISK = new Set(['split-touches','depth-risk','injury-history','decline-risk','tough-playoffs','td-dependent']);
 window.tExp = id => { S.expanded.has(id) ? S.expanded.delete(id) : S.expanded.add(id); renderBody(); };
 
+const M = name => S.meta[(name||'').toLowerCase()] || {};
+// ESPN's live injury feed wins over Sleeper's tag; "Active" means nothing to show.
+function injury(name) {
+  const e = S.injuries[(name||'').toLowerCase()];
+  const s = (e && e.status) || M(name).inj || '';
+  return (!s || /^active$/i.test(s)) ? null : { s, note: e?.note || '', date: e?.date || '' };
+}
+function metaBits(name) {
+  const m = M(name), b = [];
+  if (m.age) b.push(m.age + 'y');
+  if (m.exp === 0) b.push('rookie'); else if (m.exp) b.push(m.exp + 'yr');
+  if (m.depth) b.push('depth ' + m.depth);
+  return b.length ? `<span class="meta">${b.join(' · ')}</span>` : '';
+}
+const ago = d => { const h = (Date.now() - new Date(d)) / 36e5;
+  return !d || isNaN(h) ? '' : h < 24 ? Math.max(1, Math.round(h)) + 'h ago' : Math.round(h/24) + 'd ago'; };
+const esc = s => (s||'').replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+
 function rangeBar(a) {
   if (!a || a.ceiling == null) return '';
   const max = S.maxCeil || 1;
@@ -176,13 +219,24 @@ function drow(p) {
   const a = A(p.fullName), pos = POS[p.defaultPositionId];
   const tr = S.trending[(p.fullName||'').toLowerCase()];
   const chips = (a?.badges||[]).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ');
-  let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}"${a?` onclick="tExp(${p.id})" style="cursor:pointer"`:''}>
-    <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips}</td>
+  const inj = injury(p.fullName);
+  const injTag = inj ? `<span class="inj ${/out|ir|injured|pup|susp|doubt/i.test(inj.s)?'out':'qst'}">${esc(inj.s)}</span>` : '';
+  const hasExtra = a || inj || S.news[(p.fullName||'').toLowerCase()];
+  let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}"${hasExtra?` onclick="tExp(${p.id})" style="cursor:pointer"`:''}>
+    <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
     <td>${rangeBar(a)}</td>
     <td><button class="btn" onclick="event.stopPropagation();tDraft(${p.id})">✕</button> <button class="btn mine-btn" onclick="event.stopPropagation();tMine(${p.id})">★</button></td></tr>`;
-  if (a && S.expanded.has(p.id)) out += `<tr class="report"><td colspan="6"><b>${a.verdict||''}</b><br>${a.report||''}<br><span style="color:var(--dim)">Range: ${Math.round(a.floor)} floor · ${a.proj??'?'} proj · ${Math.round(a.ceiling)} ceiling PPR pts</span></td></tr>`;
+  if (hasExtra && S.expanded.has(p.id)) {
+    const parts = [];
+    if (a) parts.push(`<b>${a.verdict||''}</b><br>${a.report||''}<br><span style="color:var(--dim)">Range: ${Math.round(a.floor)} floor · ${a.proj??'?'} proj · ${Math.round(a.ceiling)} ceiling PPR pts</span>`);
+    if (inj && inj.note) parts.push(`<span style="color:var(--warn)">⚕ ${esc(inj.s)}</span> — ${esc(inj.note)} <span class="newsdate">ESPN · ${ago(inj.date)}</span>`);
+    // ponytail: 2 headlines is enough to catch camp news the static research file predates
+    for (const n of (S.news[(p.fullName||'').toLowerCase()] || []).slice(0,2))
+      parts.push(`<a class="news" href="${esc(n.u)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📰 ${esc(n.h)} <span class="newsdate">· ${ago(n.d)}</span></a>`);
+    out += `<tr class="report"><td colspan="6">${parts.join('<br>')}</td></tr>`;
+  }
   return out;
 }
 // Badge filter: drop anything carrying a hidden badge; if any "only" badges are on, require one of them.

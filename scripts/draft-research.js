@@ -45,7 +45,68 @@ function summarize(p, yr) {
 
 const seasonProj = p => { const s = (p.stats || []).find(s => s.statSourceId === 1 && s.seasonId === +SEASON && s.scoringPeriodId === 0); return s ? Math.round(s.appliedTotal) : 0; };
 
-const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), depth-chart competition on their NFL team, and playoff-week (15-17) opponents + bye. For EACH player return:
+// ---- nflverse: real play-by-play-derived usage, free, no key ----
+// Adds what ESPN's fantasy API does not expose: target share, air-yards share, WOPR, EPA.
+// The current season's file appears once games are played, so this also works in-season.
+const NFLVERSE = yr => `https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_${yr}.csv`;
+
+// Minimal quote-aware CSV split — some columns hold comma-free lists but quoting still happens.
+function csvSplit(line) {
+  const out = []; let cur = '', q = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (q) { if (c === '"') { if (line[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+    else if (c === '"') q = true;
+    else if (c === ',') { out.push(cur); cur = ''; }
+    else cur += c;
+  }
+  out.push(cur);
+  return out;
+}
+
+async function nflverseUsage(yr) {
+  const r = await fetch(NFLVERSE(yr));
+  if (!r.ok) return null; // season not started yet, or file not published
+  const lines = (await r.text()).split('\n');
+  const cols = csvSplit(lines[0]);
+  const ix = {}; cols.forEach((c, i) => ix[c] = i);
+  const agg = {};
+  for (let i = 1; i < lines.length; i++) {
+    if (!lines[i]) continue;
+    const f = csvSplit(lines[i]);
+    if (f[ix.season_type] !== 'REG') continue;
+    const name = (f[ix.player_display_name] || '').toLowerCase();
+    if (!name) continue;
+    const n = k => +f[ix[k]] || 0;
+    const a = agg[name] ||= { g: 0, tgtShare: 0, ayShare: 0, wopr: 0, recEpa: 0, rushEpa: 0, passEpa: 0, fd: 0, cpoe: 0, cpoeG: 0 };
+    a.g++;
+    a.tgtShare += n('target_share'); a.ayShare += n('air_yards_share'); a.wopr += n('wopr');
+    a.recEpa += n('receiving_epa'); a.rushEpa += n('rushing_epa'); a.passEpa += n('passing_epa');
+    a.fd += n('receiving_first_downs') + n('rushing_first_downs');
+    if (f[ix.passing_cpoe]) { a.cpoe += n('passing_cpoe'); a.cpoeG++; }
+  }
+  return agg;
+}
+
+// One line of advanced usage; only the parts that mean something for the position.
+function usageLine(a, pos) {
+  if (!a || !a.g) return null;
+  const per = v => (v / a.g).toFixed(2), pct = v => (v / a.g * 100).toFixed(1) + '%';
+  const bits = [`${a.g}g`];
+  if (pos === 'QB') {
+    bits.push(`pass EPA/g ${per(a.passEpa)}`);
+    if (a.cpoeG) bits.push(`CPOE ${(a.cpoe / a.cpoeG).toFixed(1)}`);
+    if (a.rushEpa) bits.push(`rush EPA/g ${per(a.rushEpa)}`);
+  } else {
+    if (a.tgtShare) bits.push(`target share ${pct(a.tgtShare)}`, `air-yards share ${pct(a.ayShare)}`, `WOPR ${per(a.wopr)}`);
+    if (a.recEpa) bits.push(`rec EPA/g ${per(a.recEpa)}`);
+    if (a.rushEpa) bits.push(`rush EPA/g ${per(a.rushEpa)}`);
+    bits.push(`${a.fd} first downs`);
+  }
+  return bits.join(', ');
+}
+
+const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), play-by-play-derived advanced usage where available (target share, air-yards share, WOPR, EPA per game, CPOE for QBs — weigh these heavily, they separate real opportunity from touchdown luck), depth-chart competition on their NFL team, and playoff-week (15-17) opponents + bye. For EACH player return:
 - tier: 1-8 within this position group; a new tier must mark a real dropoff in expected value, not equal slices
 - verdict: one line, max 120 chars — why this player deserves this rank
 - report: 3-5 sentences citing the data given: past usage/production trend interpreted forward, the ceiling case, the floor case, depth-chart/touch competition, and playoff schedule when notable
@@ -90,6 +151,12 @@ async function main() {
   const [s2025, s2024] = await Promise.all([pastSeason(2025), pastSeason(2024)]);
   console.log(`  2025: ${Object.keys(s2025).length} players, 2024: ${Object.keys(s2024).length}`);
 
+  console.log('Fetching nflverse advanced usage (target share / air yards / EPA)…');
+  // current season first — once games are played that's the live one; else last completed season
+  let nvUsage = await nflverseUsage(SEASON), usageYr = SEASON;
+  if (!nvUsage) { nvUsage = await nflverseUsage(+SEASON - 1); usageYr = +SEASON - 1; }
+  console.log(nvUsage ? `  ${usageYr}: ${Object.keys(nvUsage).length} players` : "  none available");
+
   console.log('Fetching Sleeper depth charts…');
   const sleeper = await getJson('https://api.sleeper.app/v1/players/nfl');
   const sByName = {};
@@ -116,6 +183,8 @@ async function main() {
     const l = [`${p.fullName} (${pos}, ${ab}) — 2026 proj ${seasonProj(p)}, ADP ${adp ? adp.toFixed(1) : '?'}, overall draft rank ${i + 1}`];
     l.push(`  2025: ${summarize(s2025[p.id], 2025) || 'no data (rookie or missed season)'}`);
     l.push(`  2024: ${summarize(s2024[p.id], 2024) || 'no data'}`);
+    const u = nvUsage && usageLine(nvUsage[p.fullName.toLowerCase()], pos);
+    if (u) l.push(`  ${usageYr} advanced usage: ${u}`);
     if (sp) {
       const comp = Object.values(sleeper)
         .filter(x => x.team && x.team === sp.team && x.position === sp.position && x.full_name && x.full_name !== sp.full_name && x.depth_chart_order != null)

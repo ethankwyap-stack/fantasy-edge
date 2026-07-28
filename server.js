@@ -3,6 +3,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const espn = require('./api/espn.js');
+const nfl = require('./api/nfl.js');
 
 // ponytail: single-page app — static read so Vercel's bundler traces and includes it
 const INDEX = fs.readFileSync(path.join(__dirname, 'index.html'));
@@ -25,6 +26,7 @@ http.createServer((req, res) => {
     }
   }
   if (req.url.startsWith('/api/espn')) return espn(req, res);
+  if (req.url.startsWith('/api/nfl')) return nfl(req, res);
   if (req.url.startsWith('/draft-analysis.json')) {
     res.setHeader('Content-Type', 'application/json');
     // re-read locally so the always-on LaunchAgent picks up a git pull without restart
