@@ -65,9 +65,17 @@ function csvSplit(line) {
 }
 
 async function nflverseUsage(yr) {
-  const r = await fetch(NFLVERSE(yr));
-  if (!r.ok) return null; // season not started yet, or file not published
-  const lines = (await r.text()).split('\n');
+  let text;
+  try {
+    const r = await fetch(NFLVERSE(yr), { signal: AbortSignal.timeout(120000) });
+    if (!r.ok) return null; // season not started yet, or file not published
+    text = await r.text();
+  } catch (e) {
+    // ponytail: a flaky 8MB GitHub download must not kill a $3 Claude run — degrade, loudly.
+    console.warn(`  nflverse ${yr} fetch failed (${e.message}) — continuing without advanced usage`);
+    return null;
+  }
+  const lines = text.split('\n');
   const cols = csvSplit(lines[0]);
   const ix = {}; cols.forEach((c, i) => ix[c] = i);
   const agg = {};
