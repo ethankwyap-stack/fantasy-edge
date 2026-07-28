@@ -44,6 +44,15 @@
   .onclock { color:var(--accent); }
   .tierbreak .gone { color:#f87171; font-weight:600; }
   .tierbreak .safe { color:#4ade80; font-weight:600; }
+  .fbar { background:var(--card); border-radius:10px; padding:8px 10px; margin-bottom:10px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .fchip { background:#242e48; border:1px solid #2a3450; border-radius:6px; padding:3px 9px; font-size:13px; color:var(--dim); cursor:pointer; user-select:none; }
+  .fchip.on { background:var(--accent); color:#0f1420; border-color:var(--accent); font-weight:600; }
+  .fchip.only { background:#14532d; color:var(--accent); border-color:#166534; }
+  .fchip.hide { background:#3b1d1d; color:var(--bad); border-color:#7f1d1d; text-decoration:line-through; }
+  .fsep { width:1px; height:18px; background:#2a3450; margin:0 4px; }
+  .flabel { color:var(--dim); font-size:12px; }
+  .brow { flex-basis:100%; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .dtag { display:inline-block; color:var(--bad); font-size:11px; text-decoration:none; }
 </style>
 </head>
 <body>
@@ -60,7 +69,9 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set() };
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set(),
+  // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
+  pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
 // Snake draft: overall pick number of my r-th pick (1-indexed round), given my slot and league size.
 const snakePick = (r, slot, size) => r % 2 ? (r-1)*size + slot : r*size - slot + 1;
@@ -166,7 +177,7 @@ function drow(p) {
   const tr = S.trending[(p.fullName||'').toLowerCase()];
   const chips = (a?.badges||[]).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ');
   let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}"${a?` onclick="tExp(${p.id})" style="cursor:pointer"`:''}>
-    <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips}</td>
+    <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
     <td>${rangeBar(a)}</td>
@@ -174,8 +185,45 @@ function drow(p) {
   if (a && S.expanded.has(p.id)) out += `<tr class="report"><td colspan="6"><b>${a.verdict||''}</b><br>${a.report||''}<br><span style="color:var(--dim)">Range: ${Math.round(a.floor)} floor · ${a.proj??'?'} proj · ${Math.round(a.ceiling)} ceiling PPR pts</span></td></tr>`;
   return out;
 }
+// Badge filter: drop anything carrying a hidden badge; if any "only" badges are on, require one of them.
+const badgeOk = (bs, only, hide) => !hide.some(b => bs.includes(b)) && (!only.length || only.some(b => bs.includes(b)));
+console.assert(badgeOk(['elite'],[],[]) && !badgeOk(['elite'],[],['elite']) && !badgeOk(['elite'],['breakout'],[])
+  && badgeOk(['elite','breakout'],['breakout'],[]) && !badgeOk([],['breakout'],[]), 'badgeOk broken');
+
+window.setPos = v => { S.pos = v; render(); };
+window.setSort = v => { S.sort = v; render(); };
+window.tHide = () => { S.hideDrafted = !S.hideDrafted; render(); };
+window.cycleBadge = b => { S.badge[b] = S.badge[b]==='only' ? 'hide' : S.badge[b]==='hide' ? '' : 'only'; render(); };
+
+function filterBar() {
+  S.badgeList ||= [...new Set(Object.values(S.analysis).flatMap(a => a.badges || []))].sort();
+  const chip = (on, oc, label) => `<span class="fchip ${on}" onclick="${oc}">${label}</span>`;
+  const pos = ['QB','RB','WR','TE','K','DST'].map(x => chip(S.pos===x?'on':'', `setPos('${x}')`, x)).join('');
+  const sort = [['vbd','VBD'],['proj','Proj'],['ceil','Ceiling']].map(([k,l]) => chip(S.sort===k?'on':'', `setSort('${k}')`, l)).join('');
+  const badges = S.badgeList.map(b => chip(S.badge[b]||'', `cycleBadge('${b}')`, b)).join('');
+  return `<div class="fbar">
+    ${chip(S.pos?'':'on', "setPos('')", 'All')}${pos}
+    <span class="fsep"></span>${chip(S.hideDrafted?'on':'', 'tHide()', (S.hideDrafted?'✓ ':'')+'Hide drafted')}
+    <span class="fsep"></span><span class="flabel">Sort</span>${sort}
+    ${badges ? `<div class="brow"><span class="flabel">Badges</span>${badges}<span class="flabel">tap: only → hide → off</span></div>` : ''}
+  </div>`;
+}
+
 function draftRows() {
-  const list = S.players.filter(p => !S.search || p.fullName.toLowerCase().includes(S.search)).slice(0,300);
+  const only = Object.keys(S.badge).filter(b => S.badge[b]==='only'), hide = Object.keys(S.badge).filter(b => S.badge[b]==='hide');
+  let list = S.players.filter(p => {
+    // searching overrides Hide drafted, so you can still look up someone who's off the board
+    if (S.search) { if (!p.fullName.toLowerCase().includes(S.search)) return false; }
+    else if (S.hideDrafted && S.drafted.has(p.id)) return false;
+    if (S.pos && POS[p.defaultPositionId] !== S.pos) return false;
+    return badgeOk(A(p.fullName)?.badges || [], only, hide);
+  });
+  if (S.sort !== 'vbd') {
+    const k = S.sort==='proj' ? p => seasonProj(p) : p => A(p.fullName)?.ceiling ?? -1;
+    list.sort((a,b) => k(b) - k(a));
+  }
+  list = list.slice(0,300);
+  if (!list.length) return '<tr><td colspan="6" class="msg">No players match these filters.</td></tr>';
   S.maxCeil = Math.max(1, ...list.map(p => A(p.fullName)?.ceiling || 0));
   // ponytail: overall list mixes position tiers — break rows fire when the running max tier deepens
   const left = {};
@@ -184,7 +232,7 @@ function draftRows() {
   let maxTier = 0, out = '';
   for (const p of list) {
     const a = A(p.fullName);
-    if (a && a.tier > maxTier) {
+    if (S.sort === 'vbd' && a && a.tier > maxTier) {
       maxTier = a.tier;
       const n = left[maxTier] || 0;
       const gone = np && n <= np.away;
@@ -197,7 +245,7 @@ function draftRows() {
 
 const views = {
   draft() {
-    return slotBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
+    return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
     <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
     <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
   },
