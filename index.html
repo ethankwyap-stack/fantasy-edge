@@ -149,14 +149,15 @@ async function load() {
     for (const t of S.teams) S.rosters[t.id] = (t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
     // guess my team via SWID match on owners; fall back to picker
     S.myTeamId = +localStorage.myTeam || S.teams[0]?.id;
-    S.players = (playerData.players||[]).map(x => x.player).filter(p => POS[p.defaultPositionId]);
+    // K/DST excluded from the draft board — he only drafts them with his last 2 picks, no need to clutter the pool
+    S.players = (playerData.players||[]).map(x => x.player).filter(p => POS[p.defaultPositionId] && !['K','DST'].includes(POS[p.defaultPositionId]));
     // VBD: projection minus replacement-level projection at position
     const byPos = {};
     for (const p of S.players) (byPos[POS[p.defaultPositionId]] ||= []).push(p);
     for (const pos in byPos) {
       byPos[pos].sort((a,b) => seasonProj(b)-seasonProj(a));
       const repl = seasonProj(byPos[pos][Math.min(REPL[pos], byPos[pos].length-1)] || {});
-      for (const p of byPos[pos]) p._vbd = seasonProj(p) - repl;
+      byPos[pos].forEach((p, i) => { p._vbd = seasonProj(p) - repl; p._posRank = i+1; });
     }
     S.players.sort((a,b) => b._vbd - a._vbd);
     // Sleeper dump — trending counts plus age/experience/depth-chart per player, matched by name
@@ -257,7 +258,7 @@ function drow(p) {
   const injTag = inj ? `<span class="inj ${/out|ir|injured|pup|susp|doubt/i.test(inj.s)?'out':'qst'}">${esc(inj.s)}</span>` : '';
   const hasExtra = a || inj || S.news[(p.fullName||'').toLowerCase()];
   let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}" onpointerdown="lpDown(${p.id})" onpointerup="lpUp()" onpointercancel="lpUp()" onpointerleave="lpUp()" oncontextmenu="return false" style="user-select:none;-webkit-user-select:none${hasExtra?';cursor:pointer':''}"${hasExtra?` onclick="tExp(${p.id})"`:''}>
-    <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
+    <td>${a?`<span class="tier">T${a.tier} · ${pos}${p._posRank}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
     <td>${rangeBar(a)}</td>
@@ -287,7 +288,7 @@ function filterBar() {
   // 'sleeper' is always offered even if the research badged nobody — you can still mark your own by long-press.
   S.badgeList ||= [...new Set(['sleeper', ...Object.values(S.analysis).flatMap(a => a.badges || [])])].sort();
   const chip = (on, oc, label) => `<span class="fchip ${on}" onclick="${oc}">${label}</span>`;
-  const pos = ['QB','RB','WR','TE','K','DST'].map(x => chip(S.pos===x?'on':'', `setPos('${x}')`, x)).join('');
+  const pos = ['QB','RB','WR','TE'].map(x => chip(S.pos===x?'on':'', `setPos('${x}')`, x)).join('');
   const sort = [['vbd','VBD'],['proj','Proj'],['ceil','Ceiling']].map(([k,l]) => chip(S.sort===k?'on':'', `setSort('${k}')`, l)).join('');
   const badges = S.badgeList.map(b => chip(S.badge[b]||'', `cycleBadge('${b}')`, b)).join('');
   return `<div class="fbar">
