@@ -127,7 +127,9 @@ async function sleeperData() {
 
 async function load() {
   try {
-    const filter = encodeURIComponent(JSON.stringify({players:{limit:400, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
+    // 450 matches the research pool (scripts/draft-research.js) so every player Claude
+    // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
+    const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
     const [league, playerData, trending, analysis, injuries, news] = await Promise.all([
       espn('mTeam,mRoster,mSettings'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
@@ -313,7 +315,9 @@ function draftRows() {
     const k = S.sort==='proj' ? p => seasonProj(p) : p => A(p.fullName)?.ceiling ?? -1;
     list.sort((a,b) => k(b) - k(a));
   }
-  list = list.slice(0,300);
+  // Cap matches the research pool (450 fetched, ~386 after K/DST) so every player Claude
+  // analyzed can actually be reached — a 300 cap silently hid the late-round sleepers.
+  list = list.slice(0,450);
   if (!list.length) return '<tr><td colspan="6" class="msg">No players match these filters.</td></tr>';
   S.maxCeil = Math.max(1, ...list.map(p => A(p.fullName)?.ceiling || 0));
   // ponytail: overall list mixes position tiers — break rows fire when the running max tier deepens

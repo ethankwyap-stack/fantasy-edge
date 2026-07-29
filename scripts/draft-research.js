@@ -1,8 +1,10 @@
 // One-shot draft research (manual re-run via workflow_dispatch): gathers free data
-// (ESPN current top 450 + 2024/2025 weekly actuals, Sleeper depth charts, NFL schedule,
-//  expert-sleepers.json), batches ~20 players per position group to Claude,
-// writes draft-analysis.json.
+// (ESPN current top 450 minus K/DST + 2024/2025 weekly actuals, Sleeper depth charts,
+//  NFL schedule, expert-sleepers.json, smythe-guide.json), batches ~20 players per
+// position group to Claude, writes draft-analysis.json after every batch.
 // Dry-runs without ANTHROPIC_API_KEY: all fetches + sample prompt, no Claude call.
+// Flags: --resume (skip players already in draft-analysis.json, retry failed batches)
+//        --sentiment-list (print the contested players worth a paid sentiment query, then stop)
 const fs = require('fs');
 const path = require('path');
 
@@ -11,8 +13,11 @@ const POS = { 1: 'QB', 2: 'RB', 3: 'WR', 4: 'TE', 5: 'K', 16: 'DST' };
 const BADGES = ['split-touches', 'depth-risk', 'injury-history', 'rookie', 'new-team', 'easy-playoffs', 'tough-playoffs', 'breakout', 'decline-risk', 'workhorse', 'td-dependent', 'handcuff', 'elite', 'sleeper'];
 const FFL = 'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl';
 const OUT = path.join(__dirname, '..', 'draft-analysis.json');
-// Expert sleeper consensus, refreshed by hand (see the file's own note). Missing file = no sleeper input, not an error.
-const EXPERTS = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'expert-sleepers.json'), 'utf8')).players || {}; } catch { return {}; } })();
+// Hand-curated JSON alongside this repo. Missing or empty file = no input, not an error.
+const curated = f => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', f), 'utf8')).players || {}; } catch { return {}; } };
+const EXPERTS = curated('expert-sleepers.json');
+const SMYTHE = curated('smythe-guide.json');
+const FLAGS = new Set(process.argv.slice(2));
 
 async function getJson(url, { filter, cookies } = {}) {
   const headers = {};
@@ -180,8 +185,11 @@ async function espnNews() {
 }
 
 // One line of advanced usage; only the parts that mean something for the position.
-function usageLine(pos, a, snap, rush) {
+// Each source resolves its own season independently (bySeason), so a bit whose year
+// differs from the line's header year is tagged — never let 2025 snaps read as 2026.
+function usageLine(pos, a, snap, rush, yrs = {}) {
   const bits = [];
+  const tag = (s, yr) => (yr && yrs.head && yr !== yrs.head ? `${s} [${yr}]` : s);
   if (a && a.g) {
     const per = v => (v / a.g).toFixed(2), pct = v => (v / a.g * 100).toFixed(1) + '%';
     bits.push(`${a.g}g`);
@@ -197,9 +205,94 @@ function usageLine(pos, a, snap, rush) {
       bits.push(`${a.fd} first downs`);
     }
   }
-  if (snap && snap.g) bits.push(`snap share ${(snap.pct / snap.g * 100).toFixed(0)}% over ${snap.g}g`);
-  if (rush && rush.car) bits.push(`${(rush.ybc / rush.car).toFixed(1)} yds before contact/rush`, `${(rush.yac / rush.car).toFixed(1)} after`, `${rush.broken} broken tackles`);
+  if (snap && snap.g) bits.push(tag(`snap share ${(snap.pct / snap.g * 100).toFixed(0)}% over ${snap.g}g`, yrs.snap));
+  if (rush && rush.car) bits.push(tag(`${(rush.ybc / rush.car).toFixed(1)} yds before contact/rush, ${(rush.yac / rush.car).toFixed(1)} after, ${rush.broken} broken tackles`, yrs.rush));
   return bits.length ? bits.join(', ') : null;
+}
+
+// PPG from a past season's weekly actuals; null when the player has no games (rookie/missed year).
+// The seasonId filter is NOT optional — a player's stats[] carries entries from other
+// seasons, and without it you silently average two different years together.
+function ppgOf(p, yr) {
+  if (!p) return null;
+  const weeks = (p.stats || []).filter(s => s.statSourceId === 0 && s.statSplitTypeId === 1 && s.seasonId === yr && s.scoringPeriodId > 0);
+  const pts = weeks.map(w => w.appliedTotal || 0).filter(v => v > 0);
+  return pts.length ? pts.reduce((a, b) => a + b, 0) / pts.length : null;
+}
+
+// Which players are worth spending a paid last30days sentiment query on: the CONTESTED
+// ones, where the signals already disagree and crowd opinion could move a draft decision.
+// Chalk at the top of a position needs no Reddit poll; the coin-flips do.
+// ponytail: a rank-gap heuristic, not a model. If the printed list looks wrong, tune the
+// weights here — it costs nothing to re-run.
+function sentimentList(items, limit = 50) {
+  const pool = items.filter(x => x.adp <= 150);
+  const ppgRank = {}; // positional rank by last-season PPG, for players who played
+  for (const pos of new Set(pool.map(x => x.pos))) {
+    pool.filter(x => x.pos === pos && x.ppg != null).sort((a, b) => b.ppg - a.ppg)
+      .forEach((x, i) => ppgRank[x.p.id] = i + 1);
+  }
+  const posRank = {}; const seen = {};
+  for (const x of pool) posRank[x.p.id] = (seen[x.pos] = (seen[x.pos] || 0) + 1);
+
+  const scored = pool.map(x => {
+    const why = []; let score = 0;
+    // Qualifying requires the signals to actually DISAGREE about the player. A headline alone
+    // does not qualify — otherwise the top-10 chalk everyone has already decided on eats the
+    // list, which is the opposite of the point. News/injury only add weight to a real conflict,
+    // except when they co-occur (an injury being reported now IS a situation in flux).
+    let qualifies = false;
+    if (x.ppg == null) { score += 25; qualifies = true; why.push('no 2025 games (rookie/missed)'); }
+    else {
+      const gap = Math.abs(posRank[x.p.id] - ppgRank[x.p.id]);
+      if (gap >= 4) { score += Math.min(gap, 30); qualifies = true; why.push(`ranked ${x.pos}${posRank[x.p.id]} but ${x.pos}${ppgRank[x.p.id]} by 2025 PPG`); }
+    }
+    if (x.smythe?.rank) {
+      const g = Math.abs(x.smythe.rank - posRank[x.p.id]);
+      if (g >= 12) { score += 20; qualifies = true; why.push(`Smythe ${x.pos}${x.smythe.rank} vs board ${x.pos}${posRank[x.p.id]}`); }
+    }
+    if (x.news) { score += 10; why.push('fresh news'); }
+    if (x.injury) { score += 10; why.push('injury flag'); }
+    if (x.news && x.injury) qualifies = true;
+    return { x, score, why: qualifies ? why : [] };
+  }).filter(s => s.why.length).sort((a, b) => b.score - a.score).slice(0, limit);
+
+  console.log(`\nContested players worth a sentiment query (${scored.length} of ${pool.length} inside ADP 150):`);
+  for (const s of scored) console.log(`  ${String(s.score).padStart(3)}  ${s.x.p.fullName} (${s.x.pos}, ADP ${s.x.adp.toFixed(0)}) — ${s.why.join('; ')}`);
+  console.log(`\nNo queries were run. This list is free and local.`);
+  return scored;
+}
+
+// node scripts/draft-research.js --selftest — covers the logic a dry run can't reach
+// (the mixed-year tag needs two different seasons; the selector needs synthetic players).
+function selftest() {
+  const assert = require('assert');
+  const player = (pos, ppgRank, o = {}) => ({ p: { id: `${pos}${ppgRank}`, fullName: `${pos} ${ppgRank}` }, pos, adp: 50, ppg: 20 - ppgRank, news: false, injury: false, ...o });
+
+  // Mixed-year usage bits get tagged with their own season; matching years stay clean.
+  const mixed = usageLine('RB', null, { g: 10, pct: 6 }, null, { head: 2026, snap: 2025 });
+  assert.match(mixed, /\[2025\]/, 'snap share from a different year must be tagged');
+  assert.ok(!usageLine('RB', null, { g: 10, pct: 6 }, null, { head: 2025, snap: 2025 }).includes('['), 'same year must not be tagged');
+
+  // ppgOf must ignore other seasons' rows entirely.
+  const stats = [
+    { statSourceId: 0, statSplitTypeId: 1, seasonId: 2025, scoringPeriodId: 1, appliedTotal: 10 },
+    { statSourceId: 0, statSplitTypeId: 1, seasonId: 2024, scoringPeriodId: 1, appliedTotal: 30 },
+  ];
+  assert.strictEqual(ppgOf({ stats }, 2025), 10, 'ppgOf must filter by seasonId');
+  assert.strictEqual(ppgOf(null, 2025), null, 'missing player is null, not 0');
+
+  // A headline alone must not qualify a player; a rank disagreement must.
+  const list = sentimentList([
+    player('WR', 1, { news: true }),                  // chalk with news only — excluded
+    player('RB', 2, { p: { id: 'gap', fullName: 'Gap Guy' } }),
+    player('TE', 3, { ppg: null }),                   // rookie — included
+    player('QB', 4, { news: true, injury: true }),     // situation in flux — included
+  ]);
+  const names = list.map(s => s.x.p.fullName);
+  assert.ok(!names.includes('WR 1'), 'news alone must not qualify');
+  assert.ok(names.includes('TE 3') && names.includes('QB 4'), 'rookie and news+injury must qualify');
+  console.log('selftest: all assertions passed');
 }
 
 const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), play-by-play-derived advanced usage where available (target share, air-yards share, WOPR, aDOT, EPA per game, CPOE for QBs, offensive snap share, and yards before/after contact per rush — weigh these heavily, they separate real opportunity from touchdown luck), depth-chart competition on their NFL team, recent ESPN news headlines for some players (late-July camp reports, coaching changes, injuries — treat a genuinely informative one as the freshest signal and let it override stale season-long data, but ignore generic league-wide roundups that say nothing specific about the player, and note most players have none — absence of news is not a negative), and playoff-week (15-17) opponents + bye. For EACH player return:
@@ -210,6 +303,10 @@ const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a
 - badges: only from the allowed list, only where the data clearly supports them
 
 The "sleeper" badge is special. Apply it when a player is a genuine late-round value the field is underrating — his realistic ceiling clearly beats his ADP, usually because opportunity is opening up ahead of him, or because his per-opportunity efficiency is strong on limited volume. Some players arrive with an "expert sleeper call" line naming analysts who already flagged them; treat that as a strong signal and normally badge them, but you are the final judge — if the data given contradicts the call, skip the badge and say why in the report. You may also badge a sleeper no expert named if the usage data makes the case. Do NOT badge anyone drafted early: a sleeper must have an ADP outside roughly the top 100. When you badge a sleeper, the report must name the specific opening or efficiency edge and the round you would start taking him.
+
+Some players arrive with a "Smythe guide" line: the position and tier Joel Smythe assigned them in his published draft guide, plus his one-line thesis. He is a careful analyst whose reasoning you can read, so treat him as a strong prior on INTERPRETATION — especially for rookies and players in new situations, where last season's data is silent or misleading. He does not override the data: where his tier and the usage numbers disagree, say so explicitly in the report and make your own call. A large gap between his rank and ESPN's ADP is itself a signal about price, so name it when it is wide.
+
+When sources conflict, resolve them in this order: (1) verifiable facts — a confirmed injury, a named starter, a signed contract — beat everything, whoever reports them; (2) the usage and efficiency data above is the baseline for opportunity and talent, and is not overturned by opinion; (3) a named analyst's reasoning, like the Smythe guide or an expert sleeper call, guides interpretation of ambiguous data; (4) anything that only tells you what the public believes informs PRICE, not the player. Never treat popularity or confidence of an opinion as evidence that it is correct.
 
 Frame every player on two axes before you rank them: VOLUME (target share, snap share, WOPR, carries, touches) and EFFICIENCY per opportunity (points per target, yards per target, points per touch, aDOT, yards after contact, EPA). Efficiency normally falls as volume rises, so the four quadrants mean different things: high volume + good efficiency is the safe, expensive profile; high volume + poor efficiency is a warning that the volume itself is at risk of being taken away; low volume + strong efficiency is the breakout candidate who only needs opportunity; low volume + poor efficiency is a fade. Name the player's quadrant explicitly in the report and let it drive the verdict, the floor, and the ceiling. Where a metric is missing for a player, say what you are inferring from instead rather than assuming the worst.`;
 
@@ -244,8 +341,11 @@ async function main() {
     cookies: true,
     filter: { players: { limit: 450, sortDraftRanks: { sortPriority: 1, sortAsc: true, value: 'PPR' } } },
   });
-  const players = (pool.players || []).map(x => x.player).filter(p => POS[p.defaultPositionId]).slice(0, 450);
-  console.log(`  ${players.length} players`);
+  // K/DST are excluded from the draft board (index.html:153), so analyzing them is
+  // pure wasted spend — 64 of the top 450, four whole Claude batches.
+  const players = (pool.players || []).map(x => x.player)
+    .filter(p => POS[p.defaultPositionId] && !['K', 'DST'].includes(POS[p.defaultPositionId])).slice(0, 450);
+  console.log(`  ${players.length} skill players (K/DST dropped — the board never shows them)`);
 
   console.log('Fetching 2025 + 2024 weekly actuals (public)…');
   const [s2025, s2024] = await Promise.all([pastSeason(2025), pastSeason(2024)]);
@@ -288,8 +388,9 @@ async function main() {
     l.push(`  2025: ${summarize(s2025[p.id], 2025, pos) || 'no data (rookie or missed season)'}`);
     l.push(`  2024: ${summarize(s2024[p.id], 2024, pos) || 'no data'}`);
     const key = p.fullName.toLowerCase();
-    const u = usageLine(pos, nvUsage?.[key], snaps.data?.[key], contact.data?.[key]);
-    if (u) l.push(`  ${usageYr || snaps.yr || contact.yr} advanced usage: ${u}`);
+    const head = usageYr || snaps.yr || contact.yr;
+    const u = usageLine(pos, nvUsage?.[key], snaps.data?.[key], contact.data?.[key], { head, snap: snaps.yr, rush: contact.yr });
+    if (u) l.push(`  ${head} advanced usage: ${u}`);
     if (sp) {
       const comp = Object.values(sleeper)
         .filter(x => x.team && x.team === sp.team && x.position === sp.position && x.full_name && x.full_name !== sp.full_name && x.depth_chart_order != null)
@@ -301,13 +402,19 @@ async function main() {
     if (heads.length) l.push(`  recent news: ${heads.slice(0, 3).map(h => `"${h.h}"${h.s ? ` — ${h.s}` : ''} (${h.d})`).join('; ')}`);
     const ex = EXPERTS[key];
     if (ex) l.push(`  expert sleeper call: named by ${ex.by.join(', ')} — ${ex.why}`);
+    const sm = SMYTHE[key];
+    if (sm) l.push(`  Smythe guide: ${sm.rank ? `his ${pos}${sm.rank}` : 'listed'}${sm.tier ? `, tier ${sm.tier}` : ''} — ${sm.note}`);
     l.push(`  playoffs wk15 ${opp(p.proTeamId, 15)}, wk16 ${opp(p.proTeamId, 16)}, wk17 ${opp(p.proTeamId, 17)}; bye wk${bye(p.proTeamId)}`);
-    return { p, pos, rank: i + 1, text: l.join('\n') };
+    return { p, pos, rank: i + 1, text: l.join('\n'), adp: adp || 999, ppg: ppgOf(s2025[p.id], 2025), news: heads.length > 0, injury: !!sp?.injury_status, smythe: sm };
   });
 
   console.log(`News matched ${items.filter(x => news[x.p.fullName.toLowerCase()]).length}/${items.length} of the draft pool`);
   const exHit = items.filter(x => EXPERTS[x.p.fullName.toLowerCase()]).length;
   console.log(`Expert sleeper calls matched ${exHit}/${Object.keys(EXPERTS).length} (misses are names ESPN ranks outside the pool, or spelled differently)`);
+  const smHit = items.filter(x => SMYTHE[x.p.fullName.toLowerCase()]).length;
+  console.log(`Smythe guide matched ${smHit}/${Object.keys(SMYTHE).length}${Object.keys(SMYTHE).length ? '' : ' (smythe-guide.json empty — nothing injected)'}`);
+
+  if (FLAGS.has('--sentiment-list')) return sentimentList(items);
 
   // ---- batches of ≤20, grouped by position ----
   const byPos = {};
@@ -326,34 +433,59 @@ async function main() {
   const Anthropic = require('@anthropic-ai/sdk');
   const client = new Anthropic();
   const out = { generated: new Date().toISOString(), season: +SEASON, players: {} };
+
+  // --resume keeps players already in draft-analysis.json and skips their batches, so a
+  // run that died at batch 18 of 20 costs 2 batches to finish, not 20. Default is a fresh
+  // run: silently reusing old analysis would serve stale reports forever.
+  if (FLAGS.has('--resume')) {
+    Object.assign(out.players, curated('draft-analysis.json'));
+    console.log(`Resuming: ${Object.keys(out.players).length} players already analyzed will be skipped.`);
+  }
+
   const usage = { in: 0, out: 0 };
+  const failed = [];
   for (let k = 0; k < batches.length; k++) {
     const b = batches[k];
-    console.log(`Batch ${k + 1}/${batches.length} (${b.pos} ×${b.items.length})…`);
+    const todo = b.items.filter(x => !out.players[x.p.fullName.toLowerCase()]);
+    if (!todo.length) { console.log(`Batch ${k + 1}/${batches.length} (${b.pos}) — already done, skipping`); continue; }
+    console.log(`Batch ${k + 1}/${batches.length} (${b.pos} ×${todo.length})…`);
     const call = () => client.messages.create({
       model: 'claude-opus-4-8',
       max_tokens: 16000,
       thinking: { type: 'adaptive' },
       output_config: { format: { type: 'json_schema', schema: SCHEMA } },
       system: SYSTEM,
-      messages: [{ role: 'user', content: userMsg(b) }],
+      messages: [{ role: 'user', content: userMsg({ pos: b.pos, items: todo }) }],
     });
-    let res;
-    try { res = await call(); } catch (e) {
-      console.log(`  error, retrying once in 20s: ${e.message}`);
-      await new Promise(r => setTimeout(r, 20000));
-      res = await call();
+    // A batch that fails twice is logged and skipped, never fatal — losing one position
+    // group beats losing every batch already paid for.
+    let parsed;
+    try {
+      let res;
+      try { res = await call(); } catch (e) {
+        console.log(`  error, retrying once in 20s: ${e.message}`);
+        await new Promise(r => setTimeout(r, 20000));
+        res = await call();
+      }
+      usage.in += res.usage?.input_tokens || 0; usage.out += res.usage?.output_tokens || 0;
+      if (res.stop_reason === 'max_tokens') throw new Error('response hit max_tokens — batch too large, lower the batch size');
+      parsed = JSON.parse(res.content.filter(c => c.type === 'text').map(c => c.text).join(''));
+    } catch (e) {
+      console.error(`  BATCH FAILED (${b.pos} #${k + 1}): ${e.message} — continuing; re-run with --resume to retry it`);
+      failed.push(`${b.pos} #${k + 1}`);
+      continue;
     }
-    usage.in += res.usage?.input_tokens || 0; usage.out += res.usage?.output_tokens || 0;
-    const parsed = JSON.parse(res.content.filter(c => c.type === 'text').map(c => c.text).join(''));
     for (const a of parsed.players) {
-      const item = b.items.find(x => x.p.fullName.toLowerCase() === a.name.toLowerCase());
+      const item = todo.find(x => x.p.fullName.toLowerCase() === a.name.toLowerCase());
       if (!item) { console.log(`  UNMATCHED name from Claude: ${a.name}`); continue; }
       out.players[item.p.fullName.toLowerCase()] = { tier: a.tier, verdict: a.verdict, report: a.report, floor: a.floor, ceiling: a.ceiling, badges: a.badges, proj: seasonProj(item.p), rank: item.rank };
     }
-    console.log(`  ${parsed.players.length} analyzed (total ${Object.keys(out.players).length})`);
+    // Write after every batch: a crash at batch 18 must not throw away 17 paid batches.
+    fs.writeFileSync(OUT, JSON.stringify(out, null, 1));
+    console.log(`  ${parsed.players.length} analyzed (total ${Object.keys(out.players).length}, saved)`);
   }
-  fs.writeFileSync(OUT, JSON.stringify(out, null, 1));
   console.log(`Done: ${Object.keys(out.players).length}/${items.length} players → draft-analysis.json. Tokens: ${usage.in} in / ${usage.out} out.`);
+  if (failed.length) console.log(`FAILED batches: ${failed.join(', ')} — re-run with --resume to fill them in.`);
 }
-main().catch(e => { console.error(e); process.exit(1); });
+if (FLAGS.has('--selftest')) selftest();
+else main().catch(e => { console.error(e); process.exit(1); });
