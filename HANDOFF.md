@@ -1,81 +1,74 @@
-# Fantasy Edge — Handoff (Jul 28 2026, evening)
+# Fantasy Edge — Handoff (Jul 28 2026, late evening)
 
-Project: `/Users/ethanyap/fantasy-edge`. Read `CLAUDE.md` in that folder first — stack, deploy steps, and a long Gotchas list. This file covers only what a fresh session needs beyond it.
+Project: `/Users/ethanyap/fantasy-edge`. Read `CLAUDE.md` in that folder first — stack, deploy steps, and a long Gotchas list that now includes every data-source trap found this session. This file covers only what a fresh session needs beyond it.
 
 ## TL;DR
 
-Everything previously planned is BUILT, DEPLOYED, and VERIFIED live — do not rebuild the draft board, the research pipeline, the waiver alerts, or the secret-link gate. The one open task is an enhancement: add volume-and-efficiency metrics to `scripts/draft-research.js` so the AI reports match how analyst Joel Smyth evaluates players. Nothing is broken. Ethan approved the direction ("great let's do this") but has NOT seen any code for it yet.
+Everything is built, committed, and pushed. **The one open item is a decision only Ethan makes: when to spend roughly $3 on a `draft-research` run.** He said explicitly he wants to save money and will say when, in the coming days. Do not trigger it, do not "just check" it. Nothing is broken and nothing needs deploying.
 
 ## What was accomplished this session
 
-Ethan asked what still needed doing. Findings and actions, in order:
+Added Smyth-style volume-and-efficiency metrics to `scripts/draft-research.js`, plus ESPN news context. Two commits, both pushed to `main`:
 
-1. A `draft-research` GitHub Action run had completed that morning (run 30361721093, 24 minutes, success) and pushed commit `a23877d` with a regenerated `draft-analysis.json`. The local checkout was behind. Ran `git pull`.
-2. Verified locally in real Chrome via playwright-core against `http://localhost:4650`: 301 player rows, 8 tier-break rows, clicking the top row (Jahmyr Gibbs) expands the full research report with the range line "300 floor · 365 proj · 410 ceiling." Confirmed by screenshot, not inferred.
-3. Deployed to production with `vercel deploy --prod --yes` and ran the identical browser check against the live site — same result. Live `/draft-analysis.json` returns the Jul 28 timestamp.
-4. Explained the research pipeline to Ethan, then researched Joel Smyth's method at his request, producing the task below.
+- `fbed0f1` — snap share, efficiency per opportunity, aDOT, yards before/after contact, and a volume/efficiency quadrant framework in the prompt.
+- `c839741` — ESPN news headlines (headline + description + date, up to 3 per player) folded into each player's data block.
 
-Road not taken: a second `vercel deploy` attempt was blocked by the permission classifier, but the first had already succeeded. Production is current. Do not redeploy to "make sure."
+All verified in the **free** local dry run (`node --env-file=.env scripts/draft-research.js`), which does every fetch, prints one sample prompt, and exits before calling Claude. 300 players, 18 batches, clean finish. No paid run was made.
 
-## Verified state (all re-checked at the end of this session)
+How correctness was established, not assumed:
+- Yards before contact plus after contact reconciles with yards per carry computed from ESPN's entirely separate data, for every back checked (Gibbs 3.5 + 1.6 = 5.1 vs 5.0; Taylor 2.6 + 2.3 = 4.9 vs 4.9). Two independent sources agreeing means both parse correctly.
+- aDOT recomputed by hand ranks deep WRs ~13 yards, TEs ~5, RBs ~1 — the expected ordering.
+- News join logs `News matched 31/300` every run.
+
+## Corrections to the previous handoff (it was wrong three ways)
+
+1. The rush-contact download URL 404s as written. **nflverse URLs use the release TAG, not the file family**: `releases/download/pfr_advstats/advstats_week_rush_2025.csv`. Same trap for `snap_counts` and `stats_player`.
+2. `snap_counts_2025.csv` is **2.4 MB with 26,613 rows**, not the 167 KB / 1,896 rows claimed. It downloads fine, but treat it as a large file.
+3. `advstats_season_rec.csv` really does cover only 2018–2020 (that correction was right, and Ethan has been told). aDOT is therefore computed as nflverse `receiving_air_yards / targets`.
+
+## Verified state
 
 | Thing | State |
 |---|---|
-| Branch / HEAD | `main`, commit `fb63356`, working tree clean, pushed |
-| `draft-analysis.json` | 298 players, generated 2026-07-28T13:03:56Z, committed to repo |
-| Local server | Running on port 4650 via always-on LaunchAgent; returns 401 without the key (correct — that's the gate) |
-| Live site | https://fantasy-edge-lyart.vercel.app — production deploy from this session, Ready, returns 401 without the key |
-| Vercel | Team scope `ethan16`, project `fantasy-edge`. Free tier |
-| Secrets | `.env` locally (gitignored) holds LEAGUE_ID, ESPN_S2, SWID, APP_SECRET. `ANTHROPIC_API_KEY` exists ONLY as a GitHub repo secret, deliberately not in `.env` |
-| Cost | Vercel free, GitHub Actions free, ESPN/Sleeper/nflverse free. Only spend is roughly $3 per manual `draft-research` run |
+| Branch / HEAD | `main`, commit `c839741`, working tree clean, pushed |
+| `draft-analysis.json` | Unchanged — 298 players, generated 2026-07-28T13:03:56Z. The new metrics do NOT appear until a research run happens |
+| Live site | https://fantasy-edge-lyart.vercel.app — current, unaffected by this session (only the research script changed) |
+| Deploy needed? | **No.** Nothing user-facing changed |
+| Secrets | `.env` locally (gitignored): LEAGUE_ID, ESPN_S2, SWID, APP_SECRET. `ANTHROPIC_API_KEY` exists ONLY as a GitHub repo secret, deliberately |
+| Cost | Vercel free, Actions free, ESPN/Sleeper/nflverse free. Only spend is ~$3 per manual `draft-research` run |
 
-To open the app in a browser: `/?key=$APP_SECRET` where the value is the `APP_SECRET` line in `.env`. A bare URL correctly returns 401.
+Open the app with `/?key=$APP_SECRET` (value in `.env`). A bare URL correctly returns 401.
 
-## The next task — Smyth-style metrics in `scripts/draft-research.js`
+## The open task — refresh ranks, ONLY when Ethan says go
 
-Joel Smyth (spelled **Smyth**, not Smythe) is a Yahoo Fantasy analyst. His signature is an efficiency-versus-volume graph: yards per route run against volume, bubble size showing prior volume, top-right ideal. His logic is that efficiency tends to fall as volume rises, so high volume plus good efficiency is safe, while high volume with poor efficiency signals volume about to be lost. He also uses fantasy points per route run to normalize across players with different opportunity.
+1. `gh workflow run draft-research.yml` — ~25 min, ~$3.
+2. `git pull`.
+3. `vercel deploy --prod --yes` — **ask first**, deploys are confirm-first.
+4. Open the live site with the key, tap a row, confirm the report timestamp is new and reports mention volume/efficiency quadrants.
 
-Caveat to state plainly: his actual draft guide could not be read — the Studocu copy and Yahoo articles render via JavaScript and returned navigation only. The above is his publicly stated method, not a reading of his rankings.
+Worth doing once within a few days of his actual draft, since depth charts and camp news move a lot in August.
 
-The gap: `draft-research.js` already sends volume (target share, air-yards share, WOPR) and value-added (EPA, CPOE), but almost nothing about efficiency per opportunity. Build these four, which Ethan approved as one batch:
+## What the research prompt now sends per player
 
-1. **Snap share.** `https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2025.csv` — VERIFIED downloadable, 167KB, 1896 rows for 2025. Columns include `player`, `position`, `team`, `week`, `offense_snaps`, `offense_pct`. Aggregate to average offensive snap percentage per player. True routes run is PFF/FTN data and costs money, so snap share is the free proxy for participation.
-2. **Efficiency per opportunity, computed from data already downloaded — no new fetch.** Fantasy points per target, yards per target, points per touch, from the ESPN weekly actuals already parsed in `summarize()`. Also compute aDOT (average depth of target) as `receiving_air_yards / targets` from the nflverse `stats_player_week` CSV the script already pulls; that column is present and currently unused.
-3. **Yards before and after contact for running backs.** `https://github.com/nflverse/nflverse-data/releases/download/pfr_advstats/advstats_week_rush_2025.csv` — VERIFIED, 15KB, has `rushing_yards_before_contact_avg` and `rushing_yards_after_contact_avg`. This separates a back creating value from one riding his offensive line.
-4. **Prompt change, no new data.** In the `SYSTEM` string, instruct the model to place each player explicitly in the volume/efficiency quadrant and reflect it in the verdict, so all 300 reports use the same framework.
+2026 projection + ADP + rank; 2024/2025 weekly actuals with efficiency (points per target, yards per target, yards per carry, points per touch); advanced usage (target share, air-yards share, WOPR, aDOT, EPA, CPOE for QBs, snap share, yards before/after contact, broken tackles); depth chart; recent ESPN news where it exists; playoff opponents and bye.
 
-**IMPORTANT CORRECTION to carry forward.** During the session Ethan was told that `pfr_advstats/advstats_season_rec.csv` would supply aDOT, yards-before-catch and yards-after-catch per reception. That was checked afterward and is WRONG: that file only contains seasons 2018–2020. The current-season weekly equivalent, `advstats_week_rec_2025.csv`, exists but carries only drops, broken tackles, and passer rating — no aDOT or YAC split. Hence item 2 above computes aDOT from nflverse air yards instead. Tell Ethan this correction; he was given the wrong claim.
+## Gotchas beyond CLAUDE.md
 
-Also pending, discussed and offered but not approved, so **ask before building**: feeding ESPN news headlines into each player's data block. The endpoint `/api/nfl?feed=news` (see `api/nfl.js`) already returns headlines tagged with athlete IDs, free and running. It would add camp news and coaching-change context, roughly 20 lines of script. Ethan has not said yes.
-
-Explicitly out of scope, both raised and set aside: red-zone and goal-line usage exists only in nflverse play-by-play, over 100MB per season, too heavy for this script. True routes run is paid data and unavailable at zero cost.
-
-## Gotchas
-
-- **Do not commit an API key or put `ANTHROPIC_API_KEY` in `.env`.** The research only runs inside GitHub Actions by design. Locally the script does every free fetch, prints one sample prompt, and exits — that is the intended dry run, not a failure. Test with `node --env-file=.env scripts/draft-research.js`.
-- **nflverse downloads are slow and flaky.** The 8MB `stats_player_week` file timed out repeatedly at 120 seconds during this session. The script already degrades gracefully rather than aborting a paid run — preserve that behavior for any new download you add. Use generous timeouts and always fall back to skipping the metric.
-- **Vercel file tracing:** `server.js` must read `index.html` and `draft-analysis.json` with static `readFileSync(path.join(__dirname, ...))` at module top. Dynamic paths break the deploy silently.
+- **Never put `ANTHROPIC_API_KEY` in `.env`.** The paid run lives in GitHub Actions by design. Locally the script dry-runs — that is intended behavior, not a failure.
+- ESPN's news feed is capped at 50 articles upstream and per-team news returns empty, so ~31 of 300 players get headlines. The prompt tells the model to ignore generic roundups and not treat missing news as a negative — keep that guard if you touch the prompt.
+- nflverse downloads are slow and flaky; the 8 MB weekly file has timed out at 120s before. `csvRows()` returns null and the run degrades loudly rather than aborting a paid run. **Preserve that for any new download.**
+- Piping the dry run through `head` kills node early via SIGPIPE and makes it look like a feature produced nothing. Write to a file, then grep it.
 - `draft-analysis.json` must never be gitignored — the Action commits it.
-- Headless verification pattern that worked: `npm i playwright-core` in the scratchpad, then `chromium.launch({channel:'chrome'})`. The table rows are `tbody tr:not(.tierbreak)` and the first is the header, so click `.nth(1)`. There is no `#body` element.
-- The whole site is behind the secret-link gate, so any curl or browser check needs `?key=...` first to set the cookie.
-
-## Reboot / persistence
-
-The local server survives restarts via a KeepAlive LaunchAgent. If port 4650 misbehaves after a code change, check `lsof -ti:4650` for an orphaned `node server.js` with parent PID 1 blocking the agent; kill it and launchd restarts cleanly. Draft-board state (which players are drafted or yours) lives only in browser localStorage — clearing site data loses it. Everything else lives in git.
+- Vercel file tracing: `server.js` must read `index.html` and `draft-analysis.json` with static `readFileSync(path.join(__dirname, ...))`.
 
 ## Don't redo
 
-Draft board with tiers, reports, floor/ceiling bars, badge chips, position filters, hide-drafted, sort toggle, snake pick tracker. The research pipeline and its workflow. The hourly Telegram waiver alert. The secret-link gate. ESPN injuries/news proxy and Sleeper caching. Today's production deploy and its verification.
+Draft board with tiers, reports, floor/ceiling bars, badges, filters, snake pick tracker. The research pipeline and its workflow. The hourly Telegram waiver alert. The secret-link gate. ESPN injuries/news proxy and Sleeper caching. The four Smyth metrics and the news feed — built and verified this session.
 
-## To refresh ranks before draft day
+## Ideas raised and set aside
 
-1. `gh workflow run draft-research.yml` — about 25 minutes, about $3.
-2. `git pull`.
-3. `vercel deploy --prod --yes` — ask Ethan first, deploys are confirm-first.
-4. Open the live site with the key, tap a row, confirm the report timestamp is new.
-
-Worth doing once more within a few days of his actual draft, since depth charts and camp news move a lot in August.
+Red-zone and goal-line usage lives only in nflverse play-by-play, 100 MB+ per season — too heavy. True routes run is paid data. Both were declined at zero cost, not forgotten.
 
 ## How to work with Ethan
 
-He is a college student learning development, not fluent in git or deployment — give terminal steps one command at a time and say what he should see before moving on. Cost is his biggest anxiety: name every service and whether it can ever bill him, and never say "probably free." Never claim something works without having exercised it; he asks for this explicitly. Lead every reply with the outcome, detail after. Confirm before deploys, deletes, or anything outward-facing.
+College student learning development, not fluent in git or deployment — terminal steps one command at a time, say what he should see, wait for confirmation. **Cost is his biggest anxiety**: name every service and whether it can ever bill him, never say "probably free," and never spend the $3 without an explicit go-ahead. Never claim something works without having exercised it. Lead every reply with the outcome. Confirm before deploys, deletes, or anything outward-facing.
