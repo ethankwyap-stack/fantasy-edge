@@ -30,8 +30,9 @@ async function pastSeason(yr) {
   return byId;
 }
 
-// One line per past season: games, total, PPG, weekly stdev, usage (stat ids 58/53/23)
-function summarize(p, yr) {
+// One line per past season: games, total, PPG, weekly stdev, usage (stat ids 58/53/23),
+// plus efficiency per opportunity (42=rec yds, 24=rush yds) — the Smyth axis ESPN volume alone misses.
+function summarize(p, yr, pos) {
   if (!p) return null;
   const weeks = (p.stats || []).filter(s => s.statSourceId === 0 && s.statSplitTypeId === 1 && s.seasonId === yr && s.scoringPeriodId > 0);
   if (!weeks.length) return null;
@@ -40,7 +41,13 @@ function summarize(p, yr) {
   const gp = pts.length, ppg = total / gp;
   const stdev = Math.sqrt(pts.reduce((a, b) => a + (b - ppg) ** 2, 0) / gp);
   const sum = id => Math.round(weeks.reduce((a, w) => a + (+(w.stats?.[id]) || 0), 0));
-  return `${gp}gp ${total.toFixed(0)}pts ${ppg.toFixed(1)}ppg wk-stdev ${stdev.toFixed(1)}, ${sum('58')}tgt/${sum('53')}rec/${sum('23')}car`;
+  const tgt = sum('58'), rec = sum('53'), car = sum('23'), recYds = sum('42'), rushYds = sum('24');
+  const eff = [];
+  if (tgt) eff.push(`${(total / tgt).toFixed(2)}pts/tgt`, `${(recYds / tgt).toFixed(1)}yds/tgt`);
+  if (car) eff.push(`${(rushYds / car).toFixed(1)}ypc`);
+  if (pos !== 'QB' && car + rec) eff.push(`${(total / (car + rec)).toFixed(2)}pts/touch`);
+  return `${gp}gp ${total.toFixed(0)}pts ${ppg.toFixed(1)}ppg wk-stdev ${stdev.toFixed(1)}, ${tgt}tgt/${rec}rec/${car}car`
+    + (eff.length ? `; eff ${eff.join(', ')}` : '');
 }
 
 const seasonProj = p => { const s = (p.stats || []).find(s => s.statSourceId === 1 && s.seasonId === +SEASON && s.scoringPeriodId === 0); return s ? Math.round(s.appliedTotal) : 0; };
@@ -64,62 +71,120 @@ function csvSplit(line) {
   return out;
 }
 
-async function nflverseUsage(yr) {
+// Fetch + parse one nflverse CSV. Returns null (never throws) so a flaky GitHub
+// download degrades the report instead of killing a $3 Claude run.
+async function csvRows(url, label) {
   let text;
   try {
-    const r = await fetch(NFLVERSE(yr), { signal: AbortSignal.timeout(120000) });
+    const r = await fetch(url, { signal: AbortSignal.timeout(120000) });
     if (!r.ok) return null; // season not started yet, or file not published
     text = await r.text();
   } catch (e) {
-    // ponytail: a flaky 8MB GitHub download must not kill a $3 Claude run — degrade, loudly.
-    console.warn(`  nflverse ${yr} fetch failed (${e.message}) — continuing without advanced usage`);
+    console.warn(`  ${label} fetch failed (${e.message}) — continuing without it`);
     return null;
   }
   const lines = text.split('\n');
-  const cols = csvSplit(lines[0]);
-  const ix = {}; cols.forEach((c, i) => ix[c] = i);
+  const ix = {}; csvSplit(lines[0]).forEach((c, i) => ix[c] = i);
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) if (lines[i]) rows.push(csvSplit(lines[i]));
+  return { ix, rows };
+}
+
+// Run a per-year loader against the current season, then last season. Once games
+// are played the current file appears and wins.
+async function bySeason(fn) {
+  for (const yr of [+SEASON, +SEASON - 1]) {
+    const data = await fn(yr);
+    if (data && Object.keys(data).length) return { data, yr };
+  }
+  return {};
+}
+
+async function nflverseUsage(yr) {
+  const c = await csvRows(NFLVERSE(yr), `nflverse usage ${yr}`);
+  if (!c) return null;
   const agg = {};
-  for (let i = 1; i < lines.length; i++) {
-    if (!lines[i]) continue;
-    const f = csvSplit(lines[i]);
-    if (f[ix.season_type] !== 'REG') continue;
-    const name = (f[ix.player_display_name] || '').toLowerCase();
+  for (const f of c.rows) {
+    if (f[c.ix.season_type] !== 'REG') continue;
+    const name = (f[c.ix.player_display_name] || '').toLowerCase();
     if (!name) continue;
-    const n = k => +f[ix[k]] || 0;
-    const a = agg[name] ||= { g: 0, tgtShare: 0, ayShare: 0, wopr: 0, recEpa: 0, rushEpa: 0, passEpa: 0, fd: 0, cpoe: 0, cpoeG: 0 };
+    const n = k => +f[c.ix[k]] || 0;
+    const a = agg[name] ||= { g: 0, tgtShare: 0, ayShare: 0, wopr: 0, recEpa: 0, rushEpa: 0, passEpa: 0, fd: 0, cpoe: 0, cpoeG: 0, tgt: 0, airYds: 0 };
     a.g++;
     a.tgtShare += n('target_share'); a.ayShare += n('air_yards_share'); a.wopr += n('wopr');
     a.recEpa += n('receiving_epa'); a.rushEpa += n('rushing_epa'); a.passEpa += n('passing_epa');
     a.fd += n('receiving_first_downs') + n('rushing_first_downs');
-    if (f[ix.passing_cpoe]) { a.cpoe += n('passing_cpoe'); a.cpoeG++; }
+    a.tgt += n('targets'); a.airYds += n('receiving_air_yards');
+    if (f[c.ix.passing_cpoe]) { a.cpoe += n('passing_cpoe'); a.cpoeG++; }
+  }
+  return agg;
+}
+
+// Offensive snap share — the free stand-in for routes run (PFF/FTN route data is paid).
+// offense_pct is a 0-1 fraction in this file, verified against real rows.
+async function snapShare(yr) {
+  const c = await csvRows(`https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_${yr}.csv`, `snap counts ${yr}`);
+  if (!c) return null;
+  const agg = {};
+  for (const f of c.rows) {
+    if (f[c.ix.game_type] !== 'REG') continue;
+    const name = (f[c.ix.player] || '').toLowerCase();
+    if (!name) continue;
+    const a = agg[name] ||= { g: 0, pct: 0 };
+    a.g++; a.pct += +f[c.ix.offense_pct] || 0;
+  }
+  return agg;
+}
+
+// Yards before/after contact per rush — separates a back creating value from one riding his line.
+// Weighted by carries, not an average of weekly averages.
+async function rushContact(yr) {
+  const c = await csvRows(`https://github.com/nflverse/nflverse-data/releases/download/pfr_advstats/advstats_week_rush_${yr}.csv`, `rush advstats ${yr}`);
+  if (!c) return null;
+  const agg = {};
+  for (const f of c.rows) {
+    if (f[c.ix.game_type] !== 'REG') continue;
+    const name = (f[c.ix.pfr_player_name] || '').toLowerCase();
+    if (!name) continue;
+    const n = k => +f[c.ix[k]] || 0;
+    const a = agg[name] ||= { car: 0, ybc: 0, yac: 0, broken: 0 };
+    a.car += n('carries'); a.ybc += n('rushing_yards_before_contact'); a.yac += n('rushing_yards_after_contact');
+    a.broken += n('rushing_broken_tackles');
   }
   return agg;
 }
 
 // One line of advanced usage; only the parts that mean something for the position.
-function usageLine(a, pos) {
-  if (!a || !a.g) return null;
-  const per = v => (v / a.g).toFixed(2), pct = v => (v / a.g * 100).toFixed(1) + '%';
-  const bits = [`${a.g}g`];
-  if (pos === 'QB') {
-    bits.push(`pass EPA/g ${per(a.passEpa)}`);
-    if (a.cpoeG) bits.push(`CPOE ${(a.cpoe / a.cpoeG).toFixed(1)}`);
-    if (a.rushEpa) bits.push(`rush EPA/g ${per(a.rushEpa)}`);
-  } else {
-    if (a.tgtShare) bits.push(`target share ${pct(a.tgtShare)}`, `air-yards share ${pct(a.ayShare)}`, `WOPR ${per(a.wopr)}`);
-    if (a.recEpa) bits.push(`rec EPA/g ${per(a.recEpa)}`);
-    if (a.rushEpa) bits.push(`rush EPA/g ${per(a.rushEpa)}`);
-    bits.push(`${a.fd} first downs`);
+function usageLine(pos, a, snap, rush) {
+  const bits = [];
+  if (a && a.g) {
+    const per = v => (v / a.g).toFixed(2), pct = v => (v / a.g * 100).toFixed(1) + '%';
+    bits.push(`${a.g}g`);
+    if (pos === 'QB') {
+      bits.push(`pass EPA/g ${per(a.passEpa)}`);
+      if (a.cpoeG) bits.push(`CPOE ${(a.cpoe / a.cpoeG).toFixed(1)}`);
+      if (a.rushEpa) bits.push(`rush EPA/g ${per(a.rushEpa)}`);
+    } else {
+      if (a.tgtShare) bits.push(`target share ${pct(a.tgtShare)}`, `air-yards share ${pct(a.ayShare)}`, `WOPR ${per(a.wopr)}`);
+      if (a.tgt) bits.push(`aDOT ${(a.airYds / a.tgt).toFixed(1)}`);
+      if (a.recEpa) bits.push(`rec EPA/g ${per(a.recEpa)}`);
+      if (a.rushEpa) bits.push(`rush EPA/g ${per(a.rushEpa)}`);
+      bits.push(`${a.fd} first downs`);
+    }
   }
-  return bits.join(', ');
+  if (snap && snap.g) bits.push(`snap share ${(snap.pct / snap.g * 100).toFixed(0)}% over ${snap.g}g`);
+  if (rush && rush.car) bits.push(`${(rush.ybc / rush.car).toFixed(1)} yds before contact/rush`, `${(rush.yac / rush.car).toFixed(1)} after`, `${rush.broken} broken tackles`);
+  return bits.length ? bits.join(', ') : null;
 }
 
-const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), play-by-play-derived advanced usage where available (target share, air-yards share, WOPR, EPA per game, CPOE for QBs — weigh these heavily, they separate real opportunity from touchdown luck), depth-chart competition on their NFL team, and playoff-week (15-17) opponents + bye. For EACH player return:
+const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), play-by-play-derived advanced usage where available (target share, air-yards share, WOPR, aDOT, EPA per game, CPOE for QBs, offensive snap share, and yards before/after contact per rush — weigh these heavily, they separate real opportunity from touchdown luck), depth-chart competition on their NFL team, and playoff-week (15-17) opponents + bye. For EACH player return:
 - tier: 1-8 within this position group; a new tier must mark a real dropoff in expected value, not equal slices
 - verdict: one line, max 120 chars — why this player deserves this rank
 - report: 3-5 sentences citing the data given: past usage/production trend interpreted forward, the ceiling case, the floor case, depth-chart/touch competition, and playoff schedule when notable
 - floor and ceiling: season-total PPR points, roughly 15th and 85th percentile outcomes (weigh PPG, weekly variance, and games-missed risk)
-- badges: only from the allowed list, only where the data clearly supports them`;
+- badges: only from the allowed list, only where the data clearly supports them
+
+Frame every player on two axes before you rank them: VOLUME (target share, snap share, WOPR, carries, touches) and EFFICIENCY per opportunity (points per target, yards per target, points per touch, aDOT, yards after contact, EPA). Efficiency normally falls as volume rises, so the four quadrants mean different things: high volume + good efficiency is the safe, expensive profile; high volume + poor efficiency is a warning that the volume itself is at risk of being taken away; low volume + strong efficiency is the breakout candidate who only needs opportunity; low volume + poor efficiency is a fade. Name the player's quadrant explicitly in the report and let it drive the verdict, the floor, and the ceiling. Where a metric is missing for a player, say what you are inferring from instead rather than assuming the worst.`;
 
 const SCHEMA = {
   type: 'object',
@@ -159,11 +224,11 @@ async function main() {
   const [s2025, s2024] = await Promise.all([pastSeason(2025), pastSeason(2024)]);
   console.log(`  2025: ${Object.keys(s2025).length} players, 2024: ${Object.keys(s2024).length}`);
 
-  console.log('Fetching nflverse advanced usage (target share / air yards / EPA)…');
-  // current season first — once games are played that's the live one; else last completed season
-  let nvUsage = await nflverseUsage(SEASON), usageYr = SEASON;
-  if (!nvUsage) { nvUsage = await nflverseUsage(+SEASON - 1); usageYr = +SEASON - 1; }
-  console.log(nvUsage ? `  ${usageYr}: ${Object.keys(nvUsage).length} players` : "  none available");
+  console.log('Fetching nflverse advanced usage (target share / air yards / EPA / snaps / contact)…');
+  const [adv, snaps, contact] = await Promise.all([bySeason(nflverseUsage), bySeason(snapShare), bySeason(rushContact)]);
+  const { data: nvUsage, yr: usageYr } = adv;
+  const count = (label, x) => console.log(x.data ? `  ${label} ${x.yr}: ${Object.keys(x.data).length} players` : `  ${label}: none available`);
+  count('usage', adv); count('snaps', snaps); count('rush contact', contact);
 
   console.log('Fetching Sleeper depth charts…');
   const sleeper = await getJson('https://api.sleeper.app/v1/players/nfl');
@@ -189,10 +254,11 @@ async function main() {
     const adp = p.ownership?.averageDraftPosition;
     const sp = sByName[p.fullName.toLowerCase()];
     const l = [`${p.fullName} (${pos}, ${ab}) — 2026 proj ${seasonProj(p)}, ADP ${adp ? adp.toFixed(1) : '?'}, overall draft rank ${i + 1}`];
-    l.push(`  2025: ${summarize(s2025[p.id], 2025) || 'no data (rookie or missed season)'}`);
-    l.push(`  2024: ${summarize(s2024[p.id], 2024) || 'no data'}`);
-    const u = nvUsage && usageLine(nvUsage[p.fullName.toLowerCase()], pos);
-    if (u) l.push(`  ${usageYr} advanced usage: ${u}`);
+    l.push(`  2025: ${summarize(s2025[p.id], 2025, pos) || 'no data (rookie or missed season)'}`);
+    l.push(`  2024: ${summarize(s2024[p.id], 2024, pos) || 'no data'}`);
+    const key = p.fullName.toLowerCase();
+    const u = usageLine(pos, nvUsage?.[key], snaps.data?.[key], contact.data?.[key]);
+    if (u) l.push(`  ${usageYr || snaps.yr || contact.yr} advanced usage: ${u}`);
     if (sp) {
       const comp = Object.values(sleeper)
         .filter(x => x.team && x.team === sp.team && x.position === sp.position && x.full_name && x.full_name !== sp.full_name && x.depth_chart_order != null)
