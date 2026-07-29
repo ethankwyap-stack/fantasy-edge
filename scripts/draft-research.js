@@ -154,6 +154,28 @@ async function rushContact(yr) {
   return agg;
 }
 
+// ESPN's free public news feed, tagged with the athletes each story is about.
+// Hard-capped at 50 articles upstream (limit= is ignored), so expect ~70 tagged
+// players — camp/coaching-change context for the top of the board, not full coverage.
+async function espnNews() {
+  const byPlayer = {};
+  try {
+    const r = await fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50', { signal: AbortSignal.timeout(30000) });
+    if (!r.ok) return byPlayer;
+    for (const a of (await r.json()).articles || []) {
+      if (!a.headline) continue;
+      for (const c of a.categories || []) {
+        if (c.type !== 'athlete') continue;
+        const n = (c.description || c.athlete?.displayName || '').toLowerCase();
+        if (n) (byPlayer[n] ||= []).push({ h: a.headline, d: (a.published || '').slice(0, 10), s: (a.description || '').slice(0, 160) });
+      }
+    }
+  } catch (e) {
+    console.warn(`  ESPN news fetch failed (${e.message}) — continuing without it`);
+  }
+  return byPlayer;
+}
+
 // One line of advanced usage; only the parts that mean something for the position.
 function usageLine(pos, a, snap, rush) {
   const bits = [];
@@ -177,7 +199,7 @@ function usageLine(pos, a, snap, rush) {
   return bits.length ? bits.join(', ') : null;
 }
 
-const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), play-by-play-derived advanced usage where available (target share, air-yards share, WOPR, aDOT, EPA per game, CPOE for QBs, offensive snap share, and yards before/after contact per rush — weigh these heavily, they separate real opportunity from touchdown luck), depth-chart competition on their NFL team, and playoff-week (15-17) opponents + bye. For EACH player return:
+const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a rigorous 2026 draft board. It is pre-draft July 2026 — rosters are empty; past-season data is the substance, and your job is to interpret it for the FUTURE, not recite it. For each player you get: 2026 ESPN projection + ADP + overall draft rank, 2024/2025 weekly-derived actuals (games played, total points, PPG, weekly stdev, targets/receptions/carries), play-by-play-derived advanced usage where available (target share, air-yards share, WOPR, aDOT, EPA per game, CPOE for QBs, offensive snap share, and yards before/after contact per rush — weigh these heavily, they separate real opportunity from touchdown luck), depth-chart competition on their NFL team, recent ESPN news headlines for some players (late-July camp reports, coaching changes, injuries — treat a genuinely informative one as the freshest signal and let it override stale season-long data, but ignore generic league-wide roundups that say nothing specific about the player, and note most players have none — absence of news is not a negative), and playoff-week (15-17) opponents + bye. For EACH player return:
 - tier: 1-8 within this position group; a new tier must mark a real dropoff in expected value, not equal slices
 - verdict: one line, max 120 chars — why this player deserves this rank
 - report: 3-5 sentences citing the data given: past usage/production trend interpreted forward, the ceiling case, the floor case, depth-chart/touch competition, and playoff schedule when notable
@@ -230,6 +252,10 @@ async function main() {
   const count = (label, x) => console.log(x.data ? `  ${label} ${x.yr}: ${Object.keys(x.data).length} players` : `  ${label}: none available`);
   count('usage', adv); count('snaps', snaps); count('rush contact', contact);
 
+  console.log('Fetching ESPN news headlines (free public feed)…');
+  const news = await espnNews();
+  console.log(`  ${Object.keys(news).length} players tagged in recent stories`);
+
   console.log('Fetching Sleeper depth charts…');
   const sleeper = await getJson('https://api.sleeper.app/v1/players/nfl');
   const sByName = {};
@@ -266,9 +292,13 @@ async function main() {
         .map(x => `${x.full_name} #${x.depth_chart_order}`).join(', ');
       l.push(`  depth: ${sp.depth_chart_position || pos} #${sp.depth_chart_order ?? '?'}, yrs exp ${sp.years_exp ?? '?'}${sp.injury_status ? ', injury: ' + sp.injury_status : ''}; same-team ${pos}: ${comp || 'none listed'}`);
     } else l.push(`  depth: no Sleeper match`); // DST/name-suffix mismatch, cosmetic
+    const heads = news[key] || [];
+    if (heads.length) l.push(`  recent news: ${heads.slice(0, 3).map(h => `"${h.h}"${h.s ? ` — ${h.s}` : ''} (${h.d})`).join('; ')}`);
     l.push(`  playoffs wk15 ${opp(p.proTeamId, 15)}, wk16 ${opp(p.proTeamId, 16)}, wk17 ${opp(p.proTeamId, 17)}; bye wk${bye(p.proTeamId)}`);
     return { p, pos, rank: i + 1, text: l.join('\n') };
   });
+
+  console.log(`News matched ${items.filter(x => news[x.p.fullName.toLowerCase()]).length}/${items.length} of the draft pool`);
 
   // ---- batches of ≤20, grouped by position ----
   const byPos = {};
