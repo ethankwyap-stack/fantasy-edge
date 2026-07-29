@@ -1,15 +1,18 @@
 // One-shot draft research (manual re-run via workflow_dispatch): gathers free data
-// (ESPN current top 300 + 2024/2025 weekly actuals, Sleeper depth charts, NFL schedule),
-// batches ~20 players per position group to Claude, writes draft-analysis.json.
+// (ESPN current top 450 + 2024/2025 weekly actuals, Sleeper depth charts, NFL schedule,
+//  expert-sleepers.json), batches ~20 players per position group to Claude,
+// writes draft-analysis.json.
 // Dry-runs without ANTHROPIC_API_KEY: all fetches + sample prompt, no Claude call.
 const fs = require('fs');
 const path = require('path');
 
 const { LEAGUE_ID, ESPN_S2, SWID, SEASON = '2026' } = process.env;
 const POS = { 1: 'QB', 2: 'RB', 3: 'WR', 4: 'TE', 5: 'K', 16: 'DST' };
-const BADGES = ['split-touches', 'depth-risk', 'injury-history', 'rookie', 'new-team', 'easy-playoffs', 'tough-playoffs', 'breakout', 'decline-risk', 'workhorse', 'td-dependent', 'handcuff', 'elite'];
+const BADGES = ['split-touches', 'depth-risk', 'injury-history', 'rookie', 'new-team', 'easy-playoffs', 'tough-playoffs', 'breakout', 'decline-risk', 'workhorse', 'td-dependent', 'handcuff', 'elite', 'sleeper'];
 const FFL = 'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl';
 const OUT = path.join(__dirname, '..', 'draft-analysis.json');
+// Expert sleeper consensus, refreshed by hand (see the file's own note). Missing file = no sleeper input, not an error.
+const EXPERTS = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'expert-sleepers.json'), 'utf8')).players || {}; } catch { return {}; } })();
 
 async function getJson(url, { filter, cookies } = {}) {
   const headers = {};
@@ -206,6 +209,8 @@ const SYSTEM = `You are an expert PPR fantasy football draft analyst preparing a
 - floor and ceiling: season-total PPR points, roughly 15th and 85th percentile outcomes (weigh PPG, weekly variance, and games-missed risk)
 - badges: only from the allowed list, only where the data clearly supports them
 
+The "sleeper" badge is special. Apply it when a player is a genuine late-round value the field is underrating — his realistic ceiling clearly beats his ADP, usually because opportunity is opening up ahead of him, or because his per-opportunity efficiency is strong on limited volume. Some players arrive with an "expert sleeper call" line naming analysts who already flagged them; treat that as a strong signal and normally badge them, but you are the final judge — if the data given contradicts the call, skip the badge and say why in the report. You may also badge a sleeper no expert named if the usage data makes the case. Do NOT badge anyone drafted early: a sleeper must have an ADP outside roughly the top 100. When you badge a sleeper, the report must name the specific opening or efficiency edge and the round you would start taking him.
+
 Frame every player on two axes before you rank them: VOLUME (target share, snap share, WOPR, carries, touches) and EFFICIENCY per opportunity (points per target, yards per target, points per touch, aDOT, yards after contact, EPA). Efficiency normally falls as volume rises, so the four quadrants mean different things: high volume + good efficiency is the safe, expensive profile; high volume + poor efficiency is a warning that the volume itself is at risk of being taken away; low volume + strong efficiency is the breakout candidate who only needs opportunity; low volume + poor efficiency is a fade. Name the player's quadrant explicitly in the report and let it drive the verdict, the floor, and the ceiling. Where a metric is missing for a player, say what you are inferring from instead rather than assuming the worst.`;
 
 const SCHEMA = {
@@ -234,12 +239,12 @@ const SCHEMA = {
 };
 
 async function main() {
-  console.log('Fetching current-season top 300 (own league, needs cookies)…');
+  console.log('Fetching current-season top 450 (own league, needs cookies)…');
   const pool = await getJson(`${FFL}/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}?view=kona_player_info`, {
     cookies: true,
-    filter: { players: { limit: 300, sortDraftRanks: { sortPriority: 1, sortAsc: true, value: 'PPR' } } },
+    filter: { players: { limit: 450, sortDraftRanks: { sortPriority: 1, sortAsc: true, value: 'PPR' } } },
   });
-  const players = (pool.players || []).map(x => x.player).filter(p => POS[p.defaultPositionId]).slice(0, 300);
+  const players = (pool.players || []).map(x => x.player).filter(p => POS[p.defaultPositionId]).slice(0, 450);
   console.log(`  ${players.length} players`);
 
   console.log('Fetching 2025 + 2024 weekly actuals (public)…');
@@ -294,11 +299,15 @@ async function main() {
     } else l.push(`  depth: no Sleeper match`); // DST/name-suffix mismatch, cosmetic
     const heads = news[key] || [];
     if (heads.length) l.push(`  recent news: ${heads.slice(0, 3).map(h => `"${h.h}"${h.s ? ` — ${h.s}` : ''} (${h.d})`).join('; ')}`);
+    const ex = EXPERTS[key];
+    if (ex) l.push(`  expert sleeper call: named by ${ex.by.join(', ')} — ${ex.why}`);
     l.push(`  playoffs wk15 ${opp(p.proTeamId, 15)}, wk16 ${opp(p.proTeamId, 16)}, wk17 ${opp(p.proTeamId, 17)}; bye wk${bye(p.proTeamId)}`);
     return { p, pos, rank: i + 1, text: l.join('\n') };
   });
 
   console.log(`News matched ${items.filter(x => news[x.p.fullName.toLowerCase()]).length}/${items.length} of the draft pool`);
+  const exHit = items.filter(x => EXPERTS[x.p.fullName.toLowerCase()]).length;
+  console.log(`Expert sleeper calls matched ${exHit}/${Object.keys(EXPERTS).length} (misses are names ESPN ranks outside the pool, or spelled differently)`);
 
   // ---- batches of ≤20, grouped by position ----
   const byPos = {};

@@ -75,7 +75,7 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set(), meta:{}, injuries:{}, news:{},
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
   // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
   pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
@@ -172,6 +172,25 @@ async function load() {
 
 function toggle(set, key, id) { set.has(id) ? set.delete(id) : set.add(id); localStorage[key] = JSON.stringify([...set]); render(); }
 window.tDraft = id => toggle(S.drafted, 'd', id);
+// Bookmarklet sync: ESPN mock-draft tab posts picks here across origins, since it can't write our localStorage directly.
+window.addEventListener('message', e => {
+  if (!/^https:\/\/([a-z0-9-]+\.)?espn\.com$/.test(e.origin)) return;
+  if (!Array.isArray(e.data)) return;
+  let changed = false;
+  const missed = [];
+  for (const pk of e.data) {
+    const name = (pk.player || '').trim();
+    if (!name) continue;
+    const p = S.players.find(x => (x.fullName||'').toLowerCase() === name.toLowerCase());
+    if (p) { if (!S.drafted.has(p.id)) { S.drafted.add(p.id); changed = true; } }
+    else missed.push(name);
+  }
+  if (changed) localStorage.d = JSON.stringify([...S.drafted]);
+  // only re-render on real change — the bookmarklet resends the full list every 2s, and
+  // re-rendering on every message would yank the board while he's scrolling it
+  if (missed.join('|') !== S.bmUnmatched.join('|')) { S.bmUnmatched = missed; changed = true; }
+  if (changed) render();
+});
 window.tMine = id => { if (!S.mine.has(id)) S.drafted.add(id); toggle(S.mine, 'm', id); localStorage.d = JSON.stringify([...S.drafted]); };
 window.setTeam = id => { S.myTeamId = +id; localStorage.myTeam = id; render(); };
 
@@ -187,7 +206,7 @@ function row(p, extra='') {
 const A = name => S.analysis[(name||'').toLowerCase()];
 const GOOD = new Set(['breakout','workhorse','elite','easy-playoffs','handcuff']);
 const RISK = new Set(['split-touches','depth-risk','injury-history','decline-risk','tough-playoffs','td-dependent']);
-window.tExp = id => { S.expanded.has(id) ? S.expanded.delete(id) : S.expanded.add(id); renderBody(); };
+window.tExp = id => { if (lpFired) return; S.expanded.has(id) ? S.expanded.delete(id) : S.expanded.add(id); renderBody(); };
 
 const M = name => S.meta[(name||'').toLowerCase()] || {};
 // ESPN's live injury feed wins over Sleeper's tag; "Active" means nothing to show.
@@ -215,14 +234,29 @@ function rangeBar(a) {
   return `<div class="rangebar" title="floor ${Math.round(a.floor)} · proj ${a.proj??'?'} · ceiling ${Math.round(a.ceiling)}">
     <div class="fill" style="left:${l}%;width:${Math.max(2,r-l)}%"></div><div class="mark" style="left:${m}%"></div></div>`;
 }
+// Badges a player carries: whatever the research gave him, plus "sleeper" if I long-pressed him.
+const badgesOf = p => { const b = A(p.fullName)?.badges || [];
+  return S.sleepers.has(p.id) && !b.includes('sleeper') ? [...b, 'sleeper'] : b; };
+
+// Long-press (500ms) toggles the sleeper mark; the trailing click is swallowed so it doesn't also expand the row.
+let lpTimer = null, lpFired = false;
+window.lpDown = id => { lpFired = false; lpTimer = setTimeout(() => { lpFired = true; window.tSleeper(id); }, 500); };
+window.lpUp = () => clearTimeout(lpTimer);
+window.tSleeper = id => {
+  S.sleepers.has(id) ? S.sleepers.delete(id) : S.sleepers.add(id);
+  localStorage.sl = JSON.stringify([...S.sleepers]);
+  navigator.vibrate?.(30);
+  render();
+};
+
 function drow(p) {
   const a = A(p.fullName), pos = POS[p.defaultPositionId];
   const tr = S.trending[(p.fullName||'').toLowerCase()];
-  const chips = (a?.badges||[]).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ');
+  const chips = badgesOf(p).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ');
   const inj = injury(p.fullName);
   const injTag = inj ? `<span class="inj ${/out|ir|injured|pup|susp|doubt/i.test(inj.s)?'out':'qst'}">${esc(inj.s)}</span>` : '';
   const hasExtra = a || inj || S.news[(p.fullName||'').toLowerCase()];
-  let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}"${hasExtra?` onclick="tExp(${p.id})" style="cursor:pointer"`:''}>
+  let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}" onpointerdown="lpDown(${p.id})" onpointerup="lpUp()" onpointercancel="lpUp()" onpointerleave="lpUp()" oncontextmenu="return false" style="user-select:none;-webkit-user-select:none${hasExtra?';cursor:pointer':''}"${hasExtra?` onclick="tExp(${p.id})"`:''}>
     <td>${a?`<span class="tier">T${a.tier}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
@@ -250,7 +284,8 @@ window.tHide = () => { S.hideDrafted = !S.hideDrafted; render(); };
 window.cycleBadge = b => { S.badge[b] = S.badge[b]==='only' ? 'hide' : S.badge[b]==='hide' ? '' : 'only'; render(); };
 
 function filterBar() {
-  S.badgeList ||= [...new Set(Object.values(S.analysis).flatMap(a => a.badges || []))].sort();
+  // 'sleeper' is always offered even if the research badged nobody — you can still mark your own by long-press.
+  S.badgeList ||= [...new Set(['sleeper', ...Object.values(S.analysis).flatMap(a => a.badges || [])])].sort();
   const chip = (on, oc, label) => `<span class="fchip ${on}" onclick="${oc}">${label}</span>`;
   const pos = ['QB','RB','WR','TE','K','DST'].map(x => chip(S.pos===x?'on':'', `setPos('${x}')`, x)).join('');
   const sort = [['vbd','VBD'],['proj','Proj'],['ceil','Ceiling']].map(([k,l]) => chip(S.sort===k?'on':'', `setSort('${k}')`, l)).join('');
@@ -270,7 +305,7 @@ function draftRows() {
     if (S.search) { if (!p.fullName.toLowerCase().includes(S.search)) return false; }
     else if (S.hideDrafted && S.drafted.has(p.id)) return false;
     if (S.pos && POS[p.defaultPositionId] !== S.pos) return false;
-    return badgeOk(A(p.fullName)?.badges || [], only, hide);
+    return badgeOk(badgesOf(p), only, hide);
   });
   if (S.sort !== 'vbd') {
     const k = S.sort==='proj' ? p => seasonProj(p) : p => A(p.fullName)?.ceiling ?? -1;
@@ -301,6 +336,7 @@ const views = {
   draft() {
     return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
     <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
+    ${S.bmUnmatched.length ? `<div style="color:var(--bad);font-size:13px;margin-bottom:8px">Bookmarklet couldn't match: ${S.bmUnmatched.map(esc).join(', ')} — tap ✕ for ${S.bmUnmatched.length===1?'it':'them'} manually.</div>` : ''}
     <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
   },
   lineup() {
