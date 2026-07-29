@@ -218,6 +218,7 @@ function injury(name) {
 }
 function metaBits(name) {
   const m = M(name), b = [];
+  if (m.team) b.push(m.team);
   if (m.age) b.push(m.age + 'y');
   if (m.exp === 0) b.push('rookie'); else if (m.exp) b.push(m.exp + 'yr');
   if (m.depth) b.push('depth ' + m.depth);
