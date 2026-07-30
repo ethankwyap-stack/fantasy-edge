@@ -1,8 +1,10 @@
 name: Waiver alert
 on:
   schedule:
-    # ponytail: hourly 7am-9pm PDT pinned in UTC; drifts to 6am-8pm after Nov PST switch, acceptable
-    - cron: '0 14-23,0-4 * * *'
+    # ponytail: hourly 6am-9pm PDT pinned in UTC; drifts to 5am-8pm after Nov PST switch, acceptable.
+    # 6am start is deliberate: FAAB bids process at 10am ET (7am PDT), so this is the last run
+    # before the deadline that still leaves an hour to act on it.
+    - cron: '0 13-23,0-4 * * *'
   workflow_dispatch:
 jobs:
   alert:

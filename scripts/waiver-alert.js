@@ -1,4 +1,4 @@
-// Hourly GitHub Actions job (7am–9pm PT): fetches free data, diffs against cached
+// Hourly GitHub Actions job (6am–9pm PT): fetches free data, diffs against cached
 // state.json, and only calls Claude / sends Telegram when something actually changed
 // (new trending player, injury-status change on my roster). Dedups sent advice.
 const fs = require('fs');
@@ -10,7 +10,9 @@ const STATE_FILE = 'state.json';
 const sha = s => crypto.createHash('sha256').update(s).digest('hex').slice(0, 16);
 
 async function espn(views, filter) {
-  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}?view=${views}`;
+  // views MUST go out as repeated &view= params — the comma-joined form silently omits `settings`
+  const qs = views.split(',').map(v => `view=${v}`).join('&');
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}?${qs}`;
   const headers = { Cookie: `SWID=${SWID}; espn_s2=${ESPN_S2}` };
   if (filter) headers['X-Fantasy-Filter'] = JSON.stringify(filter);
   const res = await fetch(url, { headers });
@@ -44,9 +46,13 @@ function opponent(proTeamId, wk, proMap) {
 
 async function main() {
   // ---- free data fetches (no Claude yet) ----
-  const league = await espn('mTeam,mRoster,mPositionalRatings');
+  const league = await espn('mTeam,mRoster,mPositionalRatings,mSettings');
   const week = league.scoringPeriodId || 0;
   const ratings = league.positionAgainstOpponent?.positionalRatings || {};
+
+  // FAAB: league is continuous waivers with an acquisition budget, so every add is a bid.
+  const acq = league.settings?.acquisitionSettings || {};
+  const faab = acq.isUsingAcquisitionBudget ? { total: acq.acquisitionBudget || 0, min: acq.minimumBid || 1 } : null;
 
   const rostered = new Set();
   let myRoster = [];
@@ -54,9 +60,10 @@ async function main() {
   for (const t of league.teams || []) {
     const players = (t.roster?.entries || []).map(e => e.playerPoolEntry?.player).filter(Boolean);
     players.forEach(p => rostered.add(p.fullName.toLowerCase()));
-    teams.push({ id: t.id, name: t.name || `Team ${t.id}`, players });
+    teams.push({ id: t.id, name: t.name || `Team ${t.id}`, players, spent: t.transactionCounter?.acquisitionBudgetSpent || 0 });
     if (t.id === +MY_TEAM_ID) myRoster = players;
   }
+  const myBudget = faab ? faab.total - (teams.find(t => t.id === +MY_TEAM_ID)?.spent || 0) : null;
 
   const playerData = await espn('kona_player_info', {
     players: {
@@ -144,6 +151,12 @@ async function main() {
     if (needs.length) thin.push(`${t.name} thin at ${needs.join('/')}`);
   }
 
+  // who can actually outbid me — a thin rival with no budget left is not a threat
+  const budgetLines = faab ? teams
+    .map(t => ({ name: t.id === +MY_TEAM_ID ? `${t.name} (ME)` : t.name, left: faab.total - t.spent }))
+    .sort((a, b) => b.left - a.left)
+    .map(t => `${t.name}: $${t.left} of $${faab.total} left`) : [];
+
   // handcuff detection: unrostered RB2s on my starting RBs' NFL teams
   const norm = ab => ({ WSH: 'WAS', JAX: 'JAC' }[ab] || ab);
   const myRBTeams = new Set(myRoster.filter(p => p.defaultPositionId === 2).map(p => norm((proMap[p.proTeamId]?.abbrev || '').toUpperCase())));
@@ -177,6 +190,10 @@ ${freeAgents.join('\n') || '(none)'}
 
 Rival rosters:
 ${thin.join('\n') || '(no data — pre-draft)'}
+${faab ? `
+FAAB budgets remaining (continuous waivers, bids process daily at 10am ET, minimum bid $${faab.min}). My remaining budget: $${myBudget}:
+${budgetLines.join('\n')}
+` : ''}
 
 Handcuff stash candidates:
 ${handcuffs.join('\n') || '(none)'}
@@ -197,7 +214,8 @@ ${tradeSignals.join('\n') || '(none — no games played yet)'}`;
     model: 'claude-opus-4-8',
     max_tokens: 1024,
     thinking: { type: 'adaptive' },
-    system: 'You are an expert PPR fantasy football advisor. Recommend at most 3 concrete moves (e.g. "Add X, drop Y", "Start A over B", "Stash handcuff X", "Trade for X, he\'s a buy-low", "Shop Y while he\'s hot"), each with a one-line reason and a conviction score 1-5. Only include moves scoring 4+ (a clear, substantial edge: breakout usage change, injury opening a starting role, must-add before waivers clear, a rival about to grab the same player, a clearly mispriced trade target). Routine churn, marginal upgrades, and "worth monitoring" chatter do NOT qualify. If nothing scores 4+, reply with exactly NO_ALERT and nothing else. Be terse — this goes to a phone notification. No markdown.',
+    system: (faab ? `This league uses FAAB continuous waivers: every add is a blind bid, minimum $${faab.min}, and bids process daily at 10am ET. For EVERY add you recommend, give a bid as a dollar range AND as a percent of my remaining budget (e.g. "bid $45-60, 5-6% of your $1000"). Size the bid to how much the player actually moves my starting lineup, not to how many people are adding him, and check the budget table: if the rivals who need his position are nearly broke, bid at the low end. Say "wait" if he will still be there tomorrow.\n\n` : '') +
+      'You are an expert PPR fantasy football advisor. Recommend at most 3 concrete moves (e.g. "Add X, drop Y", "Start A over B", "Stash handcuff X", "Trade for X, he\'s a buy-low", "Shop Y while he\'s hot"), each with a one-line reason and a conviction score 1-5. Only include moves scoring 4+ (a clear, substantial edge: breakout usage change, injury opening a starting role, must-add before waivers clear, a rival about to grab the same player, a clearly mispriced trade target). Routine churn, marginal upgrades, and "worth monitoring" chatter do NOT qualify. If nothing scores 4+, reply with exactly NO_ALERT and nothing else. Be terse — this goes to a phone notification. No markdown.',
     messages: [{ role: 'user', content: prompt }],
   });
   const advice = response.content.filter(b => b.type === 'text').map(b => b.text).join('\n').trim();
