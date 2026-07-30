@@ -148,7 +148,10 @@ async function load() {
     const size = S.teams.length || 10;
     REPL = {QB:Math.round(1.2*size), RB:Math.round(2.8*size), WR:Math.round(3.2*size), TE:Math.round(1.2*size), K:size, DST:size};
     $('#league').textContent = (league.settings?.name||'') + ' · Week ' + S.week;
-    for (const t of S.teams) S.rosters[t.id] = (t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
+    // FAAB: $1000 continuous-waiver budget, bids process 10am ET. Spend lives on each team.
+    S.faabBudget = league.settings?.acquisitionSettings?.acquisitionBudget || 0;
+    S.faabMin = league.settings?.acquisitionSettings?.minimumBid ?? 1;
+    for (const t of S.teams) S.rosters[t.id] =(t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
     // guess my team via SWID match on owners; fall back to picker
     S.myTeamId = +localStorage.myTeam || S.teams[0]?.id;
     // K/DST excluded from the draft board — he only drafts them with his last 2 picks, no need to clutter the pool
@@ -204,6 +207,27 @@ function row(p, extra='') {
     <td>${p.fullName} ${tr?'<span class="trend">🔥'+tr+'</span>':''}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>${extra}</tr>`;
+}
+
+// FAAB — remaining budget per team, and a bid range sized to how much the player upgrades a lineup.
+const faabLeft = t => S.faabBudget - (t.transactionCounter?.acquisitionBudgetSpent || 0);
+const teamName = t => t.name || (t.location||'') + ' ' + (t.nickname||'');
+// ponytail: fixed VBD tiers, not a model. Tune the percentages if bids keep coming in wrong.
+function bidCell(p) {
+  const my = S.teams.find(t => t.id === S.myTeamId);
+  if (!S.faabBudget || !my) return '<td>—</td>';
+  const left = faabLeft(my), v = p._vbd;
+  const [lo, hi] = v >= 40 ? [15,25] : v >= 20 ? [8,14] : v >= 5 ? [3,7] : [1,2];
+  const $ = pct => Math.max(S.faabMin, Math.round(left * pct / 100));
+  return left <= 0 ? '<td>$0 left</td>' : `<td>$${$(lo)}–${$(hi)} <span class="chip">(${lo}–${hi}% of yours)</span></td>`;
+}
+function faabTable() {
+  if (!S.faabBudget) return '';
+  const sorted = [...S.teams].sort((a,b) => faabLeft(b) - faabLeft(a));
+  return `<h2>FAAB budgets — $${S.faabBudget} season, $${S.faabMin} min bid, bids process daily 10am ET</h2>
+  <table><tr><th>Team</th><th>Spent</th><th>Remaining</th></tr>${sorted.map(t =>
+    `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${teamName(t)}${t.id===S.myTeamId?' (you)':''}</td><td>$${S.faabBudget-faabLeft(t)}</td><td>$${faabLeft(t)}</td></tr>`
+  ).join('')}</table>`;
 }
 
 const A = name => S.analysis[(name||'').toLowerCase()];
@@ -358,9 +382,10 @@ const views = {
     const rostered = new Set(Object.values(S.rosters).flat().map(p => p.id));
     const fa = S.players.filter(p => !rostered.has(p.id));
     const hot = fa.filter(p => S.trending[(p.fullName||'').toLowerCase()]);
-    return `${hot.length?'<h2>🔥 Trending pickups (Sleeper add-counts, last 24h) still free in YOUR league</h2><table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th></tr>'+hot.map(p=>row(p)).join('')+'</table>':''}
+    return `${teamPicker()}${faabTable()}
+    ${hot.length?'<h2>🔥 Trending pickups (Sleeper add-counts, last 24h) still free in YOUR league</h2><table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Bid</th></tr>'+hot.map(p=>row(p,bidCell(p))).join('')+'</table>':''}
     <h2>Best available by rest-of-season value</h2>
-    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th></tr>${fa.slice(0,40).map(p=>row(p)).join('')}</table>`;
+    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Bid</th></tr>${fa.slice(0,40).map(p=>row(p,bidCell(p))).join('')}</table>`;
   },
   trades() {
     const need = t => { // surplus/deficit of VBD by position vs league median
