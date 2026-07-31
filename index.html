@@ -83,14 +83,23 @@ const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafte
 const snakePick = (r, slot, size) => r % 2 ? (r-1)*size + slot : r*size - slot + 1;
 console.assert(snakePick(1,2,12)===2 && snakePick(2,2,12)===23 && snakePick(3,2,12)===26 && snakePick(1,12,12)===12 && snakePick(2,12,12)===13, 'snakePick broken');
 
+// Rounds he traded away — he does not pick in these, so never point him at them.
+// 2026: sold the 7th for $248 FAAB + the other manager's 10th (that acquired pick
+// sits at THEIR slot, which we don't know, so it isn't modelled — just noted in the bar).
+const TRADED_ROUNDS = new Set([7]);
+
 // My next pick given how many players have already come off the board.
 function nextPick() {
   const size = S.teams.length, slot = +localStorage.slot;
   if (!size || !slot) return null;
   const made = S.drafted.size, onClock = made + 1;
-  for (let r = 1; r <= 20; r++) { const n = snakePick(r, slot, size); if (n >= onClock) return {round:r, pick:n, away:n - onClock}; }
+  for (let r = 1; r <= 20; r++) {
+    if (TRADED_ROUNDS.has(r)) continue;
+    const n = snakePick(r, slot, size); if (n >= onClock) return {round:r, pick:n, away:n - onClock};
+  }
   return null;
 }
+console.assert(!TRADED_ROUNDS.size || nextPick.toString().includes('TRADED_ROUNDS'), 'traded-round skip removed');
 
 const $ = s => document.querySelector(s);
 const espn = v => fetch('/api/espn?view='+v).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
@@ -414,8 +423,11 @@ function slotBar() {
     ? (np.away === 0 ? `<b class="onclock">YOU'RE ON THE CLOCK — pick #${np.pick} (round ${np.round})</b>`
        : `Next up: <b>#${np.pick}</b> (round ${np.round}) · <b>${np.away}</b> pick${np.away===1?'':'s'} away · ${S.drafted.size} off the board`)
     : 'Set your draft slot to see when you pick next.';
+  const traded = TRADED_ROUNDS.size
+    ? `<div style="color:var(--warn);font-size:13px;margin-top:5px">⇄ No round ${[...TRADED_ROUNDS].join(', ')} pick (traded) · you also own a 2nd 10th-rounder at the other manager's slot</div>`
+    : '';
   return `<div class="slotbar">Draft slot <select onchange="setSlot(this.value)"><option value="">—</option>${opts}</select>
-    <span style="color:var(--dim)">of ${size}</span> &nbsp; ${status}</div>`;
+    <span style="color:var(--dim)">of ${size}</span> &nbsp; ${status}${traded}</div>`;
 }
 function teamPicker() {
   return `<select onchange="setTeam(this.value)">${S.teams.map(t=>`<option value="${t.id}" ${t.id===S.myTeamId?'selected':''}>${t.name||t.location+' '+t.nickname}</option>`).join('')}</select> <span style="color:var(--dim);font-size:13px">← pick YOUR team</span><br>`;
