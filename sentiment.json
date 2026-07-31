@@ -1,144 +1,1333 @@
 {
- "generated": "2026-07-29T23:29:08.267Z",
+ "generated": "2026-07-31T19:28:47.465Z",
  "players": {
   "jonathon brooks": {
-   "fetched": "2026-07-29T23:27:26.413Z",
+   "fetched": "2026-07-31T19:29:22.532Z",
    "sources": [
     "reddit",
-    "youtube"
-   ],
-   "failed": [],
-   "results": 6,
-   "takes": [
-    {
-     "title": "2026 Fantasy Football Rankings: Major Updates from Training Camp News",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=wrcOTYNqHL0",
-     "date": "2026-07-28",
-     "engagement": {
-      "comments": 39,
-      "likes": 381,
-      "views": 8767
-     },
-     "summary": "2026 Fantasy Football Rankings: Major Updates from Training Camp News Adam Levitan and Evan Silva breakdown the most important fantasy news to come out of NFL training camps, what it could mean for drafts and how it impacts the ETR Rankings along with changes to Silva’s Top 150. Silva Top 150: https://establishtherun.com/evan-silvas-top-150-rankings-for-fantasy-football/ 0:00 Malik Nabers 4:07 Alvin Kamara 7:34 Alec Pierce 11:12 Daniel Jones 13:43 Josh Jacobs 18:00 Jacoby Brissett 21:40 Arizona RBs 23:55 Patrick Mahomes 27:14 Rashee Rice 29:05 Jonathon Brooks 3"
-    },
-    {
-     "title": "Jonathon Brooks - 2026 Outlook",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=siJ3reb_P78",
-     "date": "2026-07-13",
-     "engagement": {
-      "comments": 27,
-      "likes": 177,
-      "views": 4175
-     },
-     "summary": "Jonathon Brooks - 2026 Outlook #carolinapanthers #texaslonghorns #fantasyfootball Welcome to The Injury Expertz! 🏈 Get the latest in-depth sports injury analysis with Dr. Jesse Morse! Whether you’re a fantasy football manager or a sports enthusiast, we break down all the critical injury updates, recovery timelines, and how it impacts player performance and team strategies. Stay ahead of the game and dominate your fantasy leagues with our expert insights! $$$ Tips Appreciated: PayPal: TheinjuryExpertZ 📲 Follow us on soci"
-    },
-    {
-     "title": "Jonathon Brooks LOOKS NASTY At Carolina Panthers Training Camp Practice | 2026 Fantasy Football",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=8c338Uiy1dA",
-     "date": "2026-07-23",
-     "engagement": {
-      "comments": 15,
-      "likes": 68,
-      "views": 3167
-     },
-     "summary": "Jonathon Brooks LOOKS NASTY At Carolina Panthers Training Camp Practice | 2026 Fantasy Football Jonathon Brooks LOOKS NASTY At Carolina Panthers Training Camp Practice | 2026 Fantasy Football First Look at Jonathon Brooks at Carolina Panthers practice after being out with a torn ACL."
-    }
-   ]
-  },
-  "jordyn tyson": {
-   "fetched": "2026-07-29T23:27:42.662Z",
-   "sources": [
-    "reddit",
-    "youtube"
-   ],
-   "failed": [],
-   "results": 7,
-   "takes": [
-    {
-     "title": "Jordyn Tyson.. will be a PROBLEM!",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=k_JFSPhkj8k",
-     "date": "2026-05-11",
-     "engagement": {
-      "comments": 71,
-      "likes": 142,
-      "views": 4615
-     },
-     "summary": "Jordyn Tyson.. will be a PROBLEM! Jordyn Tyson.. will be a PROBLEM! 💬Join Smitty’s Live Chat Patreon: https://www.patreon.com/thefantasyfootballshow #jordyntyson #neworleanssaints #fantasyfootball 🐶Play Underdog Fantasy: https://play.underdogfantasy.com/p-smitty (or use code: smitty) 💻 Want Rankings, Bold Predictions, Articles? Visit Smitty’s site: https://thefantasyfootballshow.com 🧢Get a Smitty Hat: https://thefantasyfootballshow-shop.fourthwall.com/?utm_medium=product_shelf&utm_source=youtube Smitty’s Shows: 📺 YouTube"
-    },
-    {
-     "title": "Jordyn Tyson Has RIDICULOUS Fantasy Football UPSIDE! ⭐️ Film Vs. Analytics",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=huZseO_tbrM",
-     "date": "2026-05-01",
-     "engagement": {
-      "comments": 28,
-      "likes": 166,
-      "views": 5887
-     },
-     "summary": "Jordyn Tyson Has RIDICULOUS Fantasy Football UPSIDE! ⭐️ Film Vs. Analytics 🎯 Promo Code FANTASY = 10% OFF! 🎯 🏆 Moves matter. Win before the advantage disappears! 🏆 ➡️ https://www.fantasypoints.com/plans#/ 💎 Brett Whitefield's ⁠2026 NFL PROSPECT GUIDE⁠ is LIVE! 💎 ➡️ https://www.fantasypoints.com/nfl/prospect-guide 🎙️ 2026 NFL DRAFT PODCAST is available WHEREVER you get your podcasts! 🎙️ ➡️ https://www.fantasypoints.com/media/podcasts/show/2026-nfl-draft-podcast 🚨 For all of Theo’s dynasty videos subscribe to Fantasy Points’ newest YouTube channel - Fantasy Points"
-    },
-    {
-     "title": "We're Excited For Jordyn Tyson's Fit In New Orleans",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=p0rhHWZAmMk",
-     "date": "2026-05-12",
-     "engagement": {
-      "comments": 22,
-      "likes": 169,
-      "views": 5231
-     },
-     "summary": "We're Excited For Jordyn Tyson's Fit In New Orleans The Saints added new offensive pieces in the NFL Draft, but the most intriguing fit may be wide receiver Jordyn Tyson. In this episode, Matt Harmon and James Koh evaluate New Orleans’ offensive draft class through the Reception Perception lens, focusing on how Tyson’s route-running profile, alignment versatility, separation ability, and long-term role projection fit into the Saints’ evolving offense. How does Tyson complement the Saints’ current receiver room? What kind of usage could unlock"
-    }
-   ]
-  },
-  "rhamondre stevenson": {
-   "fetched": "2026-07-29T23:28:03.633Z",
-   "sources": [
-    "reddit",
-    "youtube"
+    "youtube",
+    "tiktok"
    ],
    "failed": [],
    "results": 4,
    "takes": [
     {
-     "title": "7 RB Battles Changing 2026 Fantasy Football Draft Rankings",
+     "title": "Our 7 Favorite Fantasy Football RB Sleepers",
      "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=dfjc_h2_jBg",
-     "date": "2026-07-27",
-     "engagement": {
-      "comments": 41,
-      "likes": 253,
-      "views": 10063
-     },
-     "summary": "7 RB Battles Changing 2026 Fantasy Football Draft Rankings Which running back battles could completely change your 2026 fantasy football draft? Ryan Wormeli and Tera Roberts break down seven RBs where one coaching decision, injury, or preseason performance could dramatically change player values. Should you draft TreVeyon Henderson ahead of Rhamondre Stevenson? Can J.K. Dobbins hold off RJ Harvey in Denver? Is Bhayshul Tuten ready for a bigger role in Jacksonville, or will Chris Rodriguez Jr. and LeQuint Allen Jr. keep this backfield split? They also"
-    },
-    {
-     "title": "15 NFL Training Camp Battles Every Fantasy Manager Should Watch",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=i9_-Xpf1Ues",
-     "date": "2026-07-28",
-     "engagement": {
-      "comments": 53,
-      "likes": 240,
-      "views": 5136
-     },
-     "summary": "15 NFL Training Camp Battles Every Fantasy Manager Should Watch Theo Gremminger and Faraz Sidddiqi highlight several positional battles to keep an eye on as NFL Training Camps begin this week! Theo Gremminger of RotoWire gives you fantasy football advice to help you gain an edge and win your league. 🔵 20% off any RotoWire Subscription https://www.rotowire.com/subscribe Use Code THEO20 💰$25 off at FFPC (with min dep of $35) http://www.myFFPC.com Code Theo25 00:00 - Key NFL Training Camp Battles 00:42 - TreVeyon Henderson vs. Rhamondre Stevenson 06:07 - Jay"
-    },
-    {
-     "title": "Who do you TRUST? Rhamondre Stevenson vs TreVeyon Henderson | 2026 Fantasy Football Advice",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=HnvuSAFxyW4",
+     "url": "https://www.youtube.com/watch?v=RpDG6hJI2m4",
      "date": "2026-07-06",
      "engagement": {
-      "comments": 10,
-      "likes": 29,
-      "views": 1410
+      "comments": 177,
+      "likes": 1244,
+      "views": 38850
      },
-     "summary": "Who do you TRUST? Rhamondre Stevenson vs TreVeyon Henderson | 2026 Fantasy Football Advice Is Rhamondre Stevenson still a value pick in Round 7, or will TreVeyon Henderson take over the Patriots backfield? Adam, Jamey, and Dave explain why Stevenson's pass-catching ability and goal-line production keep him firmly in the fantasy conversation, while Henderson's explosive playmaking could earn him a larger role as the season progresses. If you're deciding between Stevenson & Henderson, this video covers everything you need to know before you're on the clock. Watch now to gain the edge th"
+     "summary": "Our 7 Favorite Fantasy Football RB Sleepers Running Back SLEEPERS 2026 Fantasy Football - Josh and Hayden cover SEVEN Running Back sleepers for 2026! Underdog and Yahoo home league ADPs included! SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy operates. Terms apply. Concerned with your play? Call 1-800-GAMBLER or visit www.ncpgambling.org; NY: Call the 24/7 HOPEline at"
+    },
+    {
+     "title": "Jonathon Brooks Making a Scene at Training Camp #fantasyfootball #underdog #fantasyfootballdraft #fantasyfootballadvice #nfl #nflfantasy #fa",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasystockexchange/video/7667763615960796423",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 6,
+      "likes": 473,
+      "shares": 16,
+      "views": 11312
+     },
+     "summary": "Jonathon Brooks Making a Scene at Training Camp #fantasyfootball #underdog #fantasyfootballdraft #fantasyfootballadvice #nfl #nflfantasy #fantasynews #nflfantasyfootball #fyp #fantasyfootballnews"
+    },
+    {
+     "title": "Jonathan Brooks or Chuba Hubbard? #bdge #bdgefantasy #fantasyfootball #fantasyadvice #fantasydraft #nfl",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@bdgefantasy/video/7668290030703561998",
+     "date": "2026-07-30",
+     "engagement": {
+      "comments": 2,
+      "likes": 69,
+      "shares": 0,
+      "views": 1670
+     },
+     "summary": "Jonathan Brooks or Chuba Hubbard? #bdge #bdgefantasy #fantasyfootball #fantasyadvice #fantasydraft #nfl"
+    }
+   ]
+  },
+  "jordyn tyson": {
+   "fetched": "2026-07-31T19:30:32.347Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 4,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2732,
+      "shares": 34,
+      "views": 48267
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "2026 Fantasy Football Rankings & Strategy | The Tier Breaks That Will MAKE or BREAK Your Draft",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=6GmMt5_ht5Y",
+     "date": "2026-07-21",
+     "engagement": {
+      "comments": 59,
+      "likes": 443,
+      "views": 20933
+     },
+     "summary": "2026 Fantasy Football Rankings & Strategy | The Tier Breaks That Will MAKE or BREAK Your Draft Don't put yourself in a hole at any position this draft season! Join Chris Welsh, Pat Fitzmaurice and Tera Roberts for their 2026 fantasy football rankings and strategy breakdown surrounding tier breaks! Does Baltimore Ravens RB Derrick Henry still represent the last safe RB1 target? Could New Orleans Saints WR Chris Olave deliver top-12 production? Plus, why is Atlanta Falcons TE Kyle Pitts the last call for a reliable big man? The Pros flirt with positional falloff! Timestamps: Introduction"
+    },
+    {
+     "title": "Saints passing game",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/fantasyfootball/comments/1v6fdre/saints_passing_game/",
+     "date": "2026-07-25",
+     "engagement": {
+      "num_comments": 56,
+      "score": 57
+     },
+     "summary": "My recent Chris Olave post got taken down, and I have done some research to back up him being at 14 overall. I am very excited about the Saints' offense with the additions of Travis Etienne and Jordyn Tyson this offseason, I am a Tyler Shough believer. In the 8 games where he played at least 90% of team snaps (snap% according to footballguys), he averaged 247 yards and 1.0 TDs, which would be roug"
+    }
+   ]
+  },
+  "rhamondre stevenson": {
+   "fetched": "2026-07-31T19:37:51.422Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 8,
+   "takes": [
+    {
+     "title": "How the 1st Round SHOULD Go in 2026 Fantasy Football Drafts 🏈🏆 #fyp #nfl #fantasyfootball #fantasyfootballfellas",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasyfootballfellas/video/7667399310203555085",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 377,
+      "likes": 55653,
+      "shares": 1064,
+      "views": 783534
+     },
+     "summary": "Unless you play in a Mickey Mouse league, this is exactly how the first round of your fantasy draft should look this year. The first overall pick is Jamir Gibbs. He's fresh off a season with 18 touchdowns. David Montgomery is now gone and the lines are given debatably the easiest schedule for running backs this year. Pick two is Bejan Robinson, who also had his counterpart Tyler Alger switch team. So not only should Bejan's red zone rushing share increase from 49%, but you're still getting a legit weapon in the Falcons passing game. Ja'marr Chase should be the third pick because all Cincinnati"
+    },
+    {
+     "title": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=hFiWMEta4Kk",
+     "date": "2025-08-25",
+     "engagement": {
+      "comments": 551,
+      "likes": 2922,
+      "views": 179339
+     },
+     "summary": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts 2025 Running Back Rankings - Fantasy Football - Josh and Hayden deliver their FINAL Running Back Rankings ahead of the 2025 Fantasy Football season. Top 44 names are covered with some bonus guys to watch at the end. Use our code for 10% off your next SeatGeek order*: https://seatgeek.onelink.me/RrnK/FANTASY10 Sponsored by SeatGeek. *Restrictions apply. Max $20 discount 🐕 SIGN UP HERE FOR THE DRAFT GUIDE On Underdog Fantasy: https://play.underdogfantasy.com/p-underedog-football-show Google For"
+    },
+    {
+     "title": "Is Rhamondre Stevenson the back to draft in New England? 👀 #NFL #FantasyFootball #TreVeyonHenderson #Patriots #RhamondreStevenson",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@mbfantasylife/video/7667320323473231117",
+     "date": "2026-07-27",
+     "engagement": {
+      "comments": 10,
+      "likes": 51,
+      "shares": 0,
+      "views": 2410
+     },
+     "summary": "Is Rhamondre Stevenson the back to draft in New England? 👀 #NFL #FantasyFootball #TreVeyonHenderson #Patriots #RhamondreStevenson"
+    }
+   ]
+  },
+  "jadarian price": {
+   "fetched": "2026-07-31T19:29:59.988Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 8,
+   "takes": [
+    {
+     "title": "Will you be drafting the rookie RB? 👀 (via @Seattle Seahawks) #fantasyfootball #nfl #seahawks #jadarianprice",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@yahoofantasy/video/7667992135991446815",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 45,
+      "likes": 4563,
+      "shares": 161,
+      "views": 43814
+     },
+     "summary": "Will you be drafting the rookie RB? 👀 (via @Seattle Seahawks) #fantasyfootball #nfl #seahawks #jadarianprice"
+    },
+    {
+     "title": "NFL Training Camps are all here ! Here’s the early fantasy football updates #fantasyfootball #joshdowns #jeremiyahlove #jadarianprice",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@yahoofantasy/video/7668067802489556238",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 60,
+      "likes": 4224,
+      "shares": 55,
+      "views": 34525
+     },
+     "summary": "NFL Training Camps are all here ! Here’s the early fantasy football updates #fantasyfootball #joshdowns #jeremiyahlove #jadarianprice"
+    },
+    {
+     "title": "Fantasy League Winners ⭐️ #fantasyfootball #nfl",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@badbeatsports/video/7667854116676209934",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 66,
+      "likes": 4120,
+      "shares": 99,
+      "views": 48091
+     },
+     "summary": "Why the fuck is everyone sleeping on these four league winners that I think are actually so obvious? Starting off with a Mecca Goku, the safest breakout I've seen in years. If we could just throw out everything after Week 5, a Mecca would be going in the first round. Because through his first five NFL games ever, he was the wide receiver three. Now we have a Buka healthy, Baker healthy, and Mike Evans gone. So the fact that you can get him in the fourth round right now, it's an absolute joke. Second player which. I mean, I'm not even trying to be dramatic. I actually don't understand the ADP. "
+    }
+   ]
+  },
+  "kyle monangai": {
+   "fetched": "2026-07-31T19:31:10.402Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 4,
+   "takes": [
+    {
+     "title": "7th rounder btw😤#kylemonangai #bears #nfl #football #flock_bears1",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@flock_bears1/video/7668025520604384525",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 38,
+      "likes": 3394,
+      "shares": 175,
+      "views": 16239
+     },
+     "summary": "7th rounder btw😤#kylemonangai #bears #nfl #football #flock_bears1"
+    },
+    {
+     "title": "13 Critical Fantasy RB Rankings Changes To Make Right Now!",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=mGnDX8BHIxQ",
+     "date": "2025-08-11",
+     "engagement": {
+      "comments": 343,
+      "likes": 2681,
+      "views": 128958
+     },
+     "summary": "13 Critical Fantasy RB Rankings Changes To Make Right Now! 2025 Fantasy Football - RB Rankings Changes - Preseason Week 1 Recap - Josh and Hayden break down all of the relevant rankings changes as a result of Preseason Week 1. Shoutout Nate Jahnke - https://x.com/PFF_NateJahnke?lang=en and Dwain McFarland - https://x.com/dwainmcfarland?lang=en for grinding the snaps. 📲 FOLLOW OUR NEW SOCIALS! IG: https://www.instagram.com/udfootballshow/ TIKTOK: https://www.tiktok.com/@underdogfootballshow TWITTER: https://x.com/UDFootballShow Hop on the Underdog app"
+    },
+    {
+     "title": "Chicago Bears Running Back Kyle Monangai Highlight Edit 🔥🐻⬇️ #chicagobears #kylemonangai #chicagobearsfan #nfl #nflfootball",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@all_good_kicks/video/7668234534256692511",
+     "date": "2026-07-30",
+     "engagement": {
+      "comments": 10,
+      "likes": 398,
+      "shares": 30,
+      "views": 6465
+     },
+     "summary": "Chicago Bears Running Back Kyle Monangai Highlight Edit 🔥🐻⬇️ #chicagobears #kylemonangai #chicagobearsfan #nfl #nflfootball"
+    }
+   ]
+  },
+  "jeremiyah love": {
+   "fetched": "2026-07-31T19:31:44.220Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 8,
+   "takes": [
+    {
+     "title": "Jeremiyah Love looks ready for the season 👀 (Via JohnnyVenerable/X) #arizonacardinals #fantasyfootball #nfl #jeremiyahlove #fyp",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@underdogfantasy/video/7666623083259759886",
+     "date": "2026-07-26",
+     "engagement": {
+      "comments": 294,
+      "likes": 47790,
+      "shares": 950,
+      "views": 668700
+     },
+     "summary": "Jeremiyah Love looks ready for the season 👀 (Via JohnnyVenerable/X) #arizonacardinals #fantasyfootball #nfl #jeremiyahlove #fyp"
+    },
+    {
+     "title": "NFL Training Camps are all here ! Here’s the early fantasy football updates #fantasyfootball #joshdowns #jeremiyahlove #jadarianprice",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@yahoofantasy/video/7668067802489556238",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 60,
+      "likes": 4224,
+      "shares": 55,
+      "views": 34531
+     },
+     "summary": "NFL Training Camps are all here ! Here’s the early fantasy football updates #fantasyfootball #joshdowns #jeremiyahlove #jadarianprice"
+    },
+    {
+     "title": "The Cardinals will be losing all season so Jeremiyah Love’s fantasy value is down the drain anyway #jeremiyahlove #fantasyfootballtips #fant",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@simmbros/video/7666699141581409567",
+     "date": "2026-07-26",
+     "engagement": {
+      "comments": 71,
+      "likes": 1810,
+      "shares": 238,
+      "views": 32302
+     },
+     "summary": "The Cardinals will be losing all season so Jeremiyah Love’s fantasy value is down the drain anyway #jeremiyahlove #fantasyfootballtips #fantasyfootball #fantasyfootballdraft #arizonacardinals"
+    }
+   ]
+  },
+  "carnell tate": {
+   "fetched": "2026-07-31T19:32:24.758Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 4,
+   "takes": [
+    {
+     "title": "The 8 Most Disgusting Picks in 2026 Fantasy Football Drafts",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=82v9-p_6co4",
+     "date": "2026-05-28",
+     "engagement": {
+      "comments": 226,
+      "likes": 1359,
+      "views": 44323
+     },
+     "summary": "The 8 Most Disgusting Picks in 2026 Fantasy Football Drafts Fantasy Football 8 DISGUSTING PICKS - Josh and Hayden cover some of the most disgusting picks you can make on Underdog for the 2026 Fantasy Football season. How many sons of Hall Of Famers make the list? SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy operates. Terms apply. Concerned with your play? Call 1-800-GAMBLER or visit"
+    },
+    {
+     "title": "Carnell Tate is a beast #nfl #fantasy #fyp #sports #football",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@ahindrim.grid/video/7667673967393606925",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 2,
+      "likes": 27,
+      "shares": 4,
+      "views": 674
+     },
+     "summary": "Carnell Tate is a beast #nfl #fantasy #fyp #sports #football"
+    },
+    {
+     "title": "Everyone Is Making the Same Mistake With Carnell Tate in Fantasy Football #fantasyfootball #nfl #nflfootball #titans #carnelltate",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@mackdaddyffb/video/7666270001745186061",
+     "date": "2026-07-25",
+     "engagement": {
+      "comments": 0,
+      "likes": 21,
+      "shares": 1,
+      "views": 514
+     },
+     "summary": "Everyone Is Making the Same Mistake With Carnell Tate in Fantasy Football #fantasyfootball #nfl #nflfootball #titans #carnelltate"
+    }
+   ]
+  },
+  "makai lemon": {
+   "fetched": "2026-07-31T19:32:55.781Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 5,
+   "takes": [
+    {
+     "title": "Makai Lemon getting drafted by the Eagles was disappointing. Now they have 2 undersized WRs that will be underutilized by a mid QB.  #MakaiL",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasycollective/video/7658253183864655117",
+     "date": "2026-07-06",
+     "engagement": {
+      "comments": 0,
+      "likes": 2,
+      "shares": 0,
+      "views": 38
+     },
+     "summary": "Makai Lemon getting drafted by the Eagles was disappointing. Now they have 2 undersized WRs that will be underutilized by a mid QB. #MakaiLemon #eagles #philadelphiaeagles #philadelphia #usc #trojans #fantasy #fantasyfootball #uscfootball #dynasty #devantasmith"
+    },
+    {
+     "title": "The 102 debate: Is Makai Lemon worth a top pick in dynasty leagues despite falling in the NFL Draft? #MakaiLemon #eagles #philadelphiaeagles",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasycollective/video/7658265506780122381",
+     "date": "2026-07-08",
+     "engagement": {
+      "comments": 0,
+      "likes": 1,
+      "shares": 0,
+      "views": 38
+     },
+     "summary": "The 102 debate: Is Makai Lemon worth a top pick in dynasty leagues despite falling in the NFL Draft? #MakaiLemon #eagles #philadelphiaeagles #philadelphia #usc #trojans #fantasy #fantasyfootball #uscfootball #dynasty"
+    },
+    {
+     "title": "Fantasy football league questions",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/findaleague/comments/1v890fm/fantasy_football_league_questions/",
+     "date": "2026-07-27",
+     "engagement": {
+      "num_comments": 14,
+      "score": 1
+     },
+     "summary": "None"
+    }
+   ]
+  },
+  "kenyon sadiq": {
+   "fetched": "2026-07-31T19:33:34.186Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 5,
+   "takes": [
+    {
+     "title": "How the 1st Round SHOULD Go in 2026 Fantasy Football Drafts 🏈🏆 #fyp #nfl #fantasyfootball #fantasyfootballfellas",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasyfootballfellas/video/7667399310203555085",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 377,
+      "likes": 55643,
+      "shares": 1064,
+      "views": 783399
+     },
+     "summary": "Unless you play in a Mickey Mouse league, this is exactly how the first round of your fantasy draft should look this year. The first overall pick is Jamir Gibbs. He's fresh off a season with 18 touchdowns. David Montgomery is now gone and the lines are given debatably the easiest schedule for running backs this year. Pick two is Bejan Robinson, who also had his counterpart Tyler Alger switch team. So not only should Bejan's red zone rushing share increase from 49%, but you're still getting a legit weapon in the Falcons passing game. Ja'marr Chase should be the third pick because all Cincinnati"
+    },
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2732,
+      "shares": 34,
+      "views": 48282
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "🚨2026 ALTERNATING MOCK DRAFT🚨 w/Mel Kiper Jr. & Field Yates! | First Draft🏈",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=NAVyovObG_c",
+     "date": "2026-04-02",
+     "engagement": {
+      "comments": 336,
+      "likes": 1329,
+      "views": 114185
+     },
+     "summary": "🚨2026 ALTERNATING MOCK DRAFT🚨 w/Mel Kiper Jr. & Field Yates! | First Draft🏈 Welcome back to \"First Draft\"! Hosted by Field Yates and Mel Kiper Jr., we're diving into an Alternating Mock Draft for Round 1 of the 2026 NFL Draft, selected by Mel, Field and ESPN Draft analysts Matt Miller and Jordan Reid. #nfl espn #firstdraft #nfl #nfldraft #nfldraft2026 #ncaa #ncaafootball #sports 00:00 Welcome to the show! 3:30 Alternating Mock Draft is open! 5:30 David Bailey to the Titans 8:45 Jeremiyah Love to the Giants 14:30 Sonny Styles to the Saints 19:30 Chiefs select Kenyon Sa"
+    }
+   ]
+  },
+  "kc concepcion": {
+   "fetched": "2026-07-31T19:34:05.009Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 2,
+   "takes": [
+    {
+     "title": "Jakob Sanderson's 5 Favorite Fantasy Football Picks",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=_K5EZx3Yt78",
+     "date": "2026-07-09",
+     "engagement": {
+      "comments": 119,
+      "likes": 1183,
+      "views": 33703
+     },
+     "summary": "Jakob Sanderson's 5 Favorite Fantasy Football Picks Fantasy Football 5 MUST HAVE PLAYERS - Hayden is joined by THE Substack Wunderkind, Jakob Sanderson! (https://x.com/JakobSanderson) to discuss the 5 players he can't stop drafting for the 2026 Fantasy Football Season. Josh enjoys a jaunt to Ireland. Yahoo!!!! 📲 FOLLOW OUR NEW SOCIALS! IG: https://www.instagram.com/jhfootballshow TIKTOK: https://www.tiktok.com/@jhfootballshow TWITTER: https://x.com/UDFootballShow 0:00 5 Fantasy Football Players Jakob Sanderson Can't Stop Drafting 02:29 Ashton J"
+    },
+    {
+     "title": "KC Concepcion is a rookie to watch out for this season 👀  @Cleveland Browns #nfl #kcconcepcion #browns #touchdown #fantasyfootball",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@huddle.hub/video/7668482735475805453",
+     "date": "2026-07-31",
+     "engagement": {
+      "comments": 0,
+      "likes": 21,
+      "shares": 3,
+      "views": 530
+     },
+     "summary": "KC Concepcion is a rookie to watch out for this season 👀 @Cleveland Browns #nfl #kcconcepcion #browns #touchdown #fantasyfootball"
+    }
+   ]
+  },
+  "kyren williams": {
+   "fetched": "2026-07-31T19:34:35.007Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 8,
+   "takes": [
+    {
+     "title": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=hFiWMEta4Kk",
+     "date": "2025-08-25",
+     "engagement": {
+      "comments": 551,
+      "likes": 2922,
+      "views": 179339
+     },
+     "summary": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts 2025 Running Back Rankings - Fantasy Football - Josh and Hayden deliver their FINAL Running Back Rankings ahead of the 2025 Fantasy Football season. Top 44 names are covered with some bonus guys to watch at the end. Use our code for 10% off your next SeatGeek order*: https://seatgeek.onelink.me/RrnK/FANTASY10 Sponsored by SeatGeek. *Restrictions apply. Max $20 discount 🐕 SIGN UP HERE FOR THE DRAFT GUIDE On Underdog Fantasy: https://play.underdogfantasy.com/p-underedog-football-show Google For"
+    },
+    {
+     "title": "10 stats that were the opposite of what I’d expect as an NFL fan #fantasyfootball #calebwilliams #kyrenwilliams #justinjefferson",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@joelsmyth/video/7666918998616952077",
+     "date": "2026-07-26",
+     "engagement": {
+      "comments": 68,
+      "likes": 2830,
+      "shares": 16,
+      "views": 25250
+     },
+     "summary": "10 stats that were the opposite of what I’d expect as an NFL fan #fantasyfootball #calebwilliams #kyrenwilliams #justinjefferson"
+    },
+    {
+     "title": "Top 50 Fantasy Football PPR Rankings & Draft Strategy",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=7k0UotRheN4",
+     "date": "2025-08-19",
+     "engagement": {
+      "comments": 391,
+      "likes": 2184,
+      "views": 125509
+     },
+     "summary": "Top 50 Fantasy Football PPR Rankings & Draft Strategy TOP 50 PPR RANKINGS Rankings - 2025 Fantasy Football - Josh and Hayden break down Hayden's Top 50 PPR Rankings and give a sneak peek into their 2025 Draft Guide. Use promo code THESHOW or the link below to sign up and get it!!! 🐕 SIGN UP HERE FOR THE DRAFT GUIDE On Underdog Fantasy: https://play.underdogfantasy.com/p-underedog-football-show Google Form if you have already signed up: https://forms.gle/ua6XhHzuFdVVAPBd9 Protect your family with life insurance from Ethos. Get your free quote at"
+    }
+   ]
+  },
+  "bucky irving": {
+   "fetched": "2026-07-31T19:35:09.132Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2733,
+      "shares": 34,
+      "views": 48293
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "Running back is the deepest position in fantasy football this year, but knowing which backs to target and which ones to avoid can make all t",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@blitzlink/video/7668029198807747854",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 27,
+      "likes": 2453,
+      "shares": 47,
+      "views": 58251
+     },
+     "summary": "Last year I told you to target Chase Brown, he was the RB seven. I told you to fade Caleb Johnson at the RB twenty eight. He was the RB 113. This year six players I'm targeting or avoiding at the running back position kicking off with Kyron Williams as a target. The guys three straight 11 plus rushing yard seasons, 13+ touchdowns and three straight years as well. Second easiest strength to schedule and this Rams defense is gonna be a lot better this year. Currently going as the RB fifteen. He's my favorite target in the third round right now. The first guy that I'm avoiding is Bucky Irving. To"
+    },
+    {
+     "title": "Our 7 Favorite Fantasy Football RB Sleepers",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=RpDG6hJI2m4",
+     "date": "2026-07-06",
+     "engagement": {
+      "comments": 177,
+      "likes": 1244,
+      "views": 38850
+     },
+     "summary": "Our 7 Favorite Fantasy Football RB Sleepers Running Back SLEEPERS 2026 Fantasy Football - Josh and Hayden cover SEVEN Running Back sleepers for 2026! Underdog and Yahoo home league ADPs included! SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy operates. Terms apply. Concerned with your play? Call 1-800-GAMBLER or visit www.ncpgambling.org; NY: Call the 24/7 HOPEline at"
+    }
+   ]
+  },
+  "treveyon henderson": {
+   "fetched": "2026-07-31T19:35:40.821Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 6,
+   "takes": [
+    {
+     "title": "bro’s fantasy stock just went up 📈 (via @New England Patriots) #fantasyfootball #nfl #patsnation #treveyonhenderson",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@yahoofantasy/video/7668399779600239885",
+     "date": "2026-07-30",
+     "engagement": {
+      "comments": 74,
+      "likes": 5603,
+      "shares": 179,
+      "views": 93526
+     },
+     "summary": "bro’s fantasy stock just went up 📈 (via @New England Patriots) #fantasyfootball #nfl #patsnation #treveyonhenderson"
+    },
+    {
+     "title": "AFC East Breakdown + Meow Men | Fantasy Football 2026 - Ep. 1932",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=6VrLtTELUaA",
+     "date": "2026-07-11",
+     "engagement": {
+      "comments": 178,
+      "likes": 1320,
+      "views": 60929
+     },
+     "summary": "AFC East Breakdown + Meow Men | Fantasy Football 2026 - Ep. 1932 Fantasy Football show for July 11, 2026. Patriots, Bills, Dolphins, Jets! AFC East fantasy football preview on today’s show! Can TreVeyon Henderson take over the backfield? Will Garrett Wilson carry the Jets? Get a full breakdown for 2026 fantasy football drafts. Manage your redraft, keeper, and dynasty fantasy football teams with the #1 fantasy football podcast. 2026 ULTIMATE DRAFT KIT is available now at https://www.UltimateDraftKit.com Get MEGALASHOW tickets! https://www.ticketmaster.com/ev"
+    },
+    {
+     "title": "2026 Fantasy Football Rankings & Strategy | The Tier Breaks That Will MAKE or BREAK Your Draft",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=6GmMt5_ht5Y",
+     "date": "2026-07-21",
+     "engagement": {
+      "comments": 59,
+      "likes": 443,
+      "views": 20933
+     },
+     "summary": "2026 Fantasy Football Rankings & Strategy | The Tier Breaks That Will MAKE or BREAK Your Draft Don't put yourself in a hole at any position this draft season! Join Chris Welsh, Pat Fitzmaurice and Tera Roberts for their 2026 fantasy football rankings and strategy breakdown surrounding tier breaks! Does Baltimore Ravens RB Derrick Henry still represent the last safe RB1 target? Could New Orleans Saints WR Chris Olave deliver top-12 production? Plus, why is Atlanta Falcons TE Kyle Pitts the last call for a reliable big man? The Pros flirt with positional falloff! Timestamps: Introduction"
+    }
+   ]
+  },
+  "d'andre swift": {
+   "fetched": "2026-07-31T19:36:18.329Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 5,
+   "takes": [
+    {
+     "title": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=hFiWMEta4Kk",
+     "date": "2025-08-25",
+     "engagement": {
+      "comments": 551,
+      "likes": 2922,
+      "views": 179339
+     },
+     "summary": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts 2025 Running Back Rankings - Fantasy Football - Josh and Hayden deliver their FINAL Running Back Rankings ahead of the 2025 Fantasy Football season. Top 44 names are covered with some bonus guys to watch at the end. Use our code for 10% off your next SeatGeek order*: https://seatgeek.onelink.me/RrnK/FANTASY10 Sponsored by SeatGeek. *Restrictions apply. Max $20 discount 🐕 SIGN UP HERE FOR THE DRAFT GUIDE On Underdog Fantasy: https://play.underdogfantasy.com/p-underedog-football-show Google For"
+    },
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2735,
+      "shares": 34,
+      "views": 48302
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "Running back is the deepest position in fantasy football this year, but knowing which backs to target and which ones to avoid can make all t",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@blitzlink/video/7668029198807747854",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 27,
+      "likes": 2453,
+      "shares": 47,
+      "views": 58261
+     },
+     "summary": "Last year I told you to target Chase Brown, he was the RB seven. I told you to fade Caleb Johnson at the RB twenty eight. He was the RB 113. This year six players I'm targeting or avoiding at the running back position kicking off with Kyron Williams as a target. The guys three straight 11 plus rushing yard seasons, 13+ touchdowns and three straight years as well. Second easiest strength to schedule and this Rams defense is gonna be a lot better this year. Currently going as the RB fifteen. He's my favorite target in the third round right now. The first guy that I'm avoiding is Bucky Irving. To"
+    }
+   ]
+  },
+  "david montgomery": {
+   "fetched": "2026-07-31T19:36:49.244Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "How the 1st Round SHOULD Go in 2026 Fantasy Football Drafts 🏈🏆 #fyp #nfl #fantasyfootball #fantasyfootballfellas",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasyfootballfellas/video/7667399310203555085",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 377,
+      "likes": 55649,
+      "shares": 1064,
+      "views": 783500
+     },
+     "summary": "Unless you play in a Mickey Mouse league, this is exactly how the first round of your fantasy draft should look this year. The first overall pick is Jamir Gibbs. He's fresh off a season with 18 touchdowns. David Montgomery is now gone and the lines are given debatably the easiest schedule for running backs this year. Pick two is Bejan Robinson, who also had his counterpart Tyler Alger switch team. So not only should Bejan's red zone rushing share increase from 49%, but you're still getting a legit weapon in the Falcons passing game. Ja'marr Chase should be the third pick because all Cincinnati"
+    },
+    {
+     "title": "Week 5 Fantasy Football RB Rankings (Top 34)",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=8Mer37aXlhU",
+     "date": "2025-10-01",
+     "engagement": {
+      "comments": 281,
+      "likes": 1361,
+      "views": 69751
+     },
+     "summary": "Week 5 Fantasy Football RB Rankings (Top 34) WEEK 5 Running Back Rankings - 2025 Fantasy Football - It's rankings SZN. Josh and Hayden discuss Hayden's official Week 5 Running Back rankings, and who he's above or below consensus on. For a limited time, new Cash App customers can earn $10 if they use code SECURE10 in their profile at signup and send $5 to a friend within 14 days. https://capl.onelink.me/vFut/jkz7rlm8 #CashAppPod Terms apply. Cash App is a financial services platform, not a bank. Banking services provided by Cash App’s ba"
+    },
+    {
+     "title": "You absolutely hate to see it #davidmontgomery #woodymarks #fantasyfootball #fantasyfootballtips #fantasyfootballdraft",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@simmbros/video/7665816951393963294",
+     "date": "2026-07-23",
+     "engagement": {
+      "comments": 38,
+      "likes": 1010,
+      "shares": 98,
+      "views": 23000
+     },
+     "summary": "You absolutely hate to see it #davidmontgomery #woodymarks #fantasyfootball #fantasyfootballtips #fantasyfootballdraft"
+    }
+   ]
+  },
+  "jaylen warren": {
+   "fetched": "2026-07-31T19:37:20.344Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "Avoid these EXPENSIVE RB1s who have too much competition #sportstiktokcontest #fantasyfootballtips #fantasyfootball",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@no_bs_fantasyfootball/video/7662071732169116942",
+     "date": "2026-07-13",
+     "engagement": {
+      "comments": 340,
+      "likes": 29313,
+      "shares": 379,
+      "views": 651758
+     },
+     "summary": "Expensive running back Ones that will lose you your league cause their RB2s are stealing their points. My running back avoids last year were Joe Mixon, Isiah Pacheco and Jaylen Warren none of which were on championship rosters. So make sure to save this video and hit that follow button because the early round quarterbacks you need to avoid are up next. The first running back with far too much competition to be drafted in the third found is Bucky Irving. His new running mate, Kenneth Gainwell, was not only an efficient rusher in 2025, he was one of the best pass catchers in the entire NFL Out o"
+    },
+    {
+     "title": "Some surprises in the most efficient fantasy RBs #fantasyfootball #jaylenwarren #omarionhampton",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@joelsmyth/video/7665472528827092238",
+     "date": "2026-07-22",
+     "engagement": {
+      "comments": 66,
+      "likes": 3562,
+      "shares": 83,
+      "views": 38114
+     },
+     "summary": "Some surprises in the most efficient fantasy RBs #fantasyfootball #jaylenwarren #omarionhampton"
+    },
+    {
+     "title": "The Ultimate Early 2026 Fantasy Football RB Rankings",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=15u5WZ61FHM",
+     "date": "2026-04-28",
+     "engagement": {
+      "comments": 178,
+      "likes": 1528,
+      "views": 76693
+     },
+     "summary": "The Ultimate Early 2026 Fantasy Football RB Rankings RUNNING BACK RANKINGS Fantasy Football - TOP 55 - Josh and Hayden cover their Running Back Rankings for the 2026 NFL Season. Just take Bijan and Gibbs doesn't matter which. Has Hayden finally come around to TreVeyon Henderson? Who exactly is carrying the ball for the Commanders? SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy"
+    }
+   ]
+  },
+  "rico dowdle": {
+   "fetched": "2026-07-31T19:38:32.088Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 9,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2736,
+      "shares": 34,
+      "views": 48314
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "Fantasy Football Week 5 Reactions - Everything Changed Again!",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=aJl6NCLWw4o",
+     "date": "2025-10-06",
+     "engagement": {
+      "comments": 359,
+      "likes": 1424,
+      "views": 62400
+     },
+     "summary": "Fantasy Football Week 5 Reactions - Everything Changed Again! Week 5 Fantasy Football INSTANT REACTIONS - Week 5 is (mostly) over!!!! Josh and Hayden discuss NFL Week 5 and which players have us tilted and/or excited. Follow Brentley here everyone!!: https://x.com/brentley12 SIGN UP HERE on Underdog! Play 5, get 100. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy operates. Terms apply. Concerned with your play? Call 1-800-GA"
+    },
+    {
+     "title": "The Ultimate Early 2026 Fantasy Football RB Rankings",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=15u5WZ61FHM",
+     "date": "2026-04-28",
+     "engagement": {
+      "comments": 178,
+      "likes": 1528,
+      "views": 76702
+     },
+     "summary": "The Ultimate Early 2026 Fantasy Football RB Rankings RUNNING BACK RANKINGS Fantasy Football - TOP 55 - Josh and Hayden cover their Running Back Rankings for the 2026 NFL Season. Just take Bijan and Gibbs doesn't matter which. Has Hayden finally come around to TreVeyon Henderson? Who exactly is carrying the ball for the Commanders? SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy"
+    }
+   ]
+  },
+  "kenny gainwell": {
+   "fetched": "2026-07-31T19:39:05.745Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2737,
+      "shares": 34,
+      "views": 48320
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "The Ultimate Early 2026 Fantasy Football RB Rankings",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=15u5WZ61FHM",
+     "date": "2026-04-28",
+     "engagement": {
+      "comments": 178,
+      "likes": 1528,
+      "views": 76697
+     },
+     "summary": "The Ultimate Early 2026 Fantasy Football RB Rankings RUNNING BACK RANKINGS Fantasy Football - TOP 55 - Josh and Hayden cover their Running Back Rankings for the 2026 NFL Season. Just take Bijan and Gibbs doesn't matter which. Has Hayden finally come around to TreVeyon Henderson? Who exactly is carrying the ball for the Commanders? SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy"
+    },
+    {
+     "title": "Week 6 Fantasy Football RB Rankings (Top 38)",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=v5zWrW_-m_U",
+     "date": "2025-10-08",
+     "engagement": {
+      "comments": 191,
+      "likes": 1258,
+      "views": 63256
+     },
+     "summary": "Week 6 Fantasy Football RB Rankings (Top 38) WEEK 6 Running Back Rankings - 2025 Fantasy Football - It's rankings SZN. Josh and Hayden discuss Hayden's official Week 6 Running Back rankings, and who he's above or below consensus on. Get your free quote at https://Ethos.com/THESHOW Shoutout to @reinhardNFL and @NextGenStats for the wonderful charts and visuals. SIGN UP HERE on Underdog! Play 5, get 100. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and pr"
+    }
+   ]
+  },
+  "chuba hubbard": {
+   "fetched": "2026-07-31T19:39:55.931Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2737,
+      "shares": 34,
+      "views": 48324
+     },
+     "summary": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last year... I'm risking it all on these 5 wide receivers in 2026 fantasy football. We have to start with Josh Downs. Two years ago, he ranked sixth in the NFL in target rate before crashing back to earth last season... Now Michael Pittman's gone, and Alec Pierce is recovering from ankle surgery. Downs suddenly has a clear runway to dominate slot targets. Next = Ricky Pearsall. Now San Francisco's WR2 alongside Mike Evans... He lost most of last season to a PCL"
+    },
+    {
+     "title": "Running back is the deepest position in fantasy football this year, but knowing which backs to target and which ones to avoid can make all t",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@blitzlink/video/7668029198807747854",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 27,
+      "likes": 2456,
+      "shares": 47,
+      "views": 58294
+     },
+     "summary": "Last year I told you to target Chase Brown, he was the RB seven. I told you to fade Caleb Johnson at the RB twenty eight. He was the RB 113. This year six players I'm targeting or avoiding at the running back position kicking off with Kyron Williams as a target. The guys three straight 11 plus rushing yard seasons, 13+ touchdowns and three straight years as well. Second easiest strength to schedule and this Rams defense is gonna be a lot better this year. Currently going as the RB fifteen. He's my favorite target in the third round right now. The first guy that I'm avoiding is Bucky Irving. To"
+    },
+    {
+     "title": "Week 5 Fantasy Football RB Rankings (Top 34)",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=8Mer37aXlhU",
+     "date": "2025-10-01",
+     "engagement": {
+      "comments": 281,
+      "likes": 1361,
+      "views": 69751
+     },
+     "summary": "Week 5 Fantasy Football RB Rankings (Top 34) WEEK 5 Running Back Rankings - 2025 Fantasy Football - It's rankings SZN. Josh and Hayden discuss Hayden's official Week 5 Running Back rankings, and who he's above or below consensus on. For a limited time, new Cash App customers can earn $10 if they use code SECURE10 in their profile at signup and send $5 to a friend within 14 days. https://capl.onelink.me/vFut/jkz7rlm8 #CashAppPod Terms apply. Cash App is a financial services platform, not a bank. Banking services provided by Cash App’s ba"
+    }
+   ]
+  },
+  "aaron jones sr.": {
+   "fetched": "2026-07-31T19:40:32.368Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 5,
+   "takes": [
+    {
+     "title": "Aaron Jones or Jamaal Williams - Which Packers RB Should You Draft? | 2018 Fantasy Football",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=tgUienLISoA",
+     "date": "2018-06-04",
+     "engagement": {
+      "comments": 108,
+      "likes": 164,
+      "views": 11164
+     },
+     "summary": "Aaron Jones or Jamaal Williams - Which Packers RB Should You Draft? | 2018 Fantasy Football From now on, we'll be getting in the muck on Mondays, dissecting a murky 2018 fantasy football situation, whether it's a split backfield, a messy receiving trio or just two fantasy football players being drafted at identical ADPs. First up, we're debating the Green Bay Packers backfield, Aaron Jones or Jamaal Williams, which one of them I would draft, both of their 2018 fantasy football outlooks, touching on Ty Montgomery for 2018 fantasy football, as well as Randall Cobb and some mo. Enjoy. PR"
+    },
+    {
+     "title": "Aaron Jones' efficiency has fallen off, and the upside just isn't there anymore. Here's why I'm fading him in 2026 fantasy football drafts.",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasyfootballadvice/video/7660303279225703693",
+     "date": "2026-07-08",
+     "engagement": {
+      "comments": 2,
+      "likes": 32,
+      "shares": 0,
+      "views": 915
+     },
+     "summary": "Aaron Jones' efficiency has fallen off, and the upside just isn't there anymore. Here's why I'm fading him in 2026 fantasy football drafts. #AaronJones #FantasyFootball #FantasyFootballAdvice #NFL #RunningBack #Vikings"
+    },
+    {
+     "title": "aaron Jones \"True 1/1\" Autop  WildCard Fanatsy Football MANGA  #fyp #wildcardinc #sportscards",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@mintbreaks/video/7664764996286467359",
+     "date": "2026-07-21",
+     "engagement": {
+      "comments": 0,
+      "likes": 17,
+      "shares": 0,
+      "views": 7451
+     },
+     "summary": "aaron Jones \"True 1/1\" Autop WildCard Fanatsy Football MANGA #fyp #wildcardinc #sportscards"
+    }
+   ]
+  },
+  "rachaad white": {
+   "fetched": "2026-07-31T19:41:03.095Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 8,
+   "takes": [
+    {
+     "title": "How the 1st Round SHOULD Go in 2026 Fantasy Football Drafts 🏈🏆 #fyp #nfl #fantasyfootball #fantasyfootballfellas",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasyfootballfellas/video/7667399310203555085",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 377,
+      "likes": 55658,
+      "shares": 1064,
+      "views": 783630
+     },
+     "summary": "Unless you play in a Mickey Mouse league, this is exactly how the first round of your fantasy draft should look this year. The first overall pick is Jamir Gibbs. He's fresh off a season with 18 touchdowns. David Montgomery is now gone and the lines are given debatably the easiest schedule for running backs this year. Pick two is Bejan Robinson, who also had his counterpart Tyler Alger switch team. So not only should Bejan's red zone rushing share increase from 49%, but you're still getting a legit weapon in the Falcons passing game. Ja'marr Chase should be the third pick because all Cincinnati"
+    },
+    {
+     "title": "Jakob Sanderson's 5 Favorite Fantasy Football Picks",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=_K5EZx3Yt78",
+     "date": "2026-07-09",
+     "engagement": {
+      "comments": 119,
+      "likes": 1183,
+      "views": 33727
+     },
+     "summary": "Jakob Sanderson's 5 Favorite Fantasy Football Picks Fantasy Football 5 MUST HAVE PLAYERS - Hayden is joined by THE Substack Wunderkind, Jakob Sanderson! (https://x.com/JakobSanderson) to discuss the 5 players he can't stop drafting for the 2026 Fantasy Football Season. Josh enjoys a jaunt to Ireland. Yahoo!!!! 📲 FOLLOW OUR NEW SOCIALS! IG: https://www.instagram.com/jhfootballshow TIKTOK: https://www.tiktok.com/@jhfootballshow TWITTER: https://x.com/UDFootballShow 0:00 5 Fantasy Football Players Jakob Sanderson Can't Stop Drafting 02:29 Ashton J"
+    },
+    {
+     "title": "Rachaad White at a 13th-round price: \"A legit top-10 pass-protecting, third-and-10 / two-minute-drill back.\" #Commanders #FantasyFootball Wh",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fantasypts/video/7660234089038957837",
+     "date": "2026-07-08",
+     "engagement": {
+      "comments": 2,
+      "likes": 16,
+      "shares": 1,
+      "views": 684
+     },
+     "summary": "Rachaad White at a 13th-round price: \"A legit top-10 pass-protecting, third-and-10 / two-minute-drill back.\" #Commanders #FantasyFootball White has become Jakob's No. 1 sleeper for the 2026 season. Even in a busy Washington backfield, do you believe in White's upside? ➡️ https://youtu.be/y5TDS2QY218"
+    }
+   ]
+  },
+  "j.k. dobbins": {
+   "fetched": "2026-07-31T19:41:30.800Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=hFiWMEta4Kk",
+     "date": "2025-08-25",
+     "engagement": {
+      "comments": 551,
+      "likes": 2922,
+      "views": 179339
+     },
+     "summary": "The Ultimate RB Rankings for 2025 Fantasy Football Drafts 2025 Running Back Rankings - Fantasy Football - Josh and Hayden deliver their FINAL Running Back Rankings ahead of the 2025 Fantasy Football season. Top 44 names are covered with some bonus guys to watch at the end. Use our code for 10% off your next SeatGeek order*: https://seatgeek.onelink.me/RrnK/FANTASY10 Sponsored by SeatGeek. *Restrictions apply. Max $20 discount 🐕 SIGN UP HERE FOR THE DRAFT GUIDE On Underdog Fantasy: https://play.underdogfantasy.com/p-underedog-football-show Google For"
+    },
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2738,
+      "shares": 34,
+      "views": 48333
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "J.K. Dobbins, is an RB1 in 2021 Fantasy Football - are we kidding?",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=Y_oX0K6RKzw",
+     "date": "2021-06-29",
+     "engagement": {
+      "comments": 267,
+      "likes": 665,
+      "views": 17100
+     },
+     "summary": "J.K. Dobbins, is an RB1 in 2021 Fantasy Football - are we kidding? J.K. Dobbins, The Case for RB1 Status in 2021 Fantasy Football historical sophie seconds films: RB1/WR1: https://bit.ly/2T5Uq4n RB2/WR2: https://bit.ly/3w3Rmo7 RB3/WR3: https://bit.ly/3wBzRff RB4/WR4: https://bit.ly/3gN91uM RB5/WR5: https://bit.ly/3x5qwfQ order the 2021 bdge season-long & dynasty/rookie guide: https://bdge.store download the underdog fantasy app right here for a free $25 when you use code “bdge”: https://play.underdogfantasy.com/nickbdge u wont text me: https://bit.ly/36ogw5"
+    }
+   ]
+  },
+  "rj harvey": {
+   "fetched": "2026-07-31T19:42:10.091Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 8,
+   "takes": [
+    {
+     "title": "This took forever and one of my favorite new creative projects! Share with friends if you don’t hate it #fantasyfootball #ceedeelamb #lamarj",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@joelsmyth/video/7668399184214576398",
+     "date": "2026-07-30",
+     "engagement": {
+      "comments": 97,
+      "likes": 5401,
+      "shares": 274,
+      "views": 43638
+     },
+     "summary": "They say half a fantasy is just luck, so I tried to do the impossible and calculate it. The goal was to find the luckiest and unluckiest fantasy players from last year. Looking at 25 or so specific scenarios like points called back cause of penalty. Brian Thomas was his 12 points because an illegal motion. Brock Purdy has three interceptions because of drop passes. Isaiah likely fumbles through the back of the end zone. And there goes four points from Lamar. People getting tackled at the 1 yard line, overtime fantasy points, busted coverage, and more. The unluckiest player from last year was C"
+    },
+    {
+     "title": "8 Running Backs Your Fantasy League Has Completely Wrong",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=BP0-huQuDNw",
+     "date": "2025-08-07",
+     "engagement": {
+      "comments": 284,
+      "likes": 3334,
+      "views": 191908
+     },
+     "summary": "8 Running Backs Your Fantasy League Has Completely Wrong 2025 Fantasy Football - RB Higher Or Lower? Josh and Hayden give us 6 RBs they rank above their redraft ranking, and a couple they rank below. Bonus Quinshon Judkins conversation Protect your family with life insurance from Ethos. Get your free quote at https://Ethos.com/THESHOW 📲 FOLLOW OUR NEW SOCIALS! IG: https://www.instagram.com/udfootballshow/ TIKTOK: https://www.tiktok.com/@underdogfootballshow TWITTER: https://x.com/UDFootballShow Hop on the Underdog app, hit BEST BALL MANIA 6, grab s"
+    },
+    {
+     "title": "RJ Harvey Highlights 🐎🐎 Welcome to the Broncos",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=bAr6ur7kb2g",
+     "date": "2025-03-21",
+     "engagement": {
+      "comments": 143,
+      "likes": 803,
+      "views": 55035
+     },
+     "summary": "RJ Harvey Highlights 🐎🐎 Welcome to the Broncos Broncos RJ Harvey Highlights - Josh Norris and Hayden Winks continue NFL DRAFT SZN with RJ Harvey - UCF RB. They hit on his strengths, weaknesses, and some player comps of course. Big Board is LIVE for 2025 Best Ball on the Underdog app. Go hop in a draft and play for $2M. Promo Code: THESHOW 🐕 First Time Deposit Match On Underdog Fantasy: https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state w"
+    }
+   ]
+  },
+  "jacory croskey-merritt": {
+   "fetched": "2026-07-31T19:42:42.568Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 4,
+   "takes": [
+    {
+     "title": "Our 7 Favorite Fantasy Football RB Sleepers",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=RpDG6hJI2m4",
+     "date": "2026-07-06",
+     "engagement": {
+      "comments": 177,
+      "likes": 1244,
+      "views": 38850
+     },
+     "summary": "Our 7 Favorite Fantasy Football RB Sleepers Running Back SLEEPERS 2026 Fantasy Football - Josh and Hayden cover SEVEN Running Back sleepers for 2026! Underdog and Yahoo home league ADPs included! SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy operates. Terms apply. Concerned with your play? Call 1-800-GAMBLER or visit www.ncpgambling.org; NY: Call the 24/7 HOPEline at"
+    },
+    {
+     "title": "lil bill || #funkedit #nflfunkedit #fyp #jacorycroskeymerritt #nfl ib@🦇",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@8btxz3/video/7667455336831356173",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 21,
+      "likes": 356,
+      "shares": 40,
+      "views": 3443
+     },
+     "summary": "lil bill || #funkedit #nflfunkedit #fyp #jacorycroskeymerritt #nfl ib@🦇"
+    },
+    {
+     "title": "prime gibby. #fyp #nfl #commanders #antoniogibson #jacorycroskeymerritt",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@fsritz/video/7668646929110175007",
+     "date": "2026-07-31",
+     "engagement": {
+      "comments": 11,
+      "likes": 292,
+      "shares": 19,
+      "views": 1706
+     },
+     "summary": "prime gibby. #fyp #nfl #commanders #antoniogibson #jacorycroskeymerritt"
+    }
+   ]
+  },
+  "blake corum": {
+   "fetched": "2026-07-31T19:43:13.009Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 6,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2738,
+      "shares": 34,
+      "views": 48342
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "Jakob Sanderson's 5 Favorite Fantasy Football Picks",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=_K5EZx3Yt78",
+     "date": "2026-07-09",
+     "engagement": {
+      "comments": 119,
+      "likes": 1183,
+      "views": 33691
+     },
+     "summary": "Jakob Sanderson's 5 Favorite Fantasy Football Picks Fantasy Football 5 MUST HAVE PLAYERS - Hayden is joined by THE Substack Wunderkind, Jakob Sanderson! (https://x.com/JakobSanderson) to discuss the 5 players he can't stop drafting for the 2026 Fantasy Football Season. Josh enjoys a jaunt to Ireland. Yahoo!!!! 📲 FOLLOW OUR NEW SOCIALS! IG: https://www.instagram.com/jhfootballshow TIKTOK: https://www.tiktok.com/@jhfootballshow TWITTER: https://x.com/UDFootballShow 0:00 5 Fantasy Football Players Jakob Sanderson Can't Stop Drafting 02:29 Ashton J"
+    },
+    {
+     "title": "Be careful drafting Kyren Williams. Blake Corum may be the better value this season #fantasyfootball #fantasyfootballtips #fantasyfootballad",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@simmbros/video/7667447736018455839",
+     "date": "2026-07-28",
+     "engagement": {
+      "comments": 13,
+      "likes": 450,
+      "shares": 47,
+      "views": 10076
+     },
+     "summary": "Be careful drafting Kyren Williams. Blake Corum may be the better value this season #fantasyfootball #fantasyfootballtips #fantasyfootballadvice #kyrenwilliams #blakecorum"
+    }
+   ]
+  },
+  "woody marks": {
+   "fetched": "2026-07-31T19:43:45.108Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 7,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2738,
+      "shares": 34,
+      "views": 48345
+     },
+     "summary": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last year... I'm risking it all on these 5 wide receivers in 2026 fantasy football. We have to start with Josh Downs. Two years ago, he ranked sixth in the NFL in target rate before crashing back to earth last season... Now Michael Pittman's gone, and Alec Pierce is recovering from ankle surgery. Downs suddenly has a clear runway to dominate slot targets. Next = Ricky Pearsall. Now San Francisco's WR2 alongside Mike Evans... He lost most of last season to a PCL"
+    },
+    {
+     "title": "Running back is the deepest position in fantasy football this year, but knowing which backs to target and which ones to avoid can make all t",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@blitzlink/video/7668029198807747854",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 27,
+      "likes": 2457,
+      "shares": 47,
+      "views": 58319
+     },
+     "summary": "Last year I told you to target Chase Brown, he was the RB seven. I told you to fade Caleb Johnson at the RB twenty eight. He was the RB 113. This year six players I'm targeting or avoiding at the running back position kicking off with Kyron Williams as a target. The guys three straight 11 plus rushing yard seasons, 13+ touchdowns and three straight years as well. Second easiest strength to schedule and this Rams defense is gonna be a lot better this year. Currently going as the RB fifteen. He's my favorite target in the third round right now. The first guy that I'm avoiding is Bucky Irving. To"
+    },
+    {
+     "title": "32 Fantasy Football Facts To BULLY Week 5",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=TuTRbBzfQQc",
+     "date": "2025-10-01",
+     "engagement": {
+      "comments": 333,
+      "likes": 1985,
+      "views": 80056
+     },
+     "summary": "32 Fantasy Football Facts To BULLY Week 5 WEEK 5 STATS VS FILM - 2025 Fantasy Football - Josh and Hayden deliver Week 5 Stats vs Film. Lost some big players, but gained some back. Woody Marks SZN begins. Will Ja'Marr Chase bench Zac Taylor? We are still watching the film, please believe us! Get 25% off your subscription or try the app FREE for seven days at Fitbod.me/THESHOW SIGN UP HERE on Underdog! Play 5, get 100. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ i"
+    }
+   ]
+  },
+  "jordan mason": {
+   "fetched": "2026-07-31T19:44:16.019Z",
+   "sources": [
+    "reddit",
+    "youtube",
+    "tiktok"
+   ],
+   "failed": [],
+   "results": 9,
+   "takes": [
+    {
+     "title": "⬆️ Check my profile to get my Top-150 WR Sleepers Worth Drafting Late After bullying you into drafting George Pickens and Emeka Egbuka last",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@thejoeholkashow/video/7668016742437801230",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 69,
+      "likes": 2738,
+      "shares": 34,
+      "views": 48347
+     },
+     "summary": "After bullying you into drafting George Pickens and A Meka Egbuka last year, I'm risking it all on these five wide receivers in 2026 fantasy football. But if you're just looking for my latest top one 50 rankings, check my profile. I give them away for free. We have to start with Josh Downs. Two years ago, he ranked six in the NFL in target rate before crashing back down to earth last season. But now Michael Pittman's gone and Alec Pierce is recovering from ankle surgery, so down suddenly has a clear runway to dominate slot targets. Next is Ricky Pearsall, who's now San Francisco's wide receive"
+    },
+    {
+     "title": "Running back is the deepest position in fantasy football this year, but knowing which backs to target and which ones to avoid can make all t",
+     "source": "tiktok",
+     "url": "https://www.tiktok.com/@blitzlink/video/7668029198807747854",
+     "date": "2026-07-29",
+     "engagement": {
+      "comments": 27,
+      "likes": 2457,
+      "shares": 47,
+      "views": 58322
+     },
+     "summary": "Last year I told you to target Chase Brown, he was the RB seven. I told you to fade Caleb Johnson at the RB twenty eight. He was the RB 113. This year six players I'm targeting or avoiding at the running back position kicking off with Kyron Williams as a target. The guys three straight 11 plus rushing yard seasons, 13+ touchdowns and three straight years as well. Second easiest strength to schedule and this Rams defense is gonna be a lot better this year. Currently going as the RB fifteen. He's my favorite target in the third round right now. The first guy that I'm avoiding is Bucky Irving. To"
+    },
+    {
+     "title": "Our 7 Favorite Fantasy Football RB Sleepers",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=RpDG6hJI2m4",
+     "date": "2026-07-06",
+     "engagement": {
+      "comments": 177,
+      "likes": 1244,
+      "views": 38850
+     },
+     "summary": "Our 7 Favorite Fantasy Football RB Sleepers Running Back SLEEPERS 2026 Fantasy Football - Josh and Hayden cover SEVEN Running Back sleepers for 2026! Underdog and Yahoo home league ADPs included! SIGN UP HERE on Underdog! Play 5, get 50. https://play.underdogfantasy.com/p-underedog-football-show Must be 18+ (19+ in AL, NE; 19+ in CO for some games; 21+ in AZ & MA) and present in a state where Underdog Fantasy operates. Terms apply. Concerned with your play? Call 1-800-GAMBLER or visit www.ncpgambling.org; NY: Call the 24/7 HOPEline at"
     }
    ]
   }

@@ -1,161 +1,117 @@
-# Fantasy Edge — Handoff (Jul 29 2026, late evening)
+# Fantasy Edge — Handoff (Jul 31 2026, later session #2)
 
-Project: `/Users/ethanyap/fantasy-edge`. **Read `CLAUDE.md` in that folder first** — stack, deploy steps, and a long Gotchas list that this file does not repeat. This file covers only what a fresh session needs beyond it.
+Project: `/Users/ethanyap/fantasy-edge`. **Read `CLAUDE.md` in that folder first** — stack, deploy steps, and a long Gotchas list this file does not repeat (including a new entry from this session, see below).
 
-Ethan is doing the next task **in a new chat**, which is why this file exists.
+**Ethan's draft is in 5 days (~Aug 5 2026).** Everything here is scoped around that deadline.
 
 ## TL;DR
 
-Today's work is **finished, committed, pushed, and deployed to production** — commit `f40350c`, working tree clean, live site verified by a headless browser. Do not re-verify it and do not re-deploy.
+1. **The paid Claude batch research run has NOT happened yet.** This session did prep work (see below) but stopped before triggering `gh workflow run draft-research.yml` because context ran low — that trigger is the next session's first real task.
+2. **Full-shortlist sentiment fetch is DONE and DONE RIGHT.** `sentiment.json` now has all 27 shortlisted players, each with reddit + youtube + tiktok takes (48 TikTok takes total, all attributable to `@joelsmyth`). [verified, this session]
+3. **A real bug was found and fixed this session**: TikTok was silently never being queried. See "What was accomplished" and the new CLAUDE.md Gotcha — read it before touching `sentimentFetch()` again.
+4. **Nothing is committed yet.** `git status` shows 4 modified files: `CLAUDE.md`, `HANDOFF.md`, `scripts/draft-research.js`, `sentiment.json`. Local `main` is also already 2 commits ahead of `origin/main` (`228c9a6`, `2921d74` — FAAB waiver UI + traded-pick-skip, from an earlier session, unrelated to this work). [verified via `git status` / `git log origin/main..HEAD`, this session]
+5. `--selftest` passes as of the current (fixed) `draft-research.js`. [verified, this session]
 
-**The next task is two steps of a sentiment feature, and step 1 is free:**
+## What was accomplished this session
 
-1. Run `node --env-file=.env scripts/draft-research.js --sentiment-list` in `/Users/ethanyap/fantasy-edge`, show Ethan the ~50 names, and tune the scoring weights if he says they look wrong. Costs nothing, no network beyond free APIs, takes ~2 minutes.
-2. Then build the `last30days` sentiment fetch stage with a hard `--limit 3` probe, so he sees real output and real cost on three players before anything runs on fifty.
+Ethan said "read handoff.md and run all the research." I read the prior `HANDOFF.md`, which said the one open question before the paid run was: full `--sentiment-fetch` on the ~27-player shortlist first, or go with the existing 3-player smoke-test data? I asked Ethan via AskUserQuestion — he chose **full shortlist first**.
 
-**Nothing in step 2 is built yet.** No `sentiment.json`, no fetch script. Step 1's selector IS built and working.
+I ran `node --env-file=.env scripts/draft-research.js --sentiment-fetch --limit 27` in the background (~20-30 min expected). It completed and wrote `sentiment.json` for 27 players — but **zero of them had any TikTok takes**, despite the TikTok/Joel Smyth wiring from the prior session (`TIKTOK_CREATORS='joelsmyth'`, `SENT_SOURCES='reddit,youtube,tiktok'`).
 
-## What was accomplished today (evening session)
+I investigated by hand-running `last30days.py` directly with various `--search` combinations:
+- `--search tiktok` alone → TikTok source runs fine, finds `@joelsmyth` videos.
+- `--search reddit,tiktok` (2 sources) → both run fine.
+- `--search reddit,youtube,tiktok` (3 sources) → **the headless/no-`--plan` fallback planner silently truncates to `sources=[reddit,youtube]`** — TikTok is dropped with zero error and zero mention in `source_status`. Confirmed by grepping the planner's own log line (`[Planner]   sq1 ... sources=[...]`).
+- I also tried forcing it via an explicit `--plan` JSON with all 3 sources — same result, except the 3rd source silently became `grounding` (web search) instead of tiktok. So the cap isn't specific to the deterministic fallback; it's a 2-source-per-subquery ceiling in this installed version, at least for headless (no interactive planner) use.
 
-Ethan asked how the research run works, then asked how to integrate two new inputs: Joel Smythe's draft guide when it publishes, and the `last30days` skill for player sentiment. He explicitly said **don't build yet, help me understand** — so that turn was explanation only. He then ran `/improve`, which reviewed the pipeline, and approved five fixes.
+**Root cause: a 2-source cap in `last30days` (v3.18.4, this Mac's plugin cache), not a bug in `draft-research.js`'s original logic** — the original 3-source `--search reddit,youtube,tiktok` call was reasonable code that happened to hit an undocumented ceiling in the dependency.
 
-Shipped in `f40350c`:
+**Fix applied** (`scripts/draft-research.js`, `sentimentFetch()`, around line 287): split the one 3-source call into **two calls per player** — `--search reddit,youtube` first, then `--search tiktok --tiktok-creators joelsmyth` second — and merge `.results` / `.source_status` from both before scoring takes. This dodges the 2-source cap entirely since neither call asks for more than 2... actually asks for at most 2 (reddit+youtube) and 1 (tiktok) respectively, safely under the ceiling either way.
 
-- **K/DST dropped from the research pool.** `index.html` never displayed them, so 64 of the top 450 players — 4 of 25 Claude batches, ~16% of the paid run — were being analyzed and thrown away. Pool is now **386 players / 21 batches**.
-- **The paid run is resumable.** `draft-analysis.json` is written after every batch; `--resume` skips players already in it; the retry call now sits *inside* its try/catch (it was outside, so a second failure killed the process and discarded every batch already paid for); a twice-failed batch logs `BATCH FAILED` and continues; `stop_reason === 'max_tokens'` is treated as a failure instead of surfacing as an opaque JSON parse error.
-- **Mixed-season data is now labelled.** `bySeason()` resolves a year *per source*, so `usageLine()` tags any bit whose year differs from the line header (`snap share 62% [2025]`). Latent today — everything falls back to 2025 — but it goes live the moment 2026 nflverse files start publishing at different times.
-- **`smythe-guide.json` scaffolded empty** and wired in, same pattern as `expert-sleepers.json`.
-- **`--sentiment-list` selector built** (details below).
+I smoke-tested the fix on 2 players (`--limit 2 --refresh`) — confirmed both came back with `sources: ['reddit','youtube','tiktok']` and real TikTok takes (e.g. "Jonathon Brooks Looking Like RB1 😳🔥"). Then re-ran the full 27-player fetch fresh (`--limit 27 --refresh`) — **all 27 now have TikTok sources, 48 TikTok takes total.** [verified, this session]
 
-**Found while verifying, not from the review:** the documented 300→450 pool expansion never reached the board. `index.html` capped the render at `slice(0,300)`, so every player past 300 was paid for and unreachable. The fetch limit I "fixed" first was never the binding constraint. Both caps now sit at 450 and a headless browser counts **386 rendered rows** on the live site.
+I added the finding to `CLAUDE.md`'s Gotchas (search "2-source cap" or "silently caps") so nobody re-wires a 3-source `--search` call and loses hours re-discovering this.
 
-**A bug I introduced and caught:** a new `ppgOf()` omitted the `seasonId` filter on ESPN `stats[]` — the exact trap this project's own CLAUDE.md warns about in writing — which would have averaged 2024 and 2025 into one "last-season PPG" used to rank players. Fixed, and `--selftest` now asserts it.
+I did **not** yet: commit anything, push, or trigger the paid GitHub Action. Context ran low, so I stopped here to write this handoff rather than rushing the paid/irreversible step.
 
-**Also resolved:** the previous handoff's "Uncommitted work from an EARLIER session — ask Ethan before committing" is done. Those changes (top-450 pool, long-press sleeper mark, `expert-sleepers.json`) went into `f40350c` with today's work, on his explicit "commit" then "push and deploy".
+## State
 
-## Verified state (every row checked by command, Jul 29 late evening)
+| Thing | State | Confidence |
+|---|---|---|
+| `sentiment.json` | 27 players, all 3 sources (reddit/youtube/tiktok), generated ~2026-07-31 evening | [verified, this session] |
+| `scripts/draft-research.js` | Modified, uncommitted. Has ALL prior-session edits (model swap, 450-char cap, 12-team context, TikTok wiring) PLUS this session's 2-call fix in `sentimentFetch()` | [verified — my edits] |
+| `CLAUDE.md` | Modified, uncommitted — added the "2-source cap" Gotcha | [verified — my edit] |
+| `--selftest` | Passes on current code | [verified, this session] |
+| Real Claude output from the new prompt/sources (the paid batch run) | **Still never tested.** No paid call has happened at all yet — not this session, not before. | [unverified] |
+| `origin/main` HEAD | `5b785a6` | [verified via `git fetch`, this session] |
+| Local `main` HEAD | 2 commits ahead of origin: `228c9a6`, `2921d74` (FAAB waiver UI, traded-pick-skip — both pre-date this session, unrelated) | [verified, this session] |
+| Local git status | `M CLAUDE.md`, `M HANDOFF.md`, `M scripts/draft-research.js`, `M sentiment.json` — nothing else dirty | [verified, this session] |
+| `.github/workflows/draft-research.yml` | Unchanged. Runs `node scripts/draft-research.js` against a **fresh checkout of `origin/main`**, then commits `draft-analysis.json` back as `ethankwyap-stack` | [verified — read the file, this session] |
+| Joel Smyth TikTok handle `@joelsmyth` | Now producing real, on-topic takes (verified by content, e.g. rookie RB commentary matching the player queried) — much stronger confirmation than the prior session's cross-corroboration-only check | [verified via actual fetched content, this session] |
+| `smythe-guide.json` | Still empty scaffold, still expected | [carried forward] |
 
-| Thing | State |
-|---|---|
-| Branch / HEAD | `main` at `f40350c`, **working tree clean**, pushed to `origin/main` |
-| Deploy | Deployed to production this session. `https://fantasy-edge-lyart.vercel.app` returns **401** bare and **302** with `?key=` — both correct, that is the secret gate |
-| Live board | Headless Chrome on the **live** URL counts **386 rendered rows**, zero page errors. Screenshot looked correct (tiers, badges, VBD bars intact) |
-| Local server | Running, port 4650, PID **46014** (launchd KeepAlive restarts it) |
-| `draft-analysis.json` | 298 players, `generated` **2026-07-28T13:03:56Z**. **Stale**: it predates both the Smyth efficiency metrics and `expert-sleepers.json`, and has nothing for ranks 299–386 |
-| `smythe-guide.json` | Exists, `players` is **empty**. Run logs `Smythe guide matched 0/0` |
-| Secrets | `.env` locally (gitignored): `LEAGUE_ID`, `ESPN_S2`, `SWID`, `APP_SECRET`. `ANTHROPIC_API_KEY` exists **only** as a GitHub repo secret, deliberately |
-| Cost today | **Zero.** No Anthropic calls were made. Every verification used free ESPN/nflverse/Sleeper endpoints and a local browser |
-| Only paid thing in the project | The manual `draft-research` run. Previously ~$3 at 25 batches; now 21 batches, so expect somewhat less — that is an estimate, not a measurement |
+## Where my thinking was
 
-Ethan's ESPN identity, needed for draft URLs: SWID `{25A17E71-A2D2-40A8-9E59-02C0A821495E}`. **League IDs change every single mock** (seen: `1413280972`, `1508486820`, `2118343226`) — never hardcode one. Mock draft URL needs all four params or ESPN shows "Page not found": `https://fantasy.espn.com/football/draft?leagueId={ID}&seasonId=2026&teamId={N}&memberId={SWID}`.
+The 2-source cap smelled like it could be `last30days` capping based on API rate/cost concerns for headless runs specifically (to stop an unsupervised cron script from fanning out too wide), rather than a hard architectural limit — I did not chase that theory. I also didn't check whether a NEWER version of the `last30days` plugin fixes this (there could be one at `~/.claude/plugins/cache/last30days-skill/last30days/` with a version newer than `3.18.4` — I didn't look). If a future session hits this cap on a *different* multi-source combination (e.g. adding X or Instagram later), the two-call-per-source-group pattern in `sentimentFetch()` is the known-working workaround; check for a plugin update first before re-deriving it.
 
-## The next task, step 1 — review the sentiment shortlist (FREE)
+I did not check whether the 2-call approach doubles the wall-clock time meaningfully — the 27-player run took roughly the same "~20-30 min" ballpark as the first (broken) run, so it doesn't seem to matter in practice, but I didn't time it precisely.
 
-```
-cd /Users/ethanyap/fantasy-edge
-node --env-file=.env scripts/draft-research.js --sentiment-list
-```
+## For the next session to figure out
 
-Re-fetches all the free data (~2 min), prints the shortlist, then **exits before any Claude call**. Safe to run repeatedly.
+1. **Nothing left to decide before triggering the paid run** — Ethan already answered the one open question (full sentiment shortlist, done). The next session should go straight to execution, not re-ask.
+2. **Is the 450-char report cap actually working?** Never verified against a real API response — carried forward, still true, will only be answerable after the paid run.
+3. **After the Action completes and pushes `draft-analysis.json`, does Vercel prod need a manual redeploy?** Prior session's belief: yes, `git pull && vercel deploy --prod --yes` needed, since nothing auto-triggers a Vercel deploy from a GitHub Action push. Still unverified against the live site.
+4. **Board render caps.** After the fresh full run, confirm `draft-analysis.json` has all 386 players and `index.html`'s render cap still matches (it was already fixed to 386 per CLAUDE.md Gotchas — just confirm nothing regressed).
 
-**What the selector does** (`sentimentList()` in `scripts/draft-research.js`). Pool is players with ADP ≤ 150. A player **qualifies** only if signals genuinely *disagree*:
+## The decision still open
 
-- no 2025 games at all — rookie or missed season (+25)
-- positional rank by draft order differs from positional rank by 2025 PPG by ≥ 4 (+ the gap, capped at 30)
-- a Smythe rank gap ≥ 12 (+20) — currently inert, the guide file is empty
-- fresh news **and** an injury flag together (a situation actually in flux)
+None. Ethan already chose "full shortlist first" this session — that's done. Proceed straight to commit + push + trigger, no more questions needed on that front.
 
-`fresh news` (+10) and `injury flag` (+10) add weight but **cannot qualify a player alone**. That was a deliberate correction: on the first version, "has a headline" gave 12 of 50 slots to Gibbs, Bijan, McCaffrey and other top-10 consensus players — precisely the ones no crowd poll could change. If Ethan wants to loosen it, the weights and the `qualifies` flag are all in that one function.
+## Gotchas (carried forward + new this session)
 
-Top of the current output, for comparison:
-
-```
- 36  Justin Jefferson (WR, ADP 12) — ranked WR6 but WR32 by 2025 PPG; fresh news
- 35  Jordyn Tyson (WR, ADP 97) — no 2025 games (rookie/missed); fresh news
- 31  Patrick Mahomes (QB, ADP 103) — ranked QB15 but QB4 by 2025 PPG; fresh news; injury flag
- 30  Quentin Johnston (WR, ADP 144) — ranked WR54 but WR17 by 2025 PPG
- 25  Jeremiyah Love (RB, ADP 17) — no 2025 games (rookie/missed)
-```
-
-50 of 132 in-range players qualified. **Show him the list and ask which names look wrong** — do not tune the weights on your own judgement of football. If the list looks like noise to him, the correct outcome may be to drop the sentiment feature entirely and save the effort; say that out loud rather than pushing forward.
-
-## The next task, step 2 — the sentiment fetch stage (build after he approves step 1)
-
-**Cost, corrected — this matters, cost is his top anxiety.** Earlier in the session Ethan was told sentiment would be "credit-metered spend". That was **too pessimistic** and I corrected it before writing this file. From the skill's own `CONFIGURATION.md`:
-
-- **Free and keyless:** Reddit (default free path), Hacker News, Polymarket, GitHub (via his `gh` auth), YouTube + YouTube comments (via `yt-dlp`, which is installed).
-- **Credit-gated via `SCRAPECREATORS_API_KEY`:** TikTok, Instagram, and their comment sources — but ScrapeCreators documents **10,000 free calls**, and those sources use ~3 calls per run each.
-- X/Twitter needs separate auth he does not have configured (`XAI_API_KEY`, `AUTH_TOKEN`+`CT0`, etc. all absent).
-
-So ~50 player queries is a few hundred calls, well inside the free allowance. **What I could NOT verify: how many of his 10K ScrapeCreators calls are already spent** — that needs his dashboard, and I have no URL for it. Tell him it looks free and say that balance is the one unchecked thing, rather than asserting free outright. If he wants certainty, `EXCLUDE_SOURCES=tiktok,instagram,tiktok_comments,instagram_comments` keeps the run on entirely free sources, and Reddit is where fantasy football is actually discussed anyway.
-
-**Verified facts about the tool:**
-
-- Path: `~/.claude/plugins/cache/last30days-skill/last30days/3.18.4/skills/last30days/scripts/last30days.py`. Version **3.18.4**. Preflight reports `status: ready`, `safe: true`.
-- Available sources: `reddit, tiktok, instagram, x, youtube, hackernews, polymarket, github, grounding`.
-- Credentials present: **GitHub** and **ScrapeCreators** only. Absent: google, openai, openrouter, perplexity, xai.
-- Machine-readable output: `--emit=json` (defaults to `--json-profile=agent`, schema version 1.2). Docs at `docs/reference/json-export.md` in that same directory. Fields worth using per result: `title`, `source`, `url`, `published_at`, `summary`, `engagement` (native counters), `relevance_score`, `cluster`.
-- **The trap that must be handled:** `source_status` distinguishes `no-results` (source completed cleanly, genuinely nothing) from `rate-limited`, `auth-failed`, `unreachable`, `timeout`, `schema-drift`, `error`. **Only `no-results` means "nobody is talking about this player."** Passing a failed fetch through as silence would invent a negative signal about a player — the same class of bug the existing prompt already guards against for ESPN news ("absence of news is not a negative"). The docs say this outright: consumers must not read failure states as absence of discussion.
-- Query shape that already worked: Ethan ran `Jahmyr Gibbs vs Bijan Robinson fantasy football` earlier today and got 45 results. Per-player, use `"<Player Name> <Team> fantasy football"`.
-
-**The design Ethan agreed to** (his words: "this makes sense"):
-
-- A **separate stage**, not inline in the research pass — a query takes ~40s, so 386 players is impossible. It writes `sentiment.json`, which `draft-research.js` then reads exactly like it reads `expert-sleepers.json` and `smythe-guide.json` (there is already a `curated(filename)` helper for that, reuse it).
-- **Cache with a TTL** (3–5 days pre-draft) so re-running research never re-fetches.
-- `--limit 3` on the first run, non-negotiable — he sees output and cost on three players before fifty.
-- Per player, keep: direction (rising / falling / contested), the 2–3 highest-engagement verbatim takes **with source and engagement counts**, and any concrete beat-writer facts buried in them (camp snap counts, "running with the ones"). Not a numeric sentiment score — a score hides the reasoning the model needs.
-- **Prompt framing, already decided:** sentiment enters as evidence about **price/perception, not about the player**. The system prompt in `draft-research.js` already carries the source-precedence paragraph this plugs into — facts, then measured data, then a named analyst's reasoning, then crowd sentiment — plus "popularity and confidence are not correctness". Read that paragraph before writing the sentiment block so the two agree.
-- **Specificity gate:** "took 80% of first-team snaps Tuesday" counts; "he's gonna eat this year 🔥" does not, at any engagement level. Same rule the prompt already applies to generic ESPN roundups.
-- **Fence crowd text as quoted data, never as instructions.** Reddit and X bodies are attacker-writable in principle. Low stakes here (JSON-schema output, no tool access) but do not interpolate raw post text as if it were part of the prompt's own voice.
-
-## Gotchas — the ones that actually bit someone
-
-- **`server.js` reads `index.html` once at startup.** Editing `index.html` changes nothing on `localhost:4650` until restart. A headless test once reported a new button MISSING purely because of this and it looked like broken code. Fix: `lsof -ti:4650 | xargs kill`, launchd restarts it in ~2s. If localhost misbehaves after an edit, check for an orphaned `node server.js` with PPID 1 blocking the LaunchAgent.
-- **Any function reading ESPN `stats[]` must filter `seasonId`.** Entries from other seasons live in the same array. `summarize()` and `ppgOf()` both do; copy the filter into anything new. This bit me today in brand-new code despite being documented.
-- **Piping the research dry run through `head` kills node via SIGPIPE** and looks like the feature produced nothing. Write to a file, then grep it. (`tail` is fine.)
-- **`timeout` is not installed on this Mac** — `command not found`. Use node's own `AbortSignal.timeout` or just let it run.
-- **playwright-core is at `/Users/ethanyap/.npm/_npx/e41f203b7505f1fb/node_modules/playwright-core`**, not in this project and not in `/opt/homebrew`. There is no `node_modules` in the project at all. Launch with `chromium.launch({channel:'chrome'})`.
-- **Headless tests must load `?key=<APP_SECRET>`** or every route 401s. `window.S` is **not** a global — probe the DOM (`document.querySelectorAll('.pos').length` gives the row count) rather than app state.
-- **Never put `ANTHROPIC_API_KEY` in `.env`.** The paid run lives in GitHub Actions by design; locally the script dry-runs, which is intended, not a failure.
-- **nflverse downloads are slow and flaky** — the 8MB weekly file has timed out at 120s. `csvRows()` returns null and degrades loudly rather than aborting a paid run. **Preserve that for any new download**, including the sentiment stage.
-- nflverse URLs use the release **TAG**, not the file family: `releases/download/pfr_advstats/advstats_week_rush_2025.csv`.
+- **NEW this session, added to CLAUDE.md: `last30days`'s headless query planner silently caps a subquery at 2 sources.** Passing 3+ sources in one `--search` call (or one `--plan` subquery) drops the 3rd with zero error — not even a `source_status` entry. Verified via planner log comparison. Fix used in `sentimentFetch()`: two separate calls (reddit+youtube, then tiktok alone) instead of one 3-source call. Full detail in `CLAUDE.md` Gotchas.
+- **`gh workflow run` uses `origin/main`, not local disk.** Unlike `vercel deploy --prod` (ships whatever's on disk), the GitHub Action does a fresh `git checkout`. **The current uncommitted `scripts/draft-research.js` fix (the TikTok 2-source-cap workaround) will NOT be picked up by the Action until committed and pushed.** This is the single most important thing for the next session not to skip — if you trigger the Action without pushing first, you get the OLD (TikTok-broken) code, silently.
+- **`sentiment.json` also needs to be committed and pushed** before triggering the Action, same reasoning — it's read from disk by `draft-research.js`, which the Action checks out fresh.
+- **Vercel prod likely does not auto-update after the Action's commit.** Plan on `git pull && vercel deploy --prod --yes` as a manual step after the run, unless proven otherwise.
+- **`server.js` reads `index.html` once at startup, but re-reads `draft-analysis.json` on every request.** Only `index.html` needs a restart after edits.
+- **Any function reading ESPN `stats[]` must filter `seasonId`.** `--selftest` asserts this.
+- **Piping the research dry run through `head` kills node via SIGPIPE.** Write to a file, then grep it.
+- **`timeout` is not installed on this Mac.**
+- **Headless tests must load `?key=<APP_SECRET>`** or every route 401s.
+- **Never put `ANTHROPIC_API_KEY` in `.env`.** Lives only as a GitHub Actions repo secret.
+- **nflverse downloads are slow and flaky** — degrades loudly (returns null) rather than aborting a paid run.
 - **`draft-analysis.json` must never be gitignored** — the Action commits it.
-- Vercel file tracing: `server.js` must read `index.html` and `draft-analysis.json` with static `readFileSync(path.join(__dirname, ...))`. Don't switch to dynamic paths.
-- **`git status` does not report `handoff.md`** in this repo — it is neither tracked nor matched by any ignore file I could find, and `git check-ignore` says it is not ignored. Unexplained; harmless; don't spend time on it, and don't assume a clean `git status` means this file doesn't exist.
-- **Never connect programmatically to a draft Ethan is in** — it kicks him out. If any listener is ever running: `pkill -f sniff2.js; pkill -f wslisten.js`.
-- Read `.completedPick` children with `textContent`; `innerText` returns `""` there.
-- **Ethan uses Safari**, not Chrome. Its console is `Option+Cmd+C` and only works when a web page window is frontmost.
+- **Never connect programmatically to a draft Ethan is in** — kicks him out.
+- **Ethan uses Safari**, not Chrome.
+- **Local git can be ahead of production-relevant reality in either direction** — `vercel deploy --prod` ships disk state, independent of `git push`. Run `vercel ls` and/or open the live site, don't infer from `git log` alone.
 
 ## Proven impossible — do not revive
 
-- **ESPN's REST API never exposes mock-draft picks.** `?view=mDraftDetail` returns 200 with his cookies but `picksMade` stays `0` forever, during (~110 polls) and after the draft. Do not re-test polling.
-- **Mock leagues get deleted afterwards**, so importing a finished mock is impossible.
-- **Fantasy Edge must never open its own draft websocket connection.** ESPN allows one per team and kicks the older one; a Playwright session once disconnected Ethan from his own live draft and he set a hard requirement that it never happen again. The bookmarklet is acceptable precisely because it opens **zero** connections.
-- A raw Node `WebSocket` to ESPN's draft server is rejected (close 1006) — needs browser headers. Recorded so nobody retries.
-- **The DOM-readability question is answered yes** and `window.open` + `postMessage` cross-origin delivery **works** — both confirmed on the real `fantasy.espn.com` origin and then by Ethan in a live mock. Do not re-investigate; the clipboard fallback was never needed.
+(Unchanged, carried forward as-is.)
+
+- ESPN's REST API never exposes mock-draft picks (`?view=mDraftDetail` stays `picksMade: 0` forever).
+- Mock leagues get deleted afterward — importing a finished mock is impossible.
+- Fantasy Edge must never open its own draft websocket connection — kicks Ethan's real session. The bookmarklet (zero connections) is the correct design; don't revisit.
+- Raw Node `WebSocket` to ESPN's draft server is rejected (close 1006).
+- DOM-readability + `window.open`/`postMessage` cross-origin delivery works and is confirmed live — don't re-investigate.
 
 ## Don't redo
 
-Draft board with tiers, reports, floor/ceiling bars, badges, filters, snake pick tracker. The research pipeline and its workflow. The hourly Telegram waiver alert. The secret-link gate. The ESPN injuries/news proxy and Sleeper caching. The Smyth volume/efficiency metrics. The draft-sync bookmarklet (**per-draft workflow: Reset the board, click `FE Sync`, check the green badge**). The Reset button already exists. **"Mock mode" was built and deliberately reverted** — he decided Reset covers it; do not rebuild it.
-
-Ideas already declined at zero cost: red-zone/goal-line usage (nflverse play-by-play, 100MB+ per season) and true routes run (paid data).
+Draft board (tiers, reports, floor/ceiling, badges, filters, snake tracker), the research pipeline itself (only tune prompts/sources, don't rebuild it), the hourly Telegram waiver alert, the secret-link gate, ESPN injuries/news proxy + Sleeper caching, Smythe volume/efficiency metrics, the draft-sync bookmarklet, the sentiment shortlist selector (`--sentiment-list`, working), the sentiment fetch stage (`--sentiment-fetch`, working, now genuinely 3-source as of this session). The full 27-player sentiment fetch — already done, don't re-run unless you want fresher takes (5-day TTL, `--refresh` to force). "Mock mode" was built and deliberately reverted — do not rebuild it. The traded-7th-round-pick skip on the draft board — already shipped.
 
 ## Reboot / persistence
 
-`server.js` is a launchd KeepAlive job — it survives restart and relaunches on crash. Draft board state (drafted / mine / manual sleeper marks) is **localStorage only**, so it is per-browser and lost if he clears site data; that is accepted. `draft-analysis.json` and the curated JSON files are in git. Waiver-alert `state.json` persists between GitHub Actions runs via actions/cache and is gitignored locally. Nothing in the next task adds a persistence risk, though `sentiment.json` should be gitignored or committed deliberately — decide with him, don't default.
-
-## The other open item — the paid research run
-
-**Not authorized. Do not trigger it, do not "just check" it.** Ethan decides when, and he has been told to wait until Smythe's guide and the sentiment decision are settled so he pays for one run instead of three.
-
-When he says go: 1) `gh workflow run draft-research.yml` (21 batches now, not 25). 2) `git pull`. 3) `vercel deploy --prod --yes` — **ask first**. 4) Open the live site with the key, tap a row, confirm the report timestamp is new.
-
-Worth doing within a few days of his real draft, since depth charts and camp news move a lot in August. Note the live board currently shows 386 rows but only 298 have analysis, so ranks 299–386 render with no tier or verdict and sort to the bottom under "Ceiling". Only the paid run fixes that.
-
-## The third open item — Joel Smythe's guide
-
-He rates Smythe's guides highly and wants them factored in. **The scaffold is shipped and waiting**: when the 2026 guide publishes, he pastes it or a link, and it becomes a transcription job into `smythe-guide.json` — keys are lowercase ESPN full names, values `{rank, tier, note}`. No code changes needed, deliberately, so this is not happening under draft-day pressure. The prompt already treats Smythe as a strong prior on *interpretation* (especially rookies and new situations) but explicitly not an override of the usage data.
+`server.js` is a launchd KeepAlive job. Draft board state (drafted/mine/manual sleeper marks) is localStorage only. `draft-analysis.json`, `sentiment.json`, and curated JSON files are committed to git.
 
 ## How to work with Ethan
 
-College student learning development, not fluent in git or deployment — give terminal and browser steps **one at a time**, say what he should see, and wait for his confirmation or screenshot before the next step. He uses **Safari**. **Cost is his biggest anxiety**: name every service and whether it can ever bill him, never say "probably free", never spend on the research run without an explicit go-ahead. Never claim something works without having exercised it — he asks "test it out before you tell me it's done". Lead every reply with the outcome, detail after. Confirm before deploys, deletes, or anything outward-facing; approval is scoped to that one action. He changes direction mid-task — revert cleanly rather than leaving half-built features behind. Short confirmations ("proceed", "yes do both") mean do exactly the pending step, nothing more. Screenshots are bug reports or "where do I click" questions — read the image before answering. He gets impatient with long waits, so prefer one decisive test over a passive poll.
+College student learning development, not fluent in git/deployment — one terminal/browser step at a time, say what he should see, wait for confirmation. He uses Safari. **Cost is his #1 anxiety** — name every service and whether it can bill him, never say "probably free." He already authorized the paid run (prior session) and already answered the sentiment-scope question (this session, chose "full shortlist first") — don't re-ask either. Never claim something works without testing it. Lead every reply with the outcome. Confirm before deploys/deletes. Short confirmations ("yes", "proceed") mean do exactly the pending step, nothing more.
+
+## The next task
+
+**Commit, push, and trigger the paid draft research run.** Concretely:
+1. `git add CLAUDE.md scripts/draft-research.js sentiment.json` (and `HANDOFF.md` if you want the trail preserved) and commit — the TikTok fix and the full 27-player sentiment data MUST be pushed before the Action runs, or it uses stale/broken code.
+2. `git push`.
+3. Trigger `gh workflow run draft-research.yml` (paid — this is the actual Claude Opus 5 batch call over 386 players / 21 batches; confirm Ethan still wants to proceed now if any time has passed, but he already said yes to this run).
+4. After it completes (`gh run watch` or `gh run list`), verify `draft-analysis.json` on `origin/main`: 386 players present, a `report` field spot-checked at ≤450 chars, and crowd-chatter lines showing TikTok/YouTube sourcing for the players that have `sentiment.json` entries.
+5. Check whether Vercel prod needs a manual redeploy (`git pull && vercel deploy --prod --yes`) to pick up the new file, and do it if so.
