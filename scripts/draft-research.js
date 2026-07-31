@@ -6,6 +6,9 @@
 // Flags: --resume (skip players already in draft-analysis.json, retry failed batches)
 //        --sentiment-list (print the rookies/unsettled backfields worth a sentiment query, then stop)
 //        --sentiment-fetch [--limit N] (run those queries, write sentiment.json, then stop)
+//        --situation-fetch [--top N] [--limit N] (top-N ADP ∪ sleeper shortlist — catches
+//          offseason situation risk, new OC/QB/scheme, that box-score stats can't see;
+//          writes sentiment.json same as above, run repeatedly to fill in coverage)
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
@@ -270,19 +273,36 @@ function sentimentList(items, limit = 50) {
   return scored;
 }
 
-// Run one last30days query per shortlisted player and write sentiment.json. Separate stage
+// Every player inside topN ADP, unioned with the full sleeper shortlist (uncapped — a
+// rookie or unsettled-backfield RB can sit well outside topN and still be exactly the
+// player this data helps most). Covers offseason situation risk (new OC/QB/scheme,
+// contract-driven role change) that box-score usage stats can't see and the sleeper
+// heuristic doesn't target, since a healthy established starter never qualifies for that list.
+function situationList(items, topN) {
+  const top = items.filter(x => x.adp <= topN);
+  const sleepers = sentimentList(items, Infinity).map(s => s.x);
+  const seen = new Set(); const merged = [];
+  for (const x of [...top, ...sleepers]) {
+    const key = x.p.fullName.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key); merged.push(x);
+  }
+  console.log(`\nSituation-risk pool: top ${topN} ADP (${top.length}) + sleeper shortlist (${sleepers.length}) = ${merged.length} unique players.`);
+  return merged;
+}
+
+// Run one last30days query per player in `list` and write sentiment.json. Separate stage
 // on purpose: a query takes ~40s, so this can never run inline over the 386-player pool.
 // Reddit + YouTube are keyless/free; TikTok rides the already-configured ScrapeCreators
 // key (10k free calls/mo). Writes after every player, so a crash or Ctrl-C keeps what it
 // already paid time for, and re-running skips fresh entries.
-async function sentimentFetch(items, limit) {
-  const list = sentimentList(items, limit);
+async function sentimentFetch(list) {
   const store = { generated: new Date().toISOString(), players: { ...SENTIMENT } };
   const fresh = e => e && (Date.now() - Date.parse(e.fetched)) < SENT_TTL_DAYS * 864e5;
   console.log(`\nFetching crowd sentiment for ${list.length} player(s) from ${SENT_SOURCES} — ~40s each, no Anthropic cost.`);
 
-  for (const [n, s] of list.entries()) {
-    const name = s.x.p.fullName, key = name.toLowerCase();
+  for (const [n, x] of list.entries()) {
+    const name = x.p.fullName, key = name.toLowerCase();
     if (fresh(store.players[key]) && !FLAGS.has('--refresh')) { console.log(`  [${n + 1}/${list.length}] ${name} — cached, skipped`); continue; }
     const q = `${name} fantasy football (${YT_CHANNELS})`;
     // last30days' headless planner caps a subquery at 2 sources — asking for reddit+youtube+tiktok
@@ -497,7 +517,8 @@ async function main() {
   if (process.env.DEBUG_ITEM) console.log('\n' + items.find(x => x.p.fullName.toLowerCase().includes(process.env.DEBUG_ITEM.toLowerCase()))?.text + '\n');
   console.log(`Crowd sentiment matched ${sentHit}/${Object.keys(SENTIMENT).length}${Object.keys(SENTIMENT).length ? '' : ' (sentiment.json missing — nothing injected)'}`);
   if (FLAGS.has('--sentiment-list')) return sentimentList(items);
-  if (FLAGS.has('--sentiment-fetch')) return sentimentFetch(items, Number(flagVal('--limit', 3)));
+  if (FLAGS.has('--sentiment-fetch')) return sentimentFetch(sentimentList(items, Number(flagVal('--limit', 3))).map(s => s.x));
+  if (FLAGS.has('--situation-fetch')) return sentimentFetch(situationList(items, Number(flagVal('--top', 200))).slice(0, Number(flagVal('--limit', 20))));
 
   // ---- batches of ≤20, grouped by position ----
   const byPos = {};
