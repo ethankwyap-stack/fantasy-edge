@@ -1,9 +1,0 @@
-{
-  "_note": "Joel Smythe's published draft guide, transcribed by hand (ask Claude to do it when the guide drops). Keys are lowercase ESPN full names. rank = his positional rank, tier = his tier, note = his one-line thesis. draft-research.js injects a 'Smythe guide' line per match and logs 'Smythe guide matched N/M'. Empty players object = nothing injected, which is not an error.",
-  "_source": "",
-  "_updated": "",
-  "_example": {
-    "some player name": { "rank": 14, "tier": 3, "note": "his one-line thesis, in his words where possible" }
-  },
-  "players": {}
-}

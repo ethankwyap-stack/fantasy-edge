@@ -1,0 +1,759 @@
+{
+ "_note": "Joe Holka's Top-150 PPR board (TikTok), transcribed from his xlsx. Keys are lowercase ESPN full names. overall = his overall rank 1-150; posRank = positional rank derived from it. NO per-player thesis exists in the source \u2014 do not invent one. draft-research.js injects one line per match and logs 'Holka guide matched N/M'. Empty players object = nothing injected, which is not an error.",
+ "_source": "Copy of Top 150 PPR.xlsx \u2014 Joe Holka, full PPR",
+ "_updated": "2026-08-01",
+ "analyst": "Holka",
+ "ranksAre": "overall",
+ "players": {
+  "jahmyr gibbs": {
+   "overall": 1,
+   "posRank": "RB1",
+   "team": "DET"
+  },
+  "bijan robinson": {
+   "overall": 2,
+   "posRank": "RB2",
+   "team": "ATL"
+  },
+  "ja'marr chase": {
+   "overall": 3,
+   "posRank": "WR1",
+   "team": "CIN"
+  },
+  "jaxon smith-njigba": {
+   "overall": 4,
+   "posRank": "WR2",
+   "team": "SEA"
+  },
+  "puka nacua": {
+   "overall": 5,
+   "posRank": "WR3",
+   "team": "LAR"
+  },
+  "amon-ra st. brown": {
+   "overall": 6,
+   "posRank": "WR4",
+   "team": "DET"
+  },
+  "christian mccaffrey": {
+   "overall": 7,
+   "posRank": "RB3",
+   "team": "SF"
+  },
+  "justin jefferson": {
+   "overall": 8,
+   "posRank": "WR5",
+   "team": "MIN"
+  },
+  "jonathan taylor": {
+   "overall": 9,
+   "posRank": "RB4",
+   "team": "IND"
+  },
+  "drake london": {
+   "overall": 10,
+   "posRank": "WR6",
+   "team": "ATL"
+  },
+  "a.j. brown": {
+   "overall": 11,
+   "posRank": "WR7",
+   "team": "NE"
+  },
+  "george pickens": {
+   "overall": 12,
+   "posRank": "WR8",
+   "team": "DAL"
+  },
+  "ceedee lamb": {
+   "overall": 13,
+   "posRank": "WR9",
+   "team": "DAL"
+  },
+  "ashton jeanty": {
+   "overall": 14,
+   "posRank": "RB5",
+   "team": "LV"
+  },
+  "nico collins": {
+   "overall": 15,
+   "posRank": "WR10",
+   "team": "HOU"
+  },
+  "james cook iii": {
+   "overall": 16,
+   "posRank": "RB6",
+   "team": "BUF"
+  },
+  "trey mcbride": {
+   "overall": 17,
+   "posRank": "TE1",
+   "team": "ARI"
+  },
+  "chase brown": {
+   "overall": 18,
+   "posRank": "RB7",
+   "team": "CIN"
+  },
+  "de'von achane": {
+   "overall": 19,
+   "posRank": "RB8",
+   "team": "MIA"
+  },
+  "josh allen": {
+   "overall": 20,
+   "posRank": "QB1",
+   "team": "BUF"
+  },
+  "brock bowers": {
+   "overall": 21,
+   "posRank": "TE2",
+   "team": "LV"
+  },
+  "rashee rice": {
+   "overall": 22,
+   "posRank": "WR11",
+   "team": "KC"
+  },
+  "devonta smith": {
+   "overall": 23,
+   "posRank": "WR12",
+   "team": "PHI"
+  },
+  "kenneth walker iii": {
+   "overall": 24,
+   "posRank": "RB9",
+   "team": "KC"
+  },
+  "omarion hampton": {
+   "overall": 25,
+   "posRank": "RB10",
+   "team": "LAC"
+  },
+  "saquon barkley": {
+   "overall": 26,
+   "posRank": "RB11",
+   "team": "PHI"
+  },
+  "chris olave": {
+   "overall": 27,
+   "posRank": "WR13",
+   "team": "NO"
+  },
+  "tetairoa mcmillan": {
+   "overall": 28,
+   "posRank": "WR14",
+   "team": "CAR"
+  },
+  "zay flowers": {
+   "overall": 29,
+   "posRank": "WR15",
+   "team": "BAL"
+  },
+  "garrett wilson": {
+   "overall": 30,
+   "posRank": "WR16",
+   "team": "NYJ"
+  },
+  "colston loveland": {
+   "overall": 31,
+   "posRank": "TE3",
+   "team": "CHI"
+  },
+  "drake maye": {
+   "overall": 32,
+   "posRank": "QB2",
+   "team": "NE"
+  },
+  "derrick henry": {
+   "overall": 33,
+   "posRank": "RB12",
+   "team": "BAL"
+  },
+  "emeka egbuka": {
+   "overall": 34,
+   "posRank": "WR17",
+   "team": "TB"
+  },
+  "lamar jackson": {
+   "overall": 35,
+   "posRank": "QB3",
+   "team": "BAL"
+  },
+  "ladd mcconkey": {
+   "overall": 36,
+   "posRank": "WR18",
+   "team": "LAC"
+  },
+  "tee higgins": {
+   "overall": 37,
+   "posRank": "WR19",
+   "team": "CIN"
+  },
+  "malik nabers": {
+   "overall": 38,
+   "posRank": "WR20",
+   "team": "NYG"
+  },
+  "josh jacobs": {
+   "overall": 39,
+   "posRank": "RB13",
+   "team": "GB"
+  },
+  "breece hall": {
+   "overall": 40,
+   "posRank": "RB14",
+   "team": "NYJ"
+  },
+  "davante adams": {
+   "overall": 41,
+   "posRank": "WR21",
+   "team": "LAR"
+  },
+  "jeremiyah love": {
+   "overall": 42,
+   "posRank": "RB15",
+   "team": "ARI"
+  },
+  "javonte williams": {
+   "overall": 43,
+   "posRank": "RB16",
+   "team": "DAL"
+  },
+  "kyren williams": {
+   "overall": 44,
+   "posRank": "RB17",
+   "team": "LAR"
+  },
+  "joe burrow": {
+   "overall": 45,
+   "posRank": "QB4",
+   "team": "CIN"
+  },
+  "jayden daniels": {
+   "overall": 46,
+   "posRank": "QB5",
+   "team": "WAS"
+  },
+  "luther burden iii": {
+   "overall": 47,
+   "posRank": "WR22",
+   "team": "CHI"
+  },
+  "jalen hurts": {
+   "overall": 48,
+   "posRank": "QB6",
+   "team": "PHI"
+  },
+  "jaylen waddle": {
+   "overall": 49,
+   "posRank": "WR23",
+   "team": "DEN"
+  },
+  "jameson williams": {
+   "overall": 50,
+   "posRank": "WR24",
+   "team": "DET"
+  },
+  "terry mclaurin": {
+   "overall": 51,
+   "posRank": "WR25",
+   "team": "WAS"
+  },
+  "travis etienne jr.": {
+   "overall": 52,
+   "posRank": "RB18",
+   "team": "NO"
+  },
+  "cam skattebo": {
+   "overall": 53,
+   "posRank": "RB19",
+   "team": "NYG"
+  },
+  "tyler warren": {
+   "overall": 54,
+   "posRank": "TE4",
+   "team": "IND"
+  },
+  "christian watson": {
+   "overall": 55,
+   "posRank": "WR26",
+   "team": "GB"
+  },
+  "mike evans": {
+   "overall": 56,
+   "posRank": "WR27",
+   "team": "SF"
+  },
+  "bucky irving": {
+   "overall": 57,
+   "posRank": "RB20",
+   "team": "TB"
+  },
+  "justin herbert": {
+   "overall": 58,
+   "posRank": "QB7",
+   "team": "LAC"
+  },
+  "rome odunze": {
+   "overall": 59,
+   "posRank": "WR28",
+   "team": "CHI"
+  },
+  "treveyon henderson": {
+   "overall": 60,
+   "posRank": "RB21",
+   "team": "NE"
+  },
+  "d'andre swift": {
+   "overall": 61,
+   "posRank": "RB22",
+   "team": "CHI"
+  },
+  "david montgomery": {
+   "overall": 62,
+   "posRank": "RB23",
+   "team": "HOU"
+  },
+  "dj moore": {
+   "overall": 63,
+   "posRank": "WR29",
+   "team": "BUF"
+  },
+  "caleb williams": {
+   "overall": 64,
+   "posRank": "QB8",
+   "team": "CHI"
+  },
+  "dk metcalf": {
+   "overall": 65,
+   "posRank": "WR30",
+   "team": "PIT"
+  },
+  "bhayshul tuten": {
+   "overall": 66,
+   "posRank": "RB24",
+   "team": "JAC"
+  },
+  "quinshon judkins": {
+   "overall": 67,
+   "posRank": "RB25",
+   "team": "CLE"
+  },
+  "tucker kraft": {
+   "overall": 68,
+   "posRank": "TE5",
+   "team": "GB"
+  },
+  "marvin harrison jr.": {
+   "overall": 69,
+   "posRank": "WR31",
+   "team": "ARI"
+  },
+  "harold fannin jr.": {
+   "overall": 70,
+   "posRank": "TE6",
+   "team": "CLE"
+  },
+  "alec pierce": {
+   "overall": 71,
+   "posRank": "WR32",
+   "team": "IND"
+  },
+  "carnell tate": {
+   "overall": 72,
+   "posRank": "WR33",
+   "team": "TEN"
+  },
+  "jaylen warren": {
+   "overall": 73,
+   "posRank": "RB26",
+   "team": "PIT"
+  },
+  "brian thomas jr.": {
+   "overall": 74,
+   "posRank": "WR34",
+   "team": "JAC"
+  },
+  "rhamondre stevenson": {
+   "overall": 75,
+   "posRank": "RB27",
+   "team": "NE"
+  },
+  "trevor lawrence": {
+   "overall": 76,
+   "posRank": "QB9",
+   "team": "JAC"
+  },
+  "jadarian price": {
+   "overall": 77,
+   "posRank": "RB28",
+   "team": "SEA"
+  },
+  "parker washington": {
+   "overall": 78,
+   "posRank": "WR35",
+   "team": "JAC"
+  },
+  "kyle pitts sr.": {
+   "overall": 79,
+   "posRank": "TE7",
+   "team": "ATL"
+  },
+  "chris godwin jr.": {
+   "overall": 80,
+   "posRank": "WR36",
+   "team": "TB"
+  },
+  "courtland sutton": {
+   "overall": 81,
+   "posRank": "WR37",
+   "team": "DEN"
+  },
+  "rico dowdle": {
+   "overall": 82,
+   "posRank": "RB29",
+   "team": "PIT"
+  },
+  "tony pollard": {
+   "overall": 83,
+   "posRank": "RB30",
+   "team": "TEN"
+  },
+  "rj harvey": {
+   "overall": 84,
+   "posRank": "RB31",
+   "team": "DEN"
+  },
+  "dak prescott": {
+   "overall": 85,
+   "posRank": "QB10",
+   "team": "DAL"
+  },
+  "michael pittman jr.": {
+   "overall": 86,
+   "posRank": "WR38",
+   "team": "PIT"
+  },
+  "wan'dale robinson": {
+   "overall": 87,
+   "posRank": "WR39",
+   "team": "TEN"
+  },
+  "sam laporta": {
+   "overall": 88,
+   "posRank": "TE8",
+   "team": "DET"
+  },
+  "jordyn tyson": {
+   "overall": 89,
+   "posRank": "WR40",
+   "team": "NO"
+  },
+  "kyle monangai": {
+   "overall": 90,
+   "posRank": "RB32",
+   "team": "CHI"
+  },
+  "michael wilson": {
+   "overall": 91,
+   "posRank": "WR41",
+   "team": "ARI"
+  },
+  "jaxson dart": {
+   "overall": 92,
+   "posRank": "QB11",
+   "team": "NYG"
+  },
+  "quentin johnston": {
+   "overall": 93,
+   "posRank": "WR42",
+   "team": "LAC"
+  },
+  "travis kelce": {
+   "overall": 94,
+   "posRank": "TE9",
+   "team": "KC"
+  },
+  "josh downs": {
+   "overall": 95,
+   "posRank": "WR43",
+   "team": "IND"
+  },
+  "brock purdy": {
+   "overall": 96,
+   "posRank": "QB12",
+   "team": "SF"
+  },
+  "bo nix": {
+   "overall": 97,
+   "posRank": "QB13",
+   "team": "DEN"
+  },
+  "chuba hubbard": {
+   "overall": 98,
+   "posRank": "RB33",
+   "team": "CAR"
+  },
+  "j.k. dobbins": {
+   "overall": 99,
+   "posRank": "RB34",
+   "team": "DEN"
+  },
+  "jake ferguson": {
+   "overall": 100,
+   "posRank": "TE10",
+   "team": "DAL"
+  },
+  "ricky pearsall": {
+   "overall": 101,
+   "posRank": "WR44",
+   "team": "SF"
+  },
+  "patrick mahomes": {
+   "overall": 102,
+   "posRank": "QB14",
+   "team": "KC"
+  },
+  "kenny gainwell": {
+   "overall": 103,
+   "posRank": "RB35",
+   "team": "TB"
+  },
+  "makai lemon": {
+   "overall": 104,
+   "posRank": "WR45",
+   "team": "PHI"
+  },
+  "jakobi meyers": {
+   "overall": 105,
+   "posRank": "WR46",
+   "team": "JAC"
+  },
+  "jayden higgins": {
+   "overall": 106,
+   "posRank": "WR47",
+   "team": "HOU"
+  },
+  "jordan love": {
+   "overall": 107,
+   "posRank": "QB15",
+   "team": "GB"
+  },
+  "blake corum": {
+   "overall": 108,
+   "posRank": "RB36",
+   "team": "LAR"
+  },
+  "baker mayfield": {
+   "overall": 109,
+   "posRank": "QB16",
+   "team": "TB"
+  },
+  "matthew stafford": {
+   "overall": 110,
+   "posRank": "QB17",
+   "team": "LAR"
+  },
+  "jared goff": {
+   "overall": 111,
+   "posRank": "QB18",
+   "team": "DET"
+  },
+  "khalil shakir": {
+   "overall": 112,
+   "posRank": "WR48",
+   "team": "BUF"
+  },
+  "jayden reed": {
+   "overall": 113,
+   "posRank": "WR49",
+   "team": "GB"
+  },
+  "aaron jones sr.": {
+   "overall": 114,
+   "posRank": "RB37",
+   "team": "MIN"
+  },
+  "george kittle": {
+   "overall": 115,
+   "posRank": "TE11",
+   "team": "SF"
+  },
+  "tyler shough": {
+   "overall": 116,
+   "posRank": "QB19",
+   "team": "NO"
+  },
+  "woody marks": {
+   "overall": 117,
+   "posRank": "RB38",
+   "team": "HOU"
+  },
+  "jordan addison": {
+   "overall": 118,
+   "posRank": "WR50",
+   "team": "MIN"
+  },
+  "dalton kincaid": {
+   "overall": 119,
+   "posRank": "TE12",
+   "team": "BUF"
+  },
+  "rachaad white": {
+   "overall": 120,
+   "posRank": "RB39",
+   "team": "WAS"
+  },
+  "malik willis": {
+   "overall": 121,
+   "posRank": "QB20",
+   "team": "MIA"
+  },
+  "kyler murray": {
+   "overall": 122,
+   "posRank": "QB21",
+   "team": "MIN"
+  },
+  "dallas goedert": {
+   "overall": 123,
+   "posRank": "TE13",
+   "team": "PHI"
+  },
+  "mark andrews": {
+   "overall": 124,
+   "posRank": "TE14",
+   "team": "BAL"
+  },
+  "jalen coker": {
+   "overall": 125,
+   "posRank": "WR51",
+   "team": "CAR"
+  },
+  "c.j. stroud": {
+   "overall": 126,
+   "posRank": "QB22",
+   "team": "HOU"
+  },
+  "xavier worthy": {
+   "overall": 127,
+   "posRank": "WR52",
+   "team": "KC"
+  },
+  "tyjae spears": {
+   "overall": 128,
+   "posRank": "RB40",
+   "team": "TEN"
+  },
+  "matthew golden": {
+   "overall": 129,
+   "posRank": "WR53",
+   "team": "GB"
+  },
+  "jonathon brooks": {
+   "overall": 130,
+   "posRank": "RB41",
+   "team": "CAR"
+  },
+  "jordan mason": {
+   "overall": 131,
+   "posRank": "RB42",
+   "team": "MIN"
+  },
+  "isaiah likely": {
+   "overall": 132,
+   "posRank": "TE15",
+   "team": "NYG"
+  },
+  "sam darnold": {
+   "overall": 133,
+   "posRank": "QB23",
+   "team": "SEA"
+  },
+  "kc concepcion": {
+   "overall": 134,
+   "posRank": "WR54",
+   "team": "CLE"
+  },
+  "jacory croskey-merritt": {
+   "overall": 135,
+   "posRank": "RB43",
+   "team": "WAS"
+  },
+  "jauan jennings": {
+   "overall": 136,
+   "posRank": "WR55",
+   "team": "MIN"
+  },
+  "alvin kamara": {
+   "overall": 137,
+   "posRank": "RB44",
+   "team": "NO"
+  },
+  "chris rodriguez jr.": {
+   "overall": 138,
+   "posRank": "RB45",
+   "team": "JAC"
+  },
+  "brenton strange": {
+   "overall": 139,
+   "posRank": "TE16",
+   "team": "JAC"
+  },
+  "jerry jeudy": {
+   "overall": 140,
+   "posRank": "WR56",
+   "team": "CLE"
+  },
+  "juwan johnson": {
+   "overall": 141,
+   "posRank": "TE17",
+   "team": "NO"
+  },
+  "rashid shaheed": {
+   "overall": 142,
+   "posRank": "WR57",
+   "team": "SEA"
+  },
+  "tyler allgeier": {
+   "overall": 143,
+   "posRank": "RB46",
+   "team": "ARI"
+  },
+  "tyrone tracy jr.": {
+   "overall": 144,
+   "posRank": "RB47",
+   "team": "NYG"
+  },
+  "romeo doubs": {
+   "overall": 145,
+   "posRank": "WR58",
+   "team": "NE"
+  },
+  "cam ward": {
+   "overall": 146,
+   "posRank": "QB24",
+   "team": "TEN"
+  },
+  "chig okonkwo": {
+   "overall": 147,
+   "posRank": "TE18",
+   "team": "WAS"
+  },
+  "zach charbonnet": {
+   "overall": 148,
+   "posRank": "RB48",
+   "team": "SEA"
+  },
+  "isiah pacheco": {
+   "overall": 149,
+   "posRank": "RB49",
+   "team": "DET"
+  },
+  "dylan sampson": {
+   "overall": 150,
+   "posRank": "RB50",
+   "team": "CLE"
+  }
+ }
+}
