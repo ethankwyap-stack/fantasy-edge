@@ -119,6 +119,11 @@ function seasonProj(p) {
 // either means "not rated", never "rated badly".
 // ponytail: equal weights. Give an analyst more pull by raising his number here.
 const WEIGHTS = { espn: 1, adp: 1, analyst: 1 };
+// Ethan trusts Smyth as a TIEBREAKER, not an override: when the sources already sit close
+// together his read decides where inside that cluster the player lands. When they disagree
+// badly, a boost would just let one man overrule everyone, so it does not apply — and the
+// result can never leave the range the sources already span either way.
+const FAVOR = { Smyth: 3 }, CLOSE = 5;
 // Consensus rank is fractional (RB7.5), but VBD needs POINTS. Read the points off ESPN's own
 // projection curve for the position at that rank: the curve's shape is ESPN's, the ORDER is the
 // consensus. Interpolating keeps a half-rank difference from rounding away to nothing.
@@ -142,6 +147,9 @@ function consensus(list, pos) {
     if (adpRank.has(p)) votes.push({ src: 'ADP', rank: adpRank.get(p), w: WEIGHTS.adp });
     for (const a of S.ranks[(p.fullName || '').toLowerCase()] || [])
       if (a.pos === pos) votes.push({ src: a.analyst, rank: a.rank, w: WEIGHTS.analyst, note: a.note });
+    const ranks = votes.map(v => v.rank);
+    const close = Math.max(...ranks) - Math.min(...ranks) <= CLOSE;
+    if (close) for (const v of votes) if (FAVOR[v.src]) { v.w *= FAVOR[v.src]; v.favored = true; }
     const w = votes.reduce((t, v) => t + v.w, 0);
     p._votes = votes;
     p._consensus = votes.reduce((t, v) => t + v.rank * v.w, 0) / w;
@@ -159,6 +167,15 @@ function consensus(list, pos) {
   S.ranks = { p4: [{ analyst: 'A', pos: 'RB', rank: 1 }, { analyst: 'B', pos: 'RB', rank: 1 }] };
   const l = mk(6); consensus(l, 'RB');
   console.assert(l[0].fullName === 'P0' && l.find(p => p.fullName === 'p4' || p.fullName === 'P4')._posRank < 5, 'consensus: analysts did not pull the player up');
+  // Smyth breaks a CLOSE vote (weight 3), but a far-apart vote falls back to equal weights.
+  // No ADP in these fixtures, so each player has exactly two votes: ESPN's rank and Smyth's.
+  const smythOn = (who, rank) => { const l = mk(12);
+    S.ranks = { [who.toLowerCase()]: [{ analyst: 'Smyth', pos: 'RB', rank }] };
+    consensus(l, 'RB'); return l.find(x => x.fullName === who)._consensus; };
+  // P5 is ESPN's RB6. Smyth says RB4 — 2 apart, so close: (6*1 + 4*3)/4 = 4.5, not the 5.0 of equal weights.
+  console.assert(Math.abs(smythOn('P5', 4) - 4.5) < 0.01, 'FAVOR: close vote did not lean to Smyth');
+  // P11 is ESPN's RB12. Smyth says RB1 — 11 apart, far too wide to be a tiebreak: (12 + 1)/2 = 6.5.
+  console.assert(Math.abs(smythOn('P11', 1) - 6.5) < 0.01, 'FAVOR: far vote must stay at equal weights');
   // A 0-projection player (IR) must NOT be rescued by an analyst's stale top rank.
   const ir = mk(6); ir[5].stats[0].appliedTotal = 0;
   S.ranks = { p5: [{ analyst: 'A', pos: 'RB', rank: 1 }] };
@@ -409,7 +426,8 @@ function drow(p) {
     // reasoning where he gave one (Smyth writes notes; Holka's board is bare ranks).
     if (p._votes) {
       const pr = POS[p.defaultPositionId];
-      parts.push(`<span style="color:var(--dim)">Consensus ${pr}${p._posRank} from ${p._votes.map(v => `${esc(v.src)} ${pr}${v.rank}`).join(' · ')}</span>`);
+      const fav = p._votes.filter(v => v.favored).map(v => esc(v.src));
+      parts.push(`<span style="color:var(--dim)">Consensus ${pr}${p._posRank} from ${p._votes.map(v => `${esc(v.src)} ${pr}${v.rank}${v.favored ? ` ×${FAVOR[v.src]}` : ''}`).join(' · ')}${fav.length ? ` — close vote, ${fav.join(' and ')} weighted heavier` : ''}</span>`);
       for (const v of p._votes) if (v.note) parts.push(`<span style="color:var(--dim)">🗣 ${esc(v.src)}: ${esc(v.note)}</span>`);
     }
     if (inj && inj.note) parts.push(`<span style="color:var(--warn)">⚕ ${esc(inj.s)}</span> — ${esc(inj.note)} <span class="newsdate">ESPN · ${ago(inj.date)}</span>`);
