@@ -112,6 +112,39 @@ function seasonProj(p) {
   const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===0 && s.seasonId===2026);
   return s ? Math.round(s.appliedTotal) : 0;
 }
+// Tiers are MEASURED, not judged. Within a position (already sorted by projection desc), a new
+// tier starts where the drop to the next player is a cliff RELATIVE TO ITS NEIGHBOURS — compared
+// against the median gap in a window around it, not the whole position. A position's global median
+// is dragged near zero by its long flat tail, which made every gap at the top look like a cliff.
+// MIN_CLIFF then stops 2-pt "cliffs" firing down in that tail where everything is bunched.
+// ponytail: rolling median, no clustering lib. Raise CLIFF/MIN_CLIFF if breaks get noisy.
+const CLIFF = 2.5, MIN_CLIFF = 8, WIN = 6;
+let tierLeft = {};
+const median = a => a.length ? [...a].sort((x, y) => x - y)[a.length >> 1] : 0;
+function tierize(sorted) {
+  const gaps = sorted.slice(1).map((p, i) => sorted[i]._vbd - p._vbd);
+  let t = 1;
+  sorted.forEach((p, i) => {
+    const g = gaps[i-1];
+    const local = median(gaps.slice(Math.max(0, i-1-WIN), i-1+WIN));
+    p._cliff = i && g >= MIN_CLIFF && g >= local * CLIFF ? Math.round(g) : 0;
+    if (p._cliff) t++;
+    p._tier = t;
+  });
+}
+// One big cliff among small gaps must split the tier; an even slope must not; a bunched tail must not.
+(() => {
+  const mk = v => v.map(x => ({ _vbd: x }));
+  const cliffy = mk([100,97,94,60,57,54]); tierize(cliffy);
+  console.assert(cliffy.map(p=>p._tier).join()==='1,1,1,2,2,2', 'tierize: missed the cliff');
+  const even = mk([100,90,80,70,60,50]); tierize(even);
+  console.assert(even.every(p=>p._tier===1), 'tierize: split an even slope');
+  const tail = mk([10,9.5,9,8.5,8,7.5]); tierize(tail);
+  console.assert(tail.every(p=>p._tier===1), 'tierize: split a bunched tail');
+  const tiny = mk([100]); tierize(tiny);
+  console.assert(tiny[0]._tier===1, 'tierize: single player');
+})();
+
 function weekProj(p, week) {
   const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===week && s.seasonId===2026);
   return s ? +s.appliedTotal.toFixed(1) : 0;
@@ -175,6 +208,7 @@ async function load() {
       byPos[pos].sort((a,b) => seasonProj(b)-seasonProj(a));
       const repl = seasonProj(byPos[pos][Math.min(REPL[pos], byPos[pos].length-1)] || {});
       byPos[pos].forEach((p, i) => { p._vbd = seasonProj(p) - repl; p._posRank = i+1; });
+      tierize(byPos[pos]);
     }
     S.players.sort((a,b) => b._vbd - a._vbd);
     // Sleeper dump — trending counts plus age/experience/depth-chart per player, matched by name
@@ -297,7 +331,7 @@ function drow(p) {
   const injTag = inj ? `<span class="inj ${/out|ir|injured|pup|susp|doubt/i.test(inj.s)?'out':'qst'}">${esc(inj.s)}</span>` : '';
   const hasExtra = a || inj || S.news[(p.fullName||'').toLowerCase()];
   let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}" onpointerdown="lpDown(${p.id})" onpointerup="lpUp()" onpointercancel="lpUp()" onpointerleave="lpUp()" oncontextmenu="return false" style="user-select:none;-webkit-user-select:none${hasExtra?';cursor:pointer':''}"${hasExtra?` onclick="tExp(${p.id})"`:''}>
-    <td>${a?`<span class="tier">T${a.tier} · ${pos}${p._posRank}</span> `:''}${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
+    <td><span class="tier">${pos}${p._posRank} · ${tierLeft[pos+p._tier]||0} left</span> ${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
     <td>${rangeBar(a)}</td>
@@ -356,18 +390,20 @@ function draftRows() {
   list = list.slice(0,450);
   if (!list.length) return '<tr><td colspan="6" class="msg">No players match these filters.</td></tr>';
   S.maxCeil = Math.max(1, ...list.map(p => A(p.fullName)?.ceiling || 0));
-  // ponytail: overall list mixes position tiers — break rows fire when the running max tier deepens
-  const left = {};
-  for (const p of list) { const a = A(p.fullName); if (a && !S.drafted.has(p.id)) left[a.tier] = (left[a.tier]||0) + 1; }
+  // How many undrafted players are still in each position-tier — the number that decides whether to reach.
+  tierLeft = {};
+  for (const p of S.players) if (!S.drafted.has(p.id)) {
+    const k = POS[p.defaultPositionId] + p._tier;
+    tierLeft[k] = (tierLeft[k]||0) + 1;
+  }
   const np = nextPick();
-  let maxTier = 0, out = '';
+  let out = '';
   for (const p of list) {
-    const a = A(p.fullName);
-    if (S.sort === 'vbd' && a && a.tier > maxTier) {
-      maxTier = a.tier;
-      const n = left[maxTier] || 0;
+    // _cliff sits on the first player BELOW a drop, so this row lands right where the floor falls out.
+    if (S.sort === 'vbd' && p._cliff) {
+      const pos = POS[p.defaultPositionId], n = tierLeft[pos + (p._tier-1)] || 0;
       const gone = np && n <= np.away;
-      out += `<tr class="tierbreak"><td colspan="6">Tier ${maxTier} · ${n} left${np ? (gone ? ` <span class="gone">likely gone by your #${np.pick}</span>` : ` <span class="safe">should survive to #${np.pick}</span>`) : ''}</td></tr>`;
+      out += `<tr class="tierbreak"><td colspan="6">↓ ${p._cliff} pt ${pos} cliff · ${n} left above it${np ? (gone ? ` <span class="gone">likely gone by your #${np.pick}</span>` : ` <span class="safe">should survive to #${np.pick}</span>`) : ''}</td></tr>`;
     }
     out += drow(p);
   }

@@ -1,0 +1,230 @@
+{
+ "_note": "Joel Smyth's 2026 fantasy rankings, transcribed from his YouTube videos. QB + TE ONLY — RB/WR videos aren't out yet, so absence from this file means the position wasn't covered, NOT that he ranked the player low. posRank is his stated positional rank; there is no overall board here, so 'overall' is deliberately absent. Notes are HIS stated reasoning, paraphrased from what he actually said — do not extend past it. 'grade' is the green/yellow/red color he put on screen.",
+ "_source": "QB: https://www.youtube.com/watch?v=z0hv47ZButk — 2026 Fantasy QB Rankings. TE: https://www.youtube.com/watch?v=QqDhui60a7w — 2026 Fantasy TE Rankings (top 25).",
+ "_updated": "2026-08-02",
+ "_confidence": "QB1-22 order is stated explicitly in the video. The QBs with no posRank were discussed at the tail end without a clear ordering — recorded as 'listed with a take' rather than given a rank the source doesn't support. TE1-25 are read directly off his on-screen board (frames at 0:20, 12:30, 22:40, 27:35), so every TE rank is exact; TE8 Kyle Pitts got a rank but no spoken analysis, so he carries no note.",
+ "analyst": "Smyth",
+ "ranksAre": "positional (QB only)",
+ "players": {
+  "josh allen": {
+   "posRank": "QB1",
+   "tier": "1 (alone)",
+   "note": "Top-two fantasy QB in six of the last six years; the next-best QB has one such finish. Says nothing could move him off QB1 even in a bad year."
+  },
+  "lamar jackson": {
+   "posRank": "QB2",
+   "grade": "yellow (pass, on price)",
+   "note": "Likes the player, not the early-4th-round ADP when the next tier goes in the 6th. Four of his last six seasons would make that pick bad; only the 2024 season justifies it. Rushing TDs down since Derrick Henry arrived — he no longer runs inside the 5. Would rather bet on Zay Flowers to buy this passing offense."
+  },
+  "drake maye": {
+   "posRank": "QB3",
+   "note": "No. 1 efficiency last year, weapons upgraded (A.J. Brown, Doubs). Was fantasy QB1 in quarters 1-3 and QB32 in the 4th — because he sat on blowout leads, not because he was unclutch. A harder schedule means more close games and more 4th-quarter snaps. Only 20% of his points came from rushing, so he isn't rush-dependent."
+  },
+  "jayden daniels": {
+   "posRank": "QB4",
+   "note": "No. 1 rushing volume in 2024, No. 2 in 2025. Washington projected for ~5 wins with a bottom-10 defense, which is good for passing volume; McLaurin back. Ceiling pick — health is the risk, but at QB the 7-12 range doesn't matter, so shoot for a top-three finish."
+  },
+  "joe burrow": {
+   "posRank": "QB5",
+   "note": "The one pocket passer with a rushing-QB ceiling because Cincinnati throws in every game script, especially in the red zone and inside the 5. First in passing fantasy PPG since 2024. Second in the NFL in throws to the end zone since 2024 (92) despite missing nine games. Only question is health."
+  },
+  "jalen hurts": {
+   "posRank": "QB6",
+   "note": "Still has the tush push; the 2025 problem was the offense collapsing from top scoring to ~19th, not losing the role. New OC Kellen Mond changes a lot and Smyth thinks it works. The worry is the fantasy playoffs: at Seattle week 15, Houston week 16 — his two hardest matchups back to back."
+  },
+  "caleb williams": {
+   "posRank": "QB7",
+   "grade": "green (target)",
+   "note": "Likes him for the absence of negatives. Second half of 2025 he averaged ~20.6 PPG under Ben Johnson with turnovers and sack rate down and downfield accuracy up. 48 passing attempts into the end zone, third-most in the NFL and 10 more than Goff's best year in the same system. Line and coaching are strong; Loveland and Burden step up."
+  },
+  "justin herbert": {
+   "posRank": "QB8",
+   "grade": "green (target)",
+   "note": "Mike McDaniel is the reason — 'the best quarterback we've ever seen in a Shanahan system.' Herbert is one of the few QBs better against zone than man, and McDaniel's offense draws heavy zone. Offensive line is healthy after every tackle got hurt last year; he was among the most accurate QBs from a clean pocket. Adds some red-zone rushing. Easy fantasy playoff slate (SF home, at MIA, KC home) with no elite defense and no weather risk."
+  },
+  "trevor lawrence": {
+   "posRank": "QB9",
+   "grade": "green (target)",
+   "note": "Going as QB11 in ADP with almost no gap to his 7-8. Judge him as a fantasy QB, not an NFL QB: only Allen, Stafford, Mahomes and Dart-in-his-starts beat him last year. Nothing got worse this offseason; receiver stability, Myers and a healthy Brian Thomas Jr. got better, and the second-hardest QB schedule should ease. Top-three in volume even with the second-most snaps trailing by 2+ scores. Nine rushing TDs on eight expected — third-most carries from the 1-yard line behind Allen and Hurts — so expect ~6, not a fluke correction. Negative: Houston in week 15 (9 PPG vs them last year)."
+  },
+  "jaxson dart": {
+   "posRank": "QB10",
+   "note": "Great rushing upside and a good process pick, but not a confident one. Matt Nagy scares him. Designed runs dropped roughly by half after Daboll left and after five concussion checks — if that No. 1 rushing volume falls to 5th-6th, the passing may not carry a weekly top-five ceiling. All his bad games came against top-five defenses, which he faced unusually often."
+  },
+  "brock purdy": {
+   "posRank": "QB11",
+   "grade": "green (target)",
+   "note": "Insanely efficient in the Shanahan offense with volume back at the borderline-QB1 line that made him great last season. Rushing is underrated — four points per game on the ground. Leads all QBs in career yards per attempt at 8.6."
+  },
+  "dak prescott": {
+   "posRank": "QB12",
+   "note": "Finished QB7-8 last year and little has changed besides a 32nd-ranked defense that may improve slightly. Receivers, coaching and line are all good, but he no longer runs like his first three years, so the upside is capped. Not a bad pick, just a beatable one."
+  },
+  "patrick mahomes": {
+   "posRank": "QB13",
+   "note": "Hard to take coming off the ACL, because so much of last year's value was scrambling. Rashee Rice's return actually cost him ~7 fantasy PPG. Expects a more run-heavy offense with Kenneth Walker. Passing fantasy points were already at his bust-year level. Warns casual drafters will take him early on name."
+  },
+  "bo nix": {
+   "posRank": "QB14",
+   "note": "Process pick: his volume is better than his QB15-16 ADP. Dropbacks up, Jaylen Waddle added, offensive line still excellent — the same profile that made him a QB7-8 pick last year, now at half the price."
+  },
+  "matthew stafford": {
+   "posRank": "QB15",
+   "note": "Touchdown regression is close to guaranteed after leading the NFL in passing TDs, though the volume should stay high. Better as a superflex pick than a 1QB one; don't expect a repeat top-four finish."
+  },
+  "kyler murray": {
+   "posRank": "QB16",
+   "note": "Process pick whose main flaw 'is that he might not be good at football' — but he runs, and this system produced QB9 for Darnold and QB6 for Cousins. Now with Justin Jefferson, Jordan Addison and Jennings. Has finished as a fantasy QB1 in six of six full seasons; the only miss was a five-game 2025."
+  },
+  "jared goff": {
+   "posRank": "QB17",
+   "note": "Consistent and good but brings zero rushing; his career-best fantasy finish was QB7, so the realistic outcome is a value starter, not a league-winner. Better in superflex, same as Stafford."
+  },
+  "malik willis": {
+   "posRank": "QB18",
+   "note": "Late-round upside swing purely on rushing. Wouldn't be shocked by a top-five finish if he runs a ton on a pass-heavy offense with a bad defense — the Jaxson Dart 2025 template, where eight rushing points a game carried him without dicing anyone up. They've discussed using him on the tush push. Receiver talent doesn't matter for this bet."
+  },
+  "tyler shough": {
+   "posRank": "QB19",
+   "note": "Doesn't mind it because of the offense — very fast pace, some designed runs, good passing volume overall."
+  },
+  "baker mayfield": {
+   "posRank": "QB20",
+   "note": "You're betting the 2025 injuries explain the drop and he returns to his 2024 self — one good career fantasy season, under Liam Coen."
+  },
+  "jordan love": {
+   "posRank": "QB21",
+   "note": "Doesn't like it, mostly on volume: he was QB20s despite positive points-over-expected. The five rushing TDs won't repeat with Josh Jacobs, receiver talent looks worse with Kraft off an ACL, and the line is an issue — he struggled under pressure. All three fantasy playoff games are Green Bay weather games, including week 17 vs Houston's defense."
+  },
+  "cam ward": {
+   "posRank": "QB22",
+   "note": "Fun superflex upside-of-the-unknown pick. Everything went wrong as a rookie but everything has changed for year two, and past No. 1 overall QBs who were the worst fantasy QBs as rookies — Goff and Lawrence — both finished QB11 the next season."
+  },
+  "sam darnold": {
+   "note": "Grouped with Bryce Young as roughly the same bet as Cam Ward; not expecting too much. (Discussed after QB22 without a stated rank.)"
+  },
+  "bryce young": {
+   "note": "Grouped with Darnold as roughly the same bet as Cam Ward; not expecting too much. (Discussed after QB22 without a stated rank.)"
+  },
+  "aaron rodgers": {
+   "note": "Bottom-of-the-board tier with Penix; not expecting much. (Discussed after QB22 without a stated rank.)"
+  },
+  "michael penix jr.": {
+   "note": "Bottom-of-the-board tier with Rodgers; not expecting much. (Discussed after QB22 without a stated rank.)"
+  },
+  "daniel jones": {
+   "note": "Was QB1 in the top scoring offense last year but 25% of his points came from rushing, which the Achilles puts at risk as the offense steps back. (Discussed after QB22 without a stated rank.)"
+  },
+  "c.j. stroud": {
+   "note": "The defense is so good that game scripts hurt him, and he simply won't run — he'll see the lane, drift outside and throw instead. Montgomery added. (Discussed after QB22 without a stated rank.)"
+  },
+  "jacoby brissett": {
+   "note": "Repeat isn't impossible: 25th in fantasy points per dropback and still a weekly QB1 because Arizona drops back 50 times a game. Compares it to Mike White's 2022 Jets under Michael LaFleur, who is now the head coach — 'maybe, probably not though.' (Discussed after QB22 without a stated rank.)"
+  },
+  "brock bowers": {
+   "posRank": "TE1",
+   "grade": "green (target)",
+   "note": "His TE1 over McBride despite going ~5-6 picks later. Was TE3 last year (TE2 adjusted for injuries) at 16 PPG in a horrid situation — bad QB, bad play-calling, bad offensive line — and all of that changes. Supreme talent on a team with almost no receiving threats, so expect the creative JSN-under-Kubiak usage: outside, in-line, slot, even backfield, screens and downfield both. Had the highest red-zone target share of any tight end last season."
+  },
+  "trey mcbride": {
+   "posRank": "TE2",
+   "grade": "red (fade)",
+   "note": "Loves the player, hates the round-2 price when Bowers is the other option. Everything that made last year changed: QB unsettled (Brissett/Beck), Hackett at OC, target competition added (healthier Marvin, ascending Michael Wilson, a top-five pick in Jeremiah Love), offense projected bottom five. TDs by year 1-3-2-11, so expect the middle. He ran more routes than any player in the NFL — 150+ more than the next tight end — on a perfect game script; without Brissett he averaged 12.5 PPG, a TE4-5. Only one tight end with that kind of season ever repeated it (Gronk)."
+  },
+  "colston loveland": {
+   "posRank": "TE3",
+   "grade": "green (target)",
+   "note": "Peaked at the end of his rookie year: 12 targets per game over the last four including the playoffs, an ~80% route share even with Cole Kmet healthy, and TE1 overall in that stretch — Chicago runs the most two-tight-end sets in the NFL, so Kmet doesn't cost him routes. 21 years old, a top-10 pick, camp talk has him as the focal point and possible WR1 of the offense, DJ Moore gone helps in the red zone. Everything is better than last season."
+  },
+  "tyler warren": {
+   "posRank": "TE4",
+   "grade": "green (target)",
+   "note": "Already TE5 as a rookie. Steichen keeps saying they want to be creative with him — 'more of an offensive weapon than a tight end' — fullback snaps, goal line, screens, the Penn State usage. That gadget work plus real volume is what makes a tight end safe week to week. Owned the quick first-read targets among Downs/Pierce/Pittman/Warren, and Pittman (a short-area guy despite the profile) is gone: his targets per route went 21% to 30% without Pittman. Daniel Jones is the league's most extreme one-read, get-it-out QB, which suits Warren off the Achilles. Bad TD luck last year should correct."
+  },
+  "sam laporta": {
+   "posRank": "TE5",
+   "note": "Basically tied with Fannin for 5th; he goes back and forth. Was an afterthought in Detroit — zero deep targets, red-zone and first-read target share near the bottom — and still produced, which is impressive. Now in Arizona with Drew Petzing, who is great for tight ends, in an offense designed around the X and the Y (that's why Michael Wilson spiked to 15-18 targets and vanished when Marvin returned). He was No. 1 among tight ends in yards after catch per reception with a very high yards per route, so a bump in routes and role could be huge."
+  },
+  "harold fannin jr.": {
+   "posRank": "TE6",
+   "note": "Tied with LaPorta for 5th in his head. Browns offense is bad and adding two top receivers doesn't change that much, but tight end is the one spot where a good player on a bad offense still works. Most avoided tackles by a tight end since 2020 as a rookie, fifth in fantasy points per route, and No. 1 in the NFL among tight ends in targets per route — above McBride. In the four games Njoku missed he saw nine targets a game. Bobby Slowik/Monken-style tight-end-heavy scheme (Georgia with Bowers, then Baltimore) keeps him involved. Thinks he finishes top six."
+  },
+  "tucker kraft": {
+   "posRank": "TE7",
+   "note": "Injury news is positive, but Green Bay is historically slow bringing players back, and he tore the ACL early-ish. He isn't a 10-target dominator — he makes his money as a monster on six targets with yards after catch, which is exactly the thing an ACL and an ease-in period take away."
+  },
+  "kyle pitts": {
+   "posRank": "TE8"
+  },
+  "george kittle": {
+   "posRank": "TE9",
+   "note": "Same shape as Kraft: dominant on six targets, not on volume. Now 32-33, coming off an Achilles torn early in the season, and his yards after catch dipped for basically the first time in his career even though his efficiency stayed No. 1 in nearly every stat. Hard to believe he's immediately that dominant again at his age for most of the fantasy season. The upside is real if he's an outlier — he goes right back to a top-three tight end — he just doesn't want people expecting it."
+  },
+  "dalton kincaid": {
+   "posRank": "TE10",
+   "grade": "green (target)",
+   "note": "The punt tight end. Being drafted as TE15, essentially free, and he doesn't get it. Efficiency is up there with Kittle on a per-route basis over two seasons. The knock is real — Dawson Knox has to play for run blocking, so Kincaid's routes are capped (under 25% of run-blocking snaps) — but before the injury last year he was at a career-high 60% route share and third in the NFL in yards per route, behind only JSN and Puka. He was TE6 when actually healthy and off a snap count. Young first-round tight end, top offense, great QB, little target competition. Wouldn't draft him AT TE10 — wait as long as you want, then take him."
+  },
+  "dallas goedert": {
+   "posRank": "TE11",
+   "grade": "green (punt)",
+   "note": "A punt green, not a target. Doesn't think Eli Stowers matters as a rookie or that Goedert loses the field; AJ Brown leaving is a net positive for red-zone work. The TD regression is already baked in — he goes as TE13 despite finishing TE5-6 last year with Brown on a worse offense. Fine punt option; maybe find better on waivers later."
+  },
+  "mark andrews": {
+   "posRank": "TE12",
+   "note": "Hard to find hope even with Likely gone. Last among all NFL tight ends in yards after catch, poor yards per route, and not good even with Lamar on the field. The case is only situational: an offense that uses tight ends, Likely and Kohler gone, Lamar back, and only Zay Flowers competing."
+  },
+  "isaiah likely": {
+   "posRank": "TE13",
+   "note": "Was horrible last season after a lot of hype — four points per game, failed to average five even with Lamar. The whole bet is that the Giants paid him top-five tight end money to follow Harbaugh there. Good per route, but other tight ends on the roster and Malik Nabors ahead of him. Not dying to have him, but understands the pure-upside shot."
+  },
+  "jake ferguson": {
+   "posRank": "TE14",
+   "note": "A handcuff tight end: TE20 last year when CeeDee Lamb played, TE1 overall when Lamb was out. With Lamb and George Pickens on the field he isn't doing anything for you."
+  },
+  "travis kelce": {
+   "posRank": "TE15",
+   "grade": "red (fade)",
+   "note": "Has declined three straight years and his red-zone target share was abysmal — 28th — while being the only option. Now Rice is back for a full season, maybe Worthy too, plus Kenneth Walker, and Mahomes is coming off an ACL, which matters because Kelce led all tight ends in fantasy points on Mahomes scrambles. Doesn't understand drafting a 37-year-old here."
+  },
+  "oronde gadsden ii": {
+   "posRank": "TE16",
+   "note": "The late-round tight end who finishes top six is always someone — Gadsden is the shot. Njoku added doesn't worry him much, though Charlie Kolar will play a lot."
+  },
+  "chig okonkwo": {
+   "posRank": "TE17",
+   "note": "Can be convinced — second option in the offense, some potential there."
+  },
+  "t.j. hockenson": {
+   "posRank": "TE18"
+  },
+  "kenyon sadiq": {
+   "posRank": "TE19",
+   "note": "Probably not."
+  },
+  "greg dulcich": {
+   "posRank": "TE20",
+   "note": "Probably the number one option in Miami at times. Maybe."
+  },
+  "brenton strange": {
+   "posRank": "TE21",
+   "note": "A good player, but Jacksonville has a billion other options to go to."
+  },
+  "juwan johnson": {
+   "posRank": "TE22"
+  },
+  "terrance ferguson": {
+   "posRank": "TE23",
+   "note": "The late one that sticks out to him — the offense and the quarterback are the talent, and sometimes it just finds a way. Parkinson, Higbee and rookie Max Klare are all there, but he thinks Ferguson is the most talented of the group, and eight touchdowns wouldn't shock him. Doesn't mind taking him this late over other guys."
+  },
+  "hunter henry": {
+   "posRank": "TE24",
+   "grade": "red (fade)",
+   "note": "Going around TE18 after a season where literally everything broke right — no receivers, Drake Maye great, tons of red-zone work, a great scoring offense — and he was still only TE14. Most busted-coverage points in the NFL, and he had the sixth-most red-zone targets of ANY player in the league and still finished TE14. Now they add Romeo Doubs and AJ Brown. That's not happening again."
+  },
+  "a.j. barner": {
+   "posRank": "TE25"
+  }
+ },
+ "_teContext": "His framing: only the top three tight ends matter — 15 PPG vs the 10 PPG everyone else scores. He studied the TE5-8 'dead zone' over 11 years and only 20% finished closer to TE3 than TE12 — identical to the TE9-12 hit rate. So don't reach in the middle rounds; take one of the top four when you don't like the RB/WR on the board, otherwise punt to Kincaid or Goedert."
+}
