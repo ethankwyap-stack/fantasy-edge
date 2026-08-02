@@ -75,7 +75,7 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), trending:{}, search:'', analysis:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
   // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
   pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
@@ -112,6 +112,64 @@ function seasonProj(p) {
   const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===0 && s.seasonId===2026);
   return s ? Math.round(s.appliedTotal) : 0;
 }
+// ESPN is one opinion, not the truth. Every source that ranks a player gets an equal vote:
+// ESPN's projection, the market's ADP, and each analyst board in analyst-ranks.json. A player's
+// consensus positional rank is the mean of the votes he actually HAS — a board that omits him
+// casts no vote, because Holka's list stops at 150 and Smyth only covers QB/TE, so absence from
+// either means "not rated", never "rated badly".
+// ponytail: equal weights. Give an analyst more pull by raising his number here.
+const WEIGHTS = { espn: 1, adp: 1, analyst: 1 };
+// Consensus rank is fractional (RB7.5), but VBD needs POINTS. Read the points off ESPN's own
+// projection curve for the position at that rank: the curve's shape is ESPN's, the ORDER is the
+// consensus. Interpolating keeps a half-rank difference from rounding away to nothing.
+function valueAt(curve, r) {
+  const lo = Math.floor(r), hi = Math.ceil(r), last = curve.length - 1;
+  const at = i => curve[Math.max(0, Math.min(last, i - 1))] || 0;
+  return at(lo) + (at(hi) - at(lo)) * (r - lo);
+}
+function consensus(list, pos) {
+  const curve = list.map(seasonProj).sort((a, b) => b - a);
+  const espnRank = new Map(), adpRank = new Map();
+  [...list].sort((a, b) => seasonProj(b) - seasonProj(a)).forEach((p, i) => espnRank.set(p, i + 1));
+  const adp = p => p.ownership?.averageDraftPosition || 0;
+  [...list].filter(adp).sort((a, b) => adp(a) - adp(b)).forEach((p, i) => adpRank.set(p, i + 1));
+  for (const p of list) {
+    // A 0 projection is ESPN saying "not playing" (IR, suspended, off a roster), not "ranked low".
+    // Analyst boards go stale the moment a player lands on IR, so letting a July rank outvote that
+    // floats an unavailable player into the draftable rounds. ESPN alone decides these.
+    if (!seasonProj(p)) { p._votes = null; p._consensus = espnRank.get(p); p._espnRank = espnRank.get(p); continue; }
+    const votes = [{ src: 'ESPN', rank: espnRank.get(p), w: WEIGHTS.espn }];
+    if (adpRank.has(p)) votes.push({ src: 'ADP', rank: adpRank.get(p), w: WEIGHTS.adp });
+    for (const a of S.ranks[(p.fullName || '').toLowerCase()] || [])
+      if (a.pos === pos) votes.push({ src: a.analyst, rank: a.rank, w: WEIGHTS.analyst, note: a.note });
+    const w = votes.reduce((t, v) => t + v.w, 0);
+    p._votes = votes;
+    p._consensus = votes.reduce((t, v) => t + v.rank * v.w, 0) / w;
+    p._espnRank = espnRank.get(p);
+  }
+  list.sort((a, b) => a._consensus - b._consensus);
+  const repl = valueAt(curve, Math.min(REPL[pos], list.length));
+  list.forEach((p, i) => { p._posRank = i + 1; p._vbd = valueAt(curve, p._consensus) - repl; });
+}
+// A player only ESPN rates keeps ESPN's rank; two analysts who both rate him higher must pull him up.
+(() => {
+  const mk = n => Array.from({length: n}, (_, i) => ({ fullName: 'P' + i, ownership: {},
+    stats: [{ statSourceId: 1, scoringPeriodId: 0, seasonId: 2026, appliedTotal: 300 - i * 10 }] }));
+  const saved = S.ranks;
+  S.ranks = { p4: [{ analyst: 'A', pos: 'RB', rank: 1 }, { analyst: 'B', pos: 'RB', rank: 1 }] };
+  const l = mk(6); consensus(l, 'RB');
+  console.assert(l[0].fullName === 'P0' && l.find(p => p.fullName === 'p4' || p.fullName === 'P4')._posRank < 5, 'consensus: analysts did not pull the player up');
+  // A 0-projection player (IR) must NOT be rescued by an analyst's stale top rank.
+  const ir = mk(6); ir[5].stats[0].appliedTotal = 0;
+  S.ranks = { p5: [{ analyst: 'A', pos: 'RB', rank: 1 }] };
+  consensus(ir, 'RB');
+  console.assert(ir[ir.length-1].fullName === 'P5', 'consensus: analyst rescued an IR player');
+  S.ranks = {};
+  const l2 = mk(6); consensus(l2, 'RB');
+  console.assert(l2.map(p => p.fullName).join() === 'P0,P1,P2,P3,P4,P5', 'consensus: ESPN-only order changed');
+  S.ranks = saved;
+})();
+
 // Tiers are MEASURED, not judged. Within a position (already sorted by projection desc), a new
 // tier starts where the drop to the next player is a cliff RELATIVE TO ITS NEIGHBOURS — compared
 // against the median gap in a window around it, not the whole position. A position's global median
@@ -175,11 +233,12 @@ async function load() {
     // 450 matches the research pool (scripts/draft-research.js) so every player Claude
     // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending, analysis, injuries, news] = await Promise.all([
+    const [league, playerData, trending, analysis, ranks, injuries, news] = await Promise.all([
       espn('mTeam,mRoster,mSettings'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
       fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({})),
+      fetch('/analyst-ranks.json').then(r=>r.json()).catch(()=>({players:{}})),
       fetch('/api/nfl?feed=injuries').then(r=>r.json()).catch(()=>({data:{}})),
       fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]}))
     ]);
@@ -188,6 +247,7 @@ async function load() {
     S.news = {};
     for (const a of news.data || []) for (const n of a.p) (S.news[n] ||= []).push(a);
     S.analysis = analysis.players || {};
+    S.ranks = ranks.players || {};
     S.week = league.scoringPeriodId || 1;
     S.teams = league.teams || [];
     const size = S.teams.length || 10;
@@ -204,12 +264,7 @@ async function load() {
     // VBD: projection minus replacement-level projection at position
     const byPos = {};
     for (const p of S.players) (byPos[POS[p.defaultPositionId]] ||= []).push(p);
-    for (const pos in byPos) {
-      byPos[pos].sort((a,b) => seasonProj(b)-seasonProj(a));
-      const repl = seasonProj(byPos[pos][Math.min(REPL[pos], byPos[pos].length-1)] || {});
-      byPos[pos].forEach((p, i) => { p._vbd = seasonProj(p) - repl; p._posRank = i+1; });
-      tierize(byPos[pos]);
-    }
+    for (const pos in byPos) { consensus(byPos[pos], pos); tierize(byPos[pos]); }
     S.players.sort((a,b) => b._vbd - a._vbd);
     // Sleeper dump — trending counts plus age/experience/depth-chart per player, matched by name
     const sd = await sleeperData();
@@ -309,6 +364,16 @@ function rangeBar(a) {
     <div class="fill" style="left:${l}%;width:${Math.max(2,r-l)}%"></div><div class="mark" style="left:${m}%"></div></div>`;
 }
 // Badges a player carries: whatever the research gave him, plus "sleeper" if I long-pressed him.
+// Flag on the row itself where the analysts and ESPN genuinely disagree — 5+ positional ranks
+// apart. Silent agreement needs no chip; it's the disagreement that should make him look.
+function analystChip(p) {
+  const an = (p._votes || []).filter(v => v.src !== 'ESPN' && v.src !== 'ADP');
+  if (!an.length) return '';
+  const avg = an.reduce((t, v) => t + v.rank, 0) / an.length, d = avg - p._espnRank;
+  if (Math.abs(d) < 5) return '';
+  const pos = POS[p.defaultPositionId];
+  return ` <span class="chip ${d < 0 ? 'good' : 'risk'}">${an.map(v => `${v.src} ${pos}${v.rank}`).join(', ')} vs ESPN ${pos}${p._espnRank}</span>`;
+}
 const badgesOf = p => { const b = A(p.fullName)?.badges || [];
   return S.sleepers.has(p.id) && !b.includes('sleeper') ? [...b, 'sleeper'] : b; };
 
@@ -326,10 +391,11 @@ window.tSleeper = id => {
 function drow(p) {
   const a = A(p.fullName), pos = POS[p.defaultPositionId];
   const tr = S.trending[(p.fullName||'').toLowerCase()];
-  const chips = badgesOf(p).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ');
+  const chips = badgesOf(p).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ') + analystChip(p);
   const inj = injury(p.fullName);
   const injTag = inj ? `<span class="inj ${/out|ir|injured|pup|susp|doubt/i.test(inj.s)?'out':'qst'}">${esc(inj.s)}</span>` : '';
-  const hasExtra = a || inj || S.news[(p.fullName||'').toLowerCase()];
+  // Every player now has at least the source votes to show, so every row expands.
+  const hasExtra = a || inj || p._votes || S.news[(p.fullName||'').toLowerCase()];
   let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}" onpointerdown="lpDown(${p.id})" onpointerup="lpUp()" onpointercancel="lpUp()" onpointerleave="lpUp()" oncontextmenu="return false" style="user-select:none;-webkit-user-select:none${hasExtra?';cursor:pointer':''}"${hasExtra?` onclick="tExp(${p.id})"`:''}>
     <td><span class="tier">${pos}${p._posRank} · ${tierLeft[pos+p._tier]||0} left</span> ${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
     <td class="pos pos-${pos}">${pos}</td>
@@ -339,6 +405,13 @@ function drow(p) {
   if (hasExtra && S.expanded.has(p.id)) {
     const parts = [];
     if (a) parts.push(`<b>${a.verdict||''}</b><br>${a.report||''}<br><span style="color:var(--dim)">Range: ${Math.round(a.floor)} floor · ${a.proj??'?'} proj · ${Math.round(a.ceiling)} ceiling PPR pts</span>`);
+    // Every source's vote, so a rank always traces back to who cast it — plus an analyst's stated
+    // reasoning where he gave one (Smyth writes notes; Holka's board is bare ranks).
+    if (p._votes) {
+      const pr = POS[p.defaultPositionId];
+      parts.push(`<span style="color:var(--dim)">Consensus ${pr}${p._posRank} from ${p._votes.map(v => `${esc(v.src)} ${pr}${v.rank}`).join(' · ')}</span>`);
+      for (const v of p._votes) if (v.note) parts.push(`<span style="color:var(--dim)">🗣 ${esc(v.src)}: ${esc(v.note)}</span>`);
+    }
     if (inj && inj.note) parts.push(`<span style="color:var(--warn)">⚕ ${esc(inj.s)}</span> — ${esc(inj.note)} <span class="newsdate">ESPN · ${ago(inj.date)}</span>`);
     // ponytail: 2 headlines is enough to catch camp news the static research file predates
     for (const n of (S.news[(p.fullName||'').toLowerCase()] || []).slice(0,2))
@@ -413,9 +486,9 @@ function draftRows() {
 const views = {
   draft() {
     return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
-    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement (PPR). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement, blending ESPN's projection, market ADP, and every analyst board (tap a row to see each source's vote). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
     ${S.bmUnmatched.length ? `<div style="color:var(--bad);font-size:13px;margin-bottom:8px">Bookmarklet couldn't match: ${S.bmUnmatched.map(esc).join(', ')} — tap ✕ for ${S.bmUnmatched.length===1?'it':'them'} manually.</div>` : ''}
-    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
+    <table><tr><th>Player</th><th>Pos</th><th>ESPN proj</th><th>Value</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
   },
   lineup() {
     const roster = S.rosters[S.myTeamId] || [];

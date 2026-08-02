@@ -9,6 +9,10 @@ const nfl = require('./api/nfl.js');
 const INDEX = fs.readFileSync(path.join(__dirname, 'index.html'));
 const ANALYSIS_PATH = path.join(__dirname, 'draft-analysis.json');
 const ANALYSIS = fs.readFileSync(ANALYSIS_PATH); // static read for Vercel tracing
+// Merged analyst boards (scripts/draft-research.js --analyst-ranks). Literal path for the same
+// tracing reason; a missing file is fine — the board just falls back to ESPN-only value.
+const RANKS_PATH = path.join(__dirname, 'analyst-ranks.json');
+const RANKS = (() => { try { return fs.readFileSync(RANKS_PATH); } catch { return Buffer.from('{"players":{}}'); } })();
 
 const PORT = process.env.PORT || 4650;
 const SECRET = espn.loadEnv().APP_SECRET;
@@ -31,6 +35,10 @@ http.createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json');
     // re-read locally so the always-on LaunchAgent picks up a git pull without restart
     try { return res.end(fs.readFileSync(ANALYSIS_PATH)); } catch { return res.end(ANALYSIS); }
+  }
+  if (req.url.startsWith('/analyst-ranks.json')) {
+    res.setHeader('Content-Type', 'application/json');
+    try { return res.end(fs.readFileSync(RANKS_PATH)); } catch { return res.end(RANKS); }
   }
   res.setHeader('Content-Type', 'text/html');
   res.end(INDEX);

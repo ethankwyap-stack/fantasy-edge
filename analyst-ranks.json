@@ -1,0 +1,1506 @@
+{
+ "analysts": [
+  "Smyth",
+  "Holka"
+ ],
+ "players": {
+  "josh allen": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 1,
+    "note": "Top-two fantasy QB in six of the last six years; the next-best QB has one such finish. Says nothing could move him off QB1 even in a bad year."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 1,
+    "note": ""
+   }
+  ],
+  "lamar jackson": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 2,
+    "note": "Likes the player, not the early-4th-round ADP when the next tier goes in the 6th. Four of his last six seasons would make that pick bad; only the 2024 season justifies it. Rushing TDs down since Derrick Henry arrived — he no longer runs inside the 5. Would rather bet on Zay Flowers to buy this passing offense."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 3,
+    "note": ""
+   }
+  ],
+  "drake maye": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 3,
+    "note": "No. 1 efficiency last year, weapons upgraded (A.J. Brown, Doubs). Was fantasy QB1 in quarters 1-3 and QB32 in the 4th — because he sat on blowout leads, not because he was unclutch. A harder schedule means more close games and more 4th-quarter snaps. Only 20% of his points came from rushing, so he isn't rush-dependent."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 2,
+    "note": ""
+   }
+  ],
+  "jayden daniels": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 4,
+    "note": "No. 1 rushing volume in 2024, No. 2 in 2025. Washington projected for ~5 wins with a bottom-10 defense, which is good for passing volume; McLaurin back. Ceiling pick — health is the risk, but at QB the 7-12 range doesn't matter, so shoot for a top-three finish."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 5,
+    "note": ""
+   }
+  ],
+  "joe burrow": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 5,
+    "note": "The one pocket passer with a rushing-QB ceiling because Cincinnati throws in every game script, especially in the red zone and inside the 5. First in passing fantasy PPG since 2024. Second in the NFL in throws to the end zone since 2024 (92) despite missing nine games. Only question is health."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 4,
+    "note": ""
+   }
+  ],
+  "jalen hurts": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 6,
+    "note": "Still has the tush push; the 2025 problem was the offense collapsing from top scoring to ~19th, not losing the role. New OC Kellen Mond changes a lot and Smyth thinks it works. The worry is the fantasy playoffs: at Seattle week 15, Houston week 16 — his two hardest matchups back to back."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 6,
+    "note": ""
+   }
+  ],
+  "caleb williams": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 7,
+    "note": "Likes him for the absence of negatives. Second half of 2025 he averaged ~20.6 PPG under Ben Johnson with turnovers and sack rate down and downfield accuracy up. 48 passing attempts into the end zone, third-most in the NFL and 10 more than Goff's best year in the same system. Line and coaching are strong; Loveland and Burden step up."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 8,
+    "note": ""
+   }
+  ],
+  "justin herbert": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 8,
+    "note": "Mike McDaniel is the reason — 'the best quarterback we've ever seen in a Shanahan system.' Herbert is one of the few QBs better against zone than man, and McDaniel's offense draws heavy zone. Offensive line is healthy after every tackle got hurt last year; he was among the most accurate QBs from a clean pocket. Adds some red-zone rushing. Easy fantasy playoff slate (SF home, at MIA, KC home) with no elite defense and no weather risk."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 7,
+    "note": ""
+   }
+  ],
+  "trevor lawrence": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 9,
+    "note": "Going as QB11 in ADP with almost no gap to his 7-8. Judge him as a fantasy QB, not an NFL QB: only Allen, Stafford, Mahomes and Dart-in-his-starts beat him last year. Nothing got worse this offseason; receiver stability, Myers and a healthy Brian Thomas Jr. got better, and the second-hardest QB schedule should ease. Top-three in volume even with the second-most snaps trailing by 2+ scores. Nine rushing TDs on eight expected — third-most carries from the 1-yard line behind Allen and Hurts — so expect ~6, not a fluke correction. Negative: Houston in week 15 (9 PPG vs them last year)."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 9,
+    "note": ""
+   }
+  ],
+  "jaxson dart": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 10,
+    "note": "Great rushing upside and a good process pick, but not a confident one. Matt Nagy scares him. Designed runs dropped roughly by half after Daboll left and after five concussion checks — if that No. 1 rushing volume falls to 5th-6th, the passing may not carry a weekly top-five ceiling. All his bad games came against top-five defenses, which he faced unusually often."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 11,
+    "note": ""
+   }
+  ],
+  "brock purdy": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 11,
+    "note": "Insanely efficient in the Shanahan offense with volume back at the borderline-QB1 line that made him great last season. Rushing is underrated — four points per game on the ground. Leads all QBs in career yards per attempt at 8.6."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 12,
+    "note": ""
+   }
+  ],
+  "dak prescott": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 12,
+    "note": "Finished QB7-8 last year and little has changed besides a 32nd-ranked defense that may improve slightly. Receivers, coaching and line are all good, but he no longer runs like his first three years, so the upside is capped. Not a bad pick, just a beatable one."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 10,
+    "note": ""
+   }
+  ],
+  "patrick mahomes": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 13,
+    "note": "Hard to take coming off the ACL, because so much of last year's value was scrambling. Rashee Rice's return actually cost him ~7 fantasy PPG. Expects a more run-heavy offense with Kenneth Walker. Passing fantasy points were already at his bust-year level. Warns casual drafters will take him early on name."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 14,
+    "note": ""
+   }
+  ],
+  "bo nix": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 14,
+    "note": "Process pick: his volume is better than his QB15-16 ADP. Dropbacks up, Jaylen Waddle added, offensive line still excellent — the same profile that made him a QB7-8 pick last year, now at half the price."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 13,
+    "note": ""
+   }
+  ],
+  "matthew stafford": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 15,
+    "note": "Touchdown regression is close to guaranteed after leading the NFL in passing TDs, though the volume should stay high. Better as a superflex pick than a 1QB one; don't expect a repeat top-four finish."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 17,
+    "note": ""
+   }
+  ],
+  "kyler murray": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 16,
+    "note": "Process pick whose main flaw 'is that he might not be good at football' — but he runs, and this system produced QB9 for Darnold and QB6 for Cousins. Now with Justin Jefferson, Jordan Addison and Jennings. Has finished as a fantasy QB1 in six of six full seasons; the only miss was a five-game 2025."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 21,
+    "note": ""
+   }
+  ],
+  "jared goff": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 17,
+    "note": "Consistent and good but brings zero rushing; his career-best fantasy finish was QB7, so the realistic outcome is a value starter, not a league-winner. Better in superflex, same as Stafford."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 18,
+    "note": ""
+   }
+  ],
+  "malik willis": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 18,
+    "note": "Late-round upside swing purely on rushing. Wouldn't be shocked by a top-five finish if he runs a ton on a pass-heavy offense with a bad defense — the Jaxson Dart 2025 template, where eight rushing points a game carried him without dicing anyone up. They've discussed using him on the tush push. Receiver talent doesn't matter for this bet."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 20,
+    "note": ""
+   }
+  ],
+  "tyler shough": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 19,
+    "note": "Doesn't mind it because of the offense — very fast pace, some designed runs, good passing volume overall."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 19,
+    "note": ""
+   }
+  ],
+  "baker mayfield": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 20,
+    "note": "You're betting the 2025 injuries explain the drop and he returns to his 2024 self — one good career fantasy season, under Liam Coen."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 16,
+    "note": ""
+   }
+  ],
+  "jordan love": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 21,
+    "note": "Doesn't like it, mostly on volume: he was QB20s despite positive points-over-expected. The five rushing TDs won't repeat with Josh Jacobs, receiver talent looks worse with Kraft off an ACL, and the line is an issue — he struggled under pressure. All three fantasy playoff games are Green Bay weather games, including week 17 vs Houston's defense."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 15,
+    "note": ""
+   }
+  ],
+  "cam ward": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 22,
+    "note": "Fun superflex upside-of-the-unknown pick. Everything went wrong as a rookie but everything has changed for year two, and past No. 1 overall QBs who were the worst fantasy QBs as rookies — Goff and Lawrence — both finished QB11 the next season."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 24,
+    "note": ""
+   }
+  ],
+  "brock bowers": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 1,
+    "note": "His TE1 over McBride despite going ~5-6 picks later. Was TE3 last year (TE2 adjusted for injuries) at 16 PPG in a horrid situation — bad QB, bad play-calling, bad offensive line — and all of that changes. Supreme talent on a team with almost no receiving threats, so expect the creative JSN-under-Kubiak usage: outside, in-line, slot, even backfield, screens and downfield both. Had the highest red-zone target share of any tight end last season."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 2,
+    "note": ""
+   }
+  ],
+  "trey mcbride": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 2,
+    "note": "Loves the player, hates the round-2 price when Bowers is the other option. Everything that made last year changed: QB unsettled (Brissett/Beck), Hackett at OC, target competition added (healthier Marvin, ascending Michael Wilson, a top-five pick in Jeremiah Love), offense projected bottom five. TDs by year 1-3-2-11, so expect the middle. He ran more routes than any player in the NFL — 150+ more than the next tight end — on a perfect game script; without Brissett he averaged 12.5 PPG, a TE4-5. Only one tight end with that kind of season ever repeated it (Gronk)."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 1,
+    "note": ""
+   }
+  ],
+  "colston loveland": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 3,
+    "note": "Peaked at the end of his rookie year: 12 targets per game over the last four including the playoffs, an ~80% route share even with Cole Kmet healthy, and TE1 overall in that stretch — Chicago runs the most two-tight-end sets in the NFL, so Kmet doesn't cost him routes. 21 years old, a top-10 pick, camp talk has him as the focal point and possible WR1 of the offense, DJ Moore gone helps in the red zone. Everything is better than last season."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 3,
+    "note": ""
+   }
+  ],
+  "tyler warren": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 4,
+    "note": "Already TE5 as a rookie. Steichen keeps saying they want to be creative with him — 'more of an offensive weapon than a tight end' — fullback snaps, goal line, screens, the Penn State usage. That gadget work plus real volume is what makes a tight end safe week to week. Owned the quick first-read targets among Downs/Pierce/Pittman/Warren, and Pittman (a short-area guy despite the profile) is gone: his targets per route went 21% to 30% without Pittman. Daniel Jones is the league's most extreme one-read, get-it-out QB, which suits Warren off the Achilles. Bad TD luck last year should correct."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 4,
+    "note": ""
+   }
+  ],
+  "sam laporta": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 5,
+    "note": "Basically tied with Fannin for 5th; he goes back and forth. Was an afterthought in Detroit — zero deep targets, red-zone and first-read target share near the bottom — and still produced, which is impressive. Now in Arizona with Drew Petzing, who is great for tight ends, in an offense designed around the X and the Y (that's why Michael Wilson spiked to 15-18 targets and vanished when Marvin returned). He was No. 1 among tight ends in yards after catch per reception with a very high yards per route, so a bump in routes and role could be huge."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 8,
+    "note": ""
+   }
+  ],
+  "harold fannin jr.": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 6,
+    "note": "Tied with LaPorta for 5th in his head. Browns offense is bad and adding two top receivers doesn't change that much, but tight end is the one spot where a good player on a bad offense still works. Most avoided tackles by a tight end since 2020 as a rookie, fifth in fantasy points per route, and No. 1 in the NFL among tight ends in targets per route — above McBride. In the four games Njoku missed he saw nine targets a game. Bobby Slowik/Monken-style tight-end-heavy scheme (Georgia with Bowers, then Baltimore) keeps him involved. Thinks he finishes top six."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 6,
+    "note": ""
+   }
+  ],
+  "tucker kraft": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 7,
+    "note": "Injury news is positive, but Green Bay is historically slow bringing players back, and he tore the ACL early-ish. He isn't a 10-target dominator — he makes his money as a monster on six targets with yards after catch, which is exactly the thing an ACL and an ease-in period take away."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 5,
+    "note": ""
+   }
+  ],
+  "kyle pitts": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 8,
+    "note": ""
+   }
+  ],
+  "george kittle": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 9,
+    "note": "Same shape as Kraft: dominant on six targets, not on volume. Now 32-33, coming off an Achilles torn early in the season, and his yards after catch dipped for basically the first time in his career even though his efficiency stayed No. 1 in nearly every stat. Hard to believe he's immediately that dominant again at his age for most of the fantasy season. The upside is real if he's an outlier — he goes right back to a top-three tight end — he just doesn't want people expecting it."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 11,
+    "note": ""
+   }
+  ],
+  "dalton kincaid": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 10,
+    "note": "The punt tight end. Being drafted as TE15, essentially free, and he doesn't get it. Efficiency is up there with Kittle on a per-route basis over two seasons. The knock is real — Dawson Knox has to play for run blocking, so Kincaid's routes are capped (under 25% of run-blocking snaps) — but before the injury last year he was at a career-high 60% route share and third in the NFL in yards per route, behind only JSN and Puka. He was TE6 when actually healthy and off a snap count. Young first-round tight end, top offense, great QB, little target competition. Wouldn't draft him AT TE10 — wait as long as you want, then take him."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 12,
+    "note": ""
+   }
+  ],
+  "dallas goedert": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 11,
+    "note": "A punt green, not a target. Doesn't think Eli Stowers matters as a rookie or that Goedert loses the field; AJ Brown leaving is a net positive for red-zone work. The TD regression is already baked in — he goes as TE13 despite finishing TE5-6 last year with Brown on a worse offense. Fine punt option; maybe find better on waivers later."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 13,
+    "note": ""
+   }
+  ],
+  "mark andrews": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 12,
+    "note": "Hard to find hope even with Likely gone. Last among all NFL tight ends in yards after catch, poor yards per route, and not good even with Lamar on the field. The case is only situational: an offense that uses tight ends, Likely and Kohler gone, Lamar back, and only Zay Flowers competing."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 14,
+    "note": ""
+   }
+  ],
+  "isaiah likely": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 13,
+    "note": "Was horrible last season after a lot of hype — four points per game, failed to average five even with Lamar. The whole bet is that the Giants paid him top-five tight end money to follow Harbaugh there. Good per route, but other tight ends on the roster and Malik Nabors ahead of him. Not dying to have him, but understands the pure-upside shot."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 15,
+    "note": ""
+   }
+  ],
+  "jake ferguson": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 14,
+    "note": "A handcuff tight end: TE20 last year when CeeDee Lamb played, TE1 overall when Lamb was out. With Lamb and George Pickens on the field he isn't doing anything for you."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 10,
+    "note": ""
+   }
+  ],
+  "travis kelce": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 15,
+    "note": "Has declined three straight years and his red-zone target share was abysmal — 28th — while being the only option. Now Rice is back for a full season, maybe Worthy too, plus Kenneth Walker, and Mahomes is coming off an ACL, which matters because Kelce led all tight ends in fantasy points on Mahomes scrambles. Doesn't understand drafting a 37-year-old here."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 9,
+    "note": ""
+   }
+  ],
+  "oronde gadsden ii": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 16,
+    "note": "The late-round tight end who finishes top six is always someone — Gadsden is the shot. Njoku added doesn't worry him much, though Charlie Kolar will play a lot."
+   }
+  ],
+  "chig okonkwo": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 17,
+    "note": "Can be convinced — second option in the offense, some potential there."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 18,
+    "note": ""
+   }
+  ],
+  "t.j. hockenson": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 18,
+    "note": ""
+   }
+  ],
+  "kenyon sadiq": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 19,
+    "note": "Probably not."
+   }
+  ],
+  "greg dulcich": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 20,
+    "note": "Probably the number one option in Miami at times. Maybe."
+   }
+  ],
+  "brenton strange": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 21,
+    "note": "A good player, but Jacksonville has a billion other options to go to."
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 16,
+    "note": ""
+   }
+  ],
+  "juwan johnson": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 22,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 17,
+    "note": ""
+   }
+  ],
+  "terrance ferguson": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 23,
+    "note": "The late one that sticks out to him — the offense and the quarterback are the talent, and sometimes it just finds a way. Parkinson, Higbee and rookie Max Klare are all there, but he thinks Ferguson is the most talented of the group, and eight touchdowns wouldn't shock him. Doesn't mind taking him this late over other guys."
+   }
+  ],
+  "hunter henry": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 24,
+    "note": "Going around TE18 after a season where literally everything broke right — no receivers, Drake Maye great, tons of red-zone work, a great scoring offense — and he was still only TE14. Most busted-coverage points in the NFL, and he had the sixth-most red-zone targets of ANY player in the league and still finished TE14. Now they add Romeo Doubs and AJ Brown. That's not happening again."
+   }
+  ],
+  "a.j. barner": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 25,
+    "note": ""
+   }
+  ],
+  "jahmyr gibbs": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 1,
+    "note": ""
+   }
+  ],
+  "bijan robinson": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 2,
+    "note": ""
+   }
+  ],
+  "ja'marr chase": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 1,
+    "note": ""
+   }
+  ],
+  "jaxon smith-njigba": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 2,
+    "note": ""
+   }
+  ],
+  "puka nacua": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 3,
+    "note": ""
+   }
+  ],
+  "amon-ra st. brown": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 4,
+    "note": ""
+   }
+  ],
+  "christian mccaffrey": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 3,
+    "note": ""
+   }
+  ],
+  "justin jefferson": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 5,
+    "note": ""
+   }
+  ],
+  "jonathan taylor": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 4,
+    "note": ""
+   }
+  ],
+  "drake london": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 6,
+    "note": ""
+   }
+  ],
+  "a.j. brown": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 7,
+    "note": ""
+   }
+  ],
+  "george pickens": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 8,
+    "note": ""
+   }
+  ],
+  "ceedee lamb": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 9,
+    "note": ""
+   }
+  ],
+  "ashton jeanty": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 5,
+    "note": ""
+   }
+  ],
+  "nico collins": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 10,
+    "note": ""
+   }
+  ],
+  "james cook iii": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 6,
+    "note": ""
+   }
+  ],
+  "chase brown": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 7,
+    "note": ""
+   }
+  ],
+  "de'von achane": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 8,
+    "note": ""
+   }
+  ],
+  "rashee rice": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 11,
+    "note": ""
+   }
+  ],
+  "devonta smith": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 12,
+    "note": ""
+   }
+  ],
+  "kenneth walker iii": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 9,
+    "note": ""
+   }
+  ],
+  "omarion hampton": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 10,
+    "note": ""
+   }
+  ],
+  "saquon barkley": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 11,
+    "note": ""
+   }
+  ],
+  "chris olave": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 13,
+    "note": ""
+   }
+  ],
+  "tetairoa mcmillan": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 14,
+    "note": ""
+   }
+  ],
+  "zay flowers": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 15,
+    "note": ""
+   }
+  ],
+  "garrett wilson": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 16,
+    "note": ""
+   }
+  ],
+  "derrick henry": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 12,
+    "note": ""
+   }
+  ],
+  "emeka egbuka": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 17,
+    "note": ""
+   }
+  ],
+  "ladd mcconkey": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 18,
+    "note": ""
+   }
+  ],
+  "tee higgins": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 19,
+    "note": ""
+   }
+  ],
+  "malik nabers": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 20,
+    "note": ""
+   }
+  ],
+  "josh jacobs": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 13,
+    "note": ""
+   }
+  ],
+  "breece hall": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 14,
+    "note": ""
+   }
+  ],
+  "davante adams": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 21,
+    "note": ""
+   }
+  ],
+  "jeremiyah love": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 15,
+    "note": ""
+   }
+  ],
+  "javonte williams": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 16,
+    "note": ""
+   }
+  ],
+  "kyren williams": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 17,
+    "note": ""
+   }
+  ],
+  "luther burden iii": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 22,
+    "note": ""
+   }
+  ],
+  "jaylen waddle": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 23,
+    "note": ""
+   }
+  ],
+  "jameson williams": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 24,
+    "note": ""
+   }
+  ],
+  "terry mclaurin": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 25,
+    "note": ""
+   }
+  ],
+  "travis etienne jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 18,
+    "note": ""
+   }
+  ],
+  "cam skattebo": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 19,
+    "note": ""
+   }
+  ],
+  "christian watson": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 26,
+    "note": ""
+   }
+  ],
+  "mike evans": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 27,
+    "note": ""
+   }
+  ],
+  "bucky irving": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 20,
+    "note": ""
+   }
+  ],
+  "rome odunze": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 28,
+    "note": ""
+   }
+  ],
+  "treveyon henderson": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 21,
+    "note": ""
+   }
+  ],
+  "d'andre swift": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 22,
+    "note": ""
+   }
+  ],
+  "david montgomery": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 23,
+    "note": ""
+   }
+  ],
+  "dj moore": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 29,
+    "note": ""
+   }
+  ],
+  "dk metcalf": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 30,
+    "note": ""
+   }
+  ],
+  "bhayshul tuten": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 24,
+    "note": ""
+   }
+  ],
+  "quinshon judkins": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 25,
+    "note": ""
+   }
+  ],
+  "marvin harrison jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 31,
+    "note": ""
+   }
+  ],
+  "alec pierce": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 32,
+    "note": ""
+   }
+  ],
+  "carnell tate": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 33,
+    "note": ""
+   }
+  ],
+  "jaylen warren": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 26,
+    "note": ""
+   }
+  ],
+  "brian thomas jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 34,
+    "note": ""
+   }
+  ],
+  "rhamondre stevenson": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 27,
+    "note": ""
+   }
+  ],
+  "jadarian price": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 28,
+    "note": ""
+   }
+  ],
+  "parker washington": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 35,
+    "note": ""
+   }
+  ],
+  "kyle pitts sr.": [
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 7,
+    "note": ""
+   }
+  ],
+  "chris godwin jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 36,
+    "note": ""
+   }
+  ],
+  "courtland sutton": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 37,
+    "note": ""
+   }
+  ],
+  "rico dowdle": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 29,
+    "note": ""
+   }
+  ],
+  "tony pollard": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 30,
+    "note": ""
+   }
+  ],
+  "rj harvey": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 31,
+    "note": ""
+   }
+  ],
+  "michael pittman jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 38,
+    "note": ""
+   }
+  ],
+  "wan'dale robinson": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 39,
+    "note": ""
+   }
+  ],
+  "jordyn tyson": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 40,
+    "note": ""
+   }
+  ],
+  "kyle monangai": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 32,
+    "note": ""
+   }
+  ],
+  "michael wilson": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 41,
+    "note": ""
+   }
+  ],
+  "quentin johnston": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 42,
+    "note": ""
+   }
+  ],
+  "josh downs": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 43,
+    "note": ""
+   }
+  ],
+  "chuba hubbard": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 33,
+    "note": ""
+   }
+  ],
+  "j.k. dobbins": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 34,
+    "note": ""
+   }
+  ],
+  "ricky pearsall": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 44,
+    "note": ""
+   }
+  ],
+  "kenny gainwell": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 35,
+    "note": ""
+   }
+  ],
+  "makai lemon": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 45,
+    "note": ""
+   }
+  ],
+  "jakobi meyers": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 46,
+    "note": ""
+   }
+  ],
+  "jayden higgins": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 47,
+    "note": ""
+   }
+  ],
+  "blake corum": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 36,
+    "note": ""
+   }
+  ],
+  "khalil shakir": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 48,
+    "note": ""
+   }
+  ],
+  "jayden reed": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 49,
+    "note": ""
+   }
+  ],
+  "aaron jones sr.": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 37,
+    "note": ""
+   }
+  ],
+  "woody marks": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 38,
+    "note": ""
+   }
+  ],
+  "jordan addison": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 50,
+    "note": ""
+   }
+  ],
+  "rachaad white": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 39,
+    "note": ""
+   }
+  ],
+  "jalen coker": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 51,
+    "note": ""
+   }
+  ],
+  "c.j. stroud": [
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 22,
+    "note": ""
+   }
+  ],
+  "xavier worthy": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 52,
+    "note": ""
+   }
+  ],
+  "tyjae spears": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 40,
+    "note": ""
+   }
+  ],
+  "matthew golden": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 53,
+    "note": ""
+   }
+  ],
+  "jonathon brooks": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 41,
+    "note": ""
+   }
+  ],
+  "jordan mason": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 42,
+    "note": ""
+   }
+  ],
+  "sam darnold": [
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 23,
+    "note": ""
+   }
+  ],
+  "kc concepcion": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 54,
+    "note": ""
+   }
+  ],
+  "jacory croskey-merritt": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 43,
+    "note": ""
+   }
+  ],
+  "jauan jennings": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 55,
+    "note": ""
+   }
+  ],
+  "alvin kamara": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 44,
+    "note": ""
+   }
+  ],
+  "chris rodriguez jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 45,
+    "note": ""
+   }
+  ],
+  "jerry jeudy": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 56,
+    "note": ""
+   }
+  ],
+  "rashid shaheed": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 57,
+    "note": ""
+   }
+  ],
+  "tyler allgeier": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 46,
+    "note": ""
+   }
+  ],
+  "tyrone tracy jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 47,
+    "note": ""
+   }
+  ],
+  "romeo doubs": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 58,
+    "note": ""
+   }
+  ],
+  "zach charbonnet": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 48,
+    "note": ""
+   }
+  ],
+  "isiah pacheco": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 49,
+    "note": ""
+   }
+  ],
+  "dylan sampson": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 50,
+    "note": ""
+   }
+  ]
+ }
+}

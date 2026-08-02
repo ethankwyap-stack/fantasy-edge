@@ -607,5 +607,27 @@ async function main() {
   console.log(`Done: ${Object.keys(out.players).length}/${items.length} players → draft-analysis.json. Tokens: ${usage.in} in / ${usage.out} out.`);
   if (failed.length) console.log(`FAILED batches: ${failed.join(', ')} — re-run with --resume to fill them in.`);
 }
-if (FLAGS.has('--selftest')) selftest();
+// --analyst-ranks: flatten every draft-guide*.json into one file the browser can read, so the
+// board can weigh analysts alongside ESPN instead of trusting ESPN alone. Pure local file merge:
+// free, no network, no Anthropic call. Re-run it after dropping in a new guide.
+// The output name is FIXED so server.js can read it on a literal path (Vercel only bundles
+// files it can trace — a glob at runtime would 404 in production).
+function analystRanks() {
+  const out = { analysts: GUIDES.map(g => g.analyst), players: {} };
+  for (const g of GUIDES) {
+    for (const [name, v] of Object.entries(g.players)) {
+      const m = /^([A-Z]+)(\d+)$/.exec(v.posRank || '');
+      if (!m) continue;  // no positional rank (Smyth lists a few players with notes only) — nothing to rank
+      (out.players[name] ||= []).push({ analyst: g.analyst, pos: m[1], rank: +m[2], note: v.note || '' });
+    }
+  }
+  const f = path.join(ROOT, 'analyst-ranks.json');
+  fs.writeFileSync(f, JSON.stringify(out, null, 1));
+  const per = {};
+  for (const list of Object.values(out.players)) for (const r of list) per[r.analyst] = (per[r.analyst] || 0) + 1;
+  console.log(`Wrote analyst-ranks.json — ${Object.keys(out.players).length} players ranked by ${GUIDES.length} analyst(s): ${JSON.stringify(per)}. Free: local file merge, no network.`);
+}
+
+if (FLAGS.has('--analyst-ranks')) analystRanks();
+else if (FLAGS.has('--selftest')) selftest();
 else main().catch(e => { console.error(e); process.exit(1); });
