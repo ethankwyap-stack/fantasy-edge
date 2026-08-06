@@ -89,7 +89,9 @@ console.assert(snakePick(1,2,12)===2 && snakePick(2,2,12)===23 && snakePick(3,2,
 // Also swapped his 5th (pick 50) for the other manager's 4th (pick 44) — round 5 is gone,
 // and pick 44 replaces it (not modelled as a slot since it's a fixed overall number, not
 // his snake slot — just noted in the bar like the 10th above).
-const TRADED_ROUNDS = new Set([5, 7]);
+// Also traded away his 2nd (pick 23) for the other manager's 2nd (pick 17) — round 2 is
+// gone too; pick 17 replaces it, same "fixed overall number, not his slot" situation.
+const TRADED_ROUNDS = new Set([2, 5, 7]);
 
 // My next pick given how many players have already come off the board.
 function nextPick() {
@@ -554,7 +556,7 @@ function slotBar() {
        : `Next up: <b>#${np.pick}</b> (round ${np.round}) · <b>${np.away}</b> pick${np.away===1?'':'s'} away · ${S.drafted.size} off the board`)
     : 'Set your draft slot to see when you pick next.';
   const traded = TRADED_ROUNDS.size
-    ? `<div style="color:var(--warn);font-size:13px;margin-top:5px">⇄ No round ${[...TRADED_ROUNDS].join(', ')} pick (traded) · you also own a 2nd 10th-rounder at the other manager's slot and pick 44 overall (from the 5th-for-4th swap)</div>`
+    ? `<div style="color:var(--warn);font-size:13px;margin-top:5px">⇄ No round ${[...TRADED_ROUNDS].join(', ')} pick (traded) · you also own a 2nd 10th-rounder at the other manager's slot, pick 44 overall (from the 5th-for-4th swap), and pick 17 overall (from the 2nd-for-2nd swap)</div>`
     : '';
   return `<div class="slotbar">Draft slot <select onchange="setSlot(this.value)"><option value="">—</option>${opts}</select>
     <span style="color:var(--dim)">of ${size}</span> &nbsp; ${status}${traded}</div>`;

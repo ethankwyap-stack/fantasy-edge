@@ -1,0 +1,139 @@
+{
+ "_note": "Joel Smyth's 2026 'Adjusted Fantasy Points Per Game' study, transcribed from his YouTube video. NOTE-ONLY, NO posRank — this isn't a clean 1-N board, it's a stat-splits exercise across all four skill positions: take last year's points-per-game, strip out injury/backup-QB/committee noise, and include the NFL playoffs as extra sample. He states a rank for some players mid-explanation ('RB2', 'QB4', 'a surprise at number 10') but not consistently or for a full field, so recording those as posRank would silently overweight the players he happened to call out a number for. Every entry below is his stated reasoning, paraphrased from what he actually said — do not extend past it.",
+ "_source": "https://www.youtube.com/watch?v=AiXmH9KDeJk — 2026 Adjusted Fantasy Points Per Game (RB/QB/TE/WR).",
+ "_updated": "2026-08-02",
+ "_confidence": "Transcribed from captions, not read off the on-screen table (frames were sparse at this length — 24 min video, ~70 uniformly-spaced frames, table not clearly legible in the sample). Numbers and stated ranks below are what he said aloud; where captions garbled a name ('Trey Sermon Henderson' → TreVeyon Henderson, given the surrounding Patriots/Stevenson context) it's noted inline rather than silently corrected. The WR discussed right after Jaylen Waddle was captioned 'Mark' — confirmed by Ethan as Marvin Harrison Jr.",
+ "analyst": "Smyth",
+ "ranksAre": "none - notes only",
+ "players": {
+  "jahmyr gibbs": {
+   "note": "Adjusted up to RB2. 24.8 PPG after Dan Campbell took over play-calling midseason (fired the OC) — offense and Gibbs's volume both improved. Splits without David Montgomery are extreme: 32.6 PPG in 3 games, 25 in 5 straight, 27.4 for his career as the solo back. New OC Drew Petzing is polarizing but fine for RBs."
+  },
+  "jonathan taylor": {
+   "note": "Decent-size bump with Daniel Jones on the field; fell off at the end of the season when Jones was out with an Achilles injury."
+  },
+  "chase brown": {
+   "note": "Makes the adjusted top five as long as Joe Burrow is starting. 15 games back to 2024 with Burrow healthy = exactly 21.0 PPG both times he checked. Burrow targets him heavily, including in the red zone."
+  },
+  "cam akers": {
+   "note": "RB7 when getting full snaps. Situation may be worse under Matt Nagy, but Jaxson Dart being back is a positive."
+  },
+  "ameer abdullah": {
+   "note": "RB11 when getting full snaps — was already playing like an RB1. Likes his situation."
+  },
+  "javonte williams": {
+   "note": "Small bump; gets into RB1 territory once you remove his late-season injury games, which he thinks people forget about."
+  },
+  "kyren williams": {
+   "note": "Adjusted RB14. Goal-line share to Blake Corum went from 74% (2024) to 53% (2025); his overall RB touch share after week 7 specifically dropped from 78% to 58% — bell-cow volume to committee-back volume. Calls it 'a little bit scary.'"
+  },
+  "rhamondre stevenson": {
+   "note": "Nice bump once you include week 18, his best game of the year, in the NFL playoffs."
+  },
+  "kyle monangai": {
+   "note": "Had a big breakout game without D'Andre Swift, then split time once Swift returned — his volume actually went down in the second half even though Chicago's offense got much better. No receiving work; brick hands, or at least the coaches seem to think so."
+  },
+  "rachaad white": {
+   "note": "Looks more positive as a starter."
+  },
+  "blake corum": {
+   "note": "Smyth expected better than his 8.8 PPG; wasn't there. No receiving work — 72nd of 72 qualifying RBs in yards per route last year — so hard to have standalone value behind an RB1."
+  },
+  "treveyon henderson": {
+   "note": "Second half of the season, after Rhamondre Stevenson returned from injury, still under 10 fantasy PPG over his last nine games. (Caption text read 'Trey Sermon Henderson' — almost certainly a transcription garble of TreVeyon Henderson given the Patriots/Stevenson context.)"
+  },
+  "jaxson dart": {
+   "note": "Adjusted QB4. Split by opponent quality: 15.7 PPG in 4 games vs top-five defenses (mostly the Eagles), 22.7 PPG otherwise. Split by OC: 21.7 PPG under Brian Daboll, 16.9 after Daboll was fired (designed carries roughly cut in half). Overall adjusted: 20.1 PPG."
+  },
+  "trevor lawrence": {
+   "note": "Adjusted rank barely moves, but splits are informative. Second half of the season: 22.8 PPG, was the overall QB1 in that stretch (18.0 PPG even removing one huge game vs the Jets — still mid-QB1 level). Split by opponent: 22.7 PPG outside his 4 games vs top-five defenses, 10.0 PPG in those 4 (Texans twice, 8 PPG each). Was QB24 in the 4th quarter last year but QB3 in the first three quarters — Jacksonville's defense, better than its 2026 projection (projected ~.500), may have forced more competitive 4th quarters."
+  },
+  "brock purdy": {
+   "note": "Was the overall QB2 in points per game through week 17 (21.5 PPG) before a brutal 3-game playoff slate (Seahawks, Eagles, Seahawks) dropped him to QB14 for the full season. Smyth's read: skill-level-wise he played like a mid-QB1, not a true QB2, in that shortened sample — don't fully discount the 3 tough playoff games, but also don't ignore them. Overall adjusted as a starter: QB20; QB15 if judged on points-per-game alone without other adjustments."
+  },
+  "baker mayfield": {
+   "note": "Even in his complete games, injury limited him — adjustment doesn't move him much either way."
+  },
+  "brock bowers": {
+   "note": "16.4 PPG in games he didn't leave early/on limited snap count, on a horrible Raiders offense."
+  },
+  "cole kmet": {
+   "note": "16.0 PPG in his complete games — strong, on a non-horrible offense."
+  },
+  "tyler warren": {
+   "note": "13.1 PPG immediately as a rookie with Daniel Jones on the field; dropped hard with backup QBs (Riley Leonard, others) in. Same for Michael Pittman — Jones on the field, Pittman off, is when Warren spiked to a 30% targets-per-route share."
+  },
+  "dalton kincaid": {
+   "note": "12.9 PPG before his injury. Route share vs. Dawson Knox before the injury was 184-to-156 (60%); after the injury, 42% — the drop, not talent, killed his value. If the route share climbs back to 60%, let alone 65-70%, Smyth sees huge upside."
+  },
+  "colston loveland": {
+   "note": "Updated his own read on TikTok after re-checking: once given full snaps starting week 7, he was held back early, but from the fantasy-playoff stretch on (last 4 games incl. week 18) he averaged 20.0 PPG on an 81% route share, 12 targets/game, 2.63 yards per route run. From the season's halfway point onward (a slightly wider window than just the last 4), 14.7 PPG."
+  },
+  "travis kelce": {
+   "note": "Doesn't love him in fantasy but notes he's better with Mahomes on the field. In the small sample with vs. without Rashee Rice last year he was about equally good either way (12 PPG without Rice) — a mild bad sign for the 'more targets once Rice commands less attention' theory. Says he's not drafting him."
+  },
+  "kyle pitts": {
+   "note": "Adjusted TE14 once you remove the 3 games Drake London missed (London also played hurt in some of the games he did play) — outside those games, still just 10 PPG. Including those games he was TE5, but the point gap between a top-4 TE and TE15 was the same size as the gap those particular games created — i.e. he wasn't close to being a true top-tier TE, it was a few outlier games. 'There's been hope every single year.'"
+  },
+  "jake ferguson": {
+   "note": "TE1 overall when CeeDee Lamb was out, TE20 when Lamb played — a TE handcuff, not someone to target for his own sake."
+  },
+  "puka nacua": {
+   "note": "Sizable gap over JSN/Amon-Ra/Chase in the adjusted numbers. Beat JSN by about half a PPG in raw terms, but was clearly better once NFL-playoff-schedule games and week 18 (where JSN's team was resting/managing for a bye) are folded in."
+  },
+  "amon-ra st. brown": {
+   "note": "Adjusted up to WR3 in his complete games (removing his concussion game). Big first-half/second-half split with two entangled causes: (1) OC John Morton was bad in the first half — 9.0 PPG — then Dan Campbell took over play-calling and explicitly said he'd get Amon-Ra more involved, and he hit fantasy-WR1 level (16.1 PPG) in the second half; but (2) Sam LaPorta got hurt almost the same week. Splits without LaPorta: 15.2 PPG. With LaPorta: 10.9 PPG (though one 2024 game without LaPorta, different play-calling context, was 23 points — small sample). Net: real upside, but real risk too, since LaPorta is back AND new OC Drew Petzing is TE-focused. 'Falls somewhere in the middle.'"
+  },
+  "jameson williams": {
+   "note": "Excluded from the main WR list because he's adjusted WR27 in the games Amon-Ra St. Brown actually played — his monster numbers came mostly when Amon-Ra was out."
+  },
+  "ja'marr chase": {
+   "note": "Top-five adjusted WR with Joe Burrow healthy — unsurprising."
+  },
+  "drake london": {
+   "note": "Top-5 fantasy WR in his best-case games (with Michael Penix, pre-PCL injury); fell off after the injury/some rough games. Ceiling is real but there's more risk the 'best situation' doesn't hold, mainly due to Penix."
+  },
+  "chris olave": {
+   "note": "Much better with Tyler Shough at QB than earlier in the season — team-wide receiver scoring was top-10 with Shough in, more deep shots for Olave specifically. Still doesn't think he's a top-6 WR this year because of target competition from Jordan Tyson."
+  },
+  "ceedee lamb": {
+   "note": "Adjusted down to WR8 in his complete games."
+  },
+  "george pickens": {
+   "note": "16.1 PPG right behind CeeDee Lamb in the adjusted numbers — was 8th among WRs in targets even with Lamb active, so he doesn't drop off nearly as much as the narrative suggests once Lamb is on the field."
+  },
+  "rome odunze": {
+   "note": "Surprise adjusted WR10. 16.1 PPG before a foot injury that started bothering him right before week 9 (he had a zero-point game vs. a tough DJ Turner matchup right as the injury report started, then got shut down, then came back on a snap count). Scored 5 TDs in his first 5 games then zero in the next 3 (including a 120-yard, no-TD game), so Smyth doesn't read it as touchdown-dependent/due for regression — DJ Moore's departure frees up red-zone work Moore had been soaking up. Likes the trajectory: better chemistry with Caleb Williams, another year in the system, healthy."
+  },
+  "devonta smith": {
+   "note": "Still adjusted WR11 in his healthy games alongside Puka Nacua, before Puka's injury."
+  },
+  "tee higgins": {
+   "note": "Adjusted WR12 with Joe Burrow healthy — 'not a fantasy WR2 when Joe Burrow is healthy.' Basically every recent year with a healthy Burrow he's a fantasy WR1, with top-5 upside when the Bengals' offense is rolling."
+  },
+  "nico collins": {
+   "note": "One of the few players whose adjusted number went DOWN in Stroud's healthy games vs. with backup Davis Mills in — about half a point per game lower with Stroud. Still expects Stroud-at-his-best to outperform Mills long-run."
+  },
+  "zay flowers": {
+   "note": "Bumps up once week 18 (his best game of the season) is folded in; Lamar Jackson's absences elsewhere in the year hurt the offense broadly."
+  },
+  "jakobi meyers": {
+   "note": "Still in the low-end-WR3 range in the adjusted numbers — more a nuisance for target competition than a standalone asset."
+  },
+  "luther burden iii": {
+   "note": "10.3 PPG once he started playing more (post-bye)."
+  },
+  "xavier worthy": {
+   "note": "Bad even adjusted — was essentially nothing with both Mahomes and Rice on the field."
+  },
+  "emeka egbuka": {
+   "note": "Adjusted WR18 before a hamstring injury tanked his snap count late in the season (went from ~85% of snaps to 50% almost overnight — Mike Evans returning plus Jalen McMillan/Tez Johnson eating into his role). Still 13.1 PPG even counting the down weeks; looks considerably better if isolated to fully-healthy-Baker-Mayfield games."
+  },
+  "marvin harrison jr.": {
+   "note": "Should have finished well ahead of his actual WR23 given the offense around him, per Smyth — 'lots of problems' as a rookie, but in his complete games: 12.3 PPG, a 22% target share while playing 60%+ of snaps, and the 2nd-most end-zone targets in the NFL behind only Davante Adams. Real red-zone role even in a down rookie season."
+  },
+  "parker washington": {
+   "note": "Adjusted WR23 once week 18 (continuing his playoff run) is included. Smyth has publicly loved him since his pre-draft breakout coverage and thinks he can be a real factor this season."
+  }
+ }
+}
