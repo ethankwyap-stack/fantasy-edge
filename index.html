@@ -269,6 +269,7 @@ async function load() {
     ]);
     S.boom = boom.players || {};
     S.boomSeason = boom.season || '';
+    S.boomStale = !!boom.stale; // set by boom-rates.js when it fell back to a prior season
     S.injuries = injuries.data || {};
     // headline list per player, newest first (the feed already arrives newest first)
     S.news = {};
@@ -404,26 +405,44 @@ function analystChip(p) {
 // Boom/bust from boom-rates.json (2025 season, flagged stale) — ALWAYS year-tagged, same rule as
 // usageLine(): never render a stale number as if it were current. A player absent from the file
 // (2026 rookies, anyone who missed 2025) shows NOTHING — a 0% boom would be an actively wrong signal.
+// MIN_G: a rate over 1-3 games is arithmetic, not signal — one good Week 1 reads as a 100%
+// boom rate. Early in a season the chip is suppressed entirely and the expanded row says
+// why, rather than showing a number that looks authoritative and isn't.
+const MIN_G = 4;
 const boomOf = (name, pos) => { const b = S.boom[(name||'').toLowerCase()];
   return (b && typeof b.boom === 'number' && b.pos === pos) ? b : null; };
 const pct = x => Math.round(x * 100) + '%';
+// Stale-ness comes from the file, never a literal — once 2026 games exist these are CURRENT
+// numbers, and a hardcoded "last season" would mislabel them.
+const yrTag = () => S.boomStale ? `${S.boomSeason} — last season, stale` : `${S.boomSeason}`;
 function boomChip(p) {
   const b = boomOf(p.fullName, POS[p.defaultPositionId]);
-  return b ? ` <span class="chip" title="2025 game-level rates — stale, last season">💥${pct(b.boom)} 💀${pct(b.bust)} [${S.boomSeason}]</span>` : '';
+  if (!b || b.g < MIN_G) return '';
+  return ` <span class="chip" title="game-level rates [${yrTag()}]">💥${pct(b.boom)} 💀${pct(b.bust)} [${S.boomSeason}]</span>`;
 }
 function boomLine(p) {
   const b = boomOf(p.fullName, POS[p.defaultPositionId]);
-  return b ? `<span style="color:var(--dim)">Boom ${pct(b.boom)} (${b.boomWeeks} of ${b.g} games top-5 at ${b.pos}) · bust ${pct(b.bust)} · median ${b.median} · best ${b.best} PPR <b>[${b.season} — last season, stale]</b></span>` : '';
+  if (!b) return '';
+  if (b.g < MIN_G) return `<span style="color:var(--dim)">Boom/bust: only ${b.g} game${b.g===1?'':'s'} played — too few to rate <b>[${yrTag()}]</b></span>`;
+  return `<span style="color:var(--dim)">Boom ${pct(b.boom)} (${b.boomWeeks} of ${b.g} games top-5 at ${b.pos}) · bust ${pct(b.bust)} · median ${b.median} · best ${b.best} PPR <b>[${yrTag()}]</b></span>`;
 }
 // Present player renders numbers + the stale year tag; absent player renders nothing at all.
-(() => { const save = S.boom, saveY = S.boomSeason;
-  S.boom = { 'has data': { pos:'QB', g:16, boom:0.41, boomWeeks:7, bust:0.12, median:22.9, best:30.9, season:2025 } };
-  S.boomSeason = 2025;
-  const here = { fullName:'Has Data', defaultPositionId:1 }, gone = { fullName:'Rookie Guy', defaultPositionId:1 };
+(() => { const save = S.boom, saveY = S.boomSeason, saveSt = S.boomStale;
+  S.boom = { 'has data': { pos:'QB', g:16, boom:0.41, boomWeeks:7, bust:0.12, median:22.9, best:30.9, season:2025 },
+             'thin guy': { pos:'QB', g:2,  boom:1,    boomWeeks:2, bust:0,    median:31.0, best:33.0, season:2026 } };
+  S.boomSeason = 2025; S.boomStale = true;
+  const here = { fullName:'Has Data', defaultPositionId:1 }, gone = { fullName:'Rookie Guy', defaultPositionId:1 },
+        thin = { fullName:'Thin Guy', defaultPositionId:1 };
   console.assert(/41%/.test(boomChip(here)) && /12%/.test(boomChip(here)) && /2025/.test(boomChip(here)), 'boom chip missing numbers or year tag');
   console.assert(/22\.9/.test(boomLine(here)) && /stale/.test(boomLine(here)), 'boom detail missing median or stale tag');
   console.assert(boomChip(gone) === '' && boomLine(gone) === '', 'boom: absent player rendered something');
-  S.boom = save; S.boomSeason = saveY; })();
+  // A 2-game 100% boom rate must never reach the chip, and must say why when expanded.
+  console.assert(boomChip(thin) === '', 'boom: thin sample leaked into the chip');
+  console.assert(/too few to rate/.test(boomLine(thin)) && !/100%/.test(boomLine(thin)), 'boom: thin sample showed a rate');
+  // Once the file is current, nothing may claim "last season".
+  S.boomStale = false; S.boomSeason = 2026;
+  console.assert(!/stale|last season/.test(boomLine(here)), 'boom: current-season data labelled stale');
+  S.boom = save; S.boomSeason = saveY; S.boomStale = saveSt; })();
 
 const badgesOf = p => { const b = A(p.fullName)?.badges || [];
   return S.sleepers.has(p.id) && !b.includes('sleeper') ? [...b, 'sleeper'] : b; };
@@ -598,9 +617,11 @@ const BOOM_K = 0.25;
 const posBust = {};
 function boomFactor(name, pos) {
   const b = S.boom[(name || '').toLowerCase()];
-  if (!b || typeof b.bust !== 'number' || b.pos !== pos) return 1;
+  // Too few games abstains exactly like a missing player — a bust rate off 2 games would
+  // otherwise swing a trade valuation on noise. Same rule for the positional baseline.
+  if (!b || typeof b.bust !== 'number' || b.pos !== pos || b.g < MIN_G) return 1;
   if (posBust[pos] === undefined) {
-    const all = Object.values(S.boom).filter(x => x.pos === pos && typeof x.bust === 'number');
+    const all = Object.values(S.boom).filter(x => x.pos === pos && typeof x.bust === 'number' && x.g >= MIN_G);
     posBust[pos] = all.length ? all.reduce((t, x) => t + x.bust, 0) / all.length : null;
   }
   if (posBust[pos] === null) return 1;
@@ -679,9 +700,15 @@ function whyThem(th, give, get) {
   console.assert(found.length === 1, 'trades: two-valuation swap not found (' + found.length + ')');
   console.assert(found[0] && found[0].meGain === 40 && found[0].themGain === 0, 'trades: gains wrong ' + JSON.stringify(found[0] && [found[0].meGain, found[0].themGain]));
   // Boom: a low-bust WR is priced UP for him, and a player absent from the file is untouched.
-  S.boom = { p2: { pos: 'WR', bust: 0.1 }, p3: { pos: 'WR', bust: 0.5 } };
+  // g is required: the positional baseline ignores thin samples, so a fixture without it
+  // drops out of the average and every factor collapses to 1.
+  S.boom = { p2: { pos: 'WR', bust: 0.1, g: 16 }, p3: { pos: 'WR', bust: 0.5, g: 16 } };
   console.assert(boomFactor('P2','WR') > 1 && boomFactor('P3','WR') < 1, 'boom: risk tilt inverted');
   console.assert(boomFactor('P1','QB') === 1, 'boom: missing player did not abstain');
+  for (const k in posBust) delete posBust[k];
+  // Early-season: a 2-game bust rate must abstain, not swing the valuation on noise.
+  S.boom = { p2: { pos: 'WR', bust: 0, g: 2 }, p3: { pos: 'WR', bust: 0.5, g: 16 } };
+  console.assert(boomFactor('P2','WR') === 1, 'boom: thin sample tilted trade value');
   for (const k in posBust) delete posBust[k];
   Object.assign(S, { players: save.players, rosters: save.rosters, teams: save.teams, myTeamId: save.my, boom: save.boom });
 })();

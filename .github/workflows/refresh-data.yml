@@ -1,0 +1,56 @@
+name: Weekly data refresh
+# Boom rates and seed odds are static JSON committed to the repo, so they only change
+# when something regenerates them. NFL games finish Monday night; nflverse publishes the
+# updated weekly files within a day. 13:00 UTC Tuesday = 6am PT, comfortably after.
+# Sept-Dec only — there is nothing to refresh in the offseason.
+on:
+  schedule:
+    - cron: '0 13 * 9-12 2'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      # Assertions first: if the engine is broken, fail loudly instead of committing bad numbers.
+      - run: node scripts/boom-rates.js --selftest
+      - run: node scripts/seed-odds.js --selftest
+
+      # No .nflverse-cache in a fresh runner, so this always downloads current data.
+      # boom-rates.js also refuses to read a cached file for the in-progress season.
+      - run: node scripts/boom-rates.js
+        env:
+          SEASON: ${{ vars.SEASON || 2026 }}
+
+      # Seed odds need the live league (record so far + remaining schedule).
+      - run: node scripts/seed-odds.js --iters 20000
+        env:
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          SEASON: ${{ vars.SEASON || 2026 }}
+
+      # Report staleness rather than failing: before Week 1 there is legitimately no
+      # current-season file, and a red X every September would train us to ignore it.
+      # A stale regen is also a no-op — it reproduces the file already committed, so the
+      # commit step below finds nothing to push. The app labels stale data on screen too.
+      - run: |
+          node -e '
+            const b = require("./boom-rates.json");
+            const n = Object.keys(b.players).length;
+            console.log(b.stale
+              ? `NOTE: boom-rates.json is STALE (season ${b.season}) — no current-season nflverse file yet. ${n} players.`
+              : `boom-rates.json OK: season ${b.season}, ${n} players.`);
+          '
+
+      - run: |
+          # commit as Ethan's account email — Vercel blocks deploys whose HEAD commit author it can't match
+          git config user.name ethankwyap-stack
+          git config user.email ethankw.yap@gmail.com
+          git add boom-rates.json seed-odds.json
+          git diff --cached --quiet && echo "nothing changed" || (git commit -m "weekly data refresh $(date -u +%F)" && git push)

@@ -48,18 +48,29 @@ function csvSplit(line) {
 const URL = yr => `https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_${yr}.csv`;
 
 // Cached on disk so re-runs and offline runs work without re-downloading 8MB.
+// A FINISHED season's file never changes, so caching it is free. The CURRENT season's
+// file is rewritten every week with new games — reading a cached copy would silently
+// report Week 1 numbers in Week 8, with no error and no visible sign. So: never read
+// the cache for the in-progress season. (Still written, so a failed fetch mid-run and
+// any offline debugging have something to fall back to.)
 async function weekly(yr) {
   const file = path.join(CACHE, `stats_player_week_${yr}.csv`);
   let text = null;
-  try { text = fs.readFileSync(file, 'utf8'); } catch { }
+  if (yr !== SEASON) { try { text = fs.readFileSync(file, 'utf8'); console.log(`  ${yr}: cached file (finished season, never changes)`); } catch { } }
   if (!text) {
+    if (yr === SEASON) console.log(`  ${yr}: downloading (in-progress season — cache deliberately bypassed)`);
     try {
       const r = await fetch(URL(yr), { signal: AbortSignal.timeout(120000) });
       if (!r.ok) return null; // season not started / file not published yet
       text = await r.text();
       fs.mkdirSync(CACHE, { recursive: true });
       fs.writeFileSync(file, text);
-    } catch (e) { console.warn(`  weekly stats ${yr} fetch failed (${e.message})`); return null; }
+    } catch (e) {
+      console.warn(`  weekly stats ${yr} fetch failed (${e.message})`);
+      // Stale is better than nothing, but it must be LOUD — this is exactly the
+      // silent-old-data case the cache rule above exists to prevent.
+      try { text = fs.readFileSync(file, 'utf8'); console.warn(`  WARNING: falling back to the CACHED ${yr} file — it may be missing recent weeks`); } catch { return null; }
+    }
   }
   const lines = text.split('\n');
   const ix = {}; csvSplit(lines[0]).forEach((c, i) => ix[c] = i);
