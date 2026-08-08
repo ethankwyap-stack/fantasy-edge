@@ -13,6 +13,9 @@ const ANALYSIS = fs.readFileSync(ANALYSIS_PATH); // static read for Vercel traci
 // tracing reason; a missing file is fine — the board just falls back to ESPN-only value.
 const RANKS_PATH = path.join(__dirname, 'analyst-ranks.json');
 const RANKS = (() => { try { return fs.readFileSync(RANKS_PATH); } catch { return Buffer.from('{"players":{}}'); } })();
+// Boom/bust rates (scripts/boom-rates.js). Same literal-path rule for Vercel tracing.
+const BOOM_PATH = path.join(__dirname, 'boom-rates.json');
+const BOOM = (() => { try { return fs.readFileSync(BOOM_PATH); } catch { return Buffer.from('{"players":{}}'); } })();
 
 const PORT = process.env.PORT || 4650;
 const SECRET = espn.loadEnv().APP_SECRET;
@@ -39,6 +42,10 @@ http.createServer((req, res) => {
   if (req.url.startsWith('/analyst-ranks.json')) {
     res.setHeader('Content-Type', 'application/json');
     try { return res.end(fs.readFileSync(RANKS_PATH)); } catch { return res.end(RANKS); }
+  }
+  if (req.url.startsWith('/boom-rates.json')) {
+    res.setHeader('Content-Type', 'application/json');
+    try { return res.end(fs.readFileSync(BOOM_PATH)); } catch { return res.end(BOOM); }
   }
   res.setHeader('Content-Type', 'text/html');
   res.end(INDEX);

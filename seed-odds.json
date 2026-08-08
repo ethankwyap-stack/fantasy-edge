@@ -1,0 +1,278 @@
+{
+ "generated": "2026-08-08T20:11:14.792Z",
+ "season": 2026,
+ "iters": 200,
+ "zeroVariance": true,
+ "seedingRule": {
+  "primary": "record",
+  "tiebreak": "pointsFor"
+ },
+ "playoffTeams": 8,
+ "myTeamId": 1,
+ "matchupsSimulated": 84,
+ "variance": {
+  "model": "truncated normal, sd = mean × positional CV",
+  "cv": {
+   "QB": 0.4,
+   "RB": 0.55,
+   "WR": 0.6,
+   "TE": 0.65,
+   "K": 0.45,
+   "DST": 0.75
+  }
+ },
+ "teams": [
+  {
+   "id": 1,
+   "name": "Rome O Doomsday",
+   "projWeekly": 122.6,
+   "seedProbs": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1716.7
+  },
+  {
+   "id": 2,
+   "name": "Magic in the Hamptons",
+   "projWeekly": 116.2,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1626.6
+  },
+  {
+   "id": 3,
+   "name": "Dart that Dihker in KaiME",
+   "projWeekly": 117.9,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1650.2
+  },
+  {
+   "id": 4,
+   "name": "DiggsInYoButker",
+   "projWeekly": 123.1,
+   "seedProbs": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1723
+  },
+  {
+   "id": 6,
+   "name": "Purdy Good Team",
+   "projWeekly": 121.2,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1696.7
+  },
+  {
+   "id": 7,
+   "name": "2 gurls 1 kupp",
+   "projWeekly": 115.6,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1618.4
+  },
+  {
+   "id": 9,
+   "name": "Sadih My Love Hall Down",
+   "projWeekly": 125.1,
+   "seedProbs": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1751.3
+  },
+  {
+   "id": 12,
+   "name": "Skat's Super CTE",
+   "projWeekly": 122.8,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "top8": 1,
+   "expPts": 1719
+  },
+  {
+   "id": 8,
+   "name": "No Moore Twin Bowers",
+   "projWeekly": 114.1,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "top8": 0,
+   "expPts": 1597.9
+  },
+  {
+   "id": 10,
+   "name": "I Have KincAIDS",
+   "projWeekly": 114.7,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "top8": 0,
+   "expPts": 1605.8
+  },
+  {
+   "id": 11,
+   "name": "Lamar-a-lago",
+   "projWeekly": 114.4,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "top8": 0,
+   "expPts": 1600.9
+  },
+  {
+   "id": 13,
+   "name": "EaTN McCokkey",
+   "projWeekly": 115.6,
+   "seedProbs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "top8": 0,
+   "expPts": 1618.1
+  }
+ ]
+}

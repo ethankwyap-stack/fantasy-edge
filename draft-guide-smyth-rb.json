@@ -1,0 +1,149 @@
+{
+  "_note": "Joel Smyth's 2026 fantasy RB rankings, transcribed from his YouTube video. RB1-36 posRank is read directly off his on-screen ranking graphic (captured via video frames at multiple timestamps), so those ranks are exact. Past 36 the video kept going (he says 'top 50' at the end) but the on-screen board wasn't captured for that stretch and he doesn't call out every rank verbally — only a few explicit numbers survived (Croskey-Merritt at 40, Tyrone Tracy at 50, Woody Marks at 51, given as a bonus outside his top 50). Everything else past 36 is recorded note-only, no posRank, since the exact order isn't stated. Notes are HIS stated reasoning, paraphrased from what he actually said — do not extend past it.",
+  "_source": "https://www.youtube.com/watch?v=PnbXh8q0uKk — 2026 Fantasy RB Rankings (Joel Smyth / Yahoo).",
+  "_updated": "2026-08-06",
+  "_confidence": "RB1-36 exact, from the on-screen graphic. RB37-51 partial: only the explicitly spoken ranks (40, 50, 51) are posRank; the rest of that tail (Dobbins, Gainwell, Jordan Mason, Pacheco, Bigsby, Allgeier, Ray Davis) are note-only. Two players were dropped entirely rather than guessed: captions repeatedly render one Chargers backup as 'Chimera' and one as 'Katon Mitchell'/'Keenan Mitchell'/'Keith Mitchell' across different spots in the transcript — inconsistent enough that attributing either to a specific real player risked corrupting that player's consensus rank, so both were left out.",
+  "analyst": "Smyth",
+  "ranksAre": "positional (RB only)",
+  "players": {
+    "jahmyr gibbs": {
+      "note": "His RB1 over Bijan. Revisionist history has Bijan 'winning' the year after a hot week 17, but through 16 weeks Gibbs actually outscored him and by week 18 the gap was 0.02 pts. Inherits Montgomery's volume (28th in expected pts) vs. Bijan inheriting Allgeier's (40th). Amazing offense, proven O-line, basically no RB3 behind him."
+    },
+    "bijan robinson": {
+      "note": "Still elite, CMC-level upside. Loses Allgeier's goal-line work to himself, O-line should be healthier. Was RB2 overall last year despite bad QB play; doesn't think Tua is a real downgrade for him."
+    },
+    "christian mccaffrey": {
+      "note": "Elite volume, huge red-zone/goal-line receiving work. Inefficient on the ground last year but still finished RB1. 3 of last 7 years he's been the #1 fantasy player overall, including QBs. Main risk is health — missed 3 of 9 seasons entirely, but plays every game when healthy."
+    },
+    "jonathan taylor": {
+      "note": "Gotten more bullish on positive Daniel Jones health news. Colts offense (and his output) swings hugely on whether they're winning (~30 ppg) or losing (~12 ppg). Faced hardest schedule among RBs last year and still finished RB1 in PPG most years of his career. O-line still great."
+    },
+    "james cook iii": {
+      "note": "Massive X-factor is receiving work returning — new OC Pete Carmichael has a history of heavy RB target share, and Cook only played 20% of third-down snaps last year (Ty Johnson got those). Elite rushing and O-line already in place."
+    },
+    "omarion hampton": {
+      "note": "'Foolish' bullish. Was RB11 overall last year as basically a part-time back on a bad O-line; now gets his tackles back plus Mike McDaniel, whose offenses have produced a top-7 fantasy RB three straight years (Mostert, then Achane twice). Not worried about Najee Harris."
+    },
+    "ashton jeanty": {
+      "note": "Similar profile to Hampton — a talented Year 2 back getting a real O-line (3/5 trustworthy pieces vs. 0/5 last year due to injuries) and run-heavy new coach Kubiak. Not worried about a Seattle-style committee; more talented than his presumptive backup."
+    },
+    "chase brown": {
+      "note": "Loves him when Burrow's healthy. Bengals have had an RB1-in-PPG for 6 straight years under Zac Taylor. Undervalued as #2 in the NFL in red-zone receiving volume behind only CMC. 10 straight games as a top-15 RB to end last season with Burrow back."
+    },
+    "kenneth walker iii": {
+      "note": "'I'm back in.' Volume should finally be guaranteed — Chiefs paid him and have talked up even more receiving work than expected. Andy Reid's backs have historically been top-5 (2014-2023); recent down years were Pacheco/Hunt injuries, not scheme. Mahomes off the ACL should mean more designed hand-offs."
+    },
+    "saquon barkley": {
+      "note": "Doesn't dislike it but has real concerns: worst-ranked RB in goal-line PPG last year, relies heavily on explosive-play efficiency rather than volume (Eagles 26th in RB volume), and Philly lost its O-line coach. Likes new OC Sean Mannion (ex-LaFleur) as a positive unknown for scheme fit."
+    },
+    "de'von achane": {
+      "note": "Very negative — his big rant of the video. Bull case is he leaches Waddle's targets, but in 8 career games without Tua his receiving fell from 11.4 to 3.4 pts/game, a red flag with Tua's status shaky. Lost goal-line work to Wright/Mattison last year and his elite 5.7-5.8 YPC likely regresses without McDaniel."
+    },
+    "derrick henry": {
+      "note": "'More of the same.' New OC/HC and interior O-line changes, but Baltimore stays run-first with heavy tight-end sets. No signs of decline in his rushing; still won't get much receiving work."
+    },
+    "jeremiah love": {
+      "note": "Likely a slow start (comps to Breece Hall's 2022 under the same OC-turned-HC), but doesn't need a ton of volume — could hit a high-touch, receiving-heavy RB2-with-RB1-upside range around 15 touches/game. Notes 14 rookie RB1 fantasy seasons in the last 11 years."
+    },
+    "josh jacobs": {
+      "note": "Ranked RB14 on the board; discussed in passing as one of the players sitting right above Skattebo in his rankings, no standalone breakdown given."
+    },
+    "breece hall": {
+      "note": "More bullish lately. Justin Fields' presence tanked his targets to 48 last year vs. 95 in his RB2 season; if he returns to ~75 targets with steady rushing, expects meaningful improvement. Ranked just above Kyren Williams."
+    },
+    "kyren williams": {
+      "note": "Solid floor (RB2 range) but capped ceiling — Rams are bottom-3 in RB target share under Stafford, and his goal-line work dipped in 2024. Would rather spend that pick on a receiver or other RB with more upside."
+    },
+    "javonte williams": {
+      "note": "Expects a similar-but-slightly-worse repeat of last year (RB13 to ~RB16/17). Elite goal-line share had some touchdown luck (Cowboys' pass-heavy drives shouldn't produce that many red-zone carries), but offense/O-line stay strong."
+    },
+    "cam skattebo": {
+      "note": "High-risk high-reward. Over a 5-game stretch pre-injury he was an RB1 in both receiving volume/efficiency and goal-line work. Ranked above a couple guys ahead of him in ADP because of that bellcow ceiling."
+    },
+    "travis etienne jr.": {
+      "note": "More negative on him. Poor efficiency for a talented back on a good offense, 6 receiving TDs last year vs. 1 in his career prior (regression risk), and New Orleans projects 17 fewer TDs than Jacksonville scored last year. Worried a Chimera-type role eats his receiving work."
+    },
+    "bucky irving": {
+      "note": "Recently moved ahead of Etienne. Injury news trending positive; was top-5 in opportunities/game last year despite injuries around him. New OC Josh Grizzard seen as an upgrade — real bellcow-again upside at his current ADP."
+    },
+    "david montgomery": {
+      "note": "'Shaky' on him. Much better in half-PPR than PPR; hoping for touchdown-dependent production. Detroit only 18th in red-zone drives, and he got benched into a ~30% touch share in the second half of last season under Dan Campbell."
+    },
+    "bhayshul tuten": {
+      "note": "Likes him despite bust risk. Even a 60/40 (not 50/50) split beats other RBs in this range. Excellent at the goal line as a rookie (5 TDs on 7 goal-line carries), much higher target rate (16%+) than Chris Rodriguez (7%) in Liam Coen's screen-heavy offense."
+    },
+    "d'andre swift": {
+      "note": "Not really an upside pick despite chasing upside elsewhere in this range. Comps him to 2025 Kenneth Walker — talented but stuck in a 50/50 split with Monangai, minimal red-zone work (1 red-zone target in 2 years with Caleb Williams), likely finishes right around ADP."
+    },
+    "treveyon henderson": {
+      "note": "Best pure handcuff in the league — if Rhamondre Stevenson gets hurt, he's a top-5 fantasy RB. But McDaniel-as-play-caller has a 20-year history of true committees; only Josh Jacobs ever had one big fantasy season under him. Pass-blocking concerns keeping him out of a bigger role even in a 66/33 split favoring Stevenson."
+    },
+    "quinshon judkins": {
+      "note": "His biggest fade vs. ADP (going ~RB21, a full round ahead of where he has him). Coming off a fibula injury, weak QB/offense situation, and Cleveland's history under this OC of splitting rushing/receiving roles means he won't see receiving work (goes to Dylan Sampson instead). Expects boom/bust, TD-dependent production."
+    },
+    "chuba hubbard": {
+      "note": "Potential for a lot better this season since last year was mostly lost to injury; two years ago (RB13) he was solid with a ton of volume. Canales has a history of sticking to one bellcow back (Rashad White 2023, Hubbard 2024/25) with real goal-line and red-zone receiving work."
+    },
+    "jadarian price": {
+      "note": "'A little hesitant.' History shows a big gap between a top-12 rookie RB and one going RB26-32 ('Sony Michel types'), which is Price's tier. Seattle also has a history of drafting RBs in round 2 without them becoming fantasy factors, and Charbonnet/Walker are already there. Good receiver/pass-blocker for a rookie, but worries Walker's return right as Price gets going, plus a tough early playoff schedule (Eagles, Rams)."
+    },
+    "jaylen warren": {
+      "note": "Likes him a little better than Dowdle personally, despite Dowdle getting more camp hype. If things stay the same, he'd repeat close to last year's RB20 pace (PPR) with the receiving work. Aaron Rodgers has heavy tendencies to throw to RBs, and Warren had the No. 1 receiving efficiency among RBs last year when healthy."
+    },
+    "rhamondre stevenson": {
+      "note": "'Always been the same flex play' — expects that to continue this year."
+    },
+    "rico dowdle": {
+      "note": "Getting more camp hype than Warren recently. Doesn't think either Steelers back becomes an RB1, but both have RB2 potential — the Steelers had two top-24 RBs last year."
+    },
+    "rj harvey": {
+      "note": "Generally avoiding him. Didn't believe in his rookie-year rushing. As long as Dobbins is healthy it's Dobbins as the clear No. 1 back, and Denver also drafted Jonah Coleman. If Dobbins gets hurt it's more likely a Coleman/Harvey split than a clean Harvey breakout — last year as a handcuff Harvey was only an RB2."
+    },
+    "tony pollard": {
+      "note": "Bellcow the last two years but hasn't mattered in fantasy; Tennessee's new coach (Dable) historically runs more of a committee, and Tennessee added Spears (healthy again) and Singleton. O-line and offense both weak."
+    },
+    "jonathan brooks": {
+      "note": "Grouped with Blake Corum as the two best handcuffs in this range — no receiving work but would be great runners if given the job. Both project under 10 PPG while their starters are healthy."
+    },
+    "blake corum": {
+      "note": "Same take as Jonathan Brooks — elite handcuff, minimal receiving role, under 10 PPG while Kyren Williams is healthy."
+    },
+    "kyle monangai": {
+      "note": "Not broken out individually beyond being grouped in this range; see D'Andre Swift's note — Monangai is the other half of Chicago's committee split."
+    },
+    "rachaad white": {
+      "note": "Has the best volume potential in Washington mainly because of his receiving role, though Smyth isn't excited about any of Washington's backs."
+    },
+    "jacory croskey-merritt": {
+      "note": "Efficient rushing last year when he wasn't fumbling, but doesn't project to bring much on the ground with a shaky O-line and a team projected for five wins. Doesn't see a clean rushing-only flex path for him given Washington's crowded backfield — HC Dan Quinn was reportedly talking up all six of the team's RBs, which Smyth reads as a bad sign, not a good one."
+    },
+    "j.k. dobbins": {
+      "note": "Less upside with more injury risk than a Jonathan Brooks type. Expects him around 60% of Denver's carries plus about one target a game as RJ Harvey and Jonah Coleman cut into his early workhorse share. Still doesn't love him given the injury cost of the pick."
+    },
+    "kenneth gainwell": {
+      "note": "Been souring on him — doesn't think he's a big factor in the run game, so he's purely a receiving bet, and Bucky Irving is just as good a receiver without the Aaron Rodgers upgrade Gainwell benefited from last year."
+    },
+    "jordan mason": {
+      "note": "Has a clear path to be Minnesota's lead back over an aging, restructured-contract Aaron Jones, but doesn't see much receiving role for anyone behind Justin Jefferson/Jordan Addison/T.J. Hockenson/Jauan Jennings with a check-down-heavy Kyler Murray. Efficient on the ground but reliant on goal-line work in a pass-heavy red zone that doesn't feed him."
+    },
+    "isaiah pacheco": {
+      "note": "Doesn't believe in him as a player, but Kansas City has 'nobody else' behind Gibbs — if Gibbs goes down, Pacheco is probably getting 80% of the RB touches."
+    },
+    "tank bigsby": {
+      "note": "Lots of hype on getting first-team reps; has had good efficiency numbers when on the field in the past."
+    },
+    "tyler allgeier": {
+      "note": "Never been more than a flex-level scorer even as the starter, in an offense he doesn't love him in without receiving work."
+    },
+    "ray davis": {
+      "note": "Going around RB64 in ADP but Smyth loves him — in two games without James Cook he had nearly 350 scrimmage yards on 20+ touches each time. Hopes he doesn't get the opportunity (would mean a Cook injury) but thinks he could be awesome if he does."
+    },
+    "tyrone tracy jr.": {
+      "note": "Closes out his top 50. Averaged six PPG last year in Skattebo's full games; doesn't think he'll have standalone RB value in that offense, but could be solid as a Skattebo injury fill-in — and Skattebo carries more injury risk than some of the other handcuffs above him."
+    },
+    "woody marks": {
+      "note": "A bonus name just outside his top 50, for those wondering — going around RB43-44 in ADP, but Smyth is lower on him for talent reasons and what he saw from the offense last year. Doesn't think he's a great handcuff."
+    }
+  },
+  "note": "Ranks superseded by draft-guide-smyth-2026-guide.json (his published PDF board). Note-only here so Smyth casts one vote, not four."
+}

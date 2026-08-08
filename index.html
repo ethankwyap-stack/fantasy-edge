@@ -75,7 +75,7 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, boom:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
   // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
   pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
@@ -144,7 +144,10 @@ function consensus(list, pos) {
     // A 0 projection is ESPN saying "not playing" (IR, suspended, off a roster), not "ranked low".
     // Analyst boards go stale the moment a player lands on IR, so letting a July rank outvote that
     // floats an unavailable player into the draftable rounds. ESPN alone decides these.
-    if (!seasonProj(p)) { p._votes = null; p._consensus = espnRank.get(p); p._espnRank = espnRank.get(p); continue; }
+    // _market = what a normal ESPN manager sees: the projection tab and ADP, nothing else. It is
+    // the OTHER side's valuation in the trade engine — no analyst boards, no boom rate.
+    p._market = adpRank.has(p) ? (espnRank.get(p) + adpRank.get(p)) / 2 : espnRank.get(p);
+    if (!seasonProj(p)) { p._votes = null; p._consensus = espnRank.get(p); p._espnRank = espnRank.get(p); p._market = espnRank.get(p); continue; }
     const votes = [{ src: 'ESPN', rank: espnRank.get(p), w: WEIGHTS.espn }];
     if (adpRank.has(p)) votes.push({ src: 'ADP', rank: adpRank.get(p), w: WEIGHTS.adp });
     for (const a of S.ranks[(p.fullName || '').toLowerCase()] || [])
@@ -159,7 +162,9 @@ function consensus(list, pos) {
   }
   list.sort((a, b) => a._consensus - b._consensus);
   const repl = valueAt(curve, Math.min(REPL[pos], list.length));
-  list.forEach((p, i) => { p._posRank = i + 1; p._vbd = valueAt(curve, p._consensus) - repl; });
+  // _cval = the consensus rank read back as POINTS. VBD is that minus replacement; the trade
+  // engine needs the raw points instead, because starter value compares players to each other.
+  list.forEach((p, i) => { p._posRank = i + 1; p._cval = valueAt(curve, p._consensus); p._mval = valueAt(curve, p._market); p._vbd = p._cval - repl; });
 }
 // A player only ESPN rates keeps ESPN's rank; two analysts who both rate him higher must pull him up.
 (() => {
@@ -252,15 +257,18 @@ async function load() {
     // 450 matches the research pool (scripts/draft-research.js) so every player Claude
     // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending, analysis, ranks, injuries, news] = await Promise.all([
+    const [league, playerData, trending, analysis, ranks, injuries, news, boom] = await Promise.all([
       espn('mTeam,mRoster,mSettings'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
       fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({})),
       fetch('/analyst-ranks.json').then(r=>r.json()).catch(()=>({players:{}})),
       fetch('/api/nfl?feed=injuries').then(r=>r.json()).catch(()=>({data:{}})),
-      fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]}))
+      fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]})),
+      fetch('/boom-rates.json').then(r=>r.json()).catch(()=>({players:{}}))
     ]);
+    S.boom = boom.players || {};
+    S.boomSeason = boom.season || '';
     S.injuries = injuries.data || {};
     // headline list per player, newest first (the feed already arrives newest first)
     S.news = {};
@@ -393,6 +401,30 @@ function analystChip(p) {
   const pos = POS[p.defaultPositionId];
   return ` <span class="chip ${d < 0 ? 'good' : 'risk'}">${an.map(v => `${v.src} ${pos}${v.rank}`).join(', ')} vs ESPN ${pos}${p._espnRank}</span>`;
 }
+// Boom/bust from boom-rates.json (2025 season, flagged stale) — ALWAYS year-tagged, same rule as
+// usageLine(): never render a stale number as if it were current. A player absent from the file
+// (2026 rookies, anyone who missed 2025) shows NOTHING — a 0% boom would be an actively wrong signal.
+const boomOf = (name, pos) => { const b = S.boom[(name||'').toLowerCase()];
+  return (b && typeof b.boom === 'number' && b.pos === pos) ? b : null; };
+const pct = x => Math.round(x * 100) + '%';
+function boomChip(p) {
+  const b = boomOf(p.fullName, POS[p.defaultPositionId]);
+  return b ? ` <span class="chip" title="2025 game-level rates — stale, last season">💥${pct(b.boom)} 💀${pct(b.bust)} [${S.boomSeason}]</span>` : '';
+}
+function boomLine(p) {
+  const b = boomOf(p.fullName, POS[p.defaultPositionId]);
+  return b ? `<span style="color:var(--dim)">Boom ${pct(b.boom)} (${b.boomWeeks} of ${b.g} games top-5 at ${b.pos}) · bust ${pct(b.bust)} · median ${b.median} · best ${b.best} PPR <b>[${b.season} — last season, stale]</b></span>` : '';
+}
+// Present player renders numbers + the stale year tag; absent player renders nothing at all.
+(() => { const save = S.boom, saveY = S.boomSeason;
+  S.boom = { 'has data': { pos:'QB', g:16, boom:0.41, boomWeeks:7, bust:0.12, median:22.9, best:30.9, season:2025 } };
+  S.boomSeason = 2025;
+  const here = { fullName:'Has Data', defaultPositionId:1 }, gone = { fullName:'Rookie Guy', defaultPositionId:1 };
+  console.assert(/41%/.test(boomChip(here)) && /12%/.test(boomChip(here)) && /2025/.test(boomChip(here)), 'boom chip missing numbers or year tag');
+  console.assert(/22\.9/.test(boomLine(here)) && /stale/.test(boomLine(here)), 'boom detail missing median or stale tag');
+  console.assert(boomChip(gone) === '' && boomLine(gone) === '', 'boom: absent player rendered something');
+  S.boom = save; S.boomSeason = saveY; })();
+
 const badgesOf = p => { const b = A(p.fullName)?.badges || [];
   return S.sleepers.has(p.id) && !b.includes('sleeper') ? [...b, 'sleeper'] : b; };
 
@@ -410,7 +442,7 @@ window.tSleeper = id => {
 function drow(p) {
   const a = A(p.fullName), pos = POS[p.defaultPositionId];
   const tr = S.trending[(p.fullName||'').toLowerCase()];
-  const chips = badgesOf(p).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ') + analystChip(p);
+  const chips = badgesOf(p).map(b=>`<span class="chip ${GOOD.has(b)?'good':RISK.has(b)?'risk':''}">${b}</span>`).join(' ') + analystChip(p) + boomChip(p);
   const inj = injury(p.fullName);
   const injTag = inj ? `<span class="inj ${/out|ir|injured|pup|susp|doubt/i.test(inj.s)?'out':'qst'}">${esc(inj.s)}</span>` : '';
   // Every player now has at least the source votes to show, so every row expands.
@@ -432,6 +464,7 @@ function drow(p) {
       parts.push(`<span style="color:var(--dim)">Consensus ${pr}${p._posRank} from ${p._votes.map(v => `${esc(v.src)} ${pr}${v.rank}${v.favored ? ` ×${FAVOR[v.src]}` : ''}`).join(' · ')}${fav.length ? ` — close vote, ${fav.join(' and ')} weighted heavier` : ''}</span>`);
       for (const v of p._votes) if (v.note) parts.push(`<span style="color:var(--dim)">🗣 ${esc(v.src)}: ${esc(v.note)}</span>`);
     }
+    const bl = boomLine(p); if (bl) parts.push(bl);
     if (inj && inj.note) parts.push(`<span style="color:var(--warn)">⚕ ${esc(inj.s)}</span> — ${esc(inj.note)} <span class="newsdate">ESPN · ${ago(inj.date)}</span>`);
     // ponytail: 2 headlines is enough to catch camp news the static research file predates
     for (const n of (S.news[(p.fullName||'').toLowerCase()] || []).slice(0,2))
@@ -503,6 +536,156 @@ function draftRows() {
   return out;
 }
 
+// ── Starter value ────────────────────────────────────────────────────────────
+// A player is only worth what he adds to a STARTING lineup. Summing VBD across a roster
+// prices a 3rd RB like a starter when this league starts 2 RB + 1 FLEX and he'd sit.
+// League lineup slots (verified from settings.rosterSettings.lineupSlotCounts):
+// QB1 RB2 WR2 TE1 FLEX1(RB/WR/TE) DST1 K1 + 7 bench. K/DST are 1-for-1 on every roster
+// and never traded here, so they're left out of the math entirely.
+const START = { QB:1, RB:2, WR:2, TE:1 }, FLEXOK = ['RB','WR','TE'];
+// Fill each position with its best, then FLEX takes the best leftover RB/WR/TE. That IS optimal
+// for this slot structure — no player is eligible for a position slot he isn't already sorted into.
+function lineup(ps) {
+  const by = { QB:[], RB:[], WR:[], TE:[] };
+  for (const p of ps) by[p.pos]?.push(p);
+  let total = 0, ids = [], rest = [];
+  for (const pos in START) {
+    const s = by[pos].sort((a, b) => b.pts - a.pts), take = s.slice(0, START[pos]);
+    total += take.reduce((t, p) => t + p.pts, 0); ids.push(...take.map(p => p.id));
+    if (FLEXOK.includes(pos)) rest.push(...s.slice(START[pos]));
+  }
+  const flex = rest.sort((a, b) => b.pts - a.pts)[0];
+  if (flex) { total += flex.pts; ids.push(flex.id); }
+  return { total, ids: new Set(ids) };
+}
+const lineupTotal = ps => lineup(ps).total;
+// Marginal value of a player to a roster: what the lineup loses without him.
+const marginal = (p, ps) => lineupTotal(ps) - lineupTotal(ps.filter(x => x.id !== p.id));
+(() => {
+  const mk = (id, pos, pts) => ({ id, pos, pts });
+  // QB1 RB2 WR2 TE1 FLEX1 = 7 starters.
+  const r = [mk(1,'QB',300), mk(2,'RB',200), mk(3,'RB',180), mk(4,'RB',170), mk(5,'RB',20),
+             mk(6,'WR',190), mk(7,'WR',150), mk(8,'TE',120)];
+  const L = lineup(r);
+  // starters: QB300 + RB200,180 + WR190,150 + TE120 + FLEX = best leftover = RB170 → 1310
+  console.assert(L.total === 1310, 'lineup: wrong total ' + L.total);
+  console.assert(!L.ids.has(5), 'lineup: started the RB5');
+  // The 4th RB fills FLEX, so he's worth the gap to the next man (170-20), not his own 170.
+  console.assert(marginal(r[3], r) === 150, 'marginal: FLEX player mispriced');
+  // A benched player is worth zero to this roster.
+  console.assert(marginal(r[4], r) === 0, 'marginal: bench player priced above zero');
+  // The RB2 is worth only the drop to the FLEX replacement chain, not his raw points.
+  console.assert(marginal(r[2], r) === 160, 'marginal: RB2 mispriced');
+})();
+
+// ── Two valuations ───────────────────────────────────────────────────────────
+// A trade engine that scores BOTH sides with one number can almost never find a deal: whatever
+// one side gains the other loses, so only lineup-slot luck creates joint value. So price each
+// side the way that side actually thinks:
+//   HIS  = full consensus (_cval: ESPN + ADP + every analyst board) adjusted for boom/bust risk.
+//   THEIRS = _mval — ESPN's projection rank and market ADP only, what a normal manager sees.
+// The gap between them IS the trade. He buys where his sources see more than the market does.
+//
+// Risk adjustment, his side only: this league seeds by RECORD first (points are the tiebreaker)
+// and he simulates as the 3rd-strongest roster at ~84% to make the 8-team playoff. A favorite
+// does not need ceiling, he needs to not lose games he should win — so variance is a COST.
+// A player who busts less than the positional norm is worth a premium to him; a high-boom /
+// high-bust player is priced DOWN, which is the engine's way of saying sell him, not buy him.
+// A player missing from boom-rates.json casts NO vote (factor 1) — 2026 rookies and players who
+// missed 2025 are absent, and absence is not a low boom rate.
+// ponytail: one linear knob. Raise BOOM_K if the risk tilt is too quiet to move any deal.
+const BOOM_K = 0.25;
+const posBust = {};
+function boomFactor(name, pos) {
+  const b = S.boom[(name || '').toLowerCase()];
+  if (!b || typeof b.bust !== 'number' || b.pos !== pos) return 1;
+  if (posBust[pos] === undefined) {
+    const all = Object.values(S.boom).filter(x => x.pos === pos && typeof x.bust === 'number');
+    posBust[pos] = all.length ? all.reduce((t, x) => t + x.bust, 0) / all.length : null;
+  }
+  if (posBust[pos] === null) return 1;
+  return 1 + BOOM_K * (posBust[pos] - b.bust);
+}
+// Roster as {id,name,pos,pts,mkt}. pts = his risk-adjusted consensus value, mkt = the market's.
+// A rostered player outside the 450-pool falls back to ESPN's projection for both. K/DST/0-proj drop.
+const ptsOf = p => S.players.find(x => x.id === p.id)?._cval ?? seasonProj(p);
+const mktOf = p => S.players.find(x => x.id === p.id)?._mval ?? seasonProj(p);
+const rosterOf = tid => (S.rosters[tid] || [])
+  .map(p => { const pos = POS[p.defaultPositionId];
+    return { id: p.id, name: p.fullName, pos, pts: Math.round(ptsOf(p) * boomFactor(p.fullName, pos)), mkt: Math.round(mktOf(p)) }; })
+  .filter(e => START[e.pos] && e.pts > 0);
+// lineup() reads .pts, so viewing a roster through the market's eyes is a re-label, not a 2nd engine.
+const asMarket = ps => ps.map(p => ({ ...p, pts: p.mkt }));
+// By ID, not identity: asMarket() re-labels a player into a NEW object, so an identity filter
+// silently removes nobody and both sides "gain" every trade.
+const swap = (ps, out, inc) => { const gone = new Set(out.map(p => p.id)); return ps.filter(p => !gone.has(p.id)).concat(inc); };
+const pairs = a => a.flatMap((x, i) => a.slice(i + 1).map(y => [x, y]));
+
+// Every 1-for-1 and 2-for-1 (both directions) against each rival, kept only if BOTH sides gain.
+// ponytail: top-14 by points per roster, packages capped at 2 — an offer built from a team's
+// 15th-best player isn't one anyone sends. Widen POOL if the list ever comes back empty.
+const POOL = 14;
+function findTrades() {
+  const my = rosterOf(S.myTeamId);
+  const myBase = lineupTotal(my), out = [];
+  for (const t of S.teams) {
+    if (t.id === S.myTeamId) continue;
+    const th = rosterOf(t.id), thM = asMarket(th), thBase = lineupTotal(thM);
+    const mine = [...my].sort((a,b)=>b.pts-a.pts).slice(0, POOL), theirs = [...th].sort((a,b)=>b.pts-a.pts).slice(0, POOL);
+    const sends = [...mine.map(p => [p]), ...pairs(mine)], gets = [...theirs.map(p => [p]), ...pairs(theirs)];
+    for (const s of sends) for (const g of gets) {
+      if (s.length === 2 && g.length === 2) continue; // 1-for-1 and 2-for-1 only
+      const myAfter = lineup(swap(my, s, g)), meGain = myAfter.total - myBase;
+      if (meGain <= 0) continue;
+      // Their side is judged on THEIR valuation — that's the whole point: they say yes because
+      // ESPN and ADP tell them they won, even when his sources say he did.
+      const thAfter = lineup(swap(thM, asMarket(g), asMarket(s))), themGain = thAfter.total - thBase;
+      // ponytail: every player crossing must START for his new team. Without this the list fills
+      // with the same 1-for-1 repeated with a different bench body stapled on, all scoring alike.
+      if (!g.every(p => myAfter.ids.has(p.id)) || !s.every(p => thAfter.ids.has(p.id))) continue;
+      out.push({ t, s, g, meGain, themGain, why: whyThem(thM, g, s) });
+    }
+  }
+  return out.sort((a, b) => b.meGain - a.meGain);
+}
+// The other side's reason, read off their own lineup: who they were starting that our player replaces.
+function whyThem(th, give, get) {
+  const goneIds = new Set(give.map(p => p.id));
+  const before = lineup(th), after = lineup(swap(th, give, get.map(p => ({ ...p, pts: p.mkt }))));
+  const dropped = th.filter(p => before.ids.has(p.id) && !after.ids.has(p.id) && !goneIds.has(p.id));
+  const added = get.filter(p => after.ids.has(p.id));
+  if (!added.length) return 'deepens their bench';
+  const rank = p => p.pos + (th.filter(x => x.pos === p.pos && x.pts > p.pts).length + 1);
+  const who = added.map(p => p.name).join(' + '), verb = added.length > 1 ? 'start' : 'starts';
+  return dropped.length
+    ? `${who} ${verb} over ${dropped.map(p => `${p.name} (${rank(p)})`).join(' + ')}`
+    : `${who} ${verb} in the hole left by ${give.map(p => p.name).join(' + ')}, at more points`;
+}
+
+// The whole point of the rebuild, in one check: a swap that is a WASH on the market's numbers and
+// a WIN on his must surface. Under a single shared valuation it could never (one side's gain is the
+// other's loss); under two it does. Also asserts absence from boom-rates casts no vote.
+(() => {
+  const save = { players: S.players, rosters: S.rosters, teams: S.teams, my: S.myTeamId, boom: S.boom };
+  // Market says these two WRs are identical (mval 200). His boards say the rival's is worth 240.
+  S.players = [
+    { id: 1, _cval: 300, _mval: 300 }, { id: 2, _cval: 200, _mval: 200 }, // his QB + WR
+    { id: 3, _cval: 240, _mval: 200 }, { id: 4, _cval: 300, _mval: 300 }, // their WR + QB
+  ];
+  const pl = (id, dpi) => ({ id, fullName: 'P' + id, defaultPositionId: dpi });
+  S.rosters = { 1: [pl(1,1), pl(2,3)], 2: [pl(4,1), pl(3,3)] };
+  S.teams = [{ id: 1 }, { id: 2 }]; S.myTeamId = 1; S.boom = {};
+  const found = findTrades().filter(x => x.themGain >= 0);
+  console.assert(found.length === 1, 'trades: two-valuation swap not found (' + found.length + ')');
+  console.assert(found[0] && found[0].meGain === 40 && found[0].themGain === 0, 'trades: gains wrong ' + JSON.stringify(found[0] && [found[0].meGain, found[0].themGain]));
+  // Boom: a low-bust WR is priced UP for him, and a player absent from the file is untouched.
+  S.boom = { p2: { pos: 'WR', bust: 0.1 }, p3: { pos: 'WR', bust: 0.5 } };
+  console.assert(boomFactor('P2','WR') > 1 && boomFactor('P3','WR') < 1, 'boom: risk tilt inverted');
+  console.assert(boomFactor('P1','QB') === 1, 'boom: missing player did not abstain');
+  for (const k in posBust) delete posBust[k];
+  Object.assign(S, { players: save.players, rosters: save.rosters, teams: save.teams, myTeamId: save.my, boom: save.boom });
+})();
+
 const views = {
   draft() {
     return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
@@ -529,22 +712,31 @@ const views = {
     <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Bid</th></tr>${fa.slice(0,40).map(p=>row(p,bidCell(p))).join('')}</table>`;
   },
   trades() {
-    const need = t => { // surplus/deficit of VBD by position vs league median
-      const by = {}; for (const p of S.rosters[t.id]||[]) { const pl = S.players.find(x=>x.id===p.id); (by[POS[p.defaultPositionId]] ||= []).push(pl?pl._vbd:0); }
-      return by;
-    };
-    const mine = need({id:S.myTeamId});
-    const sum = a => (a||[]).filter(v=>v>0).reduce((x,y)=>x+y,0);
-    let out = teamPicker() + '<h2>Where each team is strong (total positive VBD by position) — trade your surplus into their gap</h2><table><tr><th>Team</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>Idea</th></tr>';
-    for (const t of S.teams) {
-      const n = need(t);
-      const P = ['RB','WR','TE'];
-      const idea = t.id===S.myTeamId ? '(you)' : P.flatMap(pos => P.filter(o => o!==pos).map(other =>
-        sum(mine[pos]) > sum(n[pos])*1.5 && sum(n[other]) > sum(mine[other])*1.5 ? `Your ${pos} for their ${other}` : null
-      )).filter(Boolean).join('; ') || '—';
-      out += `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${t.name||t.location+' '+t.nickname}</td><td>${Math.round(sum(n.QB))}</td><td>${Math.round(sum(n.RB))}</td><td>${Math.round(sum(n.WR))}</td><td>${Math.round(sum(n.TE))}</td><td>${idea}</td></tr>`;
-    }
-    return out + '</table>';
+    if (!rosterOf(S.myTeamId).length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
+    const all = findTrades();
+    // ponytail: top 25 shown; the tail is variations on the same handful of deals.
+    const props = all.filter(p => p.themGain > 0).slice(0, 25);
+    const names = a => a.map(p => `<b>${esc(p.name)}</b> (${p.pos})`).join(' + ');
+    const rows = (ps, cls) => ps.map(p => `<tr>
+      <td>Send ${names(p.s)} to <b>${esc(teamName(p.t))}</b> for ${names(p.g)}
+        <br><span class="meta">${p.themGain > 0 ? 'they gain because ' : 'their side: '}${esc(p.why)}</span></td>
+      <td><span class="chip good">+${p.meGain} to you</span><br><span class="meta">by consensus + floor</span></td>
+      <td><span class="chip ${cls}">${p.themGain > 0 ? '+' : ''}${p.themGain} to them</span><br><span class="meta">by ESPN/ADP</span></td></tr>`).join('');
+    // Nothing mutually positive is a real answer, not a bug — but show the near misses so he can
+    // see how far off fair they are, sorted by the smallest loss to the other side.
+    const near = all.filter(p => p.themGain <= 0).sort((a,b) => (b.meGain+b.themGain) - (a.meGain+a.themGain)).slice(0, 5);
+    const list = props.length ? rows(props, '') : `<tr><td colspan="3" class="msg">No trade helps both sides right now — every roster's starters are already where they're worth the most. Closest misses (the other side loses, so expect a no):</td></tr>${rows(near, 'risk')}`;
+    // Starter value by position: what your lineup would lose if that position vanished.
+    const strength = t => { const r = rosterOf(t.id), tot = lineupTotal(r);
+      return Object.fromEntries(['QB','RB','WR','TE'].map(pos => [pos, Math.round(tot - lineupTotal(r.filter(p => p.pos !== pos)))])); };
+    return teamPicker() + `
+    <h2>Trades that help BOTH sides — ranked by your gain (season starter points)</h2>
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Value = points a <i>starting lineup</i> gains (QB1 RB2 WR2 TE1 FLEX1), so a 3rd RB is priced at what he'd actually add. <b>Two different valuations:</b> theirs is ESPN's projection + market ADP — what a normal manager sees. Yours is the full consensus (ESPN + ADP + every analyst board) tilted toward floor over ceiling, because this league seeds by record and you're already a favorite: bust weeks cost you games, boom weeks only pad a win. That gap is why both sides can gain on the same trade.</div>
+    <table><tr><th>Proposal</th><th>You</th><th>Them</th></tr>${list}</table>
+    <h2>Starter value by position — what each lineup would lose without it</h2>
+    <table><tr><th>Team</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th></tr>${S.teams.map(t => { const s = strength(t);
+      return `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${esc(teamName(t))}${t.id===S.myTeamId?' (you)':''}</td><td>${s.QB}</td><td>${s.RB}</td><td>${s.WR}</td><td>${s.TE}</td></tr>`;
+    }).join('')}</table>`;
   }
 };
 window.setSlot = v => { localStorage.slot = v; render(); };
