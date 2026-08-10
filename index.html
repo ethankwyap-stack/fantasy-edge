@@ -336,7 +336,7 @@ function row(p, extra='') {
   const pos = POS[p.defaultPositionId];
   const tr = S.trending[(p.fullName||'').toLowerCase()];
   return `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}">
-    <td>${p.fullName} ${tr?'<span class="trend">🔥'+tr+'</span>':''}</td>
+    <td>${esc(p.fullName)} ${tr?'<span class="trend">🔥'+tr+'</span>':''}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>${extra}</tr>`;
 }
