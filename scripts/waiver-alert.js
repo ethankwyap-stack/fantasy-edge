@@ -320,7 +320,8 @@ async function main() {
   const vTtl = vn._ttlWeeks || 3;
   const videoLines = Object.entries(vn.notes || {}).flatMap(([name, ns]) => (ns || [])
     .filter(n => week - (n.week ?? 0) <= vTtl)
-    .map(n => `${name.replace(/\b\w/g, c => c.toUpperCase())} [wk${n.week}, ${n.analyst || 'video'}]: ${n.note}`));
+    // key printed as stored — title-casing mangles "iii"/"mccaffrey", and Claude doesn't need the caps
+    .map(n => `${name} [wk${n.week}, ${n.analyst || 'video'}]: ${n.note}`));
 
   // Free agents first — a spike on a rostered player is context, a spike on an available one is the move.
   const spikeLines = newSpikes
