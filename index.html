@@ -13,6 +13,8 @@
   nav button { background:var(--card); color:var(--dim); border:0; padding:8px 16px; border-radius:8px; cursor:pointer; font-size:15px; }
   nav button.on { background:var(--accent); color:#0f1420; font-weight:600; }
   table { width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; }
+  .tbl-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:10px; }
+  .tbl-wrap table { min-width:560px; }
   th, td { padding:7px 10px; text-align:left; font-size:14px; }
   th { color:var(--dim); font-weight:600; border-bottom:1px solid #2a3450; cursor:default; }
   tr:hover td { background:#222c44; }
@@ -470,7 +472,7 @@ function drow(p) {
   // Every player now has at least the source votes to show, so every row expands.
   const hasExtra = a || inj || p._votes || S.news[(p.fullName||'').toLowerCase()];
   let out = `<tr class="${S.drafted.has(p.id)?'drafted':''} ${S.mine.has(p.id)?'mine':''}" onpointerdown="lpDown(${p.id})" onpointerup="lpUp()" onpointercancel="lpUp()" onpointerleave="lpUp()" oncontextmenu="return false" style="user-select:none;-webkit-user-select:none${hasExtra?';cursor:pointer':''}"${hasExtra?` onclick="tExp(${p.id})"`:''}>
-    <td><span class="tier">${pos}${p._posRank} · ${tierLeft[pos+p._tier]||0} left</span> ${p.fullName}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
+    <td><span class="tier">${pos}${p._posRank} · ${tierLeft[pos+p._tier]||0} left</span> ${esc(p.fullName)}${S.drafted.has(p.id)?' <span class="dtag">— drafted</span>':''} ${injTag} ${tr?'<span class="trend">🔥'+tr+'</span>':''} ${chips} ${metaBits(p.fullName)}</td>
     <td class="pos pos-${pos}">${pos}</td>
     <td>${seasonProj(p)}</td><td>${p._vbd>0?'+':''}${Math.round(p._vbd)}</td>
     <td>${rangeBar(a)}</td>
@@ -749,7 +751,7 @@ const views = {
     if (!rows.length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
     return teamPicker() + `<h2>Week ${S.week} — sorted by ESPN projection. Start from the top of each position.</h2>
     <table><tr><th>Player</th><th>Pos</th><th>Wk ${S.week} Proj</th><th>Injury</th></tr>${
-      rows.map(({p,w}) => `<tr><td>${p.fullName}${vnoteLine(p.fullName) ? '<br>'+vnoteLine(p.fullName) : ''}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
+      rows.map(({p,w}) => `<tr><td>${esc(p.fullName)}${vnoteLine(p.fullName) ? '<br>'+vnoteLine(p.fullName) : ''}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
     }</table>`;
   },
   waivers() {
@@ -784,7 +786,7 @@ const views = {
     return teamPicker() + `
     <h2>Trades that help BOTH sides — ranked by your gain (season starter points)</h2>
     <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Value = points a <i>starting lineup</i> gains (QB1 RB2 WR2 TE1 FLEX1), so a 3rd RB is priced at what he'd actually add. <b>Two different valuations:</b> theirs is ESPN's projection + market ADP — what a normal manager sees. Yours is the full consensus (ESPN + ADP + every analyst board) tilted toward floor over ceiling, because this league seeds by record and you're already a favorite: bust weeks cost you games, boom weeks only pad a win. That gap is why both sides can gain on the same trade.</div>
-    <table><tr><th>Proposal</th><th>You</th><th>Them</th></tr>${list}</table>
+    <div class="tbl-wrap"><table><tr><th>Proposal</th><th>You</th><th>Them</th></tr>${list}</table></div>
     <h2>Starter value by position — what each lineup would lose without it</h2>
     <table><tr><th>Team</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th></tr>${S.teams.map(t => { const s = strength(t);
       return `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${esc(teamName(t))}${t.id===S.myTeamId?' (you)':''}</td><td>${s.QB}</td><td>${s.RB}</td><td>${s.WR}</td><td>${s.TE}</td></tr>`;
