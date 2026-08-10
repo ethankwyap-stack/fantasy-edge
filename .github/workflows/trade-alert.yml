@@ -1,0 +1,27 @@
+name: Trade alert
+on:
+  schedule:
+    # Same hourly 6am-9pm PDT window as waiver-alert.yml (drifts 1h after the Nov PST switch,
+    # accepted there for the same reason).
+    - cron: '0 13-23,0-4 * * *'
+  workflow_dispatch:
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/cache@v4
+        with:
+          path: trade-state.json
+          key: trade-state-${{ github.run_id }}
+          restore-keys: trade-state-
+      # channel:'chrome' uses the Google Chrome preinstalled on GitHub's ubuntu-latest image —
+      # same "system Chrome, not a downloaded Chromium" pattern used for local manual verification.
+      - run: npm install playwright-core --no-fund --no-audit
+      - run: node scripts/trade-alert.js
+        env:
+          APP_SECRET: ${{ secrets.APP_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

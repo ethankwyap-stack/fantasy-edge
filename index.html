@@ -632,13 +632,26 @@ function boomFactor(name, pos) {
   if (posBust[pos] === null) return 1;
   return 1 + BOOM_K * (posBust[pos] - b.bust);
 }
+// News tilt, his side only: ESPN's live injury status, read fresh every 5-minute reload (see
+// injury(), fed by /api/nfl's 1h-cached feed) — so a camp injury moves trade value the same day
+// it's reported, not on the next weekly boom-rates refresh. Headline text stays opinion-only
+// (newsLine below) — there's no reliable zero-cost way to score "camp battle heating up" as a
+// number, so only the one signal that's already a clean status string gets to move value.
+// ponytail: one linear knob, same shape as BOOM_K. Unmapped/no status = severity 0 = abstain.
+const NEWS_K = 0.5;
+const NEWS_SEVERITY = { OUT: 1, IR: 1, PUP: 1, SUSPENDED: 1, DOUBTFUL: 0.6, QUESTIONABLE: 0.3 };
+function newsFactor(name) {
+  const inj = injury(name);
+  const sev = inj ? (NEWS_SEVERITY[(inj.s || '').toUpperCase()] || 0) : 0;
+  return 1 - NEWS_K * sev;
+}
 // Roster as {id,name,pos,pts,mkt}. pts = his risk-adjusted consensus value, mkt = the market's.
 // A rostered player outside the 450-pool falls back to ESPN's projection for both. K/DST/0-proj drop.
 const ptsOf = p => S.players.find(x => x.id === p.id)?._cval ?? seasonProj(p);
 const mktOf = p => S.players.find(x => x.id === p.id)?._mval ?? seasonProj(p);
 const rosterOf = tid => (S.rosters[tid] || [])
   .map(p => { const pos = POS[p.defaultPositionId];
-    return { id: p.id, name: p.fullName, pos, pts: Math.round(ptsOf(p) * boomFactor(p.fullName, pos)), mkt: Math.round(mktOf(p)) }; })
+    return { id: p.id, name: p.fullName, pos, pts: Math.round(ptsOf(p) * boomFactor(p.fullName, pos) * newsFactor(p.fullName)), mkt: Math.round(mktOf(p)) }; })
   .filter(e => START[e.pos] && e.pts > 0);
 // lineup() reads .pts, so viewing a roster through the market's eyes is a re-label, not a 2nd engine.
 const asMarket = ps => ps.map(p => ({ ...p, pts: p.mkt }));
@@ -721,6 +734,14 @@ function whyThem(th, give, get) {
   Object.assign(S, { players: save.players, rosters: save.rosters, teams: save.teams, myTeamId: save.my, boom: save.boom });
 })();
 
+(() => { const si = S.injuries;
+  S.injuries = { 'p1': { status: 'OUT' }, 'p2': { status: 'QUESTIONABLE' }, 'p3': { status: 'ACTIVE' } };
+  console.assert(newsFactor('P1') === 1 - NEWS_K, 'news: OUT did not take max tilt');
+  console.assert(newsFactor('P2') === 1 - NEWS_K * 0.3, 'news: QUESTIONABLE mistilted');
+  console.assert(newsFactor('P3') === 1, 'news: ACTIVE status tilted value');
+  console.assert(newsFactor('Nobody') === 1, 'news: missing player did not abstain');
+  S.injuries = si; })();
+
 // In-season video takes (video-notes.json). Opinion, never value math — they render as text only.
 // Week-tagged and TTL'd: an undated take reads as current forever, same trap as the [2025] tag.
 function vnotesOf(name) {
@@ -738,6 +759,19 @@ function vnoteLine(name) {
   console.assert(vnoteLine('Nobody') === '', 'vnotes: unknown player rendered something');
   S.vnotes = sv; S.week = sw; S.vnoteTtl = st; })();
 
+// Headlines from /api/nfl's news feed (S.news, loaded fresh every 5-min reload). Text only, same
+// boundary as vnoteLine — camp buzz is context for a human to read, never a number newsFactor uses.
+function newsLine(name) {
+  const arts = (S.news[(name||'').toLowerCase()] || []).slice(0, 2);
+  return arts.length ? `<span class="meta">📰 ${arts.map(a => `<a href="${esc(a.u)}" target="_blank">${esc(a.h)}</a>`).join('<br>📰 ')}</span>` : '';
+}
+(() => { const sn = S.news;
+  S.news = { 'buzzy guy': [{ h: 'Wins camp battle', u: 'https://x' }, { h: 'Old news', u: 'https://y' }, { h: 'Cut for length', u: 'https://z' }] };
+  console.assert(/Wins camp battle/.test(newsLine('Buzzy Guy')), 'news: headline missing');
+  console.assert((newsLine('Buzzy Guy').match(/<a /g)||[]).length === 2, 'news: did not cap at 2 headlines');
+  console.assert(newsLine('Nobody') === '', 'news: unknown player rendered something');
+  S.news = sn; })();
+
 const views = {
   draft() {
     return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
@@ -751,7 +785,7 @@ const views = {
     if (!rows.length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
     return teamPicker() + `<h2>Week ${S.week} — sorted by ESPN projection. Start from the top of each position.</h2>
     <table><tr><th>Player</th><th>Pos</th><th>Wk ${S.week} Proj</th><th>Injury</th></tr>${
-      rows.map(({p,w}) => `<tr><td>${esc(p.fullName)}${vnoteLine(p.fullName) ? '<br>'+vnoteLine(p.fullName) : ''}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
+      rows.map(({p,w}) => `<tr><td>${esc(p.fullName)}${[vnoteLine(p.fullName), newsLine(p.fullName)].filter(Boolean).map(l=>'<br>'+l).join('')}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
     }</table>`;
   },
   waivers() {
@@ -772,7 +806,7 @@ const views = {
     const rows = (ps, cls, rejectable) => ps.map(p => `<tr>
       <td>Send ${names(p.s)} to <b>${esc(teamName(p.t))}</b> for ${names(p.g)}
         <br><span class="meta">${p.themGain > 0 ? 'they gain because ' : 'their side: '}${esc(p.why)}</span>
-        ${[...p.s, ...p.g].map(x => vnoteLine(x.name)).filter(Boolean).map(l => '<br>'+l).join('')}</td>
+        ${[...p.s, ...p.g].flatMap(x => [vnoteLine(x.name), newsLine(x.name)]).filter(Boolean).map(l => '<br>'+l).join('')}</td>
       <td><span class="chip good">+${p.meGain} to you</span><br><span class="meta">by consensus + floor</span></td>
       <td><span class="chip ${cls}">${p.themGain > 0 ? '+' : ''}${p.themGain} to them</span><br><span class="meta">by ESPN/ADP</span>
         ${rejectable ? `<br><button class="btn" onclick="rejectTrade('${tradeKey(p)}')">✕ not interested</button>` : ''}</td></tr>`).join('');
