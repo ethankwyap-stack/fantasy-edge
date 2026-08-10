@@ -75,7 +75,7 @@
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, boom:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), tradeRejects:new Set(JSON.parse(localStorage.tr||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, boom:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
   // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
   pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
@@ -257,7 +257,7 @@ async function load() {
     // 450 matches the research pool (scripts/draft-research.js) so every player Claude
     // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending, analysis, ranks, injuries, news, boom] = await Promise.all([
+    const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes] = await Promise.all([
       espn('mTeam,mRoster,mSettings'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
@@ -265,8 +265,11 @@ async function load() {
       fetch('/analyst-ranks.json').then(r=>r.json()).catch(()=>({players:{}})),
       fetch('/api/nfl?feed=injuries').then(r=>r.json()).catch(()=>({data:{}})),
       fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]})),
-      fetch('/boom-rates.json').then(r=>r.json()).catch(()=>({players:{}}))
+      fetch('/boom-rates.json').then(r=>r.json()).catch(()=>({players:{}})),
+      fetch('/video-notes.json').then(r=>r.json()).catch(()=>({notes:{}}))
     ]);
+    S.vnotes = vnotes.notes || {};
+    S.vnoteTtl = vnotes._ttlWeeks || 3;
     S.boom = boom.players || {};
     S.boomSeason = boom.season || '';
     S.boomStale = !!boom.stale; // set by boom-rates.js when it fell back to a prior season
@@ -669,6 +672,9 @@ function findTrades() {
   }
   return out.sort((a, b) => b.meGain - a.meGain);
 }
+// Stable id for a proposal so a reject survives re-render (rosters/valuations can reorder the list).
+const tradeKey = p => `${p.t.id}:${p.s.map(x=>x.id).sort().join(',')}:${p.g.map(x=>x.id).sort().join(',')}`;
+window.rejectTrade = key => { S.tradeRejects.add(key); localStorage.tr = JSON.stringify([...S.tradeRejects]); render(); };
 // The other side's reason, read off their own lineup: who they were starting that our player replaces.
 function whyThem(th, give, get) {
   const goneIds = new Set(give.map(p => p.id));
@@ -713,6 +719,23 @@ function whyThem(th, give, get) {
   Object.assign(S, { players: save.players, rosters: save.rosters, teams: save.teams, myTeamId: save.my, boom: save.boom });
 })();
 
+// In-season video takes (video-notes.json). Opinion, never value math — they render as text only.
+// Week-tagged and TTL'd: an undated take reads as current forever, same trap as the [2025] tag.
+function vnotesOf(name) {
+  return ((S.vnotes || {})[(name||'').toLowerCase()] || []).filter(n => S.week - (n.week ?? 0) <= (S.vnoteTtl || 3));
+}
+function vnoteLine(name) {
+  const ns = vnotesOf(name);
+  return ns.length ? `<span class="meta">🎬 ${ns.map(n => esc(`[wk${n.week}, ${n.analyst||'video'}] ${n.note}`)).join('<br>🎬 ')}</span>` : '';
+}
+(() => { const sv = S.vnotes, sw = S.week, st = S.vnoteTtl;
+  S.week = 8; S.vnoteTtl = 3;
+  S.vnotes = { 'fresh guy': [{ week: 7, analyst: 'X', note: 'league winner' }], 'old guy': [{ week: 2, note: 'stale take' }] };
+  console.assert(/wk7/.test(vnoteLine('Fresh Guy')) && /X/.test(vnoteLine('Fresh Guy')), 'vnotes: fresh note missing week/analyst tag');
+  console.assert(vnoteLine('Old Guy') === '', 'vnotes: note past TTL still rendered');
+  console.assert(vnoteLine('Nobody') === '', 'vnotes: unknown player rendered something');
+  S.vnotes = sv; S.week = sw; S.vnoteTtl = st; })();
+
 const views = {
   draft() {
     return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
@@ -726,7 +749,7 @@ const views = {
     if (!rows.length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
     return teamPicker() + `<h2>Week ${S.week} — sorted by ESPN projection. Start from the top of each position.</h2>
     <table><tr><th>Player</th><th>Pos</th><th>Wk ${S.week} Proj</th><th>Injury</th></tr>${
-      rows.map(({p,w}) => `<tr><td>${p.fullName}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
+      rows.map(({p,w}) => `<tr><td>${p.fullName}${vnoteLine(p.fullName) ? '<br>'+vnoteLine(p.fullName) : ''}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
     }</table>`;
   },
   waivers() {
@@ -740,19 +763,21 @@ const views = {
   },
   trades() {
     if (!rosterOf(S.myTeamId).length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
-    const all = findTrades();
+    const all = findTrades().filter(p => !S.tradeRejects.has(tradeKey(p)));
     // ponytail: top 25 shown; the tail is variations on the same handful of deals.
     const props = all.filter(p => p.themGain > 0).slice(0, 25);
     const names = a => a.map(p => `<b>${esc(p.name)}</b> (${p.pos})`).join(' + ');
-    const rows = (ps, cls) => ps.map(p => `<tr>
+    const rows = (ps, cls, rejectable) => ps.map(p => `<tr>
       <td>Send ${names(p.s)} to <b>${esc(teamName(p.t))}</b> for ${names(p.g)}
-        <br><span class="meta">${p.themGain > 0 ? 'they gain because ' : 'their side: '}${esc(p.why)}</span></td>
+        <br><span class="meta">${p.themGain > 0 ? 'they gain because ' : 'their side: '}${esc(p.why)}</span>
+        ${[...p.s, ...p.g].map(x => vnoteLine(x.name)).filter(Boolean).map(l => '<br>'+l).join('')}</td>
       <td><span class="chip good">+${p.meGain} to you</span><br><span class="meta">by consensus + floor</span></td>
-      <td><span class="chip ${cls}">${p.themGain > 0 ? '+' : ''}${p.themGain} to them</span><br><span class="meta">by ESPN/ADP</span></td></tr>`).join('');
+      <td><span class="chip ${cls}">${p.themGain > 0 ? '+' : ''}${p.themGain} to them</span><br><span class="meta">by ESPN/ADP</span>
+        ${rejectable ? `<br><button class="btn" onclick="rejectTrade('${tradeKey(p)}')">✕ not interested</button>` : ''}</td></tr>`).join('');
     // Nothing mutually positive is a real answer, not a bug — but show the near misses so he can
     // see how far off fair they are, sorted by the smallest loss to the other side.
     const near = all.filter(p => p.themGain <= 0).sort((a,b) => (b.meGain+b.themGain) - (a.meGain+a.themGain)).slice(0, 5);
-    const list = props.length ? rows(props, '') : `<tr><td colspan="3" class="msg">No trade helps both sides right now — every roster's starters are already where they're worth the most. Closest misses (the other side loses, so expect a no):</td></tr>${rows(near, 'risk')}`;
+    const list = props.length ? rows(props, '', true) : `<tr><td colspan="3" class="msg">No trade helps both sides right now — every roster's starters are already where they're worth the most. Closest misses (the other side loses, so expect a no):</td></tr>${rows(near, 'risk', false)}`;
     // Starter value by position: what your lineup would lose if that position vanished.
     const strength = t => { const r = rosterOf(t.id), tot = lineupTotal(r);
       return Object.fromEntries(['QB','RB','WR','TE'].map(pos => [pos, Math.round(tot - lineupTotal(r.filter(p => p.pos !== pos)))])); };

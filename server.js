@@ -16,6 +16,9 @@ const RANKS = (() => { try { return fs.readFileSync(RANKS_PATH); } catch { retur
 // Boom/bust rates (scripts/boom-rates.js). Same literal-path rule for Vercel tracing.
 const BOOM_PATH = path.join(__dirname, 'boom-rates.json');
 const BOOM = (() => { try { return fs.readFileSync(BOOM_PATH); } catch { return Buffer.from('{"players":{}}'); } })();
+// In-season video notes (fantasy-video-inject skill). Same literal-path rule for Vercel tracing.
+const VNOTES_PATH = path.join(__dirname, 'video-notes.json');
+const VNOTES = (() => { try { return fs.readFileSync(VNOTES_PATH); } catch { return Buffer.from('{"notes":{}}'); } })();
 
 const PORT = process.env.PORT || 4650;
 const SECRET = espn.loadEnv().APP_SECRET;
@@ -46,6 +49,10 @@ http.createServer((req, res) => {
   if (req.url.startsWith('/boom-rates.json')) {
     res.setHeader('Content-Type', 'application/json');
     try { return res.end(fs.readFileSync(BOOM_PATH)); } catch { return res.end(BOOM); }
+  }
+  if (req.url.startsWith('/video-notes.json')) {
+    res.setHeader('Content-Type', 'application/json');
+    try { return res.end(fs.readFileSync(VNOTES_PATH)); } catch { return res.end(VNOTES); }
   }
   res.setHeader('Content-Type', 'text/html');
   res.end(INDEX);

@@ -314,6 +314,14 @@ async function main() {
 
   const newsLines = newArticles.map(a => `${a.headline} [${a.players.join(', ')}]`);
 
+  // Video notes (video-notes.json, written by the fantasy-video-inject skill). Week-tagged and
+  // TTL'd: an in-season take goes stale fast, and an undated one would read as current forever.
+  const vn = (() => { try { return JSON.parse(fs.readFileSync(require('path').join(__dirname, '..', 'video-notes.json'), 'utf8')); } catch { return {}; } })();
+  const vTtl = vn._ttlWeeks || 3;
+  const videoLines = Object.entries(vn.notes || {}).flatMap(([name, ns]) => (ns || [])
+    .filter(n => week - (n.week ?? 0) <= vTtl)
+    .map(n => `${name.replace(/\b\w/g, c => c.toUpperCase())} [wk${n.week}, ${n.analyst || 'video'}]: ${n.note}`));
+
   // Free agents first — a spike on a rostered player is context, a spike on an available one is the move.
   const spikeLines = newSpikes
     .map(s => ({ ...s, fa: !rostered.has(s.name) }))
@@ -348,7 +356,10 @@ Opportunity deltas — week-over-week jumps in actual role (snap share stands in
 ${spikeLines.join('\n') || '(none)'}
 
 Camp/preseason news since last check (player tags in brackets):
-${newsLines.join('\n') || '(none)'}`;
+${newsLines.join('\n') || '(none)'}
+
+Video/podcast takes I injected (week-tagged; opinion, not data — weigh below the usage numbers above):
+${videoLines.join('\n') || '(none)'}`;
 
   console.log('--- prompt ---\n' + prompt + '\n--- end prompt ---');
 
