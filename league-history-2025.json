@@ -1,0 +1,3707 @@
+{
+ "generated": "2026-08-13T05:32:08.943Z",
+ "benchValue": {
+  "season": 2025,
+  "starterAvg": 195,
+  "starterN": 72,
+  "benchAvg": 114.8,
+  "benchN": 71,
+  "rows": [
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "pts": 313.6
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Chase Brown",
+    "pos": "RB",
+    "pts": 282.6
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Josh Jacobs",
+    "pos": "RB",
+    "pts": 237.1
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Courtland Sutton",
+    "pos": "WR",
+    "pts": 219.7
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Tetairoa McMillan",
+    "pos": "WR",
+    "pts": 211.4
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "WR",
+    "isBench": false,
+    "name": "George Pickens",
+    "pos": "WR",
+    "pts": 291.9
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jacory Croskey-Merritt",
+    "pos": "RB",
+    "pts": 140.3
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Zach Charbonnet",
+    "pos": "RB",
+    "pts": 181.4
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jauan Jennings",
+    "pos": "WR",
+    "pts": 173.3
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Dak Prescott",
+    "pos": "QB",
+    "pts": 313.78
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Tucker Kraft",
+    "pos": "TE",
+    "pts": 117.2
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jayden Higgins",
+    "pos": "WR",
+    "pts": 129.5
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Ray Davis",
+    "pos": "RB",
+    "pts": 64.1
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16022",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Luther Burden III",
+    "pos": "WR",
+    "pts": 127.9
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "teamId": 1,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Tyler Loop",
+    "pos": "K",
+    "pts": 140
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "pts": 366.9
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "WR",
+    "isBench": false,
+    "name": "A.J. Brown",
+    "pos": "WR",
+    "pts": 220.3
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Josh Allen",
+    "pos": "QB",
+    "pts": 364.62
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Jakobi Meyers",
+    "pos": "WR",
+    "pts": 175.8
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jaylen Warren",
+    "pos": "RB",
+    "pts": 217.1
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jordan Addison",
+    "pos": "WR",
+    "pts": 135.1
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Chris Godwin Jr.",
+    "pos": "WR",
+    "pts": 83
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "pts": 82.3
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "K",
+    "isBench": false,
+    "name": "Chase McLaughlin",
+    "pos": "K",
+    "pts": 151
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16034",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Hunter Henry",
+    "pos": "TE",
+    "pts": 178.8
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Rashod Bateman",
+    "pos": "WR",
+    "pts": 55.4
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "DeMario Douglas",
+    "pos": "WR",
+    "pts": 95.8
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "RB",
+    "isBench": false,
+    "name": "De'Von Achane",
+    "pos": "RB",
+    "pts": 322.8
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "WR",
+    "isBench": false,
+    "name": "DK Metcalf",
+    "pos": "WR",
+    "pts": 187.2
+   },
+   {
+    "team": "Nico Suave",
+    "teamId": 2,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "pts": 188.5
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Saquon Barkley",
+    "pos": "RB",
+    "pts": 232.3
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Tyreek Hill",
+    "pos": "WR",
+    "pts": 53.5
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "pts": 114.28
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Marvin Harrison Jr.",
+    "pos": "WR",
+    "pts": 127.8
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "DJ Moore",
+    "pos": "WR",
+    "pts": 170.18
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Isiah Pacheco",
+    "pos": "RB",
+    "pts": 87.3
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "TE",
+    "isBench": false,
+    "name": "T.J. Hockenson",
+    "pos": "TE",
+    "pts": 112.8
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Michael Pittman Jr.",
+    "pos": "WR",
+    "pts": 202.4
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Xavier Legette",
+    "pos": "WR",
+    "pts": 89.3
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Rachaad White",
+    "pos": "RB",
+    "pts": 143
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Justin Fields",
+    "pos": "QB",
+    "pts": 142.66
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Dallas Goedert",
+    "pos": "TE",
+    "pts": 185.1
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "K",
+    "isBench": false,
+    "name": "Cameron Dicker",
+    "pos": "K",
+    "pts": 167
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "IR",
+    "isBench": true,
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "pts": 111.7
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Romeo Doubs",
+    "pos": "WR",
+    "pts": 165.4
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16025",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "teamId": 3,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Bryce Young",
+    "pos": "QB",
+    "pts": 218.04
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "pts": 375
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Drake London",
+    "pos": "WR",
+    "pts": 201.9
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Omarion Hampton",
+    "pos": "RB",
+    "pts": 135.7
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "pts": 299.06
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "pts": 150.1
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "RB",
+    "isBench": false,
+    "name": "RJ Harvey",
+    "pos": "RB",
+    "pts": 206.6
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Travis Hunter",
+    "pos": "WR",
+    "pts": 63.8
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Mark Andrews",
+    "pos": "TE",
+    "pts": 131
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "pts": 128.9
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jerome Ford",
+    "pos": "RB",
+    "pts": 43.6
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jaydon Blue",
+    "pos": "RB",
+    "pts": 20.4
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Justin Herbert",
+    "pos": "QB",
+    "pts": 286.88
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Hollywood Brown",
+    "pos": "WR",
+    "pts": 137.7
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "K",
+    "isBench": false,
+    "name": "Cam Little",
+    "pos": "K",
+    "pts": 162
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16011",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "IR",
+    "isBench": true,
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "pts": 90.4
+   },
+   {
+    "team": "Jalen Kirk",
+    "teamId": 4,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Dont'e Thornton Jr.",
+    "pos": "WR",
+    "pts": 23.5
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "pts": 416.6
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "pts": 362.3
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "pts": 359.9
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Garrett Wilson",
+    "pos": "WR",
+    "pts": 99.5
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Calvin Ridley",
+    "pos": "WR",
+    "pts": 47.3
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Evan Engram",
+    "pos": "TE",
+    "pts": 102.8
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Ricky Pearsall",
+    "pos": "WR",
+    "pts": 88.6
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "pts": 77.78
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Kaleb Johnson",
+    "pos": "RB",
+    "pts": 8.8
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "pts": 88.6
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Kyle Pitts Sr.",
+    "pos": "TE",
+    "pts": 210.8
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Will Shipley",
+    "pos": "RB",
+    "pts": 17.5
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "K",
+    "isBench": false,
+    "name": "Ka'imi Fairbairn",
+    "pos": "K",
+    "pts": 190
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16021",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Brian Robinson Jr.",
+    "pos": "RB",
+    "pts": 62.5
+   },
+   {
+    "team": "Njigbas in Paris",
+    "teamId": 6,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Dylan Sampson",
+    "pos": "RB",
+    "pts": 87.6
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Malik Nabers",
+    "pos": "WR",
+    "pts": 57.1
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "RB",
+    "isBench": false,
+    "name": "James Cook III",
+    "pos": "RB",
+    "pts": 302.2
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Terry McLaurin",
+    "pos": "WR",
+    "pts": 114.2
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Aaron Jones Sr.",
+    "pos": "RB",
+    "pts": 118.7
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Tyrone Tracy Jr.",
+    "pos": "RB",
+    "pts": 160.8
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Cooper Kupp",
+    "pos": "WR",
+    "pts": 116.3
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Brock Purdy",
+    "pos": "QB",
+    "pts": 177.38
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Cedric Tillman",
+    "pos": "WR",
+    "pts": 60
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "K",
+    "isBench": false,
+    "name": "Jake Bates",
+    "pos": "K",
+    "pts": 145
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "pts": 126.1
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jared Goff",
+    "pos": "QB",
+    "pts": 297.06
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "pts": 338.18
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Chuba Hubbard",
+    "pos": "RB",
+    "pts": 125.4
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Mike Evans",
+    "pos": "WR",
+    "pts": 84.8
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Travis Kelce",
+    "pos": "TE",
+    "pts": 193.2
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "teamId": 7,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16020",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Brian Thomas Jr.",
+    "pos": "WR",
+    "pts": 138.8
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Derrick Henry",
+    "pos": "RB",
+    "pts": 279.5
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "TE",
+    "isBench": false,
+    "name": "George Kittle",
+    "pos": "TE",
+    "pts": 161.5
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "RB",
+    "isBench": false,
+    "name": "TreVeyon Henderson",
+    "pos": "RB",
+    "pts": 206.2
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Emeka Egbuka",
+    "pos": "WR",
+    "pts": 195.7
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Baker Mayfield",
+    "pos": "QB",
+    "pts": 271.92
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Stefon Diggs",
+    "pos": "WR",
+    "pts": 210.3
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Deebo Samuel",
+    "pos": "WR",
+    "pts": 188.2
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Nick Chubb",
+    "pos": "RB",
+    "pts": 88.3
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Tank Bigsby",
+    "pos": "RB",
+    "pts": 53.8
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Marvin Mims Jr.",
+    "pos": "WR",
+    "pts": 93
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Ollie Gordon II",
+    "pos": "RB",
+    "pts": 54.1
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16016",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "K",
+    "isBench": false,
+    "name": "Brandon McManus",
+    "pos": "K",
+    "pts": 107
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Michael Penix Jr.",
+    "pos": "QB",
+    "pts": 120.28
+   },
+   {
+    "team": "Myer Lemon",
+    "teamId": 8,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "pts": 123
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Nico Collins",
+    "pos": "WR",
+    "pts": 226.2
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Ashton Jeanty",
+    "pos": "RB",
+    "pts": 245.1
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Joe Burrow",
+    "pos": "QB",
+    "pts": 134.46
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "pts": 191.9
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "D'Andre Swift",
+    "pos": "RB",
+    "pts": 228.6
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Sam LaPorta",
+    "pos": "TE",
+    "pts": 106.9
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Jerry Jeudy",
+    "pos": "WR",
+    "pts": 120.7
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Chris Olave",
+    "pos": "WR",
+    "pts": 268
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Keenan Allen",
+    "pos": "WR",
+    "pts": 182.7
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Javonte Williams",
+    "pos": "RB",
+    "pts": 242.8
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16023",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "id-16008",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "id-16009",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "pts": 318.18
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Matthew Stafford",
+    "pos": "QB",
+    "pts": 350.38
+   },
+   {
+    "team": "Ashton of Ass",
+    "teamId": 9,
+    "slot": "K",
+    "isBench": false,
+    "name": "Jake Elliott",
+    "pos": "K",
+    "pts": 109
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "WR",
+    "isBench": false,
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "pts": 200.9
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Kyren Williams",
+    "pos": "RB",
+    "pts": 263.3
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Tee Higgins",
+    "pos": "WR",
+    "pts": 211.6
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "RB",
+    "isBench": false,
+    "name": "David Montgomery",
+    "pos": "RB",
+    "pts": 166.92
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "pts": 201.8
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Bo Nix",
+    "pos": "QB",
+    "pts": 304.84
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "IR",
+    "isBench": true,
+    "name": "Joe Mixon",
+    "pos": "RB",
+    "pts": 0
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Keon Coleman",
+    "pos": "WR",
+    "pts": 102.4
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jayden Reed",
+    "pos": "WR",
+    "pts": 48.5
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jonnu Smith",
+    "pos": "TE",
+    "pts": 85.2
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Najee Harris",
+    "pos": "RB",
+    "pts": 11.6
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Adam Thielen",
+    "pos": "WR",
+    "pts": 39.6
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16033",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Zach Ertz",
+    "pos": "TE",
+    "pts": 126.4
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jordan Love",
+    "pos": "QB",
+    "pts": 235.14
+   },
+   {
+    "team": "Damardiac Arrest",
+    "teamId": 10,
+    "slot": "K",
+    "isBench": false,
+    "name": "Chris Boswell",
+    "pos": "K",
+    "pts": 147
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "pts": 324
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "pts": 176.2
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "pts": 214.86
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Davante Adams",
+    "pos": "WR",
+    "pts": 222.9
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Breece Hall",
+    "pos": "RB",
+    "pts": 207.66
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Tony Pollard",
+    "pos": "RB",
+    "pts": 185.8
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "pts": 194.12
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "David Njoku",
+    "pos": "TE",
+    "pts": 86.3
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "pts": 156.6
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Austin Ekeler",
+    "pos": "RB",
+    "pts": 13.1
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Braelon Allen",
+    "pos": "RB",
+    "pts": 15.3
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16007",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Tyler Bass",
+    "pos": "K",
+    "pts": 0
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Drake Maye",
+    "pos": "QB",
+    "pts": 351.96
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "pts": 208.54
+   },
+   {
+    "team": "Lamar-a-lago",
+    "teamId": 11,
+    "slot": "K",
+    "isBench": false,
+    "name": "Jason Myers",
+    "pos": "K",
+    "pts": 195
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Justin Jefferson",
+    "pos": "WR",
+    "pts": 201.5
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Trey McBride",
+    "pos": "TE",
+    "pts": 315.9
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Alvin Kamara",
+    "pos": "RB",
+    "pts": 100.7
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "RB",
+    "isBench": false,
+    "name": "James Conner",
+    "pos": "RB",
+    "pts": 33.3
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Jameson Williams",
+    "pos": "WR",
+    "pts": 219.9
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "QB",
+    "isBench": false,
+    "name": "Patrick Mahomes",
+    "pos": "QB",
+    "pts": 285.68
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "pts": 70
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "J.K. Dobbins",
+    "pos": "RB",
+    "pts": 115.9
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Khalil Shakir",
+    "pos": "WR",
+    "pts": 166.4
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Cam Skattebo",
+    "pos": "RB",
+    "pts": 127.7
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Josh Downs",
+    "pos": "WR",
+    "pts": 136.4
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Quinshon Judkins",
+    "pos": "RB",
+    "pts": 169.8
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "K",
+    "isBench": false,
+    "name": "Brandon Aubrey",
+    "pos": "K",
+    "pts": 184.6
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "pts": 217.9
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16017",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "Skat's Super CTE",
+    "teamId": 12,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Cam Ward",
+    "pos": "QB",
+    "pts": 186.66
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "pts": 370.8
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "RB",
+    "isBench": false,
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "pts": 138.5
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Ladd McConkey",
+    "pos": "WR",
+    "pts": 180.9
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "WR",
+    "isBench": false,
+    "name": "Xavier Worthy",
+    "pos": "WR",
+    "pts": 109.9
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "FLEX",
+    "isBench": false,
+    "name": "Zay Flowers",
+    "pos": "WR",
+    "pts": 243.3
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Rome Odunze",
+    "pos": "WR",
+    "pts": 146.1
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "TE",
+    "isBench": false,
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "pts": 165.1
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Rhamondre Stevenson",
+    "pos": "RB",
+    "pts": 178.8
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Travis Etienne Jr.",
+    "pos": "RB",
+    "pts": 253.9
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Trey Benson",
+    "pos": "RB",
+    "pts": 35.4
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Brandon Aiyuk",
+    "pos": "WR",
+    "pts": 0
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "pts": 188.1
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "BENCH",
+    "isBench": true,
+    "name": "Christian Kirk",
+    "pos": "WR",
+    "pts": 57.9
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "D/ST",
+    "isBench": false,
+    "name": "id-16026",
+    "pos": "?",
+    "pts": 0
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "QB",
+    "isBench": false,
+    "name": "J.J. McCarthy",
+    "pos": "QB",
+    "pts": 125.38
+   },
+   {
+    "team": "EaTN McCokkey",
+    "teamId": 13,
+    "slot": "K",
+    "isBench": false,
+    "name": "Younghoe Koo",
+    "pos": "K",
+    "pts": 30
+   }
+  ]
+ },
+ "sleeperHitRate": {
+  "season": 2025,
+  "byPos": {
+   "QB": {
+    "attempts": 12,
+    "hits": 6,
+    "hitRate": 50
+   },
+   "RB": {
+    "attempts": 32,
+    "hits": 6,
+    "hitRate": 18.8
+   },
+   "WR": {
+    "attempts": 43,
+    "hits": 9,
+    "hitRate": 20.9
+   },
+   "TE": {
+    "attempts": 7,
+    "hits": 5,
+    "hitRate": 71.4
+   }
+  },
+  "panned": [
+   {
+    "overall": 126,
+    "round": 11,
+    "team": "Njigbas in Paris",
+    "name": "Kyle Pitts Sr.",
+    "pos": "TE",
+    "pts": 210.8,
+    "draftPosRank": 14,
+    "finishPosRank": 2
+   },
+   {
+    "overall": 159,
+    "round": 14,
+    "team": "Lamar-a-lago",
+    "name": "Drake Maye",
+    "pos": "QB",
+    "pts": 351.96,
+    "draftPosRank": 15,
+    "finishPosRank": 2
+   },
+   {
+    "overall": 180,
+    "round": 15,
+    "team": "Ashton of Ass",
+    "name": "Matthew Stafford",
+    "pos": "QB",
+    "pts": 350.38,
+    "draftPosRank": 20,
+    "finishPosRank": 3
+   },
+   {
+    "overall": 185,
+    "round": 16,
+    "team": "2 gurls 1 kupp",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "pts": 338.18,
+    "draftPosRank": 23,
+    "finishPosRank": 4
+   },
+   {
+    "overall": 72,
+    "round": 6,
+    "team": "Bucky Irving 🤤",
+    "name": "George Pickens",
+    "pos": "WR",
+    "pts": 291.9,
+    "draftPosRank": 32,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 143,
+    "round": 12,
+    "team": "EaTN McCokkey",
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "pts": 188.1,
+    "draftPosRank": 16,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 157,
+    "round": 14,
+    "team": "Ashton of Ass",
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "pts": 318.18,
+    "draftPosRank": 14,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 85,
+    "round": 8,
+    "team": "Ashton of Ass",
+    "name": "Chris Olave",
+    "pos": "WR",
+    "pts": 268,
+    "draftPosRank": 40,
+    "finishPosRank": 6
+   },
+   {
+    "overall": 142,
+    "round": 12,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Dallas Goedert",
+    "pos": "TE",
+    "pts": 185.1,
+    "draftPosRank": 15,
+    "finishPosRank": 6
+   },
+   {
+    "overall": 164,
+    "round": 14,
+    "team": "Nico Suave",
+    "name": "Hunter Henry",
+    "pos": "TE",
+    "pts": 178.8,
+    "draftPosRank": 19,
+    "finishPosRank": 7
+   },
+   {
+    "overall": 161,
+    "round": 14,
+    "team": "2 gurls 1 kupp",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "pts": 297.06,
+    "draftPosRank": 16,
+    "finishPosRank": 9
+   },
+   {
+    "overall": 98,
+    "round": 9,
+    "team": "EaTN McCokkey",
+    "name": "Travis Etienne Jr.",
+    "pos": "RB",
+    "pts": 253.9,
+    "draftPosRank": 34,
+    "finishPosRank": 10
+   },
+   {
+    "overall": 136,
+    "round": 12,
+    "team": "Jalen Kirk",
+    "name": "Justin Herbert",
+    "pos": "QB",
+    "pts": 286.88,
+    "draftPosRank": 13,
+    "finishPosRank": 10
+   },
+   {
+    "overall": 109,
+    "round": 10,
+    "team": "Ashton of Ass",
+    "name": "Javonte Williams",
+    "pos": "RB",
+    "pts": 242.8,
+    "draftPosRank": 38,
+    "finishPosRank": 12
+   },
+   {
+    "overall": 162,
+    "round": 14,
+    "team": "Damardiac Arrest",
+    "name": "Zach Ertz",
+    "pos": "TE",
+    "pts": 126.4,
+    "draftPosRank": 18,
+    "finishPosRank": 12
+   },
+   {
+    "overall": 165,
+    "round": 14,
+    "team": "Skat's Super CTE",
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "pts": 217.9,
+    "draftPosRank": 63,
+    "finishPosRank": 13
+   },
+   {
+    "overall": 83,
+    "round": 7,
+    "team": "Myer Lemon",
+    "name": "Stefon Diggs",
+    "pos": "WR",
+    "pts": 210.3,
+    "draftPosRank": 38,
+    "finishPosRank": 16
+   },
+   {
+    "overall": 92,
+    "round": 8,
+    "team": "Nico Suave",
+    "name": "Jaylen Warren",
+    "pos": "RB",
+    "pts": 217.1,
+    "draftPosRank": 30,
+    "finishPosRank": 16
+   },
+   {
+    "overall": 94,
+    "round": 8,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Michael Pittman Jr.",
+    "pos": "WR",
+    "pts": 202.4,
+    "draftPosRank": 44,
+    "finishPosRank": 17
+   },
+   {
+    "overall": 55,
+    "round": 5,
+    "team": "Damardiac Arrest",
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "pts": 201.8,
+    "draftPosRank": 27,
+    "finishPosRank": 19
+   },
+   {
+    "overall": 59,
+    "round": 5,
+    "team": "Myer Lemon",
+    "name": "Emeka Egbuka",
+    "pos": "WR",
+    "pts": 195.7,
+    "draftPosRank": 30,
+    "finishPosRank": 22
+   },
+   {
+    "overall": 96,
+    "round": 8,
+    "team": "Bucky Irving 🤤",
+    "name": "Zach Charbonnet",
+    "pos": "RB",
+    "pts": 181.4,
+    "draftPosRank": 33,
+    "finishPosRank": 22
+   },
+   {
+    "overall": 82,
+    "round": 7,
+    "team": "Lamar-a-lago",
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "pts": 194.12,
+    "draftPosRank": 37,
+    "finishPosRank": 23
+   },
+   {
+    "overall": 95,
+    "round": 8,
+    "team": "EaTN McCokkey",
+    "name": "Rhamondre Stevenson",
+    "pos": "RB",
+    "pts": 178.8,
+    "draftPosRank": 32,
+    "finishPosRank": 23
+   },
+   {
+    "overall": 86,
+    "round": 8,
+    "team": "Myer Lemon",
+    "name": "Deebo Samuel",
+    "pos": "WR",
+    "pts": 188.2,
+    "draftPosRank": 41,
+    "finishPosRank": 24
+   },
+   {
+    "overall": 141,
+    "round": 12,
+    "team": "Skat's Super CTE",
+    "name": "Quinshon Judkins",
+    "pos": "RB",
+    "pts": 169.8,
+    "draftPosRank": 50,
+    "finishPosRank": 24
+   }
+  ],
+  "rows": [
+   {
+    "overall": 1,
+    "round": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "pts": 313.6,
+    "draftPosRank": 1,
+    "finishPosRank": 4
+   },
+   {
+    "overall": 2,
+    "round": 1,
+    "team": "EaTN McCokkey",
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "pts": 370.8,
+    "draftPosRank": 1,
+    "finishPosRank": 2
+   },
+   {
+    "overall": 3,
+    "round": 1,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Saquon Barkley",
+    "pos": "RB",
+    "pts": 232.3,
+    "draftPosRank": 2,
+    "finishPosRank": 14
+   },
+   {
+    "overall": 4,
+    "round": 1,
+    "team": "Skat's Super CTE",
+    "name": "Justin Jefferson",
+    "pos": "WR",
+    "pts": 201.5,
+    "draftPosRank": 2,
+    "finishPosRank": 20
+   },
+   {
+    "overall": 5,
+    "round": 1,
+    "team": "Nico Suave",
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "pts": 366.9,
+    "draftPosRank": 3,
+    "finishPosRank": 3
+   },
+   {
+    "overall": 6,
+    "round": 1,
+    "team": "Njigbas in Paris",
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "pts": 416.6,
+    "draftPosRank": 4,
+    "finishPosRank": 1
+   },
+   {
+    "overall": 7,
+    "round": 1,
+    "team": "Damardiac Arrest",
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "pts": 200.9,
+    "draftPosRank": 3,
+    "finishPosRank": 21
+   },
+   {
+    "overall": 8,
+    "round": 1,
+    "team": "2 gurls 1 kupp",
+    "name": "Malik Nabers",
+    "pos": "WR",
+    "pts": 57.1,
+    "draftPosRank": 4,
+    "finishPosRank": 60
+   },
+   {
+    "overall": 9,
+    "round": 1,
+    "team": "Jalen Kirk",
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "pts": 375,
+    "draftPosRank": 5,
+    "finishPosRank": 1
+   },
+   {
+    "overall": 10,
+    "round": 1,
+    "team": "Lamar-a-lago",
+    "name": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "pts": 324,
+    "draftPosRank": 6,
+    "finishPosRank": 3
+   },
+   {
+    "overall": 11,
+    "round": 1,
+    "team": "Myer Lemon",
+    "name": "Brian Thomas Jr.",
+    "pos": "WR",
+    "pts": 138.8,
+    "draftPosRank": 7,
+    "finishPosRank": 36
+   },
+   {
+    "overall": 12,
+    "round": 1,
+    "team": "Ashton of Ass",
+    "name": "Nico Collins",
+    "pos": "WR",
+    "pts": 226.2,
+    "draftPosRank": 8,
+    "finishPosRank": 8
+   },
+   {
+    "overall": 13,
+    "round": 2,
+    "team": "Ashton of Ass",
+    "name": "Ashton Jeanty",
+    "pos": "RB",
+    "pts": 245.1,
+    "draftPosRank": 5,
+    "finishPosRank": 11
+   },
+   {
+    "overall": 14,
+    "round": 2,
+    "team": "Myer Lemon",
+    "name": "Derrick Henry",
+    "pos": "RB",
+    "pts": 279.5,
+    "draftPosRank": 6,
+    "finishPosRank": 8
+   },
+   {
+    "overall": 15,
+    "round": 2,
+    "team": "Lamar-a-lago",
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "pts": 176.2,
+    "draftPosRank": 1,
+    "finishPosRank": 8
+   },
+   {
+    "overall": 16,
+    "round": 2,
+    "team": "Jalen Kirk",
+    "name": "Drake London",
+    "pos": "WR",
+    "pts": 201.9,
+    "draftPosRank": 9,
+    "finishPosRank": 18
+   },
+   {
+    "overall": 17,
+    "round": 2,
+    "team": "2 gurls 1 kupp",
+    "name": "De'Von Achane",
+    "pos": "RB",
+    "pts": 322.8,
+    "draftPosRank": 7,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 18,
+    "round": 2,
+    "team": "Damardiac Arrest",
+    "name": "Kyren Williams",
+    "pos": "RB",
+    "pts": 263.3,
+    "draftPosRank": 8,
+    "finishPosRank": 9
+   },
+   {
+    "overall": 19,
+    "round": 2,
+    "team": "Njigbas in Paris",
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "pts": 362.3,
+    "draftPosRank": 9,
+    "finishPosRank": 4
+   },
+   {
+    "overall": 20,
+    "round": 2,
+    "team": "Nico Suave",
+    "name": "A.J. Brown",
+    "pos": "WR",
+    "pts": 220.3,
+    "draftPosRank": 10,
+    "finishPosRank": 10
+   },
+   {
+    "overall": 21,
+    "round": 2,
+    "team": "Skat's Super CTE",
+    "name": "Trey McBride",
+    "pos": "TE",
+    "pts": 315.9,
+    "draftPosRank": 2,
+    "finishPosRank": 1
+   },
+   {
+    "overall": 22,
+    "round": 2,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Tyreek Hill",
+    "pos": "WR",
+    "pts": 53.5,
+    "draftPosRank": 11,
+    "finishPosRank": 62
+   },
+   {
+    "overall": 23,
+    "round": 2,
+    "team": "EaTN McCokkey",
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "pts": 138.5,
+    "draftPosRank": 10,
+    "finishPosRank": 29
+   },
+   {
+    "overall": 24,
+    "round": 2,
+    "team": "Bucky Irving 🤤",
+    "name": "Chase Brown",
+    "pos": "RB",
+    "pts": 282.6,
+    "draftPosRank": 11,
+    "finishPosRank": 7
+   },
+   {
+    "overall": 25,
+    "round": 3,
+    "team": "Bucky Irving 🤤",
+    "name": "Josh Jacobs",
+    "pos": "RB",
+    "pts": 237.1,
+    "draftPosRank": 12,
+    "finishPosRank": 13
+   },
+   {
+    "overall": 26,
+    "round": 3,
+    "team": "EaTN McCokkey",
+    "name": "Ladd McConkey",
+    "pos": "WR",
+    "pts": 180.9,
+    "draftPosRank": 12,
+    "finishPosRank": 27
+   },
+   {
+    "overall": 27,
+    "round": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "pts": 114.28,
+    "draftPosRank": 1,
+    "finishPosRank": 23
+   },
+   {
+    "overall": 28,
+    "round": 3,
+    "team": "Skat's Super CTE",
+    "name": "Alvin Kamara",
+    "pos": "RB",
+    "pts": 100.7,
+    "draftPosRank": 13,
+    "finishPosRank": 38
+   },
+   {
+    "overall": 29,
+    "round": 3,
+    "team": "Nico Suave",
+    "name": "Josh Allen",
+    "pos": "QB",
+    "pts": 364.62,
+    "draftPosRank": 2,
+    "finishPosRank": 1
+   },
+   {
+    "overall": 30,
+    "round": 3,
+    "team": "Njigbas in Paris",
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "pts": 359.9,
+    "draftPosRank": 13,
+    "finishPosRank": 2
+   },
+   {
+    "overall": 31,
+    "round": 3,
+    "team": "Damardiac Arrest",
+    "name": "Tee Higgins",
+    "pos": "WR",
+    "pts": 211.6,
+    "draftPosRank": 14,
+    "finishPosRank": 14
+   },
+   {
+    "overall": 32,
+    "round": 3,
+    "team": "2 gurls 1 kupp",
+    "name": "James Cook III",
+    "pos": "RB",
+    "pts": 302.2,
+    "draftPosRank": 14,
+    "finishPosRank": 6
+   },
+   {
+    "overall": 33,
+    "round": 3,
+    "team": "Jalen Kirk",
+    "name": "Omarion Hampton",
+    "pos": "RB",
+    "pts": 135.7,
+    "draftPosRank": 15,
+    "finishPosRank": 30
+   },
+   {
+    "overall": 34,
+    "round": 3,
+    "team": "Lamar-a-lago",
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "pts": 214.86,
+    "draftPosRank": 3,
+    "finishPosRank": 14
+   },
+   {
+    "overall": 35,
+    "round": 3,
+    "team": "Myer Lemon",
+    "name": "George Kittle",
+    "pos": "TE",
+    "pts": 161.5,
+    "draftPosRank": 3,
+    "finishPosRank": 10
+   },
+   {
+    "overall": 36,
+    "round": 3,
+    "team": "Ashton of Ass",
+    "name": "Joe Burrow",
+    "pos": "QB",
+    "pts": 134.46,
+    "draftPosRank": 4,
+    "finishPosRank": 20
+   },
+   {
+    "overall": 37,
+    "round": 4,
+    "team": "Ashton of Ass",
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "pts": 191.9,
+    "draftPosRank": 16,
+    "finishPosRank": 20
+   },
+   {
+    "overall": 38,
+    "round": 4,
+    "team": "Myer Lemon",
+    "name": "TreVeyon Henderson",
+    "pos": "RB",
+    "pts": 206.2,
+    "draftPosRank": 17,
+    "finishPosRank": 19
+   },
+   {
+    "overall": 39,
+    "round": 4,
+    "team": "Lamar-a-lago",
+    "name": "Davante Adams",
+    "pos": "WR",
+    "pts": 222.9,
+    "draftPosRank": 15,
+    "finishPosRank": 9
+   },
+   {
+    "overall": 40,
+    "round": 4,
+    "team": "Jalen Kirk",
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "pts": 299.06,
+    "draftPosRank": 5,
+    "finishPosRank": 8
+   },
+   {
+    "overall": 41,
+    "round": 4,
+    "team": "2 gurls 1 kupp",
+    "name": "Terry McLaurin",
+    "pos": "WR",
+    "pts": 114.2,
+    "draftPosRank": 16,
+    "finishPosRank": 45
+   },
+   {
+    "overall": 42,
+    "round": 4,
+    "team": "Damardiac Arrest",
+    "name": "David Montgomery",
+    "pos": "RB",
+    "pts": 166.92,
+    "draftPosRank": 18,
+    "finishPosRank": 25
+   },
+   {
+    "overall": 43,
+    "round": 4,
+    "team": "Njigbas in Paris",
+    "name": "Garrett Wilson",
+    "pos": "WR",
+    "pts": 99.5,
+    "draftPosRank": 17,
+    "finishPosRank": 48
+   },
+   {
+    "overall": 44,
+    "round": 4,
+    "team": "Nico Suave",
+    "name": "Chuba Hubbard",
+    "pos": "RB",
+    "pts": 125.4,
+    "draftPosRank": 19,
+    "finishPosRank": 33
+   },
+   {
+    "overall": 45,
+    "round": 4,
+    "team": "Skat's Super CTE",
+    "name": "James Conner",
+    "pos": "RB",
+    "pts": 33.3,
+    "draftPosRank": 20,
+    "finishPosRank": 49
+   },
+   {
+    "overall": 46,
+    "round": 4,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Marvin Harrison Jr.",
+    "pos": "WR",
+    "pts": 127.8,
+    "draftPosRank": 18,
+    "finishPosRank": 42
+   },
+   {
+    "overall": 47,
+    "round": 4,
+    "team": "EaTN McCokkey",
+    "name": "Xavier Worthy",
+    "pos": "WR",
+    "pts": 109.9,
+    "draftPosRank": 19,
+    "finishPosRank": 46
+   },
+   {
+    "overall": 48,
+    "round": 4,
+    "team": "Bucky Irving 🤤",
+    "name": "Courtland Sutton",
+    "pos": "WR",
+    "pts": 219.7,
+    "draftPosRank": 20,
+    "finishPosRank": 12
+   },
+   {
+    "overall": 49,
+    "round": 5,
+    "team": "Bucky Irving 🤤",
+    "name": "Tetairoa McMillan",
+    "pos": "WR",
+    "pts": 211.4,
+    "draftPosRank": 21,
+    "finishPosRank": 15
+   },
+   {
+    "overall": 50,
+    "round": 5,
+    "team": "EaTN McCokkey",
+    "name": "Zay Flowers",
+    "pos": "WR",
+    "pts": 243.3,
+    "draftPosRank": 22,
+    "finishPosRank": 7
+   },
+   {
+    "overall": 51,
+    "round": 5,
+    "team": "Dart that Dihker in KaiME",
+    "name": "DJ Moore",
+    "pos": "WR",
+    "pts": 170.18,
+    "draftPosRank": 23,
+    "finishPosRank": 30
+   },
+   {
+    "overall": 52,
+    "round": 5,
+    "team": "Skat's Super CTE",
+    "name": "Jameson Williams",
+    "pos": "WR",
+    "pts": 219.9,
+    "draftPosRank": 24,
+    "finishPosRank": 11
+   },
+   {
+    "overall": 53,
+    "round": 5,
+    "team": "Nico Suave",
+    "name": "Mike Evans",
+    "pos": "WR",
+    "pts": 84.8,
+    "draftPosRank": 25,
+    "finishPosRank": 53
+   },
+   {
+    "overall": 54,
+    "round": 5,
+    "team": "Njigbas in Paris",
+    "name": "Calvin Ridley",
+    "pos": "WR",
+    "pts": 47.3,
+    "draftPosRank": 26,
+    "finishPosRank": 64
+   },
+   {
+    "overall": 55,
+    "round": 5,
+    "team": "Damardiac Arrest",
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "pts": 201.8,
+    "draftPosRank": 27,
+    "finishPosRank": 19
+   },
+   {
+    "overall": 56,
+    "round": 5,
+    "team": "2 gurls 1 kupp",
+    "name": "DK Metcalf",
+    "pos": "WR",
+    "pts": 187.2,
+    "draftPosRank": 28,
+    "finishPosRank": 25
+   },
+   {
+    "overall": 57,
+    "round": 5,
+    "team": "Jalen Kirk",
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "pts": 150.1,
+    "draftPosRank": 29,
+    "finishPosRank": 34
+   },
+   {
+    "overall": 58,
+    "round": 5,
+    "team": "Lamar-a-lago",
+    "name": "Breece Hall",
+    "pos": "RB",
+    "pts": 207.66,
+    "draftPosRank": 21,
+    "finishPosRank": 17
+   },
+   {
+    "overall": 59,
+    "round": 5,
+    "team": "Myer Lemon",
+    "name": "Emeka Egbuka",
+    "pos": "WR",
+    "pts": 195.7,
+    "draftPosRank": 30,
+    "finishPosRank": 22
+   },
+   {
+    "overall": 60,
+    "round": 5,
+    "team": "Ashton of Ass",
+    "name": "D'Andre Swift",
+    "pos": "RB",
+    "pts": 228.6,
+    "draftPosRank": 22,
+    "finishPosRank": 15
+   },
+   {
+    "overall": 61,
+    "round": 6,
+    "team": "Ashton of Ass",
+    "name": "Sam LaPorta",
+    "pos": "TE",
+    "pts": 106.9,
+    "draftPosRank": 4,
+    "finishPosRank": 16
+   },
+   {
+    "overall": 62,
+    "round": 6,
+    "team": "Myer Lemon",
+    "name": "Baker Mayfield",
+    "pos": "QB",
+    "pts": 271.92,
+    "draftPosRank": 6,
+    "finishPosRank": 12
+   },
+   {
+    "overall": 63,
+    "round": 6,
+    "team": "Lamar-a-lago",
+    "name": "Tony Pollard",
+    "pos": "RB",
+    "pts": 185.8,
+    "draftPosRank": 23,
+    "finishPosRank": 21
+   },
+   {
+    "overall": 64,
+    "round": 6,
+    "team": "Jalen Kirk",
+    "name": "RJ Harvey",
+    "pos": "RB",
+    "pts": 206.6,
+    "draftPosRank": 24,
+    "finishPosRank": 18
+   },
+   {
+    "overall": 65,
+    "round": 6,
+    "team": "2 gurls 1 kupp",
+    "name": "Aaron Jones Sr.",
+    "pos": "RB",
+    "pts": 118.7,
+    "draftPosRank": 25,
+    "finishPosRank": 35
+   },
+   {
+    "overall": 66,
+    "round": 6,
+    "team": "Damardiac Arrest",
+    "name": "Bo Nix",
+    "pos": "QB",
+    "pts": 304.84,
+    "draftPosRank": 7,
+    "finishPosRank": 7
+   },
+   {
+    "overall": 67,
+    "round": 6,
+    "team": "Njigbas in Paris",
+    "name": "Evan Engram",
+    "pos": "TE",
+    "pts": 102.8,
+    "draftPosRank": 5,
+    "finishPosRank": 17
+   },
+   {
+    "overall": 68,
+    "round": 6,
+    "team": "Nico Suave",
+    "name": "Travis Kelce",
+    "pos": "TE",
+    "pts": 193.2,
+    "draftPosRank": 6,
+    "finishPosRank": 3
+   },
+   {
+    "overall": 69,
+    "round": 6,
+    "team": "Skat's Super CTE",
+    "name": "Patrick Mahomes",
+    "pos": "QB",
+    "pts": 285.68,
+    "draftPosRank": 8,
+    "finishPosRank": 11
+   },
+   {
+    "overall": 70,
+    "round": 6,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Isiah Pacheco",
+    "pos": "RB",
+    "pts": 87.3,
+    "draftPosRank": 26,
+    "finishPosRank": 41
+   },
+   {
+    "overall": 71,
+    "round": 6,
+    "team": "EaTN McCokkey",
+    "name": "Rome Odunze",
+    "pos": "WR",
+    "pts": 146.1,
+    "draftPosRank": 31,
+    "finishPosRank": 35
+   },
+   {
+    "overall": 72,
+    "round": 6,
+    "team": "Bucky Irving 🤤",
+    "name": "George Pickens",
+    "pos": "WR",
+    "pts": 291.9,
+    "draftPosRank": 32,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 73,
+    "round": 7,
+    "team": "Bucky Irving 🤤",
+    "name": "Jacory Croskey-Merritt",
+    "pos": "RB",
+    "pts": 140.3,
+    "draftPosRank": 27,
+    "finishPosRank": 28
+   },
+   {
+    "overall": 74,
+    "round": 7,
+    "team": "EaTN McCokkey",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "pts": 165.1,
+    "draftPosRank": 7,
+    "finishPosRank": 9
+   },
+   {
+    "overall": 75,
+    "round": 7,
+    "team": "Dart that Dihker in KaiME",
+    "name": "T.J. Hockenson",
+    "pos": "TE",
+    "pts": 112.8,
+    "draftPosRank": 8,
+    "finishPosRank": 15
+   },
+   {
+    "overall": 76,
+    "round": 7,
+    "team": "Skat's Super CTE",
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "pts": 70,
+    "draftPosRank": 33,
+    "finishPosRank": 56
+   },
+   {
+    "overall": 77,
+    "round": 7,
+    "team": "Nico Suave",
+    "name": "Jakobi Meyers",
+    "pos": "WR",
+    "pts": 175.8,
+    "draftPosRank": 34,
+    "finishPosRank": 28
+   },
+   {
+    "overall": 78,
+    "round": 7,
+    "team": "Njigbas in Paris",
+    "name": "Ricky Pearsall",
+    "pos": "WR",
+    "pts": 88.6,
+    "draftPosRank": 35,
+    "finishPosRank": 52
+   },
+   {
+    "overall": 79,
+    "round": 7,
+    "team": "Damardiac Arrest",
+    "name": "Joe Mixon",
+    "pos": "RB",
+    "pts": 0,
+    "draftPosRank": 28,
+    "finishPosRank": 56
+   },
+   {
+    "overall": 80,
+    "round": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Tyrone Tracy Jr.",
+    "pos": "RB",
+    "pts": 160.8,
+    "draftPosRank": 29,
+    "finishPosRank": 26
+   },
+   {
+    "overall": 81,
+    "round": 7,
+    "team": "Jalen Kirk",
+    "name": "Travis Hunter",
+    "pos": "WR",
+    "pts": 63.8,
+    "draftPosRank": 36,
+    "finishPosRank": 57
+   },
+   {
+    "overall": 82,
+    "round": 7,
+    "team": "Lamar-a-lago",
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "pts": 194.12,
+    "draftPosRank": 37,
+    "finishPosRank": 23
+   },
+   {
+    "overall": 83,
+    "round": 7,
+    "team": "Myer Lemon",
+    "name": "Stefon Diggs",
+    "pos": "WR",
+    "pts": 210.3,
+    "draftPosRank": 38,
+    "finishPosRank": 16
+   },
+   {
+    "overall": 84,
+    "round": 7,
+    "team": "Ashton of Ass",
+    "name": "Jerry Jeudy",
+    "pos": "WR",
+    "pts": 120.7,
+    "draftPosRank": 39,
+    "finishPosRank": 43
+   },
+   {
+    "overall": 85,
+    "round": 8,
+    "team": "Ashton of Ass",
+    "name": "Chris Olave",
+    "pos": "WR",
+    "pts": 268,
+    "draftPosRank": 40,
+    "finishPosRank": 6
+   },
+   {
+    "overall": 86,
+    "round": 8,
+    "team": "Myer Lemon",
+    "name": "Deebo Samuel",
+    "pos": "WR",
+    "pts": 188.2,
+    "draftPosRank": 41,
+    "finishPosRank": 24
+   },
+   {
+    "overall": 87,
+    "round": 8,
+    "team": "Lamar-a-lago",
+    "name": "David Njoku",
+    "pos": "TE",
+    "pts": 86.3,
+    "draftPosRank": 9,
+    "finishPosRank": 18
+   },
+   {
+    "overall": 88,
+    "round": 8,
+    "team": "Jalen Kirk",
+    "name": "Mark Andrews",
+    "pos": "TE",
+    "pts": 131,
+    "draftPosRank": 10,
+    "finishPosRank": 11
+   },
+   {
+    "overall": 89,
+    "round": 8,
+    "team": "2 gurls 1 kupp",
+    "name": "Cooper Kupp",
+    "pos": "WR",
+    "pts": 116.3,
+    "draftPosRank": 42,
+    "finishPosRank": 44
+   },
+   {
+    "overall": 90,
+    "round": 8,
+    "team": "Damardiac Arrest",
+    "name": "Keon Coleman",
+    "pos": "WR",
+    "pts": 102.4,
+    "draftPosRank": 43,
+    "finishPosRank": 47
+   },
+   {
+    "overall": 91,
+    "round": 8,
+    "team": "Njigbas in Paris",
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "pts": 77.78,
+    "draftPosRank": 9,
+    "finishPosRank": 24
+   },
+   {
+    "overall": 92,
+    "round": 8,
+    "team": "Nico Suave",
+    "name": "Jaylen Warren",
+    "pos": "RB",
+    "pts": 217.1,
+    "draftPosRank": 30,
+    "finishPosRank": 16
+   },
+   {
+    "overall": 93,
+    "round": 8,
+    "team": "Skat's Super CTE",
+    "name": "J.K. Dobbins",
+    "pos": "RB",
+    "pts": 115.9,
+    "draftPosRank": 31,
+    "finishPosRank": 36
+   },
+   {
+    "overall": 94,
+    "round": 8,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Michael Pittman Jr.",
+    "pos": "WR",
+    "pts": 202.4,
+    "draftPosRank": 44,
+    "finishPosRank": 17
+   },
+   {
+    "overall": 95,
+    "round": 8,
+    "team": "EaTN McCokkey",
+    "name": "Rhamondre Stevenson",
+    "pos": "RB",
+    "pts": 178.8,
+    "draftPosRank": 32,
+    "finishPosRank": 23
+   },
+   {
+    "overall": 96,
+    "round": 8,
+    "team": "Bucky Irving 🤤",
+    "name": "Zach Charbonnet",
+    "pos": "RB",
+    "pts": 181.4,
+    "draftPosRank": 33,
+    "finishPosRank": 22
+   },
+   {
+    "overall": 97,
+    "round": 9,
+    "team": "Bucky Irving 🤤",
+    "name": "Jauan Jennings",
+    "pos": "WR",
+    "pts": 173.3,
+    "draftPosRank": 45,
+    "finishPosRank": 29
+   },
+   {
+    "overall": 98,
+    "round": 9,
+    "team": "EaTN McCokkey",
+    "name": "Travis Etienne Jr.",
+    "pos": "RB",
+    "pts": 253.9,
+    "draftPosRank": 34,
+    "finishPosRank": 10
+   },
+   {
+    "overall": 99,
+    "round": 9,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Xavier Legette",
+    "pos": "WR",
+    "pts": 89.3,
+    "draftPosRank": 46,
+    "finishPosRank": 51
+   },
+   {
+    "overall": 100,
+    "round": 9,
+    "team": "Skat's Super CTE",
+    "name": "Khalil Shakir",
+    "pos": "WR",
+    "pts": 166.4,
+    "draftPosRank": 47,
+    "finishPosRank": 31
+   },
+   {
+    "overall": 101,
+    "round": 9,
+    "team": "Nico Suave",
+    "name": "Jordan Addison",
+    "pos": "WR",
+    "pts": 135.1,
+    "draftPosRank": 48,
+    "finishPosRank": 39
+   },
+   {
+    "overall": 102,
+    "round": 9,
+    "team": "Njigbas in Paris",
+    "name": "Kaleb Johnson",
+    "pos": "RB",
+    "pts": 8.8,
+    "draftPosRank": 35,
+    "finishPosRank": 55
+   },
+   {
+    "overall": 103,
+    "round": 9,
+    "team": "Damardiac Arrest",
+    "name": "Jayden Reed",
+    "pos": "WR",
+    "pts": 48.5,
+    "draftPosRank": 49,
+    "finishPosRank": 63
+   },
+   {
+    "overall": 104,
+    "round": 9,
+    "team": "2 gurls 1 kupp",
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "pts": 188.5,
+    "draftPosRank": 11,
+    "finishPosRank": 4
+   },
+   {
+    "overall": 105,
+    "round": 9,
+    "team": "Jalen Kirk",
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "pts": 128.9,
+    "draftPosRank": 36,
+    "finishPosRank": 31
+   },
+   {
+    "overall": 106,
+    "round": 9,
+    "team": "Lamar-a-lago",
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "pts": 156.6,
+    "draftPosRank": 50,
+    "finishPosRank": 33
+   },
+   {
+    "overall": 107,
+    "round": 9,
+    "team": "Myer Lemon",
+    "name": "Nick Chubb",
+    "pos": "RB",
+    "pts": 88.3,
+    "draftPosRank": 37,
+    "finishPosRank": 40
+   },
+   {
+    "overall": 108,
+    "round": 9,
+    "team": "Ashton of Ass",
+    "name": "Keenan Allen",
+    "pos": "WR",
+    "pts": 182.7,
+    "draftPosRank": 51,
+    "finishPosRank": 26
+   },
+   {
+    "overall": 109,
+    "round": 10,
+    "team": "Ashton of Ass",
+    "name": "Javonte Williams",
+    "pos": "RB",
+    "pts": 242.8,
+    "draftPosRank": 38,
+    "finishPosRank": 12
+   },
+   {
+    "overall": 110,
+    "round": 10,
+    "team": "Myer Lemon",
+    "name": "Tank Bigsby",
+    "pos": "RB",
+    "pts": 53.8,
+    "draftPosRank": 39,
+    "finishPosRank": 46
+   },
+   {
+    "overall": 111,
+    "round": 10,
+    "team": "Lamar-a-lago",
+    "name": "Austin Ekeler",
+    "pos": "RB",
+    "pts": 13.1,
+    "draftPosRank": 40,
+    "finishPosRank": 53
+   },
+   {
+    "overall": 112,
+    "round": 10,
+    "team": "Jalen Kirk",
+    "name": "Jerome Ford",
+    "pos": "RB",
+    "pts": 43.6,
+    "draftPosRank": 41,
+    "finishPosRank": 47
+   },
+   {
+    "overall": 113,
+    "round": 10,
+    "team": "2 gurls 1 kupp",
+    "name": "Brock Purdy",
+    "pos": "QB",
+    "pts": 177.38,
+    "draftPosRank": 10,
+    "finishPosRank": 17
+   },
+   {
+    "overall": 114,
+    "round": 10,
+    "team": "Damardiac Arrest",
+    "name": "Jonnu Smith",
+    "pos": "TE",
+    "pts": 85.2,
+    "draftPosRank": 12,
+    "finishPosRank": 19
+   },
+   {
+    "overall": 115,
+    "round": 10,
+    "team": "Njigbas in Paris",
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "pts": 88.6,
+    "draftPosRank": 42,
+    "finishPosRank": 39
+   },
+   {
+    "overall": 116,
+    "round": 10,
+    "team": "Nico Suave",
+    "name": "Chris Godwin Jr.",
+    "pos": "WR",
+    "pts": 83,
+    "draftPosRank": 52,
+    "finishPosRank": 54
+   },
+   {
+    "overall": 117,
+    "round": 10,
+    "team": "Skat's Super CTE",
+    "name": "Cam Skattebo",
+    "pos": "RB",
+    "pts": 127.7,
+    "draftPosRank": 43,
+    "finishPosRank": 32
+   },
+   {
+    "overall": 118,
+    "round": 10,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Rachaad White",
+    "pos": "RB",
+    "pts": 143,
+    "draftPosRank": 44,
+    "finishPosRank": 27
+   },
+   {
+    "overall": 119,
+    "round": 10,
+    "team": "EaTN McCokkey",
+    "name": "Trey Benson",
+    "pos": "RB",
+    "pts": 35.4,
+    "draftPosRank": 45,
+    "finishPosRank": 48
+   },
+   {
+    "overall": 120,
+    "round": 10,
+    "team": "Bucky Irving 🤤",
+    "name": "Dak Prescott",
+    "pos": "QB",
+    "pts": 313.78,
+    "draftPosRank": 11,
+    "finishPosRank": 6
+   },
+   {
+    "overall": 121,
+    "round": 11,
+    "team": "Bucky Irving 🤤",
+    "name": "Tucker Kraft",
+    "pos": "TE",
+    "pts": 117.2,
+    "draftPosRank": 13,
+    "finishPosRank": 14
+   },
+   {
+    "overall": 122,
+    "round": 11,
+    "team": "EaTN McCokkey",
+    "name": "Brandon Aiyuk",
+    "pos": "WR",
+    "pts": 0,
+    "draftPosRank": 53,
+    "finishPosRank": 66
+   },
+   {
+    "overall": 123,
+    "round": 11,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Justin Fields",
+    "pos": "QB",
+    "pts": 142.66,
+    "draftPosRank": 12,
+    "finishPosRank": 19
+   },
+   {
+    "overall": 124,
+    "round": 11,
+    "team": "Skat's Super CTE",
+    "name": "Josh Downs",
+    "pos": "WR",
+    "pts": 136.4,
+    "draftPosRank": 54,
+    "finishPosRank": 38
+   },
+   {
+    "overall": 125,
+    "round": 11,
+    "team": "Nico Suave",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "pts": 82.3,
+    "draftPosRank": 55,
+    "finishPosRank": 55
+   },
+   {
+    "overall": 126,
+    "round": 11,
+    "team": "Njigbas in Paris",
+    "name": "Kyle Pitts Sr.",
+    "pos": "TE",
+    "pts": 210.8,
+    "draftPosRank": 14,
+    "finishPosRank": 2
+   },
+   {
+    "overall": 127,
+    "round": 11,
+    "team": "Damardiac Arrest",
+    "name": "Najee Harris",
+    "pos": "RB",
+    "pts": 11.6,
+    "draftPosRank": 46,
+    "finishPosRank": 54
+   },
+   {
+    "overall": 128,
+    "round": 11,
+    "team": "2 gurls 1 kupp",
+    "name": "Cedric Tillman",
+    "pos": "WR",
+    "pts": 60,
+    "draftPosRank": 56,
+    "finishPosRank": 58
+   },
+   {
+    "overall": 129,
+    "round": 11,
+    "team": "Jalen Kirk",
+    "name": "Jaydon Blue",
+    "pos": "RB",
+    "pts": 20.4,
+    "draftPosRank": 47,
+    "finishPosRank": 50
+   },
+   {
+    "overall": 130,
+    "round": 11,
+    "team": "Lamar-a-lago",
+    "name": "Braelon Allen",
+    "pos": "RB",
+    "pts": 15.3,
+    "draftPosRank": 48,
+    "finishPosRank": 52
+   },
+   {
+    "overall": 131,
+    "round": 11,
+    "team": "Myer Lemon",
+    "name": "Marvin Mims Jr.",
+    "pos": "WR",
+    "pts": 93,
+    "draftPosRank": 57,
+    "finishPosRank": 50
+   },
+   {
+    "overall": 134,
+    "round": 12,
+    "team": "Myer Lemon",
+    "name": "Amari Cooper",
+    "pos": "WR",
+    "pts": 0,
+    "draftPosRank": 58,
+    "finishPosRank": 67
+   },
+   {
+    "overall": 136,
+    "round": 12,
+    "team": "Jalen Kirk",
+    "name": "Justin Herbert",
+    "pos": "QB",
+    "pts": 286.88,
+    "draftPosRank": 13,
+    "finishPosRank": 10
+   },
+   {
+    "overall": 138,
+    "round": 12,
+    "team": "Damardiac Arrest",
+    "name": "Adam Thielen",
+    "pos": "WR",
+    "pts": 39.6,
+    "draftPosRank": 59,
+    "finishPosRank": 65
+   },
+   {
+    "overall": 139,
+    "round": 12,
+    "team": "Njigbas in Paris",
+    "name": "Will Shipley",
+    "pos": "RB",
+    "pts": 17.5,
+    "draftPosRank": 49,
+    "finishPosRank": 51
+   },
+   {
+    "overall": 141,
+    "round": 12,
+    "team": "Skat's Super CTE",
+    "name": "Quinshon Judkins",
+    "pos": "RB",
+    "pts": 169.8,
+    "draftPosRank": 50,
+    "finishPosRank": 24
+   },
+   {
+    "overall": 142,
+    "round": 12,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Dallas Goedert",
+    "pos": "TE",
+    "pts": 185.1,
+    "draftPosRank": 15,
+    "finishPosRank": 6
+   },
+   {
+    "overall": 143,
+    "round": 12,
+    "team": "EaTN McCokkey",
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "pts": 188.1,
+    "draftPosRank": 16,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 144,
+    "round": 12,
+    "team": "Bucky Irving 🤤",
+    "name": "Jayden Higgins",
+    "pos": "WR",
+    "pts": 129.5,
+    "draftPosRank": 60,
+    "finishPosRank": 40
+   },
+   {
+    "overall": 145,
+    "round": 13,
+    "team": "Bucky Irving 🤤",
+    "name": "Ray Davis",
+    "pos": "RB",
+    "pts": 64.1,
+    "draftPosRank": 51,
+    "finishPosRank": 43
+   },
+   {
+    "overall": 146,
+    "round": 13,
+    "team": "EaTN McCokkey",
+    "name": "Christian Kirk",
+    "pos": "WR",
+    "pts": 57.9,
+    "draftPosRank": 61,
+    "finishPosRank": 59
+   },
+   {
+    "overall": 152,
+    "round": 13,
+    "team": "2 gurls 1 kupp",
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "pts": 126.1,
+    "draftPosRank": 17,
+    "finishPosRank": 13
+   },
+   {
+    "overall": 153,
+    "round": 13,
+    "team": "Jalen Kirk",
+    "name": "Hollywood Brown",
+    "pos": "WR",
+    "pts": 137.7,
+    "draftPosRank": 62,
+    "finishPosRank": 37
+   },
+   {
+    "overall": 155,
+    "round": 13,
+    "team": "Myer Lemon",
+    "name": "Ollie Gordon II",
+    "pos": "RB",
+    "pts": 54.1,
+    "draftPosRank": 52,
+    "finishPosRank": 45
+   },
+   {
+    "overall": 157,
+    "round": 14,
+    "team": "Ashton of Ass",
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "pts": 318.18,
+    "draftPosRank": 14,
+    "finishPosRank": 5
+   },
+   {
+    "overall": 159,
+    "round": 14,
+    "team": "Lamar-a-lago",
+    "name": "Drake Maye",
+    "pos": "QB",
+    "pts": 351.96,
+    "draftPosRank": 15,
+    "finishPosRank": 2
+   },
+   {
+    "overall": 160,
+    "round": 14,
+    "team": "Jalen Kirk",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "pts": 123,
+    "draftPosRank": 53,
+    "finishPosRank": 34
+   },
+   {
+    "overall": 161,
+    "round": 14,
+    "team": "2 gurls 1 kupp",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "pts": 297.06,
+    "draftPosRank": 16,
+    "finishPosRank": 9
+   },
+   {
+    "overall": 162,
+    "round": 14,
+    "team": "Damardiac Arrest",
+    "name": "Zach Ertz",
+    "pos": "TE",
+    "pts": 126.4,
+    "draftPosRank": 18,
+    "finishPosRank": 12
+   },
+   {
+    "overall": 164,
+    "round": 14,
+    "team": "Nico Suave",
+    "name": "Hunter Henry",
+    "pos": "TE",
+    "pts": 178.8,
+    "draftPosRank": 19,
+    "finishPosRank": 7
+   },
+   {
+    "overall": 165,
+    "round": 14,
+    "team": "Skat's Super CTE",
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "pts": 217.9,
+    "draftPosRank": 63,
+    "finishPosRank": 13
+   },
+   {
+    "overall": 166,
+    "round": 14,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "pts": 111.7,
+    "draftPosRank": 54,
+    "finishPosRank": 37
+   },
+   {
+    "overall": 169,
+    "round": 15,
+    "team": "Bucky Irving 🤤",
+    "name": "Luther Burden III",
+    "pos": "WR",
+    "pts": 127.9,
+    "draftPosRank": 64,
+    "finishPosRank": 41
+   },
+   {
+    "overall": 170,
+    "round": 15,
+    "team": "EaTN McCokkey",
+    "name": "J.J. McCarthy",
+    "pos": "QB",
+    "pts": 125.38,
+    "draftPosRank": 17,
+    "finishPosRank": 21
+   },
+   {
+    "overall": 171,
+    "round": 15,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Romeo Doubs",
+    "pos": "WR",
+    "pts": 165.4,
+    "draftPosRank": 65,
+    "finishPosRank": 32
+   },
+   {
+    "overall": 173,
+    "round": 15,
+    "team": "Nico Suave",
+    "name": "Rashod Bateman",
+    "pos": "WR",
+    "pts": 55.4,
+    "draftPosRank": 66,
+    "finishPosRank": 61
+   },
+   {
+    "overall": 174,
+    "round": 15,
+    "team": "Njigbas in Paris",
+    "name": "Justice Hill",
+    "pos": "RB",
+    "pts": 65.2,
+    "draftPosRank": 55,
+    "finishPosRank": 42
+   },
+   {
+    "overall": 175,
+    "round": 15,
+    "team": "Damardiac Arrest",
+    "name": "Jordan Love",
+    "pos": "QB",
+    "pts": 235.14,
+    "draftPosRank": 18,
+    "finishPosRank": 13
+   },
+   {
+    "overall": 178,
+    "round": 15,
+    "team": "Lamar-a-lago",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "pts": 208.54,
+    "draftPosRank": 19,
+    "finishPosRank": 15
+   },
+   {
+    "overall": 180,
+    "round": 15,
+    "team": "Ashton of Ass",
+    "name": "Matthew Stafford",
+    "pos": "QB",
+    "pts": 350.38,
+    "draftPosRank": 20,
+    "finishPosRank": 3
+   },
+   {
+    "overall": 182,
+    "round": 16,
+    "team": "Myer Lemon",
+    "name": "Michael Penix Jr.",
+    "pos": "QB",
+    "pts": 120.28,
+    "draftPosRank": 21,
+    "finishPosRank": 22
+   },
+   {
+    "overall": 183,
+    "round": 16,
+    "team": "Lamar-a-lago",
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "pts": 160.7,
+    "draftPosRank": 22,
+    "finishPosRank": 18
+   },
+   {
+    "overall": 185,
+    "round": 16,
+    "team": "2 gurls 1 kupp",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "pts": 338.18,
+    "draftPosRank": 23,
+    "finishPosRank": 4
+   },
+   {
+    "overall": 187,
+    "round": 16,
+    "team": "Njigbas in Paris",
+    "name": "Brian Robinson Jr.",
+    "pos": "RB",
+    "pts": 62.5,
+    "draftPosRank": 56,
+    "finishPosRank": 44
+   },
+   {
+    "overall": 188,
+    "round": 16,
+    "team": "Nico Suave",
+    "name": "DeMario Douglas",
+    "pos": "WR",
+    "pts": 95.8,
+    "draftPosRank": 67,
+    "finishPosRank": 49
+   },
+   {
+    "overall": 189,
+    "round": 16,
+    "team": "Skat's Super CTE",
+    "name": "Cam Ward",
+    "pos": "QB",
+    "pts": 186.66,
+    "draftPosRank": 24,
+    "finishPosRank": 16
+   }
+  ]
+ }
+}
