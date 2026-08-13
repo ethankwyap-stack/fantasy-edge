@@ -156,6 +156,10 @@ async function weeklyRosters(weeks) {
       // infer slot eligibility from position.
       elig: e.playerPoolEntry?.player?.eligibleSlots || [],
       pts: weekPts(e.playerPoolEntry?.player, wk),
+      // Distinguishes "played and scored 0" from "no game at all" — weekPts returns 0 for both,
+      // and a D/ST can legitimately score 0 or negative, so a pts>0 filter would bias the mean up.
+      played: !!(e.playerPoolEntry?.player?.stats || [])
+        .find(s => s.seasonId === SEASON && s.statSourceId === 0 && s.scoringPeriodId === wk),
     }))]));
   }
   return out;
@@ -502,6 +506,48 @@ async function draftAccuracy() {
   };
 }
 
+// ── Study 10: K and D/ST week-to-week variance ─────────────────────────────
+// The Start/Sit tab models each side's weekly total as Normal(Σ projections, Σ variance).
+// Leaving K/D-ST out of that isn't neutral — it asserts those two roster spots have ZERO
+// variance, and they are two of the swingiest slots there are. nflverse's weekly file only
+// covers QB/RB/WR/TE, so boom-rates.js can't rate them; ESPN's own weekly actuals can.
+//
+// POSITIONAL, not per-player, and that is deliberate: kickers and defenses get streamed, so
+// he will not own the same one in Week 12. A per-player rate would be precision he can't use.
+// Key names follow index.html's POS map ('DST'), not this file's ('D/ST') — the browser is
+// the consumer, so it owns the spelling.
+const r1 = x => +x.toFixed(1);
+const KDST_KEY = { K: 'K', 'D/ST': 'DST' };
+async function kdstVariance() {
+  const settings = (await espn('mSettings')).settings;
+  const weeks = Array.from({ length: settings.scheduleSettings.matchupPeriodCount }, (_, i) => i + 1);
+  const rosters = await weeklyRosters(weeks);
+
+  const pts = { K: [], DST: [] };
+  for (const wk of weeks) for (const roster of Object.values(rosters[wk]))
+    for (const p of roster) { const k = KDST_KEY[p.pos]; if (k && p.played) pts[k].push(p.pts); }
+
+  const out = {};
+  for (const [pos, xs] of Object.entries(pts)) {
+    if (xs.length < 20) { out[pos] = { n: xs.length, note: 'too few games played to rate' }; continue; }
+    const mean = xs.reduce((a, b) => a + b, 0) / xs.length;
+    const sd = Math.sqrt(xs.reduce((a, x) => a + (x - mean) ** 2, 0) / (xs.length - 1)); // sample sd
+    out[pos] = { n: xs.length, mean: r1(mean), sd: r1(sd), cv: +(sd / mean).toFixed(3), season: SEASON };
+  }
+  return { season: SEASON, byPos: out };
+}
+// The browser only fetches boom-rates.json, so that's where these land — one served file, no
+// new route. boom-rates.js CARRIES THIS KEY FORWARD when it regenerates weekly; if you ever
+// rewrite that file's writer, keep the carry-forward or the tab silently loses its K/DST
+// variance and goes back to pretending those slots are certain.
+function writePosVar(byPos) {
+  const f = path.join(__dirname, '..', 'boom-rates.json');
+  const j = JSON.parse(fs.readFileSync(f, 'utf8'));
+  j.posVar = byPos;
+  fs.writeFileSync(f, JSON.stringify(j, null, 1));
+  console.log(`  merged posVar into ${f}`);
+}
+
 // ── Study 8: who actually owned the handcuffs ──────────────────────────────
 // handcuff.js finds, NFL-wide, every window where a starting RB missed 2+ straight
 // weeks and names the back who took the carries. This joins those windows onto the
@@ -664,6 +710,13 @@ if (require.main === module) (async () => {
     for (const b of out.draftAccuracy.byTeam)
       console.log(`  ${b.team}: ${b.actual} actual vs ${b.proj} projected = ${b.overProj} (${b.vsLeagueAvg > 0 ? '+' : ''}${b.vsLeagueAvg} vs league avg, ${b.picks} picks)`);
   }
+  if (has('--kdst-variance') || has('--all')) {
+    console.log(`Measuring K / D-ST week-to-week variance for ${SEASON}...`);
+    out.kdstVariance = await kdstVariance();
+    for (const [pos, v] of Object.entries(out.kdstVariance.byPos))
+      console.log(`  ${pos}: ${v.note || `mean ${v.mean}, sd ${v.sd} → cv ${v.cv} over ${v.n} games played`}`);
+    writePosVar(out.kdstVariance.byPos);
+  }
   if (has('--handcuff-teams') || has('--all')) {
     console.log(`Joining NFL handcuff windows onto ${SEASON} rosters...`);
     out.handcuffTeams = await handcuffTeams();
@@ -675,7 +728,7 @@ if (require.main === module) (async () => {
       console.log(`    wk${r.from}-${r.to} ${r.starter} out → ${r.handcuff}: ${r.owners.map(o => `${o.team} (${o.started} st/${o.benched} bn)`).join(', ') || 'nobody'}${r.freeWeeks ? `, free on the wire ${r.freeWeeks} wk` : ''}`);
   }
   if (!Object.keys(out).length) {
-    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --all | --selftest  [--season YYYY]');
+    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --kdst-variance | --all | --selftest  [--season YYYY]');
     return;
   }
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T17:41:37.241Z",
+ "generated": "2026-08-13T18:15:05.012Z",
  "benchValue": {
   "season": 2025,
   "starterAvg": 195,
@@ -17159,5 +17159,24 @@
     "freeWeeks": 0
    }
   ]
+ },
+ "kdstVariance": {
+  "season": 2025,
+  "byPos": {
+   "K": {
+    "n": 188,
+    "mean": 8.6,
+    "sd": 4.9,
+    "cv": 0.568,
+    "season": 2025
+   },
+   "DST": {
+    "n": 220,
+    "mean": 7.3,
+    "sd": 6.7,
+    "cv": 0.919,
+    "season": 2025
+   }
+  }
  }
 }

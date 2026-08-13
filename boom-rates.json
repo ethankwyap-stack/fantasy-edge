@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T17:54:14.604Z",
+ "generated": "2026-08-13T18:15:21.270Z",
  "season": 2025,
  "stale": true,
  "boomRule": "top 5 at position within each week (PPR)",
@@ -8,6 +8,22 @@
   "RB": 8,
   "WR": 8,
   "TE": 8
+ },
+ "posVar": {
+  "K": {
+   "n": 188,
+   "mean": 8.6,
+   "sd": 4.9,
+   "cv": 0.568,
+   "season": 2025
+  },
+  "DST": {
+   "n": 220,
+   "mean": 7.3,
+   "sd": 6.7,
+   "cv": 0.919,
+   "season": 2025
+  }
  },
  "players": {
   "aaron rodgers": {

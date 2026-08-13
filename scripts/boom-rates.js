@@ -151,9 +151,17 @@ async function main() {
   const matched = pool.filter(n => players[n]);
   const missed = pool.filter(n => !players[n]);
 
+  // CARRY FORWARD posVar (K / D-ST variance, measured from ESPN by league-history.js
+  // --kdst-variance — nflverse's weekly file has no K or D/ST rows, so this engine cannot
+  // recompute it). Dropping it on the weekly cron would silently return the Start/Sit tab to
+  // treating those two slots as zero-variance certainties. Same merge rule as
+  // league-history-<season>.json.
+  let posVar; try { posVar = JSON.parse(fs.readFileSync(OUT, 'utf8')).posVar; } catch { }
+
   fs.writeFileSync(OUT, JSON.stringify({
     generated: new Date().toISOString(), season, stale: season !== SEASON,
     boomRule: `top ${BOOM_N} at position within each week (PPR)`, bustPoints: BUST,
+    ...(posVar ? { posVar } : {}),
     players,
   }, null, 1));
 
