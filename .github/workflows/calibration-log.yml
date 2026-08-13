@@ -1,0 +1,29 @@
+name: Projection calibration log
+# Grades last week's sources (ESPN weekly proj, market ADP, each ranked analyst) against what
+# actually happened, per position. 13:20 UTC Tuesday = 6:20am PT, staggered 20min after the
+# weekly data refresh so both crons don't push to the repo at the same moment. Sept-Dec only.
+on:
+  schedule:
+    - cron: '20 13 * 9-12 2'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/calibration-log.js --selftest
+      - run: node scripts/calibration-log.js
+        env:
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          SEASON: ${{ vars.SEASON || 2026 }}
+      - run: |
+          git config user.name ethankwyap-stack
+          git config user.email ethankw.yap@gmail.com
+          git add calibration-log.json
+          git diff --cached --quiet && echo "nothing changed" || (git commit -m "calibration log $(date -u +%F)" && git push)

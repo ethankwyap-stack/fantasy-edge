@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T18:15:05.012Z",
+ "generated": "2026-08-13T18:39:17.146Z",
  "benchValue": {
   "season": 2025,
   "starterAvg": 195,
@@ -17178,5 +17178,1957 @@
     "season": 2025
    }
   }
+ },
+ "faabCeilings": {
+  "season": 2025,
+  "note": "startable = NFL-wide weekly rank inside QB12/RB24/WR24/TE12 that week, not just this league. No 2025 bid data exists (traditional waivers) so this is a base rate, not a bid-vs-outcome curve.",
+  "byPos": {
+   "QB": {
+    "adds": 27,
+    "weeksHeld": 176,
+    "startableWeeks": 67,
+    "startableRate": 38.1
+   },
+   "RB": {
+    "adds": 63,
+    "weeksHeld": 356,
+    "startableWeeks": 113,
+    "startableRate": 31.7
+   },
+   "WR": {
+    "adds": 64,
+    "weeksHeld": 385,
+    "startableWeeks": 76,
+    "startableRate": 19.7
+   },
+   "TE": {
+    "adds": 38,
+    "weeksHeld": 219,
+    "startableWeeks": 66,
+    "startableRate": 30.1
+   }
+  },
+  "rows": [
+   {
+    "week": 7,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "heldWeeks": 7,
+    "startableWeeks": 7,
+    "rate": 100
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "heldWeeks": 6,
+    "startableWeeks": 6,
+    "rate": 100
+   },
+   {
+    "week": 13,
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "name": "Kimani Vidal",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 2,
+    "rate": 100
+   },
+   {
+    "week": 14,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "heldWeeks": 1,
+    "startableWeeks": 1,
+    "rate": 100
+   },
+   {
+    "week": 14,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "heldWeeks": 1,
+    "startableWeeks": 1,
+    "rate": 100
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "heldWeeks": 1,
+    "startableWeeks": 1,
+    "rate": 100
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "heldWeeks": 9,
+    "startableWeeks": 7,
+    "rate": 77.8
+   },
+   {
+    "week": 6,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "heldWeeks": 8,
+    "startableWeeks": 6,
+    "rate": 75
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 3,
+    "rate": 75
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "heldWeeks": 10,
+    "startableWeeks": 7,
+    "rate": 70
+   },
+   {
+    "week": 11,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Greg Dortch",
+    "pos": "WR",
+    "heldWeeks": 3,
+    "startableWeeks": 2,
+    "rate": 66.7
+   },
+   {
+    "week": 11,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Devin Neal",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 2,
+    "rate": 66.7
+   },
+   {
+    "week": 12,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "heldWeeks": 3,
+    "startableWeeks": 2,
+    "rate": 66.7
+   },
+   {
+    "week": 12,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 2,
+    "rate": 66.7
+   },
+   {
+    "week": 4,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "heldWeeks": 8,
+    "startableWeeks": 5,
+    "rate": 62.5
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Alec Pierce",
+    "pos": "WR",
+    "heldWeeks": 8,
+    "startableWeeks": 5,
+    "rate": 62.5
+   },
+   {
+    "week": 6,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Kimani Vidal",
+    "pos": "RB",
+    "heldWeeks": 8,
+    "startableWeeks": 5,
+    "rate": 62.5
+   },
+   {
+    "week": 6,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "heldWeeks": 8,
+    "startableWeeks": 5,
+    "rate": 62.5
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Theo Johnson",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 3,
+    "rate": 60
+   },
+   {
+    "week": 9,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Parker Washington",
+    "pos": "WR",
+    "heldWeeks": 5,
+    "startableWeeks": 3,
+    "rate": 60
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Kareem Hunt",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 3,
+    "rate": 60
+   },
+   {
+    "week": 10,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 3,
+    "rate": 60
+   },
+   {
+    "week": 10,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Dalton Schultz",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 3,
+    "rate": 60
+   },
+   {
+    "week": 10,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "heldWeeks": 5,
+    "startableWeeks": 3,
+    "rate": 60
+   },
+   {
+    "week": 2,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "heldWeeks": 12,
+    "startableWeeks": 7,
+    "rate": 58.3
+   },
+   {
+    "week": 7,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Kareem Hunt",
+    "pos": "RB",
+    "heldWeeks": 7,
+    "startableWeeks": 4,
+    "rate": 57.1
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "heldWeeks": 7,
+    "startableWeeks": 4,
+    "rate": 57.1
+   },
+   {
+    "week": 5,
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "heldWeeks": 9,
+    "startableWeeks": 5,
+    "rate": 55.6
+   },
+   {
+    "week": 5,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Dalton Schultz",
+    "pos": "TE",
+    "heldWeeks": 9,
+    "startableWeeks": 5,
+    "rate": 55.6
+   },
+   {
+    "week": 2,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Kareem Hunt",
+    "pos": "RB",
+    "heldWeeks": 12,
+    "startableWeeks": 6,
+    "rate": 50
+   },
+   {
+    "week": 2,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Daniel Jones",
+    "pos": "QB",
+    "heldWeeks": 12,
+    "startableWeeks": 6,
+    "rate": 50
+   },
+   {
+    "week": 2,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Juwan Johnson",
+    "pos": "TE",
+    "heldWeeks": 12,
+    "startableWeeks": 6,
+    "rate": 50
+   },
+   {
+    "week": 4,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "heldWeeks": 10,
+    "startableWeeks": 5,
+    "rate": 50
+   },
+   {
+    "week": 4,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "heldWeeks": 10,
+    "startableWeeks": 5,
+    "rate": 50
+   },
+   {
+    "week": 5,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "heldWeeks": 4,
+    "startableWeeks": 2,
+    "rate": 50
+   },
+   {
+    "week": 6,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Theo Johnson",
+    "pos": "TE",
+    "heldWeeks": 8,
+    "startableWeeks": 4,
+    "rate": 50
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Joe Flacco",
+    "pos": "QB",
+    "heldWeeks": 4,
+    "startableWeeks": 2,
+    "rate": 50
+   },
+   {
+    "week": 8,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Troy Franklin",
+    "pos": "WR",
+    "heldWeeks": 6,
+    "startableWeeks": 3,
+    "rate": 50
+   },
+   {
+    "week": 9,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "heldWeeks": 6,
+    "startableWeeks": 3,
+    "rate": 50
+   },
+   {
+    "week": 10,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Emari Demercado",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 1,
+    "rate": 50
+   },
+   {
+    "week": 10,
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "name": "Juwan Johnson",
+    "pos": "TE",
+    "heldWeeks": 4,
+    "startableWeeks": 2,
+    "rate": 50
+   },
+   {
+    "week": 10,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Parker Washington",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 2,
+    "rate": 50
+   },
+   {
+    "week": 12,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Christian Kirk",
+    "pos": "WR",
+    "heldWeeks": 2,
+    "startableWeeks": 1,
+    "rate": 50
+   },
+   {
+    "week": 13,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Zach Ertz",
+    "pos": "TE",
+    "heldWeeks": 2,
+    "startableWeeks": 1,
+    "rate": 50
+   },
+   {
+    "week": 13,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "heldWeeks": 2,
+    "startableWeeks": 1,
+    "rate": 50
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "heldWeeks": 9,
+    "startableWeeks": 4,
+    "rate": 44.4
+   },
+   {
+    "week": 2,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "heldWeeks": 7,
+    "startableWeeks": 3,
+    "rate": 42.9
+   },
+   {
+    "week": 7,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 3,
+    "rate": 42.9
+   },
+   {
+    "week": 7,
+    "teamId": 9,
+    "team": "Ashton of Ass",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "heldWeeks": 7,
+    "startableWeeks": 3,
+    "rate": 42.9
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Christian Watson",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 3,
+    "rate": 42.9
+   },
+   {
+    "week": 8,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "heldWeeks": 7,
+    "startableWeeks": 3,
+    "rate": 42.9
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "heldWeeks": 7,
+    "startableWeeks": 3,
+    "rate": 42.9
+   },
+   {
+    "week": 2,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "heldWeeks": 12,
+    "startableWeeks": 5,
+    "rate": 41.7
+   },
+   {
+    "week": 2,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Quentin Johnston",
+    "pos": "WR",
+    "heldWeeks": 10,
+    "startableWeeks": 4,
+    "rate": 40
+   },
+   {
+    "week": 2,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Kayshon Boutte",
+    "pos": "WR",
+    "heldWeeks": 10,
+    "startableWeeks": 4,
+    "rate": 40
+   },
+   {
+    "week": 9,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Chimere Dike",
+    "pos": "WR",
+    "heldWeeks": 5,
+    "startableWeeks": 2,
+    "rate": 40
+   },
+   {
+    "week": 9,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Devin Neal",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 2,
+    "rate": 40
+   },
+   {
+    "week": 9,
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "name": "Devin Singletary",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 2,
+    "rate": 40
+   },
+   {
+    "week": 10,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 2,
+    "rate": 40
+   },
+   {
+    "week": 10,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 2,
+    "rate": 40
+   },
+   {
+    "week": 7,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "heldWeeks": 8,
+    "startableWeeks": 3,
+    "rate": 37.5
+   },
+   {
+    "week": 3,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "heldWeeks": 11,
+    "startableWeeks": 4,
+    "rate": 36.4
+   },
+   {
+    "week": 6,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Jake Tonges",
+    "pos": "TE",
+    "heldWeeks": 3,
+    "startableWeeks": 1,
+    "rate": 33.3
+   },
+   {
+    "week": 6,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "heldWeeks": 9,
+    "startableWeeks": 3,
+    "rate": 33.3
+   },
+   {
+    "week": 8,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jerry Jeudy",
+    "pos": "WR",
+    "heldWeeks": 6,
+    "startableWeeks": 2,
+    "rate": 33.3
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "heldWeeks": 6,
+    "startableWeeks": 2,
+    "rate": 33.3
+   },
+   {
+    "week": 8,
+    "teamId": 9,
+    "team": "Ashton of Ass",
+    "name": "Oronde Gadsden",
+    "pos": "TE",
+    "heldWeeks": 6,
+    "startableWeeks": 2,
+    "rate": 33.3
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "heldWeeks": 6,
+    "startableWeeks": 2,
+    "rate": 33.3
+   },
+   {
+    "week": 11,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "heldWeeks": 3,
+    "startableWeeks": 1,
+    "rate": 33.3
+   },
+   {
+    "week": 1,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "heldWeeks": 13,
+    "startableWeeks": 4,
+    "rate": 30.8
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 2,
+    "rate": 28.6
+   },
+   {
+    "week": 6,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 2,
+    "rate": 28.6
+   },
+   {
+    "week": 7,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "heldWeeks": 7,
+    "startableWeeks": 2,
+    "rate": 28.6
+   },
+   {
+    "week": 7,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Jerry Jeudy",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 2,
+    "rate": 28.6
+   },
+   {
+    "week": 8,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "heldWeeks": 7,
+    "startableWeeks": 2,
+    "rate": 28.6
+   },
+   {
+    "week": 3,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "heldWeeks": 11,
+    "startableWeeks": 3,
+    "rate": 27.3
+   },
+   {
+    "week": 3,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Troy Franklin",
+    "pos": "WR",
+    "heldWeeks": 11,
+    "startableWeeks": 3,
+    "rate": 27.3
+   },
+   {
+    "week": 3,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "heldWeeks": 11,
+    "startableWeeks": 3,
+    "rate": 27.3
+   },
+   {
+    "week": 4,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "heldWeeks": 11,
+    "startableWeeks": 3,
+    "rate": 27.3
+   },
+   {
+    "week": 1,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Bryce Young",
+    "pos": "QB",
+    "heldWeeks": 12,
+    "startableWeeks": 3,
+    "rate": 25
+   },
+   {
+    "week": 6,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "heldWeeks": 8,
+    "startableWeeks": 2,
+    "rate": 25
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Darius Slayton",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 10,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "David Njoku",
+    "pos": "TE",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Tez Johnson",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 11,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Adonai Mitchell",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Sean Tucker",
+    "pos": "RB",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 11,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Jayden Higgins",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 1,
+    "rate": 25
+   },
+   {
+    "week": 3,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Xavier Legette",
+    "pos": "WR",
+    "heldWeeks": 9,
+    "startableWeeks": 2,
+    "rate": 22.2
+   },
+   {
+    "week": 4,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "heldWeeks": 9,
+    "startableWeeks": 2,
+    "rate": 22.2
+   },
+   {
+    "week": 5,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "heldWeeks": 9,
+    "startableWeeks": 2,
+    "rate": 22.2
+   },
+   {
+    "week": 5,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Sean Tucker",
+    "pos": "RB",
+    "heldWeeks": 9,
+    "startableWeeks": 2,
+    "rate": 22.2
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "heldWeeks": 9,
+    "startableWeeks": 2,
+    "rate": 22.2
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "heldWeeks": 10,
+    "startableWeeks": 2,
+    "rate": 20
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Tory Horton",
+    "pos": "WR",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 4,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "heldWeeks": 10,
+    "startableWeeks": 2,
+    "rate": 20
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Rachaad White",
+    "pos": "RB",
+    "heldWeeks": 10,
+    "startableWeeks": 2,
+    "rate": 20
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Tre Tucker",
+    "pos": "WR",
+    "heldWeeks": 10,
+    "startableWeeks": 2,
+    "rate": 20
+   },
+   {
+    "week": 5,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Darren Waller",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 8,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Tez Johnson",
+    "pos": "WR",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "J.J. McCarthy",
+    "pos": "QB",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Olamide Zaccheaus",
+    "pos": "WR",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 10,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Ty Johnson",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 1,
+    "rate": 20
+   },
+   {
+    "week": 2,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "heldWeeks": 11,
+    "startableWeeks": 2,
+    "rate": 18.2
+   },
+   {
+    "week": 2,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "DeMario Douglas",
+    "pos": "WR",
+    "heldWeeks": 11,
+    "startableWeeks": 2,
+    "rate": 18.2
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Rachaad White",
+    "pos": "RB",
+    "heldWeeks": 11,
+    "startableWeeks": 2,
+    "rate": 18.2
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "heldWeeks": 12,
+    "startableWeeks": 2,
+    "rate": 16.7
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "heldWeeks": 12,
+    "startableWeeks": 2,
+    "rate": 16.7
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Emari Demercado",
+    "pos": "RB",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 5,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Justice Hill",
+    "pos": "RB",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 5,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Darius Slayton",
+    "pos": "WR",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 6,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Kendrick Bourne",
+    "pos": "WR",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 8,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Evan Engram",
+    "pos": "TE",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 8,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Josh Downs",
+    "pos": "WR",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 9,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "AJ Barner",
+    "pos": "TE",
+    "heldWeeks": 6,
+    "startableWeeks": 1,
+    "rate": 16.7
+   },
+   {
+    "week": 1,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Dylan Sampson",
+    "pos": "RB",
+    "heldWeeks": 13,
+    "startableWeeks": 2,
+    "rate": 15.4
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Mac Jones",
+    "pos": "QB",
+    "heldWeeks": 7,
+    "startableWeeks": 1,
+    "rate": 14.3
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Xavier Hutchinson",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 1,
+    "rate": 14.3
+   },
+   {
+    "week": 7,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Mason Taylor",
+    "pos": "TE",
+    "heldWeeks": 7,
+    "startableWeeks": 1,
+    "rate": 14.3
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 1,
+    "rate": 14.3
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 1,
+    "rate": 14.3
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "heldWeeks": 8,
+    "startableWeeks": 1,
+    "rate": 12.5
+   },
+   {
+    "week": 6,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "AJ Barner",
+    "pos": "TE",
+    "heldWeeks": 8,
+    "startableWeeks": 1,
+    "rate": 12.5
+   },
+   {
+    "week": 5,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Brashard Smith",
+    "pos": "RB",
+    "heldWeeks": 9,
+    "startableWeeks": 1,
+    "rate": 11.1
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jeremy McNichols",
+    "pos": "RB",
+    "heldWeeks": 10,
+    "startableWeeks": 1,
+    "rate": 10
+   },
+   {
+    "week": 4,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Geno Smith",
+    "pos": "QB",
+    "heldWeeks": 10,
+    "startableWeeks": 1,
+    "rate": 10
+   },
+   {
+    "week": 2,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Elic Ayomanor",
+    "pos": "WR",
+    "heldWeeks": 11,
+    "startableWeeks": 1,
+    "rate": 9.1
+   },
+   {
+    "week": 2,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "JuJu Smith-Schuster",
+    "pos": "WR",
+    "heldWeeks": 12,
+    "startableWeeks": 1,
+    "rate": 8.3
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Dont'e Thornton Jr.",
+    "pos": "WR",
+    "heldWeeks": 9,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 2,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Calvin Austin III",
+    "pos": "WR",
+    "heldWeeks": 10,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Dyami Brown",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 3,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Russell Wilson",
+    "pos": "QB",
+    "heldWeeks": 4,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "Tyquan Thornton",
+    "pos": "WR",
+    "heldWeeks": 8,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 4,
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "name": "Calvin Austin III",
+    "pos": "WR",
+    "heldWeeks": 8,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 5,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Taysom Hill",
+    "pos": "TE",
+    "heldWeeks": 9,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 5,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Malik Washington",
+    "pos": "WR",
+    "heldWeeks": 9,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 5,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Isaiah Bond",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Kendre Miller",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 6,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Luke McCaffrey",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 6,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Hassan Haskins",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Sterling Shepard",
+    "pos": "WR",
+    "heldWeeks": 8,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 7,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Lil'Jordan Humphrey",
+    "pos": "WR",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Michael Mayer",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Malik Washington",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Spencer Rattler",
+    "pos": "QB",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Jayden Reed",
+    "pos": "WR",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Jaylin Noel",
+    "pos": "WR",
+    "heldWeeks": 7,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Brashard Smith",
+    "pos": "RB",
+    "heldWeeks": 6,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Elic Ayomanor",
+    "pos": "WR",
+    "heldWeeks": 5,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Kirk Cousins",
+    "pos": "QB",
+    "heldWeeks": 5,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Jaydon Blue",
+    "pos": "RB",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Jaydon Blue",
+    "pos": "RB",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Samaje Perine",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Isaiah Davis",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Samaje Perine",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 9,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Elic Ayomanor",
+    "pos": "WR",
+    "heldWeeks": 4,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 9,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "heldWeeks": 5,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 9,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Calvin Austin III",
+    "pos": "WR",
+    "heldWeeks": 6,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 10,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Tank Bigsby",
+    "pos": "RB",
+    "heldWeeks": 4,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 10,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Terrell Jennings",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 10,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Luke Musgrave",
+    "pos": "TE",
+    "heldWeeks": 5,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Brock Wright",
+    "pos": "TE",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 11,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 11,
+    "teamId": 2,
+    "team": "Nico Suave",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 11,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Greg Dulcich",
+    "pos": "TE",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Chris Rodriguez Jr.",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Ollie Gordon II",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Cedric Tillman",
+    "pos": "WR",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Andrei Iosivas",
+    "pos": "WR",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "heldWeeks": 3,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Brock Wright",
+    "pos": "TE",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Jayden Reed",
+    "pos": "WR",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Darren Waller",
+    "pos": "TE",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "name": "DJ Moore",
+    "pos": "WR",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "name": "Malik Davis",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Samaje Perine",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Dylan Sampson",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "name": "Isaiah Hodgins",
+    "pos": "WR",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 13,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "John Metchie III",
+    "pos": "WR",
+    "heldWeeks": 2,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "name": "Isaac TeSlaa",
+    "pos": "WR",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "name": "AJ Barner",
+    "pos": "TE",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "T.J. Hockenson",
+    "pos": "TE",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "name": "Adonai Mitchell",
+    "pos": "WR",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "name": "Luther Burden III",
+    "pos": "WR",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Tyrod Taylor",
+    "pos": "QB",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "name": "Chris Rodriguez Jr.",
+    "pos": "RB",
+    "heldWeeks": 1,
+    "startableWeeks": 0,
+    "rate": 0
+   }
+  ]
  }
 }

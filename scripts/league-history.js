@@ -626,6 +626,87 @@ async function handcuffTeams() {
   };
 }
 
+// ── Study 11: FAAB ceiling — startable-week rate of waiver adds, by position ──
+// 2026 is this league's FIRST year running real FAAB ($1000/$1 min — see faabROI); he'll be
+// bidding blind. Can't score BID SIZE against outcome (2025 had none — no bid data exists,
+// see faabROI's own note), but it gives the base rate that should set his ceilings: of
+// players actually added off waivers in this league, what share of the weeks they were held
+// afterward were "startable" — his NFL-wide weekly PPR points that week fell inside the
+// position's startable cutoff (STARTABLE: QB12/RB24/WR24/TE12) among EVERY player at that
+// position in the NFL that week, not just this 12-team league. High rate = bid aggressively;
+// low rate = spread FAAB thin, most pickups are replacement-level. K/D-ST excluded —
+// nflverse's weekly file carries no rows for them (same limit as study 10).
+async function faabCeilings() {
+  const { weekly } = require('./boom-rates'); // require.main-guarded there — this does not kick off a run
+  const games = await weekly(SEASON);
+  if (!games) throw new Error(`No nflverse weekly data for ${SEASON}`);
+
+  const byWeekPos = {};
+  for (const g of games) (byWeekPos[`${g.week}|${g.pos}`] ||= []).push(g.pts);
+  const cutoff = {};
+  for (const [k, pts] of Object.entries(byWeekPos)) {
+    const pos = k.split('|')[1];
+    const n = STARTABLE[pos]; if (!n) continue;
+    cutoff[k] = [...pts].sort((a, b) => b - a)[Math.min(n, pts.length) - 1];
+  }
+  const byNormName = {};
+  for (const g of games) (byNormName[norm(g.name)] ||= {})[g.week] = g;
+
+  const teams = await fetchTeams();
+  const settings = (await espn('mSettings')).settings;
+  const lastWeek = settings.scheduleSettings.matchupPeriodCount;
+  const weeks = Array.from({ length: lastWeek }, (_, i) => i + 1);
+  const rosters = await weeklyRosters(weeks);
+
+  const filter = { transactions: { filterType: { value: ['WAIVER', 'FREEAGENT'] } } };
+  const adds = [];
+  for (const wk of weeks) {
+    const d = await espn('mTransactions2', { sp: wk, filter });
+    for (const t of d.transactions || []) {
+      if (t.status !== 'EXECUTED') continue;
+      for (const it of t.items || []) {
+        if (it.type !== 'ADD' || it.playerId <= 0) continue;
+        adds.push({ week: wk, teamId: t.teamId, playerId: it.playerId });
+      }
+    }
+  }
+
+  const rows = [];
+  for (const a of adds) {
+    let name = null, pos = null;
+    for (let wk = a.week; wk <= lastWeek && !name; wk++) {
+      const p = (rosters[wk]?.[a.teamId] || []).find(p => p.id === a.playerId);
+      if (p) { name = p.name; pos = p.pos; }
+    }
+    if (!name || !STARTABLE[pos]) continue; // K/D-ST, or dropped before ever appearing on a roster snapshot
+    const g = byNormName[norm(name)];
+    if (!g) continue; // no nflverse match this season (rookie name variant etc.) — absence casts no vote
+
+    let heldWeeks = 0, startableWeeks = 0;
+    for (let wk = a.week; wk <= lastWeek; wk++) {
+      const wg = g[wk];
+      if (!wg) continue; // bye or didn't play that week
+      heldWeeks++;
+      if (wg.pts >= (cutoff[`${wk}|${pos}`] ?? Infinity)) startableWeeks++;
+    }
+    if (heldWeeks) rows.push({ week: a.week, teamId: a.teamId, team: teams[a.teamId], name, pos, heldWeeks, startableWeeks, rate: +(100 * startableWeeks / heldWeeks).toFixed(1) });
+  }
+
+  const byPos = {};
+  for (const pos of Object.keys(STARTABLE)) {
+    const ps = rows.filter(r => r.pos === pos);
+    const held = ps.reduce((a, r) => a + r.heldWeeks, 0);
+    const startable = ps.reduce((a, r) => a + r.startableWeeks, 0);
+    byPos[pos] = { adds: ps.length, weeksHeld: held, startableWeeks: startable, startableRate: held ? +(100 * startable / held).toFixed(1) : null };
+  }
+
+  return {
+    season: SEASON,
+    note: 'startable = NFL-wide weekly rank inside QB12/RB24/WR24/TE12 that week, not just this league. No 2025 bid data exists (traditional waivers) so this is a base rate, not a bid-vs-outcome curve.',
+    byPos, rows: rows.sort((a, b) => b.rate - a.rate),
+  };
+}
+
 // Guarded so lineup-alert.js can import bestLineup() without kicking off a full study run
 // (same rule as boom-rates.js). Do NOT import this file without the guard in place.
 if (require.main === module) (async () => {
@@ -727,8 +808,14 @@ if (require.main === module) (async () => {
     for (const r of out.handcuffTeams.rows)
       console.log(`    wk${r.from}-${r.to} ${r.starter} out → ${r.handcuff}: ${r.owners.map(o => `${o.team} (${o.started} st/${o.benched} bn)`).join(', ') || 'nobody'}${r.freeWeeks ? `, free on the wire ${r.freeWeeks} wk` : ''}`);
   }
+  if (has('--faab-ceilings') || has('--all')) {
+    console.log(`Computing FAAB ceilings (startable-week rate of waiver adds) for ${SEASON}...`);
+    out.faabCeilings = await faabCeilings();
+    for (const [pos, s] of Object.entries(out.faabCeilings.byPos))
+      console.log(`  ${pos}: ${s.adds} adds, ${s.startableWeeks}/${s.weeksHeld} weeks held were startable${s.startableRate === null ? '' : ` (${s.startableRate}%)`}`);
+  }
   if (!Object.keys(out).length) {
-    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --kdst-variance | --all | --selftest  [--season YYYY]');
+    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --kdst-variance | --faab-ceilings | --all | --selftest  [--season YYYY]');
     return;
   }
 
