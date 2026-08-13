@@ -113,6 +113,11 @@ function rates(games) {
       bust: r2(p.pts.filter(x => x < BUST[p.pos]).length / g),
       median: r2(median(p.pts)), mean: r2(p.pts.reduce((a, b) => a + b, 0) / g),
       best: r2(Math.max(...p.pts)),
+      // Week-to-week spread. The start/sit tab turns this into a coefficient of variation
+      // (sd/mean) and applies it to THIS week's projection — the ratio carries across
+      // seasons, the absolute number does not. Sample sd (n-1); a 1-game player gets null,
+      // not 0, because one game has no measurable spread (absence casts no vote).
+      sd: g > 1 ? r2(Math.sqrt(p.pts.reduce((a, x) => a + (x - p.pts.reduce((s, y) => s + y, 0) / g) ** 2, 0) / (g - 1))) : null,
     };
   }
   return out;
@@ -175,6 +180,9 @@ function selftest() {
   assert.strictEqual(r.steady.median, 9);
   // Same mean, opposite shape — the whole point of the metric.
   assert.ok(r.spike.mean > r.steady.mean && r.steady.boom < r.spike.boom);
+  // sd is the whole point of the win-probability math: same-ish mean, wildly different spread.
+  assert.ok(r.spike.sd > 15 && r.steady.sd < 1, `sd spread, got ${r.spike.sd} / ${r.steady.sd}`);
+  assert.strictEqual(rates([{ name: 'x', pos: 'TE', week: 1, pts: 3 }]).x.sd, null, 'one game has no sd');
   // A week with fewer than 5 players can't manufacture extra booms.
   const tiny = rates([{ name: 'x', pos: 'TE', week: 1, pts: 3 }]);
   assert.strictEqual(tiny.x.boom, 1); assert.strictEqual(tiny.x.bust, 1);

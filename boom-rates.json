@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-08T20:33:57.217Z",
+ "generated": "2026-08-13T17:54:14.604Z",
  "season": 2025,
  "stale": true,
  "boomRule": "top 5 at position within each week (PPR)",
@@ -19,6 +19,7 @@
    "median": 14.17,
    "mean": 14.19,
    "best": 25.66,
+   "sd": 6.24,
    "season": 2025
   },
   "joe flacco": {
@@ -30,6 +31,7 @@
    "median": 9.62,
    "mean": 11.28,
    "best": 30.7,
+   "sd": 10.56,
    "season": 2025
   },
   "matthew stafford": {
@@ -41,6 +43,7 @@
    "median": 22.92,
    "mean": 20.61,
    "best": 30.88,
+   "sd": 6.98,
    "season": 2025
   },
   "russell wilson": {
@@ -52,6 +55,7 @@
    "median": 4.05,
    "mean": 8.31,
    "best": 30.3,
+   "sd": 11.51,
    "season": 2025
   },
   "adam thielen": {
@@ -63,6 +67,7 @@
    "median": 2,
    "mean": 2.83,
    "best": 8.9,
+   "sd": 2.65,
    "season": 2025
   },
   "zach ertz": {
@@ -74,6 +79,7 @@
    "median": 8.6,
    "mean": 9.72,
    "best": 20.6,
+   "sd": 6.08,
    "season": 2025
   },
   "keenan allen": {
@@ -85,6 +91,7 @@
    "median": 8.7,
    "mean": 10.75,
    "best": 28.9,
+   "sd": 6.81,
    "season": 2025
   },
   "travis kelce": {
@@ -96,6 +103,7 @@
    "median": 10.1,
    "mean": 11.36,
    "best": 24.1,
+   "sd": 6.41,
    "season": 2025
   },
   "deandre hopkins": {
@@ -107,6 +115,7 @@
    "median": 3.3,
    "mean": 3.94,
    "best": 14.4,
+   "sd": 4.17,
    "season": 2025
   },
   "geno smith": {
@@ -118,6 +127,7 @@
    "median": 9.78,
    "mean": 11.59,
    "best": 26.26,
+   "sd": 7.29,
    "season": 2025
   },
   "brandin cooks": {
@@ -129,6 +139,7 @@
    "median": 3.6,
    "mean": 3.99,
    "best": 14.1,
+   "sd": 3.64,
    "season": 2025
   },
   "davante adams": {
@@ -140,6 +151,7 @@
    "median": 15.1,
    "mean": 15.92,
    "best": 26.5,
+   "sd": 6.84,
    "season": 2025
   },
   "mike evans": {
@@ -151,6 +163,7 @@
    "median": 11.35,
    "mean": 10.6,
    "best": 19.2,
+   "sd": 5.8,
    "season": 2025
   },
   "stefon diggs": {
@@ -162,6 +175,7 @@
    "median": 11.7,
    "mean": 12.37,
    "best": 24.6,
+   "sd": 6.81,
    "season": 2025
   },
   "deandre carter": {
@@ -173,6 +187,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "tyler lockett": {
@@ -184,6 +199,7 @@
    "median": 2.9,
    "mean": 3.95,
    "best": 10.2,
+   "sd": 3.54,
    "season": 2025
   },
   "sterling shepard": {
@@ -195,6 +211,7 @@
    "median": 6.9,
    "mean": 6.31,
    "best": 12,
+   "sd": 3.63,
    "season": 2025
   },
   "austin hooper": {
@@ -206,6 +223,7 @@
    "median": 4.8,
    "mean": 4.56,
    "best": 9.1,
+   "sd": 2.94,
    "season": 2025
   },
   "chris moore": {
@@ -217,6 +235,7 @@
    "median": 3.45,
    "mean": 3.86,
    "best": 13.6,
+   "sd": 4.32,
    "season": 2025
   },
   "kalif raymond": {
@@ -228,6 +247,7 @@
    "median": 3.3,
    "mean": 4.45,
    "best": 16.2,
+   "sd": 4.69,
    "season": 2025
   },
   "derrick henry": {
@@ -239,6 +259,7 @@
    "median": 13.1,
    "mean": 16.44,
    "best": 45.6,
+   "sd": 10,
    "season": 2025
   },
   "tyreek hill": {
@@ -250,6 +271,7 @@
    "median": 14.3,
    "mean": 13.38,
    "best": 16.9,
+   "sd": 4.01,
    "season": 2025
   },
   "dak prescott": {
@@ -261,6 +283,7 @@
    "median": 20.6,
    "mean": 18.46,
    "best": 30.96,
+   "sd": 8.28,
    "season": 2025
   },
   "hunter henry": {
@@ -272,6 +295,7 @@
    "median": 9.1,
    "mean": 10.52,
    "best": 29,
+   "sd": 7.28,
    "season": 2025
   },
   "jared goff": {
@@ -283,6 +307,7 @@
    "median": 16.82,
    "mean": 17.47,
    "best": 33.96,
+   "sd": 7.52,
    "season": 2025
   },
   "tyler higbee": {
@@ -294,6 +319,7 @@
    "median": 5.6,
    "mean": 7.11,
    "best": 20.1,
+   "sd": 6.28,
    "season": 2025
   },
   "mo alie-cox": {
@@ -305,6 +331,7 @@
    "median": 1.9,
    "mean": 2.79,
    "best": 11,
+   "sd": 3.17,
    "season": 2025
   },
   "johnny mundt": {
@@ -316,6 +343,7 @@
    "median": 1.8,
    "mean": 1.68,
    "best": 4.5,
+   "sd": 1.44,
    "season": 2025
   },
   "christian mccaffrey": {
@@ -327,6 +355,7 @@
    "median": 24.1,
    "mean": 24.51,
    "best": 39.1,
+   "sd": 8.22,
    "season": 2025
   },
   "george kittle": {
@@ -338,6 +367,7 @@
    "median": 13.8,
    "mean": 14.68,
    "best": 24.7,
+   "sd": 8.26,
    "season": 2025
   },
   "aaron jones": {
@@ -349,6 +379,7 @@
    "median": 10.3,
    "mean": 9.89,
    "best": 15.9,
+   "sd": 4.51,
    "season": 2025
   },
   "samaje perine": {
@@ -360,6 +391,7 @@
    "median": 4.9,
    "mean": 5.19,
    "best": 17,
+   "sd": 4.74,
    "season": 2025
   },
   "james conner": {
@@ -371,6 +403,7 @@
    "median": 12.2,
    "mean": 11.1,
    "best": 14.4,
+   "sd": 3.97,
    "season": 2025
   },
   "mack hollins": {
@@ -382,6 +415,7 @@
    "median": 7.35,
    "mean": 8.1,
    "best": 16.6,
+   "sd": 4.61,
    "season": 2025
   },
   "jamal agnew": {
@@ -393,6 +427,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "eric saubert": {
@@ -404,6 +439,7 @@
    "median": 0,
    "mean": 1.01,
    "best": 3,
+   "sd": 1.24,
    "season": 2025
   },
   "david moore": {
@@ -415,6 +451,7 @@
    "median": 1.2,
    "mean": 0.9,
    "best": 1.5,
+   "sd": 0.79,
    "season": 2025
   },
   "noah brown": {
@@ -426,6 +463,7 @@
    "median": 3.35,
    "mean": 3.33,
    "best": 4.7,
+   "sd": 1.2,
    "season": 2025
   },
   "austin ekeler": {
@@ -437,6 +475,7 @@
    "median": 6.55,
    "mean": 6.55,
    "best": 8.7,
+   "sd": 3.04,
    "season": 2025
   },
   "dare ogunbowale": {
@@ -448,6 +487,7 @@
    "median": 1.05,
    "mean": 1.72,
    "best": 6.5,
+   "sd": 2.24,
    "season": 2025
   },
   "juju smith-schuster": {
@@ -459,6 +499,7 @@
    "median": 3.3,
    "mean": 4.32,
    "best": 13.6,
+   "sd": 4.1,
    "season": 2025
   },
   "jonnu smith": {
@@ -470,6 +511,7 @@
    "median": 5.3,
    "mean": 5.01,
    "best": 12.5,
+   "sd": 3.92,
    "season": 2025
   },
   "patrick mahomes": {
@@ -481,6 +523,7 @@
    "median": 22.52,
    "mean": 20.41,
    "best": 31.48,
+   "sd": 8,
    "season": 2025
   },
   "evan engram": {
@@ -492,6 +535,7 @@
    "median": 6.5,
    "mean": 6.43,
    "best": 13.9,
+   "sd": 3.91,
    "season": 2025
   },
   "david njoku": {
@@ -503,6 +547,7 @@
    "median": 7.1,
    "mean": 7.85,
    "best": 18.7,
+   "sd": 5.05,
    "season": 2025
   },
   "zay jones": {
@@ -514,6 +559,7 @@
    "median": 3.65,
    "mean": 5.05,
    "best": 12.9,
+   "sd": 4.88,
    "season": 2025
   },
   "alvin kamara": {
@@ -525,6 +571,7 @@
    "median": 9.5,
    "mean": 9.15,
    "best": 16,
+   "sd": 4.9,
    "season": 2025
   },
   "cooper kupp": {
@@ -536,6 +583,7 @@
    "median": 6,
    "mean": 7.27,
    "best": 16,
+   "sd": 4.05,
    "season": 2025
   },
   "kareem hunt": {
@@ -547,6 +595,7 @@
    "median": 6.5,
    "mean": 8.55,
    "best": 20,
+   "sd": 6.05,
    "season": 2025
   },
   "josh reynolds": {
@@ -558,6 +607,7 @@
    "median": 5.5,
    "mean": 4.62,
    "best": 7.9,
+   "sd": 2.97,
    "season": 2025
   },
   "jeremy mcnichols": {
@@ -569,6 +619,7 @@
    "median": 3.95,
    "mean": 4.54,
    "best": 13.8,
+   "sd": 3.78,
    "season": 2025
   },
   "will dissly": {
@@ -580,6 +631,7 @@
    "median": 2.25,
    "mean": 2.59,
    "best": 5.8,
+   "sd": 1.86,
    "season": 2025
   },
   "tyler conklin": {
@@ -591,6 +643,7 @@
    "median": 1.9,
    "mean": 2.88,
    "best": 7.2,
+   "sd": 2.69,
    "season": 2025
   },
   "courtland sutton": {
@@ -602,6 +655,7 @@
    "median": 12.2,
    "mean": 12.92,
    "best": 24.3,
+   "sd": 7.48,
    "season": 2025
   },
   "dallas goedert": {
@@ -613,6 +667,7 @@
    "median": 10.9,
    "mean": 12.34,
    "best": 26,
+   "sd": 7.17,
    "season": 2025
   },
   "dalton schultz": {
@@ -624,6 +679,7 @@
    "median": 11,
    "mean": 10.45,
    "best": 21.6,
+   "sd": 5.64,
    "season": 2025
   },
   "justin watson": {
@@ -635,6 +691,7 @@
    "median": 1.3,
    "mean": 2,
    "best": 4.7,
+   "sd": 2.43,
    "season": 2025
   },
   "ray-ray mccloud": {
@@ -646,6 +703,7 @@
    "median": 0.9,
    "mean": 2.32,
    "best": 8.1,
+   "sd": 3.22,
    "season": 2025
   },
   "trent sherfield": {
@@ -657,6 +715,7 @@
    "median": 1.3,
    "mean": 1.27,
    "best": 2.5,
+   "sd": 1.02,
    "season": 2025
   },
   "mark andrews": {
@@ -668,6 +727,7 @@
    "median": 6.4,
    "mean": 7.71,
    "best": 27.1,
+   "sd": 6.79,
    "season": 2025
   },
   "nick chubb": {
@@ -679,6 +739,7 @@
    "median": 6,
    "mean": 5.89,
    "best": 15.2,
+   "sd": 4.38,
    "season": 2025
   },
   "lamar jackson": {
@@ -690,6 +751,7 @@
    "median": 16.64,
    "mean": 16.53,
    "best": 29.36,
+   "sd": 9.08,
    "season": 2025
   },
   "dj moore": {
@@ -701,6 +763,7 @@
    "median": 8.2,
    "mean": 10.13,
    "best": 23.4,
+   "sd": 8.19,
    "season": 2025
   },
   "mike gesicki": {
@@ -712,6 +775,7 @@
    "median": 3.7,
    "mean": 5.89,
    "best": 20.6,
+   "sd": 5.58,
    "season": 2025
   },
   "calvin ridley": {
@@ -723,6 +787,7 @@
    "median": 5,
    "mean": 6.76,
    "best": 18.1,
+   "sd": 5.48,
    "season": 2025
   },
   "saquon barkley": {
@@ -734,6 +799,7 @@
    "median": 15.15,
    "mean": 14.52,
    "best": 33.4,
+   "sd": 7.19,
    "season": 2025
   },
   "khadarel hodge": {
@@ -745,6 +811,7 @@
    "median": 0,
    "mean": 0.76,
    "best": 6.1,
+   "sd": 2.16,
    "season": 2025
   },
   "baker mayfield": {
@@ -756,6 +823,7 @@
    "median": 17.44,
    "mean": 16,
    "best": 26.66,
+   "sd": 6.24,
    "season": 2025
   },
   "josh allen": {
@@ -767,6 +835,7 @@
    "median": 23.1,
    "mean": 22.79,
    "best": 42.68,
+   "sd": 10.4,
    "season": 2025
   },
   "sam darnold": {
@@ -778,6 +847,7 @@
    "median": 15.8,
    "mean": 13.85,
    "best": 27.64,
+   "sd": 7.98,
    "season": 2025
   },
   "jakobi meyers": {
@@ -789,6 +859,7 @@
    "median": 9.35,
    "mean": 10.99,
    "best": 21.3,
+   "sd": 4.35,
    "season": 2025
   },
   "justice hill": {
@@ -800,6 +871,7 @@
    "median": 4.5,
    "mean": 6.52,
    "best": 28.7,
+   "sd": 8.56,
    "season": 2025
   },
   "hunter renfrow": {
@@ -811,6 +883,7 @@
    "median": 2.8,
    "mean": 5.98,
    "best": 23.8,
+   "sd": 8.75,
    "season": 2025
   },
   "ashton dulin": {
@@ -822,6 +895,7 @@
    "median": 0.1,
    "mean": 1.67,
    "best": 7.5,
+   "sd": 2.55,
    "season": 2025
   },
   "olamide zaccheaus": {
@@ -833,6 +907,7 @@
    "median": 5.05,
    "mean": 6.06,
    "best": 17.8,
+   "sd": 4.6,
    "season": 2025
   },
   "kyler murray": {
@@ -844,6 +919,7 @@
    "median": 15.3,
    "mean": 15.56,
    "best": 18.32,
+   "sd": 1.78,
    "season": 2025
   },
   "t.j. hockenson": {
@@ -855,6 +931,7 @@
    "median": 7.9,
    "mean": 7.52,
    "best": 15.9,
+   "sd": 4.04,
    "season": 2025
   },
   "miles sanders": {
@@ -866,6 +943,7 @@
    "median": 6.4,
    "mean": 6.68,
    "best": 9.9,
+   "sd": 2.88,
    "season": 2025
   },
   "josh oliver": {
@@ -877,6 +955,7 @@
    "median": 2.35,
    "mean": 4.58,
    "best": 16.4,
+   "sd": 5,
    "season": 2025
   },
   "devin singletary": {
@@ -888,6 +967,7 @@
    "median": 3.8,
    "mean": 6.4,
    "best": 19.2,
+   "sd": 6.33,
    "season": 2025
   },
   "tony pollard": {
@@ -899,6 +979,7 @@
    "median": 9.5,
    "mean": 10.93,
    "best": 28.1,
+   "sd": 5.62,
    "season": 2025
   },
   "greg dortch": {
@@ -910,6 +991,7 @@
    "median": 3.3,
    "mean": 6.26,
    "best": 18.6,
+   "sd": 6.02,
    "season": 2025
   },
   "darius slayton": {
@@ -921,6 +1003,7 @@
    "median": 7.2,
    "mean": 7.06,
    "best": 14.1,
+   "sd": 4.12,
    "season": 2025
   },
   "ty johnson": {
@@ -932,6 +1015,7 @@
    "median": 5.5,
    "mean": 5.9,
    "best": 19.6,
+   "sd": 5.29,
    "season": 2025
   },
   "craig reynolds": {
@@ -943,6 +1027,7 @@
    "median": 0,
    "mean": 0.08,
    "best": 0.4,
+   "sd": 0.18,
    "season": 2025
   },
   "alex bachman": {
@@ -954,6 +1039,7 @@
    "median": 0,
    "mean": 0.29,
    "best": 1.9,
+   "sd": 0.66,
    "season": 2025
   },
   "drew sample": {
@@ -965,6 +1051,7 @@
    "median": 1.75,
    "mean": 2.66,
    "best": 10,
+   "sd": 2.85,
    "season": 2025
   },
   "dk metcalf": {
@@ -976,6 +1063,7 @@
    "median": 12.2,
    "mean": 12.48,
    "best": 23.6,
+   "sd": 6,
    "season": 2025
   },
   "noah fant": {
@@ -987,6 +1075,7 @@
    "median": 5.8,
    "mean": 5.75,
    "best": 14.4,
+   "sd": 4.73,
    "season": 2025
   },
   "gunner olszewski": {
@@ -998,6 +1087,7 @@
    "median": 0,
    "mean": 2.24,
    "best": 18.2,
+   "sd": 5.01,
    "season": 2025
   },
   "terry mclaurin": {
@@ -1009,6 +1099,7 @@
    "median": 10.1,
    "mean": 11.42,
    "best": 22.6,
+   "sd": 5.1,
    "season": 2025
   },
   "marquise brown": {
@@ -1020,6 +1111,7 @@
    "median": 8.5,
    "mean": 8.61,
    "best": 20.5,
+   "sd": 5.69,
    "season": 2025
   },
   "a.j. brown": {
@@ -1031,6 +1123,7 @@
    "median": 12.1,
    "mean": 14.69,
    "best": 35.2,
+   "sd": 9.75,
    "season": 2025
   },
   "david montgomery": {
@@ -1042,6 +1135,7 @@
    "median": 8.3,
    "mean": 9.82,
    "best": 29.4,
+   "sd": 6.72,
    "season": 2025
   },
   "dawson knox": {
@@ -1053,6 +1147,7 @@
    "median": 4.35,
    "mean": 6.48,
    "best": 18.7,
+   "sd": 5.22,
    "season": 2025
   },
   "josh jacobs": {
@@ -1064,6 +1159,7 @@
    "median": 14.4,
    "mean": 15.81,
    "best": 32,
+   "sd": 9.02,
    "season": 2025
   },
   "daniel jones": {
@@ -1075,6 +1171,7 @@
    "median": 16.68,
    "mean": 17.42,
    "best": 29.48,
+   "sd": 7.08,
    "season": 2025
   },
   "deebo samuel sr.": {
@@ -1086,6 +1183,7 @@
    "median": 10.25,
    "mean": 11.76,
    "best": 23.6,
+   "sd": 6.94,
    "season": 2025
   },
   "cody white": {
@@ -1097,6 +1195,7 @@
    "median": 0,
    "mean": 2.25,
    "best": 13,
+   "sd": 4.5,
    "season": 2025
   },
   "juwan johnson": {
@@ -1108,6 +1207,7 @@
    "median": 10.6,
    "mean": 10.58,
    "best": 19.2,
+   "sd": 4.82,
    "season": 2025
   },
   "rico dowdle": {
@@ -1119,6 +1219,7 @@
    "median": 10.6,
    "mean": 12.72,
    "best": 33.9,
+   "sd": 9.8,
    "season": 2025
   },
   "j.k. dobbins": {
@@ -1130,6 +1231,7 @@
    "median": 12.8,
    "mean": 11.59,
    "best": 15.5,
+   "sd": 4.1,
    "season": 2025
   },
   "nick westbrook-ikhine": {
@@ -1141,6 +1243,7 @@
    "median": 1.1,
    "mean": 1.53,
    "best": 4.6,
+   "sd": 1.77,
    "season": 2025
   },
   "tua tagovailoa": {
@@ -1152,6 +1255,7 @@
    "median": 9.95,
    "mean": 11.48,
    "best": 24.2,
+   "sd": 7.3,
    "season": 2025
   },
   "jonathan taylor": {
@@ -1163,6 +1267,7 @@
    "median": 16.9,
    "mean": 21.31,
    "best": 49.6,
+   "sd": 12.44,
    "season": 2025
   },
   "colby parkinson": {
@@ -1174,6 +1279,7 @@
    "median": 8.55,
    "mean": 9.27,
    "best": 24.5,
+   "sd": 7.27,
    "season": 2025
   },
   "michael pittman": {
@@ -1185,6 +1291,7 @@
    "median": 13.7,
    "mean": 11.91,
    "best": 23.5,
+   "sd": 7.49,
    "season": 2025
   },
   "jauan jennings": {
@@ -1196,6 +1303,7 @@
    "median": 12.2,
    "mean": 11.55,
    "best": 19.9,
+   "sd": 5.71,
    "season": 2025
   },
   "jordan love": {
@@ -1207,6 +1315,7 @@
    "median": 14.96,
    "mean": 15.68,
    "best": 28.3,
+   "sd": 7.41,
    "season": 2025
   },
   "aj dillon": {
@@ -1218,6 +1327,7 @@
    "median": 1.5,
    "mean": 1.52,
    "best": 2,
+   "sd": 0.41,
    "season": 2025
   },
   "d'andre swift": {
@@ -1229,6 +1339,7 @@
    "median": 14.35,
    "mean": 14.29,
    "best": 25.5,
+   "sd": 6.67,
    "season": 2025
   },
   "cole kmet": {
@@ -1240,6 +1351,7 @@
    "median": 4.45,
    "mean": 4.92,
    "best": 12.6,
+   "sd": 3.24,
    "season": 2025
   },
   "justin jefferson": {
@@ -1251,6 +1363,7 @@
    "median": 12.5,
    "mean": 11.85,
    "best": 22.6,
+   "sd": 5.79,
    "season": 2025
   },
   "antonio gibson": {
@@ -1262,6 +1375,7 @@
    "median": 3.6,
    "mean": 4.64,
    "best": 9.8,
+   "sd": 4.41,
    "season": 2025
   },
   "devin duvernay": {
@@ -1273,6 +1387,7 @@
    "median": 0,
    "mean": 0.27,
    "best": 3.4,
+   "sd": 0.86,
    "season": 2025
   },
   "justin herbert": {
@@ -1284,6 +1399,7 @@
    "median": 14.92,
    "mean": 17.93,
    "best": 30.2,
+   "sd": 7.74,
    "season": 2025
   },
   "ceedee lamb": {
@@ -1295,6 +1411,7 @@
    "median": 17.1,
    "mean": 15.45,
    "best": 24.2,
+   "sd": 5.98,
    "season": 2025
   },
   "jalen hurts": {
@@ -1306,6 +1423,7 @@
    "median": 19.45,
    "mean": 18.82,
    "best": 30.86,
+   "sd": 7.58,
    "season": 2025
   },
   "jerry jeudy": {
@@ -1317,6 +1435,7 @@
    "median": 5.1,
    "mean": 7.1,
    "best": 19.8,
+   "sd": 5.22,
    "season": 2025
   },
   "tee higgins": {
@@ -1328,6 +1447,7 @@
    "median": 11.4,
    "mean": 14.11,
    "best": 33.1,
+   "sd": 8.23,
    "season": 2025
   },
   "adam trautman": {
@@ -1339,6 +1459,7 @@
    "median": 3.4,
    "mean": 3.5,
    "best": 10,
+   "sd": 2.93,
    "season": 2025
   },
   "tyler johnson": {
@@ -1350,6 +1471,7 @@
    "median": 1.7,
    "mean": 4.19,
    "best": 15.4,
+   "sd": 5.22,
    "season": 2025
   },
   "joe burrow": {
@@ -1361,6 +1483,7 @@
    "median": 19.82,
    "mean": 16.81,
    "best": 28.96,
+   "sd": 8.58,
    "season": 2025
   },
   "rashod bateman": {
@@ -1372,6 +1495,7 @@
    "median": 3.4,
    "mean": 4.26,
    "best": 17.3,
+   "sd": 4.77,
    "season": 2025
   },
   "nico collins": {
@@ -1383,6 +1507,7 @@
    "median": 14.5,
    "mean": 15.08,
    "best": 24.2,
+   "sd": 6.5,
    "season": 2025
   },
   "chuba hubbard": {
@@ -1394,6 +1519,7 @@
    "median": 7.5,
    "mean": 8.36,
    "best": 20.4,
+   "sd": 6.15,
    "season": 2025
   },
   "jaylen waddle": {
@@ -1405,6 +1531,7 @@
    "median": 13.2,
    "mean": 12.13,
    "best": 23,
+   "sd": 6.87,
    "season": 2025
   },
   "dee eskridge": {
@@ -1416,6 +1543,7 @@
    "median": 0,
    "mean": 0.93,
    "best": 6.5,
+   "sd": 1.99,
    "season": 2025
   },
   "dyami brown": {
@@ -1427,6 +1555,7 @@
    "median": 3.5,
    "mean": 4.52,
    "best": 17.6,
+   "sd": 5.36,
    "season": 2025
   },
   "tylan wallace": {
@@ -1438,6 +1567,7 @@
    "median": 0,
    "mean": 1.32,
    "best": 10.5,
+   "sd": 3.15,
    "season": 2025
   },
   "noah gray": {
@@ -1449,6 +1579,7 @@
    "median": 2.65,
    "mean": 2.77,
    "best": 6,
+   "sd": 2.03,
    "season": 2025
   },
   "jack stoll": {
@@ -1460,6 +1591,7 @@
    "median": 1.4,
    "mean": 1.84,
    "best": 10.1,
+   "sd": 3.2,
    "season": 2025
   },
   "feleipe franks": {
@@ -1471,6 +1603,7 @@
    "median": 0,
    "mean": 0.04,
    "best": 0.2,
+   "sd": 0.08,
    "season": 2025
   },
   "kene nwangwu": {
@@ -1482,6 +1615,7 @@
    "median": 0,
    "mean": 1.09,
    "best": 6,
+   "sd": 2.03,
    "season": 2025
   },
   "tutu atwell": {
@@ -1493,6 +1627,7 @@
    "median": 1.65,
    "mean": 3.9,
    "best": 15.8,
+   "sd": 5.69,
    "season": 2025
   },
   "ben skowronek": {
@@ -1504,6 +1639,7 @@
    "median": 0,
    "mean": 1.06,
    "best": 9.2,
+   "sd": 2.41,
    "season": 2025
   },
   "rhamondre stevenson": {
@@ -1515,6 +1651,7 @@
    "median": 10.85,
    "mean": 12.77,
    "best": 35.3,
+   "sd": 10.05,
    "season": 2025
   },
   "kylen granson": {
@@ -1526,6 +1663,7 @@
    "median": 0,
    "mean": 0.92,
    "best": 7,
+   "sd": 2.01,
    "season": 2025
   },
   "luke farrell": {
@@ -1537,6 +1675,7 @@
    "median": 1.4,
    "mean": 2.27,
    "best": 9.5,
+   "sd": 3.32,
    "season": 2025
   },
   "najee harris": {
@@ -1548,6 +1687,7 @@
    "median": 2.8,
    "mean": 3.87,
    "best": 6.8,
+   "sd": 2.57,
    "season": 2025
   },
   "pat freiermuth": {
@@ -1559,6 +1699,7 @@
    "median": 6.1,
    "mean": 7.57,
    "best": 28.1,
+   "sd": 6.45,
    "season": 2025
   },
   "ja'marr chase": {
@@ -1570,6 +1711,7 @@
    "median": 20.5,
    "mean": 19.6,
    "best": 38.1,
+   "sd": 10.26,
    "season": 2025
   },
   "devonta smith": {
@@ -1581,6 +1723,7 @@
    "median": 9.3,
    "mean": 11.87,
    "best": 33.3,
+   "sd": 7.8,
    "season": 2025
   },
   "kenny gainwell": {
@@ -1592,6 +1735,7 @@
    "median": 9.6,
    "mean": 13.02,
    "best": 31.4,
+   "sd": 9.38,
    "season": 2025
   },
   "justin fields": {
@@ -1603,6 +1747,7 @@
    "median": 19.34,
    "mean": 15.85,
    "best": 29.52,
+   "sd": 10.8,
    "season": 2025
   },
   "amon-ra st. brown": {
@@ -1614,6 +1759,7 @@
    "median": 18,
    "mean": 19.06,
    "best": 41.4,
+   "sd": 10.93,
    "season": 2025
   },
   "kyle pitts": {
@@ -1625,6 +1771,7 @@
    "median": 11.8,
    "mean": 12.4,
    "best": 45.6,
+   "sd": 9.94,
    "season": 2025
   },
   "trevor lawrence": {
@@ -1636,6 +1783,7 @@
    "median": 19.24,
    "mean": 19.89,
    "best": 44.3,
+   "sd": 8.79,
    "season": 2025
   },
   "travis etienne": {
@@ -1647,6 +1795,7 @@
    "median": 16.5,
    "mean": 14.94,
    "best": 31.5,
+   "sd": 6.94,
    "season": 2025
   },
   "elijah moore": {
@@ -1658,6 +1807,7 @@
    "median": 2.4,
    "mean": 3.18,
    "best": 10.7,
+   "sd": 3.42,
    "season": 2025
   },
   "josh palmer": {
@@ -1669,6 +1819,7 @@
    "median": 3.9,
    "mean": 4.36,
    "best": 11.1,
+   "sd": 3.06,
    "season": 2025
   },
   "javonte williams": {
@@ -1680,6 +1831,7 @@
    "median": 14.9,
    "mean": 15.18,
    "best": 26.9,
+   "sd": 6.02,
    "season": 2025
   },
   "hunter long": {
@@ -1691,6 +1843,7 @@
    "median": 3.6,
    "mean": 4.64,
    "best": 11.3,
+   "sd": 3.59,
    "season": 2025
   },
   "tommy tremble": {
@@ -1702,6 +1855,7 @@
    "median": 1.7,
    "mean": 4.26,
    "best": 15.2,
+   "sd": 4.54,
    "season": 2025
   },
   "zach wilson": {
@@ -1713,6 +1867,7 @@
    "median": 0,
    "mean": 0.35,
    "best": 1.58,
+   "sd": 0.83,
    "season": 2025
   },
   "tyler badie": {
@@ -1724,6 +1879,19 @@
    "median": 2.35,
    "mean": 2.21,
    "best": 4.8,
+   "sd": 1.7,
+   "season": 2025
+  },
+  "bo melton": {
+   "pos": "WR",
+   "g": 13,
+   "boom": 0,
+   "boomWeeks": 0,
+   "bust": 0.92,
+   "median": 0,
+   "mean": 1.86,
+   "best": 11.5,
+   "sd": 3.35,
    "season": 2025
   },
   "jake tonges": {
@@ -1735,6 +1903,7 @@
    "median": 8.85,
    "mean": 9.33,
    "best": 19,
+   "sd": 6.44,
    "season": 2025
   },
   "isiah pacheco": {
@@ -1746,6 +1915,7 @@
    "median": 5.8,
    "mean": 6.72,
    "best": 13.5,
+   "sd": 3.89,
    "season": 2025
   },
   "jaylen warren": {
@@ -1757,6 +1927,7 @@
    "median": 12.95,
    "mean": 13.57,
    "best": 29.1,
+   "sd": 5.62,
    "season": 2025
   },
   "drake london": {
@@ -1768,6 +1939,7 @@
    "median": 15.65,
    "mean": 16.83,
    "best": 38.8,
+   "sd": 11.45,
    "season": 2025
   },
   "chris olave": {
@@ -1779,6 +1951,7 @@
    "median": 15.2,
    "mean": 16.75,
    "best": 36.8,
+   "sd": 7.91,
    "season": 2025
   },
   "jameson williams": {
@@ -1790,6 +1963,7 @@
    "median": 13.4,
    "mean": 12.94,
    "best": 26.9,
+   "sd": 8.96,
    "season": 2025
   },
   "george pickens": {
@@ -1801,6 +1975,7 @@
    "median": 14.8,
    "mean": 17.17,
    "best": 33.4,
+   "sd": 9.65,
    "season": 2025
   },
   "james cook": {
@@ -1812,6 +1987,7 @@
    "median": 20.4,
    "mean": 17.78,
    "best": 33.6,
+   "sd": 9.2,
    "season": 2025
   },
   "rachaad white": {
@@ -1823,6 +1999,7 @@
    "median": 8,
    "mean": 8.41,
    "best": 23.1,
+   "sd": 5.5,
    "season": 2025
   },
   "dameon pierce": {
@@ -1834,6 +2011,7 @@
    "median": 0.5,
    "mean": 0.72,
    "best": 2.1,
+   "sd": 0.88,
    "season": 2025
   },
   "khalil shakir": {
@@ -1845,6 +2023,7 @@
    "median": 11.15,
    "mean": 10.4,
    "best": 20.8,
+   "sd": 5.8,
    "season": 2025
   },
   "tyler allgeier": {
@@ -1856,6 +2035,7 @@
    "median": 8.3,
    "mean": 7.24,
    "best": 17.7,
+   "sd": 5.35,
    "season": 2025
   },
   "jerome ford": {
@@ -1867,6 +2047,7 @@
    "median": 3,
    "mean": 3.35,
    "best": 10.4,
+   "sd": 3.29,
    "season": 2025
   },
   "ty chandler": {
@@ -1878,6 +2059,7 @@
    "median": 2.4,
    "mean": 2.93,
    "best": 6.4,
+   "sd": 3.23,
    "season": 2025
   },
   "jalen nailor": {
@@ -1889,6 +2071,7 @@
    "median": 5.7,
    "mean": 5.92,
    "best": 23.4,
+   "sd": 6.66,
    "season": 2025
   },
   "andrew ogletree": {
@@ -1900,6 +2083,7 @@
    "median": 0,
    "mean": 1.15,
    "best": 8.8,
+   "sd": 2.65,
    "season": 2025
   },
   "john fitzpatrick": {
@@ -1911,6 +2095,7 @@
    "median": 1.5,
    "mean": 2.29,
    "best": 9.2,
+   "sd": 2.72,
    "season": 2025
   },
   "ko kieft": {
@@ -1922,6 +2107,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "tanner conner": {
@@ -1933,6 +2119,7 @@
    "median": 2.45,
    "mean": 2.26,
    "best": 4,
+   "sd": 1.59,
    "season": 2025
   },
   "jordan mason": {
@@ -1944,6 +2131,7 @@
    "median": 7.15,
    "mean": 8.06,
    "best": 23.6,
+   "sd": 5.5,
    "season": 2025
   },
   "lucas krull": {
@@ -1955,6 +2143,7 @@
    "median": 1.75,
    "mean": 1.75,
    "best": 1.9,
+   "sd": 0.21,
    "season": 2025
   },
   "rashid shaheed": {
@@ -1966,6 +2155,7 @@
    "median": 8.65,
    "mean": 8.7,
    "best": 21.4,
+   "sd": 5.84,
    "season": 2025
   },
   "julius chestnut": {
@@ -1977,6 +2167,7 @@
    "median": 0,
    "mean": 0.25,
    "best": 2.6,
+   "sd": 0.64,
    "season": 2025
   },
   "john metchie iii": {
@@ -1988,6 +2179,7 @@
    "median": 5,
    "mean": 5.53,
    "best": 18.5,
+   "sd": 5.42,
    "season": 2025
   },
   "hassan haskins": {
@@ -1999,6 +2191,7 @@
    "median": 0,
    "mean": 0.91,
    "best": 3.3,
+   "sd": 1.28,
    "season": 2025
   },
   "alec pierce": {
@@ -2010,6 +2203,7 @@
    "median": 10.8,
    "mean": 12.22,
    "best": 29.2,
+   "sd": 8.3,
    "season": 2025
   },
   "jalen tolbert": {
@@ -2021,6 +2215,7 @@
    "median": 2.2,
    "mean": 3.86,
    "best": 12.7,
+   "sd": 4.41,
    "season": 2025
   },
   "garrett wilson": {
@@ -2032,6 +2227,7 @@
    "median": 19.1,
    "mean": 14.21,
    "best": 24.4,
+   "sd": 9.66,
    "season": 2025
   },
   "jahan dotson": {
@@ -2043,6 +2239,7 @@
    "median": 2.2,
    "mean": 3.35,
    "best": 11,
+   "sd": 3.48,
    "season": 2025
   },
   "trey mcbride": {
@@ -2054,6 +2251,7 @@
    "median": 16.5,
    "mean": 18.58,
    "best": 37.4,
+   "sd": 8.37,
    "season": 2025
   },
   "velus jones jr.": {
@@ -2065,6 +2263,7 @@
    "median": 0,
    "mean": 0.64,
    "best": 3.2,
+   "sd": 1.43,
    "season": 2025
   },
   "brian robinson": {
@@ -2076,6 +2275,7 @@
    "median": 2.6,
    "mean": 3.68,
    "best": 11.5,
+   "sd": 3.2,
    "season": 2025
   },
   "kavontae turpin": {
@@ -2087,6 +2287,7 @@
    "median": 4.7,
    "mean": 5.63,
    "best": 15.6,
+   "sd": 4.65,
    "season": 2025
   },
   "jeremy ruckert": {
@@ -2098,6 +2299,7 @@
    "median": 3.35,
    "mean": 3.35,
    "best": 7.5,
+   "sd": 2.33,
    "season": 2025
   },
   "chig okonkwo": {
@@ -2109,6 +2311,7 @@
    "median": 7.3,
    "mean": 7.29,
    "best": 16.4,
+   "sd": 4.48,
    "season": 2025
   },
   "romeo doubs": {
@@ -2120,6 +2323,7 @@
    "median": 9.35,
    "mean": 10.34,
    "best": 29.8,
+   "sd": 7.26,
    "season": 2025
   },
   "brock purdy": {
@@ -2131,6 +2335,7 @@
    "median": 17.66,
    "mean": 19.71,
    "best": 36.92,
+   "sd": 10.29,
    "season": 2025
   },
   "calvin austin iii": {
@@ -2142,6 +2347,7 @@
    "median": 3.75,
    "mean": 6.16,
    "best": 17,
+   "sd": 5.5,
    "season": 2025
   },
   "kyren williams": {
@@ -2153,6 +2359,7 @@
    "median": 16,
    "mean": 15.49,
    "best": 31.1,
+   "sd": 6.11,
    "season": 2025
   },
   "zamir white": {
@@ -2164,6 +2371,7 @@
    "median": 2,
    "mean": 1.92,
    "best": 3.3,
+   "sd": 1.42,
    "season": 2025
   },
   "jake ferguson": {
@@ -2175,6 +2383,7 @@
    "median": 10.8,
    "mean": 11.06,
    "best": 23.9,
+   "sd": 7.09,
    "season": 2025
   },
   "skyy moore": {
@@ -2186,6 +2395,7 @@
    "median": 0,
    "mean": 0.87,
    "best": 3.3,
+   "sd": 1.29,
    "season": 2025
   },
   "tyquan thornton": {
@@ -2197,6 +2407,7 @@
    "median": 6.4,
    "mean": 6.73,
    "best": 18.1,
+   "sd": 5.71,
    "season": 2025
   },
   "daniel bellinger": {
@@ -2208,6 +2419,7 @@
    "median": 2.4,
    "mean": 4.58,
    "best": 17.8,
+   "sd": 5.37,
    "season": 2025
   },
   "wan'dale robinson": {
@@ -2219,6 +2431,7 @@
    "median": 11.85,
    "mean": 13.62,
    "best": 30.6,
+   "sd": 8.19,
    "season": 2025
   },
   "breece hall": {
@@ -2230,6 +2443,7 @@
    "median": 11.55,
    "mean": 12.98,
    "best": 32.86,
+   "sd": 7.62,
    "season": 2025
   },
   "cade otton": {
@@ -2241,6 +2455,7 @@
    "median": 6.1,
    "mean": 8.15,
    "best": 22.4,
+   "sd": 5.98,
    "season": 2025
   },
   "kenneth walker iii": {
@@ -2252,6 +2467,7 @@
    "median": 9.6,
    "mean": 11.29,
    "best": 25.4,
+   "sd": 6.53,
    "season": 2025
   },
   "xavier smith": {
@@ -2263,6 +2479,7 @@
    "median": 1.7,
    "mean": 3.02,
    "best": 11.2,
+   "sd": 3.75,
    "season": 2025
   },
   "dontayvion wicks": {
@@ -2274,6 +2491,7 @@
    "median": 3.9,
    "mean": 5.83,
    "best": 28,
+   "sd": 7.02,
    "season": 2025
   },
   "brady russell": {
@@ -2285,6 +2503,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jason brownlee": {
@@ -2296,6 +2515,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "xavier gipson": {
@@ -2307,6 +2527,7 @@
    "median": 0,
    "mean": 0.43,
    "best": 1.3,
+   "sd": 0.67,
    "season": 2025
   },
   "nikko remigio": {
@@ -2318,6 +2539,7 @@
    "median": 0,
    "mean": 0.3,
    "best": 3.1,
+   "sd": 0.86,
    "season": 2025
   },
   "bijan robinson": {
@@ -2329,6 +2551,7 @@
    "median": 21.2,
    "mean": 21.81,
    "best": 39.9,
+   "sd": 10.26,
    "season": 2025
   },
   "jaxon smith-njigba": {
@@ -2340,6 +2563,7 @@
    "median": 20.6,
    "mean": 21.17,
    "best": 37.1,
+   "sd": 7.48,
    "season": 2025
   },
   "quentin johnston": {
@@ -2351,6 +2575,7 @@
    "median": 14.8,
    "mean": 13.17,
    "best": 24.9,
+   "sd": 7.44,
    "season": 2025
   },
   "luke schoonmaker": {
@@ -2362,6 +2587,7 @@
    "median": 2,
    "mean": 1.94,
    "best": 4.5,
+   "sd": 1.43,
    "season": 2025
   },
   "kendre miller": {
@@ -2373,6 +2599,7 @@
    "median": 4.2,
    "mean": 4.76,
    "best": 12.5,
+   "sd": 3.91,
    "season": 2025
   },
   "tank bigsby": {
@@ -2384,6 +2611,7 @@
    "median": 1.2,
    "mean": 3.59,
    "best": 17.6,
+   "sd": 5.16,
    "season": 2025
   },
   "michael wilson": {
@@ -2395,6 +2623,7 @@
    "median": 8.4,
    "mean": 12.98,
    "best": 37.2,
+   "sd": 10.6,
    "season": 2025
   },
   "tre tucker": {
@@ -2406,6 +2635,7 @@
    "median": 6.8,
    "mean": 9.51,
    "best": 40.9,
+   "sd": 8.94,
    "season": 2025
   },
   "derius davis": {
@@ -2417,6 +2647,7 @@
    "median": 0,
    "mean": 0.32,
    "best": 1.7,
+   "sd": 0.6,
    "season": 2025
   },
   "charlie jones": {
@@ -2428,6 +2659,7 @@
    "median": 0,
    "mean": 0.43,
    "best": 6,
+   "sd": 1.6,
    "season": 2025
   },
   "justin shorter": {
@@ -2439,6 +2671,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "chase brown": {
@@ -2450,6 +2683,7 @@
    "median": 16,
    "mean": 16.62,
    "best": 32.9,
+   "sd": 7.35,
    "season": 2025
   },
   "parker washington": {
@@ -2461,6 +2695,7 @@
    "median": 9.9,
    "mean": 11.54,
    "best": 26.5,
+   "sd": 7.41,
    "season": 2025
   },
   "kayshon boutte": {
@@ -2472,6 +2707,7 @@
    "median": 6.05,
    "mean": 8.86,
    "best": 26.3,
+   "sd": 7.37,
    "season": 2025
   },
   "xavier hutchinson": {
@@ -2483,6 +2719,7 @@
    "median": 4.9,
    "mean": 6.13,
    "best": 17.9,
+   "sd": 5.37,
    "season": 2025
   },
   "demario douglas": {
@@ -2494,6 +2731,7 @@
    "median": 5.15,
    "mean": 5.99,
    "best": 20,
+   "sd": 5.2,
    "season": 2025
   },
   "chris brooks": {
@@ -2505,6 +2743,7 @@
    "median": 1.3,
    "mean": 1.92,
    "best": 6.1,
+   "sd": 2.02,
    "season": 2025
   },
   "emari demercado": {
@@ -2516,6 +2755,7 @@
    "median": 4,
    "mean": 4.86,
    "best": 13.4,
+   "sd": 4.3,
    "season": 2025
   },
   "julian hill": {
@@ -2527,6 +2767,7 @@
    "median": 2.4,
    "mean": 2.82,
    "best": 6.2,
+   "sd": 2,
    "season": 2025
   },
   "emanuel wilson": {
@@ -2538,6 +2779,7 @@
    "median": 2.5,
    "mean": 5.56,
    "best": 26.5,
+   "sd": 6.94,
    "season": 2025
   },
   "ryan miller": {
@@ -2549,6 +2791,7 @@
    "median": 0,
    "mean": 1.27,
    "best": 9,
+   "sd": 3.01,
    "season": 2025
   },
   "brycen tremayne": {
@@ -2560,6 +2803,7 @@
    "median": 0,
    "mean": 2,
    "best": 7.8,
+   "sd": 2.66,
    "season": 2025
   },
   "jacob saylors": {
@@ -2571,6 +2815,7 @@
    "median": 0,
    "mean": 0.1,
    "best": 1.1,
+   "sd": 0.33,
    "season": 2025
   },
   "dalton kincaid": {
@@ -2582,6 +2827,7 @@
    "median": 8.8,
    "mean": 10.51,
    "best": 22.1,
+   "sd": 6.56,
    "season": 2025
   },
   "brenton strange": {
@@ -2593,6 +2839,7 @@
    "median": 10.2,
    "mean": 9.83,
    "best": 17.2,
+   "sd": 4.74,
    "season": 2025
   },
   "sean tucker": {
@@ -2604,6 +2851,7 @@
    "median": 2.9,
    "mean": 5.38,
    "best": 34,
+   "sd": 8.24,
    "season": 2025
   },
   "marvin mims jr.": {
@@ -2615,6 +2863,7 @@
    "median": 4.2,
    "mean": 6.33,
    "best": 20.5,
+   "sd": 5.54,
    "season": 2025
   },
   "cedric tillman": {
@@ -2626,6 +2875,7 @@
    "median": 3.3,
    "mean": 5,
    "best": 16.2,
+   "sd": 4.59,
    "season": 2025
   },
   "tucker kraft": {
@@ -2637,6 +2887,7 @@
    "median": 11.45,
    "mean": 14.65,
    "best": 33.3,
+   "sd": 9.87,
    "season": 2025
   },
   "josh downs": {
@@ -2648,6 +2899,7 @@
    "median": 8,
    "mean": 8.65,
    "best": 17.7,
+   "sd": 4.74,
    "season": 2025
   },
   "de'von achane": {
@@ -2659,6 +2911,7 @@
    "median": 17.75,
    "mean": 20.17,
    "best": 40.5,
+   "sd": 7.02,
    "season": 2025
   },
   "elijah higgins": {
@@ -2670,6 +2923,7 @@
    "median": 1.7,
    "mean": 3.42,
    "best": 16.1,
+   "sd": 3.95,
    "season": 2025
   },
   "payne durham": {
@@ -2681,6 +2935,7 @@
    "median": 0,
    "mean": 0.26,
    "best": 2.1,
+   "sd": 0.74,
    "season": 2025
   },
   "zay flowers": {
@@ -2692,6 +2947,7 @@
    "median": 13,
    "mean": 14.31,
    "best": 29.8,
+   "sd": 7.48,
    "season": 2025
   },
   "sam laporta": {
@@ -2703,6 +2959,7 @@
    "median": 10.3,
    "mean": 11.88,
    "best": 21.7,
+   "sd": 6.45,
    "season": 2025
   },
   "michael mayer": {
@@ -2714,6 +2971,7 @@
    "median": 4.3,
    "mean": 5.68,
    "best": 17.9,
+   "sd": 5.6,
    "season": 2025
   },
   "davis allen": {
@@ -2725,6 +2983,7 @@
    "median": 4.4,
    "mean": 4.19,
    "best": 8.8,
+   "sd": 2.93,
    "season": 2025
   },
   "puka nacua": {
@@ -2736,6 +2995,7 @@
    "median": 22.95,
    "mean": 23.44,
    "best": 46.5,
+   "sd": 10.21,
    "season": 2025
   },
   "jahmyr gibbs": {
@@ -2747,6 +3007,7 @@
    "median": 19.4,
    "mean": 21.58,
    "best": 55.4,
+   "sd": 13.53,
    "season": 2025
   },
   "luke musgrave": {
@@ -2758,6 +3019,7 @@
    "median": 3.3,
    "mean": 3.78,
    "best": 9.2,
+   "sd": 2.62,
    "season": 2025
   },
   "jayden reed": {
@@ -2769,6 +3031,7 @@
    "median": 9.3,
    "mean": 9.7,
    "best": 13.5,
+   "sd": 2.48,
    "season": 2025
   },
   "bryce young": {
@@ -2780,6 +3043,7 @@
    "median": 11.83,
    "mean": 13.63,
    "best": 31.82,
+   "sd": 7.7,
    "season": 2025
   },
   "c.j. stroud": {
@@ -2791,6 +3055,7 @@
    "median": 13.71,
    "mean": 14.9,
    "best": 28.76,
+   "sd": 6.52,
    "season": 2025
   },
   "zach charbonnet": {
@@ -2802,6 +3067,7 @@
    "median": 10.95,
    "mean": 11.34,
    "best": 26.2,
+   "sd": 6.7,
    "season": 2025
   },
   "george holani": {
@@ -2813,6 +3079,7 @@
    "median": 0.3,
    "mean": 2.08,
    "best": 9.1,
+   "sd": 3.24,
    "season": 2025
   },
   "malik nabers": {
@@ -2824,6 +3091,7 @@
    "median": 8.05,
    "mean": 14.28,
    "best": 37.7,
+   "sd": 16.12,
    "season": 2025
   },
   "brock bowers": {
@@ -2835,6 +3103,7 @@
    "median": 12.85,
    "mean": 14.68,
    "best": 43.3,
+   "sd": 10.12,
    "season": 2025
   },
   "xavier legette": {
@@ -2846,6 +3115,7 @@
    "median": 3.7,
    "mean": 5.95,
    "best": 24.2,
+   "sd": 6.86,
    "season": 2025
   },
   "luke mccaffrey": {
@@ -2857,6 +3127,7 @@
    "median": 5.4,
    "mean": 5.7,
    "best": 14.6,
+   "sd": 5.22,
    "season": 2025
   },
   "ja'tavion sanders": {
@@ -2868,6 +3139,7 @@
    "median": 3.9,
    "mean": 4.5,
    "best": 12.4,
+   "sd": 3.84,
    "season": 2025
   },
   "cade stover": {
@@ -2879,6 +3151,7 @@
    "median": 3.3,
    "mean": 3.32,
    "best": 6.2,
+   "sd": 2.26,
    "season": 2025
   },
   "bucky irving": {
@@ -2890,6 +3163,7 @@
    "median": 14.2,
    "mean": 13.85,
    "best": 25.5,
+   "sd": 5.61,
    "season": 2025
   },
   "isaac guerendo": {
@@ -2901,6 +3175,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "spencer rattler": {
@@ -2912,6 +3187,7 @@
    "median": 11.46,
    "mean": 11.02,
    "best": 21.68,
+   "sd": 6.52,
    "season": 2025
   },
   "jamari thrash": {
@@ -2923,6 +3199,7 @@
    "median": 2.95,
    "mean": 2.59,
    "best": 5.1,
+   "sd": 1.54,
    "season": 2025
   },
   "tyrone tracy jr.": {
@@ -2934,6 +3211,7 @@
    "median": 8.1,
    "mean": 10.72,
    "best": 27.9,
+   "sd": 7.66,
    "season": 2025
   },
   "casey washington": {
@@ -2945,6 +3223,7 @@
    "median": 2.9,
    "mean": 3.08,
    "best": 6.3,
+   "sd": 2.25,
    "season": 2025
   },
   "dylan laube": {
@@ -2956,6 +3235,7 @@
    "median": 0,
    "mean": 0.34,
    "best": 3.7,
+   "sd": 0.93,
    "season": 2025
   },
   "devaughn vele": {
@@ -2967,6 +3247,7 @@
    "median": 6.7,
    "mean": 7.37,
    "best": 23.3,
+   "sd": 6.8,
    "season": 2025
   },
   "brevyn spann-ford": {
@@ -2978,6 +3259,7 @@
    "median": 0.6,
    "mean": 1.5,
    "best": 7.4,
+   "sd": 2.19,
    "season": 2025
   },
   "kameron johnson": {
@@ -2989,6 +3271,7 @@
    "median": 0,
    "mean": 1.04,
    "best": 16.4,
+   "sd": 3.97,
    "season": 2025
   },
   "david martin-robinson": {
@@ -3000,6 +3283,7 @@
    "median": 0,
    "mean": 1.18,
    "best": 7.1,
+   "sd": 2.17,
    "season": 2025
   },
   "bryce oliver": {
@@ -3011,6 +3295,7 @@
    "median": 0.9,
    "mean": 0.9,
    "best": 1.8,
+   "sd": 1.27,
    "season": 2025
   },
   "colson yankoff": {
@@ -3022,6 +3307,7 @@
    "median": 0,
    "mean": 0.38,
    "best": 2.4,
+   "sd": 0.84,
    "season": 2025
   },
   "bo nix": {
@@ -3033,6 +3319,7 @@
    "median": 16.44,
    "mean": 17.93,
    "best": 39.96,
+   "sd": 8.37,
    "season": 2025
   },
   "tip reiman": {
@@ -3044,6 +3331,7 @@
    "median": 2,
    "mean": 1.6,
    "best": 2.8,
+   "sd": 1.44,
    "season": 2025
   },
   "blake corum": {
@@ -3055,6 +3343,7 @@
    "median": 5.3,
    "mean": 7.19,
    "best": 26.1,
+   "sd": 6.49,
    "season": 2025
   },
   "will shipley": {
@@ -3066,6 +3355,7 @@
    "median": 1.3,
    "mean": 1.39,
    "best": 5.4,
+   "sd": 1.58,
    "season": 2025
   },
   "jordan whittington": {
@@ -3077,6 +3367,7 @@
    "median": 1.9,
    "mean": 2.42,
    "best": 6.2,
+   "sd": 2.18,
    "season": 2025
   },
   "aj barner": {
@@ -3088,6 +3379,7 @@
    "median": 7.7,
    "mean": 8.66,
    "best": 24.3,
+   "sd": 6.49,
    "season": 2025
   },
   "braelon allen": {
@@ -3099,6 +3391,7 @@
    "median": 3.9,
    "mean": 3.83,
    "best": 6.9,
+   "sd": 3.44,
    "season": 2025
   },
   "rasheen ali": {
@@ -3110,6 +3403,7 @@
    "median": 0,
    "mean": 1.61,
    "best": 11.2,
+   "sd": 2.92,
    "season": 2025
   },
   "isaiah davis": {
@@ -3121,6 +3415,7 @@
    "median": 2.15,
    "mean": 4.45,
    "best": 17.9,
+   "sd": 5.17,
    "season": 2025
   },
   "anthony gould": {
@@ -3132,6 +3427,7 @@
    "median": 0,
    "mean": 0.24,
    "best": 1.3,
+   "sd": 0.53,
    "season": 2025
   },
   "theo johnson": {
@@ -3143,6 +3439,7 @@
    "median": 7.4,
    "mean": 8.52,
    "best": 21.3,
+   "sd": 5.82,
    "season": 2025
   },
   "marvin harrison jr.": {
@@ -3154,6 +3451,7 @@
    "median": 10.35,
    "mean": 10.65,
    "best": 22.6,
+   "sd": 7.1,
    "season": 2025
   },
   "drake maye": {
@@ -3165,6 +3463,7 @@
    "median": 20.48,
    "mean": 20.7,
    "best": 32.44,
+   "sd": 5.39,
    "season": 2025
   },
   "troy franklin": {
@@ -3176,6 +3475,7 @@
    "median": 8.5,
    "mean": 10.42,
    "best": 26.9,
+   "sd": 7.63,
    "season": 2025
   },
   "ray davis": {
@@ -3187,6 +3487,7 @@
    "median": 1.6,
    "mean": 3.77,
    "best": 25.4,
+   "sd": 6.26,
    "season": 2025
   },
   "malik washington": {
@@ -3198,6 +3499,7 @@
    "median": 7,
    "mean": 6.86,
    "best": 13.6,
+   "sd": 3.32,
    "season": 2025
   },
   "adonai mitchell": {
@@ -3209,6 +3511,7 @@
    "median": 3.7,
    "mean": 5.49,
    "best": 24.2,
+   "sd": 6.79,
    "season": 2025
   },
   "brian thomas jr.": {
@@ -3220,6 +3523,7 @@
    "median": 8.7,
    "mean": 9.91,
    "best": 23,
+   "sd": 5.01,
    "season": 2025
   },
   "xavier worthy": {
@@ -3231,6 +3535,7 @@
    "median": 8.15,
    "mean": 7.85,
    "best": 17.1,
+   "sd": 4.52,
    "season": 2025
   },
   "keon coleman": {
@@ -3242,6 +3547,7 @@
    "median": 6.75,
    "mean": 8.53,
    "best": 25.2,
+   "sd": 6.05,
    "season": 2025
   },
   "jayden daniels": {
@@ -3253,6 +3559,7 @@
    "median": 17.74,
    "mean": 16.33,
    "best": 21.64,
+   "sd": 6.36,
    "season": 2025
   },
   "ladd mcconkey": {
@@ -3264,6 +3571,7 @@
    "median": 11.6,
    "mean": 11.31,
    "best": 23,
+   "sd": 6.86,
    "season": 2025
   },
   "ricky pearsall": {
@@ -3275,6 +3583,7 @@
    "median": 9.2,
    "mean": 9.84,
    "best": 19.7,
+   "sd": 6.51,
    "season": 2025
   },
   "michael penix jr.": {
@@ -3286,6 +3595,7 @@
    "median": 12.24,
    "mean": 13.36,
    "best": 24.02,
+   "sd": 7.29,
    "season": 2025
   },
   "caleb williams": {
@@ -3295,8 +3605,9 @@
    "boomWeeks": 3,
    "bust": 0.29,
    "median": 18.98,
-   "mean": 18.72,
+   "mean": 18.75,
    "best": 38.7,
+   "sd": 8.23,
    "season": 2025
   },
   "rome odunze": {
@@ -3308,6 +3619,7 @@
    "median": 11.75,
    "mean": 12.18,
    "best": 31.8,
+   "sd": 9.17,
    "season": 2025
   },
   "trey benson": {
@@ -3319,6 +3631,7 @@
    "median": 8.45,
    "mean": 8.85,
    "best": 10.4,
+   "sd": 1.05,
    "season": 2025
   },
   "j.j. mccarthy": {
@@ -3330,6 +3643,7 @@
    "median": 11.52,
    "mean": 12.54,
    "best": 23.5,
+   "sd": 8.45,
    "season": 2025
   },
   "savion williams": {
@@ -3341,6 +3655,7 @@
    "median": 1.15,
    "mean": 2.12,
    "best": 7.9,
+   "sd": 2.5,
    "season": 2025
   },
   "lajohntay wester": {
@@ -3352,6 +3667,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "brashard smith": {
@@ -3363,6 +3679,7 @@
    "median": 1.4,
    "mean": 3.72,
    "best": 13.1,
+   "sd": 4.01,
    "season": 2025
   },
   "ashton jeanty": {
@@ -3374,6 +3691,7 @@
    "median": 12.1,
    "mean": 14.42,
    "best": 33.5,
+   "sd": 8.69,
    "season": 2025
   },
   "tetairoa mcmillan": {
@@ -3385,6 +3703,7 @@
    "median": 11.5,
    "mean": 12.55,
    "best": 33,
+   "sd": 7.07,
    "season": 2025
   },
   "colston loveland": {
@@ -3396,6 +3715,7 @@
    "median": 6.9,
    "mean": 10.32,
    "best": 29.8,
+   "sd": 8.5,
    "season": 2025
   },
   "tyler warren": {
@@ -3407,6 +3727,7 @@
    "median": 9.5,
    "mean": 11.09,
    "best": 18.3,
+   "sd": 4.88,
    "season": 2025
   },
   "emeka egbuka": {
@@ -3418,6 +3739,7 @@
    "median": 9,
    "mean": 11.51,
    "best": 31.3,
+   "sd": 8.42,
    "season": 2025
   },
   "jayden higgins": {
@@ -3429,6 +3751,7 @@
    "median": 7.2,
    "mean": 7.62,
    "best": 16.8,
+   "sd": 5.37,
    "season": 2025
   },
   "kyle williams": {
@@ -3440,6 +3763,7 @@
    "median": 1.15,
    "mean": 3.51,
    "best": 14.2,
+   "sd": 5.07,
    "season": 2025
   },
   "jaylin noel": {
@@ -3451,6 +3775,7 @@
    "median": 1.9,
    "mean": 4.02,
    "best": 14.6,
+   "sd": 4.91,
    "season": 2025
   },
   "kaleb johnson": {
@@ -3462,6 +3787,7 @@
    "median": 0.4,
    "mean": 0.88,
    "best": 2.3,
+   "sd": 0.91,
    "season": 2025
   },
   "tai felton": {
@@ -3473,6 +3799,7 @@
    "median": 0,
    "mean": 0.46,
    "best": 2,
+   "sd": 0.83,
    "season": 2025
   },
   "dylan sampson": {
@@ -3484,6 +3811,7 @@
    "median": 4.4,
    "mean": 5.84,
    "best": 17.3,
+   "sd": 5.6,
    "season": 2025
   },
   "jaylin lane": {
@@ -3495,6 +3823,7 @@
    "median": 2.6,
    "mean": 3.41,
    "best": 9,
+   "sd": 2.83,
    "season": 2025
   },
   "elic ayomanor": {
@@ -3506,6 +3835,7 @@
    "median": 7,
    "mean": 7.28,
    "best": 15.6,
+   "sd": 4.24,
    "season": 2025
   },
   "dj giddens": {
@@ -3517,6 +3847,7 @@
    "median": 2.2,
    "mean": 1.92,
    "best": 4.1,
+   "sd": 1.75,
    "season": 2025
   },
   "keandre lambert-smith": {
@@ -3528,6 +3859,7 @@
    "median": 0,
    "mean": 1.61,
    "best": 8.6,
+   "sd": 2.84,
    "season": 2025
   },
   "jackson hawes": {
@@ -3539,6 +3871,7 @@
    "median": 3.5,
    "mean": 4.05,
    "best": 9.6,
+   "sd": 2.63,
    "season": 2025
   },
   "ollie gordon ii": {
@@ -3550,6 +3883,7 @@
    "median": 1.3,
    "mean": 3.18,
    "best": 13.6,
+   "sd": 4.35,
    "season": 2025
   },
   "devin neal": {
@@ -3561,6 +3895,7 @@
    "median": 6.1,
    "mean": 6.67,
    "best": 15.4,
+   "sd": 5.27,
    "season": 2025
   },
   "tahj brooks": {
@@ -3572,6 +3907,7 @@
    "median": 0.05,
    "mean": 0.53,
    "best": 2.9,
+   "sd": 0.9,
    "season": 2025
   },
   "kyle monangai": {
@@ -3583,6 +3919,7 @@
    "median": 7.7,
    "mean": 8.63,
    "best": 22.8,
+   "sd": 6.28,
    "season": 2025
   },
   "tez johnson": {
@@ -3594,6 +3931,7 @@
    "median": 3.2,
    "mean": 6.16,
    "best": 20.2,
+   "sd": 6.51,
    "season": 2025
   },
   "lequint allen jr.": {
@@ -3605,6 +3943,7 @@
    "median": 1.65,
    "mean": 1.55,
    "best": 3.6,
+   "sd": 1.05,
    "season": 2025
   },
   "jacory croskey-merritt": {
@@ -3616,6 +3955,7 @@
    "median": 5.1,
    "mean": 8.25,
    "best": 27,
+   "sd": 7.47,
    "season": 2025
   },
   "raheim sanders": {
@@ -3627,6 +3967,7 @@
    "median": 4.95,
    "mean": 5.07,
    "best": 6.3,
+   "sd": 1.05,
    "season": 2025
   },
   "ulysses bentley iv": {
@@ -3638,6 +3979,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "myles price": {
@@ -3649,6 +3991,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "dont'e thornton jr.": {
@@ -3660,6 +4003,7 @@
    "median": 2.1,
    "mean": 2.14,
    "best": 6.5,
+   "sd": 2.18,
    "season": 2025
   },
   "arian smith": {
@@ -3671,6 +4015,7 @@
    "median": 0.8,
    "mean": 1.04,
    "best": 3.3,
+   "sd": 1.07,
    "season": 2025
   },
   "woody marks": {
@@ -3682,6 +4027,7 @@
    "median": 7.25,
    "mean": 9.07,
    "best": 27.9,
+   "sd": 6.93,
    "season": 2025
   },
   "gunnar helm": {
@@ -3693,6 +4039,7 @@
    "median": 4.6,
    "mean": 5.73,
    "best": 14.9,
+   "sd": 3.99,
    "season": 2025
   },
   "trevor etienne": {
@@ -3704,6 +4051,7 @@
    "median": 0,
    "mean": 0.81,
    "best": 3.9,
+   "sd": 1.23,
    "season": 2025
   },
   "tory horton": {
@@ -3715,6 +4063,7 @@
    "median": 6.6,
    "mean": 8.14,
    "best": 20.8,
+   "sd": 8.7,
    "season": 2025
   },
   "harold fannin jr.": {
@@ -3726,6 +4075,7 @@
    "median": 11.15,
    "mean": 11.65,
    "best": 25.4,
+   "sd": 5.73,
    "season": 2025
   },
   "omarion hampton": {
@@ -3737,6 +4087,7 @@
    "median": 14.7,
    "mean": 15.08,
    "best": 27.5,
+   "sd": 8.08,
    "season": 2025
   },
   "matthew golden": {
@@ -3748,6 +4099,7 @@
    "median": 3.4,
    "mean": 5,
    "best": 13.2,
+   "sd": 4.3,
    "season": 2025
   },
   "isaac teslaa": {
@@ -3759,6 +4111,7 @@
    "median": 3.35,
    "mean": 5.42,
    "best": 15.2,
+   "sd": 5.61,
    "season": 2025
   },
   "jalen milroe": {
@@ -3770,6 +4123,7 @@
    "median": 0.1,
    "mean": -0.53,
    "best": 0.3,
+   "sd": 1.27,
    "season": 2025
   },
   "cam ward": {
@@ -3781,6 +4135,7 @@
    "median": 10.2,
    "mean": 10.98,
    "best": 23.94,
+   "sd": 5.4,
    "season": 2025
   },
   "chimere dike": {
@@ -3792,6 +4147,7 @@
    "median": 5,
    "mean": 7.54,
    "best": 21.4,
+   "sd": 6.48,
    "season": 2025
   },
   "cam skattebo": {
@@ -3803,6 +4159,7 @@
    "median": 14.15,
    "mean": 15.96,
    "best": 31,
+   "sd": 8.62,
    "season": 2025
   },
   "bhayshul tuten": {
@@ -3814,6 +4171,7 @@
    "median": 4.8,
    "mean": 5.91,
    "best": 15.4,
+   "sd": 4.92,
    "season": 2025
   },
   "tre harris": {
@@ -3825,6 +4183,7 @@
    "median": 4.05,
    "mean": 4.34,
    "best": 9.4,
+   "sd": 2.88,
    "season": 2025
   },
   "jack bech": {
@@ -3836,6 +4195,7 @@
    "median": 3.1,
    "mean": 3.03,
    "best": 11,
+   "sd": 3.17,
    "season": 2025
   },
   "rj harvey": {
@@ -3847,6 +4207,7 @@
    "median": 8,
    "mean": 12.15,
    "best": 24.1,
+   "sd": 7.66,
    "season": 2025
   },
   "treveyon henderson": {
@@ -3858,6 +4219,7 @@
    "median": 11.1,
    "mean": 12.13,
    "best": 32.3,
+   "sd": 9.6,
    "season": 2025
   },
   "luther burden iii": {
@@ -3869,6 +4231,7 @@
    "median": 7.6,
    "mean": 8.53,
    "best": 27.8,
+   "sd": 7.54,
    "season": 2025
   },
   "mason taylor": {
@@ -3880,6 +4243,7 @@
    "median": 5.8,
    "mean": 6.84,
    "best": 17.7,
+   "sd": 5.2,
    "season": 2025
   },
   "elijah arroyo": {
@@ -3891,6 +4255,7 @@
    "median": 1.6,
    "mean": 2.84,
    "best": 10.9,
+   "sd": 3.33,
    "season": 2025
   },
   "isaiah bond": {
@@ -3902,6 +4267,7 @@
    "median": 2.7,
    "mean": 3.65,
    "best": 10.9,
+   "sd": 3.21,
    "season": 2025
   },
   "tyrod taylor": {
@@ -3913,6 +4279,7 @@
    "median": 10.56,
    "mean": 9.91,
    "best": 21.28,
+   "sd": 8.74,
    "season": 2025
   },
   "jacoby brissett": {
@@ -3924,6 +4291,7 @@
    "median": 19.23,
    "mean": 16.25,
    "best": 24.84,
+   "sd": 7.57,
    "season": 2025
   },
   "kendrick bourne": {
@@ -3935,6 +4303,7 @@
    "median": 4.55,
    "mean": 6.58,
    "best": 24.2,
+   "sd": 6.89,
    "season": 2025
   },
   "tim patrick": {
@@ -3946,6 +4315,7 @@
    "median": 2.1,
    "mean": 3.98,
    "best": 18.8,
+   "sd": 5.7,
    "season": 2025
   },
   "cooper rush": {
@@ -3957,6 +4327,7 @@
    "median": 0.38,
    "mean": 0.43,
    "best": 2.08,
+   "sd": 1.45,
    "season": 2025
   },
   "mitchell trubisky": {
@@ -3968,6 +4339,7 @@
    "median": 0.93,
    "mean": 7.78,
    "best": 28.86,
+   "sd": 14.06,
    "season": 2025
   },
   "marquez valdes-scantling": {
@@ -3979,6 +4351,7 @@
    "median": 1.9,
    "mean": 3.56,
    "best": 8.9,
+   "sd": 3.34,
    "season": 2025
   },
   "ian thomas": {
@@ -3990,6 +4363,7 @@
    "median": 1.9,
    "mean": 2.71,
    "best": 7.6,
+   "sd": 2.45,
    "season": 2025
   },
   "mason rudolph": {
@@ -4001,6 +4375,7 @@
    "median": 0.48,
    "mean": 3,
    "best": 8.98,
+   "sd": 4.92,
    "season": 2025
   },
   "jake browning": {
@@ -4012,6 +4387,7 @@
    "median": 5.9,
    "mean": 9.75,
    "best": 19.14,
+   "sd": 8.22,
    "season": 2025
   },
   "jakob johnson": {
@@ -4023,6 +4399,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "reggie gilliam": {
@@ -4034,6 +4411,7 @@
    "median": 0,
    "mean": 0.44,
    "best": 3.6,
+   "sd": 1.11,
    "season": 2025
   },
   "harrison bryant": {
@@ -4045,6 +4423,7 @@
    "median": 0,
    "mean": 0.54,
    "best": 1.5,
+   "sd": 0.75,
    "season": 2025
   },
   "darnell mooney": {
@@ -4056,6 +4435,7 @@
    "median": 4.5,
    "mean": 5.49,
    "best": 16.4,
+   "sd": 3.83,
    "season": 2025
   },
   "josiah deguara": {
@@ -4067,6 +4447,7 @@
    "median": 0,
    "mean": 1.59,
    "best": 9.5,
+   "sd": 3.54,
    "season": 2025
   },
   "van jefferson": {
@@ -4078,6 +4459,7 @@
    "median": 4.05,
    "mean": 5,
    "best": 11.5,
+   "sd": 3.38,
    "season": 2025
   },
   "quintin morris": {
@@ -4089,6 +4471,7 @@
    "median": 0,
    "mean": 1.59,
    "best": 7.5,
+   "sd": 2.38,
    "season": 2025
   },
   "brock wright": {
@@ -4100,6 +4483,7 @@
    "median": 4.05,
    "mean": 4.6,
    "best": 11.8,
+   "sd": 4.21,
    "season": 2025
   },
   "mac jones": {
@@ -4111,6 +4495,7 @@
    "median": 13.26,
    "mean": 11.82,
    "best": 23.06,
+   "sd": 9.29,
    "season": 2025
   },
   "grant calcaterra": {
@@ -4122,6 +4507,7 @@
    "median": 1.6,
    "mean": 2.51,
    "best": 10.1,
+   "sd": 3.08,
    "season": 2025
   },
   "dareke young": {
@@ -4133,6 +4519,7 @@
    "median": 0,
    "mean": 0.85,
    "best": 4.6,
+   "sd": 1.7,
    "season": 2025
   },
   "bam knight": {
@@ -4144,6 +4531,7 @@
    "median": 8.05,
    "mean": 7.74,
    "best": 16.8,
+   "sd": 5.9,
    "season": 2025
   },
   "zaire mitchell-paden": {
@@ -4155,6 +4543,7 @@
    "median": 1.3,
    "mean": 1.23,
    "best": 2.4,
+   "sd": 1.2,
    "season": 2025
   },
   "tyson bagent": {
@@ -4166,6 +4555,7 @@
    "median": 1.29,
    "mean": 1.29,
    "best": 1.78,
+   "sd": 0.69,
    "season": 2025
   },
   "malik heath": {
@@ -4177,6 +4567,7 @@
    "median": 1.9,
    "mean": 2.09,
    "best": 5.9,
+   "sd": 2.4,
    "season": 2025
   },
   "darnell washington": {
@@ -4188,6 +4579,7 @@
    "median": 5,
    "mean": 5.65,
    "best": 10.7,
+   "sd": 2.91,
    "season": 2025
   },
   "andrei iosivas": {
@@ -4199,6 +4591,7 @@
    "median": 3.7,
    "mean": 5.99,
    "best": 18,
+   "sd": 5.18,
    "season": 2025
   },
   "brayden willis": {
@@ -4210,6 +4603,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jordan mims": {
@@ -4221,6 +4615,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "tyrell shavers": {
@@ -4232,6 +4627,7 @@
    "median": 3.1,
    "mean": 4.14,
    "best": 19,
+   "sd": 5.36,
    "season": 2025
   },
   "hunter luepke": {
@@ -4243,6 +4639,7 @@
    "median": 1.85,
    "mean": 2.64,
    "best": 8.7,
+   "sd": 2.83,
    "season": 2025
   },
   "mitchell tinsley": {
@@ -4254,6 +4651,7 @@
    "median": 3.15,
    "mean": 3.95,
    "best": 10.9,
+   "sd": 3.87,
    "season": 2025
   },
   "roschon johnson": {
@@ -4265,6 +4663,7 @@
    "median": 0,
    "mean": 0.28,
    "best": 1.1,
+   "sd": 0.47,
    "season": 2025
   },
   "ryan flournoy": {
@@ -4276,6 +4675,7 @@
    "median": 6.4,
    "mean": 7.6,
    "best": 26.5,
+   "sd": 7.23,
    "season": 2025
   },
   "isaiah williams": {
@@ -4287,6 +4687,7 @@
    "median": 1.6,
    "mean": 4.05,
    "best": 11.3,
+   "sd": 4.43,
    "season": 2025
   },
   "roman wilson": {
@@ -4298,6 +4699,7 @@
    "median": 2.2,
    "mean": 4.29,
    "best": 17.4,
+   "sd": 6.11,
    "season": 2025
   },
   "devontez walker": {
@@ -4309,6 +4711,7 @@
    "median": 2,
    "mean": 4.7,
    "best": 16.6,
+   "sd": 6.47,
    "season": 2025
   },
   "ben sinnott": {
@@ -4320,6 +4723,7 @@
    "median": 2.3,
    "mean": 3.16,
    "best": 7.4,
+   "sd": 2.37,
    "season": 2025
   },
   "pat bryant": {
@@ -4331,6 +4735,7 @@
    "median": 5.3,
    "mean": 5.75,
    "best": 13.2,
+   "sd": 4.14,
    "season": 2025
   },
   "mitchell evans": {
@@ -4342,6 +4747,7 @@
    "median": 2.5,
    "mean": 3.44,
    "best": 11.3,
+   "sd": 3.21,
    "season": 2025
   },
   "beaux collins": {
@@ -4353,6 +4759,7 @@
    "median": 0.85,
    "mean": 1.13,
    "best": 2.8,
+   "sd": 1.37,
    "season": 2025
   },
   "ben yurosek": {
@@ -4364,6 +4771,7 @@
    "median": 0,
    "mean": 0.57,
    "best": 1.9,
+   "sd": 0.89,
    "season": 2025
   },
   "robbie ouzts": {
@@ -4375,6 +4783,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jaxson dart": {
@@ -4386,6 +4795,7 @@
    "median": 20.12,
    "mean": 17.26,
    "best": 28.42,
+   "sd": 10.23,
    "season": 2025
   },
   "dillon gabriel": {
@@ -4397,6 +4807,7 @@
    "median": 5.3,
    "mean": 7.01,
    "best": 20.08,
+   "sd": 7.05,
    "season": 2025
   },
   "quinshon judkins": {
@@ -4408,6 +4819,7 @@
    "median": 10.3,
    "mean": 12.13,
    "best": 26.4,
+   "sd": 6.73,
    "season": 2025
   },
   "andy dalton": {
@@ -4419,6 +4831,7 @@
    "median": 1.65,
    "mean": 2.38,
    "best": 6.32,
+   "sd": 2.79,
    "season": 2025
   },
   "kirk cousins": {
@@ -4430,6 +4843,7 @@
    "median": 9.17,
    "mean": 10.35,
    "best": 26.92,
+   "sd": 8.03,
    "season": 2025
   },
   "chris manhertz": {
@@ -4441,6 +4855,7 @@
    "median": 0,
    "mean": 0.43,
    "best": 1.7,
+   "sd": 0.85,
    "season": 2025
   },
   "marcus mariota": {
@@ -4452,6 +4867,7 @@
    "median": 15.08,
    "mean": 12.55,
    "best": 23.26,
+   "sd": 8.22,
    "season": 2025
   },
   "carson wentz": {
@@ -4463,6 +4879,7 @@
    "median": 14.74,
    "mean": 14.07,
    "best": 21.2,
+   "sd": 5.01,
    "season": 2025
   },
   "allen lazard": {
@@ -4474,6 +4891,7 @@
    "median": 1.8,
    "mean": 2.56,
    "best": 9.3,
+   "sd": 2.69,
    "season": 2025
   },
   "christian kirk": {
@@ -4485,6 +4903,7 @@
    "median": 5,
    "mean": 5.26,
    "best": 16.4,
+   "sd": 4.77,
    "season": 2025
   },
   "brett rypien": {
@@ -4496,6 +4915,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "david sills": {
@@ -4507,6 +4927,7 @@
    "median": 2.1,
    "mean": 4.09,
    "best": 13.8,
+   "sd": 4.68,
    "season": 2025
   },
   "drew lock": {
@@ -4518,6 +4939,7 @@
    "median": 0,
    "mean": 0.03,
    "best": 0.5,
+   "sd": 0.45,
    "season": 2025
   },
   "cam akers": {
@@ -4529,6 +4951,7 @@
    "median": 0.95,
    "mean": 1.8,
    "best": 5.28,
+   "sd": 2.49,
    "season": 2025
   },
   "charlie woerner": {
@@ -4540,6 +4963,7 @@
    "median": 1.3,
    "mean": 1.83,
    "best": 5.4,
+   "sd": 1.99,
    "season": 2025
   },
   "simi fehoko": {
@@ -4551,6 +4975,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "tyler goodson": {
@@ -4562,6 +4987,7 @@
    "median": 0.35,
    "mean": 0.52,
    "best": 1.8,
+   "sd": 0.58,
    "season": 2025
   },
   "kevin austin jr.": {
@@ -4573,6 +4999,7 @@
    "median": 6.3,
    "mean": 6.6,
    "best": 15.2,
+   "sd": 5.63,
    "season": 2025
   },
   "kaden davis": {
@@ -4584,6 +5011,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "tucker fisk": {
@@ -4595,6 +5023,7 @@
    "median": 0.85,
    "mean": 0.98,
    "best": 2.2,
+   "sd": 1.14,
    "season": 2025
   },
   "charlie kolar": {
@@ -4606,6 +5035,7 @@
    "median": 2.7,
    "mean": 2.78,
    "best": 10.3,
+   "sd": 3.23,
    "season": 2025
   },
   "zavier scott": {
@@ -4617,6 +5047,7 @@
    "median": 2.7,
    "mean": 3.56,
    "best": 16.4,
+   "sd": 4.67,
    "season": 2025
   },
   "chris rodriguez jr.": {
@@ -4628,6 +5059,7 @@
    "median": 7.4,
    "mean": 7.67,
    "best": 15.3,
+   "sd": 4.84,
    "season": 2025
   },
   "blake whiteheart": {
@@ -4639,6 +5071,7 @@
    "median": 0,
    "mean": 0.27,
    "best": 1.4,
+   "sd": 0.54,
    "season": 2025
   },
   "anthony richardson": {
@@ -4650,6 +5083,7 @@
    "median": 1.08,
    "mean": 1.08,
    "best": 2.26,
+   "sd": 1.67,
    "season": 2025
   },
   "sione vaki": {
@@ -4661,6 +5095,7 @@
    "median": 0,
    "mean": 0.05,
    "best": 0.4,
+   "sd": 0.14,
    "season": 2025
   },
   "joe milton iii": {
@@ -4672,6 +5107,7 @@
    "median": 2.43,
    "mean": 2.58,
    "best": 6.32,
+   "sd": 3.72,
    "season": 2025
   },
   "cam grandy": {
@@ -4683,6 +5119,7 @@
    "median": 1.35,
    "mean": 1.35,
    "best": 1.6,
+   "sd": 0.35,
    "season": 2025
   },
   "jacardia wright": {
@@ -4694,6 +5131,7 @@
    "median": 2,
    "mean": 2,
    "best": 2,
+   "sd": null,
    "season": 2025
   },
   "oronde gadsden ii": {
@@ -4705,6 +5143,7 @@
    "median": 6.1,
    "mean": 8.76,
    "best": 29.4,
+   "sd": 7.54,
    "season": 2025
   },
   "max brosmer": {
@@ -4716,6 +5155,7 @@
    "median": 0.52,
    "mean": 0.6,
    "best": 3.64,
+   "sd": 2.04,
    "season": 2025
   },
   "nate carter": {
@@ -4727,6 +5167,7 @@
    "median": 2,
    "mean": 2,
    "best": 2.6,
+   "sd": 0.85,
    "season": 2025
   },
   "dalevon campbell": {
@@ -4738,6 +5179,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "tyler shough": {
@@ -4749,6 +5191,7 @@
    "median": 17.36,
    "mean": 14.36,
    "best": 21.92,
+   "sd": 7.66,
    "season": 2025
   },
   "darren waller": {
@@ -4760,6 +5203,7 @@
    "median": 7,
    "mean": 9.86,
    "best": 25.6,
+   "sd": 8.91,
    "season": 2025
   },
   "raheem mostert": {
@@ -4771,6 +5215,7 @@
    "median": 2.05,
    "mean": 2.45,
    "best": 8.3,
+   "sd": 2.3,
    "season": 2025
   },
   "demarcus robinson": {
@@ -4782,6 +5227,7 @@
    "median": 4.75,
    "mean": 4.16,
    "best": 10.3,
+   "sd": 3,
    "season": 2025
   },
   "curtis samuel": {
@@ -4793,6 +5239,7 @@
    "median": 2.5,
    "mean": 3.52,
    "best": 10.6,
+   "sd": 3.72,
    "season": 2025
   },
   "robert tonyan": {
@@ -4804,6 +5251,7 @@
    "median": 0.55,
    "mean": 0.55,
    "best": 1.1,
+   "sd": 0.78,
    "season": 2025
   },
   "chris godwin jr.": {
@@ -4815,6 +5263,7 @@
    "median": 8,
    "mean": 9.22,
    "best": 23.8,
+   "sd": 6.73,
    "season": 2025
   },
   "joshua dobbs": {
@@ -4826,6 +5275,7 @@
    "median": 0.6,
    "mean": 0.53,
    "best": 1.1,
+   "sd": 0.6,
    "season": 2025
   },
   "kyle allen": {
@@ -4837,6 +5287,7 @@
    "median": -0.15,
    "mean": -0.15,
    "best": -0.1,
+   "sd": 0.07,
    "season": 2025
   },
   "gardner minshew": {
@@ -4848,6 +5299,7 @@
    "median": -0.3,
    "mean": -0.08,
    "best": 1.4,
+   "sd": 1.06,
    "season": 2025
   },
   "scott miller": {
@@ -4859,6 +5311,7 @@
    "median": 2.9,
    "mean": 3.04,
    "best": 5.5,
+   "sd": 2.24,
    "season": 2025
   },
   "michael carter": {
@@ -4870,6 +5323,7 @@
    "median": 6.9,
    "mean": 7.62,
    "best": 18.3,
+   "sd": 4.89,
    "season": 2025
   },
   "trey sermon": {
@@ -4881,6 +5335,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "james mitchell": {
@@ -4892,6 +5347,7 @@
    "median": 2.9,
    "mean": 2.9,
    "best": 3.7,
+   "sd": 1.13,
    "season": 2025
   },
   "tay martin": {
@@ -4903,6 +5359,7 @@
    "median": 2.15,
    "mean": 2.15,
    "best": 2.4,
+   "sd": 0.35,
    "season": 2025
   },
   "cameron latu": {
@@ -4914,6 +5371,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jake bobo": {
@@ -4925,6 +5383,7 @@
    "median": 0,
    "mean": 0.8,
    "best": 2.7,
+   "sd": 1.2,
    "season": 2025
   },
   "nate adkins": {
@@ -4936,6 +5395,7 @@
    "median": 1.25,
    "mean": 2.8,
    "best": 10.3,
+   "sd": 4.03,
    "season": 2025
   },
   "jordan addison": {
@@ -4947,6 +5407,7 @@
    "median": 9.3,
    "mean": 9.65,
    "best": 21.8,
+   "sd": 5.66,
    "season": 2025
   },
   "kimani vidal": {
@@ -4958,6 +5419,7 @@
    "median": 5.8,
    "mean": 9.07,
    "best": 22.8,
+   "sd": 8.35,
    "season": 2025
   },
   "xavier weaver": {
@@ -4969,6 +5431,7 @@
    "median": 1.9,
    "mean": 1.96,
    "best": 4.4,
+   "sd": 1.98,
    "season": 2025
   },
   "devin culp": {
@@ -4980,6 +5443,7 @@
    "median": 0,
    "mean": 1.9,
    "best": 7.6,
+   "sd": 3.8,
    "season": 2025
   },
   "jahdae walker": {
@@ -4991,6 +5455,7 @@
    "median": 2.5,
    "mean": 4.45,
    "best": 11.6,
+   "sd": 5.34,
    "season": 2025
   },
   "jalen royals": {
@@ -5002,6 +5467,7 @@
    "median": 1.2,
    "mean": 1.2,
    "best": 2.4,
+   "sd": 1.7,
    "season": 2025
   },
   "ameer abdullah": {
@@ -5013,6 +5479,7 @@
    "median": 1.8,
    "mean": 2.92,
    "best": 9.7,
+   "sd": 2.72,
    "season": 2025
   },
   "taysom hill": {
@@ -5024,6 +5491,7 @@
    "median": 2,
    "mean": 3.21,
    "best": 15.32,
+   "sd": 4.16,
    "season": 2025
   },
   "malik turner": {
@@ -5035,6 +5503,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "albert okwuegbunam": {
@@ -5046,6 +5515,7 @@
    "median": 8.6,
    "mean": 8.6,
    "best": 8.6,
+   "sd": null,
    "season": 2025
   },
   "deejay dallas": {
@@ -5057,6 +5527,7 @@
    "median": 0,
    "mean": 0.42,
    "best": 2.1,
+   "sd": 0.94,
    "season": 2025
   },
   "john bates": {
@@ -5068,6 +5539,7 @@
    "median": 2.4,
    "mean": 2.73,
    "best": 9.3,
+   "sd": 2.65,
    "season": 2025
   },
   "davis mills": {
@@ -5079,6 +5551,7 @@
    "median": 10.35,
    "mean": 11.43,
    "best": 27.68,
+   "sd": 10.07,
    "season": 2025
   },
   "khalil herbert": {
@@ -5090,6 +5563,7 @@
    "median": 0.5,
    "mean": 1.32,
    "best": 5.6,
+   "sd": 2.41,
    "season": 2025
   },
   "avery williams": {
@@ -5101,6 +5575,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "trey lance": {
@@ -5112,6 +5587,7 @@
    "median": 2.22,
    "mean": 3.39,
    "best": 8.34,
+   "sd": 3.41,
    "season": 2025
   },
   "isaiah likely": {
@@ -5123,6 +5599,7 @@
    "median": 3.6,
    "mean": 5.14,
    "best": 12.5,
+   "sd": 4.1,
    "season": 2025
   },
   "keaton mitchell": {
@@ -5134,6 +5611,7 @@
    "median": 3.1,
    "mean": 4.26,
    "best": 11.1,
+   "sd": 3.27,
    "season": 2025
   },
   "travis vokolek": {
@@ -5145,6 +5623,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "jalen brooks": {
@@ -5156,6 +5635,7 @@
    "median": 0,
    "mean": 1.62,
    "best": 5.2,
+   "sd": 2.36,
    "season": 2025
   },
   "jalen moreno-cropper": {
@@ -5167,6 +5647,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jalin hyatt": {
@@ -5178,6 +5659,7 @@
    "median": 0,
    "mean": 1.42,
    "best": 4.7,
+   "sd": 2.21,
    "season": 2025
   },
   "tyjae spears": {
@@ -5189,6 +5671,7 @@
    "median": 8.4,
    "mean": 8.59,
    "best": 21.5,
+   "sd": 5.55,
    "season": 2025
   },
   "brenden bates": {
@@ -5200,6 +5683,7 @@
    "median": 1.6,
    "mean": 1.76,
    "best": 4.3,
+   "sd": 1.87,
    "season": 2025
   },
   "british brooks": {
@@ -5211,6 +5695,7 @@
    "median": 0,
    "mean": 0.98,
    "best": 6.3,
+   "sd": 2.21,
    "season": 2025
   },
   "malachi corley": {
@@ -5222,6 +5707,7 @@
    "median": 2.45,
    "mean": 2.63,
    "best": 6.1,
+   "sd": 1.88,
    "season": 2025
   },
   "jimmy horn jr.": {
@@ -5233,6 +5719,7 @@
    "median": 2.5,
    "mean": 2.87,
    "best": 6.7,
+   "sd": 1.73,
    "season": 2025
   },
   "gage larvadain": {
@@ -5244,6 +5731,7 @@
    "median": 0,
    "mean": 1.11,
    "best": 4.3,
+   "sd": 1.78,
    "season": 2025
   },
   "josh williams": {
@@ -5255,6 +5743,7 @@
    "median": 0.55,
    "mean": 0.55,
    "best": 1.1,
+   "sd": 0.78,
    "season": 2025
   },
   "jaydon blue": {
@@ -5266,6 +5755,7 @@
    "median": 2.9,
    "mean": 4.08,
    "best": 12.4,
+   "sd": 4.97,
    "season": 2025
   },
   "terrance ferguson": {
@@ -5277,6 +5767,7 @@
    "median": 3.1,
    "mean": 4.74,
    "best": 13.4,
+   "sd": 5.2,
    "season": 2025
   },
   "nyheim hines": {
@@ -5288,6 +5779,7 @@
    "median": 0,
    "mean": -0.05,
    "best": 0,
+   "sd": 0.1,
    "season": 2025
   },
   "tanner hudson": {
@@ -5299,6 +5791,7 @@
    "median": 4.85,
    "mean": 4.78,
    "best": 11,
+   "sd": 3.15,
    "season": 2025
   },
   "foster moreau": {
@@ -5310,6 +5803,7 @@
    "median": 1.9,
    "mean": 1.84,
    "best": 3.6,
+   "sd": 1.45,
    "season": 2025
   },
   "lil'jordan humphrey": {
@@ -5321,6 +5815,7 @@
    "median": 4.3,
    "mean": 4.94,
    "best": 13.2,
+   "sd": 4.97,
    "season": 2025
   },
   "parris campbell": {
@@ -5332,6 +5827,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "tyler huntley": {
@@ -5343,6 +5839,7 @@
    "median": 6.62,
    "mean": 8.03,
    "best": 16.74,
+   "sd": 7.31,
    "season": 2025
   },
   "stone smartt": {
@@ -5354,6 +5851,7 @@
    "median": 0,
    "mean": 2.03,
    "best": 8.4,
+   "sd": 3.47,
    "season": 2025
   },
   "deven thompkins": {
@@ -5365,6 +5863,7 @@
    "median": 0,
    "mean": 0.89,
    "best": 4.8,
+   "sd": 1.8,
    "season": 2025
   },
   "jaleel mclaughlin": {
@@ -5376,6 +5875,7 @@
    "median": 4,
    "mean": 3.93,
    "best": 8.4,
+   "sd": 2.83,
    "season": 2025
   },
   "mason tipton": {
@@ -5387,6 +5887,7 @@
    "median": 0.55,
    "mean": 2.55,
    "best": 8.1,
+   "sd": 3.35,
    "season": 2025
   },
   "dominic lovett": {
@@ -5398,6 +5899,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "ke'shawn williams": {
@@ -5409,6 +5911,7 @@
    "median": 0,
    "mean": 0.23,
    "best": 1.5,
+   "sd": 0.5,
    "season": 2025
   },
   "efton chism iii": {
@@ -5420,6 +5923,7 @@
    "median": 0,
    "mean": 2.06,
    "best": 12,
+   "sd": 4.31,
    "season": 2025
   },
   "konata mumpfield": {
@@ -5431,6 +5935,7 @@
    "median": 1.6,
    "mean": 2.52,
    "best": 7.5,
+   "sd": 2.91,
    "season": 2025
   },
   "teddy bridgewater": {
@@ -5442,6 +5947,7 @@
    "median": -0.1,
    "mean": 0.96,
    "best": 3.08,
+   "sd": 1.84,
    "season": 2025
   },
   "jimmy garoppolo": {
@@ -5453,6 +5959,7 @@
    "median": -0.3,
    "mean": -0.33,
    "best": -0.3,
+   "sd": 0.06,
    "season": 2025
   },
   "robbie chosen": {
@@ -5464,6 +5971,7 @@
    "median": 2.7,
    "mean": 3.43,
    "best": 7.6,
+   "sd": 3.85,
    "season": 2025
   },
   "laquon treadwell": {
@@ -5475,6 +5983,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "braxton berrios": {
@@ -5486,6 +5995,7 @@
    "median": 0.45,
    "mean": 2.43,
    "best": 8.8,
+   "sd": 4.27,
    "season": 2025
   },
   "travis homer": {
@@ -5497,6 +6007,7 @@
    "median": 0,
    "mean": -0.02,
    "best": 0,
+   "sd": 0.07,
    "season": 2025
   },
   "d'ernest johnson": {
@@ -5508,6 +6019,7 @@
    "median": 0.5,
    "mean": 0.5,
    "best": 1.3,
+   "sd": 0.51,
    "season": 2025
   },
   "mason kinsey": {
@@ -5519,6 +6031,7 @@
    "median": 0,
    "mean": 1.13,
    "best": 4.4,
+   "sd": 1.87,
    "season": 2025
   },
   "malik davis": {
@@ -5530,6 +6043,7 @@
    "median": 2.15,
    "mean": 4.06,
    "best": 11.7,
+   "sd": 4.81,
    "season": 2025
   },
   "kenny pickett": {
@@ -5541,6 +6055,7 @@
    "median": 0.32,
    "mean": 1.29,
    "best": 8.48,
+   "sd": 3.68,
    "season": 2025
   },
   "e.j. jenkins": {
@@ -5552,6 +6067,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "rashee rice": {
@@ -5563,6 +6079,7 @@
    "median": 20.9,
    "mean": 18.76,
    "best": 29.4,
+   "sd": 8.11,
    "season": 2025
   },
   "jalen coker": {
@@ -5574,6 +6091,7 @@
    "median": 6.6,
    "mean": 8.22,
    "best": 17.4,
+   "sd": 5.87,
    "season": 2025
   },
   "terrell jennings": {
@@ -5585,6 +6103,7 @@
    "median": 1,
    "mean": 2.53,
    "best": 11.4,
+   "sd": 4.41,
    "season": 2025
   },
   "thomas fidone ii": {
@@ -5596,6 +6115,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "quinn ewers": {
@@ -5607,6 +6127,7 @@
    "median": 7.64,
    "mean": 8.3,
    "best": 15.78,
+   "sd": 5.66,
    "season": 2025
   },
   "carter runyon": {
@@ -5618,6 +6139,7 @@
    "median": 0,
    "mean": 0.43,
    "best": 1.3,
+   "sd": 0.75,
    "season": 2025
   },
   "cedrick wilson jr.": {
@@ -5629,6 +6151,7 @@
    "median": 1.75,
    "mean": 1.57,
    "best": 2.6,
+   "sd": 0.9,
    "season": 2025
   },
   "jarrett stidham": {
@@ -5640,6 +6163,7 @@
    "median": -0.1,
    "mean": -0.1,
    "best": -0.1,
+   "sd": null,
    "season": 2025
   },
   "jaret patterson": {
@@ -5651,6 +6175,7 @@
    "median": 3.7,
    "mean": 4.28,
    "best": 11.4,
+   "sd": 4.32,
    "season": 2025
   },
   "christian watson": {
@@ -5662,6 +6187,7 @@
    "median": 11.2,
    "mean": 13.24,
    "best": 24.9,
+   "sd": 7.67,
    "season": 2025
   },
   "tanner mckee": {
@@ -5673,6 +6199,7 @@
    "median": 1.01,
    "mean": 3.44,
    "best": 11.94,
+   "sd": 5.78,
    "season": 2025
   },
   "jared wayne": {
@@ -5684,6 +6211,7 @@
    "median": 4,
    "mean": 4,
    "best": 4,
+   "sd": null,
    "season": 2025
   },
   "hayden rucci": {
@@ -5695,6 +6223,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "jaylen wright": {
@@ -5706,6 +6235,7 @@
    "median": 3.8,
    "mean": 5.36,
    "best": 16.7,
+   "sd": 5.52,
    "season": 2025
   },
   "jordan watkins": {
@@ -5717,6 +6247,7 @@
    "median": 2.3,
    "mean": 2.3,
    "best": 2.9,
+   "sd": 0.85,
    "season": 2025
   },
   "riley leonard": {
@@ -5728,6 +6259,7 @@
    "median": 0.1,
    "mean": 6.2,
    "best": 22.6,
+   "sd": 10.35,
    "season": 2025
   },
   "durham smythe": {
@@ -5739,6 +6271,7 @@
    "median": 1.2,
    "mean": 0.93,
    "best": 2.1,
+   "sd": 0.91,
    "season": 2025
   },
   "clyde edwards-helaire": {
@@ -5750,6 +6283,7 @@
    "median": 2.1,
    "mean": 2.1,
    "best": 3.7,
+   "sd": 2.26,
    "season": 2025
   },
   "tim jones": {
@@ -5761,6 +6295,7 @@
    "median": 1.25,
    "mean": 1.25,
    "best": 2.5,
+   "sd": 1.77,
    "season": 2025
   },
   "austin trammell": {
@@ -5772,6 +6307,7 @@
    "median": 0,
    "mean": 1.27,
    "best": 5.3,
+   "sd": 2.18,
    "season": 2025
   },
   "michael bandy": {
@@ -5783,6 +6319,7 @@
    "median": 3,
    "mean": 3.75,
    "best": 9,
+   "sd": 3.79,
    "season": 2025
   },
   "greg dulcich": {
@@ -5794,6 +6331,7 @@
    "median": 6.1,
    "mean": 6.98,
    "best": 16.1,
+   "sd": 3.96,
    "season": 2025
   },
   "brittain brown": {
@@ -5805,6 +6343,7 @@
    "median": 4.85,
    "mean": 4.85,
    "best": 9.7,
+   "sd": 6.86,
    "season": 2025
   },
   "treylon burks": {
@@ -5816,6 +6355,7 @@
    "median": 2.8,
    "mean": 3.63,
    "best": 8.8,
+   "sd": 3.25,
    "season": 2025
   },
   "lew nichols iii": {
@@ -5827,6 +6367,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "adrian martinez": {
@@ -5838,6 +6379,7 @@
    "median": -0.1,
    "mean": -0.1,
    "best": -0.1,
+   "sd": null,
    "season": 2025
   },
   "princeton fant": {
@@ -5849,6 +6391,19 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
+   "season": 2025
+  },
+  "jack westover": {
+   "pos": "TE",
+   "g": 4,
+   "boom": 0,
+   "boomWeeks": 0,
+   "bust": 1,
+   "median": 0,
+   "mean": 0.25,
+   "best": 1,
+   "sd": 0.5,
    "season": 2025
   },
   "tahj washington": {
@@ -5860,6 +6415,7 @@
    "median": 2.35,
    "mean": 2.35,
    "best": 4.6,
+   "sd": 3.18,
    "season": 2025
   },
   "marcedes lewis": {
@@ -5871,6 +6427,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "patrick ricard": {
@@ -5882,6 +6439,7 @@
    "median": 0,
    "mean": 0.42,
    "best": 1.8,
+   "sd": 0.78,
    "season": 2025
   },
   "ross dwelley": {
@@ -5893,6 +6451,7 @@
    "median": 0.65,
    "mean": 0.68,
    "best": 1.4,
+   "sd": 0.78,
    "season": 2025
   },
   "dante pettis": {
@@ -5904,6 +6463,7 @@
    "median": 0,
    "mean": 2.46,
    "best": 11,
+   "sd": 4.1,
    "season": 2025
   },
   "trayveon williams": {
@@ -5915,6 +6475,7 @@
    "median": 1.85,
    "mean": 2.85,
    "best": 9.5,
+   "sd": 3.45,
    "season": 2025
   },
   "kedon slovis": {
@@ -5926,6 +6487,7 @@
    "median": -0.04,
    "mean": -0.04,
    "best": 0,
+   "sd": 0.06,
    "season": 2025
   },
   "nick kallerup": {
@@ -5937,6 +6499,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jameis winston": {
@@ -5948,6 +6511,7 @@
    "median": 11.04,
    "mean": 14.43,
    "best": 32.24,
+   "sd": 16.38,
    "season": 2025
   },
   "pharaoh brown": {
@@ -5959,6 +6523,7 @@
    "median": 0,
    "mean": 0.42,
    "best": 2.1,
+   "sd": 0.94,
    "season": 2025
   },
   "chase edmonds": {
@@ -5970,6 +6535,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "mecole hardman": {
@@ -5981,6 +6547,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "andre baccellia": {
@@ -5992,6 +6559,7 @@
    "median": 0.65,
    "mean": 0.7,
    "best": 1.5,
+   "sd": 0.81,
    "season": 2025
   },
   "isaiah hodgins": {
@@ -6003,6 +6571,7 @@
    "median": 1.6,
    "mean": 4.58,
    "best": 12.2,
+   "sd": 5.37,
    "season": 2025
   },
   "gabe davis": {
@@ -6014,6 +6583,7 @@
    "median": 3.65,
    "mean": 5.15,
    "best": 15.1,
+   "sd": 5.43,
    "season": 2025
   },
   "elijah mitchell": {
@@ -6025,6 +6595,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "malik willis": {
@@ -6036,6 +6607,7 @@
    "median": 9.54,
    "mean": 12.8,
    "best": 31.52,
+   "sd": 13.52,
    "season": 2025
   },
   "owen wright": {
@@ -6047,6 +6619,7 @@
    "median": 0.3,
    "mean": 0.3,
    "best": 0.6,
+   "sd": 0.42,
    "season": 2025
   },
   "josh whyle": {
@@ -6058,6 +6631,7 @@
    "median": 1.6,
    "mean": 2.43,
    "best": 7.2,
+   "sd": 2.54,
    "season": 2025
   },
   "kendall milton": {
@@ -6069,6 +6643,7 @@
    "median": 0.2,
    "mean": 0.2,
    "best": 0.2,
+   "sd": null,
    "season": 2025
   },
   "darius cooper": {
@@ -6080,6 +6655,7 @@
    "median": 2.8,
    "mean": 3.03,
    "best": 6.3,
+   "sd": 2.29,
    "season": 2025
   },
   "amar johnson": {
@@ -6091,6 +6667,7 @@
    "median": 0.8,
    "mean": 0.8,
    "best": 0.8,
+   "sd": null,
    "season": 2025
   },
   "jacoby jones": {
@@ -6102,6 +6679,7 @@
    "median": 3.5,
    "mean": 3.5,
    "best": 3.5,
+   "sd": null,
    "season": 2025
   },
   "keleki latu": {
@@ -6113,6 +6691,7 @@
    "median": 1.4,
    "mean": 2.5,
    "best": 6.1,
+   "sd": 3.2,
    "season": 2025
   },
   "dalen cambre": {
@@ -6124,6 +6703,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "shedeur sanders": {
@@ -6135,6 +6715,7 @@
    "median": 9.85,
    "mean": 10.61,
    "best": 33.46,
+   "sd": 9.92,
    "season": 2025
   },
   "james proche": {
@@ -6146,6 +6727,7 @@
    "median": 1.5,
    "mean": 2.08,
    "best": 7.2,
+   "sd": 2.67,
    "season": 2025
   },
   "gary brightwell": {
@@ -6157,6 +6739,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "nikola kalinic": {
@@ -6168,6 +6751,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "teagan quitoriano": {
@@ -6179,6 +6763,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "eric gray": {
@@ -6190,6 +6775,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "dylan drummond": {
@@ -6201,6 +6787,7 @@
    "median": 0.65,
    "mean": 1.87,
    "best": 5.1,
+   "sd": 2.44,
    "season": 2025
   },
   "kalel mullings": {
@@ -6212,6 +6799,7 @@
    "median": 0.15,
    "mean": 0.18,
    "best": 0.4,
+   "sd": 0.21,
    "season": 2025
   },
   "xavier restrepo": {
@@ -6223,6 +6811,7 @@
    "median": 3.55,
    "mean": 3.55,
    "best": 4.6,
+   "sd": 1.48,
    "season": 2025
   },
   "nick mullens": {
@@ -6234,6 +6823,7 @@
    "median": -0.09,
    "mean": -0.01,
    "best": 0.44,
+   "sd": 0.33,
    "season": 2025
   },
   "anthony firkser": {
@@ -6245,6 +6835,7 @@
    "median": 1.7,
    "mean": 2.66,
    "best": 8,
+   "sd": 3.09,
    "season": 2025
   },
   "myles gaskin": {
@@ -6256,6 +6847,7 @@
    "median": 0.6,
    "mean": 0.6,
    "best": 0.6,
+   "sd": null,
    "season": 2025
   },
   "tom kennedy": {
@@ -6267,6 +6859,7 @@
    "median": 0,
    "mean": 1.27,
    "best": 7.6,
+   "sd": 3.1,
    "season": 2025
   },
   "britain covey": {
@@ -6278,6 +6871,7 @@
    "median": 0,
    "mean": 0.67,
    "best": 4,
+   "sd": 1.63,
    "season": 2025
   },
   "ronnie rivers": {
@@ -6289,6 +6883,7 @@
    "median": 0,
    "mean": 0.77,
    "best": 4.1,
+   "sd": 1.65,
    "season": 2025
   },
   "evan hull": {
@@ -6300,6 +6895,7 @@
    "median": 1.15,
    "mean": 1.07,
    "best": 2,
+   "sd": 0.67,
    "season": 2025
   },
   "jared wiley": {
@@ -6311,6 +6907,7 @@
    "median": 0.7,
    "mean": 0.7,
    "best": 1.4,
+   "sd": 0.99,
    "season": 2025
   },
   "dj turner": {
@@ -6322,6 +6919,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "ben sims": {
@@ -6333,6 +6931,7 @@
    "median": 1.9,
    "mean": 2,
    "best": 2.8,
+   "sd": 0.75,
    "season": 2025
   },
   "shedrick jackson": {
@@ -6344,6 +6943,7 @@
    "median": 4,
    "mean": 5.3,
    "best": 9.5,
+   "sd": 3.72,
    "season": 2025
   },
   "malik cunningham": {
@@ -6355,6 +6955,7 @@
    "median": 0.1,
    "mean": 0.1,
    "best": 0.1,
+   "sd": null,
    "season": 2025
   },
   "jonathan mingo": {
@@ -6366,6 +6967,7 @@
    "median": 0,
    "mean": 0.7,
    "best": 3.5,
+   "sd": 1.57,
    "season": 2025
   },
   "audric estimé": {
@@ -6377,6 +6979,7 @@
    "median": 8,
    "mean": 9.62,
    "best": 16.8,
+   "sd": 6.55,
    "season": 2025
   },
   "brady cook": {
@@ -6388,6 +6991,7 @@
    "median": 4.18,
    "mean": 5.69,
    "best": 9.1,
+   "sd": 3.1,
    "season": 2025
   },
   "philip rivers": {
@@ -6399,6 +7003,7 @@
    "median": 7.78,
    "mean": 10.55,
    "best": 17.08,
+   "sd": 5.67,
    "season": 2025
   },
   "giovanni ricci": {
@@ -6410,6 +7015,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "jawhar jordan": {
@@ -6421,6 +7027,7 @@
    "median": 7.8,
    "mean": 7.43,
    "best": 13.8,
+   "sd": 6.51,
    "season": 2025
   },
   "jalen mcmillan": {
@@ -6432,6 +7039,7 @@
    "median": 4.7,
    "mean": 7.48,
    "best": 18.4,
+   "sd": 7.44,
    "season": 2025
   },
   "coleman owen": {
@@ -6443,6 +7051,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "corey kiner": {
@@ -6454,6 +7063,7 @@
    "median": 2.15,
    "mean": 2.33,
    "best": 4.8,
+   "sd": 2.07,
    "season": 2025
   },
   "josh johnson": {
@@ -6465,6 +7075,7 @@
    "median": 8.92,
    "mean": 8.13,
    "best": 15.74,
+   "sd": 8.04,
    "season": 2025
   },
   "steven sims": {
@@ -6476,6 +7087,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "shane zylstra": {
@@ -6487,6 +7099,7 @@
    "median": 5,
    "mean": 5,
    "best": 5,
+   "sd": null,
    "season": 2025
   },
   "chris oladokun": {
@@ -6498,6 +7111,7 @@
    "median": 5.14,
    "mean": 3.73,
    "best": 7.74,
+   "sd": 4.86,
    "season": 2025
   },
   "jelani woods": {
@@ -6509,6 +7123,7 @@
    "median": 0.7,
    "mean": 0.7,
    "best": 1.4,
+   "sd": 0.99,
    "season": 2025
   },
   "theo wease jr.": {
@@ -6520,6 +7135,7 @@
    "median": 7.4,
    "mean": 8.63,
    "best": 13.3,
+   "sd": 4.19,
    "season": 2025
   },
   "river cracraft": {
@@ -6531,6 +7147,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": 0,
    "season": 2025
   },
   "chris blair": {
@@ -6542,6 +7159,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "sal cannella": {
@@ -6553,6 +7171,7 @@
    "median": 1.55,
    "mean": 1.55,
    "best": 3.1,
+   "sd": 2.19,
    "season": 2025
   },
   "will mallory": {
@@ -6564,6 +7183,7 @@
    "median": 2.6,
    "mean": 2.6,
    "best": 2.6,
+   "sd": null,
    "season": 2025
   },
   "clayton tune": {
@@ -6575,6 +7195,7 @@
    "median": 0.99,
    "mean": 0.99,
    "best": 3.66,
+   "sd": 3.78,
    "season": 2025
   },
   "ronnie bell": {
@@ -6586,6 +7207,7 @@
    "median": 5.15,
    "mean": 5.15,
    "best": 10.3,
+   "sd": 7.28,
    "season": 2025
   },
   "moliki matavao": {
@@ -6597,6 +7219,7 @@
    "median": 3,
    "mean": 3,
    "best": 3,
+   "sd": null,
    "season": 2025
   },
   "brandon allen": {
@@ -6608,6 +7231,7 @@
    "median": 0.88,
    "mean": 0.88,
    "best": 0.88,
+   "sd": null,
    "season": 2025
   },
   "shane buechele": {
@@ -6619,6 +7243,7 @@
    "median": 3.92,
    "mean": 3.92,
    "best": 3.92,
+   "sd": null,
    "season": 2025
   },
   "samori toure": {
@@ -6630,6 +7255,7 @@
    "median": 1.3,
    "mean": 1.3,
    "best": 1.3,
+   "sd": null,
    "season": 2025
   },
   "aidan o'connell": {
@@ -6641,6 +7267,7 @@
    "median": 4.78,
    "mean": 4.78,
    "best": 4.78,
+   "sd": null,
    "season": 2025
   },
   "jeshaun jones": {
@@ -6652,6 +7279,7 @@
    "median": 0,
    "mean": 0,
    "best": 0,
+   "sd": null,
    "season": 2025
   },
   "phil mafah": {
@@ -6663,6 +7291,7 @@
    "median": 10.9,
    "mean": 10.9,
    "best": 10.9,
+   "sd": null,
    "season": 2025
   },
   "jakobie keeney-james": {
@@ -6674,6 +7303,7 @@
    "median": 3.5,
    "mean": 3.5,
    "best": 3.5,
+   "sd": null,
    "season": 2025
   },
   "quentin skinner": {
@@ -6685,6 +7315,7 @@
    "median": 4,
    "mean": 4,
    "best": 4,
+   "sd": null,
    "season": 2025
   },
   "drake dabney": {
@@ -6696,6 +7327,7 @@
    "median": 1.3,
    "mean": 1.3,
    "best": 1.3,
+   "sd": null,
    "season": 2025
   },
   "james cook iii": {
@@ -6707,6 +7339,7 @@
    "median": 20.4,
    "mean": 17.78,
    "best": 33.6,
+   "sd": 9.2,
    "season": 2025
   },
   "travis etienne jr.": {
@@ -6718,6 +7351,7 @@
    "median": 16.5,
    "mean": 14.94,
    "best": 31.5,
+   "sd": 6.94,
    "season": 2025
   },
   "aaron jones sr.": {
@@ -6729,6 +7363,7 @@
    "median": 10.3,
    "mean": 9.89,
    "best": 15.9,
+   "sd": 4.51,
    "season": 2025
   },
   "brian robinson jr.": {
@@ -6740,6 +7375,7 @@
    "median": 2.6,
    "mean": 3.68,
    "best": 11.5,
+   "sd": 3.2,
    "season": 2025
   },
   "michael pittman jr.": {
@@ -6751,6 +7387,7 @@
    "median": 13.7,
    "mean": 11.91,
    "best": 23.5,
+   "sd": 7.49,
    "season": 2025
   },
   "tre' harris": {
@@ -6762,6 +7399,7 @@
    "median": 4.05,
    "mean": 4.34,
    "best": 9.4,
+   "sd": 2.88,
    "season": 2025
   },
   "hollywood brown": {
@@ -6773,6 +7411,7 @@
    "median": 8.5,
    "mean": 8.61,
    "best": 20.5,
+   "sd": 5.69,
    "season": 2025
   },
   "kyle pitts sr.": {
@@ -6784,6 +7423,7 @@
    "median": 11.8,
    "mean": 12.4,
    "best": 45.6,
+   "sd": 9.94,
    "season": 2025
   },
   "oronde gadsden": {
@@ -6795,6 +7435,7 @@
    "median": 6.1,
    "mean": 8.76,
    "best": 29.4,
+   "sd": 7.54,
    "season": 2025
   },
   "anthony richardson sr.": {
@@ -6806,6 +7447,7 @@
    "median": 1.08,
    "mean": 1.08,
    "best": 2.26,
+   "sd": 1.67,
    "season": 2025
   },
   "deebo samuel": {
@@ -6817,6 +7459,7 @@
    "median": 10.25,
    "mean": 11.76,
    "best": 23.6,
+   "sd": 6.94,
    "season": 2025
   }
  }

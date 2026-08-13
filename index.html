@@ -230,7 +230,8 @@ function tierize(sorted) {
 })();
 
 function weekProj(p, week) {
-  const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===week && s.seasonId===2026);
+  // statSplitTypeId is the FOURTH discriminator: weekly entries are split 1, season totals split 0.
+  const s = (p.stats||[]).find(s => s.statSourceId===1 && s.scoringPeriodId===week && s.seasonId===2026 && s.statSplitTypeId===1);
   return s ? +s.appliedTotal.toFixed(1) : 0;
 }
 
@@ -260,7 +261,7 @@ async function load() {
     // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
     const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes] = await Promise.all([
-      espn('mTeam,mRoster,mSettings'),
+      espn('mTeam,mRoster,mSettings,mMatchup'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
       fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({})),
@@ -282,6 +283,7 @@ async function load() {
     S.analysis = analysis.players || {};
     S.ranks = ranks.players || {};
     S.week = league.scoringPeriodId || 1;
+    S.schedule = league.schedule || []; // mMatchup — needed to know who he plays this week
     S.teams = league.teams || [];
     const size = S.teams.length || 10;
     REPL = {QB:Math.round(1.2*size), RB:Math.round(2.8*size), WR:Math.round(3.2*size), TE:Math.round(1.2*size), K:size, DST:size};
@@ -759,6 +761,108 @@ function vnoteLine(name) {
   console.assert(vnoteLine('Nobody') === '', 'vnotes: unknown player rendered something');
   S.vnotes = sv; S.week = sw; S.vnoteTtl = st; })();
 
+// ── Weekly win probability ───────────────────────────────────────────────────
+// This league seeds RECORD FIRST (points are only the tiebreaker — see CLAUDE.md), so the
+// question a start/sit decision actually answers is "does this raise my chance of WINNING
+// this week", not "does this raise my projected total". Those two disagree exactly when the
+// matchup is lopsided: a big favorite wants the safe floor, an underdog needs the spike.
+// Each side's weekly total is modelled Normal(Σ projections, Σ per-player variance).
+const cdf = z => { // Φ via A&S 7.1.26 erf approximation — plenty for a probability we round to a %
+  const t = 1 / (1 + 0.3275911 * Math.abs(z) / Math.SQRT2);
+  const y = 1 - ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t
+    * Math.exp(-z * z / 2);
+  return z >= 0 ? 0.5 * (1 + y) : 0.5 * (1 - y);
+};
+// Volatility as a COEFFICIENT of variation (sd/mean), not raw sd: the ratio carries from last
+// season to this week's projection, the absolute number doesn't. A player with no usable
+// boom-rates row falls back to his position's median cv — absence must not read as "steady".
+const CV_FALLBACK = 0.55; // league-wide-ish; only used if a position has no rated players at all
+let _cvMed = null;
+function posCv(pos) {
+  _cvMed ||= {};
+  if (_cvMed[pos] == null) {
+    const vs = Object.values(S.boom || {}).filter(b => b.pos === pos && b.g >= 4 && b.sd > 0 && b.mean > 0)
+      .map(b => b.sd / b.mean).sort((a, b) => a - b);
+    _cvMed[pos] = vs.length ? vs[Math.floor(vs.length / 2)] : CV_FALLBACK;
+  }
+  return _cvMed[pos];
+}
+function cvOf(name, pos) {
+  const b = S.boom[(name || '').toLowerCase()];
+  return (b && b.pos === pos && b.g >= 4 && b.sd > 0 && b.mean > 0) ? b.sd / b.mean : posCv(pos);
+}
+// ponytail: players treated as independent. A QB+WR stack is genuinely correlated, which
+// understates variance for stacked lineups; revisit only if he starts stacking on purpose.
+const dist = ps => ({
+  mu: ps.reduce((a, p) => a + p.pts, 0),
+  v: ps.reduce((a, p) => a + (p.pts * cvOf(p.name, p.pos)) ** 2, 0),
+});
+const winProb = (me, opp) => cdf((me.mu - opp.mu) / (Math.sqrt(me.v + opp.v) || 1));
+
+// Roster priced at THIS WEEK's ESPN projection (not the season-long consensus, which has no
+// matchup component). Same {id,name,pos,pts} shape lineup() already reads.
+// K and D/ST are dropped (START has no slot for them): both sides lose the same ~13 points of
+// mean, so the win-probability comparison stays fair, and no start/sit call is ever made there.
+const weekRoster = tid => (S.rosters[tid] || [])
+  .map(p => ({ id: p.id, name: p.fullName, pos: POS[p.defaultPositionId], pts: weekProj(p, S.week) }))
+  .filter(e => START[e.pos]);
+const startersOf = ps => { const ids = lineup(ps).ids; return ps.filter(p => ids.has(p.id)); };
+// matchupPeriodId, not scoringPeriodId — they run 1:1 in this league (no double-weeks) but
+// they are different fields and only one of them is on the schedule.
+const oppOf = wk => { const m = (S.schedule || []).find(m => m.matchupPeriodId === wk &&
+    (m.home?.teamId === S.myTeamId || m.away?.teamId === S.myTeamId));
+  return m ? (m.home?.teamId === S.myTeamId ? m.away?.teamId : m.home?.teamId) : null; };
+// A starting set is legal for QB1/RB2/WR2/TE1/FLEX1 iff exactly one QB and the six flex-ish
+// slots are covered with one spare.
+function legalSet(ps) {
+  const n = pos => ps.filter(p => p.pos === pos).length;
+  return n('QB') === 1 && n('RB') >= 2 && n('WR') >= 2 && n('TE') >= 1 && n('RB') + n('WR') + n('TE') === 6;
+}
+// Every legal single swap, scored in BOTH currencies. The ones worth showing him are where
+// they disagree: a swap that costs projected points but buys win probability, or vice versa.
+function lineupCalls(mine, oppDist) {
+  const start = startersOf(mine), bench = mine.filter(p => !start.includes(p));
+  const base = winProb(dist(start), oppDist);
+  const out = [];
+  for (const s of start) for (const b of bench) {
+    const set = start.filter(p => p.id !== s.id).concat(b);
+    if (!legalSet(set)) continue;
+    out.push({ in: b, out: s, dPts: +(b.pts - s.pts).toFixed(1), dWin: winProb(dist(set), oppDist) - base });
+  }
+  return out.sort((a, b) => b.dWin - a.dWin);
+}
+(() => {
+  const save = { boom: S.boom, rosters: S.rosters, week: S.week, my: S.myTeamId, sched: S.schedule }, savedCv = _cvMed;
+  S.boom = {}; _cvMed = null;
+  console.assert(Math.abs(cdf(0) - 0.5) < 1e-6 && cdf(1.96) > 0.974 && cdf(-1.96) < 0.026, 'winprob: normal CDF wrong');
+  // Even totals = coin flip; a 30-point lead is close to certain.
+  const even = { mu: 100, v: 400 };
+  console.assert(Math.abs(winProb(even, even) - 0.5) < 1e-6, 'winprob: equal teams not 50%');
+  console.assert(winProb({ mu: 130, v: 400 }, even) > 0.85, 'winprob: big favourite underrated');
+  // The whole point. Note that from a points-optimal lineup EVERY legal swap costs projected
+  // points — so the only question left is whether the points are worth it. Swapping the volatile
+  // starter out for a steadier, slightly-lower-projection bench player must GAIN win probability
+  // when he's a favourite and LOSE it when he's an underdog.
+  S.boom = { steady: { pos: 'RB', g: 16, sd: 2, mean: 20 }, wild: { pos: 'RB', g: 16, sd: 18, mean: 20 } };
+  const mine = [{ id: 1, name: 'qb', pos: 'QB', pts: 20 }, { id: 2, name: 'wild', pos: 'RB', pts: 15 },
+    { id: 3, name: 'rb2', pos: 'RB', pts: 13 }, { id: 4, name: 'wr1', pos: 'WR', pts: 12 },
+    { id: 5, name: 'wr2', pos: 'WR', pts: 11 }, { id: 6, name: 'te', pos: 'TE', pts: 9 },
+    { id: 7, name: 'flex', pos: 'WR', pts: 8 }, { id: 8, name: 'steady', pos: 'RB', pts: 7 }];
+  const toSteady = c => c.find(x => x.in.name === 'steady' && x.out.name === 'wild');
+  const asFav = toSteady(lineupCalls(mine, { mu: 40, v: 100 }));
+  const asDog = toSteady(lineupCalls(mine, { mu: 140, v: 100 }));
+  console.assert(asFav && asFav.dPts < 0, 'winprob: every swap off an optimal lineup should cost points');
+  console.assert(asFav.dWin > 0, `winprob: favourite should want the steady guy (${asFav.dWin})`);
+  console.assert(asDog.dWin < 0, `winprob: underdog should not trade variance away (${asDog.dWin})`);
+  // A player with no boom row must fall back to the positional cv, never to zero variance.
+  console.assert(cvOf('nobody at all', 'RB') > 0, 'winprob: unrated player given zero variance');
+  // Thin sample must not be trusted as volatility either (same MIN_G rule as the boom chip).
+  S.boom = { thin: { pos: 'TE', g: 2, sd: 12, mean: 10 } }; _cvMed = null;
+  console.assert(cvOf('thin', 'TE') !== 1.2, 'winprob: 2-game sample used as volatility');
+  console.assert(!legalSet(mine.slice(0, 7)), 'winprob: illegal set accepted');
+  S.boom = save.boom; S.rosters = save.rosters; S.week = save.week; S.myTeamId = save.my; S.schedule = save.sched; _cvMed = savedCv;
+})();
+
 // Headlines from /api/nfl's news feed (S.news, loaded fresh every 5-min reload). Text only, same
 // boundary as vnoteLine — camp buzz is context for a human to read, never a number newsFactor uses.
 function newsLine(name) {
@@ -783,10 +887,36 @@ const views = {
     const roster = S.rosters[S.myTeamId] || [];
     const rows = roster.map(p => ({p, w: weekProj(p, S.week)})).sort((a,b) => b.w - a.w);
     if (!rows.length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
-    return teamPicker() + `<h2>Week ${S.week} — sorted by ESPN projection. Start from the top of each position.</h2>
-    <table><tr><th>Player</th><th>Pos</th><th>Wk ${S.week} Proj</th><th>Injury</th></tr>${
-      rows.map(({p,w}) => `<tr><td>${esc(p.fullName)}${[vnoteLine(p.fullName), newsLine(p.fullName)].filter(Boolean).map(l=>'<br>'+l).join('')}</td><td class="pos pos-${POS[p.defaultPositionId]}">${POS[p.defaultPositionId]}</td><td>${w}</td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`).join('')
+    const pct = x => (x * 100).toFixed(1) + '%';
+    const table = `<h2>Week ${S.week} — every player, by ESPN projection</h2>
+    <table><tr><th>Player</th><th>Pos</th><th>Wk ${S.week} Proj</th><th>Volatility</th><th>Injury</th></tr>${
+      rows.map(({p,w}) => { const pos = POS[p.defaultPositionId], b = S.boom[(p.fullName||'').toLowerCase()];
+        const rated = b && b.pos === pos && b.g >= 4 && b.sd > 0 && b.mean > 0;
+        return `<tr><td>${esc(p.fullName)}${[vnoteLine(p.fullName), newsLine(p.fullName)].filter(Boolean).map(l=>'<br>'+l).join('')}</td><td class="pos pos-${pos}">${pos}</td><td>${w}</td><td><span class="meta">${
+          !START[pos] ? 'n/a — K/DST sit outside the win-prob math'
+          : rated ? `±${(cvOf(p.fullName,pos)*w).toFixed(1)} pts [${S.boomSeason}]` : `assumed ${pos} average`}</span></td><td>${p.injuryStatus && p.injuryStatus!=='ACTIVE' ? '<span class="badge">'+p.injuryStatus+'</span>':''}</td></tr>`; }).join('')
     }</table>`;
+
+    const oppId = oppOf(S.week);
+    if (!oppId) return teamPicker() + `<div class="msg">No Week ${S.week} matchup on the schedule — showing projections only.</div>` + table;
+    const mine = weekRoster(S.myTeamId), opp = dist(startersOf(weekRoster(oppId)));
+    const me = dist(startersOf(mine)), wp = winProb(me, opp);
+    const calls = lineupCalls(mine, opp);
+    // The interesting calls are where the two currencies disagree — points say one thing, win
+    // probability the other. A swap that wins on both is just "you set your lineup wrong".
+    const better = calls.filter(c => c.dWin > 0.002);
+    const stance = wp > 0.6 ? `You're a <b>${pct(wp)} favourite</b> — protect the floor. A boom/bust start can only lose a game you're already winning.`
+      : wp < 0.4 ? `You're a <b>${pct(wp)} underdog</b> — you need variance. The safe floor loses this matchup on average; the spike is the only way through.`
+      : `This is a <b>coin flip (${pct(wp)})</b> — projected points and win probability agree here, so just start your best.`;
+    const row = c => `<tr><td>Start <b>${esc(c.in.name)}</b> (${c.in.pos} ${c.in.pts}) over <b>${esc(c.out.name)}</b> (${c.out.pos} ${c.out.pts})</td>
+      <td><span class="chip ${c.dPts >= 0 ? 'good' : 'risk'}">${c.dPts > 0 ? '+' : ''}${c.dPts} pts</span></td>
+      <td><span class="chip good">+${pct(c.dWin)} win</span>${c.dPts < 0 ? '<br><span class="meta">costs points, buys win probability</span>' : ''}</td></tr>`;
+    return teamPicker() + `<h2>Week ${S.week} vs ${esc(teamName(S.teams.find(t=>t.id===oppId)||{}))}</h2>
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Your best lineup projects <b>${me.mu.toFixed(1)}</b>, theirs <b>${opp.mu.toFixed(1)}</b> → <b>${pct(wp)}</b> to win. ${stance}
+    <br>This league seeds by record, so the metric that matters is win probability, not total points. Volatility comes from each player's own ${S.boomSeason} week-to-week spread; an unrated player is given his position's average rather than treated as steady.</div>
+    ${better.length ? `<table><tr><th>Call</th><th>Projection</th><th>Win probability</th></tr>${better.slice(0,8).map(row).join('')}</table>`
+      : `<div class="msg">Your points-optimal lineup is also your win-probability-optimal lineup this week. Nothing to change.</div>`}
+    ${table}`;
   },
   waivers() {
     const rostered = new Set(Object.values(S.rosters).flat().map(p => p.id));
