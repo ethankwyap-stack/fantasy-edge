@@ -1,0 +1,30 @@
+name: Lineup guardrail
+on:
+  schedule:
+    # Sunday only, in the pre-kickoff window (UTC, PDT-pinned like the other crons — drifts 1h
+    # after the Nov PST switch, accepted). 14:00 UTC = 10am ET, 16:30 UTC = 12:30pm ET last call.
+    # Thursday/Monday games are deliberately not covered: a TNF-only mistake is rare and the
+    # locked-player rule already protects anyone who has played.
+    - cron: '0 14 * * 0'
+    - cron: '30 16 * * 0'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/cache@v4
+        with:
+          path: lineup-state.json
+          key: lineup-state-${{ github.run_id }}
+          restore-keys: lineup-state-
+      - run: node scripts/lineup-alert.js
+        env:
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          SEASON: ${{ secrets.SEASON }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

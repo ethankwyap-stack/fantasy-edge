@@ -4,3 +4,4 @@ node_modules
 state.json
 trade-state.json
 .nflverse-cache
+lineup-state.json

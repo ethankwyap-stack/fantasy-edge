@@ -580,7 +580,9 @@ async function handcuffTeams() {
   };
 }
 
-(async () => {
+// Guarded so lineup-alert.js can import bestLineup() without kicking off a full study run
+// (same rule as boom-rates.js). Do NOT import this file without the guard in place.
+if (require.main === module) (async () => {
   if (has('--selftest')) {
     console.assert(STARTABLE.RB === 24 && STARTABLE.WR === 24, 'startable cutoffs');
     console.assert(SLOT[20] === 'BENCH' && SLOT[21] === 'IR', 'bench/IR slot ids');
@@ -684,3 +686,5 @@ async function handcuffTeams() {
   fs.writeFileSync(outFile, JSON.stringify({ ...prev, generated: new Date().toISOString(), ...out }, null, 1));
   console.log(`Wrote ${outFile}`);
 })();
+
+module.exports = { bestLineup, SLOT, STARTABLE };
