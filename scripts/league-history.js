@@ -502,6 +502,84 @@ async function draftAccuracy() {
   };
 }
 
+// ── Study 8: who actually owned the handcuffs ──────────────────────────────
+// handcuff.js finds, NFL-wide, every window where a starting RB missed 2+ straight
+// weeks and names the back who took the carries. This joins those windows onto the
+// league's weekly rosters: who rostered that back while it mattered, and who started him.
+//
+// Two different failures, kept apart on purpose:
+//   MISSED   = nobody in the league rostered him that week — free on the wire.
+//   BENCHED  = someone owned him and sat him. That is the Act III/IV failure again.
+//
+// ESPN spells names its own way (suffixes, nicknames); same normalise rule as
+// boom-rates.js. An unmatched handcuff is reported, never silently dropped.
+const NICK = { 'hollywood brown': 'marquise brown', 'cam skattebo': 'cameron skattebo' };
+const norm = n => { const l = n.toLowerCase(); return (NICK[l] || l).replace(/\s+(jr|sr|ii|iii|iv)\.?$/, '').replace(/[^a-z ]/g, '').trim(); };
+
+async function handcuffTeams() {
+  const { handcuffs, weekly } = require('./handcuff');
+  const games = await weekly(SEASON);
+  if (!games) throw new Error(`No nflverse weekly data for ${SEASON}`);
+
+  const teams = await fetchTeams();
+  const settings = (await espn('mSettings')).settings;
+  const lastWeek = settings.scheduleSettings.matchupPeriodCount;
+  const weeks = Array.from({ length: lastWeek }, (_, i) => i + 1);
+  const rosters = await weeklyRosters(weeks);
+
+  // NFL windows can run past the fantasy regular season; those weeks have no roster
+  // to judge, so they are clipped out rather than counted as a miss.
+  const windows = handcuffs(games).map(w => ({ ...w, from: w.weeks[0], to: Math.min(w.weeks[1], lastWeek) }))
+    .filter(w => w.from <= lastWeek);
+
+  const byTeam = {}; for (const id of Object.keys(teams)) byTeam[id] = { team: teams[id], captured: 0, startedWeeks: 0, benchedWeeks: 0, ptsStarted: 0, ptsBenched: 0, handcuffs: [] };
+  const rows = [], unmatched = [];
+
+  for (const w of windows) {
+    const target = norm(w.handcuff);
+    const owners = {}; // teamId -> {started:[], benched:[]}
+    let seen = false;
+    for (let wk = w.from; wk <= w.to; wk++) {
+      for (const id of Object.keys(teams)) {
+        const p = (rosters[wk]?.[id] || []).find(x => norm(x.name) === target);
+        if (!p) continue;
+        seen = true;
+        const o = owners[id] ||= { started: [], benched: [] };
+        (p.slot !== 20 && p.slot !== 21 ? o.started : o.benched).push({ week: wk, pts: p.pts });
+      }
+    }
+    if (!seen) { unmatched.push(w.handcuff); continue; } // never rostered all season, or a name ESPN spells differently
+    for (const [id, o] of Object.entries(owners)) {
+      const b = byTeam[id];
+      b.captured++;
+      b.startedWeeks += o.started.length; b.benchedWeeks += o.benched.length;
+      b.ptsStarted += o.started.reduce((a, x) => a + x.pts, 0);
+      b.ptsBenched += o.benched.reduce((a, x) => a + x.pts, 0);
+      b.handcuffs.push({ handcuff: w.handcuff, for: w.starter, weeks: [w.from, w.to], started: o.started.length, benched: o.benched.length });
+    }
+    rows.push({
+      ...w,
+      owners: Object.entries(owners).map(([id, o]) => ({ team: teams[id], started: o.started.length, benched: o.benched.length })),
+      freeWeeks: (w.to - w.from + 1) - new Set(Object.values(owners).flatMap(o => [...o.started, ...o.benched].map(x => x.week))).size,
+    });
+  }
+
+  for (const b of Object.values(byTeam)) {
+    b.ptsStarted = +b.ptsStarted.toFixed(1); b.ptsBenched = +b.ptsBenched.toFixed(1);
+    // Of the handcuff weeks you owned, how many did you actually start? Null, not 0,
+    // when you owned none — a manager who never had the chance did not fail at it.
+    const owned = b.startedWeeks + b.benchedWeeks;
+    b.startRate = owned ? +(b.startedWeeks / owned * 100).toFixed(1) : null;
+  }
+
+  return {
+    season: SEASON, windows: windows.length, matchedWindows: rows.length, unmatched,
+    note: `NFL windows clipped to fantasy weeks 1-${lastWeek}. "captured" = windows where you rostered the handcuff at least one week.`,
+    byTeam: Object.values(byTeam).sort((a, b) => b.ptsStarted - a.ptsStarted || b.captured - a.captured),
+    rows,
+  };
+}
+
 (async () => {
   if (has('--selftest')) {
     console.assert(STARTABLE.RB === 24 && STARTABLE.WR === 24, 'startable cutoffs');
@@ -524,6 +602,9 @@ async function draftAccuracy() {
       { seasonId: SEASON - 1, scoringPeriodId: 0, statSourceId: 1, statSplitTypeId: 0, appliedTotal: 999 },
     ] };
     console.assert(seasonStat(fake, 1).appliedTotal === 340.0, `season-total projection, got ${seasonStat(fake, 1)?.appliedTotal}`);
+    // handcuff name matching: ESPN keeps suffixes nflverse drops, and vice versa.
+    console.assert(norm('Tyrone Tracy Jr.') === norm('tyrone tracy'), 'suffix stripped both ways');
+    console.assert(norm('Cam Skattebo') === norm('cameron skattebo'), 'nickname aliased');
     console.log('selftest OK (no network)');
     return;
   }
@@ -581,12 +662,25 @@ async function draftAccuracy() {
     for (const b of out.draftAccuracy.byTeam)
       console.log(`  ${b.team}: ${b.actual} actual vs ${b.proj} projected = ${b.overProj} (${b.vsLeagueAvg > 0 ? '+' : ''}${b.vsLeagueAvg} vs league avg, ${b.picks} picks)`);
   }
+  if (has('--handcuff-teams') || has('--all')) {
+    console.log(`Joining NFL handcuff windows onto ${SEASON} rosters...`);
+    out.handcuffTeams = await handcuffTeams();
+    console.log(`  ${out.handcuffTeams.matchedWindows}/${out.handcuffTeams.windows} windows had the handcuff rostered by someone in this league`);
+    if (out.handcuffTeams.unmatched.length) console.log(`  never rostered here (or ESPN spells them differently): ${out.handcuffTeams.unmatched.join(', ')}`);
+    for (const b of out.handcuffTeams.byTeam)
+      console.log(`  ${b.team}: ${b.captured} handcuffs owned, started ${b.startedWeeks} wks / benched ${b.benchedWeeks} — ${b.ptsStarted} pts started, ${b.ptsBenched} left on the bench${b.startRate === null ? '' : ` (${b.startRate}% start rate)`}`);
+    for (const r of out.handcuffTeams.rows)
+      console.log(`    wk${r.from}-${r.to} ${r.starter} out → ${r.handcuff}: ${r.owners.map(o => `${o.team} (${o.started} st/${o.benched} bn)`).join(', ') || 'nobody'}${r.freeWeeks ? `, free on the wire ${r.freeWeeks} wk` : ''}`);
+  }
   if (!Object.keys(out).length) {
-    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --all | --selftest  [--season YYYY]');
+    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --all | --selftest  [--season YYYY]');
     return;
   }
 
   const outFile = path.join(__dirname, '..', `league-history-${SEASON}.json`);
-  fs.writeFileSync(outFile, JSON.stringify({ generated: new Date().toISOString(), ...out }, null, 1));
+  // MERGE, don't overwrite: running one study used to blow away the other seven,
+  // silently, leaving a file that looks complete because it is still valid JSON.
+  let prev = {}; try { prev = JSON.parse(fs.readFileSync(outFile, 'utf8')); } catch { }
+  fs.writeFileSync(outFile, JSON.stringify({ ...prev, generated: new Date().toISOString(), ...out }, null, 1));
   console.log(`Wrote ${outFile}`);
 })();

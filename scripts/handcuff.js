@@ -22,7 +22,7 @@
 //                boom-rates), not against a season cutoff.
 //
 // Usage: SEASON=2025 node scripts/handcuff.js [--selftest]
-const { weekly } = require('./boom-rates');
+const { weekly } = require('./boom-rates'); // require.main-guarded there, so this does not kick off a run
 
 const SEASON = +(process.env.SEASON || 2025);
 const STARTABLE_RB = 24;   // matches STARTABLE.RB in league-history.js
@@ -140,5 +140,10 @@ function selftest() {
   console.log('selftest: all assertions passed');
 }
 
-if (process.argv.includes('--selftest')) selftest();
-else main();
+// league-history.js imports handcuffs() + weekly() to join these windows onto rosters.
+module.exports = { handcuffs, weekly, WEEKS, STARTABLE_RB };
+
+if (require.main === module) {
+  if (process.argv.includes('--selftest')) selftest();
+  else main();
+}

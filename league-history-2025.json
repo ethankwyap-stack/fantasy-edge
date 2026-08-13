@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T17:03:59.960Z",
+ "generated": "2026-08-13T17:41:37.241Z",
  "benchValue": {
   "season": 2025,
   "starterAvg": 195,
@@ -16623,6 +16623,540 @@
     "projErr": 7,
     "marketErr": 8,
     "overProj": -70.6
+   }
+  ]
+ },
+ "handcuffTeams": {
+  "season": 2025,
+  "windows": 10,
+  "matchedWindows": 9,
+  "unmatched": [
+   "kenny gainwell"
+  ],
+  "note": "NFL windows clipped to fantasy weeks 1-14. \"captured\" = windows where you rostered the handcuff at least one week.",
+  "byTeam": [
+   {
+    "team": "Lamar-a-lago",
+    "captured": 3,
+    "startedWeeks": 6,
+    "benchedWeeks": 3,
+    "ptsStarted": 93.9,
+    "ptsBenched": 12.4,
+    "handcuffs": [
+     {
+      "handcuff": "treveyon henderson",
+      "for": "rhamondre stevenson",
+      "weeks": [
+       9,
+       11
+      ],
+      "started": 1,
+      "benched": 0
+     },
+     {
+      "handcuff": "tyrone tracy jr.",
+      "for": "cam skattebo",
+      "weeks": [
+       9,
+       14
+      ],
+      "started": 3,
+      "benched": 3
+     },
+     {
+      "handcuff": "devin neal",
+      "for": "alvin kamara",
+      "weeks": [
+       13,
+       14
+      ],
+      "started": 2,
+      "benched": 0
+     }
+    ],
+    "startRate": 66.7
+   },
+   {
+    "team": "Jalen Kirk",
+    "captured": 4,
+    "startedWeeks": 5,
+    "benchedWeeks": 5,
+    "ptsStarted": 81.7,
+    "ptsBenched": 45.5,
+    "handcuffs": [
+     {
+      "handcuff": "rj harvey",
+      "for": "j.k. dobbins",
+      "weeks": [
+       11,
+       14
+      ],
+      "started": 1,
+      "benched": 0
+     },
+     {
+      "handcuff": "kareem hunt",
+      "for": "isiah pacheco",
+      "weeks": [
+       9,
+       12
+      ],
+      "started": 2,
+      "benched": 2
+     },
+     {
+      "handcuff": "michael carter",
+      "for": "james conner",
+      "weeks": [
+       4,
+       14
+      ],
+      "started": 1,
+      "benched": 3
+     },
+     {
+      "handcuff": "rico dowdle",
+      "for": "chuba hubbard",
+      "weeks": [
+       5,
+       6
+      ],
+      "started": 1,
+      "benched": 0
+     }
+    ],
+    "startRate": 50
+   },
+   {
+    "team": "Damardiac Arrest",
+    "captured": 1,
+    "startedWeeks": 6,
+    "benchedWeeks": 2,
+    "ptsStarted": 75.8,
+    "ptsBenched": 5.2,
+    "handcuffs": [
+     {
+      "handcuff": "rachaad white",
+      "for": "bucky irving",
+      "weeks": [
+       5,
+       12
+      ],
+      "started": 6,
+      "benched": 2
+     }
+    ],
+    "startRate": 75
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "captured": 2,
+    "startedWeeks": 6,
+    "benchedWeeks": 0,
+    "ptsStarted": 56.3,
+    "ptsBenched": 0,
+    "handcuffs": [
+     {
+      "handcuff": "kimani vidal",
+      "for": "omarion hampton",
+      "weeks": [
+       6,
+       13
+      ],
+      "started": 5,
+      "benched": 0
+     },
+     {
+      "handcuff": "michael carter",
+      "for": "james conner",
+      "weeks": [
+       4,
+       14
+      ],
+      "started": 1,
+      "benched": 0
+     }
+    ],
+    "startRate": 100
+   },
+   {
+    "team": "Nico Suave",
+    "captured": 3,
+    "startedWeeks": 2,
+    "benchedWeeks": 3,
+    "ptsStarted": 55.1,
+    "ptsBenched": 22,
+    "handcuffs": [
+     {
+      "handcuff": "rj harvey",
+      "for": "j.k. dobbins",
+      "weeks": [
+       11,
+       14
+      ],
+      "started": 1,
+      "benched": 2
+     },
+     {
+      "handcuff": "michael carter",
+      "for": "james conner",
+      "weeks": [
+       4,
+       14
+      ],
+      "started": 0,
+      "benched": 1
+     },
+     {
+      "handcuff": "rico dowdle",
+      "for": "chuba hubbard",
+      "weeks": [
+       5,
+       6
+      ],
+      "started": 1,
+      "benched": 0
+     }
+    ],
+    "startRate": 40
+   },
+   {
+    "team": "Myer Lemon",
+    "captured": 1,
+    "startedWeeks": 2,
+    "benchedWeeks": 0,
+    "ptsStarted": 45,
+    "ptsBenched": 0,
+    "handcuffs": [
+     {
+      "handcuff": "treveyon henderson",
+      "for": "rhamondre stevenson",
+      "weeks": [
+       9,
+       11
+      ],
+      "started": 2,
+      "benched": 0
+     }
+    ],
+    "startRate": 100
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "captured": 1,
+    "startedWeeks": 0,
+    "benchedWeeks": 1,
+    "ptsStarted": 0,
+    "ptsBenched": 22.8,
+    "handcuffs": [
+     {
+      "handcuff": "kimani vidal",
+      "for": "omarion hampton",
+      "weeks": [
+       6,
+       13
+      ],
+      "started": 0,
+      "benched": 1
+     }
+    ],
+    "startRate": 0
+   },
+   {
+    "team": "EaTN McCokkey",
+    "captured": 1,
+    "startedWeeks": 0,
+    "benchedWeeks": 1,
+    "ptsStarted": 0,
+    "ptsBenched": 20.7,
+    "handcuffs": [
+     {
+      "handcuff": "kimani vidal",
+      "for": "omarion hampton",
+      "weeks": [
+       6,
+       13
+      ],
+      "started": 0,
+      "benched": 1
+     }
+    ],
+    "startRate": 0
+   },
+   {
+    "team": "Njigbas in Paris",
+    "captured": 0,
+    "startedWeeks": 0,
+    "benchedWeeks": 0,
+    "ptsStarted": 0,
+    "ptsBenched": 0,
+    "handcuffs": [],
+    "startRate": null
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "captured": 0,
+    "startedWeeks": 0,
+    "benchedWeeks": 0,
+    "ptsStarted": 0,
+    "ptsBenched": 0,
+    "handcuffs": [],
+    "startRate": null
+   },
+   {
+    "team": "Ashton of Ass",
+    "captured": 0,
+    "startedWeeks": 0,
+    "benchedWeeks": 0,
+    "ptsStarted": 0,
+    "ptsBenched": 0,
+    "handcuffs": [],
+    "startRate": null
+   },
+   {
+    "team": "Skat's Super CTE",
+    "captured": 0,
+    "startedWeeks": 0,
+    "benchedWeeks": 0,
+    "ptsStarted": 0,
+    "ptsBenched": 0,
+    "handcuffs": [],
+    "startRate": null
+   }
+  ],
+  "rows": [
+   {
+    "team": "DEN",
+    "starter": "j.k. dobbins",
+    "weeks": [
+     11,
+     17
+    ],
+    "out": 7,
+    "handcuff": "rj harvey",
+    "startableWeeks": 4,
+    "hit": true,
+    "from": 11,
+    "to": 14,
+    "owners": [
+     {
+      "team": "Nico Suave",
+      "started": 1,
+      "benched": 2
+     },
+     {
+      "team": "Jalen Kirk",
+      "started": 1,
+      "benched": 0
+     }
+    ],
+    "freeWeeks": 0
+   },
+   {
+    "team": "LAC",
+    "starter": "omarion hampton",
+    "weeks": [
+     6,
+     13
+    ],
+    "out": 8,
+    "handcuff": "kimani vidal",
+    "startableWeeks": 4,
+    "hit": true,
+    "from": 6,
+    "to": 13,
+    "owners": [
+     {
+      "team": "Bucky Irving 🤤",
+      "started": 0,
+      "benched": 1
+     },
+     {
+      "team": "Dart that Dihker in KaiME",
+      "started": 5,
+      "benched": 0
+     },
+     {
+      "team": "EaTN McCokkey",
+      "started": 0,
+      "benched": 1
+     }
+    ],
+    "freeWeeks": 1
+   },
+   {
+    "team": "KC",
+    "starter": "isiah pacheco",
+    "weeks": [
+     9,
+     12
+    ],
+    "out": 4,
+    "handcuff": "kareem hunt",
+    "startableWeeks": 3,
+    "hit": true,
+    "from": 9,
+    "to": 12,
+    "owners": [
+     {
+      "team": "Jalen Kirk",
+      "started": 2,
+      "benched": 2
+     }
+    ],
+    "freeWeeks": 0
+   },
+   {
+    "team": "NE",
+    "starter": "rhamondre stevenson",
+    "weeks": [
+     9,
+     11
+    ],
+    "out": 3,
+    "handcuff": "treveyon henderson",
+    "startableWeeks": 3,
+    "hit": true,
+    "from": 9,
+    "to": 11,
+    "owners": [
+     {
+      "team": "Myer Lemon",
+      "started": 2,
+      "benched": 0
+     },
+     {
+      "team": "Lamar-a-lago",
+      "started": 1,
+      "benched": 0
+     }
+    ],
+    "freeWeeks": 0
+   },
+   {
+    "team": "NYG",
+    "starter": "cam skattebo",
+    "weeks": [
+     9,
+     17
+    ],
+    "out": 9,
+    "handcuff": "tyrone tracy jr.",
+    "startableWeeks": 3,
+    "hit": false,
+    "from": 9,
+    "to": 14,
+    "owners": [
+     {
+      "team": "Lamar-a-lago",
+      "started": 3,
+      "benched": 3
+     }
+    ],
+    "freeWeeks": 0
+   },
+   {
+    "team": "ARI",
+    "starter": "james conner",
+    "weeks": [
+     4,
+     17
+    ],
+    "out": 14,
+    "handcuff": "michael carter",
+    "startableWeeks": 2,
+    "hit": false,
+    "from": 4,
+    "to": 14,
+    "owners": [
+     {
+      "team": "Nico Suave",
+      "started": 0,
+      "benched": 1
+     },
+     {
+      "team": "Dart that Dihker in KaiME",
+      "started": 1,
+      "benched": 0
+     },
+     {
+      "team": "Jalen Kirk",
+      "started": 1,
+      "benched": 3
+     }
+    ],
+    "freeWeeks": 5
+   },
+   {
+    "team": "CAR",
+    "starter": "chuba hubbard",
+    "weeks": [
+     5,
+     6
+    ],
+    "out": 2,
+    "handcuff": "rico dowdle",
+    "startableWeeks": 2,
+    "hit": true,
+    "from": 5,
+    "to": 6,
+    "owners": [
+     {
+      "team": "Nico Suave",
+      "started": 1,
+      "benched": 0
+     },
+     {
+      "team": "Jalen Kirk",
+      "started": 1,
+      "benched": 0
+     }
+    ],
+    "freeWeeks": 0
+   },
+   {
+    "team": "TB",
+    "starter": "bucky irving",
+    "weeks": [
+     5,
+     12
+    ],
+    "out": 8,
+    "handcuff": "rachaad white",
+    "startableWeeks": 2,
+    "hit": false,
+    "from": 5,
+    "to": 12,
+    "owners": [
+     {
+      "team": "Damardiac Arrest",
+      "started": 6,
+      "benched": 2
+     }
+    ],
+    "freeWeeks": 0
+   },
+   {
+    "team": "NO",
+    "starter": "alvin kamara",
+    "weeks": [
+     13,
+     17
+    ],
+    "out": 5,
+    "handcuff": "devin neal",
+    "startableWeeks": 1,
+    "hit": false,
+    "from": 13,
+    "to": 14,
+    "owners": [
+     {
+      "team": "Lamar-a-lago",
+      "started": 2,
+      "benched": 0
+     }
+    ],
+    "freeWeeks": 0
    }
   ]
  }
