@@ -49,6 +49,13 @@ async function fetchTeams() {
 
 // Any-player-by-id lookup, independent of current roster — needed for players
 // dropped/traded away mid-season who wouldn't appear in a "current roster" query.
+// TRAP: `statSplitTypeId` is a THIRD discriminator alongside seasonId/statSourceId/
+// scoringPeriodId. A player has TWO preseason-projection entries that match on all
+// three of those: statSplitTypeId 0 = season TOTAL (Ja'Marr Chase 340.0), 2 = PER GAME
+// (17.8). Grabbing the wrong one is a silent ~20x error. Always pin statSplitTypeId 0.
+const seasonStat = (p, src) => (p?.stats || [])
+  .find(s => s.seasonId === SEASON && s.scoringPeriodId === 0 && s.statSourceId === src && s.statSplitTypeId === 0);
+
 async function fetchPlayerTotals(ids) {
   const totals = {};
   for (let i = 0; i < ids.length; i += 200) {
@@ -56,8 +63,11 @@ async function fetchPlayerTotals(ids) {
     const d = await espn('kona_player_info', { filter });
     for (const pr of d.players || []) {
       const p = pr.player;
-      const s = (p.stats || []).find(s => s.seasonId === SEASON && s.scoringPeriodId === 0 && s.statSourceId === 0);
-      totals[p.id] = { name: p.fullName, pos: POS[p.defaultPositionId] || p.defaultPositionId, pts: s ? s.appliedTotal : 0 };
+      totals[p.id] = {
+        name: p.fullName, pos: POS[p.defaultPositionId] || p.defaultPositionId,
+        pts: seasonStat(p, 0)?.appliedTotal ?? 0,
+        proj: seasonStat(p, 1)?.appliedTotal ?? null, // null = ESPN never projected him (undrafted rookie etc.) — no vote, not a zero
+      };
     }
   }
   return totals;
@@ -323,6 +333,175 @@ async function faabROI() {
   };
 }
 
+// ── Study 6: trade accuracy ───────────────────────────────────────────────
+// Three traps stacked here, all silent:
+//  1. A TRADE_ACCEPT carries an EMPTY `items` array. The players actually swapped live
+//     on the TRADE_PROPOSAL it points at via relatedTransactionId (which stays
+//     status:PENDING even once accepted — the ACCEPT is the executed record).
+//  2. EVERY executed trade files TWO TRADE_ACCEPTs, one per participating team, each
+//     pointing at a DIFFERENT proposal id carrying the SAME players. Counting accepts
+//     double-counts every trade. Dedup on the player-set signature, not the id.
+//  3. ESPN only returns proposal CONTENTS to a participant. With Ethan's cookie
+//     (team 1) 28 of 28 resolvable proposals involve team 1, and widening the week
+//     range 0-18 resolves zero others. So league-wide net-points is NOT obtainable;
+//     trade VOLUME is (accepts are returned league-wide). Both are reported, scoped.
+//  Proposals also carry `type:'DROP'` items (roster-space side effects) — only
+//  `type:'TRADE'` items are the actual consideration.
+async function tradeAccuracy() {
+  const teams = await fetchTeams();
+  const reg = (await espn('mSettings')).settings.scheduleSettings.matchupPeriodCount;
+  const weeks = Array.from({ length: reg }, (_, i) => i + 1);
+  const rosters = await weeklyRosters(weeks);
+
+  const filter = { transactions: { filterType: { value: ['TRADE_ACCEPT', 'TRADE_PROPOSAL'] } } };
+  const proposals = {}, accepts = [];
+  // transactions are scanned past the regular season (offer/accept can land in wk 0 or
+  // the playoff weeks) even though points only ever accrue in weeks 1..reg
+  for (let wk = 0; wk <= reg + 4; wk++) {
+    for (const t of (await espn('mTransactions2', { sp: wk, filter })).transactions || []) {
+      if (t.type === 'TRADE_PROPOSAL') proposals[t.id] = t;
+      else if (t.type === 'TRADE_ACCEPT') accepts.push(t);
+    }
+  }
+
+  // What a player was worth to a team from the trade week onward: points scored in
+  // the weeks he was actually on that team's roster. Rostered and started split out,
+  // same shape as the waiver study — a trade you win on paper but bench is not a win.
+  const earned = (playerId, teamId, fromWk) => {
+    let pts = 0, started = 0, name = `id${playerId}`, pos = '?';
+    for (const wk of weeks) {
+      if (wk < fromWk) continue;
+      const p = (rosters[wk]?.[teamId] || []).find(p => p.id === playerId);
+      if (!p) continue;
+      name = p.name; pos = p.pos; pts += p.pts;
+      if (p.slot !== 20 && p.slot !== 21) started += p.pts;
+    }
+    return { name, pos, pts: +pts.toFixed(1), started: +started.toFixed(1) };
+  };
+
+  // volume is league-wide and complete: one accept per participant, so a team's accept
+  // count IS its trade count, and the league total is half the accepts.
+  const volume = {};
+  for (const [id, name] of Object.entries(teams)) volume[id] = { teamId: +id, team: name, trades: 0 };
+  for (const a of accepts) if (volume[a.teamId]) volume[a.teamId].trades++;
+
+  const trades = [], seenSig = new Set();
+  for (const a of accepts) {
+    const items = (proposals[a.relatedTransactionId]?.items || []).filter(i => i.type === 'TRADE' && i.playerId > 0);
+    if (!items.length) continue;
+    // dedup: the counterparty's accept describes the identical swap under a different id
+    const sig = items.map(i => `${i.playerId}:${i.fromTeamId}>${i.toTeamId}`).sort().join(',');
+    if (seenSig.has(sig)) continue;
+    seenSig.add(sig);
+    const wk = Math.min(Math.max(a.scoringPeriodId, 1), reg); // points only accrue in the regular season
+    const sides = {};
+    for (const it of items) {
+      for (const id of [it.fromTeamId, it.toTeamId]) if (id > 0) sides[id] ||= { teamId: id, team: teams[id], got: [], gave: [] };
+      // the player's value accrues to whoever RECEIVED him; the sender's loss is that same figure
+      const v = earned(it.playerId, it.toTeamId, wk);
+      sides[it.toTeamId]?.got.push(v);
+      sides[it.fromTeamId]?.gave.push(v);
+    }
+    for (const s of Object.values(sides)) {
+      s.gotPts = +s.got.reduce((a, p) => a + p.pts, 0).toFixed(1);
+      s.gavePts = +s.gave.reduce((a, p) => a + p.pts, 0).toFixed(1);
+      s.netPts = +(s.gotPts - s.gavePts).toFixed(1);
+      s.gotStarted = +s.got.reduce((a, p) => a + p.started, 0).toFixed(1);
+      s.gaveStarted = +s.gave.reduce((a, p) => a + p.started, 0).toFixed(1);
+      s.netStarted = +(s.gotStarted - s.gaveStarted).toFixed(1);
+    }
+    trades.push({ id: a.id, week: wk, sides: Object.values(sides) });
+  }
+
+  const byTeam = {};
+  for (const t of trades) for (const s of t.sides) {
+    const b = byTeam[s.teamId] ||= { teamId: s.teamId, team: s.team, trades: 0, won: 0, netPts: 0, netStarted: 0 };
+    b.trades++; b.netPts += s.netPts; b.netStarted += s.netStarted;
+    if (s.netPts > 0) b.won++;
+  }
+  for (const b of Object.values(byTeam)) {
+    b.netPts = +b.netPts.toFixed(1); b.netStarted = +b.netStarted.toFixed(1);
+    b.winRate = +(100 * b.won / b.trades).toFixed(1);
+  }
+  return {
+    season: SEASON,
+    leagueTrades: Math.round(accepts.length / 2), // 2 accepts per executed trade
+    visibleTrades: trades.length,
+    scopeNote: 'ESPN returns trade CONTENTS only to a participant. Net-points rows below cover only trades involving the cookie owner (team 1); `volume` is league-wide and complete.',
+    volume: Object.values(volume).sort((a, b) => b.trades - a.trades),
+    byTeam: Object.values(byTeam).sort((a, b) => b.netPts - a.netPts),
+    trades: trades.sort((a, b) => a.week - b.week),
+  };
+}
+
+// ── Study 7: draft / projection accuracy ──────────────────────────────────
+// Two predictors of a player's 2025 finish, both of which have real 2025 data:
+//   ESPN  — its own preseason season-total projection
+//   MARKET— what this league's 12 managers actually paid (draft slot)
+// Scored against actual finish as mean absolute POSITIONAL rank error. Lower wins.
+// (The site's blended consensus() can't be backtested here: every draft-guide*.json
+// in the repo is 2026-only, first committed Aug 2026. See handoff.)
+async function draftAccuracy() {
+  const teams = await fetchTeams();
+  const picks = (await espn('mDraftDetail')).draftDetail.picks.filter(p => p.playerId > 0);
+  const totals = await fetchPlayerTotals(picks.map(p => p.playerId));
+
+  const rows = picks.map(p => {
+    const t = totals[p.playerId] || { name: `id${p.playerId}`, pos: '?', pts: 0, proj: null };
+    return { overall: p.overallPickNumber, round: p.roundId, teamId: p.teamId, team: teams[p.teamId], ...t };
+  }).filter(r => STARTABLE[r.pos] && r.proj != null); // QB/RB/WR/TE, and only players ESPN actually projected
+
+  for (const pos of Object.keys(STARTABLE)) {
+    const ps = rows.filter(r => r.pos === pos);
+    [...ps].sort((a, b) => b.proj - a.proj).forEach((p, i) => p.projRank = i + 1);
+    [...ps].sort((a, b) => a.overall - b.overall).forEach((p, i) => p.marketRank = i + 1);
+    [...ps].sort((a, b) => b.pts - a.pts).forEach((p, i) => p.actualRank = i + 1);
+  }
+  for (const r of rows) {
+    r.projErr = Math.abs(r.projRank - r.actualRank);
+    r.marketErr = Math.abs(r.marketRank - r.actualRank);
+    r.overProj = +(r.pts - r.proj).toFixed(1); // points above/below what ESPN said
+  }
+
+  const mean = (arr, k) => arr.length ? +(arr.reduce((a, r) => a + r[k], 0) / arr.length).toFixed(2) : null;
+  const byPos = {};
+  for (const pos of Object.keys(STARTABLE)) {
+    const ps = rows.filter(r => r.pos === pos);
+    byPos[pos] = {
+      n: ps.length, espnRankErr: mean(ps, 'projErr'), marketRankErr: mean(ps, 'marketErr'),
+      winner: mean(ps, 'projErr') < mean(ps, 'marketErr') ? 'ESPN' : 'MARKET',
+      espnMeanMiss: mean(ps, 'overProj'), // + = ESPN under-projected the position as a whole
+    };
+  }
+
+  const byTeam = {};
+  for (const r of rows) {
+    const b = byTeam[r.teamId] ||= { teamId: r.teamId, team: r.team, picks: 0, actual: 0, proj: 0, errSum: 0 };
+    b.picks++; b.actual += r.pts; b.proj += r.proj; b.errSum += r.marketErr;
+  }
+  for (const b of Object.values(byTeam)) {
+    b.actual = +b.actual.toFixed(1); b.proj = +b.proj.toFixed(1);
+    b.overProj = +(b.actual - b.proj).toFixed(1);
+    b.avgRankErr = +(b.errSum / b.picks).toFixed(2); delete b.errSum;
+  }
+  // EVERY team lands below projection — ESPN projects full healthy 17-game seasons, so
+  // the raw delta is dominated by a league-wide optimism bias, not by draft skill.
+  // Centering on the league mean is what turns it into a comparable skill metric.
+  const teamRows = Object.values(byTeam);
+  const leagueAvgOverProj = +(teamRows.reduce((a, b) => a + b.overProj, 0) / teamRows.length).toFixed(1);
+  for (const b of teamRows) b.vsLeagueAvg = +(b.overProj - leagueAvgOverProj).toFixed(1);
+
+  return {
+    season: SEASON, leagueAvgOverProj,
+    overall: { n: rows.length, espnRankErr: mean(rows, 'projErr'), marketRankErr: mean(rows, 'marketErr') },
+    byPos,
+    byTeam: teamRows.sort((a, b) => b.overProj - a.overProj),
+    biggestBusts: [...rows].sort((a, b) => a.overProj - b.overProj).slice(0, 15),
+    biggestHits: [...rows].sort((a, b) => b.overProj - a.overProj).slice(0, 15),
+    rows,
+  };
+}
+
 (async () => {
   if (has('--selftest')) {
     console.assert(STARTABLE.RB === 24 && STARTABLE.WR === 24, 'startable cutoffs');
@@ -337,6 +516,14 @@ async function faabROI() {
     console.assert(bl.total === 40, `eligibility respected, got ${bl.total}`);
     // BENCH/IR slots must never be filled as "startable"
     console.assert(bl.picked.length === 2, 'bench slots excluded from optimal');
+    // seasonStat must pin statSplitTypeId 0 — the per-game (2) entry matches on every
+    // other filter and is ~20x smaller. Picking it would silently gut every projection.
+    const fake = { stats: [
+      { seasonId: SEASON, scoringPeriodId: 0, statSourceId: 1, statSplitTypeId: 2, appliedTotal: 17.8 },
+      { seasonId: SEASON, scoringPeriodId: 0, statSourceId: 1, statSplitTypeId: 0, appliedTotal: 340.0 },
+      { seasonId: SEASON - 1, scoringPeriodId: 0, statSourceId: 1, statSplitTypeId: 0, appliedTotal: 999 },
+    ] };
+    console.assert(seasonStat(fake, 1).appliedTotal === 340.0, `season-total projection, got ${seasonStat(fake, 1)?.appliedTotal}`);
     console.log('selftest OK (no network)');
     return;
   }
@@ -373,8 +560,29 @@ async function faabROI() {
     console.log(`  ${t.adds} pickups league-wide, ${t.pts} pts rostered${out.faabROI.faab ? `, $${t.spent} spent, ${t.ptsPerDollarOnPaid} pts/$` : ''}`);
     for (const b of out.faabROI.byTeam) console.log(`  ${b.team}: ${b.adds} pickups → ${b.pts} pts rostered, ${b.startedPts} actually started${out.faabROI.faab ? ` ($${b.spent}, ${b.ptsPerDollar} pts/$)` : ''}`);
   }
+  if (has('--trade-accuracy') || has('--all')) {
+    console.log(`Fetching trade accuracy for ${SEASON}...`);
+    out.tradeAccuracy = await tradeAccuracy();
+    console.log(`  ${out.tradeAccuracy.leagueTrades} executed trades league-wide; ${out.tradeAccuracy.visibleTrades} have visible contents (participant-only)`);
+    console.log('  -- trade VOLUME (league-wide, complete) --');
+    for (const v of out.tradeAccuracy.volume) console.log(`  ${v.team}: ${v.trades} trades`);
+    console.log('  -- net points (only trades involving team 1) --');
+    for (const b of out.tradeAccuracy.byTeam)
+      console.log(`  ${b.team}: ${b.trades} trades, net ${b.netPts > 0 ? '+' : ''}${b.netPts} pts rostered / ${b.netStarted > 0 ? '+' : ''}${b.netStarted} started${b.trades ? ` (${b.won}/${b.trades} won)` : ''}`);
+  }
+  if (has('--draft-accuracy') || has('--all')) {
+    console.log(`Fetching draft/projection accuracy for ${SEASON}...`);
+    out.draftAccuracy = await draftAccuracy();
+    const o = out.draftAccuracy.overall;
+    console.log(`  mean positional rank error over ${o.n} picks — ESPN ${o.espnRankErr} vs market ${o.marketRankErr} → ${o.espnRankErr < o.marketRankErr ? 'ESPN' : 'THE ROOM'} was the better predictor`);
+    for (const [pos, s] of Object.entries(out.draftAccuracy.byPos))
+      console.log(`    ${pos} (n=${s.n}): ESPN ${s.espnRankErr}, market ${s.marketRankErr} → ${s.winner}`);
+    console.log(`  every team lands under projection (league avg ${out.draftAccuracy.leagueAvgOverProj}) — ESPN projects healthy 17-game seasons, so rank on the centered column:`);
+    for (const b of out.draftAccuracy.byTeam)
+      console.log(`  ${b.team}: ${b.actual} actual vs ${b.proj} projected = ${b.overProj} (${b.vsLeagueAvg > 0 ? '+' : ''}${b.vsLeagueAvg} vs league avg, ${b.picks} picks)`);
+  }
   if (!Object.keys(out).length) {
-    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --all | --selftest  [--season YYYY]');
+    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --all | --selftest  [--season YYYY]');
     return;
   }
 
