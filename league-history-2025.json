@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T05:32:08.943Z",
+ "generated": "2026-08-13T16:06:47.530Z",
  "benchValue": {
   "season": 2025,
   "starterAvg": 195,
@@ -3701,6 +3701,8170 @@
     "pts": 186.66,
     "draftPosRank": 24,
     "finishPosRank": 16
+   }
+  ]
+ },
+ "benchAudit": {
+  "season": 2025,
+  "byTeam": {
+   "1": {
+    "team": "Bucky Irving 🤤",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 71.2,
+      "optimal": 105.9,
+      "left": 34.7,
+      "topBench": [
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "pts": 18.1
+       },
+       {
+        "name": "Jacory Croskey-Merritt",
+        "pos": "RB",
+        "pts": 14.2
+       },
+       {
+        "name": "Tyler Loop",
+        "pos": "K",
+        "pts": 13
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 121.1,
+      "optimal": 142.5,
+      "left": 21.4,
+      "topBench": [
+       {
+        "name": "Jauan Jennings",
+        "pos": "WR",
+        "pts": 19.9
+       },
+       {
+        "name": "George Pickens",
+        "pos": "WR",
+        "pts": 17.8
+       },
+       {
+        "name": "Tetairoa McMillan",
+        "pos": "WR",
+        "pts": 16
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 101.2,
+      "optimal": 121.9,
+      "left": 20.7,
+      "topBench": [
+       {
+        "name": "George Pickens",
+        "pos": "WR",
+        "pts": 17.8
+       },
+       {
+        "name": "Elic Ayomanor",
+        "pos": "WR",
+        "pts": 13.8
+       },
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "pts": 12.2
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 148.5,
+      "optimal": 186.3,
+      "left": 37.8,
+      "topBench": [
+       {
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "pts": 30.96
+       },
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "pts": 23.6
+       },
+       {
+        "name": "Jaxson Dart",
+        "pos": "QB",
+        "pts": 19.84
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 113.5,
+      "optimal": 117.2,
+      "left": 3.7,
+      "topBench": [
+       {
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "pts": 28.28
+       },
+       {
+        "name": "Troy Franklin",
+        "pos": "WR",
+        "pts": 8.5
+       },
+       {
+        "name": "Darius Slayton",
+        "pos": "WR",
+        "pts": 4.1
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 130.7,
+      "optimal": 146,
+      "left": 15.3,
+      "topBench": [
+       {
+        "name": "Kimani Vidal",
+        "pos": "RB",
+        "pts": 22.8
+       },
+       {
+        "name": "Elic Ayomanor",
+        "pos": "WR",
+        "pts": 5.7
+       },
+       {
+        "name": "Justin Fields",
+        "pos": "QB",
+        "pts": 4.9
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 163.8,
+      "optimal": 175,
+      "left": 11.2,
+      "topBench": [
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "pts": 19.5
+       },
+       {
+        "name": "Isiah Pacheco",
+        "pos": "RB",
+        "pts": 12.4
+       },
+       {
+        "name": "Jauan Jennings",
+        "pos": "WR",
+        "pts": 7.1
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 92.6,
+      "optimal": 92.6,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Darius Slayton",
+        "pos": "WR",
+        "pts": 4.6
+       },
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "pts": 0
+       },
+       {
+        "name": "Jahmyr Gibbs",
+        "pos": "RB",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 118.8,
+      "optimal": 126.4,
+      "left": 7.6,
+      "topBench": [
+       {
+        "name": "J.J. McCarthy",
+        "pos": "QB",
+        "pts": 18.92
+       },
+       {
+        "name": "Theo Johnson",
+        "pos": "TE",
+        "pts": 11.7
+       },
+       {
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "pts": 6.8
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 146.3,
+      "optimal": 146.3,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "pts": 7.1
+       },
+       {
+        "name": "Justin Fields",
+        "pos": "QB",
+        "pts": 6.96
+       },
+       {
+        "name": "Luke Musgrave",
+        "pos": "TE",
+        "pts": 5.3
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 140.2,
+      "optimal": 173.7,
+      "left": 33.5,
+      "topBench": [
+       {
+        "name": "Michael Wilson",
+        "pos": "WR",
+        "pts": 33.5
+       },
+       {
+        "name": "Emanuel Wilson",
+        "pos": "RB",
+        "pts": 13.9
+       },
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "pts": 11.4
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 91.6,
+      "optimal": 104.3,
+      "left": 12.7,
+      "topBench": [
+       {
+        "name": "Jayden Higgins",
+        "pos": "WR",
+        "pts": 13.8
+       },
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "pts": 9.5
+       },
+       {
+        "name": "Brock Wright",
+        "pos": "TE",
+        "pts": 5.9
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 95,
+      "optimal": 104.7,
+      "left": 9.7,
+      "topBench": [
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "pts": 11.2
+       },
+       {
+        "name": "Deebo Samuel",
+        "pos": "WR",
+        "pts": 11.1
+       },
+       {
+        "name": "Chris Rodriguez Jr.",
+        "pos": "RB",
+        "pts": 10.1
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 122.4,
+      "optimal": 136.5,
+      "left": 14.1,
+      "topBench": [
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 12.62
+       },
+       {
+        "name": "Jaguars D/ST",
+        "pos": "D/ST",
+        "pts": 11
+       },
+       {
+        "name": "Luther Burden III",
+        "pos": "WR",
+        "pts": 11
+       }
+      ]
+     }
+    ],
+    "totalActual": 1656.9,
+    "totalOptimal": 1879.3,
+    "totalLeft": 222.4,
+    "avgLeftPerWeek": 15.9
+   },
+   "2": {
+    "team": "Nico Suave",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 130,
+      "optimal": 142.1,
+      "left": 12.1,
+      "topBench": [
+       {
+        "name": "Jaylen Warren",
+        "pos": "RB",
+        "pts": 13.9
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "pts": 10.6
+       },
+       {
+        "name": "DeMario Douglas",
+        "pos": "WR",
+        "pts": 8.2
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 116.1,
+      "optimal": 141,
+      "left": 24.9,
+      "topBench": [
+       {
+        "name": "Tucker Kraft",
+        "pos": "TE",
+        "pts": 24.4
+       },
+       {
+        "name": "Texans D/ST",
+        "pos": "D/ST",
+        "pts": 5
+       },
+       {
+        "name": "Darnell Mooney",
+        "pos": "WR",
+        "pts": 4
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 103.6,
+      "optimal": 137.1,
+      "left": 33.5,
+      "topBench": [
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "pts": 29
+       },
+       {
+        "name": "Rashod Bateman",
+        "pos": "WR",
+        "pts": 17.3
+       },
+       {
+        "name": "Darnell Mooney",
+        "pos": "WR",
+        "pts": 8.4
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 97,
+      "optimal": 120.3,
+      "left": 23.3,
+      "topBench": [
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "pts": 15.4
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "pts": 11.9
+       },
+       {
+        "name": "Falcons D/ST",
+        "pos": "D/ST",
+        "pts": 6
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 98.5,
+      "optimal": 104.5,
+      "left": 6,
+      "topBench": [
+       {
+        "name": "Texans D/ST",
+        "pos": "D/ST",
+        "pts": 12
+       },
+       {
+        "name": "Taysom Hill",
+        "pos": "TE",
+        "pts": 0.66
+       },
+       {
+        "name": "Jaylen Warren",
+        "pos": "RB",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 144.3,
+      "optimal": 144.3,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 6.8
+       },
+       {
+        "name": "Tua Tagovailoa",
+        "pos": "QB",
+        "pts": 6.6
+       },
+       {
+        "name": "Taysom Hill",
+        "pos": "TE",
+        "pts": 6.1
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 145.5,
+      "optimal": 145.5,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Wan'Dale Robinson",
+        "pos": "WR",
+        "pts": 15.5
+       },
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 8
+       },
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "pts": 8
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 114.2,
+      "optimal": 126.6,
+      "left": 12.4,
+      "topBench": [
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "pts": 13.6
+       },
+       {
+        "name": "Kenneth Gainwell",
+        "pos": "RB",
+        "pts": 3.5
+       },
+       {
+        "name": "Rams D/ST",
+        "pos": "D/ST",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 145.1,
+      "optimal": 158.6,
+      "left": 13.5,
+      "topBench": [
+       {
+        "name": "Dalton Kincaid",
+        "pos": "TE",
+        "pts": 22.1
+       },
+       {
+        "name": "Kenneth Gainwell",
+        "pos": "RB",
+        "pts": 7.4
+       },
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "pts": 7.1
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 83.3,
+      "optimal": 94.5,
+      "left": 11.2,
+      "topBench": [
+       {
+        "name": "Theo Johnson",
+        "pos": "TE",
+        "pts": 14.5
+       },
+       {
+        "name": "David Njoku",
+        "pos": "TE",
+        "pts": 10.1
+       },
+       {
+        "name": "Rams D/ST",
+        "pos": "D/ST",
+        "pts": 5
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 104.1,
+      "optimal": 129.7,
+      "left": 25.6,
+      "topBench": [
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "pts": 19.3
+       },
+       {
+        "name": "Greg Dortch",
+        "pos": "WR",
+        "pts": 18.6
+       },
+       {
+        "name": "Jayden Higgins",
+        "pos": "WR",
+        "pts": 9.5
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 124.2,
+      "optimal": 131,
+      "left": 6.8,
+      "topBench": [
+       {
+        "name": "Rams D/ST",
+        "pos": "D/ST",
+        "pts": 20
+       },
+       {
+        "name": "Tez Johnson",
+        "pos": "WR",
+        "pts": 12.3
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "pts": 8.1
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 125.9,
+      "optimal": 127.9,
+      "left": 2,
+      "topBench": [
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "pts": 17.12
+       },
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "pts": 7
+       },
+       {
+        "name": "Michael Wilson",
+        "pos": "WR",
+        "pts": 6.6
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 132.5,
+      "optimal": 167.4,
+      "left": 34.9,
+      "topBench": [
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "pts": 28.1
+       },
+       {
+        "name": "RJ Harvey",
+        "pos": "RB",
+        "pts": 22
+       },
+       {
+        "name": "Rams D/ST",
+        "pos": "D/ST",
+        "pts": 6
+       }
+      ]
+     }
+    ],
+    "totalActual": 1664.3,
+    "totalOptimal": 1870.5,
+    "totalLeft": 206.2,
+    "avgLeftPerWeek": 14.7
+   },
+   "3": {
+    "team": "Dart that Dihker in KaiME",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 101.5,
+      "optimal": 130,
+      "left": 28.5,
+      "topBench": [
+       {
+        "name": "Justin Fields",
+        "pos": "QB",
+        "pts": 29.52
+       },
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "pts": 20
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "pts": 11.4
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 87.4,
+      "optimal": 95,
+      "left": 7.6,
+      "topBench": [
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 11.8
+       },
+       {
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "pts": 10.42
+       },
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "pts": 8
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 97,
+      "optimal": 114.5,
+      "left": 17.5,
+      "topBench": [
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "pts": 19.3
+       },
+       {
+        "name": "Kareem Hunt",
+        "pos": "RB",
+        "pts": 11.4
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "pts": 10.3
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 92.5,
+      "optimal": 134.9,
+      "left": 42.4,
+      "topBench": [
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 29.8
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "pts": 19.7
+       },
+       {
+        "name": "Isiah Pacheco",
+        "pos": "RB",
+        "pts": 12.8
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 125.7,
+      "optimal": 129.3,
+      "left": 3.6,
+      "topBench": [
+       {
+        "name": "Jaxson Dart",
+        "pos": "QB",
+        "pts": 15.58
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "pts": 10.9
+       },
+       {
+        "name": "Isiah Pacheco",
+        "pos": "RB",
+        "pts": 8.6
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 106.7,
+      "optimal": 129.7,
+      "left": 23,
+      "topBench": [
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "pts": 26
+       },
+       {
+        "name": "Jaxson Dart",
+        "pos": "QB",
+        "pts": 23.6
+       },
+       {
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "pts": 12
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 69.9,
+      "optimal": 97.3,
+      "left": 27.4,
+      "topBench": [
+       {
+        "name": "Jaxson Dart",
+        "pos": "QB",
+        "pts": 28.42
+       },
+       {
+        "name": "Kayshon Boutte",
+        "pos": "WR",
+        "pts": 13.5
+       },
+       {
+        "name": "T.J. Hockenson",
+        "pos": "TE",
+        "pts": 10.3
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 175.6,
+      "optimal": 175.6,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Kayshon Boutte",
+        "pos": "WR",
+        "pts": 16.5
+       },
+       {
+        "name": "DJ Moore",
+        "pos": "WR",
+        "pts": 11.6
+       },
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 9.4
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 103.8,
+      "optimal": 117.3,
+      "left": 13.5,
+      "topBench": [
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 16.1
+       },
+       {
+        "name": "Jayden Daniels",
+        "pos": "QB",
+        "pts": 15.22
+       },
+       {
+        "name": "Troy Franklin",
+        "pos": "WR",
+        "pts": 8.3
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 114.1,
+      "optimal": 144,
+      "left": 29.9,
+      "topBench": [
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 19.8
+       },
+       {
+        "name": "Jauan Jennings",
+        "pos": "WR",
+        "pts": 17.1
+       },
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "pts": 6.5
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 59.4,
+      "optimal": 63.4,
+      "left": 4,
+      "topBench": [
+       {
+        "name": "Troy Franklin",
+        "pos": "WR",
+        "pts": 12.4
+       },
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 9.3
+       },
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 5.1
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 108.8,
+      "optimal": 114.6,
+      "left": 5.8,
+      "topBench": [
+       {
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "pts": 5.8
+       },
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 4.3
+       },
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 2.9
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 87,
+      "optimal": 97.3,
+      "left": 10.3,
+      "topBench": [
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "pts": 12
+       },
+       {
+        "name": "Ka'imi Fairbairn",
+        "pos": "K",
+        "pts": 9
+       },
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "pts": 8.6
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 108.5,
+      "optimal": 131.2,
+      "left": 22.7,
+      "topBench": [
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 16.6
+       },
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "pts": 10.2
+       },
+       {
+        "name": "Ka'imi Fairbairn",
+        "pos": "K",
+        "pts": 8
+       }
+      ]
+     }
+    ],
+    "totalActual": 1437.9,
+    "totalOptimal": 1674.1,
+    "totalLeft": 236.2,
+    "avgLeftPerWeek": 16.9
+   },
+   "4": {
+    "team": "Jalen Kirk",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 116.7,
+      "optimal": 131.5,
+      "left": 14.8,
+      "topBench": [
+       {
+        "name": "Justin Herbert",
+        "pos": "QB",
+        "pts": 27.92
+       },
+       {
+        "name": "Hollywood Brown",
+        "pos": "WR",
+        "pts": 19.9
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "pts": 8.5
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 84.9,
+      "optimal": 98.3,
+      "left": 13.4,
+      "topBench": [
+       {
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "pts": 22.84
+       },
+       {
+        "name": "Hollywood Brown",
+        "pos": "WR",
+        "pts": 8
+       },
+       {
+        "name": "Travis Hunter",
+        "pos": "WR",
+        "pts": 5.2
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 132.6,
+      "optimal": 168.7,
+      "left": 36.1,
+      "topBench": [
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "pts": 27.1
+       },
+       {
+        "name": "Omarion Hampton",
+        "pos": "RB",
+        "pts": 24.9
+       },
+       {
+        "name": "Hollywood Brown",
+        "pos": "WR",
+        "pts": 8.2
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 178,
+      "optimal": 181.8,
+      "left": 3.8,
+      "topBench": [
+       {
+        "name": "RJ Harvey",
+        "pos": "RB",
+        "pts": 19.8
+       },
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 9.2
+       },
+       {
+        "name": "Travis Hunter",
+        "pos": "WR",
+        "pts": 7.2
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 135.7,
+      "optimal": 163.9,
+      "left": 28.2,
+      "topBench": [
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 21.4
+       },
+       {
+        "name": "Michael Carter",
+        "pos": "RB",
+        "pts": 18.3
+       },
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "pts": 11.3
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 99.8,
+      "optimal": 110.8,
+      "left": 11,
+      "topBench": [
+       {
+        "name": "Bam Knight",
+        "pos": "RB",
+        "pts": 12.4
+       },
+       {
+        "name": "Michael Carter",
+        "pos": "RB",
+        "pts": 8.4
+       },
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "pts": 6.6
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 125.6,
+      "optimal": 141.5,
+      "left": 15.9,
+      "topBench": [
+       {
+        "name": "Travis Hunter",
+        "pos": "WR",
+        "pts": 24.1
+       },
+       {
+        "name": "Michael Carter",
+        "pos": "RB",
+        "pts": 5.6
+       },
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 3.7
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 112.9,
+      "optimal": 117.2,
+      "left": 4.3,
+      "topBench": [
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "pts": 6.4
+       },
+       {
+        "name": "Puka Nacua",
+        "pos": "WR",
+        "pts": 0
+       },
+       {
+        "name": "Drake London",
+        "pos": "WR",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 140.4,
+      "optimal": 157.2,
+      "left": 16.8,
+      "topBench": [
+       {
+        "name": "RJ Harvey",
+        "pos": "RB",
+        "pts": 16.6
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "pts": 9.1
+       },
+       {
+        "name": "Travis Hunter",
+        "pos": "WR",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 104.6,
+      "optimal": 128.9,
+      "left": 24.3,
+      "topBench": [
+       {
+        "name": "Tez Johnson",
+        "pos": "WR",
+        "pts": 20.2
+       },
+       {
+        "name": "Jacoby Brissett",
+        "pos": "QB",
+        "pts": 19.42
+       },
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "pts": 10.4
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 121.5,
+      "optimal": 137.8,
+      "left": 16.3,
+      "topBench": [
+       {
+        "name": "Jacoby Brissett",
+        "pos": "QB",
+        "pts": 21.88
+       },
+       {
+        "name": "Kareem Hunt",
+        "pos": "RB",
+        "pts": 13.2
+       },
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "pts": 10
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 156.3,
+      "optimal": 156.3,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 0.5
+       },
+       {
+        "name": "Ja'Marr Chase",
+        "pos": "WR",
+        "pts": 0
+       },
+       {
+        "name": "De'Von Achane",
+        "pos": "RB",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 140,
+      "optimal": 142.3,
+      "left": 2.3,
+      "topBench": [
+       {
+        "name": "Brenton Strange",
+        "pos": "TE",
+        "pts": 13.5
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "pts": 11.3
+       },
+       {
+        "name": "Kareem Hunt",
+        "pos": "RB",
+        "pts": 9
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 82.7,
+      "optimal": 104.6,
+      "left": 21.9,
+      "topBench": [
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "pts": 15.6
+       },
+       {
+        "name": "Eagles D/ST",
+        "pos": "D/ST",
+        "pts": 13
+       },
+       {
+        "name": "Kareem Hunt",
+        "pos": "RB",
+        "pts": 9
+       }
+      ]
+     }
+    ],
+    "totalActual": 1731.7,
+    "totalOptimal": 1940.8,
+    "totalLeft": 209.1,
+    "avgLeftPerWeek": 14.9
+   },
+   "6": {
+    "team": "Njigbas in Paris",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 132.1,
+      "optimal": 144.4,
+      "left": 12.3,
+      "topBench": [
+       {
+        "name": "Dylan Sampson",
+        "pos": "RB",
+        "pts": 17.3
+       },
+       {
+        "name": "Kyle Pitts Sr.",
+        "pos": "TE",
+        "pts": 12.9
+       },
+       {
+        "name": "Calvin Ridley",
+        "pos": "WR",
+        "pts": 6.7
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 120.9,
+      "optimal": 132.8,
+      "left": 11.9,
+      "topBench": [
+       {
+        "name": "Bhayshul Tuten",
+        "pos": "RB",
+        "pts": 15.4
+       },
+       {
+        "name": "Dylan Sampson",
+        "pos": "RB",
+        "pts": 10.9
+       },
+       {
+        "name": "Kyle Pitts Sr.",
+        "pos": "TE",
+        "pts": 7.7
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 167.6,
+      "optimal": 167.9,
+      "left": 0.3,
+      "topBench": [
+       {
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "pts": 20
+       },
+       {
+        "name": "Kyler Murray",
+        "pos": "QB",
+        "pts": 14.06
+       },
+       {
+        "name": "JuJu Smith-Schuster",
+        "pos": "WR",
+        "pts": 9.5
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 145.7,
+      "optimal": 150.7,
+      "left": 5,
+      "topBench": [
+       {
+        "name": "Kyler Murray",
+        "pos": "QB",
+        "pts": 16.1
+       },
+       {
+        "name": "JuJu Smith-Schuster",
+        "pos": "WR",
+        "pts": 13.6
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "pts": 11.1
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 167.3,
+      "optimal": 170.5,
+      "left": 3.2,
+      "topBench": [
+       {
+        "name": "Kyler Murray",
+        "pos": "QB",
+        "pts": 15.3
+       },
+       {
+        "name": "Brashard Smith",
+        "pos": "RB",
+        "pts": 6.6
+       },
+       {
+        "name": "JuJu Smith-Schuster",
+        "pos": "WR",
+        "pts": 3.7
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 127.2,
+      "optimal": 137.6,
+      "left": 10.4,
+      "topBench": [
+       {
+        "name": "AJ Barner",
+        "pos": "TE",
+        "pts": 10.1
+       },
+       {
+        "name": "Justice Hill",
+        "pos": "RB",
+        "pts": 9.4
+       },
+       {
+        "name": "JuJu Smith-Schuster",
+        "pos": "WR",
+        "pts": 8.7
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 194.3,
+      "optimal": 201.3,
+      "left": 7,
+      "topBench": [
+       {
+        "name": "Brashard Smith",
+        "pos": "RB",
+        "pts": 13.1
+       },
+       {
+        "name": "Brian Robinson Jr.",
+        "pos": "RB",
+        "pts": 3.6
+       },
+       {
+        "name": "AJ Barner",
+        "pos": "TE",
+        "pts": 1.9
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 149.5,
+      "optimal": 149.5,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Joe Flacco",
+        "pos": "QB",
+        "pts": 24.32
+       },
+       {
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "pts": 16.76
+       },
+       {
+        "name": "Brashard Smith",
+        "pos": "RB",
+        "pts": 0.8
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 140.7,
+      "optimal": 150.9,
+      "left": 10.2,
+      "topBench": [
+       {
+        "name": "Olamide Zaccheaus",
+        "pos": "WR",
+        "pts": 17.8
+       },
+       {
+        "name": "Brian Robinson Jr.",
+        "pos": "RB",
+        "pts": 11.3
+       },
+       {
+        "name": "Ricky Pearsall",
+        "pos": "WR",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 157.3,
+      "optimal": 170.2,
+      "left": 12.9,
+      "topBench": [
+       {
+        "name": "Darius Slayton",
+        "pos": "WR",
+        "pts": 12.9
+       },
+       {
+        "name": "Brian Robinson Jr.",
+        "pos": "RB",
+        "pts": 11.5
+       },
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "pts": 8.8
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 110,
+      "optimal": 112.8,
+      "left": 2.8,
+      "topBench": [
+       {
+        "name": "Greg Dulcich",
+        "pos": "TE",
+        "pts": 3.8
+       },
+       {
+        "name": "Brian Robinson Jr.",
+        "pos": "RB",
+        "pts": 2.4
+       },
+       {
+        "name": "Isaiah Davis",
+        "pos": "RB",
+        "pts": 1.1
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 136.1,
+      "optimal": 151.9,
+      "left": 15.8,
+      "topBench": [
+       {
+        "name": "Christian Kirk",
+        "pos": "WR",
+        "pts": 16.4
+       },
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "pts": 10.8
+       },
+       {
+        "name": "Brian Robinson Jr.",
+        "pos": "RB",
+        "pts": 5.4
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 98.7,
+      "optimal": 124.1,
+      "left": 25.4,
+      "topBench": [
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "pts": 19
+       },
+       {
+        "name": "Darius Slayton",
+        "pos": "WR",
+        "pts": 14.1
+       },
+       {
+        "name": "Texans D/ST",
+        "pos": "D/ST",
+        "pts": 4
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 97.4,
+      "optimal": 105.3,
+      "left": 7.9,
+      "topBench": [
+       {
+        "name": "T.J. Hockenson",
+        "pos": "TE",
+        "pts": 9.2
+       },
+       {
+        "name": "Chris Rodriguez Jr.",
+        "pos": "RB",
+        "pts": 5.2
+       },
+       {
+        "name": "Christian Kirk",
+        "pos": "WR",
+        "pts": 1.6
+       }
+      ]
+     }
+    ],
+    "totalActual": 1944.8,
+    "totalOptimal": 2069.9,
+    "totalLeft": 125.1,
+    "avgLeftPerWeek": 8.9
+   },
+   "7": {
+    "team": "2 gurls 1 kupp",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 101,
+      "optimal": 126.7,
+      "left": 25.7,
+      "topBench": [
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "pts": 16.78
+       },
+       {
+        "name": "Cedric Tillman",
+        "pos": "WR",
+        "pts": 16.2
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "pts": 15.7
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 152.5,
+      "optimal": 165.1,
+      "left": 12.6,
+      "topBench": [
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "pts": 19.24
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 16
+       },
+       {
+        "name": "Quentin Johnston",
+        "pos": "WR",
+        "pts": 15.9
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 95.1,
+      "optimal": 126.6,
+      "left": 31.5,
+      "topBench": [
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "pts": 23.8
+       },
+       {
+        "name": "Dalton Kincaid",
+        "pos": "TE",
+        "pts": 17.6
+       },
+       {
+        "name": "Tyrone Tracy Jr.",
+        "pos": "RB",
+        "pts": 5.6
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 127.5,
+      "optimal": 134.6,
+      "left": 7.1,
+      "topBench": [
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "pts": 11.66
+       },
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "pts": 9.8
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 6.6
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 98,
+      "optimal": 112.8,
+      "left": 14.8,
+      "topBench": [
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "pts": 19.1
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 11.9
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 107,
+      "optimal": 107,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Tyrone Tracy Jr.",
+        "pos": "RB",
+        "pts": 0.6
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "pts": 0
+       },
+       {
+        "name": "Dalton Kincaid",
+        "pos": "TE",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 88.2,
+      "optimal": 103.9,
+      "left": 15.7,
+      "topBench": [
+       {
+        "name": "Cade Otton",
+        "pos": "TE",
+        "pts": 13.5
+       },
+       {
+        "name": "Tyrone Tracy Jr.",
+        "pos": "RB",
+        "pts": 10.6
+       },
+       {
+        "name": "Kareem Hunt",
+        "pos": "RB",
+        "pts": 1.8
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 111,
+      "optimal": 140,
+      "left": 29,
+      "topBench": [
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "pts": 21.9
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "pts": 15.1
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "pts": 9.4
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 123.1,
+      "optimal": 124.9,
+      "left": 1.8,
+      "topBench": [
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "pts": 11.8
+       },
+       {
+        "name": "AJ Barner",
+        "pos": "TE",
+        "pts": 11.5
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "pts": 1.7
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 131.7,
+      "optimal": 142.2,
+      "left": 10.5,
+      "topBench": [
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "pts": 15.9
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 9.4
+       },
+       {
+        "name": "Quentin Johnston",
+        "pos": "WR",
+        "pts": 9.2
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 112.1,
+      "optimal": 120.5,
+      "left": 8.4,
+      "topBench": [
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "pts": 9.9
+       },
+       {
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "pts": 9.44
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 5.3
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 150.9,
+      "optimal": 158.5,
+      "left": 7.6,
+      "topBench": [
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "pts": 8.7
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "pts": 8.3
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 4.4
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 93.7,
+      "optimal": 124.4,
+      "left": 30.7,
+      "topBench": [
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "pts": 20.4
+       },
+       {
+        "name": "Justin Herbert",
+        "pos": "QB",
+        "pts": 12.84
+       },
+       {
+        "name": "Jayden Higgins",
+        "pos": "WR",
+        "pts": 11.5
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 98.3,
+      "optimal": 102.2,
+      "left": 3.9,
+      "topBench": [
+       {
+        "name": "Justin Herbert",
+        "pos": "QB",
+        "pts": 12.16
+       },
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "pts": 11.5
+       },
+       {
+        "name": "Jayden Higgins",
+        "pos": "WR",
+        "pts": 6.4
+       }
+      ]
+     }
+    ],
+    "totalActual": 1590.1,
+    "totalOptimal": 1789.4,
+    "totalLeft": 199.3,
+    "avgLeftPerWeek": 14.2
+   },
+   "8": {
+    "team": "Myer Lemon",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 143.6,
+      "optimal": 147.7,
+      "left": 4.1,
+      "topBench": [
+       {
+        "name": "Michael Penix Jr.",
+        "pos": "QB",
+        "pts": 24.02
+       },
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "pts": 11.7
+       },
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 6
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 98.3,
+      "optimal": 112.7,
+      "left": 14.4,
+      "topBench": [
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 15.2
+       },
+       {
+        "name": "Marvin Mims Jr.",
+        "pos": "WR",
+        "pts": 10.4
+       },
+       {
+        "name": "Calvin Ridley",
+        "pos": "WR",
+        "pts": 8.7
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 116.7,
+      "optimal": 121.6,
+      "left": 4.9,
+      "topBench": [
+       {
+        "name": "Ollie Gordon II",
+        "pos": "RB",
+        "pts": 9.8
+       },
+       {
+        "name": "Kenneth Gainwell",
+        "pos": "RB",
+        "pts": 9.6
+       },
+       {
+        "name": "TreVeyon Henderson",
+        "pos": "RB",
+        "pts": 7.7
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 110.8,
+      "optimal": 145.4,
+      "left": 34.6,
+      "topBench": [
+       {
+        "name": "Kenneth Gainwell",
+        "pos": "RB",
+        "pts": 31.4
+       },
+       {
+        "name": "Marvin Mims Jr.",
+        "pos": "WR",
+        "pts": 20.5
+       },
+       {
+        "name": "Michael Penix Jr.",
+        "pos": "QB",
+        "pts": 18.72
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 135,
+      "optimal": 135,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Isaiah Bond",
+        "pos": "WR",
+        "pts": 4.9
+       },
+       {
+        "name": "TreVeyon Henderson",
+        "pos": "RB",
+        "pts": 4.7
+       },
+       {
+        "name": "Marvin Mims Jr.",
+        "pos": "WR",
+        "pts": 3.9
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 89.2,
+      "optimal": 117.2,
+      "left": 28,
+      "topBench": [
+       {
+        "name": "Derrick Henry",
+        "pos": "RB",
+        "pts": 14
+       },
+       {
+        "name": "Luke McCaffrey",
+        "pos": "WR",
+        "pts": 10.3
+       },
+       {
+        "name": "Kenneth Gainwell",
+        "pos": "RB",
+        "pts": 9.6
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 69,
+      "optimal": 103.4,
+      "left": 34.4,
+      "topBench": [
+       {
+        "name": "Marvin Mims Jr.",
+        "pos": "WR",
+        "pts": 15.8
+       },
+       {
+        "name": "Theo Johnson",
+        "pos": "TE",
+        "pts": 15.6
+       },
+       {
+        "name": "Tyjae Spears",
+        "pos": "RB",
+        "pts": 7
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 99.3,
+      "optimal": 126.8,
+      "left": 27.5,
+      "topBench": [
+       {
+        "name": "Tyjae Spears",
+        "pos": "RB",
+        "pts": 17.2
+       },
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 14.5
+       },
+       {
+        "name": "Christian Watson",
+        "pos": "WR",
+        "pts": 12.5
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 135.2,
+      "optimal": 138.5,
+      "left": 3.3,
+      "topBench": [
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 11.8
+       },
+       {
+        "name": "Calvin Austin III",
+        "pos": "WR",
+        "pts": 10.6
+       },
+       {
+        "name": "Tyjae Spears",
+        "pos": "RB",
+        "pts": 9.2
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 106.5,
+      "optimal": 133.8,
+      "left": 27.3,
+      "topBench": [
+       {
+        "name": "Parker Washington",
+        "pos": "WR",
+        "pts": 17.9
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "pts": 16.1
+       },
+       {
+        "name": "Tank Bigsby",
+        "pos": "RB",
+        "pts": 0.7
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 146.9,
+      "optimal": 157.7,
+      "left": 10.8,
+      "topBench": [
+       {
+        "name": "Christian Watson",
+        "pos": "WR",
+        "pts": 20.6
+       },
+       {
+        "name": "Tyjae Spears",
+        "pos": "RB",
+        "pts": 8.4
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "pts": 6.1
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 129.7,
+      "optimal": 137.9,
+      "left": 8.2,
+      "topBench": [
+       {
+        "name": "Parker Washington",
+        "pos": "WR",
+        "pts": 18.1
+       },
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "pts": 15
+       },
+       {
+        "name": "Calvin Austin III",
+        "pos": "WR",
+        "pts": 7.6
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 140.2,
+      "optimal": 147.4,
+      "left": 7.2,
+      "topBench": [
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "pts": 21.3
+       },
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "pts": 17.2
+       },
+       {
+        "name": "Blake Corum",
+        "pos": "RB",
+        "pts": 14.1
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 143.2,
+      "optimal": 152.9,
+      "left": 9.7,
+      "topBench": [
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "pts": 12.2
+       },
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "pts": 8.7
+       },
+       {
+        "name": "Tyjae Spears",
+        "pos": "RB",
+        "pts": 6.7
+       }
+      ]
+     }
+    ],
+    "totalActual": 1663.6,
+    "totalOptimal": 1878,
+    "totalLeft": 214.4,
+    "avgLeftPerWeek": 15.3
+   },
+   "9": {
+    "team": "Ashton of Ass",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 75.7,
+      "optimal": 133.3,
+      "left": 57.6,
+      "topBench": [
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "pts": 24.2
+       },
+       {
+        "name": "Javonte Williams",
+        "pos": "RB",
+        "pts": 20.4
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "pts": 19.8
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 98.2,
+      "optimal": 131.9,
+      "left": 33.7,
+      "topBench": [
+       {
+        "name": "Kenneth Walker III",
+        "pos": "RB",
+        "pts": 18.8
+       },
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "pts": 17.32
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "pts": 17.1
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 109.7,
+      "optimal": 142.2,
+      "left": 32.5,
+      "topBench": [
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "pts": 29.12
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "pts": 19.5
+       },
+       {
+        "name": "Steelers D/ST",
+        "pos": "D/ST",
+        "pts": 15
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 120.1,
+      "optimal": 135.7,
+      "left": 15.6,
+      "topBench": [
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "pts": 27.4
+       },
+       {
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "pts": 10.38
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "pts": 8.7
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 141.2,
+      "optimal": 151.3,
+      "left": 10.1,
+      "topBench": [
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "pts": 25.56
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "pts": 10.8
+       },
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 3.5
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 96,
+      "optimal": 113.8,
+      "left": 17.8,
+      "topBench": [
+       {
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "pts": 22.48
+       },
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "pts": 19.88
+       },
+       {
+        "name": "Jerry Jeudy",
+        "pos": "WR",
+        "pts": 9.3
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 92.8,
+      "optimal": 133.8,
+      "left": 41,
+      "topBench": [
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "pts": 27.38
+       },
+       {
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "pts": 22.22
+       },
+       {
+        "name": "Packers D/ST",
+        "pos": "D/ST",
+        "pts": 8
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 125.9,
+      "optimal": 125.9,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Nico Collins",
+        "pos": "WR",
+        "pts": 0
+       },
+       {
+        "name": "Ashton Jeanty",
+        "pos": "RB",
+        "pts": 0
+       },
+       {
+        "name": "Kenneth Walker III",
+        "pos": "RB",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 106.3,
+      "optimal": 135.5,
+      "left": 29.2,
+      "topBench": [
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "pts": 26.84
+       },
+       {
+        "name": "Steelers D/ST",
+        "pos": "D/ST",
+        "pts": 16
+       },
+       {
+        "name": "Oronde Gadsden",
+        "pos": "TE",
+        "pts": 11.8
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 113,
+      "optimal": 128.9,
+      "left": 15.9,
+      "topBench": [
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "pts": 26.9
+       },
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "pts": 8.4
+       },
+       {
+        "name": "Steelers D/ST",
+        "pos": "D/ST",
+        "pts": 5
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 100.6,
+      "optimal": 121.6,
+      "left": 21,
+      "topBench": [
+       {
+        "name": "Steelers D/ST",
+        "pos": "D/ST",
+        "pts": 22
+       },
+       {
+        "name": "Harrison Butker",
+        "pos": "K",
+        "pts": 7
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "pts": 5.6
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 147.7,
+      "optimal": 158.7,
+      "left": 11,
+      "topBench": [
+       {
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "pts": 16.84
+       },
+       {
+        "name": "Harrison Butker",
+        "pos": "K",
+        "pts": 16
+       },
+       {
+        "name": "Kenneth Walker III",
+        "pos": "RB",
+        "pts": 13.1
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 92.7,
+      "optimal": 110.8,
+      "left": 18.1,
+      "topBench": [
+       {
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "pts": 16.14
+       },
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "pts": 11.3
+       },
+       {
+        "name": "Nick Folk",
+        "pos": "K",
+        "pts": 10
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 93.5,
+      "optimal": 118.2,
+      "left": 24.7,
+      "topBench": [
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "pts": 25.4
+       },
+       {
+        "name": "Nick Folk",
+        "pos": "K",
+        "pts": 4
+       },
+       {
+        "name": "Packers D/ST",
+        "pos": "D/ST",
+        "pts": 3
+       }
+      ]
+     }
+    ],
+    "totalActual": 1513.4,
+    "totalOptimal": 1841.6,
+    "totalLeft": 328.2,
+    "avgLeftPerWeek": 23.4
+   },
+   "10": {
+    "team": "Damardiac Arrest",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 77.5,
+      "optimal": 115.3,
+      "left": 37.8,
+      "topBench": [
+       {
+        "name": "Keon Coleman",
+        "pos": "WR",
+        "pts": 25.2
+       },
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "pts": 15.92
+       },
+       {
+        "name": "Jayden Reed",
+        "pos": "WR",
+        "pts": 13.5
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 118.1,
+      "optimal": 133.5,
+      "left": 15.4,
+      "topBench": [
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 20.24
+       },
+       {
+        "name": "Zach Ertz",
+        "pos": "TE",
+        "pts": 18.4
+       },
+       {
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "pts": 9.3
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 81,
+      "optimal": 88.6,
+      "left": 7.6,
+      "topBench": [
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 13.42
+       },
+       {
+        "name": "Jonnu Smith",
+        "pos": "TE",
+        "pts": 5.3
+       },
+       {
+        "name": "Dylan Sampson",
+        "pos": "RB",
+        "pts": 0.2
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 72.7,
+      "optimal": 86.2,
+      "left": 13.5,
+      "topBench": [
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 25.74
+       },
+       {
+        "name": "Rachaad White",
+        "pos": "RB",
+        "pts": 8.6
+       },
+       {
+        "name": "Tyquan Thornton",
+        "pos": "WR",
+        "pts": 8.1
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 117.8,
+      "optimal": 119.5,
+      "left": 1.7,
+      "topBench": [
+       {
+        "name": "Tyquan Thornton",
+        "pos": "WR",
+        "pts": 12
+       },
+       {
+        "name": "Jaguars D/ST",
+        "pos": "D/ST",
+        "pts": 2
+       },
+       {
+        "name": "CeeDee Lamb",
+        "pos": "WR",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 103.5,
+      "optimal": 133.8,
+      "left": 30.3,
+      "topBench": [
+       {
+        "name": "Kendrick Bourne",
+        "pos": "WR",
+        "pts": 19.2
+       },
+       {
+        "name": "Zach Ertz",
+        "pos": "TE",
+        "pts": 16.3
+       },
+       {
+        "name": "Chris Boswell",
+        "pos": "K",
+        "pts": 14
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 99.5,
+      "optimal": 138,
+      "left": 38.5,
+      "topBench": [
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 39.96
+       },
+       {
+        "name": "Alec Pierce",
+        "pos": "WR",
+        "pts": 14.8
+       },
+       {
+        "name": "Eddy Pineiro",
+        "pos": "K",
+        "pts": 11
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 92.9,
+      "optimal": 100.7,
+      "left": 7.8,
+      "topBench": [
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "pts": 28.3
+       },
+       {
+        "name": "Tez Johnson",
+        "pos": "WR",
+        "pts": 9.3
+       },
+       {
+        "name": "Alec Pierce",
+        "pos": "WR",
+        "pts": 8.9
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 121.1,
+      "optimal": 140.6,
+      "left": 19.5,
+      "topBench": [
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 18.52
+       },
+       {
+        "name": "Alec Pierce",
+        "pos": "WR",
+        "pts": 17.5
+       },
+       {
+        "name": "Kendrick Bourne",
+        "pos": "WR",
+        "pts": 5.4
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 108.1,
+      "optimal": 119,
+      "left": 10.9,
+      "topBench": [
+       {
+        "name": "Dalton Schultz",
+        "pos": "TE",
+        "pts": 18.3
+       },
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "pts": 7.84
+       },
+       {
+        "name": "Kendrick Bourne",
+        "pos": "WR",
+        "pts": 2.9
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 99.1,
+      "optimal": 107.7,
+      "left": 8.6,
+      "topBench": [
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "pts": 17.66
+       },
+       {
+        "name": "Zach Ertz",
+        "pos": "TE",
+        "pts": 8.2
+       },
+       {
+        "name": "Chimere Dike",
+        "pos": "WR",
+        "pts": 3.4
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 59.6,
+      "optimal": 77.4,
+      "left": 17.8,
+      "topBench": [
+       {
+        "name": "Chimere Dike",
+        "pos": "WR",
+        "pts": 21.4
+       },
+       {
+        "name": "Rachaad White",
+        "pos": "RB",
+        "pts": 5.2
+       },
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 95.7,
+      "optimal": 138.9,
+      "left": 43.2,
+      "topBench": [
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "pts": 25.76
+       },
+       {
+        "name": "Zach Ertz",
+        "pos": "TE",
+        "pts": 20.6
+       },
+       {
+        "name": "Alec Pierce",
+        "pos": "WR",
+        "pts": 17.8
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 120.7,
+      "optimal": 128.2,
+      "left": 7.5,
+      "topBench": [
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "pts": 15.98
+       },
+       {
+        "name": "Chimere Dike",
+        "pos": "WR",
+        "pts": 13.4
+       },
+       {
+        "name": "Lions D/ST",
+        "pos": "D/ST",
+        "pts": 7
+       }
+      ]
+     }
+    ],
+    "totalActual": 1367.3,
+    "totalOptimal": 1627.4,
+    "totalLeft": 260.1,
+    "avgLeftPerWeek": 18.6
+   },
+   "11": {
+    "team": "Lamar-a-lago",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 117.7,
+      "optimal": 120.8,
+      "left": 3.1,
+      "topBench": [
+       {
+        "name": "Drake Maye",
+        "pos": "QB",
+        "pts": 15.78
+       },
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 9.3
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 8.72
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 132.7,
+      "optimal": 132.7,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Drake Maye",
+        "pos": "QB",
+        "pts": 26.3
+       },
+       {
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "pts": 15.2
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 14.98
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 128.5,
+      "optimal": 138.1,
+      "left": 9.6,
+      "topBench": [
+       {
+        "name": "Jason Myers",
+        "pos": "K",
+        "pts": 17
+       },
+       {
+        "name": "Jaylen Waddle",
+        "pos": "WR",
+        "pts": 14.9
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 10.36
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 122.9,
+      "optimal": 154.2,
+      "left": 31.3,
+      "topBench": [
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "pts": 27.9
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 18.42
+       },
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "pts": 16.1
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 106.3,
+      "optimal": 150.3,
+      "left": 44,
+      "topBench": [
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "pts": 24.6
+       },
+       {
+        "name": "David Njoku",
+        "pos": "TE",
+        "pts": 18.7
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "pts": 12.6
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 105.3,
+      "optimal": 105.3,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "David Njoku",
+        "pos": "TE",
+        "pts": 5.8
+       },
+       {
+        "name": "Marvin Harrison Jr.",
+        "pos": "WR",
+        "pts": 5.2
+       },
+       {
+        "name": "Brock Bowers",
+        "pos": "TE",
+        "pts": 0
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 115.7,
+      "optimal": 122.3,
+      "left": 6.6,
+      "topBench": [
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 13.66
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "pts": 12.5
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "pts": 12.1
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 111.3,
+      "optimal": 122.5,
+      "left": 11.2,
+      "topBench": [
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 21.72
+       },
+       {
+        "name": "Broncos D/ST",
+        "pos": "D/ST",
+        "pts": 6
+       },
+       {
+        "name": "Jaydon Blue",
+        "pos": "RB",
+        "pts": 2.9
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 125.4,
+      "optimal": 127.4,
+      "left": 2,
+      "topBench": [
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "pts": 21.2
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "pts": 4.7
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "pts": 4.36
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 134.8,
+      "optimal": 145.5,
+      "left": 10.7,
+      "topBench": [
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "pts": 17.7
+       },
+       {
+        "name": "Emari Demercado",
+        "pos": "RB",
+        "pts": 13.4
+       },
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "pts": 9.82
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 142.3,
+      "optimal": 152,
+      "left": 9.7,
+      "topBench": [
+       {
+        "name": "Baker Mayfield",
+        "pos": "QB",
+        "pts": 16.82
+       },
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "pts": 15.02
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "pts": 9.6
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 117.5,
+      "optimal": 122.4,
+      "left": 4.9,
+      "topBench": [
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "pts": 17.14
+       },
+       {
+        "name": "Devin Neal",
+        "pos": "RB",
+        "pts": 11.1
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "pts": 5.9
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 87.6,
+      "optimal": 114.8,
+      "left": 27.2,
+      "topBench": [
+       {
+        "name": "Terry McLaurin",
+        "pos": "WR",
+        "pts": 22.6
+       },
+       {
+        "name": "Baker Mayfield",
+        "pos": "QB",
+        "pts": 14.46
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "pts": 13.5
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 105.4,
+      "optimal": 110.6,
+      "left": 5.2,
+      "topBench": [
+       {
+        "name": "Baker Mayfield",
+        "pos": "QB",
+        "pts": 11.08
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "pts": 8.7
+       },
+       {
+        "name": "Darnell Mooney",
+        "pos": "WR",
+        "pts": 1.6
+       }
+      ]
+     }
+    ],
+    "totalActual": 1653.4,
+    "totalOptimal": 1818.9,
+    "totalLeft": 165.5,
+    "avgLeftPerWeek": 11.8
+   },
+   "12": {
+    "team": "Skat's Super CTE",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 107.2,
+      "optimal": 124.2,
+      "left": 17,
+      "topBench": [
+       {
+        "name": "J.K. Dobbins",
+        "pos": "RB",
+        "pts": 14.8
+       },
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "pts": 12.4
+       },
+       {
+        "name": "Wan'Dale Robinson",
+        "pos": "WR",
+        "pts": 11.5
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 115.2,
+      "optimal": 163.3,
+      "left": 48.1,
+      "topBench": [
+       {
+        "name": "Wan'Dale Robinson",
+        "pos": "WR",
+        "pts": 28.2
+       },
+       {
+        "name": "J.K. Dobbins",
+        "pos": "RB",
+        "pts": 15.5
+       },
+       {
+        "name": "Cam Skattebo",
+        "pos": "RB",
+        "pts": 13.9
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 76.3,
+      "optimal": 118.2,
+      "left": 41.9,
+      "topBench": [
+       {
+        "name": "Cam Skattebo",
+        "pos": "RB",
+        "pts": 24.1
+       },
+       {
+        "name": "Quinshon Judkins",
+        "pos": "RB",
+        "pts": 16.5
+       },
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "pts": 14.5
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 131.5,
+      "optimal": 143.8,
+      "left": 12.3,
+      "topBench": [
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "pts": 17.9
+       },
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 12.72
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "pts": 11.3
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 97.8,
+      "optimal": 126.5,
+      "left": 28.7,
+      "topBench": [
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 20.12
+       },
+       {
+        "name": "Calvin Ridley",
+        "pos": "WR",
+        "pts": 18.1
+       },
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 12.1
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 130.9,
+      "optimal": 162.3,
+      "left": 31.4,
+      "topBench": [
+       {
+        "name": "Jameson Williams",
+        "pos": "WR",
+        "pts": 18.6
+       },
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 16.82
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "pts": 16.2
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 150.2,
+      "optimal": 164.9,
+      "left": 14.7,
+      "topBench": [
+       {
+        "name": "Patriots D/ST",
+        "pos": "D/ST",
+        "pts": 20
+       },
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 10.34
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "pts": 7.7
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 105,
+      "optimal": 115.6,
+      "left": 10.6,
+      "topBench": [
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "pts": 12.9
+       },
+       {
+        "name": "Chiefs D/ST",
+        "pos": "D/ST",
+        "pts": 11
+       },
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 8.9
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 97.3,
+      "optimal": 105.3,
+      "left": 8,
+      "topBench": [
+       {
+        "name": "Jameson Williams",
+        "pos": "WR",
+        "pts": 16.6
+       },
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 3.4
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "pts": 2.9
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 136.6,
+      "optimal": 136.6,
+      "left": 0,
+      "topBench": [
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 6.2
+       },
+       {
+        "name": "Bam Knight",
+        "pos": "RB",
+        "pts": 4.3
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "pts": 1.3
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 106.6,
+      "optimal": 111.3,
+      "left": 4.7,
+      "topBench": [
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 12.1
+       },
+       {
+        "name": "Jake Elliott",
+        "pos": "K",
+        "pts": 11
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "pts": 3.4
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 113.2,
+      "optimal": 126.5,
+      "left": 13.3,
+      "topBench": [
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 17.16
+       },
+       {
+        "name": "Bam Knight",
+        "pos": "RB",
+        "pts": 13.2
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "pts": 3
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 126.3,
+      "optimal": 148.5,
+      "left": 22.2,
+      "topBench": [
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "pts": 20.64
+       },
+       {
+        "name": "Bam Knight",
+        "pos": "RB",
+        "pts": 16.8
+       },
+       {
+        "name": "Nick Chubb",
+        "pos": "RB",
+        "pts": 9.4
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 119.7,
+      "optimal": 120.1,
+      "left": 0.4,
+      "topBench": [
+       {
+        "name": "Isaac TeSlaa",
+        "pos": "WR",
+        "pts": 10
+       },
+       {
+        "name": "Patrick Mahomes",
+        "pos": "QB",
+        "pts": 6.3
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "pts": 6.3
+       }
+      ]
+     }
+    ],
+    "totalActual": 1613.8,
+    "totalOptimal": 1867.1,
+    "totalLeft": 253.3,
+    "avgLeftPerWeek": 18.1
+   },
+   "13": {
+    "team": "EaTN McCokkey",
+    "weeks": [
+     {
+      "week": 1,
+      "actual": 120.8,
+      "optimal": 145.8,
+      "left": 25,
+      "topBench": [
+       {
+        "name": "Travis Etienne Jr.",
+        "pos": "RB",
+        "pts": 18.6
+       },
+       {
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "pts": 15.7
+       },
+       {
+        "name": "Trey Benson",
+        "pos": "RB",
+        "pts": 8.5
+       }
+      ]
+     },
+     {
+      "week": 2,
+      "actual": 129.1,
+      "optimal": 155.4,
+      "left": 26.3,
+      "topBench": [
+       {
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "pts": 31.8
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "pts": 21.2
+       },
+       {
+        "name": "Trey Benson",
+        "pos": "RB",
+        "pts": 8.4
+       }
+      ]
+     },
+     {
+      "week": 3,
+      "actual": 122.5,
+      "optimal": 129.3,
+      "left": 6.8,
+      "topBench": [
+       {
+        "name": "Jacory Croskey-Merritt",
+        "pos": "RB",
+        "pts": 10.1
+       },
+       {
+        "name": "Trey Benson",
+        "pos": "RB",
+        "pts": 8.1
+       },
+       {
+        "name": "Christian Kirk",
+        "pos": "WR",
+        "pts": 5.5
+       }
+      ]
+     },
+     {
+      "week": 4,
+      "actual": 144.6,
+      "optimal": 157.6,
+      "left": 13,
+      "topBench": [
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "pts": 15.1
+       },
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "pts": 14.4
+       },
+       {
+        "name": "Jacory Croskey-Merritt",
+        "pos": "RB",
+        "pts": 7.7
+       }
+      ]
+     },
+     {
+      "week": 5,
+      "actual": 121.3,
+      "optimal": 139.2,
+      "left": 17.9,
+      "topBench": [
+       {
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "pts": 27.64
+       },
+       {
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "pts": 14.9
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "pts": 14.7
+       }
+      ]
+     },
+     {
+      "week": 6,
+      "actual": 108.6,
+      "optimal": 133.8,
+      "left": 25.2,
+      "topBench": [
+       {
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "pts": 23
+       },
+       {
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "pts": 20
+       },
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "pts": 8.6
+       }
+      ]
+     },
+     {
+      "week": 7,
+      "actual": 95.6,
+      "optimal": 129.8,
+      "left": 34.2,
+      "topBench": [
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "pts": 20.8
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "pts": 16.8
+       },
+       {
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "pts": 8.62
+       }
+      ]
+     },
+     {
+      "week": 8,
+      "actual": 97.6,
+      "optimal": 106.6,
+      "left": 9,
+      "topBench": [
+       {
+        "name": "Justin Fields",
+        "pos": "QB",
+        "pts": 20.86
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "pts": 10.3
+       },
+       {
+        "name": "Jacory Croskey-Merritt",
+        "pos": "RB",
+        "pts": 2.5
+       }
+      ]
+     },
+     {
+      "week": 9,
+      "actual": 125.8,
+      "optimal": 135.4,
+      "left": 9.6,
+      "topBench": [
+       {
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "pts": 27.2
+       },
+       {
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "pts": 9.6
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "pts": 7.1
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "actual": 138.2,
+      "optimal": 146.4,
+      "left": 8.2,
+      "topBench": [
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "pts": 12.1
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "pts": 10.3
+       },
+       {
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "pts": 4.92
+       }
+      ]
+     },
+     {
+      "week": 11,
+      "actual": 131.6,
+      "optimal": 148,
+      "left": 16.4,
+      "topBench": [
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "pts": 17.7
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "pts": 5.5
+       },
+       {
+        "name": "Jacory Croskey-Merritt",
+        "pos": "RB",
+        "pts": 4.3
+       }
+      ]
+     },
+     {
+      "week": 12,
+      "actual": 97.5,
+      "optimal": 113.7,
+      "left": 16.2,
+      "topBench": [
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "pts": 11.9
+       },
+       {
+        "name": "Juwan Johnson",
+        "pos": "TE",
+        "pts": 10.6
+       },
+       {
+        "name": "49ers D/ST",
+        "pos": "D/ST",
+        "pts": 10
+       }
+      ]
+     },
+     {
+      "week": 13,
+      "actual": 111.5,
+      "optimal": 155.1,
+      "left": 43.6,
+      "topBench": [
+       {
+        "name": "Kimani Vidal",
+        "pos": "RB",
+        "pts": 20.7
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "pts": 19.2
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "pts": 11.4
+       }
+      ]
+     },
+     {
+      "week": 14,
+      "actual": 149.9,
+      "optimal": 159.1,
+      "left": 9.2,
+      "topBench": [
+       {
+        "name": "Kimani Vidal",
+        "pos": "RB",
+        "pts": 11.4
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "pts": 8.5
+       },
+       {
+        "name": "Juwan Johnson",
+        "pos": "TE",
+        "pts": 7.8
+       }
+      ]
+     }
+    ],
+    "totalActual": 1694.6,
+    "totalOptimal": 1955.2,
+    "totalLeft": 260.6,
+    "avgLeftPerWeek": 18.6
+   }
+  }
+ },
+ "scheduleLuck": {
+  "season": 2025,
+  "rows": [
+   {
+    "teamId": 11,
+    "team": "Lamar-a-lago",
+    "actual": "10-4",
+    "allPlay": "83-71",
+    "allPlayPct": 53.9,
+    "expectedWins": 7.5,
+    "luckWins": 2.5
+   },
+   {
+    "teamId": 6,
+    "team": "Njigbas in Paris",
+    "actual": "13-1",
+    "allPlay": "119-35",
+    "allPlayPct": 77.3,
+    "expectedWins": 10.8,
+    "luckWins": 2.2
+   },
+   {
+    "teamId": 3,
+    "team": "Dart that Dihker in KaiME",
+    "actual": "5-9",
+    "allPlay": "47-107",
+    "allPlayPct": 30.5,
+    "expectedWins": 4.3,
+    "luckWins": 0.7
+   },
+   {
+    "teamId": 12,
+    "team": "Skat's Super CTE",
+    "actual": "7-7",
+    "allPlay": "70-84",
+    "allPlayPct": 45.5,
+    "expectedWins": 6.4,
+    "luckWins": 0.6
+   },
+   {
+    "teamId": 8,
+    "team": "Myer Lemon",
+    "actual": "8-6",
+    "allPlay": "84-70",
+    "allPlayPct": 54.5,
+    "expectedWins": 7.6,
+    "luckWins": 0.4
+   },
+   {
+    "teamId": 10,
+    "team": "Damardiac Arrest",
+    "actual": "4-10",
+    "allPlay": "43-111",
+    "allPlayPct": 27.9,
+    "expectedWins": 3.9,
+    "luckWins": 0.1
+   },
+   {
+    "teamId": 1,
+    "team": "Bucky Irving 🤤",
+    "actual": "7-7",
+    "allPlay": "80-74",
+    "allPlayPct": 51.9,
+    "expectedWins": 7.3,
+    "luckWins": -0.3
+   },
+   {
+    "teamId": 13,
+    "team": "EaTN McCokkey",
+    "actual": "8-6",
+    "allPlay": "96-58",
+    "allPlayPct": 62.3,
+    "expectedWins": 8.7,
+    "luckWins": -0.7
+   },
+   {
+    "teamId": 9,
+    "team": "Ashton of Ass",
+    "actual": "4-10",
+    "allPlay": "56-98",
+    "allPlayPct": 36.4,
+    "expectedWins": 5.1,
+    "luckWins": -1.1
+   },
+   {
+    "teamId": 4,
+    "team": "Jalen Kirk",
+    "actual": "7-7",
+    "allPlay": "90-64",
+    "allPlayPct": 58.4,
+    "expectedWins": 8.2,
+    "luckWins": -1.2
+   },
+   {
+    "teamId": 7,
+    "team": "2 gurls 1 kupp",
+    "actual": "5-9",
+    "allPlay": "69-85",
+    "allPlayPct": 44.8,
+    "expectedWins": 6.3,
+    "luckWins": -1.3
+   },
+   {
+    "teamId": 2,
+    "team": "Nico Suave",
+    "actual": "6-8",
+    "allPlay": "87-67",
+    "allPlayPct": 56.5,
+    "expectedWins": 7.9,
+    "luckWins": -1.9
+   }
+  ]
+ },
+ "faabROI": {
+  "season": 2025,
+  "faab": false,
+  "totals": {
+   "adds": 283,
+   "paidAdds": 0,
+   "spent": 0,
+   "pts": 5053.3,
+   "ptsPerDollarOnPaid": 0,
+   "freeAddPts": 5053.3
+  },
+  "byTeam": [
+   {
+    "team": "Myer Lemon",
+    "adds": 29,
+    "spent": 0,
+    "pts": 620.5,
+    "startedPts": 278.2,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Lamar-a-lago",
+    "adds": 27,
+    "spent": 0,
+    "pts": 565.4,
+    "startedPts": 337.8,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Jalen Kirk",
+    "adds": 44,
+    "spent": 0,
+    "pts": 552.8,
+    "startedPts": 247.5,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Bucky Irving 🤤",
+    "adds": 48,
+    "spent": 0,
+    "pts": 511,
+    "startedPts": 134.7,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Damardiac Arrest",
+    "adds": 19,
+    "spent": 0,
+    "pts": 510.3,
+    "startedPts": 262.6,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Skat's Super CTE",
+    "adds": 11,
+    "spent": 0,
+    "pts": 400.9,
+    "startedPts": 139.1,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Dart that Dihker in KaiME",
+    "adds": 22,
+    "spent": 0,
+    "pts": 394.1,
+    "startedPts": 216.9,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Njigbas in Paris",
+    "adds": 27,
+    "spent": 0,
+    "pts": 375.3,
+    "startedPts": 115.4,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "EaTN McCokkey",
+    "adds": 11,
+    "spent": 0,
+    "pts": 344,
+    "startedPts": 128.2,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Nico Suave",
+    "adds": 26,
+    "spent": 0,
+    "pts": 310.6,
+    "startedPts": 178.5,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "2 gurls 1 kupp",
+    "adds": 14,
+    "spent": 0,
+    "pts": 249,
+    "startedPts": 97,
+    "ptsPerDollar": null
+   },
+   {
+    "team": "Ashton of Ass",
+    "adds": 5,
+    "spent": 0,
+    "pts": 219.4,
+    "startedPts": 109,
+    "ptsPerDollar": null
+   }
+  ],
+  "rows": [
+   {
+    "week": 3,
+    "teamId": 12,
+    "playerId": 3046779,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "wksHeld": 10,
+    "pts": 163.5,
+    "startedPts": 41,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "playerId": 4360078,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Alec Pierce",
+    "pos": "WR",
+    "wksHeld": 11,
+    "pts": 100.8,
+    "startedPts": 35,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "playerId": 4248528,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Christian Watson",
+    "pos": "WR",
+    "wksHeld": 8,
+    "pts": 100.5,
+    "startedPts": 59.6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 11,
+    "playerId": 4360310,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "wksHeld": 7,
+    "pts": 100,
+    "startedPts": 36.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 7,
+    "playerId": 4429025,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Quentin Johnston",
+    "pos": "WR",
+    "wksHeld": 12,
+    "pts": 95.8,
+    "startedPts": 56.6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "playerId": 4697815,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Rachaad White",
+    "pos": "RB",
+    "wksHeld": 10,
+    "pts": 95.5,
+    "startedPts": 75.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 12,
+    "playerId": 3046779,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "wksHeld": 5,
+    "pts": 90.9,
+    "startedPts": 41,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 13,
+    "playerId": 3912547,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "wksHeld": 6,
+    "pts": 88.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 9,
+    "playerId": 5083076,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Ashton of Ass",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "wksHeld": 8,
+    "pts": 84.1,
+    "startedPts": 26.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 8,
+    "playerId": 2473037,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Jason Myers",
+    "pos": "K",
+    "wksHeld": 6,
+    "pts": 84,
+    "startedPts": 84,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 11,
+    "playerId": 3150744,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Chase McLaughlin",
+    "pos": "K",
+    "wksHeld": 7,
+    "pts": 77,
+    "startedPts": 77,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 8,
+    "playerId": 4428557,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "wksHeld": 11,
+    "pts": 73.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 3,
+    "playerId": 4431280,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Troy Franklin",
+    "pos": "WR",
+    "wksHeld": 7,
+    "pts": 70.8,
+    "startedPts": 50.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 11,
+    "playerId": 4371733,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Kenneth Gainwell",
+    "pos": "RB",
+    "wksHeld": 4,
+    "pts": 70.4,
+    "startedPts": 70.4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "playerId": 2578570,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "wksHeld": 3,
+    "pts": 66.1,
+    "startedPts": 24.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "playerId": 3059915,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Kareem Hunt",
+    "pos": "RB",
+    "wksHeld": 6,
+    "pts": 63.7,
+    "startedPts": 32.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 13,
+    "playerId": 4040761,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "Devin Singletary",
+    "pos": "RB",
+    "wksHeld": 6,
+    "pts": 59,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "playerId": 4428718,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Tre Tucker",
+    "pos": "WR",
+    "wksHeld": 7,
+    "pts": 58.3,
+    "startedPts": 35.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 10,
+    "playerId": 4034949,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Eddy Pineiro",
+    "pos": "K",
+    "wksHeld": 8,
+    "pts": 58,
+    "startedPts": 47,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 11,
+    "playerId": 4373626,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "wksHeld": 5,
+    "pts": 55.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 12,
+    "playerId": 4427728,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "wksHeld": 5,
+    "pts": 55.2,
+    "startedPts": 20.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 8,
+    "playerId": 4371733,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Kenneth Gainwell",
+    "pos": "RB",
+    "wksHeld": 5,
+    "pts": 54.1,
+    "startedPts": 3.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "playerId": 4569603,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Malik Washington",
+    "pos": "WR",
+    "wksHeld": 7,
+    "pts": 52.2,
+    "startedPts": 9.3,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 1,
+    "playerId": 4883647,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Elic Ayomanor",
+    "pos": "WR",
+    "wksHeld": 6,
+    "pts": 50.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 3,
+    "playerId": 4241463,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jerry Jeudy",
+    "pos": "WR",
+    "wksHeld": 7,
+    "pts": 50,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "playerId": 17372,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Chris Boswell",
+    "pos": "K",
+    "wksHeld": 6,
+    "pts": 50,
+    "startedPts": 50,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 10,
+    "playerId": 3117256,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Dalton Schultz",
+    "pos": "TE",
+    "wksHeld": 5,
+    "pts": 48.9,
+    "startedPts": 25.4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "playerId": 4430871,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Sean Tucker",
+    "pos": "RB",
+    "wksHeld": 4,
+    "pts": 48.5,
+    "startedPts": 39.6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 6,
+    "playerId": 4697745,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Tyler Loop",
+    "pos": "K",
+    "wksHeld": 5,
+    "pts": 48,
+    "startedPts": 48,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 2,
+    "playerId": 11122,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Matt Prater",
+    "pos": "K",
+    "wksHeld": 7,
+    "pts": 47,
+    "startedPts": 47,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 13,
+    "playerId": 3929645,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "EaTN McCokkey",
+    "name": "Juwan Johnson",
+    "pos": "TE",
+    "wksHeld": 5,
+    "pts": 46.5,
+    "startedPts": 19.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 9,
+    "playerId": 4595342,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Ashton of Ass",
+    "name": "Oronde Gadsden",
+    "pos": "TE",
+    "wksHeld": 7,
+    "pts": 46.3,
+    "startedPts": 30.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 12,
+    "playerId": 4688813,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Josh Downs",
+    "pos": "WR",
+    "wksHeld": 7,
+    "pts": 45.6,
+    "startedPts": 15.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 10,
+    "playerId": 4431268,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Damardiac Arrest",
+    "name": "Chimere Dike",
+    "pos": "WR",
+    "wksHeld": 6,
+    "pts": 45.6,
+    "startedPts": 7.4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 11,
+    "playerId": 4429059,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "wksHeld": 5,
+    "pts": 45.5,
+    "startedPts": 5.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 11,
+    "playerId": 17427,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Cairo Santos",
+    "pos": "K",
+    "wksHeld": 5,
+    "pts": 45,
+    "startedPts": 45,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 8,
+    "playerId": 4432620,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Parker Washington",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 43.6,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 3,
+    "playerId": 3912547,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "wksHeld": 3,
+    "pts": 43,
+    "startedPts": 39.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "playerId": 4429096,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 42.6,
+    "startedPts": 26.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 8,
+    "playerId": 4429096,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 42.6,
+    "startedPts": 26.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 9,
+    "playerId": 10621,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Ashton of Ass",
+    "name": "Nick Folk",
+    "pos": "K",
+    "wksHeld": 7,
+    "pts": 42,
+    "startedPts": 28,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "playerId": 3916945,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Darius Slayton",
+    "pos": "WR",
+    "wksHeld": 6,
+    "pts": 41.5,
+    "startedPts": 11.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "playerId": 4240657,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "wksHeld": 4,
+    "pts": 41.1,
+    "startedPts": 8.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "playerId": 4433970,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "J.J. McCarthy",
+    "pos": "QB",
+    "wksHeld": 5,
+    "pts": 40.1,
+    "startedPts": 14.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 13,
+    "playerId": 11122,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "EaTN McCokkey",
+    "name": "Matt Prater",
+    "pos": "K",
+    "wksHeld": 5,
+    "pts": 39,
+    "startedPts": 39,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 10,
+    "playerId": 3045523,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Kendrick Bourne",
+    "pos": "WR",
+    "wksHeld": 5,
+    "pts": 38.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 9,
+    "playerId": 3055899,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Ashton of Ass",
+    "name": "Harrison Butker",
+    "pos": "K",
+    "wksHeld": 6,
+    "pts": 38,
+    "startedPts": 15,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 6,
+    "playerId": 3120348,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "JuJu Smith-Schuster",
+    "pos": "WR",
+    "wksHeld": 5,
+    "pts": 37,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 8,
+    "playerId": 3929645,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Juwan Johnson",
+    "pos": "TE",
+    "wksHeld": 4,
+    "pts": 36.5,
+    "startedPts": 36.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 11,
+    "playerId": 4682652,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Devin Neal",
+    "pos": "RB",
+    "wksHeld": 4,
+    "pts": 36.4,
+    "startedPts": 25.3,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 13,
+    "playerId": 4686361,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "Cam Little",
+    "pos": "K",
+    "wksHeld": 4,
+    "pts": 35,
+    "startedPts": 35,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 4,
+    "playerId": 4032473,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 33.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "playerId": 4360761,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 33.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 11,
+    "playerId": 2473037,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Jason Myers",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 33,
+    "startedPts": 16,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "playerId": 3150744,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Chase McLaughlin",
+    "pos": "K",
+    "wksHeld": 5,
+    "pts": 33,
+    "startedPts": 33,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "playerId": 4038815,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 32.4,
+    "startedPts": 32.4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 13,
+    "playerId": 4430968,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "EaTN McCokkey",
+    "name": "Kimani Vidal",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 32.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 10,
+    "playerId": 4569923,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Andy Borregales",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 32,
+    "startedPts": 32,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 4,
+    "playerId": 5083076,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "wksHeld": 4,
+    "pts": 31.1,
+    "startedPts": 15.3,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 7,
+    "playerId": 4360310,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "2 gurls 1 kupp",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "wksHeld": 2,
+    "pts": 30.9,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 7,
+    "playerId": 4429059,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 30.7,
+    "startedPts": 7.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 2,
+    "playerId": 4241479,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "wksHeld": 2,
+    "pts": 29.3,
+    "startedPts": 22.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 3,
+    "playerId": 2971573,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Ka'imi Fairbairn",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 29,
+    "startedPts": 12,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 11,
+    "playerId": 4040655,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 28.9,
+    "startedPts": 22.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 6,
+    "playerId": 5081397,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Dylan Sampson",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 28.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 3,
+    "playerId": 2576925,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Darren Waller",
+    "pos": "TE",
+    "wksHeld": 4,
+    "pts": 28,
+    "startedPts": 28,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 13,
+    "playerId": 3123052,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "Michael Badgley",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 28,
+    "startedPts": 28,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 6,
+    "playerId": 4596602,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Brashard Smith",
+    "pos": "RB",
+    "wksHeld": 4,
+    "pts": 25.6,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "playerId": 11252,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Joe Flacco",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 24.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 8,
+    "playerId": 4243389,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Calvin Austin III",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 23.1,
+    "startedPts": 3.4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 4,
+    "playerId": 3917792,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Daniel Jones",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 22.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 1,
+    "playerId": 4430968,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Kimani Vidal",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 22.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 10,
+    "playerId": 15835,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Damardiac Arrest",
+    "name": "Zach Ertz",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 22.7,
+    "startedPts": 2.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 3,
+    "playerId": 8439,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "wksHeld": 2,
+    "pts": 22.1,
+    "startedPts": 11.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "playerId": 4243331,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 22,
+    "startedPts": 22,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "playerId": 4243331,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 22,
+    "startedPts": 22,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 2,
+    "playerId": 4571557,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Nico Suave",
+    "name": "Spencer Shrader",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 22,
+    "startedPts": 22,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "playerId": 4243331,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 22,
+    "startedPts": 22,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "playerId": 4608810,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Tez Johnson",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 21.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "playerId": 4432577,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "wksHeld": 2,
+    "pts": 21.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 3,
+    "playerId": 3059915,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Kareem Hunt",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 21.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 7,
+    "playerId": 4243331,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "wksHeld": 3,
+    "pts": 21.5,
+    "startedPts": 8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 1,
+    "playerId": 4431280,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Troy Franklin",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 20.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 6,
+    "playerId": 4808766,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Mason Taylor",
+    "pos": "TE",
+    "wksHeld": 3,
+    "pts": 20.5,
+    "startedPts": 20.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 8,
+    "playerId": 4429148,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Theo Johnson",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 20.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "playerId": 4362921,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Tyquan Thornton",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 20.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 1,
+    "playerId": 4689114,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 19.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "playerId": 2578570,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 19.8,
+    "startedPts": 19.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "playerId": 4032473,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Nico Suave",
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 19.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "playerId": 3917914,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Olamide Zaccheaus",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 19.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 4,
+    "playerId": 4430539,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 19.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "playerId": 2473037,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Nico Suave",
+    "name": "Jason Myers",
+    "pos": "K",
+    "wksHeld": 2,
+    "pts": 19,
+    "startedPts": 19,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 7,
+    "playerId": 4567104,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Will Reichard",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 19,
+    "startedPts": 10,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 2,
+    "playerId": 4037235,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Greg Dortch",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 18.6,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 1,
+    "playerId": 4887558,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 18,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "playerId": 4887558,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 18,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "playerId": 4887558,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 18,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 6,
+    "playerId": 3895856,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Christian Kirk",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 18,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 11,
+    "playerId": 4362478,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Emari Demercado",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 17.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 11,
+    "playerId": 4432620,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Parker Washington",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 17,
+    "startedPts": 17,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 12,
+    "playerId": 3050478,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Skat's Super CTE",
+    "name": "Jake Elliott",
+    "pos": "K",
+    "wksHeld": 3,
+    "pts": 17,
+    "startedPts": 4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "playerId": 8439,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 16.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "playerId": 4362478,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Emari Demercado",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 16.2,
+    "startedPts": 6.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 4,
+    "playerId": 4429059,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 15.6,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 7,
+    "playerId": 4567104,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "2 gurls 1 kupp",
+    "name": "Will Reichard",
+    "pos": "K",
+    "wksHeld": 2,
+    "pts": 14,
+    "startedPts": 5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 1,
+    "playerId": 4429022,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Kayshon Boutte",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 13.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 2,
+    "playerId": 4371733,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Kenneth Gainwell",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 13.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 2,
+    "playerId": 4723086,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 12.9,
+    "startedPts": 12.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 6,
+    "playerId": 4373626,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 12.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 4,
+    "playerId": 4427728,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 12.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 6,
+    "playerId": 4576297,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "AJ Barner",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 12,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 6,
+    "playerId": 4038441,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Justice Hill",
+    "pos": "RB",
+    "wksHeld": 4,
+    "pts": 11.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 10,
+    "playerId": 4259147,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Jake Tonges",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 11.8,
+    "startedPts": 11.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "playerId": 8439,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 11.7,
+    "startedPts": 11.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "playerId": 4429148,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Theo Johnson",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 11.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 7,
+    "playerId": 4576297,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "2 gurls 1 kupp",
+    "name": "AJ Barner",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 11.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "playerId": 5083076,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 11.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 11,
+    "playerId": 4240603,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Malik Davis",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 11.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "playerId": 4241464,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Mac Jones",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 11.2,
+    "startedPts": 11.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "playerId": 4360569,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 11.2,
+    "startedPts": 11.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "playerId": 4608686,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 11.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 6,
+    "playerId": 3117256,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Dalton Schultz",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 11,
+    "startedPts": 11,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "playerId": 4586312,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Jaylin Noel",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 11,
+    "startedPts": 11.3,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "playerId": 4685278,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Luther Burden III",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 11,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "playerId": 4368003,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Andrei Iosivas",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 10.6,
+    "startedPts": 10.6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 8,
+    "playerId": 4426948,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Luke McCaffrey",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 10.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 4,
+    "playerId": 4599739,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Kendre Miller",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 10.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 11,
+    "playerId": 4243331,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Cade Otton",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 10.1,
+    "startedPts": 10.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 2,
+    "playerId": 3123076,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "David Njoku",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 10.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "playerId": 4362619,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Chris Rodriguez Jr.",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 10.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 8,
+    "playerId": 4568263,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Ryan Fitzgerald",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 10,
+    "startedPts": 10,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 8,
+    "playerId": 4245661,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Lucas Havrisik",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 10,
+    "startedPts": 10,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 10,
+    "playerId": 4373626,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Damardiac Arrest",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 10,
+    "startedPts": 9.4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 12,
+    "playerId": 5123663,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Isaac TeSlaa",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 10,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 1,
+    "playerId": 15864,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Geno Smith",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 9.8,
+    "startedPts": 9.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 7,
+    "playerId": 4723086,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 9.5,
+    "startedPts": 9.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 2,
+    "playerId": 4877706,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Jayden Higgins",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 9.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 7,
+    "playerId": 8439,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "2 gurls 1 kupp",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 9.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "playerId": 2576925,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Darren Waller",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 9.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 10,
+    "playerId": 4608810,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Tez Johnson",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 9.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "playerId": 4883647,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Elic Ayomanor",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 9.2,
+    "startedPts": 9.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "playerId": 4036133,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "T.J. Hockenson",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 9.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 9,
+    "playerId": 4249087,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Ashton of Ass",
+    "name": "Matt Gay",
+    "pos": "K",
+    "wksHeld": 2,
+    "pts": 9,
+    "startedPts": 9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 11,
+    "playerId": 17372,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Chris Boswell",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 9,
+    "startedPts": 9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 12,
+    "playerId": 4882093,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 8.9,
+    "startedPts": 8.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "playerId": 4240657,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 8.8,
+    "startedPts": 8.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 1,
+    "playerId": 3916945,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Darius Slayton",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 8.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "playerId": 4242392,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Brock Wright",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 8.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "playerId": 4711533,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Ollie Gordon II",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 8.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 3,
+    "playerId": 4685720,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Bryce Young",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 8.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 4,
+    "playerId": 4569587,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 12,
+    "playerId": 3051876,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "Evan Engram",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 7.6,
+    "startedPts": 7.6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 8,
+    "playerId": 4883647,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Elic Ayomanor",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 7.6,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 1,
+    "playerId": 4429096,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "wksHeld": 3,
+    "pts": 7.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 2,
+    "playerId": 2976592,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Sterling Shepard",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 7.1,
+    "startedPts": 7.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "playerId": 14880,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Kirk Cousins",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 7.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 13,
+    "playerId": 4568263,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "Ryan Fitzgerald",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 7,
+    "startedPts": 7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "playerId": 16339,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Brandon McManus",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 7,
+    "startedPts": 7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 3,
+    "playerId": 4360761,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 4,
+    "playerId": 3055899,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Harrison Butker",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 7,
+    "startedPts": 7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 8,
+    "playerId": 16339,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Brandon McManus",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 7,
+    "startedPts": 7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 2,
+    "playerId": 2468609,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Taysom Hill",
+    "pos": "TE",
+    "wksHeld": 2,
+    "pts": 6.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 3,
+    "playerId": 4241479,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 6.8,
+    "startedPts": 6.8,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 3,
+    "playerId": 4427728,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 6.7,
+    "startedPts": 6.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "playerId": 4432775,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Dont'e Thornton Jr.",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 6.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 1,
+    "playerId": 3123052,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Michael Badgley",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 6,
+    "startedPts": 6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 10,
+    "playerId": 2985659,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Wil Lutz",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 6,
+    "startedPts": 6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "playerId": 4242392,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Brock Wright",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 5.9,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 4,
+    "playerId": 4567096,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "John Metchie III",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 5.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 13,
+    "playerId": 4576297,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "EaTN McCokkey",
+    "name": "AJ Barner",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 5.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "playerId": 3116389,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Samaje Perine",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 5.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "playerId": 3116389,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Samaje Perine",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 5.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 1,
+    "playerId": 4428085,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Luke Musgrave",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 5.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 10,
+    "playerId": 3915416,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "DJ Moore",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 5.3,
+    "startedPts": 4.7,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "playerId": 4362619,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Chris Rodriguez Jr.",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 5.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 1,
+    "playerId": 14881,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Russell Wilson",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 5.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 3,
+    "playerId": 4240657,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 5.1,
+    "startedPts": 5.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "playerId": 2985659,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Wil Lutz",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 5,
+    "startedPts": 5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 8,
+    "playerId": 4808839,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Isaiah Bond",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 4.9,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 8,
+    "playerId": 4430539,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 4.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 2,
+    "playerId": 3915411,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Ty Johnson",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 4.6,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 8,
+    "playerId": 4427095,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "DeMario Douglas",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 4.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 8,
+    "playerId": 4429013,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Tank Bigsby",
+    "pos": "RB",
+    "wksHeld": 2,
+    "pts": 4.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 10,
+    "playerId": 3055899,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Harrison Butker",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 4,
+    "startedPts": 4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 1,
+    "playerId": 4569603,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Malik Washington",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 6,
+    "playerId": 4566192,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Joshua Karty",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 4,
+    "startedPts": 4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "playerId": 4697745,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Tyler Loop",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 4,
+    "startedPts": 4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "playerId": 4360234,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "Evan McPherson",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 4,
+    "startedPts": 4,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "playerId": 4695404,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Isaiah Davis",
+    "pos": "RB",
+    "wksHeld": 5,
+    "pts": 3.9,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 6,
+    "playerId": 4367209,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Greg Dulcich",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 3.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 4,
+    "playerId": 4241463,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Jerry Jeudy",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 3.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 4,
+    "playerId": 4597500,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Adonai Mitchell",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 3.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 13,
+    "playerId": 4243389,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "Calvin Austin III",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 3.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 3,
+    "playerId": 4372071,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Hassan Haskins",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 3.3,
+    "startedPts": 3.3,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 7,
+    "playerId": 4243389,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "2 gurls 1 kupp",
+    "name": "Calvin Austin III",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 3.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 11,
+    "playerId": 4430539,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 3.2,
+    "startedPts": 3.2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 1,
+    "playerId": 4723086,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 3.1,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 5,
+    "teamId": 2,
+    "playerId": 4430871,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Sean Tucker",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.9,
+    "startedPts": 2.9,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "playerId": 4685279,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Jaydon Blue",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.9,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "playerId": 4685279,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "Jaydon Blue",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.9,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "playerId": 4361577,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Dyami Brown",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 2.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 2,
+    "playerId": 4426339,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Spencer Rattler",
+    "pos": "QB",
+    "wksHeld": 2,
+    "pts": 2.6,
+    "startedPts": 2.6,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 8,
+    "playerId": 4373626,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "playerId": 4697815,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Rachaad White",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "playerId": 4686422,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Xavier Hutchinson",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 2.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 1,
+    "playerId": 5081397,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Dylan Sampson",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 12,
+    "playerId": 4682652,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Skat's Super CTE",
+    "name": "Devin Neal",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 2.2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "playerId": 4040655,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 2.1,
+    "startedPts": 2.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "playerId": 4040655,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "Darnell Mooney",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 2.1,
+    "startedPts": 2.1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 10,
+    "playerId": 4597703,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Tory Horton",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 2,
+    "startedPts": 2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "playerId": 4429086,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Michael Mayer",
+    "pos": "TE",
+    "wksHeld": 1,
+    "pts": 2,
+    "startedPts": 2,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "playerId": 4597500,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Adonai Mitchell",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 2,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 4,
+    "playerId": 4608686,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 1.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 7,
+    "playerId": 3059915,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Kareem Hunt",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 1.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 7,
+    "playerId": 4882093,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 1.7,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 6,
+    "playerId": 4369863,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Cedric Tillman",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 1.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 8,
+    "playerId": 4242540,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Isaiah Hodgins",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 1.4,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "playerId": 3127586,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jeremy McNichols",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 1.3,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "playerId": 3124084,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Joey Slye",
+    "pos": "K",
+    "wksHeld": 1,
+    "pts": 1,
+    "startedPts": 1,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "playerId": 4596602,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Njigbas in Paris",
+    "name": "Brashard Smith",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 0.8,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "playerId": 3116389,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Samaje Perine",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 0.5,
+    "startedPts": 0.5,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 1,
+    "playerId": 4427600,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Terrell Jennings",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 0.5,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "playerId": 4695883,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "wksHeld": 4,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 1,
+    "teamId": 4,
+    "playerId": 5081397,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id5081397",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 2,
+    "teamId": 11,
+    "playerId": 4366031,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Tank Dell",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 11,
+    "playerId": 4430034,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Xavier Legette",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 3,
+    "teamId": 3,
+    "playerId": 14881,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "id14881",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 4,
+    "playerId": 4685279,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id4685279",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 4,
+    "teamId": 3,
+    "playerId": 4038815,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 4,
+    "playerId": 4808766,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "id4808766",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 3,
+    "playerId": 4695883,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Dart that Dihker in KaiME",
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 6,
+    "teamId": 11,
+    "playerId": 3117256,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "id3117256",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "playerId": 3917315,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Nico Suave",
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 1,
+    "playerId": 4429022,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "id4429022",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 2,
+    "playerId": 4373626,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "id4373626",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 6,
+    "playerId": 4039057,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Lil'Jordan Humphrey",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 1,
+    "playerId": 4608810,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4608810",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "playerId": 3115306,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "id3115306",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 8,
+    "playerId": 4360797,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Myer Lemon",
+    "name": "Tutu Atwell",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 7,
+    "teamId": 1,
+    "playerId": 3051876,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id3051876",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 4,
+    "playerId": 3123076,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Jalen Kirk",
+    "name": "id3123076",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "playerId": 4697745,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4697745",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "playerId": 4362249,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Jayden Reed",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 2,
+    "playerId": 3115306,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Josh Reynolds",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 10,
+    "playerId": 3059915,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "id3059915",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 12,
+    "playerId": 4241372,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Skat's Super CTE",
+    "name": "id4241372",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 2,
+    "playerId": 3117256,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Nico Suave",
+    "name": "id3117256",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 10,
+    "playerId": 3122840,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Damardiac Arrest",
+    "name": "Deshaun Watson",
+    "pos": "QB",
+    "wksHeld": 5,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 6,
+    "playerId": 2576980,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "id2576980",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 11,
+    "playerId": 3116389,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "id3116389",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 8,
+    "teamId": 1,
+    "playerId": 4430034,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4430034",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 11,
+    "playerId": 3917914,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "id3917914",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 7,
+    "playerId": 4429148,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "2 gurls 1 kupp",
+    "name": "id4429148",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 11,
+    "playerId": 3916945,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "id3916945",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 6,
+    "playerId": 5081397,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "id5081397",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 1,
+    "playerId": 3929645,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "id3929645",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 8,
+    "playerId": 3917315,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Myer Lemon",
+    "name": "id3917315",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 4,
+    "playerId": 3046779,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id3046779",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 2,
+    "playerId": 4240657,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "Michael Carter",
+    "pos": "RB",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 9,
+    "teamId": 11,
+    "playerId": 4426948,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "id4426948",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "playerId": 4429096,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id4429096",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 1,
+    "playerId": 4429013,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4429013",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 11,
+    "playerId": 4429148,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Lamar-a-lago",
+    "name": "id4429148",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 4,
+    "playerId": 4429501,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id4429501",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 1,
+    "playerId": 4427095,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "id4427095",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 10,
+    "playerId": 4597703,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Damardiac Arrest",
+    "name": "Tory Horton",
+    "pos": "WR",
+    "wksHeld": 3,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 10,
+    "teamId": 12,
+    "playerId": 2985659,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Skat's Super CTE",
+    "name": "id2985659",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 1,
+    "playerId": 4429096,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4429096",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 11,
+    "teamId": 2,
+    "playerId": 4432577,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Nico Suave",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 1,
+    "playerId": 4429013,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Bucky Irving 🤤",
+    "name": "id4429013",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "playerId": 4360569,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id4360569",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "playerId": 3149687,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id3149687",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "playerId": 3149687,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "id3149687",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 2,
+    "playerId": 4429022,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Nico Suave",
+    "name": "id4429022",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 12,
+    "teamId": 4,
+    "playerId": 4362249,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Jalen Kirk",
+    "name": "Jayden Reed",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 7,
+    "playerId": 4567096,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "2 gurls 1 kupp",
+    "name": "id4567096",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 13,
+    "teamId": 11,
+    "playerId": 4366031,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "Lamar-a-lago",
+    "name": "Tank Dell",
+    "pos": "WR",
+    "wksHeld": 2,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "playerId": 4882093,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4882093",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "playerId": 4430834,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "Jalen McMillan",
+    "pos": "WR",
+    "wksHeld": 1,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "playerId": 4362249,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4362249",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 1,
+    "playerId": 4882093,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Bucky Irving 🤤",
+    "name": "id4882093",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 13,
+    "playerId": 4433970,
+    "bid": 0,
+    "type": "WAIVER",
+    "team": "EaTN McCokkey",
+    "name": "id4433970",
+    "pos": "?",
+    "wksHeld": 0,
+    "pts": 0,
+    "startedPts": 0,
+    "ptsPerDollar": null
+   },
+   {
+    "week": 14,
+    "teamId": 6,
+    "playerId": 14163,
+    "bid": 0,
+    "type": "FREEAGENT",
+    "team": "Njigbas in Paris",
+    "name": "Tyrod Taylor",
+    "pos": "QB",
+    "wksHeld": 1,
+    "pts": -1.8,
+    "startedPts": -1.8,
+    "ptsPerDollar": null
    }
   ]
  }
