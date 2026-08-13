@@ -81,7 +81,8 @@ async function weekly(yr) {
     if (f[ix.season_type] !== 'REG') continue;
     const pos = f[ix.position], name = (f[ix.player_display_name] || '').toLowerCase();
     if (!POS.has(pos) || !name) continue;
-    games.push({ name, pos, week: +f[ix.week], pts: +f[ix.fantasy_points_ppr] || 0 });
+    // team/carries are unused here; handcuff.js reads them off the same rows.
+    games.push({ name, pos, week: +f[ix.week], pts: +f[ix.fantasy_points_ppr] || 0, team: f[ix.team] || f[ix.recent_team], carries: +f[ix.carries] || 0 });
   }
   return games.length ? games : null;
 }
@@ -180,5 +181,10 @@ function selftest() {
   console.log('selftest: all assertions passed');
 }
 
-if (process.argv.includes('--selftest')) selftest();
-else main();
+module.exports = { weekly, csvSplit };
+
+// require.main guard: handcuff.js imports weekly() and must not trigger a run.
+if (require.main === module) {
+  if (process.argv.includes('--selftest')) selftest();
+  else main();
+}
