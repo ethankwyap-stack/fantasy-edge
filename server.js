@@ -19,6 +19,12 @@ const BOOM = (() => { try { return fs.readFileSync(BOOM_PATH); } catch { return 
 // In-season video notes (fantasy-video-inject skill). Same literal-path rule for Vercel tracing.
 const VNOTES_PATH = path.join(__dirname, 'video-notes.json');
 const VNOTES = (() => { try { return fs.readFileSync(VNOTES_PATH); } catch { return Buffer.from('{"notes":{}}'); } })();
+// 2025 season postmortem data story. Same literal-path rule for Vercel tracing.
+// The file is also published as a claude.ai Artifact, so it stays artifact-shaped:
+// no doctype, no <head>, no <meta charset>. That's why this route sends charset
+// explicitly — without it the team-name emoji and every en-dash render as mojibake.
+const POSTMORTEM_PATH = path.join(__dirname, 'site', '2025-postmortem.html');
+const POSTMORTEM = (() => { try { return fs.readFileSync(POSTMORTEM_PATH); } catch { return null; } })();
 
 const PORT = process.env.PORT || 4650;
 const SECRET = espn.loadEnv().APP_SECRET;
@@ -53,6 +59,11 @@ http.createServer((req, res) => {
   if (req.url.startsWith('/video-notes.json')) {
     res.setHeader('Content-Type', 'application/json');
     try { return res.end(fs.readFileSync(VNOTES_PATH)); } catch { return res.end(VNOTES); }
+  }
+  if (req.url.startsWith('/2025-postmortem')) {
+    if (!POSTMORTEM) { res.statusCode = 404; return res.end('Postmortem page not found.'); }
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    try { return res.end(fs.readFileSync(POSTMORTEM_PATH)); } catch { return res.end(POSTMORTEM); }
   }
   res.setHeader('Content-Type', 'text/html');
   res.end(INDEX);
