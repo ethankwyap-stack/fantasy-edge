@@ -1,0 +1,491 @@
+{
+ "defenseYear": 2025,
+ "scheduleYear": 2026,
+ "weeks": [
+  15,
+  16,
+  17
+ ],
+ "rows": [
+  {
+   "team": "ARI",
+   "opponents": [
+    "NYJ",
+    "NO",
+    "LV"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 18.3,
+    "RB": 21.7,
+    "WR": 16.7,
+    "TE": 14
+   }
+  },
+  {
+   "team": "ATL",
+   "opponents": [
+    "WAS",
+    "TB",
+    "NO"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 22.3,
+    "RB": 20,
+    "WR": 18.7,
+    "TE": 23
+   }
+  },
+  {
+   "team": "BAL",
+   "opponents": [
+    "PIT",
+    "CLE",
+    "CIN"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 19.3,
+    "RB": 19.3,
+    "WR": 12,
+    "TE": 24.3
+   }
+  },
+  {
+   "team": "BUF",
+   "opponents": [
+    "CHI",
+    "DEN",
+    "MIA"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 18,
+    "RB": 13.7,
+    "WR": 18,
+    "TE": 20.3
+   }
+  },
+  {
+   "team": "CAR",
+   "opponents": [
+    "CIN",
+    "PIT",
+    "SEA"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 20,
+    "RB": 14.3,
+    "WR": 10.7,
+    "TE": 28
+   }
+  },
+  {
+   "team": "CHI",
+   "opponents": [
+    "BUF",
+    "GB",
+    "DET"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 13.3,
+    "RB": 15.7,
+    "WR": 17,
+    "TE": 9.7
+   }
+  },
+  {
+   "team": "CIN",
+   "opponents": [
+    "CAR",
+    "IND",
+    "BAL"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 15,
+    "RB": 19,
+    "WR": 21.7,
+    "TE": 17.3
+   }
+  },
+  {
+   "team": "CLE",
+   "opponents": [
+    "NYG",
+    "BAL",
+    "IND"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 21.3,
+    "RB": 20.3,
+    "WR": 27.7,
+    "TE": 14
+   }
+  },
+  {
+   "team": "DAL",
+   "opponents": [
+    "LA",
+    "JAX",
+    "NYG"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 18,
+    "RB": 14.3,
+    "WR": 20.3,
+    "TE": 16
+   }
+  },
+  {
+   "team": "DEN",
+   "opponents": [
+    "LV",
+    "BUF",
+    "NE"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 10.3,
+    "RB": 16.7,
+    "WR": 13.3,
+    "TE": 8.3
+   }
+  },
+  {
+   "team": "DET",
+   "opponents": [
+    "MIN",
+    "NYG",
+    "CHI"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 16,
+    "RB": 17.3,
+    "WR": 18.7,
+    "TE": 10
+   }
+  },
+  {
+   "team": "GB",
+   "opponents": [
+    "MIA",
+    "CHI",
+    "HOU"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 16,
+    "RB": 17,
+    "WR": 16,
+    "TE": 18.7
+   }
+  },
+  {
+   "team": "HOU",
+   "opponents": [
+    "JAX",
+    "PHI",
+    "GB"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 12.3,
+    "RB": 12.7,
+    "WR": 14,
+    "TE": 11.7
+   }
+  },
+  {
+   "team": "IND",
+   "opponents": [
+    "TEN",
+    "CIN",
+    "CLE"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 19.7,
+    "RB": 21.7,
+    "WR": 12.3,
+    "TE": 21
+   }
+  },
+  {
+   "team": "JAX",
+   "opponents": [
+    "HOU",
+    "DAL",
+    "WAS"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 21.7,
+    "RB": 22,
+    "WR": 20,
+    "TE": 17.7
+   }
+  },
+  {
+   "team": "KC",
+   "opponents": [
+    "NE",
+    "SF",
+    "LAC"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 11,
+    "RB": 10.7,
+    "WR": 15,
+    "TE": 16.7
+   }
+  },
+  {
+   "team": "LA",
+   "opponents": [
+    "DAL",
+    "SEA",
+    "TB"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 22.7,
+    "RB": 16.3,
+    "WR": 18.3,
+    "TE": 20.7
+   }
+  },
+  {
+   "team": "LAC",
+   "opponents": [
+    "SF",
+    "MIA",
+    "KC"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 18.7,
+    "RB": 18.3,
+    "WR": 15,
+    "TE": 20.3
+   }
+  },
+  {
+   "team": "LV",
+   "opponents": [
+    "DEN",
+    "TEN",
+    "ARI"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 18.7,
+    "RB": 15.3,
+    "WR": 17,
+    "TE": 22.7
+   }
+  },
+  {
+   "team": "MIA",
+   "opponents": [
+    "GB",
+    "LAC",
+    "BUF"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 6,
+    "RB": 14.7,
+    "WR": 11.3,
+    "TE": 5.3
+   }
+  },
+  {
+   "team": "MIN",
+   "opponents": [
+    "DET",
+    "WAS",
+    "NYJ"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 28.3,
+    "RB": 22,
+    "WR": 23,
+    "TE": 23.7
+   }
+  },
+  {
+   "team": "NE",
+   "opponents": [
+    "KC",
+    "NYJ",
+    "DEN"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 17.7,
+    "RB": 12.7,
+    "WR": 11.7,
+    "TE": 16.7
+   }
+  },
+  {
+   "team": "NO",
+   "opponents": [
+    "TB",
+    "ARI",
+    "ATL"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 21.7,
+    "RB": 22,
+    "WR": 19,
+    "TE": 20.7
+   }
+  },
+  {
+   "team": "NYG",
+   "opponents": [
+    "CLE",
+    "DET",
+    "DAL"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 20.3,
+    "RB": 17.3,
+    "WR": 22.7,
+    "TE": 14
+   }
+  },
+  {
+   "team": "NYJ",
+   "opponents": [
+    "ARI",
+    "NE",
+    "MIN"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 10.3,
+    "RB": 14.7,
+    "WR": 9.7,
+    "TE": 19.3
+   }
+  },
+  {
+   "team": "PHI",
+   "opponents": [
+    "SEA",
+    "HOU",
+    "SF"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 10,
+    "RB": 12.3,
+    "WR": 9.3,
+    "TE": 19.3
+   }
+  },
+  {
+   "team": "PIT",
+   "opponents": [
+    "BAL",
+    "CAR",
+    "TEN"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 18.3,
+    "RB": 20.7,
+    "WR": 20.7,
+    "TE": 15.3
+   }
+  },
+  {
+   "team": "SEA",
+   "opponents": [
+    "PHI",
+    "LA",
+    "CAR"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 10,
+    "RB": 19,
+    "WR": 11,
+    "TE": 12.3
+   }
+  },
+  {
+   "team": "SF",
+   "opponents": [
+    "LAC",
+    "KC",
+    "PHI"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 8.3,
+    "RB": 10,
+    "WR": 9.3,
+    "TE": 5
+   }
+  },
+  {
+   "team": "TB",
+   "opponents": [
+    "NO",
+    "ATL",
+    "LA"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 13,
+    "RB": 14,
+    "WR": 18.3,
+    "TE": 11.3
+   }
+  },
+  {
+   "team": "TEN",
+   "opponents": [
+    "IND",
+    "LV",
+    "PIT"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 20.3,
+    "RB": 13,
+    "WR": 26,
+    "TE": 19.7
+   }
+  },
+  {
+   "team": "WAS",
+   "opponents": [
+    "ATL",
+    "MIN",
+    "JAX"
+   ],
+   "byes": 0,
+   "avgOppDefRank": {
+    "QB": 11,
+    "RB": 9.3,
+    "WR": 13.7,
+    "TE": 11
+   }
+  }
+ ]
+}

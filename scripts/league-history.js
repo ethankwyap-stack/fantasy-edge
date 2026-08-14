@@ -881,6 +881,12 @@ if (require.main === module) (async () => {
     console.log('  avg opposing-defense rank across weeks 15-17 (1 = toughest, 32 = easiest):');
     for (const r of out.playoffSoS.rows)
       console.log(`  ${r.team}: QB ${r.avgOppDefRank.QB ?? '—'}, RB ${r.avgOppDefRank.RB ?? '—'}, WR ${r.avgOppDefRank.WR ?? '—'}, TE ${r.avgOppDefRank.TE ?? '—'}${r.byes ? ` (${r.byes} bye)` : ''}`);
+    // Own top-level file, not merged into league-history-<season>.json — the site's
+    // server.js reads a literal path (Vercel tracing), same reason boom-rates.json
+    // and video-notes.json each get their own file instead of nesting under one blob.
+    const sosFile = path.join(__dirname, '..', 'playoff-sos.json');
+    fs.writeFileSync(sosFile, JSON.stringify(out.playoffSoS, null, 1));
+    console.log(`  wrote ${sosFile}`);
   }
   if (!Object.keys(out).length) {
     console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --kdst-variance | --faab-ceilings | --playoff-sos | --all | --selftest  [--season YYYY]');

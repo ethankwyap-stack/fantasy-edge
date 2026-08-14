@@ -70,6 +70,7 @@
   <button data-tab="lineup">Start/Sit</button>
   <button data-tab="waivers">Waivers</button>
   <button data-tab="trades">Trades</button>
+  <button data-tab="sos">Playoff SoS</button>
 </nav>
 <div id="view" class="msg">Loading league data…</div>
 
@@ -260,7 +261,7 @@ async function load() {
     // 450 matches the research pool (scripts/draft-research.js) so every player Claude
     // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes] = await Promise.all([
+    const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes, sos] = await Promise.all([
       espn('mTeam,mRoster,mSettings,mMatchup'),
       fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
@@ -269,8 +270,10 @@ async function load() {
       fetch('/api/nfl?feed=injuries').then(r=>r.json()).catch(()=>({data:{}})),
       fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]})),
       fetch('/boom-rates.json').then(r=>r.json()).catch(()=>({players:{}})),
-      fetch('/video-notes.json').then(r=>r.json()).catch(()=>({notes:{}}))
+      fetch('/video-notes.json').then(r=>r.json()).catch(()=>({notes:{}})),
+      fetch('/playoff-sos.json').then(r=>r.json()).catch(()=>({rows:[]}))
     ]);
+    S.sos = sos;
     S.vnotes = vnotes.notes || {};
     S.vnoteTtl = vnotes._ttlWeeks || 3;
     S.boom = boom.players || {};
@@ -990,6 +993,18 @@ const views = {
     <table><tr><th>Team</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th></tr>${S.teams.map(t => { const s = strength(t);
       return `<tr class="${t.id===S.myTeamId?'mine':''}"><td>${esc(teamName(t))}${t.id===S.myTeamId?' (you)':''}</td><td>${s.QB}</td><td>${s.RB}</td><td>${s.WR}</td><td>${s.TE}</td></tr>`;
     }).join('')}</table>`;
+  },
+  sos() {
+    const rows = S.sos.rows || [];
+    if (!rows.length) return '<div class="msg">No playoff-SoS data yet — run <code>node --env-file=.env scripts/league-history.js --playoff-sos --season 2025</code> and redeploy.</div>';
+    const cell = r => v => v==null ? '—' : `<span class="chip ${v>=22?'good':v<=11?'risk':''}">${v}</span>`;
+    const avg = r => { const v = Object.values(r.avgOppDefRank).filter(x=>x!=null); return v.length ? +(v.reduce((a,b)=>a+b,0)/v.length).toFixed(1) : null; };
+    const sorted = [...rows].sort((a,b) => (avg(b)??-1) - (avg(a)??-1));
+    return `<h2>Playoff-weeks (${S.sos.weeks.join('-')}) strength of schedule — ${S.sos.scheduleYear}</h2>
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Ranks each NFL defense 1 (stingiest) to 32 (most generous) on PPR points allowed per position, using ${S.sos.defenseYear} actuals, then averages each team's ${S.sos.weeks.join('/')} opponents. Higher = softer matchups = a plus for trade targets and stashes now; this goes stale once the games are actually played. Green = top-third softest schedule, red = bottom-third toughest.</div>
+    <table><tr><th>NFL Team</th><th>Avg</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>Wk ${S.sos.weeks.join('/')} opponents</th></tr>${
+      sorted.map(r => `<tr><td>${esc(r.team)}</td><td>${cell(r)(avg(r))}</td><td>${cell(r)(r.avgOppDefRank.QB)}</td><td>${cell(r)(r.avgOppDefRank.RB)}</td><td>${cell(r)(r.avgOppDefRank.WR)}</td><td>${cell(r)(r.avgOppDefRank.TE)}</td><td class="meta">${r.opponents.map(o=>o||'BYE').join(', ')}</td></tr>`).join('')
+    }</table>`;
   }
 };
 window.setSlot = v => { localStorage.slot = v; render(); };

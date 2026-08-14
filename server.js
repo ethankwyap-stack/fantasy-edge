@@ -19,6 +19,10 @@ const BOOM = (() => { try { return fs.readFileSync(BOOM_PATH); } catch { return 
 // In-season video notes (fantasy-video-inject skill). Same literal-path rule for Vercel tracing.
 const VNOTES_PATH = path.join(__dirname, 'video-notes.json');
 const VNOTES = (() => { try { return fs.readFileSync(VNOTES_PATH); } catch { return Buffer.from('{"notes":{}}'); } })();
+// Playoff-weeks (15-17) strength of schedule (scripts/league-history.js --playoff-sos).
+// Same literal-path rule for Vercel tracing; a missing file is fine — the tab just says so.
+const SOS_PATH = path.join(__dirname, 'playoff-sos.json');
+const SOS = (() => { try { return fs.readFileSync(SOS_PATH); } catch { return Buffer.from('{"rows":[]}'); } })();
 // 2025 season postmortem data story. Same literal-path rule for Vercel tracing.
 // The file is also published as a claude.ai Artifact, so it stays artifact-shaped:
 // no doctype, no <head>, no <meta charset>. That's why this route sends charset
@@ -59,6 +63,10 @@ http.createServer((req, res) => {
   if (req.url.startsWith('/video-notes.json')) {
     res.setHeader('Content-Type', 'application/json');
     try { return res.end(fs.readFileSync(VNOTES_PATH)); } catch { return res.end(VNOTES); }
+  }
+  if (req.url.startsWith('/playoff-sos.json')) {
+    res.setHeader('Content-Type', 'application/json');
+    try { return res.end(fs.readFileSync(SOS_PATH)); } catch { return res.end(SOS); }
   }
   if (req.url.startsWith('/2025-postmortem')) {
     if (!POSTMORTEM) { res.statusCode = 404; return res.end('Postmortem page not found.'); }
