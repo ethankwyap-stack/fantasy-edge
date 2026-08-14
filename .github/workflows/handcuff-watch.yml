@@ -1,0 +1,27 @@
+name: Handcuff watch
+on:
+  schedule:
+    # Daily, 7am PDT (14:00 UTC, drifts to 6am after Nov PST switch, accepted like the other
+    # crons) — after the injury report settles overnight, before the day's FAAB deadline.
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/cache@v4
+        with:
+          path: handcuff-state.json
+          key: handcuff-state-${{ github.run_id }}
+          restore-keys: handcuff-state-
+      - run: node scripts/handcuff-watch.js
+        env:
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          SEASON: ${{ secrets.SEASON }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

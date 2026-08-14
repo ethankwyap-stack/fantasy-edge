@@ -9,9 +9,12 @@
 //   4. this league's rosters + FAAB        -> is the handcuff free, and how much to bid
 //
 // Usage: node --env-file=.env scripts/handcuff-watch.js [--selftest]
+//   (dry run without TELEGRAM_BOT_TOKEN: prints the table, saves state, doesn't send)
+const fs = require('fs');
 const { weekly } = require('./boom-rates'); // require.main-guarded there, no run kicked off
 
-const { LEAGUE_ID, ESPN_S2, SWID, SEASON = '2026', MY_TEAM_ID = '1' } = process.env;
+const { LEAGUE_ID, ESPN_S2, SWID, SEASON = '2026', MY_TEAM_ID = '1', TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } = process.env;
+const STATE_FILE = 'handcuff-state.json';
 const OUT_STATUSES = new Set(['Out', 'Doubtful', 'Injured Reserve', 'IR']);
 const CLEAR_SHARE = 0.55; // handcuff carries this season / team RB carries this season
 
@@ -163,6 +166,38 @@ async function main() {
   if (myBudget != null) console.log(`\nYour remaining FAAB: $${myBudget}`);
   console.log('\nRole signal needs real season carries — early in the year most of these will read');
   console.log('"no games yet" and lean on depth chart order alone. That is expected, not a bug.');
+
+  await alertOnFreeAgents(rows, myBudget);
+}
+
+// Only free-agent handcuffs are worth a phone ping — "already yours" / "owned by X" need
+// no action. Dedup by the (injured, handcuff) pair so the same still-injured, still-free
+// handcuff doesn't re-alert every run; a NEW pairing (different injury, or he got claimed
+// and freed again) sends again, same idea as lineup-alert.js's per-week signature.
+function alertSig(rows) {
+  return rows.map(r => `${r.inj.name}>${r.cuff.name}`).sort().join('|');
+}
+
+async function alertOnFreeAgents(rows, myBudget) {
+  const actionable = rows.filter(r => !r.status.owner);
+  if (!actionable.length) return console.log('\nNo free-agent handcuffs to alert on.');
+
+  const thisSig = alertSig(actionable);
+  let state = {}; try { state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8')); } catch { }
+  if (state.sent === thisSig) return console.log('\nSame free-agent handcuffs as last run — not re-alerting.');
+  fs.writeFileSync(STATE_FILE, JSON.stringify({ sent: thisSig }));
+
+  const lines = actionable.map(r =>
+    `${r.cuff.name} (${r.inj.team}) — backup for ${r.inj.name} (${r.inj.status}), ${r.roleLabel || 'no games yet'}\n${r.action}`);
+  const text = '🏈 Handcuff watch:\n\n' + lines.join('\n\n') +
+    (myBudget != null ? `\n\nYour remaining FAAB: $${myBudget}` : '');
+
+  if (!TELEGRAM_BOT_TOKEN) return console.log('\nNo TELEGRAM_BOT_TOKEN — dry run, state saved, not sending.');
+  await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text }),
+  });
+  console.log('\nSent Telegram alert.');
 }
 
 function selftest() {
@@ -201,10 +236,16 @@ function selftest() {
   assert.strictEqual(suggestion('clear backfield', { owner: 'you' }), 'already yours — no action');
   assert.strictEqual(suggestion('clear backfield', { owner: 'Nico Suave' }), 'owned by Nico Suave — no action');
 
+  const rowsA = [{ inj: { name: 'Zach Charbonnet' }, cuff: { name: 'Emanuel Wilson' } }];
+  const rowsB = [{ inj: { name: 'Zach Charbonnet' }, cuff: { name: 'Emanuel Wilson' } }];
+  assert.strictEqual(alertSig(rowsA), alertSig(rowsB), 'same pairing -> same signature, so a re-run does not re-alert');
+  const rowsC = [{ inj: { name: 'James Conner' }, cuff: { name: 'Trey Benson' } }];
+  assert.notStrictEqual(alertSig(rowsA), alertSig(rowsC), 'a different injury/handcuff pairing is new advice');
+
   console.log('selftest: all assertions passed');
 }
 
-module.exports = { pickHandcuff, roleSignal, suggestion, isHandcuffWorthy };
+module.exports = { pickHandcuff, roleSignal, suggestion, isHandcuffWorthy, alertSig };
 
 if (require.main === module) {
   if (process.argv.includes('--selftest')) selftest();
