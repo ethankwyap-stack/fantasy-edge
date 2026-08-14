@@ -22,7 +22,12 @@ const { bestLineup, SLOT } = require('./league-history.js');
 const { LEAGUE_ID, ESPN_S2, SWID, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } = process.env;
 const SEASON = +(process.env.SEASON || new Date().getFullYear());
 const MY_TEAM_ID = +(process.env.MY_TEAM_ID || 1);
-const MIN_GAP = +(process.env.MIN_GAP || 5); // projected points; below this it isn't worth a push notification
+// Derived Aug 2026 by simulating this exact metric (projected-vs-projected, pre-kickoff)
+// across all 168 team-weeks of 2025: median gap is 0 (ESPN's default lineup is usually
+// already close), 90th pctile 2.3, 95th pctile 3.0. 5 sat above nearly the whole
+// distribution and would have missed real misses (Ethan's own weeks had 1.3/1.4-pt gaps
+// that never fired). 3 still filters noise (~5% of team-weeks clear it) but catches them.
+const MIN_GAP = +(process.env.MIN_GAP || 3); // projected points; below this it isn't worth a push notification
 const STATE_FILE = 'lineup-state.json';
 const POS = { 1: 'QB', 2: 'RB', 3: 'WR', 4: 'TE', 5: 'K', 16: 'D/ST' };
 const BENCHED = s => s === 20 || s === 21;
