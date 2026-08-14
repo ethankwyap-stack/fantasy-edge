@@ -1010,8 +1010,11 @@ const views = {
       <td><span class="chip ${cls}">${p.themGain > 0 ? '+' : ''}${p.themGain} to them</span><br><span class="meta">by ESPN/ADP</span>
         ${rejectable ? `<br><button class="btn" onclick="rejectTrade('${tradeKey(p)}')">✕ not interested</button>` : ''}</td></tr>`).join('');
     // Nothing mutually positive is a real answer, not a bug — but show the near misses so he can
-    // see how far off fair they are, sorted by the smallest loss to the other side.
-    const near = all.filter(p => p.themGain <= 0).sort((a,b) => (b.meGain+b.themGain) - (a.meGain+a.themGain)).slice(0, 5);
+    // see how far off fair they are, sorted by the smallest loss to the other side (closest to 0
+    // themGain first). NOT by meGain+themGain — that sort previously rewarded the MOST lopsided
+    // offers (send one mid player, get two stars, they lose 145 but the combined total looked
+    // biggest), which surfaced exactly the trades nobody would accept instead of the close ones.
+    const near = all.filter(p => p.themGain <= 0).sort((a,b) => b.themGain - a.themGain).slice(0, 5);
     const list = props.length ? rows(props, '', true) : `<tr><td colspan="3" class="msg">No trade helps both sides right now — every roster's starters are already where they're worth the most. Closest misses (the other side loses, so expect a no):</td></tr>${rows(near, 'risk', false)}`;
     // Starter value by position: what your lineup would lose if that position vanished.
     const strength = t => { const r = rosterOf(t.id), tot = lineupTotal(r);
