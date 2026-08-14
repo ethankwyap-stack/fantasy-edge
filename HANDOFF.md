@@ -1,60 +1,68 @@
-# Fantasy Edge — Handoff (Aug 13 2026, session 4)
+# Fantasy Edge — Handoff (Aug 13 2026, session 5)
 
-Project: `/Users/ethanyap/fantasy-edge`. **Read `CLAUDE.md` in that folder first** — stack, deploy steps, and a long Gotchas list this file does not repeat.
+Project: `/Users/ethanyap/fantasy-edge`. **Read `CLAUDE.md` in that folder first** — stack, deploy steps, and a long Gotchas list this file does not repeat (this session added one new entry to it, see Gotchas below).
 
-Previous handoff archived at `handoff-archive/2026-08-13d.md`. Everything from it that is still true is carried forward below — **do not go read it**. It describes nine completed analyses and an empty queue; that is still accurate, and this session added two shipped in-season *tools* on top (not analyses).
+Previous handoff archived at `handoff-archive/2026-08-13-session4.md`. Everything in it that's still true is carried forward below — **do not go re-read it**, this file supersedes it. Note the file may be tracked as `HANDOFF.md` (uppercase) in git; macOS is case-insensitive so `handoff.md` also resolves — don't create a second lowercase copy.
 
-Note the file is `HANDOFF.md` (uppercase) in git. macOS is case-insensitive so `handoff.md` also resolves — don't create a second lowercase copy, you'll be editing the same tracked file.
-
-Ethan's standing goal for this line of work, in his words: **"rigorous data analytics" that "translate to winning results."** Actionable findings tied to a decision he can make, not trivia.
+Ethan's standing goal, in his words: **"rigorous data analytics" that "translate to winning results."** Actionable findings tied to a decision he can make, not trivia.
 
 ---
 
 ## TL;DR
 
-1. **Everything from this session is BUILT, VERIFIED, COMMITTED, PUSHED, and LIVE.** Three commits: `391ab36`, `9647fee`, `8d58a8c`. Nothing is half-done. `[verified — git log, live curl]`
-2. **Two new things exist:** (a) `scripts/lineup-alert.js` — a Sunday cron that Telegrams him when his set lineup is worse than the optimal one; (b) the Start/Sit tab is now a **win-probability** tab, not a projection list.
-3. **A third, smaller piece:** K/D-ST week-to-week variance is now *measured* from ESPN weekly actuals (`league-history.js --kdst-variance`, study 10) and feeds the win-probability math.
-4. **The nine prior analyses are untouched and still correct. Do not redo any.**
-5. **Nothing is blocked on Ethan.** No decision pending.
-6. **He asked for the to-do list and then ended the session.** The four candidate next items are in "The next task" below — he did NOT pick one. **Ask, don't guess.**
+1. **Code is WRITTEN and VERIFIED but NOT COMMITTED, NOT PUSHED, NOT LIVE.** `git status` shows 3 modified files, uncommitted. This is different from session 4, which shipped everything. **First thing to check: has Ethan asked for a commit yet, or does he still want to review/extend first?** He explicitly asked to defer one more piece of work (see #3) before wrapping — don't commit/push without checking whether he wants that folded in first, or wants it as a separate commit.
+2. **This session did two things:** (a) ran a rigorous backtest series answering "does strength-of-schedule (SoS) actually predict fantasy performance," landing on a nuanced, position-and-role-specific answer; (b) built that finding into a real feature — `scripts/lineup-alert.js` now also sends a **bell-cow RB matchup note** on top of its existing Sunday lineup-gap alert.
+3. **One deferred task, explicitly requested, not yet started:** feed a *rest-of-season* version of the same bell-cow RB SoS signal into the trade finder's `_cval` (private valuation) in `index.html`. Ethan said "build it later add to handoff" — this is that later. Full spec in "The next task" below.
+4. **Nothing from session 4 was touched or broken.** Win-probability Start/Sit tab, K/D-ST variance, the lineup-alert cron itself — all untouched.
+5. **The decision still open:** none from Ethan's side on what was built — he approved every step live (asked clarifying questions via AskUserQuestion, got answers, built accordingly). The only open thing is **whether/when to commit** — ask him.
 
 ---
 
 ## What was accomplished this session
 
-He opened with "these tests are really insightful, are there any other deeper analysis stuff you can do that will definitely benefit me this year." I proposed five in-season ideas ranked by decision impact. He picked **#2 then #1**, in that order, explicitly.
+Ethan asked how the existing `--playoff-sos` study (weeks 15-17 strength-of-schedule) is evaluated, then pushed for an escalating series of backtests to check whether it's actually accurate. This was NOT proactively suggested — he drove every step (see the exact sequence below), which matters for tone: don't re-propose this whole arc as if it were a suggestion, it's already-completed work he asked for directly.
 
-### Thing 1 — `scripts/lineup-alert.js` (the Sunday guardrail)
+### Backtest series (four one-off scratch tests, none committed — by design, "before you save it, run a test" was his framing throughout)
 
-**Why this one first:** the 2025 postmortem's headline failure was *deployment*, not acquisition — 222.4 points left on the bench, and only 26% of the points his own waiver pickups produced ever got started (worst in the league). That is a "forgot on Sunday" problem, which a diagnosis cannot fix and an alert can.
+All lived in a scratchpad dir, now gone (session-scoped temp dir) — the numbers are preserved here, the code is not. If exact numbers are needed again, they'd have to be re-derived; the logic is simple (see each bullet).
 
-- Reads the lineup ESPN **currently has set**, builds the best legal lineup off this week's projections, alerts only when the gap clears `MIN_GAP` (default 5 pts, env-overridable).
-- Reuses `bestLineup()` from `league-history.js` rather than reimplementing it.
-- `.github/workflows/lineup-alert.yml` — Sundays `0 14 * * 0` and `30 16 * * 0` UTC (10am / 12:30pm ET, both pre-kickoff). Thursday/Monday deliberately not covered.
-- State in `lineup-state.json` (gitignored, actions/cache) — one advice signature per week, so identical advice never re-fires but changed advice does.
-- `--selftest` passes (7 assertions, no network). Live dry run on his real roster: **Week 1, 0 locked, +0 pts — his lineup is already optimal, no alert.** `[verified — ran both]`
+1. **`sos-backtest.js`** — does a defense's FULL prior-season allowed-rank predict its rank specifically in the FOLLOWING season's weeks 15-17 (i.e. does `--playoff-sos`'s own methodology actually work)? Spearman rank correlation, 2022→2023, 2023→2024, 2024→2025. **Result: near zero / noisy** (QB avg -0.05, RB avg 0.03, WR avg -0.03, TE avg 0.19) — much weaker than correlating against the *full* next season (QB 0.09, RB 0.34, WR -0.03, TE 0.20).
+2. **`sos-window-trend.js`** — is weeks-15-17 uniquely bad for this signal, or is any 3-week window this noisy? Slid a 3-week window across the whole next season. **Result: correlation peaks early (weeks 3-5) and decays toward the playoff window** — so weeks 15-17 specifically are the worst part of the season to try to predict this way, not a random draw.
+3. **`sos-insession-trend.js`** — instead of last year's data, use THIS season's own weeks 1-through-N to predict THIS season's weeks 15-17. Tested cutoffs N=3..14. **Result: flat/weak throughout** (overall avg corr 0.01-0.08), best cutoff week 4 at only 0.08 — no in-season cutoff meaningfully improves the prediction.
+4. **`sos-player-accuracy.js`** — moved from team-level rank correlation to individual PLAYER output: does opponent defensive rank actually move a given player's own points (points above his own season average, leave-that-week-out defensive rank to avoid leakage)? 22,693 player-weeks, 2022-2025. **Result: real but small.** QB corr 0.121 (+1.2 pts facing top-8 vs bottom-8 D), RB corr 0.085 (+1.3 pts), WR corr 0.034 (+0.2 pts), TE corr 0.057 (+0.7 pts). All under ~1.5% variance explained.
 
-### Thing 2 — Start/Sit became a win-probability tab (`index.html`)
+At this point Ethan asked me to confirm the conclusion ("so basically strength of schedule has a minute effect?") — I said yes. **He then pushed back**, specifically citing that a WR facing a shutdown CB, or an RB facing a strong interior run defense, should show a real effect that team-wide averaging might be hiding. This pushback was correct and led to the fifth test:
 
-**The argument:** the league seeds **record-first** (points are only the tiebreaker — this is already in CLAUDE.md and was verified against 2025 final standings). So the real question a start/sit decision answers is "does this raise my chance of winning THIS matchup", not "does this raise my projected total". The two disagree exactly when the matchup is lopsided: a favourite wants the floor, an underdog needs the spike.
+5. **`sos-tier-matchup.js`** — the key test. Split WR into elite (top-12 by season TARGETS, not points — points would be circular) vs everyone else; RB into bell-cow (top-15 by season CARRIES) vs everyone else. Compared each tier's points-above-own-average facing top-8 vs bottom-8 defenses. **This is the finding everything downstream is built on:**
+   - **RB: hypothesis confirmed, strongly.** Bell-cow backs show a **+3.3 pt gap** (bottom-8 vs top-8 run D) above their own average. Depth RBs only show +1.1. A true workhorse is ~3x more matchup-sensitive than a committee back — this signal was being averaged away by the team-wide test.
+   - **WR: hypothesis rejected, and inverted.** Elite-target WRs show almost NO gap (+0.15, noise), while depth WRs show a bigger gap (+0.51). Read: NFL defenses don't uniformly "shut down" true WR1s — they scheme extra help (safety over the top, bracket coverage) regardless of overall defensive quality, so a true WR1's volume/usage stays high either way. A depth WR3/4 is left on an island against whatever corner is on the field, so *his* output swings more with defense quality.
+   - **Conclusion Ethan and I landed on together: RB-only, bell-cow-only signal is real and worth building. WR — even elite WR — is not, at any tier.** `[verified — ran all 5 tests against real nflverse data this session]`
 
-- Both sides modelled `Normal(Σ weekly projections, Σ per-player variance)`; win% = normal CDF (A&S 7.1.26 erf approximation) on the difference.
-- Volatility is a **coefficient of variation (sd/mean)** applied to this week's projection — the ratio transfers across seasons, the absolute sd does not.
-- `boom-rates.js` now writes a per-player `sd` (sample, n−1; `null` for a 1-game player).
-- Needed `mMatchup` added to the `espn()` view list in `load()`; `oppOf()` keys on `matchupPeriodId`.
-- Headline gives him his stance in words ("You're a 57.5% favourite — protect the floor" / "You're a 3.3% underdog — you need variance").
-- Table below lists only swaps where the two currencies **disagree**.
+### Feature built: bell-cow RB matchup note in `scripts/lineup-alert.js`
 
-### Thing 3 — measured K/D-ST variance (study 10)
+Ethan asked "what can we build to leverage this" — I recommended folding it into the existing Sunday lineup-alert cron (cheapest integration, no new UI, no new cron) over two alternatives (a Start/Sit win-prob multiplier, or a standalone manual-run flag). He picked that.
 
-He then asked "why is kicker and dst out", and after I explained, "would it be stronger to include it or no". Straight answer: **yes**, because omitting them is not neutral — it asserts cv 0 on two roster spots, which understates spread and makes every win probability overconfident.
+- `rankRBAllowed(games, trailingWeeks)` — ranks all 32 NFL teams 1 (stingiest) to 32 (most generous) on PPR pts/game allowed to RB, over a **trailing window** (see fix #1 below).
+- `bellCowNames(games, n=15)` — top-15 RBs league-wide by season-to-date CARRIES (not points — deliberately not circular with the effect being measured).
+- `rbSosNotes(wk, players)` — orchestrates: fetches nflverse `weekly(SEASON)`, ESPN `proTeamSchedules_wl` for the CURRENT season (not next season like `--playoff-sos`), resolves each of Ethan's rostered RBs' opponent for week `wk`, and if he owns a bell-cow back in a top-8 or bottom-8 run-D matchup, emits a note (🛑 tough matchup / 🟢 soft matchup).
+- Folded into the same Telegram message as the lineup-gap alert, same dedup signature (`sig()` now includes the RB notes so a changed matchup note re-fires even if the lineup itself is already optimal — and the alert now fires on **either** condition, not just the lineup gap).
+- **Deliberately excludes WR/TE entirely** — the backtest says there's nothing there. Don't add it later without a fresh backtest.
 
-- New `league-history.js --kdst-variance`: walks all 14 weeks of 2025 league rosters, reads ESPN weekly actuals for every rostered K and D/ST.
-- **Result: K cv 0.568 (mean 8.6, sd 4.9, n=188 games played). D/ST cv 0.919 (mean 7.3, sd 6.7, n=220).** The defense is the swingiest slot on the roster, bigger than any skill position. `[verified — ran it]`
-- **Effect on his Week 1 read: 57.5% → 54.5%**, toward the coin flip, exactly the predicted direction. An assert pins that direction.
-- Positional, not per-player, on purpose: K and D/ST get streamed, so a per-player rate is precision he can't use.
-- Lands in `boom-rates.json` under `posVar` (the only data file the browser already fetches — no new server route, no new fetch).
+Then Ethan asked the sharp follow-up: "what happens if the strength of schedule changes, or if an interior lineman is injured." Correctly identified two real gaps, both were his idea to name, both got built:
+
+**Fix 1 — trailing window (lag problem).** `rankRBAllowed()` was a full-season average, which reacts slowly to an in-season defensive change (new DC, a lost starter) — an 8-week-old sample keeps outvoting recent games. Changed to a **trailing 6-week window** (`TRAILING_WEEKS = 6` constant), windowed on whatever games exist so it still degrades gracefully on a partial season. Selftest covers a game aging out of the window.
+
+**Fix 2 — injury caveat (personnel-blindness problem).** A rank is a team-level stats aggregate with zero personnel awareness — it has no idea a specific starter is out for THIS week's game. Added `frontSevenInjuries()`: pulls ESPN's live public injuries feed (same endpoint `handcuff-watch.js` already uses; `TEAM_ABBR` map copied not shared, same copy-not-export pattern as `csvSplit`), filters to DT/DE/NT/LB positions with Out/Doubtful/IR status, and appends a caveat line to the matchup note rather than trying to recompute the rank. **Important limitation, confirmed this session: ESPN's injuries feed is real-time only** — there is no free historical-injuries API, so this caveat is only ever "today's" report. That's correct for production (checking this week's injuries for this week's game) but means it could not be validated week-by-week the way the rest of the backtest was — only the mechanism (name/position/status matching, team-abbreviation crosswalk) was verified, using live current injury data against historical 2025 schedule/matchup data.
+
+### Verification performed this session (all `[verified]`, ran the commands, saw the output)
+
+- `node scripts/lineup-alert.js --selftest` — passes, now 9 assertions (was 7 in session 4): added trailing-window aging-out test, RB-SoS-note-changes-signature test, plus the original 7.
+- `node -c scripts/lineup-alert.js` and `node -c scripts/league-history.js` — syntax clean.
+- Live dry run against real 2026 ESPN roster (`node --env-file=.env scripts/lineup-alert.js`) — ran clean end-to-end, correctly produced NO alert (Week 1, lineup already optimal, no 2026 games played yet so no RB-SoS data exists yet either). This is expected, not a failure — but it means **the actual note-generation code path had never fired with real matchup output** until the next step.
+- Made `lineup-alert.js` importable (`require.main === module` guard added — it wasn't guarded before this session, meaning requiring it would have triggered a live `main()` run; this was a latent bug, now fixed to match the pattern already used by `league-history.js`/`boom-rates.js`).
+- Ran `rbSosNotes()` against REAL completed 2025 season data (nflverse + ESPN's 2025 schedule) with real players (Bijan Robinson/ATL, Saquon Barkley/PHI, Christian McCaffrey/SF) across real weeks. Got back correctly-matched, sane output — e.g. "Saquon Barkley (bell-cow) faces LAC, the #1 run defense over the last 6 weeks (12.8 pts/g allowed) — tougher matchup than usual." This is the strongest verification done: real opponent resolution, real rank computation, real formatting, all correct.
+- Ran `frontSevenInjuries()` live — pulled real current (Aug 2026) injury data, correctly filtered to front-seven positions and Out/IR statuses, correctly matched to the right NFL team including the LA/LAR abbreviation edge case.
+- **Still not verified, and cannot be until the season starts:** the actual GitHub Actions cron trigger with this new code, a real Telegram send containing the RB-SoS note (formatting/emoji/length in Telegram itself), the dedup signature in a real repeat-run scenario, and the very first real 2026 in-season note.
 
 ---
 
@@ -62,141 +70,108 @@ He then asked "why is kicker and dst out", and after I explained, "would it be s
 
 | Thing | State | Confidence |
 |---|---|---|
-| Git | Clean, 3 commits pushed to `origin/main` this session (`391ab36`, `9647fee`, `8d58a8c`), plus this handoff. | [verified — `git log`, push output] |
-| Live site | `https://fantasy-edge-lyart.vercel.app` — auto-deployed on push. Confirmed the new code is actually serving (grepped live HTML for `kdstDist`, and `/boom-rates.json` returns the `posVar` block). | [verified — curl with cookie jar] |
-| `scripts/lineup-alert.js` | New, 150 lines. `--selftest` passes. Live dry run clean. | [verified] |
-| `.github/workflows/lineup-alert.yml` | New. **Has never actually fired** — first real run is the coming Sunday 14:00 UTC. | [unverified — check the Actions tab after Sunday] |
-| GitHub secret `SEASON` | **Probably does not exist** — `waiver-alert.yml` doesn't use it. The script falls back to `new Date().getFullYear()` = 2026, which is correct, so this is harmless. | [unverified — never listed the secrets] |
-| `index.html` | Start/Sit rewritten. All `console.assert` blocks pass in a real browser, zero page errors. | [verified — headless Chrome] |
-| `scripts/boom-rates.js` | Two edits: writes per-player `sd`; **carries forward the `posVar` key** on regen. `--selftest` passes. | [verified — ran, and confirmed posVar survives a full regen] |
-| `scripts/league-history.js` | **10 studies now.** `--kdst-variance` added; `weeklyRosters()` rows gained a `played` flag; the whole CLI IIFE is now behind `require.main === module` and the file exports `{bestLineup, SLOT, STARTABLE}`. `--selftest` passes. | [verified — ran] |
-| `boom-rates.json` | Regenerated. 621 players, season 2025, `stale: true`, pool matched **323**/386 (was 322 — normal drift, not a bug). Now carries `sd` per player and top-level `posVar`. | [verified] |
-| `league-history-2025.json` | Merged, now holds 10 studies + `generated`. | [verified — merge path exercised] |
-| `playwright-core` | Installed with `--no-save`, so it is in `node_modules` but **NOT in `package.json`**. A fresh clone won't have it. This is deliberate (keeps it out of the Vercel bundle). | [verified] |
-| Local server | LaunchAgent on port 4650, restarted several times this session via `kill $(lsof -ti:4650)`. Serving current code. | [verified] |
-| Cost | Zero. ESPN API + nflverse GitHub release files. No new keys, no new services. | [verified] |
+| Git | **3 files modified, UNCOMMITTED**: `CLAUDE.md`, `scripts/league-history.js`, `scripts/lineup-alert.js`. Last real commit is still `a1c9a57` (session 4's "Add Playoff SoS tab"). Nothing from this session is pushed or live. | `[verified — git status/diff --stat this session]` |
+| Live site | Unchanged from session 4 — `https://fantasy-edge-lyart.vercel.app`. This session's work does not touch `index.html` or anything user-facing on the live site (it's a backend cron script only). | `[unverified this session — not touched, assumed same as session 4]` |
+| `scripts/lineup-alert.js` | +183 lines this session. New exports: `rankRBAllowed`, `bellCowNames`, `rbSosNotes`, `frontSevenInjuries`. `--selftest` passes (9 assertions). Verified against real 2025 data. | `[verified]` |
+| `scripts/league-history.js` | One-line change: `module.exports` now also exports `NFLVERSE_ABBR` (needed by lineup-alert.js's injury-team-matching). Nothing else touched. | `[verified — diff is 1 line]` |
+| `CLAUDE.md` | One new Gotchas entry describing the bell-cow RB SoS feature and its two fixes (trailing window, injury caveat). | `[verified — read it back]` |
+| `.github/workflows/lineup-alert.yml` | **Untouched this session.** Still fires Sundays 14:00 + 16:30 UTC. First run with the NEW code will be whenever this gets committed+pushed AND a Sunday with games arrives — i.e. **not this coming Sunday unless committed before then AND the season has started.** Season hasn't started (Aug 13 2026, preseason). | `[verified — file not in git diff]` |
+| Backtest scratch scripts (`sos-backtest.js`, `sos-window-trend.js`, `sos-insession-trend.js`, `sos-player-accuracy.js`, `sos-tier-matchup.js`, `verify-rb-sos.js`, `verify-rb-sos2.js`) | **Gone.** Lived in the session's scratchpad temp dir, which does not persist. Numbers are preserved in "What was accomplished" above; code would need to be rewritten if re-run is ever wanted. This was intentional — Ethan's framing throughout was "before you save it, run a test," i.e. these were never meant to be committed. | `[verified — scratchpad is session-scoped, confirmed gone]` |
+| Cost | Zero. Same free sources as always (nflverse GitHub releases, ESPN public + private-league APIs). No new keys, no new services. | `[verified — nothing new added]` |
 
 ---
 
 ## Where my thinking was
 
-**On why the Sunday alert came before the clever one.** He asked for both, and I built them in his stated order, but the ordering was also right on merit: the alert attacks a *measured, expensive, repeated* failure (222 bench points) with about 150 lines. The win-probability tab is more interesting and less certain to pay off. If a future session has to choose what to protect, protect the alert.
+**On why RB-only and not WR, even though Ethan's original intuition (shutdown CB) was about WR specifically.** The data flatly disagreed with his WR intuition and I said so directly rather than building a token WR feature to please the ask. He accepted this immediately and pivoted to "what can we build" without pushback — worth noting for tone: he responds well to a straight "the data says no" as long as it's backed by the actual numbers, not just asserted. Don't hedge this finding if a future session revisits it.
 
-**On the shape of the win-probability recommendations, which looks like a bug and isn't.** From a points-optimal lineup, *every* legal swap costs projected points — by definition, since the lineup was chosen to maximise points. So the tab's only possible recommendation is "give up X points to buy Y% win probability." My first selftest fixture asserted the opposite (a swap that gains points AND win prob) and failed, which is how I noticed. The fixture now asserts the correct direction. **Do not "fix" the tab so it shows points-positive swaps — there aren't any.**
+**On why the trade-finder piece got deferred instead of built immediately.** No blocker — he simply said "build it later." My spec for it (below, in "The next task") is complete enough to build cold, so there was no need to keep asking him about it before writing this handoff. If a future session starts fresh and reads this file, it should be able to build it without re-deriving anything, only reusing already-verified logic (`rankRBAllowed`, `bellCowNames` from `lineup-alert.js`).
 
-**On the independence assumption.** Players are treated as uncorrelated. A QB+WR stack is genuinely correlated, which understates variance for stacked lineups. I left it because he doesn't currently stack on purpose, and there's a `ponytail:` comment saying so. If he ever drafts/starts a stack deliberately, this is the first thing to revisit.
+**On the "rest of season" framing for the trade-finder piece — this is a real design decision not yet made, flagged in "For the next session to figure out" below.** The lineup-alert feature only looks at ONE week (this week's matchup). A trade-value signal needs to look at the REST of a bell-cow RB's schedule to be useful for a trade decision made today. I have NOT designed exactly how many remaining weeks to average, whether to weight near-term weeks more than far ones (schedules can be looked up in full since the NFL schedule is fixed and known in advance — no leakage concern the way the original backtest had), or how big a `_cval` nudge is appropriate (needs to be small — this is a real but modest effect, +3.3 pts/week at the extreme, not a valuation-flipping signal). This needs actual design thought, not just wiring.
 
-**On the locked-player rule in the alert.** LOCKED = the player already has a week-N actual stats entry (`statSourceId: 0`). That catches anyone whose game has finished. It does **not** distinguish "hasn't kicked off" from "playing right now, zero points so far" — ESPN publishes the entry at kickoff. This is safe **only because the cron runs before the 1pm ET window.** If anyone ever moves that cron later, this becomes a real bug that will tell him to bench a player mid-game.
-
-**On what I did not verify.** The alert has never fired for real — no Telegram message has ever been sent by it. The dry run proved the fetch, the math, and the state file, and stopped before the send because `TELEGRAM_BOT_TOKEN` isn't in the local `.env`. The Telegram send path itself is copied from `trade-alert.js`, which does work. `[unverified — the actual send]`
-
-**On the 322 → 323 pool-match drift.** `boom-rates.json` now matches 323 of 386 rather than the 322 documented in CLAUDE.md. I did not chase it. It moved when I regenerated the file from a freshly downloaded nflverse CSV, so the most likely explanation is that nflverse added a row upstream. Harmless either way (absence casts no vote), but it's the kind of thing that looks alarming later.
-
-**One thing that smelled and I didn't chase.** `weekProj()` in `index.html` hardcodes `s.seasonId===2026` as a literal rather than reading a constant. It's correct today and I added the `statSplitTypeId===1` filter next to it, but it will silently return 0 for every player in 2027.
+**On why I didn't just build the trade-finder piece immediately despite having a clean spec.** Ethan explicitly said "build it later" — respecting that literally rather than reinterpreting it as "build it now since you have time." If a fresh session reads this and Ethan hasn't re-raised it, don't assume he wants it built without checking — the handoff docs preserve the request, but "later" was his word, not "now."
 
 ---
 
 ## For the next session to figure out
 
-- **Does the Sunday alert actually fire and send?** First real run is the coming Sunday 14:00 UTC. Check the Actions tab. If it failed, the likeliest causes in order: a missing GitHub secret, ESPN cookies expired (401), or the cache step not restoring `lineup-state.json`.
-- **Is `MIN_GAP = 5` the right threshold?** Pure guess, not derived. Too low and he mutes it; too high and it misses real losses. There is now data to derive it from — 2025's per-week optimal-vs-actual gaps are already computed in `--bench-audit`. Nobody has looked.
-- **Is the normal distribution the right model for a weekly fantasy total?** Real weekly scores are right-skewed, so a normal probably slightly understates the underdog's tail — which would mean the tab is *marginally* too discouraging about chasing variance. Not measured. Would need a backtest against 2025 weekly matchups, which is genuinely possible with data already on disk.
+- **Should this session's uncommitted changes be committed as-is, or does Ethan want the trade-finder piece folded into the same commit?** Ask him — don't assume either way. If he says "just commit what's there," do a clean commit of the 3 modified files with a message describing the bell-cow RB SoS lineup-alert feature (this is descriptive, not requesting new work).
+- **The rest-of-season averaging window for the trade-finder signal (see "The next task")** — needs a real design decision, not just default to "all remaining weeks equally weighted." A team's SoS 12 weeks out is much less certain to matter than next week's, if only because a trade doesn't need to price in an event that far away with much confidence, and NFL defenses do actually change over a season (this is literally what fix #1 above addressed for the weekly version).
+- **How big should the `_cval` nudge be?** The backtest found ~3.3 pts/week gap at the tier extreme (top-8 vs bottom-8 defense). A rest-of-season average will regress toward the mean (few players face all-tough or all-soft schedules), so the realistic nudge for most bell-cow RBs will be much smaller than 3.3 pts/week. Needs a sanity check against real 2026 schedules once games start, or at minimum against 2025 schedules as a dry run, before shipping — don't guess a multiplier out of thin air.
 
 ---
 
 ## The decision still open
 
-**None.** He made every call this session (build #2 then #1; yes to including K/DST). Nothing is waiting on him.
+**None on what was built this session** — Ethan drove every step and approved each one live (used `AskUserQuestion` once, to clarify WR-tier-vs-defense-tier segmentation for the `sos-tier-matchup` test; he answered "player tier x defense tier," which is what got built).
+
+**One open scheduling decision:** whether/when to commit this session's work, and whether to build the trade-finder piece before or after that commit. **Ask him, don't guess.**
 
 ---
 
 ## Gotchas
 
-**Lead item, the one that would have bitten silently:**
+**New this session — the highest-value one to carry forward:**
 
-- **`boom-rates.json` is fully regenerated every Tuesday by `.github/workflows/refresh-data.yml`.** The K/D-ST variance (`posVar`) is written into that file by a *different* script (`league-history.js --kdst-variance`) because nflverse's weekly file has **no K or D/ST rows at all**. Without a carry-forward, the Tuesday cron would wipe it, and the Start/Sit tab would quietly revert to treating those two slots as certainties — no error, no visible sign, just a subtly overconfident number. `boom-rates.js` now preserves the key on regen and I confirmed it survives. **Keep that carry-forward.**
+- **`lineup-alert.js` was NOT `require.main`-guarded before this session** — requiring it as a module (as the new verification script needed to) would have immediately triggered a live `main()` run (real ESPN fetch, real Telegram send attempt) as a side effect of `require()`. Fixed to match the pattern `league-history.js`/`boom-rates.js` already used. **If any future script needs to import from `lineup-alert.js`, this guard is why it's safe to do so now — but don't assume every script in this repo is safely importable; check for the guard first, this was a real near-miss.**
+- **ESPN's public injuries feed has no historical mode.** It only ever returns *today's* report. Any feature that wants "was X injured on date Y" cannot be built from this source — there is no free historical alternative currently in use in this repo either. This bit the injury-caveat verification (had to settle for "mechanism is correct" rather than "matched the actual week-6-2025 injury report," which is simply unobtainable for free).
+- **Bell-cow tiering must use a volume stat (carries/targets), never points, when the thing being measured is itself points-based** — this was a live circularity bug caught during design, not after the fact: tiering RBs/WRs by season points and THEN measuring their points-vs-defense-tier would partly measure "good players get more points" rather than "matchup affects points." `targets` and `carries` are both present in the nflverse weekly CSV (confirmed via `head -1 ... | grep -i target`) specifically to avoid this.
 
-**New this session:**
+**Carried forward from session 4, still true (full list in CLAUDE.md):**
 
-- **A weekly ESPN projection is `statSplitTypeId: 1`, NOT 0.** Same seasonId / statSourceId / scoringPeriodId, different aggregation — 0 is the season total. Taking the wrong one is a silent ~20x error. (Related but distinct from the existing season-total trap where 0 = total and 2 = per-game.) Verified live: Bijan Robinson wk1 = 19.28 at split 1; his season total = 352.97 at split 0.
-- **`league-history.js` and `boom-rates.js` are now importable; `draft-research.js` still is not.** Both are behind `require.main === module`. `lineup-alert.js` imports `bestLineup` and would otherwise kick off a full 10-study ESPN run on require. Keep the guard.
-- **`weekPts()` returns 0 for both "played and scored 0" and "no game at all."** A D/ST can legitimately score 0 or negative, so a `pts > 0` filter biases the mean up. That's why `weeklyRosters()` rows now carry an explicit `played` flag.
-- **`teamName()` in `index.html` takes a team OBJECT, not an id.** I wrote `teamName(oppId)` first and got `undefined` in the heading.
-- **Local verification needs `playwright-core`, and the driver script must live inside the repo** — a script in the scratchpad can't resolve the module from `node_modules`. Copy it to `.drive.tmp.js` in the repo root, run it, delete it.
-- **The live site 302-redirects the `?key=` link** (it sets the cookie then bounces to `/`). A plain `curl` gets an empty 302 body; use `curl -sL -c /tmp/cj -b /tmp/cj`.
-
-**Carried forward, still true (full list in CLAUDE.md):**
-
-- **`site/2025-postmortem.html` has TWO homes that do not sync.** Repo copy ships via `git push`; the artifact needs a separate `Artifact` call passing `url: https://claude.ai/code/artifact/5040c067-4f88-47c9-93e5-602df3f80bad`. Publishing without that `url` creates a *separate* artifact. Ethan has hit this confusion directly before.
-- **That file is artifact-shaped on purpose** — no doctype, no `<head>`. The server route sends `charset=utf-8` explicitly; without it the 🤤 and every en-dash render as mojibake. Don't "fix" it by adding a doctype.
-- **`playerPoolEntry.appliedStatTotal` on a week-scoped `mRoster` call is CUMULATIVE season-to-date.** Use `weekPts()`. Sanity-check any team-season total against the known 1731.8 figure.
-- **`statSplitTypeId` is a fourth stat discriminator** — for *season* entries 0 = total, 2 = per game; a silent ~20x error.
-- **Any function reading ESPN `stats[]` MUST filter `seasonId`.**
-- **Trade contents are participant-only**; league-wide trade net-points is impossible. This also proves Ethan is **team id 1**.
-- **2025 was not a FAAB league.** No bid data exists, don't look. 2026 IS FAAB ($1000, $1 min, processes 10am ET daily).
-- **nflverse weekly files include postseason rows** — filter `season_type == REG`.
-- **Lineup eligibility comes from `eligibleSlots`**, never inferred from position; exclude slots 20 (BENCH) / 21 (IR).
-- **Team ids are 1,2,3,4,6,7,8,9,10,11,12,13** — 5 and 14 do not exist.
-- **2025 `matchupPeriodCount` is 14.**
-- **ESPN league views must be repeated `&view=` params**, never comma-joined (the browser's `espn()` helper splits and rebuilds for this reason).
-- **ESPN preseason projections are systematically inflated** — every team finishes under. Center on the league mean.
-- **`.nflverse-cache` must never be read for the in-progress season.**
-- **Absence casts no vote** — this rule now appears in six places (analyst boards, boom rates, handcuff start-rate, sentiment, K/DST fallback, unrated volatility). Never let a missing player read as a low/zero value.
+- **A weekly ESPN projection is `statSplitTypeId: 1`, NOT 0** (0 = season total). Silent ~20x error if wrong.
+- **`league-history.js` and `boom-rates.js` are importable, guarded by `require.main === module`; `draft-research.js` is NOT** — never import it.
+- **`weekPts()` returns 0 for both "scored 0" and "no game"** — use the `played` flag, not `pts > 0`.
+- **Local server on port 4650 caches `index.html` at startup** — front-end edits need a restart before verification. This session didn't touch `index.html` so this didn't come up, but it's still true.
+- **`playwright-core` is `--no-save`**, not in `package.json` — reinstall with `npm i --no-save playwright-core` if a fresh clone needs browser verification.
+- **`git push` auto-deploys** via Vercel's Git integration (fixed Aug 8 2026) — but this session has NOT pushed anything, so nothing has auto-deployed.
+- **Absence casts no vote** — now a load-bearing rule in seven places (added: bell-cow tiering — a player with a thin sample just isn't tiered "elite," never scored as if he faced no matchup effect).
+- **ESPN league views must be repeated `&view=` params**, never comma-joined.
+- **`.nflverse-cache` must never be read for the in-progress season** — `weekly(SEASON)` always downloads fresh for the current year by design; this session's live verification runs each re-downloaded rather than using a cache, which is correct behavior, not a bug (visible in the "downloading" log line every time).
 
 ---
 
 ## Reboot / persistence
 
-Everything durable is committed and pushed to `origin/main`; **`git push` auto-deploys** via the Vercel Git integration (fixed Aug 8 2026 — no manual `vercel deploy` needed).
+**This session's work is NOT durable yet** — it exists only as uncommitted local changes in the working tree. If the machine is reset, a branch is discarded, or `git checkout .`/`git clean` is run before a commit, **all of this session's code is lost** (the analysis/numbers are preserved in this handoff, the code is not, and would need to be rewritten from the descriptions above).
 
-**Weak links:**
-- `lineup-state.json` and `trade-state.json` live only in actions/cache. Losing them means one duplicate alert, nothing worse.
-- `playwright-core` is `--no-save`, so `npm ci` or a fresh clone won't have it. Reinstall with `npm i --no-save playwright-core` when verification is needed.
-- The always-on LaunchAgent on port 4650 caches `index.html` at startup — **front-end edits need a server restart before any verification.** If localhost misbehaves, check `lsof -ti:4650` for an orphaned `node server.js` (PPID 1), kill it, launchd restarts it.
-- The claude.ai artifact copy of the postmortem lives only on Anthropic's servers, not in git.
+Once committed and pushed: everything durable follows session 4's pattern (`git push` auto-deploys, weak links are `lineup-state.json`/`trade-state.json` in actions/cache only, losing them just means one duplicate alert).
 
 ---
 
 ## Don't redo
 
-- **Do not redo any of the ten studies.** Numbers are in `league-history-2025.json`.
-- **Do not rebuild the Start/Sit tab to show points-positive swaps.** There is no such thing from an optimal lineup — see "Where my thinking was".
-- **Do not attempt the consensus draft-board backtest.** Proven impossible — every analyst file first appears in git in Aug 2026.
-- **Do not go looking for 2025 FAAB bid data.** It does not exist.
-- **Do not go looking for other teams' trade contents.** ESPN scopes them to participants.
-- **Do not try the league communication endpoint.** 404s, four variants tried.
-- **Do not re-run the handcuff study on one season** and quote the result (10 windows is too thin; use the 3-season 63%).
-- **Do not re-derive the ESPN API patterns** — all in CLAUDE.md Gotchas.
+- **Do not re-run the SoS backtest series from scratch** — the five tests and their numbers are fully documented above. If the exact code is needed again it's simple to rewrite (each is ~50-80 lines using `weekly()` from `boom-rates.js` plus a rank/correlation helper), but the *findings* don't need re-deriving.
+- **Do not build a WR version of the bell-cow SoS feature.** Tested, rejected, inverted. This is a closed question unless new data changes the picture.
+- **Do not remove the `require.main` guard from `lineup-alert.js`** — it's now safely importable, keep it that way.
+- **Do not re-litigate the RB-only / bell-cow-only scope** without a fresh backtest — it's not an arbitrary choice, it's what the data supported.
+- Everything in session 4's "Don't redo" list still applies (the ten league-history studies, the Start/Sit tab shape, the consensus-backtest impossibility, etc.) — see `handoff-archive/2026-08-13-session4.md` if the specifics are needed, though ideally CLAUDE.md's Gotchas already covers anything load-bearing.
 
 ---
 
 ## How to work with Ethan
 
-- **Every response starts with "Ethan,"**.
-- **Lead with the outcome and the number**, not the methodology.
-- **He reacts to rankings.** Full 12-team tables with his own team marked, over prose. Standing request.
-- **He has ADHD and says so.** When he asks "where do I see this", he wants the literal click path and one command at a time — not an architecture tour. Short numbered steps.
-- **He asks the sharp follow-up.** This session: "why is kicker and dst out" → "would it be stronger to include it or no". Give a straight recommendation with the reason, then offer to build it. He said yes both times.
-- Terse and direct. Define jargon inline. Terminal steps **one command at a time**, then wait.
-- **Zero cost, always.**
-- He wants findings tied to **a decision he can make**. "Interesting" is not the bar.
-- Never re-run a failed command unchanged; after two failures of one approach, switch.
+- **Every response starts with "Ethan,"** (per his global CLAUDE.md instructions).
+- **He drives multi-step analysis himself, one test at a time** — this session's pattern was: ask a question → get an answer → ask a sharper follow-up based on that answer → repeat. Don't front-load a big analysis plan; let him steer test-by-test, especially for "is this feature actually justified by data" work.
+- **He pushes back with real football-analytics intuition, not just skepticism** — his WR/shutdown-CB pushback was correct in spirit even though the WR data didn't bear it out; the RB half of the same pushback was fully vindicated. Take his domain pushback seriously and go test it, don't just defend the original conclusion.
+- **"Ask me any questions now if needed" is a real invitation** — he used it once this session and I used `AskUserQuestion` to clarify an ambiguous methodology choice before running the test, rather than guessing. He answered promptly and it produced the right test on the first try.
+- **He verifies rigor directly** — "so it's tested and works?" led to a real gap being found (the live dry-run never exercised the actual note-generation code, only synthetic fixtures) and fixed with real historical-data verification in the same turn. Don't oversell "verified" — be precise about what was and wasn't actually exercised.
+- **He has ADHD and says so** (`/i-have-adhd` — not a real slash command, just his way of asking for short/direct answers). Keep answers to concrete facts, no architecture tours, one command at a time for terminal steps.
+- **"Build it later add to handoff" is a literal instruction, not a soft one** — don't build ahead of what he asked, and don't let a fresh session forget it either. That's the point of this file.
+- Terse and direct. Lead with the outcome and the number. Zero cost, always.
 
 ---
 
 ## The next task
 
-**UNSPECIFIED — ask him. Do not guess or start anything.**
+**Build the rest-of-season bell-cow RB SoS multiplier into the trade finder.** This is the one deferred, explicitly-requested item — everything else this session is finished.
 
-He asked "what else is on to do", got the list below, and then ended the session to open a fresh chat. He did **not** pick one.
+**Full spec, as given by Ethan (via a prior turn's summary) and refined by me:**
 
-The list as given to him, in the order I recommended:
-
-1. **Start the projection-calibration log — this week.** Every week, record what each source predicted (ESPN, the consensus rank, each analyst board) vs what actually happened, per position. After ~5 weeks it says which source is actually better at which position in this scoring, and Start/Sit can weight accordingly. **It cannot be backfilled — if it doesn't start at Week 1 it's dead for the season.** It is also the *forward* test of the draft board that the 2025 backtest proved impossible. This is the only item with a deadline.
-2. **The pending Jeremiah Love video note.** Already sitting in auto-memory as pending — a buy-low trade target from an FSC video, waiting on Week 1 so it can be week-tagged. Week 1 is now live. Use the `fantasy-video-inject` skill; it writes to `video-notes.json`, NOT to a `draft-guide*.json`.
-3. **FAAB bid ceilings.** New rule set this year and he'll be bidding blind. Computable free from nflverse: what fraction of players added in week N actually produce startable weeks after, by position. Given he started only 26% of the points his pickups produced, the honest answer may be "bid less, deploy more."
-4. **Playoff-weeks (15–17) schedule strength.** Cheap one-off, feeds trades and stashes. Useful in October, useless in December.
-
-Two smaller loose ends, both real:
-- **The per-team handcuff table never made it onto `site/2025-postmortem.html`.** The data is in `league-history-2025.json` under `handcuffTeams.byTeam`. Act VI exists but only carries the NFL-wide 63% number. Remember it would need shipping to **both** homes.
-- **Act VI's visual layout has still never been eyeballed in a browser** (carried forward from last session — a static structural check was done instead).
+- **Where:** `index.html`, feed into `_cval` (Ethan's private valuation), **not** `_mval` (market/consensus valuation). This matches the existing pattern — `boomFactor()` already tilts `_cval` based on boom/bust data, this is the same shape of signal. See CLAUDE.md's "Trade finder needs two valuations" gotcha for why this split exists and must be preserved (a single shared valuation makes the trade finder unable to find any trades — verified previously, don't collapse the two).
+- **Reuse, don't reimplement:** `rankRBAllowed()` and `bellCowNames()` already exist in `scripts/lineup-alert.js` and are exported (`module.exports = { rankRBAllowed, bellCowNames, rbSosNotes, frontSevenInjuries }`). The trailing-6-week run-D-allowed rank and top-15-by-carries bell-cow tiering are already correct and selftested — don't rewrite them, import or port them.
+- **New piece needed:** for each bell-cow RB, average his **remaining** scheduled opponents' run-D rank (not just this week, unlike the lineup-alert feature) to get a rest-of-season SoS score. The NFL schedule is fixed and fully known in advance (same `proTeamSchedules_wl` ESPN endpoint `playoffSoS()` in `league-history.js` already uses, just for the current season and all remaining weeks instead of weeks 15-17 only) — no data-availability blocker here.
+- **Effect:** tougher-than-average schedule ahead → nudge `_cval` down slightly (sell-high candidate); easier-than-average → nudge `_cval` up slightly (buy-low candidate). **Magnitude needs real design work, not a guess** — see "For the next session to figure out" above. Start conservative; the backtest's +3.3 pt/week gap was the extreme (top-8 vs bottom-8 single-week matchup), a season-average nudge should be meaningfully smaller than that per-week figure once regression to the mean is accounted for.
+- **UI:** surface the reasoning as a line in the trade proposal's existing expanded-row reasoning (same place other `_cval` tilts like boom/bust already show their reasoning), not a new UI section.
+- **Scope discipline:** RB-only, bell-cow-only — same as the shipped lineup-alert feature, same justification (WR/depth-RB showed no usable signal in the `sos-tier-matchup` backtest). Do not extend to WR/TE without a fresh backtest first.
+- **Before shipping:** run it against real 2025 (or in-progress 2026, once games exist) schedule data as a sanity check the way `verify-rb-sos.js`/`verify-rb-sos2.js` did for the lineup-alert feature this session — confirm the rest-of-season averages look sane for a few known bell-cow backs before trusting the `_cval` nudge in a live trade evaluation.

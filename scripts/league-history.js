@@ -901,4 +901,4 @@ if (require.main === module) (async () => {
   console.log(`Wrote ${outFile}`);
 })();
 
-module.exports = { bestLineup, SLOT, STARTABLE };
+module.exports = { bestLineup, SLOT, STARTABLE, NFLVERSE_ABBR };
