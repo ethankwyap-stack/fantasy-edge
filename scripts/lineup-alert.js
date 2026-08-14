@@ -198,6 +198,41 @@ async function rbSosNotes(wk, players) {
   return notes;
 }
 
+// Rest-of-season version of the same signal, for the trade finder: instead of THIS week's
+// opponent, average every REMAINING week's opponent run-D rank. The NFL schedule is fixed
+// and fully known in advance, so unlike the backtest there's no leakage concern here.
+// Fantasy seasons run through week 17 (matches PLAYOFF_WEEKS in league-history.js).
+const LAST_WEEK = 17;
+async function restOfSeasonRBSoS(games, schedData) {
+  const bellCow = bellCowNames(games);
+  const defRank = rankRBAllowed(games);
+  const maxWeek = games.filter(g => g.pos === 'RB' && g.opponent_team).reduce((m, g) => Math.max(m, g.week), 0);
+  const proTeams = (schedData.settings?.proTeams || []).filter(t => t.abbrev && t.abbrev !== 'FA');
+  const nflverseAbbr = a => NFLVERSE_ABBR[a] || a;
+  const proMap = {}; proTeams.forEach(t => proMap[t.id] = t);
+  const teamByAbbr = {}; proTeams.forEach(t => teamByAbbr[nflverseAbbr(t.abbrev)] = t);
+
+  // A player's current team, off the most recent nflverse row (handles an in-season trade).
+  const teamOf = {};
+  for (const g of games) if (g.pos === 'RB') teamOf[g.name] = g.team;
+
+  const out = {};
+  for (const name of bellCow) {
+    const team = teamByAbbr[teamOf[name]];
+    if (!team) continue;
+    const ranks = [];
+    for (let wk = maxWeek + 1; wk <= LAST_WEEK; wk++) {
+      const g = (team.proGamesByScoringPeriod?.[wk] || [])[0];
+      if (!g) continue; // bye
+      const oppId = g.homeProTeamId === team.id ? g.awayProTeamId : g.homeProTeamId;
+      const r = defRank[nflverseAbbr(proMap[oppId]?.abbrev)];
+      if (r) ranks.push(r.rank);
+    }
+    if (ranks.length) out[name] = { avgRank: +(ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1), weeks: ranks.length };
+  }
+  return out;
+}
+
 const fmt = (wk, r, rbNotes) => {
   let msg = r.gain >= MIN_GAP
     ? `⚠️ Week ${wk} lineup is leaving ${r.gain} projected pts on the bench.\n\n`
@@ -237,7 +272,7 @@ async function main() {
   console.log('Sent to Telegram.');
 }
 
-function selftest() {
+async function selftest() {
   const assert = require('assert');
   const counts = { 2: 1, 4: 1, 20: 3 };
   const P = (id, name, elig, slot, pts, locked) => ({ id, name, pos: 'RB', elig, slot, pts, locked });
@@ -299,13 +334,26 @@ function selftest() {
   const trailRanks = rankRBAllowed(trailGames, 3); // window = weeks 5-7
   assert.ok(!trailRanks.OLD, 'week-1 data must age out of a 3-week trailing window ending at week 7');
   assert.ok(trailRanks.NEW, 'in-window team must still be ranked');
+
+  // rest-of-season SoS: averages every REMAINING week's opponent rank, not just the next one
+  const rosGames = [
+    G('bellcow', 1, 'TOUGH', 10, 20), G('bellcow', 2, 'TOUGH', 8, 20), // 40 carries -> bell-cow
+    G('filler', 1, 'SOFT', 30, 5), G('filler', 2, 'SOFT', 25, 5), // gives SOFT a defRank entry too
+  ];
+  const fakeSched = { settings: { proTeams: [
+    { id: 1, abbrev: 'MEE', proGamesByScoringPeriod: { 3: [{ homeProTeamId: 1, awayProTeamId: 2 }], 4: [{ homeProTeamId: 3, awayProTeamId: 1 }] } },
+    { id: 2, abbrev: 'TOUGH' }, { id: 3, abbrev: 'SOFT' },
+  ] } };
+  const ros = await restOfSeasonRBSoS([...rosGames, { name: 'bellcow', pos: 'RB', team: 'MEE' }], fakeSched);
+  assert.ok(ros.bellcow, 'bell-cow with a resolvable team must get a rest-of-season score');
+  assert.strictEqual(ros.bellcow.weeks, 2, 'weeks 3 and 4 both count, not just the next one');
   console.log('selftest OK (no network)');
 }
 
 // Guarded so a verification script can import rbSosNotes() against real historical data
 // without triggering a live run (same pattern as league-history.js / boom-rates.js).
 if (require.main === module) {
-  if (process.argv.includes('--selftest')) selftest();
+  if (process.argv.includes('--selftest')) selftest().catch(e => { console.error(e); process.exit(1); });
   else main().catch(e => { console.error(e); process.exit(1); });
 }
-module.exports = { rankRBAllowed, bellCowNames, rbSosNotes, frontSevenInjuries };
+module.exports = { rankRBAllowed, bellCowNames, rbSosNotes, frontSevenInjuries, restOfSeasonRBSoS };

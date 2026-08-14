@@ -651,13 +651,33 @@ function newsFactor(name) {
   const sev = inj ? (NEWS_SEVERITY[(inj.s || '').toUpperCase()] || 0) : 0;
   return 1 - NEWS_K * sev;
 }
+// Rest-of-season bell-cow RB matchup tilt, his side only — same shape as boomFactor, same
+// backtest (see lineup-alert.js). RB-only, bell-cow-only on purpose: WR showed no usable
+// signal at any tier. avgRank runs 1 (all-tough remaining schedule) to 32 (all-soft); 16.5 is
+// neutral. The backtest's own extreme (top-8 vs bottom-8, a single week) was a 3.3-pt gap —
+// this is a season-long AVERAGE that regresses toward 16.5 for most backs, so the knob stays
+// small on purpose: a rest-of-season signal should nudge a valuation, never flip one.
+// ponytail: one linear knob, same shape as BOOM_K/NEWS_K. Raise SOS_K if it's too quiet to move a deal.
+const SOS_K = 0.03;
+function sosFactor(name) {
+  const b = S.boom[(name || '').toLowerCase()];
+  if (!b || !b.rbSos) return 1; // no data (offseason, non-bell-cow, or schedule not out yet) = abstain
+  return 1 + SOS_K * (b.rbSos.avgRank - 16.5) / 15.5;
+}
+function sosLine(name) {
+  const b = S.boom[(name || '').toLowerCase()];
+  if (!b || !b.rbSos) return '';
+  const { avgRank, weeks } = b.rbSos;
+  const tag = avgRank <= 12 ? '🛑 tough' : avgRank >= 21 ? '🟢 soft' : '';
+  return tag ? `<span class="meta">${tag} rest-of-season schedule for a bell-cow back (avg run-D rank #${avgRank} over ${weeks} remaining wks)</span>` : '';
+}
 // Roster as {id,name,pos,pts,mkt}. pts = his risk-adjusted consensus value, mkt = the market's.
 // A rostered player outside the 450-pool falls back to ESPN's projection for both. K/DST/0-proj drop.
 const ptsOf = p => S.players.find(x => x.id === p.id)?._cval ?? seasonProj(p);
 const mktOf = p => S.players.find(x => x.id === p.id)?._mval ?? seasonProj(p);
 const rosterOf = tid => (S.rosters[tid] || [])
   .map(p => { const pos = POS[p.defaultPositionId];
-    return { id: p.id, name: p.fullName, pos, pts: Math.round(ptsOf(p) * boomFactor(p.fullName, pos) * newsFactor(p.fullName)), mkt: Math.round(mktOf(p)) }; })
+    return { id: p.id, name: p.fullName, pos, pts: Math.round(ptsOf(p) * boomFactor(p.fullName, pos) * newsFactor(p.fullName) * sosFactor(p.fullName)), mkt: Math.round(mktOf(p)) }; })
   .filter(e => START[e.pos] && e.pts > 0);
 // lineup() reads .pts, so viewing a roster through the market's eyes is a re-label, not a 2nd engine.
 const asMarket = ps => ps.map(p => ({ ...p, pts: p.mkt }));
@@ -747,6 +767,17 @@ function whyThem(th, give, get) {
   console.assert(newsFactor('P3') === 1, 'news: ACTIVE status tilted value');
   console.assert(newsFactor('Nobody') === 1, 'news: missing player did not abstain');
   S.injuries = si; })();
+
+// Rest-of-season bell-cow RB SoS tilt: tough schedule (low rank) prices DOWN, soft (high rank)
+// prices UP, and a player with no rbSos data (no bell-cow, or offseason) abstains at 1.
+(() => { const sb = S.boom;
+  S.boom = { toughsched: { rbSos: { avgRank: 4, weeks: 8 } }, softsched: { rbSos: { avgRank: 30, weeks: 8 } }, neutral: { rbSos: { avgRank: 16.5, weeks: 8 } } };
+  console.assert(sosFactor('toughsched') < 1, 'sos: tough remaining schedule did not price down');
+  console.assert(sosFactor('softsched') > 1, 'sos: soft remaining schedule did not price up');
+  console.assert(sosFactor('neutral') === 1, 'sos: neutral rank should not tilt');
+  console.assert(sosFactor('Nobody') === 1, 'sos: missing rbSos data did not abstain');
+  console.assert(/tough/.test(sosLine('toughsched')) && /#4/.test(sosLine('toughsched')), 'sos: reasoning line missing tough tag/rank');
+  S.boom = sb; })();
 
 // In-season video takes (video-notes.json). Opinion, never value math — they render as text only.
 // Week-tagged and TTL'd: an undated take reads as current forever, same trap as the [2025] tag.
@@ -974,7 +1005,7 @@ const views = {
     const rows = (ps, cls, rejectable) => ps.map(p => `<tr>
       <td>Send ${names(p.s)} to <b>${esc(teamName(p.t))}</b> for ${names(p.g)}
         <br><span class="meta">${p.themGain > 0 ? 'they gain because ' : 'their side: '}${esc(p.why)}</span>
-        ${[...p.s, ...p.g].flatMap(x => [vnoteLine(x.name), newsLine(x.name)]).filter(Boolean).map(l => '<br>'+l).join('')}</td>
+        ${[...p.s, ...p.g].flatMap(x => [vnoteLine(x.name), newsLine(x.name), sosLine(x.name)]).filter(Boolean).map(l => '<br>'+l).join('')}</td>
       <td><span class="chip good">+${p.meGain} to you</span><br><span class="meta">by consensus + floor</span></td>
       <td><span class="chip ${cls}">${p.themGain > 0 ? '+' : ''}${p.themGain} to them</span><br><span class="meta">by ESPN/ADP</span>
         ${rejectable ? `<br><button class="btn" onclick="rejectTrade('${tradeKey(p)}')">✕ not interested</button>` : ''}</td></tr>`).join('');

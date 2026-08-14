@@ -152,6 +152,19 @@ async function main() {
   const matched = pool.filter(n => players[n]);
   const missed = pool.filter(n => !players[n]);
 
+  // Rest-of-season bell-cow RB strength-of-schedule (see lineup-alert.js — same backtest,
+  // same RB-only/bell-cow-only scope, just averaged over every remaining week instead of the
+  // next one). Feeds the trade finder's _cval, not this file's own boom/bust numbers.
+  // Best-effort: offseason / no ESPN schedule yet just means no rbSos field, not a failed run.
+  try {
+    const { bellCowNames, restOfSeasonRBSoS } = require('./lineup-alert.js');
+    const schedData = await (await fetch(`https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}?view=proTeamSchedules_wl`)).json();
+    const ros = await restOfSeasonRBSoS(games, schedData);
+    let tagged = 0;
+    for (const name in ros) if (players[name]) { players[name].rbSos = ros[name]; tagged++; }
+    console.log(`  rest-of-season RB SoS: ${tagged}/${bellCowNames(games).size} bell-cow backs tagged`);
+  } catch (e) { console.warn(`  rest-of-season RB SoS skipped (${e.message})`); }
+
   // CARRY FORWARD posVar (K / D-ST variance, measured from ESPN by league-history.js
   // --kdst-variance — nflverse's weekly file has no K or D/ST rows, so this engine cannot
   // recompute it). Dropping it on the weekly cron would silently return the Start/Sit tab to
