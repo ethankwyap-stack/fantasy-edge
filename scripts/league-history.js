@@ -707,6 +707,65 @@ async function faabCeilings() {
   };
 }
 
+// ---- study 12: playoff-weeks (15-17) strength of schedule -----------------
+// Which NFL teams draw the toughest/easiest run of opposing defenses across the
+// FANTASY playoff weeks (15-17) — a trade/stash signal for October, not a start/sit
+// one (by December this is moot, the games have been played). Defense-allowed rates
+// come from the most recently COMPLETED season (SEASON, the study's usual meaning);
+// the schedule itself is read for the NEXT season, SEASON+1, since that's the one whose
+// weeks 15-17 haven't happened yet. Run e.g. `--season 2025 --playoff-sos` to get the
+// 2026 playoff-week schedule graded against 2025 defensive performance.
+const PLAYOFF_WEEKS = [15, 16, 17];
+// ESPN vs nflverse spell two teams differently; every other abbrev matches as-is.
+const NFLVERSE_ABBR = { LAR: 'LA', WSH: 'WAS' };
+
+async function playoffSoS() {
+  const { weekly } = require('./boom-rates'); // require.main-guarded there — this does not kick off a run
+  const defenseYear = SEASON, scheduleYear = SEASON + 1;
+  const games = await weekly(defenseYear);
+  if (!games) throw new Error(`No nflverse weekly data for ${defenseYear} (needed as the defense-allowed baseline)`);
+
+  // rank 1 = stingiest defense (fewest PPR pts/game allowed at that position), 32 = most generous
+  const allowed = {};
+  for (const g of games) {
+    if (!g.opponent_team) continue;
+    const t = allowed[g.opponent_team] ||= {};
+    const p = t[g.pos] ||= { pts: 0, wks: new Set() };
+    p.pts += g.pts; p.wks.add(g.week);
+  }
+  const ranks = {};
+  for (const pos of ['QB', 'RB', 'WR', 'TE']) {
+    Object.entries(allowed)
+      .filter(([, byPos]) => byPos[pos]?.wks.size)
+      .map(([team, byPos]) => ({ team, avg: byPos[pos].pts / byPos[pos].wks.size }))
+      .sort((a, b) => a.avg - b.avg)
+      .forEach((r, i) => { (ranks[r.team] ||= {})[pos] = { rank: i + 1, avg: r1(r.avg) }; });
+  }
+
+  const schedData = await (await fetch(`https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${scheduleYear}?view=proTeamSchedules_wl`)).json();
+  const proTeams = (schedData.settings?.proTeams || []).filter(t => t.abbrev && t.abbrev !== 'FA');
+  const proMap = {}; proTeams.forEach(t => proMap[t.id] = t);
+  const nflverseAbbr = a => NFLVERSE_ABBR[a] || a;
+
+  const rows = [];
+  for (const t of proTeams) {
+    const opponents = PLAYOFF_WEEKS.map(wk => {
+      const g = (t.proGamesByScoringPeriod?.[wk] || [])[0];
+      if (!g) return null; // bye
+      const oppId = g.homeProTeamId === t.id ? g.awayProTeamId : g.homeProTeamId;
+      return nflverseAbbr(proMap[oppId]?.abbrev);
+    });
+    const byPos = {};
+    for (const pos of ['QB', 'RB', 'WR', 'TE']) {
+      const oppRanks = opponents.filter(Boolean).map(a => ranks[a]?.[pos]?.rank).filter(r => r != null);
+      byPos[pos] = oppRanks.length ? r1(oppRanks.reduce((a, b) => a + b, 0) / oppRanks.length) : null;
+    }
+    rows.push({ team: nflverseAbbr(t.abbrev), opponents, byes: opponents.filter(o => o === null).length, avgOppDefRank: byPos });
+  }
+
+  return { defenseYear, scheduleYear, weeks: PLAYOFF_WEEKS, rows: rows.sort((a, b) => a.team.localeCompare(b.team)) };
+}
+
 // Guarded so lineup-alert.js can import bestLineup() without kicking off a full study run
 // (same rule as boom-rates.js). Do NOT import this file without the guard in place.
 if (require.main === module) (async () => {
@@ -734,6 +793,8 @@ if (require.main === module) (async () => {
     // handcuff name matching: ESPN keeps suffixes nflverse drops, and vice versa.
     console.assert(norm('Tyrone Tracy Jr.') === norm('tyrone tracy'), 'suffix stripped both ways');
     console.assert(norm('Cam Skattebo') === norm('cameron skattebo'), 'nickname aliased');
+    // playoff-SoS abbrev fix: ESPN's LAR/WSH must resolve to nflverse's LA/WAS, everyone else passes through
+    console.assert(NFLVERSE_ABBR.LAR === 'LA' && NFLVERSE_ABBR.WSH === 'WAS' && !NFLVERSE_ABBR.KC, 'nflverse abbrev fix');
     console.log('selftest OK (no network)');
     return;
   }
@@ -814,8 +875,15 @@ if (require.main === module) (async () => {
     for (const [pos, s] of Object.entries(out.faabCeilings.byPos))
       console.log(`  ${pos}: ${s.adds} adds, ${s.startableWeeks}/${s.weeksHeld} weeks held were startable${s.startableRate === null ? '' : ` (${s.startableRate}%)`}`);
   }
+  if (has('--playoff-sos') || has('--all')) {
+    console.log(`Fetching playoff-weeks (15-17) strength of schedule for ${SEASON + 1} (graded on ${SEASON} defense)...`);
+    out.playoffSoS = await playoffSoS();
+    console.log('  avg opposing-defense rank across weeks 15-17 (1 = toughest, 32 = easiest):');
+    for (const r of out.playoffSoS.rows)
+      console.log(`  ${r.team}: QB ${r.avgOppDefRank.QB ?? '—'}, RB ${r.avgOppDefRank.RB ?? '—'}, WR ${r.avgOppDefRank.WR ?? '—'}, TE ${r.avgOppDefRank.TE ?? '—'}${r.byes ? ` (${r.byes} bye)` : ''}`);
+  }
   if (!Object.keys(out).length) {
-    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --kdst-variance | --faab-ceilings | --all | --selftest  [--season YYYY]');
+    console.log('Usage: --bench-value | --sleeper-hit-rate | --bench-audit [--team N] | --schedule-luck | --faab-roi | --trade-accuracy | --draft-accuracy | --handcuff-teams | --kdst-variance | --faab-ceilings | --playoff-sos | --all | --selftest  [--season YYYY]');
     return;
   }
 
