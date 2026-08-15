@@ -67,7 +67,15 @@ async function pastSeason(yr) {
 
 // One line per past season: games, total, PPG, weekly stdev, usage (stat ids 58/53/23),
 // plus efficiency per opportunity (42=rec yds, 24=rush yds) — the Smyth axis ESPN volume alone misses.
-function summarize(p, yr, pos) {
+// SMALL_SAMPLE_G: below this many games, PPG is noise (a hot/cold 3-game stretch),
+// while target share / snap share are already stable — the stat-stickiness study
+// (stat-stickiness.json) measured RB snap share at r=0.70 and WR target share at r=0.77
+// predicting next year, both close to or above PPG itself, using pooled full seasons.
+// A half-season or less (backup who took over late, injury-shortened year) is exactly
+// where that gap matters: flag it so Claude weights usage over this PPG instead of
+// treating a small sample as equally solid.
+const SMALL_SAMPLE_G = 8;
+function summarize(p, yr, pos, flagLowSample) {
   if (!p) return null;
   const weeks = (p.stats || []).filter(s => s.statSourceId === 0 && s.statSplitTypeId === 1 && s.seasonId === yr && s.scoringPeriodId > 0);
   if (!weeks.length) return null;
@@ -82,7 +90,8 @@ function summarize(p, yr, pos) {
   if (car) eff.push(`${(rushYds / car).toFixed(1)}ypc`);
   if (pos !== 'QB' && car + rec) eff.push(`${(total / (car + rec)).toFixed(2)}pts/touch`);
   return `${gp}gp ${total.toFixed(0)}pts ${ppg.toFixed(1)}ppg wk-stdev ${stdev.toFixed(1)}, ${tgt}tgt/${rec}rec/${car}car`
-    + (eff.length ? `; eff ${eff.join(', ')}` : '');
+    + (eff.length ? `; eff ${eff.join(', ')}` : '')
+    + (flagLowSample && gp < SMALL_SAMPLE_G ? ` — SMALL SAMPLE (${gp}gp): this PPG is noisy, weight target share/snap share below more heavily than this number` : '');
 }
 
 const seasonProj = p => { const s = (p.stats || []).find(s => s.statSourceId === 1 && s.seasonId === +SEASON && s.scoringPeriodId === 0); return s ? Math.round(s.appliedTotal) : 0; };
@@ -182,8 +191,8 @@ async function rushContact(yr) {
     const name = (f[c.ix.pfr_player_name] || '').toLowerCase();
     if (!name) continue;
     const n = k => +f[c.ix[k]] || 0;
-    const a = agg[name] ||= { car: 0, ybc: 0, yac: 0, broken: 0 };
-    a.car += n('carries'); a.ybc += n('rushing_yards_before_contact'); a.yac += n('rushing_yards_after_contact');
+    const a = agg[name] ||= { g: 0, car: 0, ybc: 0, yac: 0, broken: 0 };
+    a.g++; a.car += n('carries'); a.ybc += n('rushing_yards_before_contact'); a.yac += n('rushing_yards_after_contact');
     a.broken += n('rushing_broken_tackles');
   }
   return agg;
@@ -233,7 +242,7 @@ function usageLine(pos, a, snap, rush, yrs = {}) {
     }
   }
   if (snap && snap.g) bits.push(tag(`snap share ${(snap.pct / snap.g * 100).toFixed(0)}% over ${snap.g}g`, yrs.snap));
-  if (rush && rush.car) bits.push(tag(`${(rush.ybc / rush.car).toFixed(1)} yds before contact/rush, ${(rush.yac / rush.car).toFixed(1)} after, ${rush.broken} broken tackles`, yrs.rush));
+  if (rush && rush.car) bits.push(tag(`${(rush.ybc / rush.car).toFixed(1)} yds before contact/rush, ${(rush.yac / rush.car).toFixed(1)} after, ${(rush.broken / rush.g).toFixed(2)} broken tackles/g`, yrs.rush));
   return bits.length ? bits.join(', ') : null;
 }
 
@@ -493,7 +502,7 @@ async function main() {
     const adp = p.ownership?.averageDraftPosition;
     const sp = sByName[p.fullName.toLowerCase()];
     const l = [`${p.fullName} (${pos}, ${ab}) — 2026 proj ${seasonProj(p)}, ADP ${adp ? adp.toFixed(1) : '?'}, overall draft rank ${i + 1}`];
-    l.push(`  2025: ${summarize(s2025[p.id], 2025, pos) || 'no data (rookie or missed season)'}`);
+    l.push(`  2025: ${summarize(s2025[p.id], 2025, pos, true) || 'no data (rookie or missed season)'}`);
     l.push(`  2024: ${summarize(s2024[p.id], 2024, pos) || 'no data'}`);
     const key = p.fullName.toLowerCase();
     const head = usageYr || snaps.yr || contact.yr;

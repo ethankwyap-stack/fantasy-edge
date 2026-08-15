@@ -1,0 +1,130 @@
+{
+ "generated": "2026-08-15T17:37:01.568Z",
+ "method": "Pearson r between a stat measured in year Y and the same player's PPR PPG in year Y+1, pooled across years, min 4 games played in both years.",
+ "yearsUsed": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024
+ ],
+ "minGames": 4,
+ "results": {
+  "QB": [
+   {
+    "key": "ppg",
+    "label": "own PPG (baseline)",
+    "r": 0.642,
+    "n": 276
+   },
+   {
+    "key": "passEpaPerG",
+    "label": "passing EPA/game",
+    "r": 0.461,
+    "n": 276
+   },
+   {
+    "key": "cpoe",
+    "label": "CPOE (completion % over expected)",
+    "r": 0.301,
+    "n": 275
+   }
+  ],
+  "RB": [
+   {
+    "key": "ppg",
+    "label": "own PPG (baseline)",
+    "r": 0.762,
+    "n": 628
+   },
+   {
+    "key": "snapSharePct",
+    "label": "snap share",
+    "r": 0.702,
+    "n": 611
+   },
+   {
+    "key": "tgtSharePct",
+    "label": "target share",
+    "r": 0.614,
+    "n": 628
+   },
+   {
+    "key": "brokenPerG",
+    "label": "broken tackles/game",
+    "r": 0.554,
+    "n": 584
+   },
+   {
+    "key": "ngsRyoe",
+    "label": "NGS rush yards over expected/att",
+    "r": 0.269,
+    "n": 305
+   },
+   {
+    "key": "yacPerCar",
+    "label": "yards after contact/rush",
+    "r": 0.171,
+    "n": 584
+   },
+   {
+    "key": "ybcPerCar",
+    "label": "yards before contact/rush",
+    "r": 0.074,
+    "n": 584
+   },
+   {
+    "key": "ngsStackedBox",
+    "label": "NGS % runs vs 8+ defenders",
+    "r": -0.066,
+    "n": 305
+   }
+  ],
+  "WR/TE": [
+   {
+    "key": "ppg",
+    "label": "own PPG (baseline)",
+    "r": 0.79,
+    "n": 1538
+   },
+   {
+    "key": "tgtSharePct",
+    "label": "target share",
+    "r": 0.766,
+    "n": 1538
+   },
+   {
+    "key": "woprPerG",
+    "label": "WOPR/game",
+    "r": 0.759,
+    "n": 1538
+   },
+   {
+    "key": "aySharePct",
+    "label": "air-yards share",
+    "r": 0.702,
+    "n": 1538
+   },
+   {
+    "key": "snapSharePct",
+    "label": "snap share",
+    "r": 0.651,
+    "n": 1479
+   },
+   {
+    "key": "ngsYacOE",
+    "label": "NGS YAC over expected",
+    "r": 0.193,
+    "n": 743
+   },
+   {
+    "key": "ngsSep",
+    "label": "NGS avg separation",
+    "r": -0.106,
+    "n": 743
+   }
+  ]
+ }
+}
