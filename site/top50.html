@@ -1,0 +1,328 @@
+<title>Fantasy Edge Top 50</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Palette inherited from index.html so this reads as the same product. Light theme is a
+   re-tuned counterpart, not an inversion: the four positional hues keep their identity but
+   darken enough to hold contrast on a pale ground. */
+:root{
+  --ground:#f4f6fa; --surface:#ffffff; --raised:#eef1f7; --line:#dde2ec;
+  --text:#131a29; --dim:#5b6478; --faint:#8a94a8;
+  --qb:#c02626; --rb:#15803d; --wr:#1d4ed8; --te:#a15c07;
+  --good:#15803d; --warn:#a15c07; --bad:#c02626;
+  --barbg:#e4e8f0; --shadow:0 1px 2px rgba(19,26,41,.06),0 8px 24px -12px rgba(19,26,41,.14);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0f1420; --surface:#161d2c; --raised:#1a2233; --line:#28324c;
+  --text:#e8ecf4; --dim:#8a94a8; --faint:#6b768e;
+  --qb:#f87171; --rb:#4ade80; --wr:#60a5fa; --te:#fbbf24;
+  --good:#4ade80; --warn:#fbbf24; --bad:#f87171;
+  --barbg:#232d45; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --ground:#0f1420; --surface:#161d2c; --raised:#1a2233; --line:#28324c;
+  --text:#e8ecf4; --dim:#8a94a8; --faint:#6b768e;
+  --qb:#f87171; --rb:#4ade80; --wr:#60a5fa; --te:#fbbf24;
+  --good:#4ade80; --warn:#fbbf24; --bad:#f87171;
+  --barbg:#232d45; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--text);
+  font:16px/1.6 "Source Sans 3",system-ui,-apple-system,sans-serif;
+  margin:0; padding:28px 20px 72px;
+}
+.wrap{max-width:1080px; margin:0 auto; display:flex; flex-direction:column; gap:28px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+
+/* ---- masthead ---- */
+header{display:flex; flex-direction:column; gap:10px}
+.eyebrow{
+  font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--faint);
+}
+h1{
+  font-family:Archivo,system-ui,sans-serif; font-weight:700; font-size:clamp(30px,5vw,44px);
+  letter-spacing:-.025em; line-height:1.05; margin:0; text-wrap:balance;
+}
+.standfirst{color:var(--dim); max-width:64ch; margin:0}
+.standfirst b{color:var(--text); font-weight:600}
+
+/* ---- provenance ---- */
+.sources{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:10px; overflow:hidden;
+}
+.src{background:var(--surface); padding:10px 12px; display:flex; flex-direction:column; gap:2px}
+.src .who{font-weight:600; font-size:13px; line-height:1.3}
+.src .when{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--faint)}
+.src .kind{
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--dim);
+}
+
+/* ---- stat tiles ---- */
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px}
+.tile{
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:14px 16px; display:flex; flex-direction:column; gap:4px; box-shadow:var(--shadow);
+}
+.tile .lbl{
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--faint);
+}
+.tile .big{font-family:Archivo,sans-serif; font-weight:700; font-size:26px; letter-spacing:-.02em}
+.tile .sub{font-size:13px; color:var(--dim); line-height:1.4}
+.split{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap}
+.split span{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:19px}
+
+/* ---- filters ---- */
+.filters{display:flex; gap:7px; flex-wrap:wrap; align-items:center}
+.fchip{
+  background:var(--surface); border:1px solid var(--line); color:var(--dim);
+  border-radius:7px; padding:5px 12px; font-size:13px; font-weight:600; cursor:pointer;
+  font-family:"Source Sans 3",sans-serif;
+}
+.fchip:hover{border-color:var(--faint)}
+.fchip[aria-pressed="true"]{background:var(--text); color:var(--ground); border-color:var(--text)}
+.fchip:focus-visible{outline:2px solid var(--wr); outline-offset:2px}
+
+/* ---- board ---- */
+.board{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow)}
+.head,.row{display:grid; grid-template-columns:44px 58px minmax(150px,1.4fr) minmax(110px,1fr) 74px 62px; gap:12px; align-items:center}
+.head{
+  padding:9px 16px; border-bottom:1px solid var(--line); background:var(--raised);
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--faint);
+}
+.head .r,.row .r{text-align:right}
+.rowwrap{border-bottom:1px solid var(--line)}
+.rowwrap:last-child{border-bottom:0}
+.row{
+  width:100%; padding:9px 16px; background:none; border:0; text-align:left;
+  color:inherit; font:inherit; cursor:pointer;
+}
+.row:hover{background:var(--raised)}
+.row:focus-visible{outline:2px solid var(--wr); outline-offset:-2px}
+.rank{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:15px; color:var(--dim); text-align:right}
+.pos{
+  font-family:"JetBrains Mono",monospace; font-weight:700; font-size:12px;
+  padding:2px 0; border-radius:5px; text-align:center; letter-spacing:.02em;
+}
+.pos-QB{color:var(--qb); background:color-mix(in srgb,var(--qb) 13%,transparent)}
+.pos-RB{color:var(--rb); background:color-mix(in srgb,var(--rb) 13%,transparent)}
+.pos-WR{color:var(--wr); background:color-mix(in srgb,var(--wr) 13%,transparent)}
+.pos-TE{color:var(--te); background:color-mix(in srgb,var(--te) 13%,transparent)}
+.who{display:flex; flex-direction:column; min-width:0}
+.who .nm{font-weight:600; letter-spacing:-.01em; line-height:1.25; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.who .tm{font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--faint); letter-spacing:.06em}
+.bar{height:9px; border-radius:3px; background:var(--barbg); overflow:hidden}
+.bar i{display:block; height:100%; border-radius:3px}
+.vbd{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:14px; text-align:right}
+.mv{font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:700; text-align:right}
+.mv.up{color:var(--good)} .mv.dn{color:var(--bad)} .mv.flat{color:var(--faint)}
+.cliff{
+  display:flex; align-items:center; gap:10px; padding:6px 16px;
+  background:var(--raised); border-bottom:1px solid var(--line);
+  font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--dim); letter-spacing:.05em;
+}
+.cliff::before,.cliff::after{content:""; flex:1; height:1px; background:var(--line)}
+
+/* ---- expanded detail ---- */
+.detail{padding:2px 16px 18px 16px; background:var(--raised); display:flex; flex-direction:column; gap:14px}
+.detail[hidden]{display:none}
+.verdict{font-size:15px; line-height:1.5; margin:0; max-width:70ch}
+.votes{display:flex; gap:6px; flex-wrap:wrap}
+.vote{
+  font-family:"JetBrains Mono",monospace; font-size:11px; background:var(--surface);
+  border:1px solid var(--line); border-radius:6px; padding:3px 8px; color:var(--dim);
+}
+.vote b{color:var(--text)}
+.vote.fav{border-color:var(--te); color:var(--te)}
+.facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:10px}
+.fact{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:9px 11px}
+.fact .k{
+  font-family:"JetBrains Mono",monospace; font-size:9.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--faint); display:block; margin-bottom:3px;
+}
+.fact .v{font-size:13.5px; line-height:1.45}
+.note{
+  border-left:3px solid var(--line); padding:2px 0 2px 12px; font-size:13.5px;
+  line-height:1.5; color:var(--dim); max-width:72ch;
+}
+.note.risk{border-left-color:var(--bad)}
+.note.tailwind{border-left-color:var(--good)}
+.note b{color:var(--text); font-weight:600}
+.note .stamp{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--faint)}
+.tags{display:flex; gap:5px; flex-wrap:wrap}
+.tag{
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.04em;
+  background:var(--surface); border:1px solid var(--line); border-radius:5px;
+  padding:2px 7px; color:var(--dim);
+}
+.tag.warnflag{color:var(--bad); border-color:color-mix(in srgb,var(--bad) 45%,var(--line))}
+.tag.goodflag{color:var(--good); border-color:color-mix(in srgb,var(--good) 45%,var(--line))}
+
+/* ---- method ---- */
+.method{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-direction:column; gap:12px}
+.method h2{font-family:Archivo,sans-serif; font-size:15px; font-weight:700; letter-spacing:.01em; margin:0}
+.method p{margin:0; font-size:14px; color:var(--dim); max-width:78ch; line-height:1.6}
+.method b{color:var(--text); font-weight:600}
+.method ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px}
+.method li{font-size:14px; color:var(--dim); max-width:76ch}
+
+@media (max-width:640px){
+  body{padding:20px 12px 56px}
+  .head,.row{grid-template-columns:32px 50px minmax(0,1fr) 58px 50px; gap:8px}
+  .head .barh,.row .bar{display:none}
+  .detail,.row,.head,.cliff{padding-left:12px; padding-right:12px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Fantasy Edge &middot; 12-team PPR &middot; 2026-08-25</div>
+  <h1>The top 50, priced by six boards at once</h1>
+  <p class="standfirst">Every source that ranks a player casts <b>one equal vote</b> on his positional rank. The blended rank is read back as points off ESPN's own projection curve, then <b>value over replacement</b> puts a QB, an RB and a tight end on the same scale. Tap any row for the six votes behind it.</p>
+</header>
+
+<section class="sources" aria-label="Sources">
+  <div class="src"><span class="kind">expert</span><span class="who">Field Yates (ESPN)</span><span class="when">2026-08-24</span></div>
+  <div class="src"><span class="kind">expert</span><span class="who">CBS consensus</span><span class="when">2026-08-25</span></div>
+  <div class="src"><span class="kind">market</span><span class="who">FFC ADP (market)</span><span class="when">2026-08-24</span></div>
+  <div class="src"><span class="kind">analyst</span><span class="who">Smyth &mdash; 2026 PDF board</span><span class="when">184 ranked</span></div>
+  <div class="src"><span class="kind">analyst</span><span class="who">Holka &mdash; top 150</span><span class="when">150 ranked</span></div>
+</section>
+
+<section class="tiles" aria-label="Summary">
+  <div class="tile">
+    <span class="lbl">Positional split, top 50</span>
+    <div class="split">
+      <span class="pos-RB" style="background:none;padding:0">20 RB</span><span class="pos-WR" style="background:none;padding:0">21 WR</span><span class="pos-QB" style="background:none;padding:0">5 QB</span><span class="pos-TE" style="background:none;padding:0">4 TE</span>
+    </div>
+    <span class="sub">Replacement sits at RB28 / WR32 / QB12 / TE12, so the backs stack early.</span>
+  </div>
+  <div class="tile">
+    <span class="lbl">Biggest cliff</span>
+    <span class="big mono">after&nbsp;#8</span>
+    <span class="sub">Jonathan Taylor to CeeDee Lamb drops 30 points &mdash; more than the next eleven gaps combined. A smaller 12-point step sits after #5.</span>
+  </div>
+  <div class="tile">
+    <span class="lbl">Board is highest on</span>
+    <span class="big">Burrow <span class="mono" style="color:var(--good)">+15</span></span>
+    <span class="sub">Joe Burrow goes 62 on the market, 47 here. Breece Hall (+13) and Tyler Warren (+13) follow.</span>
+  </div>
+  <div class="tile">
+    <span class="lbl">Carrying a health flag</span>
+    <span class="big mono">3</span>
+    <span class="sub">Jeremiyah Love, Breece Hall, Rashee Rice &mdash; all already priced in, see the note.</span>
+  </div>
+</section>
+
+<div class="filters" role="group" aria-label="Filter by position">
+  <button class="fchip" aria-pressed="true" data-f="ALL">All 50</button>
+  <button class="fchip" aria-pressed="false" data-f="RB">RB</button>
+  <button class="fchip" aria-pressed="false" data-f="WR">WR</button>
+  <button class="fchip" aria-pressed="false" data-f="QB">QB</button>
+  <button class="fchip" aria-pressed="false" data-f="TE">TE</button>
+  <button class="fchip" aria-pressed="false" data-f="FLAG">News flags</button>
+</div>
+
+<div class="board">
+  <div class="head" aria-hidden="true">
+    <div class="r">#</div><div>Pos</div><div>Player</div><div class="barh">Value over replacement</div><div class="r">VBD</div><div class="r">vs mkt</div>
+  </div>
+  <div id="rows"></div>
+</div>
+
+<section class="method">
+  <h2>How this was built &mdash; and what it can't tell you</h2>
+  <p>Six sources vote: three current boards (<b>Field Yates</b>, the <b>CBS consensus</b> of Eisenberg/Richard/Cummings, and <b>FFC's ADP</b> from 7,658 mock drafts run Aug 17&ndash;24), two analyst boards already in the repo (<b>Smyth's</b> 2026 PDF board and <b>Holka's</b> top 150), and <b>ESPN's own projection order</b>. All six rank all fifty of these players, so nothing here rests on a single opinion.</p>
+  <ul>
+    <li><b>A source that omits a player casts no vote.</b> Absence means "not rated", never "rated last" &mdash; the same rule the draft board uses.</li>
+    <li><b>Smyth breaks ties, he doesn't overrule.</b> His vote triples only when every source already sits within five positional ranks of the others; where they genuinely disagree it drops back to equal weight.</li>
+    <li><b>Boom/bust is shown, not ranked on.</b> It comes from 2025 and its positional baseline averages every rated player, so it flatters almost everyone in a top 50 and abstains entirely for anyone missing &mdash; which would quietly turn "no data" into a penalty.</li>
+    <li><b>The injury news is reported, not applied.</b> Every board here was published on or after Aug 24, and Love's ankle, Hall's groin and the Higgins ACL all broke before that. The market has already priced them; moving players by hand would count the same news twice.</li>
+    <li><b>Playoff strength of schedule grades weeks 15&ndash;17 on last season's defenses.</b> That makes it an October trade signal, not a fact about December.</li>
+  </ul>
+  <p>Rank order is value over replacement, which is why it parts company with straight ADP: it rewards scarcity at a position, so it lifts an early QB1 and a bell-cow back above receivers the market drafts sooner. The <b>vs mkt</b> column is that disagreement, in draft slots.</p>
+</section>
+</div>
+
+<script>
+const P = [{"o":1,"n":"Jahmyr Gibbs","p":"RB","pr":1,"t":"DET","v":173,"c":1.13,"m":1,"votes":[{"src":"Field Yates (ESPN)","rank":2},{"src":"CBS consensus","rank":1},{"src":"FFC ADP (market)","rank":1},{"src":"Smyth","rank":1},{"src":"Holka","rank":1},{"src":"ESPN proj (2026-08-06)","rank":1}],"ov":[{"src":"Field Yates (ESPN)","rank":2},{"src":"CBS consensus","rank":1},{"src":"FFC ADP (market)","rank":1}],"fav":true,"proj":365,"fl":300,"ce":400,"b":{"g":17,"boom":0.35,"bust":0.18,"median":19.4,"sd":13.53},"vd":"High volume + elite efficiency and extreme solo-back splits make him the overall 1.01 target","bg":["elite","workhorse","split-touches"],"vw":null,"sos":{"team":"DET","opponents":["MIN","NYG","CHI"],"rank":17.3},"vn":null,"es":null,"nw":null},{"o":2,"n":"Bijan Robinson","p":"RB","pr":2,"t":"ATL","v":164,"c":1.88,"m":2,"votes":[{"src":"Field Yates (ESPN)","rank":1},{"src":"CBS consensus","rank":2},{"src":"FFC ADP (market)","rank":2},{"src":"Smyth","rank":2},{"src":"Holka","rank":2},{"src":"ESPN proj (2026-08-06)","rank":2}],"ov":[{"src":"Field Yates (ESPN)","rank":1},{"src":"CBS consensus","rank":2},{"src":"FFC ADP (market)","rank":2}],"fav":true,"proj":353,"fl":305,"ce":400,"b":{"g":17,"boom":0.53,"bust":0.12,"median":21.2,"sd":10.26},"vd":"Paid, holdout resolved, every-down bell cow with strong receiving efficiency—cleanest RB1 profile","bg":["elite","workhorse"],"vw":null,"sos":{"team":"ATL","opponents":["WAS","TB","NO"],"rank":20},"vn":null,"es":null,"nw":null},{"o":3,"n":"Ja'Marr Chase","p":"WR","pr":1,"t":"CIN","v":157,"c":1.25,"m":4,"votes":[{"src":"Field Yates (ESPN)","rank":1},{"src":"CBS consensus","rank":1},{"src":"FFC ADP (market)","rank":2},{"src":"Smyth","rank":1},{"src":"Holka","rank":1},{"src":"ESPN proj (2026-08-06)","rank":2}],"ov":[{"src":"Field Yates (ESPN)","rank":4},{"src":"CBS consensus","rank":3},{"src":"FFC ADP (market)","rank":4}],"fav":true,"proj":336,"fl":290,"ce":405,"b":{"g":16,"boom":0.44,"bust":0.19,"median":20.5,"sd":10.26},"vd":"32% target share and 94% snaps keep him elite; 2025 dip was Burrow health, not talent decline.","bg":["elite","workhorse","td-dependent"],"vw":{"grade":"A","share":32.3,"wr2Rate":58.2,"games":16},"sos":{"team":"CIN","opponents":["CAR","IND","BAL"],"rank":21.7},"vn":null,"es":null,"nw":null},{"o":4,"n":"Christian McCaffrey","p":"RB","pr":3,"t":"SF","v":149,"c":3.13,"m":6,"votes":[{"src":"Field Yates (ESPN)","rank":3},{"src":"CBS consensus","rank":4},{"src":"FFC ADP (market)","rank":3},{"src":"Smyth","rank":3},{"src":"Holka","rank":3},{"src":"ESPN proj (2026-08-06)","rank":3}],"ov":[{"src":"Field Yates (ESPN)","rank":3},{"src":"CBS consensus","rank":8},{"src":"FFC ADP (market)","rank":7}],"fav":true,"proj":343,"fl":230,"ce":400,"b":{"g":17,"boom":0.53,"bust":0,"median":24.1,"sd":8.22},"vd":"Historic 2025 with elite receiving volume, but age-30 mileage and 2024 injury keep the floor honest","bg":["elite","workhorse","injury-history"],"vw":null,"sos":{"team":"SF","opponents":["LAC","KC","PHI"],"rank":10},"vn":[{"week":1,"analyst":"Smyth","note":"Far and away the leader in RB red-zone targets — the single biggest edge in the metric.","source":"https://www.tiktok.com/t/ZTAKNwtVX/"}],"es":null,"nw":{"date":"2026-08-23","dir":"tailwind","note":"The 15-day absence was planned load management, not a setback: back in team drills Aug 23 with carries, 'I feel great, I feel fresh.' Shanahan said he'd have played in a normal game week.","src":"ESPN Wagoner / 49ers practice report"}},{"o":5,"n":"Puka Nacua","p":"WR","pr":2,"t":"LAR","v":144,"c":1.88,"m":4,"votes":[{"src":"Field Yates (ESPN)","rank":2},{"src":"CBS consensus","rank":2},{"src":"FFC ADP (market)","rank":1},{"src":"Smyth","rank":2},{"src":"Holka","rank":3},{"src":"ESPN proj (2026-08-06)","rank":1}],"ov":[{"src":"Field Yates (ESPN)","rank":5},{"src":"CBS consensus","rank":4},{"src":"FFC ADP (market)","rank":3}],"fav":true,"proj":357,"fl":285,"ce":400,"b":{"g":16,"boom":0.56,"bust":0.06,"median":22.95,"sd":10.21},"vd":"League-best per-route WR with 30% target share and elite efficiency — a true 1.1-caliber WR anchor.","bg":["elite","workhorse"],"vw":{"grade":"A","share":30.4,"wr2Rate":58.2,"games":16},"sos":{"team":"LA","opponents":["DAL","SEA","TB"],"rank":18.3},"vn":null,"es":null,"nw":null},{"o":6,"n":"Jaxon Smith-Njigba","p":"WR","pr":3,"t":"SEA","v":132,"c":3.25,"m":5,"votes":[{"src":"Field Yates (ESPN)","rank":3},{"src":"CBS consensus","rank":3},{"src":"FFC ADP (market)","rank":3},{"src":"Smyth","rank":4},{"src":"Holka","rank":2},{"src":"ESPN proj (2026-08-06)","rank":3}],"ov":[{"src":"Field Yates (ESPN)","rank":6},{"src":"CBS consensus","rank":5},{"src":"FFC ADP (market)","rank":5}],"fav":true,"proj":327,"fl":285,"ce":385,"b":{"g":17,"boom":0.24,"bust":0.06,"median":20.6,"sd":7.48},"vd":"36.8% target share and 0.90 WOPR — elite volume with a near-perfect 2025; only OC change tempers it.","bg":["elite","workhorse"],"vw":{"grade":"A","share":35.8,"wr2Rate":58.2,"games":17},"sos":{"team":"SEA","opponents":["PHI","LA","CAR"],"rank":11},"vn":null,"es":null,"nw":null},{"o":7,"n":"Amon-Ra St. Brown","p":"WR","pr":4,"t":"DET","v":131,"c":3.63,"m":7,"votes":[{"src":"Field Yates (ESPN)","rank":4},{"src":"CBS consensus","rank":4},{"src":"FFC ADP (market)","rank":4},{"src":"Smyth","rank":3},{"src":"Holka","rank":4},{"src":"ESPN proj (2026-08-06)","rank":4}],"ov":[{"src":"Field Yates (ESPN)","rank":9},{"src":"CBS consensus","rank":6},{"src":"FFC ADP (market)","rank":6}],"fav":true,"proj":325,"fl":275,"ce":355,"b":{"g":17,"boom":0.29,"bust":0.12,"median":18,"sd":10.93},"vd":"Three straight top-5 finishes and 31.7% target share make him the safest WR outside the top four.","bg":["elite","workhorse"],"vw":{"grade":"A","share":31.3,"wr2Rate":58.2,"games":17},"sos":{"team":"DET","opponents":["MIN","NYG","CHI"],"rank":18.7},"vn":null,"es":null,"nw":null},{"o":8,"n":"Jonathan Taylor","p":"RB","pr":4,"t":"IND","v":129,"c":3.88,"m":7,"votes":[{"src":"Field Yates (ESPN)","rank":4},{"src":"CBS consensus","rank":3},{"src":"FFC ADP (market)","rank":4},{"src":"Smyth","rank":4},{"src":"Holka","rank":4},{"src":"ESPN proj (2026-08-06)","rank":4}],"ov":[{"src":"Field Yates (ESPN)","rank":7},{"src":"CBS consensus","rank":7},{"src":"FFC ADP (market)","rank":8}],"fav":true,"proj":317,"fl":250,"ce":350,"b":{"g":17,"boom":0.35,"bust":0.12,"median":16.9,"sd":12.44},"vd":"Bell-cow rusher with rare positive rush EPA, but thin passing role and 320+ touch mileage cap him","bg":["workhorse"],"vw":null,"sos":{"team":"IND","opponents":["TEN","CIN","CLE"],"rank":21.7},"vn":null,"es":null,"nw":null},{"o":9,"n":"CeeDee Lamb","p":"WR","pr":5,"t":"DAL","v":99,"c":5.88,"m":11,"votes":[{"src":"Field Yates (ESPN)","rank":6},{"src":"CBS consensus","rank":5},{"src":"FFC ADP (market)","rank":6},{"src":"Smyth","rank":5},{"src":"Holka","rank":9},{"src":"ESPN proj (2026-08-06)","rank":6}],"ov":[{"src":"Field Yates (ESPN)","rank":13},{"src":"CBS consensus","rank":10},{"src":"FFC ADP (market)","rank":11}],"fav":true,"proj":294,"fl":235,"ce":330,"b":{"g":13,"boom":0.08,"bust":0.08,"median":17.1,"sd":5.98},"vd":"2025 was TD-regression bad luck on missed games; volume and QB argue a rebound to WR1 range.","bg":["workhorse","td-dependent"],"vw":{"grade":"A","share":25.2,"wr2Rate":58.2,"games":13},"sos":{"team":"DAL","opponents":["LA","JAX","NYG"],"rank":20.3},"vn":null,"es":null,"nw":null},{"o":10,"n":"Justin Jefferson","p":"WR","pr":6,"t":"MIN","v":99,"c":5.75,"m":13,"votes":[{"src":"Field Yates (ESPN)","rank":5},{"src":"CBS consensus","rank":6},{"src":"FFC ADP (market)","rank":7},{"src":"Smyth","rank":6},{"src":"Holka","rank":5},{"src":"ESPN proj (2026-08-06)","rank":5}],"ov":[{"src":"Field Yates (ESPN)","rank":12},{"src":"CBS consensus","rank":15},{"src":"FFC ADP (market)","rank":12}],"fav":true,"proj":294,"fl":215,"ce":335,"b":{"g":17,"boom":0,"bust":0.29,"median":12.5,"sd":5.79},"vd":"Elite target share but a -0.81 rec EPA/g and unsettled QB room make this a rare risk at his price.","bg":["elite","decline-risk"],"vw":{"grade":"A","share":30.1,"wr2Rate":58.2,"games":17},"sos":{"team":"MIN","opponents":["DET","WAS","NYJ"],"rank":23},"vn":null,"es":null,"nw":null},{"o":11,"n":"James Cook III","p":"RB","pr":5,"t":"BUF","v":95,"c":5.63,"m":11,"votes":[{"src":"Field Yates (ESPN)","rank":6},{"src":"CBS consensus","rank":5},{"src":"FFC ADP (market)","rank":6},{"src":"Smyth","rank":5},{"src":"Holka","rank":6},{"src":"ESPN proj (2026-08-06)","rank":7}],"ov":[{"src":"Field Yates (ESPN)","rank":10},{"src":"CBS consensus","rank":9},{"src":"FFC ADP (market)","rank":13}],"fav":true,"proj":279,"fl":225,"ce":315,"b":{"g":17,"boom":0.24,"bust":0.12,"median":20.4,"sd":9.2},"vd":"Locked-in rushing volume but heavily TD-fueled scoring and a thin 40-target receiving role","bg":["workhorse","td-dependent"],"vw":null,"sos":{"team":"BUF","opponents":["CHI","DEN","MIA"],"rank":13.7},"vn":null,"es":null,"nw":null},{"o":12,"n":"De'Von Achane","p":"RB","pr":6,"t":"MIA","v":88,"c":7.5,"m":10,"votes":[{"src":"Field Yates (ESPN)","rank":5},{"src":"CBS consensus","rank":7},{"src":"FFC ADP (market)","rank":5},{"src":"Smyth","rank":10},{"src":"Holka","rank":8},{"src":"ESPN proj (2026-08-06)","rank":5}],"ov":[{"src":"Field Yates (ESPN)","rank":8},{"src":"CBS consensus","rank":12},{"src":"FFC ADP (market)","rank":10}],"fav":true,"proj":293,"fl":240,"ce":340,"b":{"g":16,"boom":0.19,"bust":0,"median":17.75,"sd":7.02},"vd":"High volume plus explosive efficiency and heavy receiving role give a PPR-proof floor and top-5 ceiling","bg":["elite","workhorse"],"vw":null,"sos":{"team":"MIA","opponents":["GB","LAC","BUF"],"rank":14.7},"vn":null,"es":null,"nw":null},{"o":13,"n":"Chase Brown","p":"RB","pr":7,"t":"CIN","v":88,"c":8.17,"m":13,"votes":[{"src":"Field Yates (ESPN)","rank":8},{"src":"CBS consensus","rank":6},{"src":"FFC ADP (market)","rank":7},{"src":"Smyth","rank":8},{"src":"Holka","rank":7},{"src":"ESPN proj (2026-08-06)","rank":13}],"ov":[{"src":"Field Yates (ESPN)","rank":14},{"src":"CBS consensus","rank":11},{"src":"FFC ADP (market)","rank":14}],"fav":false,"proj":273,"fl":225,"ce":315,"b":{"g":17,"boom":0.18,"bust":0.06,"median":16,"sd":7.35},"vd":"Steady three-down back with a strong receiving floor—ceiling and floor both hinge on Burrow's health","bg":["workhorse"],"vw":null,"sos":{"team":"CIN","opponents":["CAR","IND","BAL"],"rank":19},"vn":[{"week":1,"analyst":"Smyth","note":"8 red-zone targets in 8 games with Burrow, and similar in 2024 — a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.","source":"https://www.tiktok.com/t/ZTAKNwtVX/"}],"es":null,"nw":null},{"o":14,"n":"Ashton Jeanty","p":"RB","pr":8,"t":"LV","v":88,"c":8.67,"m":22,"votes":[{"src":"Field Yates (ESPN)","rank":14},{"src":"CBS consensus","rank":12},{"src":"FFC ADP (market)","rank":8},{"src":"Smyth","rank":7},{"src":"Holka","rank":5},{"src":"ESPN proj (2026-08-06)","rank":6}],"ov":[{"src":"Field Yates (ESPN)","rank":24},{"src":"CBS consensus","rank":25},{"src":"FFC ADP (market)","rank":16}],"fav":false,"proj":281,"fl":195,"ce":320,"b":{"g":17,"boom":0.24,"bust":0.24,"median":12.1,"sd":8.69},"vd":"Heavy volume but the warning quadrant—dreadful rush efficiency needs Kubiak's scheme to unlock it","bg":["workhorse","breakout"],"vw":null,"sos":{"team":"LV","opponents":["DEN","TEN","ARI"],"rank":15.3},"vn":null,"es":null,"nw":null},{"o":15,"n":"Drake London","p":"WR","pr":7,"t":"ATL","v":84,"c":6.63,"m":14,"votes":[{"src":"Field Yates (ESPN)","rank":7},{"src":"CBS consensus","rank":7},{"src":"FFC ADP (market)","rank":5},{"src":"Smyth","rank":7},{"src":"Holka","rank":6},{"src":"ESPN proj (2026-08-06)","rank":7}],"ov":[{"src":"Field Yates (ESPN)","rank":17},{"src":"CBS consensus","rank":16},{"src":"FFC ADP (market)","rank":9}],"fav":true,"proj":270,"fl":195,"ce":315,"b":{"g":12,"boom":0.33,"bust":0.25,"median":15.65,"sd":11.45},"vd":"33% target share with Penix healthy is WR1 volume; the whole case rides on the QB staying upright.","bg":["injury-history"],"vw":{"grade":"A","share":30.6,"wr2Rate":58.2,"games":12},"sos":{"team":"ATL","opponents":["WAS","TB","NO"],"rank":18.7},"vn":null,"es":null,"nw":null},{"o":16,"n":"Omarion Hampton","p":"RB","pr":9,"t":"LAC","v":84,"c":9.83,"m":20,"votes":[{"src":"Field Yates (ESPN)","rank":13},{"src":"CBS consensus","rank":9},{"src":"FFC ADP (market)","rank":12},{"src":"Smyth","rank":6},{"src":"Holka","rank":10},{"src":"ESPN proj (2026-08-06)","rank":9}],"ov":[{"src":"Field Yates (ESPN)","rank":23},{"src":"CBS consensus","rank":14},{"src":"FFC ADP (market)","rank":24}],"fav":false,"proj":279,"fl":175,"ce":300,"b":{"g":9,"boom":0.11,"bust":0.22,"median":14.7,"sd":8.08},"vd":"Three-down breakout profile if healthy, but 2025 injury and Keaton Mitchell cap the confidence","bg":["injury-history","breakout"],"vw":null,"sos":{"team":"LAC","opponents":["SF","MIA","KC"],"rank":18.3},"vn":null,"es":null,"nw":null},{"o":17,"n":"Derrick Henry","p":"RB","pr":10,"t":"BAL","v":83,"c":10.63,"m":15,"votes":[{"src":"Field Yates (ESPN)","rank":7},{"src":"CBS consensus","rank":11},{"src":"FFC ADP (market)","rank":9},{"src":"Smyth","rank":12},{"src":"Holka","rank":12},{"src":"ESPN proj (2026-08-06)","rank":10}],"ov":[{"src":"Field Yates (ESPN)","rank":11},{"src":"CBS consensus","rank":18},{"src":"FFC ADP (market)","rank":17}],"fav":true,"proj":274,"fl":200,"ce":305,"b":{"g":17,"boom":0.18,"bust":0.12,"median":13.1,"sd":10},"vd":"Age-32 anomaly still rushing well, but pure-TD profile and the ever-present clock cap the case","bg":["workhorse","td-dependent","decline-risk"],"vw":null,"sos":{"team":"BAL","opponents":["PIT","CLE","CIN"],"rank":19.3},"vn":null,"es":null,"nw":null},{"o":18,"n":"Kenneth Walker III","p":"RB","pr":11,"t":"KC","v":83,"c":10,"m":17,"votes":[{"src":"Field Yates (ESPN)","rank":9},{"src":"CBS consensus","rank":8},{"src":"FFC ADP (market)","rank":11},{"src":"Smyth","rank":9},{"src":"Holka","rank":9},{"src":"ESPN proj (2026-08-06)","rank":14}],"ov":[{"src":"Field Yates (ESPN)","rank":15},{"src":"CBS consensus","rank":13},{"src":"FFC ADP (market)","rank":23}],"fav":false,"proj":273,"fl":175,"ce":285,"b":{"g":17,"boom":0,"bust":0.35,"median":9.6,"sd":6.53},"vd":"Team change to KC is the upgrade—TD environment jumps, but efficiency and pass-down role are open","bg":["new-team","td-dependent"],"vw":null,"sos":{"team":"KC","opponents":["NE","SF","LAC"],"rank":10.7},"vn":null,"es":null,"nw":null},{"o":19,"n":"Saquon Barkley","p":"RB","pr":12,"t":"PHI","v":83,"c":10.75,"m":19,"votes":[{"src":"Field Yates (ESPN)","rank":11},{"src":"CBS consensus","rank":10},{"src":"FFC ADP (market)","rank":10},{"src":"Smyth","rank":11},{"src":"Holka","rank":11},{"src":"ESPN proj (2026-08-06)","rank":11}],"ov":[{"src":"Field Yates (ESPN)","rank":21},{"src":"CBS consensus","rank":17},{"src":"FFC ADP (market)","rank":19}],"fav":true,"proj":274,"fl":205,"ce":320,"b":{"g":16,"boom":0.06,"bust":0.19,"median":15.15,"sd":7.19},"vd":"2024 spike regressed hard in 2025; big volume holds the floor but the ceiling needs efficiency back","bg":["workhorse","decline-risk"],"vw":null,"sos":{"team":"PHI","opponents":["SEA","HOU","SF"],"rank":12.3},"vn":null,"es":null,"nw":null},{"o":20,"n":"Jeremiyah Love","p":"RB","pr":13,"t":"ARI","v":83,"c":12.5,"m":29,"votes":[{"src":"Field Yates (ESPN)","rank":10},{"src":"CBS consensus","rank":16},{"src":"FFC ADP (market)","rank":13},{"src":"Smyth","rank":13},{"src":"Holka","rank":15},{"src":"ESPN proj (2026-08-06)","rank":8}],"ov":[{"src":"Field Yates (ESPN)","rank":20},{"src":"CBS consensus","rank":38},{"src":"FFC ADP (market)","rank":28}],"fav":false,"proj":279,"fl":120,"ce":270,"b":null,"vd":"Talented rookie but an unsettled three-way Arizona muddle makes the RB13 price too rich","bg":["rookie","depth-risk"],"vw":null,"sos":{"team":"ARI","opponents":["NYJ","NO","LV"],"rank":21.7},"vn":[{"week":1,"analyst":"FSC","note":"Rostered by team 9, not a waiver target. Opens the season in a muddled committee (Braswell/Beck) so casual managers will undervalue him, but FSC expects his workload to ramp toward 17-18 PPG by the back half. Their call: buy-low trade around week 5 for roughly 4th-round redraft value.","source":"https://youtube.com/watch?v=f4o5i4kreu0"}],"es":null,"nw":{"date":"2026-08-24","dir":"risk","note":"High ankle sprain since Aug 13 preseason debut. Has not practiced or been on the field since; will not practice this week or play the preseason finale. Cardinals 'hopeful' for the Sept 13 opener; HC Mike LaFleur has not committed to Week 1.","src":"Arizona Sports / NFL.com / Schefter"}},{"o":21,"n":"Josh Jacobs","p":"RB","pr":14,"t":"GB","v":82,"c":13.25,"m":28,"votes":[{"src":"Field Yates (ESPN)","rank":12},{"src":"CBS consensus","rank":13},{"src":"FFC ADP (market)","rank":14},{"src":"Smyth","rank":14},{"src":"Holka","rank":13},{"src":"ESPN proj (2026-08-06)","rank":12}],"ov":[{"src":"Field Yates (ESPN)","rank":22},{"src":"CBS consensus","rank":30},{"src":"FFC ADP (market)","rank":31}],"fav":true,"proj":274,"fl":195,"ce":290,"b":{"g":15,"boom":0.2,"bust":0.2,"median":14.4,"sd":9.02},"vd":"Fading trusty vet propped up by goal-line TDs in a committee-leaning Green Bay backfield","bg":["workhorse","td-dependent","decline-risk"],"vw":null,"sos":{"team":"GB","opponents":["MIA","CHI","HOU"],"rank":17},"vn":null,"es":null,"nw":null},{"o":22,"n":"Josh Allen","p":"QB","pr":1,"t":"BUF","v":82,"c":1,"m":32,"votes":[{"src":"Field Yates (ESPN)","rank":1},{"src":"CBS consensus","rank":1},{"src":"FFC ADP (market)","rank":1},{"src":"Smyth","rank":1},{"src":"Holka","rank":1},{"src":"ESPN proj (2026-08-06)","rank":1}],"ov":[{"src":"Field Yates (ESPN)","rank":28},{"src":"CBS consensus","rank":35},{"src":"FFC ADP (market)","rank":34}],"fav":true,"proj":369,"fl":320,"ce":415,"b":{"g":16,"boom":0.38,"bust":0.19,"median":23.1,"sd":10.4},"vd":"Elite dual-threat workhorse with unmatched floor; 112 carries and QB1-caliber passing make him the safe QB1.","bg":["elite","workhorse"],"vw":null,"sos":{"team":"BUF","opponents":["CHI","DEN","MIA"],"rank":18},"vn":null,"es":null,"nw":null},{"o":23,"n":"Breece Hall","p":"RB","pr":15,"t":"NYJ","v":75,"c":15.5,"m":36,"votes":[{"src":"Field Yates (ESPN)","rank":16},{"src":"CBS consensus","rank":18},{"src":"FFC ADP (market)","rank":16},{"src":"Smyth","rank":15},{"src":"Holka","rank":14},{"src":"ESPN proj (2026-08-06)","rank":15}],"ov":[{"src":"Field Yates (ESPN)","rank":31},{"src":"CBS consensus","rank":43},{"src":"FFC ADP (market)","rank":35}],"fav":true,"proj":273,"fl":175,"ce":290,"b":{"g":16,"boom":0.06,"bust":0.31,"median":11.55,"sd":7.62},"vd":"Committee erosion cut his 2025, but receiving chops and an improved Jets offense keep bounce-back live","bg":["split-touches"],"vw":null,"sos":{"team":"NYJ","opponents":["ARI","NE","MIN"],"rank":14.7},"vn":null,"es":null,"nw":{"date":"2026-08-23","dir":"risk","note":"Groin strain, HC Aaron Glenn says 2-3 weeks, expected back for the opener. Board has him 13 slots ahead of market, so the miss matters more here than it does at ADP.","src":"Yahoo camp injury tracker"}},{"o":24,"n":"Brock Bowers","p":"TE","pr":1,"t":"LV","v":71,"c":1.38,"m":26,"votes":[{"src":"Field Yates (ESPN)","rank":1},{"src":"CBS consensus","rank":1},{"src":"FFC ADP (market)","rank":2},{"src":"Smyth","rank":1},{"src":"Holka","rank":2},{"src":"ESPN proj (2026-08-06)","rank":2}],"ov":[{"src":"Field Yates (ESPN)","rank":16},{"src":"CBS consensus","rank":24},{"src":"FFC ADP (market)","rank":37}],"fav":true,"proj":240,"fl":178,"ce":286,"b":{"g":12,"boom":0.25,"bust":0.08,"median":12.85,"sd":10.12},"vd":"Elite bounce-back — 2024's 263-pt line and top red-zone share say the down 2025 was injury, not decline","bg":["elite","injury-history","breakout"],"vw":null,"sos":{"team":"LV","opponents":["DEN","TEN","ARI"],"rank":22.7},"vn":null,"es":null,"nw":null},{"o":25,"n":"Trey McBride","p":"TE","pr":2,"t":"ARI","v":71,"c":1.63,"m":25,"votes":[{"src":"Field Yates (ESPN)","rank":2},{"src":"CBS consensus","rank":2},{"src":"FFC ADP (market)","rank":1},{"src":"Smyth","rank":2},{"src":"Holka","rank":1},{"src":"ESPN proj (2026-08-06)","rank":1}],"ov":[{"src":"Field Yates (ESPN)","rank":18},{"src":"CBS consensus","rank":27},{"src":"FFC ADP (market)","rank":29}],"fav":true,"proj":242,"fl":198,"ce":288,"b":{"g":17,"boom":0.53,"bust":0.06,"median":16.5,"sd":8.37},"vd":"Elite volume TE1 — 27.9% target share and 169 looks are real, but a TD spike and QB downgrade cap the ceiling","bg":["elite","workhorse"],"vw":null,"sos":{"team":"ARI","opponents":["NYJ","NO","LV"],"rank":14},"vn":null,"es":null,"nw":null},{"o":26,"n":"Javonte Williams","p":"RB","pr":16,"t":"DAL","v":68,"c":16,"m":35,"votes":[{"src":"Field Yates (ESPN)","rank":15},{"src":"CBS consensus","rank":15},{"src":"FFC ADP (market)","rank":18},{"src":"Smyth","rank":16},{"src":"Holka","rank":16},{"src":"ESPN proj (2026-08-06)","rank":16}],"ov":[{"src":"Field Yates (ESPN)","rank":30},{"src":"CBS consensus","rank":34},{"src":"FFC ADP (market)","rank":40}],"fav":true,"proj":259,"fl":175,"ce":285,"b":{"g":16,"boom":0.13,"bust":0.13,"median":14.9,"sd":6.02},"vd":"Dallas rebound looked good, but low yds/tgt screams TD reliance and rookie Blue threatens the role","bg":["td-dependent","depth-risk"],"vw":null,"sos":{"team":"DAL","opponents":["LA","JAX","NYG"],"rank":14.3},"vn":[{"week":1,"analyst":"Smyth","note":"Red-zone-target leader but Smyth expects some decline from that rate; still projects a good share. Buy the role, not last year's exact number.","source":"https://www.tiktok.com/t/ZTAKNwtVX/"}],"es":null,"nw":null},{"o":27,"n":"A.J. Brown","p":"WR","pr":8,"t":"NE","v":62,"c":8.63,"m":21,"votes":[{"src":"Field Yates (ESPN)","rank":10},{"src":"CBS consensus","rank":9},{"src":"FFC ADP (market)","rank":9},{"src":"Smyth","rank":8},{"src":"Holka","rank":7},{"src":"ESPN proj (2026-08-06)","rank":10}],"ov":[{"src":"Field Yates (ESPN)","rank":26},{"src":"CBS consensus","rank":20},{"src":"FFC ADP (market)","rank":18}],"fav":true,"proj":248,"fl":190,"ce":300,"b":{"g":15,"boom":0.27,"bust":0.27,"median":12.1,"sd":9.75},"vd":"Clear-cut No. 1 in New England with a deep-ball QB fit; big ceiling, low floor on knee/hamstring risk.","bg":["new-team","injury-history"],"vw":{"grade":"A","share":29.6,"wr2Rate":58.2,"games":15},"sos":{"team":"NE","opponents":["KC","NYJ","DEN"],"rank":11.7},"vn":null,"es":null,"nw":null},{"o":28,"n":"Kyren Williams","p":"RB","pr":17,"t":"LAR","v":57,"c":16.63,"m":32,"votes":[{"src":"Field Yates (ESPN)","rank":17},{"src":"CBS consensus","rank":14},{"src":"FFC ADP (market)","rank":15},{"src":"Smyth","rank":17},{"src":"Holka","rank":17},{"src":"ESPN proj (2026-08-06)","rank":19}],"ov":[{"src":"Field Yates (ESPN)","rank":32},{"src":"CBS consensus","rank":32},{"src":"FFC ADP (market)","rank":32}],"fav":true,"proj":232,"fl":175,"ce":265,"b":{"g":17,"boom":0.12,"bust":0.06,"median":16,"sd":6.11},"vd":"Efficient and safe, but shrinking touch and goal-line share to Corum threatens the TD-based value","bg":["split-touches","td-dependent","decline-risk"],"vw":null,"sos":{"team":"LA","opponents":["DAL","SEA","TB"],"rank":16.3},"vn":[{"week":1,"analyst":"Smyth","note":"3rd among RBs in red-zone routes — the passing-game red-zone role is priced into his floor, so a bad rushing TD split hurts him less than it looks.","source":"https://www.tiktok.com/t/ZTAKNwtVX/"}],"es":null,"nw":null},{"o":29,"n":"Rashee Rice","p":"WR","pr":9,"t":"KC","v":53,"c":10.38,"m":19,"votes":[{"src":"Field Yates (ESPN)","rank":8},{"src":"CBS consensus","rank":12},{"src":"FFC ADP (market)","rank":8},{"src":"Smyth","rank":12},{"src":"Holka","rank":11},{"src":"ESPN proj (2026-08-06)","rank":8}],"ov":[{"src":"Field Yates (ESPN)","rank":19},{"src":"CBS consensus","rank":23},{"src":"FFC ADP (market)","rank":15}],"fav":true,"proj":270,"fl":185,"ce":295,"b":{"g":8,"boom":0.25,"bust":0.13,"median":20.9,"sd":8.11},"vd":"29% target share and elite red-zone role in KC, but knee ramp and Nagy's exit cloud the volume.","bg":["injury-history","td-dependent"],"vw":{"grade":"A","share":30.2,"wr2Rate":58.2,"games":8},"sos":{"team":"KC","opponents":["NE","SF","LAC"],"rank":15},"vn":null,"es":null,"nw":{"date":"2026-08-23","dir":"risk","note":"Post-May knee cleanup. Has not appeared in either preseason game. Chiefs beat reporter Nate Taylor: still 'laboring at times... in and out of breaks'. Rapoport reports no further NFL discipline expected for the probation violation.","src":"Arrowhead Pride / KCSN"}},{"o":30,"n":"George Pickens","p":"WR","pr":10,"t":"DAL","v":53,"c":10.67,"m":24,"votes":[{"src":"Field Yates (ESPN)","rank":12},{"src":"CBS consensus","rank":10},{"src":"FFC ADP (market)","rank":11},{"src":"Smyth","rank":9},{"src":"Holka","rank":8},{"src":"ESPN proj (2026-08-06)","rank":14}],"ov":[{"src":"Field Yates (ESPN)","rank":29},{"src":"CBS consensus","rank":21},{"src":"FFC ADP (market)","rank":21}],"fav":false,"proj":239,"fl":215,"ce":300,"b":{"g":17,"boom":0.29,"bust":0.18,"median":14.8,"sd":9.65},"vd":"17.2 PPG and 2.13 pts/tgt even as Dallas's WR2 — a WR1-upside profile priced as a WR3.","bg":["handcuff","breakout"],"vw":{"grade":"B","share":22.6,"wr2Rate":29.5,"games":17},"sos":{"team":"DAL","opponents":["LA","JAX","NYG"],"rank":20.3},"vn":null,"es":null,"nw":null},{"o":31,"n":"Nico Collins","p":"WR","pr":11,"t":"HOU","v":53,"c":10.67,"m":27,"votes":[{"src":"Field Yates (ESPN)","rank":15},{"src":"CBS consensus","rank":8},{"src":"FFC ADP (market)","rank":12},{"src":"Smyth","rank":10},{"src":"Holka","rank":10},{"src":"ESPN proj (2026-08-06)","rank":9}],"ov":[{"src":"Field Yates (ESPN)","rank":39},{"src":"CBS consensus","rank":19},{"src":"FFC ADP (market)","rank":22}],"fav":false,"proj":249,"fl":205,"ce":295,"b":{"g":15,"boom":0.2,"bust":0.13,"median":14.5,"sd":6.5},"vd":"Clear alpha with 12.7 aDOT and strong per-target efficiency — a high floor if the health and O-line hold.","bg":["injury-history"],"vw":{"grade":"B","share":24.6,"wr2Rate":29.5,"games":15},"sos":{"team":"HOU","opponents":["JAX","PHI","GB"],"rank":14},"vn":null,"es":null,"nw":{"date":"2026-08-19","dir":"tailwind","note":"Jayden Higgins (projected starting X opposite him) tore his ACL and is out for the season. Collins is the unambiguous alpha in Houston.","src":"Rapoport / ESPN"}},{"o":32,"n":"Travis Etienne Jr.","p":"RB","pr":18,"t":"NO","v":49,"c":18.25,"m":39,"votes":[{"src":"Field Yates (ESPN)","rank":18},{"src":"CBS consensus","rank":17},{"src":"FFC ADP (market)","rank":19},{"src":"Smyth","rank":19},{"src":"Holka","rank":18},{"src":"ESPN proj (2026-08-06)","rank":17}],"ov":[{"src":"Field Yates (ESPN)","rank":37},{"src":"CBS consensus","rank":39},{"src":"FFC ADP (market)","rank":42}],"fav":true,"proj":242,"fl":175,"ce":275,"b":{"g":17,"boom":0.12,"bust":0.18,"median":16.5,"sd":6.94},"vd":"Pass-catching rebound, but TD-fueled value plus a downgraded offense make me pass on the sleeper tag","bg":["td-dependent","new-team"],"vw":null,"sos":{"team":"NO","opponents":["TB","ARI","ATL"],"rank":22},"vn":null,"es":null,"nw":null},{"o":33,"n":"Chris Olave","p":"WR","pr":12,"t":"NO","v":48,"c":12.38,"m":23,"votes":[{"src":"Field Yates (ESPN)","rank":11},{"src":"CBS consensus","rank":11},{"src":"FFC ADP (market)","rank":10},{"src":"Smyth","rank":14},{"src":"Holka","rank":13},{"src":"ESPN proj (2026-08-06)","rank":12}],"ov":[{"src":"Field Yates (ESPN)","rank":27},{"src":"CBS consensus","rank":22},{"src":"FFC ADP (market)","rank":20}],"fav":true,"proj":245,"fl":200,"ce":290,"b":{"g":16,"boom":0.19,"bust":0.06,"median":15.2,"sd":7.91},"vd":"29% target share and a WR7 finish when healthy; extension signed, clot cleared — buy the volume, fear the head.","bg":["injury-history"],"vw":{"grade":"A","share":29.3,"wr2Rate":58.2,"games":16},"sos":{"team":"NO","opponents":["TB","ARI","ATL"],"rank":19},"vn":null,"es":null,"nw":{"date":"2026-08-23","dir":"tailwind","note":"Saints rookie WR2 Jordyn Tyson's hamstring has his regular season in serious doubt. ESPN moved Olave up to a lower-tier WR1; he ran a 30.3% target share over Weeks 10-18 last year after the Shaheed trade.","src":"ESPN fantasy buzz / AS USA"}},{"o":34,"n":"Malik Nabers","p":"WR","pr":13,"t":"NYG","v":44,"c":14.33,"m":26,"votes":[{"src":"Field Yates (ESPN)","rank":9},{"src":"CBS consensus","rank":13},{"src":"FFC ADP (market)","rank":15},{"src":"Smyth","rank":11},{"src":"Holka","rank":20},{"src":"ESPN proj (2026-08-06)","rank":18}],"ov":[{"src":"Field Yates (ESPN)","rank":25},{"src":"CBS consensus","rank":26},{"src":"FFC ADP (market)","rank":27}],"fav":false,"proj":232,"fl":170,"ce":300,"b":{"g":4,"boom":0.25,"bust":0.5,"median":8.05,"sd":16.12},"vd":"Rookie WR6 on top-of-NFL target volume, but knee recovery and a run-leaning Harbaugh offense cap it.","bg":["injury-history","depth-risk"],"vw":{"grade":"A","share":29.6,"wr2Rate":58.2,"games":4},"sos":{"team":"NYG","opponents":["CLE","DET","DAL"],"rank":22.7},"vn":[{"week":1,"analyst":"FSC","note":"ACL recovery — avoided the PUP list (better than the 70-80% chance they gave it a month ago) but could still miss 1-3 games to start. ~80-90% odds of returning to pre-injury level, 20-25% reinjury risk over 2 years. Fine as a 3rd-round pick, too risky as a 2nd.","source":"https://youtu.be/vfynKvpALhQ"}],"es":null,"nw":{"date":"2026-08-24","dir":"tailwind","note":"Shed the red no-contact jersey Aug 24, took 11-on-11 and 7-on-7 reps. Harbaugh: won't guarantee Week 1 but it's 'reasonable to assume that', and he 'moved the best we've seen this summer.'","src":"ESPN Raanan / The Athletic Duggan"}},{"o":35,"n":"Zay Flowers","p":"WR","pr":14,"t":"BAL","v":44,"c":15.75,"m":32,"votes":[{"src":"Field Yates (ESPN)","rank":16},{"src":"CBS consensus","rank":16},{"src":"FFC ADP (market)","rank":13},{"src":"Smyth","rank":17},{"src":"Holka","rank":15},{"src":"ESPN proj (2026-08-06)","rank":15}],"ov":[{"src":"Field Yates (ESPN)","rank":41},{"src":"CBS consensus","rank":31},{"src":"FFC ADP (market)","rank":25}],"fav":true,"proj":239,"fl":205,"ce":290,"b":{"g":17,"boom":0.12,"bust":0.12,"median":13,"sd":7.48},"vd":"WR12 in Lamar's 13 games with 30% target share; new pass-friendly OC could unlock a career year.","bg":["breakout"],"vw":{"grade":"A","share":29,"wr2Rate":58.2,"games":17},"sos":{"team":"BAL","opponents":["PIT","CLE","CIN"],"rank":12},"vn":[{"week":1,"analyst":"FSC","note":"Quad contusion — minor, expected to miss only a few days of practice. Not a concern.","source":"https://youtu.be/vfynKvpALhQ"}],"es":null,"nw":null},{"o":36,"n":"Garrett Wilson","p":"WR","pr":15,"t":"NYJ","v":44,"c":15.67,"m":33,"votes":[{"src":"Field Yates (ESPN)","rank":14},{"src":"CBS consensus","rank":19},{"src":"FFC ADP (market)","rank":14},{"src":"Smyth","rank":20},{"src":"Holka","rank":16},{"src":"ESPN proj (2026-08-06)","rank":11}],"ov":[{"src":"Field Yates (ESPN)","rank":34},{"src":"CBS consensus","rank":40},{"src":"FFC ADP (market)","rank":26}],"fav":false,"proj":248,"fl":180,"ce":295,"b":{"g":7,"boom":0.14,"bust":0.29,"median":19.1,"sd":9.66},"vd":"0.92 WOPR and 35% target share when healthy; talent is WR1-caliber, the offense and QB are not.","bg":["injury-history"],"vw":{"grade":"A","share":30.4,"wr2Rate":58.2,"games":7},"sos":{"team":"NYJ","opponents":["ARI","NE","MIN"],"rank":9.7},"vn":null,"es":null,"nw":null},{"o":37,"n":"DeVonta Smith","p":"WR","pr":16,"t":"PHI","v":44,"c":15,"m":34,"votes":[{"src":"Field Yates (ESPN)","rank":18},{"src":"CBS consensus","rank":15},{"src":"FFC ADP (market)","rank":16},{"src":"Smyth","rank":13},{"src":"Holka","rank":12},{"src":"ESPN proj (2026-08-06)","rank":16}],"ov":[{"src":"Field Yates (ESPN)","rank":43},{"src":"CBS consensus","rank":29},{"src":"FFC ADP (market)","rank":30}],"fav":false,"proj":239,"fl":205,"ce":300,"b":{"g":17,"boom":0.06,"bust":0.35,"median":9.3,"sd":7.8},"vd":"Now Philly's undisputed No. 1 post-Brown trade; target share should jump toward 30% in a better scheme fit.","bg":["breakout"],"vw":{"grade":"B","share":24.4,"wr2Rate":29.5,"games":17},"sos":{"team":"PHI","opponents":["SEA","HOU","SF"],"rank":9.3},"vn":[{"week":1,"analyst":"FSC","note":"Hamstring injury, low concern — further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.","source":"https://youtu.be/vfynKvpALhQ"}],"es":null,"nw":null},{"o":38,"n":"Cam Skattebo","p":"RB","pr":19,"t":"NYG","v":44,"c":18.75,"m":45,"votes":[{"src":"Field Yates (ESPN)","rank":21},{"src":"CBS consensus","rank":21},{"src":"FFC ADP (market)","rank":17},{"src":"Smyth","rank":18},{"src":"Holka","rank":19},{"src":"ESPN proj (2026-08-06)","rank":18}],"ov":[{"src":"Field Yates (ESPN)","rank":47},{"src":"CBS consensus","rank":50},{"src":"FFC ADP (market)","rank":39}],"fav":true,"proj":242,"fl":155,"ce":275,"b":{"g":8,"boom":0.25,"bust":0.13,"median":14.15,"sd":8.62},"vd":"Year-2 breakout bet with a three-down role, but weak efficiency and a crowded backfield temper it","bg":["breakout","depth-risk"],"vw":null,"sos":{"team":"NYG","opponents":["CLE","DET","DAL"],"rank":17.3},"vn":[{"week":1,"analyst":"Smyth","note":"Riser: 4 red-zone targets in only 6 games as a rookie — the ability showed up in a small sample.","source":"https://www.tiktok.com/t/ZTAKNwtVX/"}],"es":{"by":["ESPN"],"why":"Emerging talent with a real jump in opportunity."},"nw":null},{"o":39,"n":"Tetairoa McMillan","p":"WR","pr":17,"t":"CAR","v":40,"c":16.63,"m":37,"votes":[{"src":"Field Yates (ESPN)","rank":17},{"src":"CBS consensus","rank":18},{"src":"FFC ADP (market)","rank":17},{"src":"Smyth","rank":18},{"src":"Holka","rank":14},{"src":"ESPN proj (2026-08-06)","rank":13}],"ov":[{"src":"Field Yates (ESPN)","rank":42},{"src":"CBS consensus","rank":37},{"src":"FFC ADP (market)","rank":33}],"fav":true,"proj":240,"fl":195,"ce":290,"b":{"g":17,"boom":0.06,"bust":0.24,"median":11.5,"sd":7.07},"vd":"87% snaps and 45.9% air-yards share as a rookie; a clean Year-2 breakout if Bryce Young keeps climbing.","bg":["breakout"],"vw":{"grade":"A","share":25.4,"wr2Rate":58.2,"games":17},"sos":{"team":"CAR","opponents":["CIN","PIT","SEA"],"rank":10.7},"vn":null,"es":null,"nw":null},{"o":40,"n":"Colston Loveland","p":"TE","pr":3,"t":"CHI","v":39,"c":3.13,"m":41,"votes":[{"src":"Field Yates (ESPN)","rank":3},{"src":"CBS consensus","rank":3},{"src":"FFC ADP (market)","rank":3},{"src":"Smyth","rank":3},{"src":"Holka","rank":3},{"src":"ESPN proj (2026-08-06)","rank":4}],"ov":[{"src":"Field Yates (ESPN)","rank":35},{"src":"CBS consensus","rank":33},{"src":"FFC ADP (market)","rank":55}],"fav":true,"proj":206,"fl":150,"ce":258,"b":{"g":16,"boom":0.25,"bust":0.56,"median":6.9,"sd":8.5},"vd":"Late-rookie surge is the whole thesis — 20 PPG and 80% route share down the stretch point to a real leap","bg":["breakout"],"vw":null,"sos":{"team":"CHI","opponents":["BUF","GB","DET"],"rank":9.7},"vn":null,"es":null,"nw":null},{"o":41,"n":"Emeka Egbuka","p":"WR","pr":18,"t":"TB","v":37,"c":17.67,"m":37,"votes":[{"src":"Field Yates (ESPN)","rank":13},{"src":"CBS consensus","rank":20},{"src":"FFC ADP (market)","rank":18},{"src":"Smyth","rank":19},{"src":"Holka","rank":17},{"src":"ESPN proj (2026-08-06)","rank":19}],"ov":[{"src":"Field Yates (ESPN)","rank":33},{"src":"CBS consensus","rank":41},{"src":"FFC ADP (market)","rank":36}],"fav":false,"proj":229,"fl":190,"ce":290,"b":{"g":17,"boom":0.18,"bust":0.41,"median":9,"sd":8.42},"vd":"20.5 PPG through five weeks as a rookie; now the clear No. 1 with Evans gone — big Year-2 upside.","bg":["breakout","injury-history"],"vw":{"grade":"B","share":23.5,"wr2Rate":29.5,"games":17},"sos":{"team":"TB","opponents":["NO","ATL","LA"],"rank":18.3},"vn":null,"es":null,"nw":null},{"o":42,"n":"Tyler Warren","p":"TE","pr":4,"t":"IND","v":36,"c":3.88,"m":55,"votes":[{"src":"Field Yates (ESPN)","rank":4},{"src":"CBS consensus","rank":4},{"src":"FFC ADP (market)","rank":4},{"src":"Smyth","rank":4},{"src":"Holka","rank":4},{"src":"ESPN proj (2026-08-06)","rank":3}],"ov":[{"src":"Field Yates (ESPN)","rank":46},{"src":"CBS consensus","rank":52},{"src":"FFC ADP (market)","rank":67}],"fav":true,"proj":209,"fl":155,"ce":242,"b":{"g":17,"boom":0.24,"bust":0.35,"median":9.5,"sd":4.88},"vd":"Rock-steady sophomore — 21.5% target share and a 4.7 weekly stdev give the safest floor outside the top tier","bg":["breakout","workhorse"],"vw":null,"sos":{"team":"IND","opponents":["TEN","CIN","CLE"],"rank":21},"vn":null,"es":null,"nw":null},{"o":43,"n":"Tee Higgins","p":"WR","pr":19,"t":"CIN","v":36,"c":18.33,"m":41,"votes":[{"src":"Field Yates (ESPN)","rank":22},{"src":"CBS consensus","rank":14},{"src":"FFC ADP (market)","rank":19},{"src":"Smyth","rank":15},{"src":"Holka","rank":19},{"src":"ESPN proj (2026-08-06)","rank":21}],"ov":[{"src":"Field Yates (ESPN)","rank":57},{"src":"CBS consensus","rank":28},{"src":"FFC ADP (market)","rank":38}],"fav":false,"proj":219,"fl":165,"ce":250,"b":{"g":15,"boom":0.13,"bust":0.2,"median":11.4,"sd":8.23},"vd":"Efficient, high-floor WR2 with WR1 upside whenever Burrow's healthy — injury risk is the only real knock.","bg":["injury-history"],"vw":{"grade":"C","share":18.3,"wr2Rate":15.4,"games":15},"sos":{"team":"CIN","opponents":["CAR","IND","BAL"],"rank":21.7},"vn":null,"es":null,"nw":null},{"o":44,"n":"Lamar Jackson","p":"QB","pr":2,"t":"BAL","v":35,"c":2.25,"m":46,"votes":[{"src":"Field Yates (ESPN)","rank":2},{"src":"CBS consensus","rank":2},{"src":"FFC ADP (market)","rank":3},{"src":"Smyth","rank":2},{"src":"Holka","rank":3},{"src":"ESPN proj (2026-08-06)","rank":2}],"ov":[{"src":"Field Yates (ESPN)","rank":36},{"src":"CBS consensus","rank":47},{"src":"FFC ADP (market)","rank":56}],"fav":true,"proj":322,"fl":250,"ce":410,"b":{"g":13,"boom":0.23,"bust":0.38,"median":16.64,"sd":9.08},"vd":"2024 was a historic 430-point ceiling; rushing-TD decline and 2025 injury pull the range wide.","bg":["elite","injury-history"],"vw":null,"sos":{"team":"BAL","opponents":["PIT","CLE","CIN"],"rank":19.3},"vn":null,"es":null,"nw":null},{"o":45,"n":"Drake Maye","p":"QB","pr":3,"t":"NE","v":34,"c":3,"m":50,"votes":[{"src":"Field Yates (ESPN)","rank":4},{"src":"CBS consensus","rank":3},{"src":"FFC ADP (market)","rank":2},{"src":"Smyth","rank":3},{"src":"Holka","rank":2},{"src":"ESPN proj (2026-08-06)","rank":4}],"ov":[{"src":"Field Yates (ESPN)","rank":48},{"src":"CBS consensus","rank":51},{"src":"FFC ADP (market)","rank":51}],"fav":true,"proj":319,"fl":285,"ce":375,"b":{"g":17,"boom":0.24,"bust":0,"median":20.48,"sd":5.39},"vd":"League-best efficiency (CPOE 12.2, EPA 9.72) and rising volume; lowest-variance breakout at QB.","bg":["breakout"],"vw":null,"sos":{"team":"NE","opponents":["KC","NYJ","DEN"],"rank":17.7},"vn":null,"es":null,"nw":null},{"o":46,"n":"Jayden Daniels","p":"QB","pr":4,"t":"WSH","v":32,"c":4.5,"m":56,"votes":[{"src":"Field Yates (ESPN)","rank":3},{"src":"CBS consensus","rank":5},{"src":"FFC ADP (market)","rank":6},{"src":"Smyth","rank":4},{"src":"Holka","rank":5},{"src":"ESPN proj (2026-08-06)","rank":5}],"ov":[{"src":"Field Yates (ESPN)","rank":40},{"src":"CBS consensus","rank":56},{"src":"FFC ADP (market)","rank":73}],"fav":true,"proj":318,"fl":235,"ce":375,"b":{"g":7,"boom":0,"bust":0.14,"median":17.74,"sd":6.36},"vd":"Elite rushing volume and a 20.9 PPG rookie year; the 2025 injury, not talent, is the only knock.","bg":["injury-history","breakout"],"vw":null,"sos":{"team":"WAS","opponents":["ATL","MIN","JAX"],"rank":11},"vn":null,"es":null,"nw":null},{"o":47,"n":"Joe Burrow","p":"QB","pr":5,"t":"CIN","v":29,"c":5.13,"m":62,"votes":[{"src":"Field Yates (ESPN)","rank":8},{"src":"CBS consensus","rank":4},{"src":"FFC ADP (market)","rank":4},{"src":"Smyth","rank":5},{"src":"Holka","rank":4},{"src":"ESPN proj (2026-08-06)","rank":6}],"ov":[{"src":"Field Yates (ESPN)","rank":73},{"src":"CBS consensus","rank":55},{"src":"FFC ADP (market)","rank":57}],"fav":true,"proj":304,"fl":235,"ce":385,"b":{"g":8,"boom":0.25,"bust":0.38,"median":19.82,"sd":8.58},"vd":"Elite pocket passer with a passing-only QB1 ceiling; 2025 was injury, not decline — health is the bet.","bg":["injury-history","easy-playoffs"],"vw":null,"sos":{"team":"CIN","opponents":["CAR","IND","BAL"],"rank":15},"vn":null,"es":null,"nw":null},{"o":48,"n":"Ladd McConkey","p":"WR","pr":20,"t":"LAC","v":25,"c":20.25,"m":43,"votes":[{"src":"Field Yates (ESPN)","rank":21},{"src":"CBS consensus","rank":17},{"src":"FFC ADP (market)","rank":20},{"src":"Smyth","rank":22},{"src":"Holka","rank":18},{"src":"ESPN proj (2026-08-06)","rank":20}],"ov":[{"src":"Field Yates (ESPN)","rank":51},{"src":"CBS consensus","rank":36},{"src":"FFC ADP (market)","rank":41}],"fav":true,"proj":220,"fl":175,"ce":275,"b":{"g":16,"boom":0,"bust":0.31,"median":11.6,"sd":6.86},"vd":"Year-3 breakout hopes hinge on a target share he doesn't yet own; 21% share and 0.50 WOPR are modest.","bg":["breakout"],"vw":{"grade":"B","share":20.7,"wr2Rate":29.5,"games":16},"sos":{"team":"LAC","opponents":["SF","MIA","KC"],"rank":15},"vn":null,"es":null,"nw":null},{"o":49,"n":"Bucky Irving","p":"RB","pr":20,"t":"TB","v":24,"c":20.75,"m":49,"votes":[{"src":"Field Yates (ESPN)","rank":22},{"src":"CBS consensus","rank":22},{"src":"FFC ADP (market)","rank":20},{"src":"Smyth","rank":20},{"src":"Holka","rank":20},{"src":"ESPN proj (2026-08-06)","rank":22}],"ov":[{"src":"Field Yates (ESPN)","rank":49},{"src":"CBS consensus","rank":54},{"src":"FFC ADP (market)","rank":45}],"fav":true,"proj":208,"fl":150,"ce":275,"b":{"g":10,"boom":0,"bust":0.1,"median":14.2,"sd":5.61},"vd":"2024 RB1 line proves the ceiling; 2025 was injury-wrecked, and healthy he's a high-volume, high-efficiency back","bg":["injury-history","split-touches","breakout"],"vw":null,"sos":{"team":"TB","opponents":["NO","ATL","LA"],"rank":14},"vn":[{"week":1,"analyst":"FSC","note":"Shoulder dislocation/surgery, full camp participant and appears fully recovered; 10-20% instability/reinjury risk remains. FSC thinks the market hasn't repriced him despite the good news — backup Kenneth Gainwell profiles as a passing-down/2-minute back, not a real threat to his 65-70% share of TB touches.","source":"https://youtu.be/vfynKvpALhQ"},{"week":1,"analyst":"Smyth","note":"Buy-low on volume: Tampa Bay was a top-10 red-zone-volume offense for RBs in 2024 (Irving over 2 combined RZ touches/game before injury cut his 2025 short). New OC should restore that passing-game RZ role; Gainwell/Sean Tucker will chip in but Smyth doesn't expect a repeat of last year's near-zero goal-line share.","source":"https://www.youtube.com/watch?v=ktqvBN3vWd4"}],"es":null,"nw":null},{"o":50,"n":"Jaylen Waddle","p":"WR","pr":21,"t":"DEN","v":24,"c":20.83,"m":44,"votes":[{"src":"Field Yates (ESPN)","rank":19},{"src":"CBS consensus","rank":21},{"src":"FFC ADP (market)","rank":23},{"src":"Smyth","rank":16},{"src":"Holka","rank":23},{"src":"ESPN proj (2026-08-06)","rank":23}],"ov":[{"src":"Field Yates (ESPN)","rank":44},{"src":"CBS consensus","rank":42},{"src":"FFC ADP (market)","rank":47}],"fav":false,"proj":213,"fl":165,"ce":255,"b":{"g":16,"boom":0.06,"bust":0.38,"median":13.2,"sd":6.87},"vd":"New Denver WR1 role plus league-leading pass volume make this a strong ascending bet at a WR20s price.","bg":["new-team","breakout"],"vw":{"grade":"B","share":23,"wr2Rate":29.5,"games":16},"sos":{"team":"DEN","opponents":["LV","BUF","NE"],"rank":13.3},"vn":null,"es":null,"nw":null}];
+const MAX = 173, CLIFF = 10;
+const rows = document.getElementById('rows');
+const hue = p => 'var(--' + p.toLowerCase() + ')';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let filter = 'ALL';
+
+function detail(p) {
+  const bits = [];
+  if (p.vd) bits.push('<p class="verdict">' + esc(p.vd) + '</p>');
+
+  bits.push('<div class="votes">' + p.votes.map(v =>
+    '<span class="vote' + (p.fav && v.src === 'Smyth' ? ' fav' : '') + '">' + esc(v.src) + ' <b>' + esc(p.p) + v.rank + '</b></span>'
+  ).join('') + (p.fav ? '<span class="vote fav">close vote &mdash; Smyth weighted &times;3</span>' : '') + '</div>');
+
+  const f = [];
+  if (p.m) f.push(['Market draft slot', 'Goes <b>' + p.m + '</b> overall &mdash; ' + (p.m > p.o ? 'this board is ' + (p.m - p.o) + ' slots higher' : p.m < p.o ? 'this board is ' + (p.o - p.m) + ' slots lower' : 'the board agrees')]);
+  if (p.proj) f.push(['ESPN projection', '<b>' + p.proj + '</b> pts' + (p.fl && p.ce ? ' &middot; floor ' + p.fl + ' / ceiling ' + p.ce : '')]);
+  if (p.b && p.b.g >= 4) f.push(['2025 weekly shape', '<b>' + Math.round(p.b.boom * 100) + '%</b> boom / <b>' + Math.round(p.b.bust * 100) + '%</b> bust over ' + p.b.g + ' games &middot; median ' + p.b.median]);
+  else f.push(['2025 weekly shape', '<span style="color:var(--faint)">no rated season &mdash; abstains</span>']);
+  if (p.vw) f.push(['Prior per-game target share', 'Band <b>' + esc(p.vw.grade) + '</b> &middot; ' + p.vw.share + '% &rarr; ' + p.vw.wr2Rate + '% hit a top-24 season']);
+  if (p.sos && p.sos.rank != null) f.push(['Playoff weeks 15&ndash;17', esc(p.sos.opponents.join(', ')) + ' &middot; avg def rank <b>' + p.sos.rank + '</b>/32']);
+  bits.push('<div class="facts">' + f.map(([k, v]) => '<div class="fact"><span class="k">' + k + '</span><span class="v">' + v + '</span></div>').join('') + '</div>');
+
+  if (p.nw) bits.push('<div class="note ' + esc(p.nw.dir) + '"><span class="stamp">' + esc(p.nw.date) + ' &middot; ' + esc(p.nw.src) + '</span><br>' + esc(p.nw.note) + '</div>');
+  if (p.es) bits.push('<div class="note"><b>Expert sleeper call</b> &mdash; ' + esc(typeof p.es === 'string' ? p.es : (p.es.why || '')) + '</div>');
+  if (p.vn) for (const n of p.vn) bits.push('<div class="note"><span class="stamp">' + esc(n.analyst) + ' &middot; week ' + n.week + '</span><br>' + esc(n.note) + '</div>');
+  if (p.bg && p.bg.length) bits.push('<div class="tags">' + p.bg.map(b => '<span class="tag">' + esc(b) + '</span>').join('') + '</div>');
+  return bits.join('');
+}
+
+function render() {
+  let html = '', prev = null;
+  for (const p of P) {
+    const show = filter === 'ALL' ? true : filter === 'FLAG' ? !!p.nw : p.p === filter;
+    if (filter === 'ALL' && prev && prev.v - p.v >= CLIFF) {
+      html += '<div class="cliff">' + (prev.v - p.v) + '-point drop</div>';
+    }
+    prev = p;
+    if (!show) continue;
+    const mv = p.m ? p.m - p.o : 0;
+    const cls = mv > 0 ? 'up' : mv < 0 ? 'dn' : 'flat';
+    html += '<div class="rowwrap">' +
+      '<button class="row" aria-expanded="false" data-o="' + p.o + '">' +
+        '<span class="rank">' + p.o + '</span>' +
+        '<span class="pos pos-' + p.p + '">' + p.p + p.pr + '</span>' +
+        '<span class="who"><span class="nm">' + esc(p.n) + (p.nw ? ' <span class="tag ' + (p.nw.dir === 'risk' ? 'warnflag' : 'goodflag') + '">' + (p.nw.dir === 'risk' ? 'watch' : 'trending up') + '</span>' : '') + '</span>' +
+          '<span class="tm">' + esc(p.t || '') + ' &middot; consensus ' + p.p + p.c + '</span></span>' +
+        '<span class="bar"><i style="width:' + Math.max(2, Math.round(p.v / MAX * 100)) + '%;background:' + hue(p.p) + '"></i></span>' +
+        '<span class="vbd" style="color:' + hue(p.p) + '">' + p.v + '</span>' +
+        '<span class="mv ' + cls + '">' + (mv > 0 ? '+' + mv : mv === 0 ? '&mdash;' : mv) + '</span>' +
+      '</button>' +
+      '<div class="detail" hidden id="d' + p.o + '">' + detail(p) + '</div>' +
+    '</div>';
+  }
+  rows.innerHTML = html;
+}
+
+rows.addEventListener('click', e => {
+  const btn = e.target.closest('.row'); if (!btn) return;
+  const d = document.getElementById('d' + btn.dataset.o);
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!open));
+  d.hidden = open;
+});
+
+document.querySelectorAll('.fchip').forEach(b => b.addEventListener('click', () => {
+  filter = b.dataset.f;
+  document.querySelectorAll('.fchip').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  render();
+}));
+
+render();
+</script>
