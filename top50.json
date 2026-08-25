@@ -1,0 +1,5060 @@
+{
+ "generated": "2026-08-25T02:42:26.714Z",
+ "sources": [
+  {
+   "name": "Field Yates (ESPN)",
+   "kind": "expert",
+   "asOf": "2026-08-24"
+  },
+  {
+   "name": "CBS consensus",
+   "kind": "expert",
+   "asOf": "2026-08-25"
+  },
+  {
+   "name": "FFC ADP (market)",
+   "kind": "market",
+   "asOf": "2026-08-24"
+  },
+  {
+   "name": "CBS positional cheat sheet",
+   "kind": "expert",
+   "staleAsOf": "2026-01-04"
+  }
+ ],
+ "boomSeason": 2025,
+ "boomStale": true,
+ "players": [
+  {
+   "overall": 1,
+   "name": "Jahmyr Gibbs",
+   "pos": "RB",
+   "posRank": 1,
+   "team": "DET",
+   "consensus": 1.13,
+   "vbd": 173,
+   "mktOverall": 1.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 2
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 1
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 1
+    }
+   ],
+   "tilt": 1.171,
+   "proj": 365,
+   "floor": 300,
+   "ceiling": 400,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 2
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 1
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 1
+    },
+    {
+     "src": "Smyth",
+     "rank": 1
+    },
+    {
+     "src": "Holka",
+     "rank": 1
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 1
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.35,
+    "bust": 0.18,
+    "median": 19.4,
+    "sd": 13.53
+   },
+   "verdict": "High volume + elite efficiency and extreme solo-back splits make him the overall 1.01 target",
+   "badges": [
+    "elite",
+    "workhorse",
+    "split-touches"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "DET",
+    "opponents": [
+     "MIN",
+     "NYG",
+     "CHI"
+    ],
+    "rank": 17.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 2,
+   "name": "Bijan Robinson",
+   "pos": "RB",
+   "posRank": 2,
+   "team": "ATL",
+   "consensus": 1.88,
+   "vbd": 164,
+   "mktOverall": 1.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 1
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 2
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 2
+    }
+   ],
+   "tilt": 1.192,
+   "proj": 353,
+   "floor": 305,
+   "ceiling": 400,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 1
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 2
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 2
+    },
+    {
+     "src": "Smyth",
+     "rank": 2
+    },
+    {
+     "src": "Holka",
+     "rank": 2
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 2
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.53,
+    "bust": 0.12,
+    "median": 21.2,
+    "sd": 10.26
+   },
+   "verdict": "Paid, holdout resolved, every-down bell cow with strong receiving efficiency—cleanest RB1 profile",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "ATL",
+    "opponents": [
+     "WAS",
+     "TB",
+     "NO"
+    ],
+    "rank": 20
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 3,
+   "name": "Ja'Marr Chase",
+   "pos": "WR",
+   "posRank": 1,
+   "team": "CIN",
+   "consensus": 1.25,
+   "vbd": 157,
+   "mktOverall": 3.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 4
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 3
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 4
+    }
+   ],
+   "tilt": 1.179,
+   "proj": 336,
+   "floor": 290,
+   "ceiling": 405,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 1
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 1
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 2
+    },
+    {
+     "src": "Smyth",
+     "rank": 1
+    },
+    {
+     "src": "Holka",
+     "rank": 1
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 2
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.44,
+    "bust": 0.19,
+    "median": 20.5,
+    "sd": 10.26
+   },
+   "verdict": "32% target share and 94% snaps keep him elite; 2025 dip was Burrow health, not talent decline.",
+   "badges": [
+    "elite",
+    "workhorse",
+    "td-dependent"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 32.3,
+    "wr2Rate": 58.2,
+    "games": 16
+   },
+   "playoffSos": {
+    "team": "CIN",
+    "opponents": [
+     "CAR",
+     "IND",
+     "BAL"
+    ],
+    "rank": 21.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 4,
+   "name": "Christian McCaffrey",
+   "pos": "RB",
+   "posRank": 3,
+   "team": "SF",
+   "consensus": 3.13,
+   "vbd": 149,
+   "mktOverall": 6,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 3
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 8
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 7
+    }
+   ],
+   "tilt": 1.234,
+   "proj": 343,
+   "floor": 230,
+   "ceiling": 400,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 3
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 4
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 3
+    },
+    {
+     "src": "Smyth",
+     "rank": 3
+    },
+    {
+     "src": "Holka",
+     "rank": 3
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 3
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.53,
+    "bust": 0,
+    "median": 24.1,
+    "sd": 8.22
+   },
+   "verdict": "Historic 2025 with elite receiving volume, but age-30 mileage and 2024 injury keep the floor honest",
+   "badges": [
+    "elite",
+    "workhorse",
+    "injury-history"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "SF",
+    "opponents": [
+     "LAC",
+     "KC",
+     "PHI"
+    ],
+    "rank": 10
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "Far and away the leader in RB red-zone targets — the single biggest edge in the metric.",
+     "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+    }
+   ],
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-23",
+    "dir": "tailwind",
+    "note": "The 15-day absence was planned load management, not a setback: back in team drills Aug 23 with carries, 'I feel great, I feel fresh.' Shanahan said he'd have played in a normal game week.",
+    "src": "ESPN Wagoner / 49ers practice report"
+   }
+  },
+  {
+   "overall": 5,
+   "name": "Puka Nacua",
+   "pos": "WR",
+   "posRank": 2,
+   "team": "LAR",
+   "consensus": 1.88,
+   "vbd": 144,
+   "mktOverall": 4,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 5
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 4
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 3
+    }
+   ],
+   "tilt": 1.225,
+   "proj": 357,
+   "floor": 285,
+   "ceiling": 400,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 2
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 2
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 1
+    },
+    {
+     "src": "Smyth",
+     "rank": 2
+    },
+    {
+     "src": "Holka",
+     "rank": 3
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 1
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.56,
+    "bust": 0.06,
+    "median": 22.95,
+    "sd": 10.21
+   },
+   "verdict": "League-best per-route WR with 30% target share and elite efficiency — a true 1.1-caliber WR anchor.",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 30.4,
+    "wr2Rate": 58.2,
+    "games": 16
+   },
+   "playoffSos": {
+    "team": "LA",
+    "opponents": [
+     "DAL",
+     "SEA",
+     "TB"
+    ],
+    "rank": 18.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 6,
+   "name": "Jaxon Smith-Njigba",
+   "pos": "WR",
+   "posRank": 3,
+   "team": "SEA",
+   "consensus": 3.25,
+   "vbd": 132,
+   "mktOverall": 5.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 6
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 5
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 5
+    }
+   ],
+   "tilt": 1.225,
+   "proj": 327,
+   "floor": 285,
+   "ceiling": 385,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 3
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 3
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 3
+    },
+    {
+     "src": "Smyth",
+     "rank": 4
+    },
+    {
+     "src": "Holka",
+     "rank": 2
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 3
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.24,
+    "bust": 0.06,
+    "median": 20.6,
+    "sd": 7.48
+   },
+   "verdict": "36.8% target share and 0.90 WOPR — elite volume with a near-perfect 2025; only OC change tempers it.",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 35.8,
+    "wr2Rate": 58.2,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "SEA",
+    "opponents": [
+     "PHI",
+     "LA",
+     "CAR"
+    ],
+    "rank": 11
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 7,
+   "name": "Amon-Ra St. Brown",
+   "pos": "WR",
+   "posRank": 4,
+   "team": "DET",
+   "consensus": 3.63,
+   "vbd": 131,
+   "mktOverall": 7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 9
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 6
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 6
+    }
+   ],
+   "tilt": 1.204,
+   "proj": 325,
+   "floor": 275,
+   "ceiling": 355,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 4
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 4
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 4
+    },
+    {
+     "src": "Smyth",
+     "rank": 3
+    },
+    {
+     "src": "Holka",
+     "rank": 4
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 4
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.29,
+    "bust": 0.12,
+    "median": 18,
+    "sd": 10.93
+   },
+   "verdict": "Three straight top-5 finishes and 31.7% target share make him the safest WR outside the top four.",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 31.3,
+    "wr2Rate": 58.2,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "DET",
+    "opponents": [
+     "MIN",
+     "NYG",
+     "CHI"
+    ],
+    "rank": 18.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 8,
+   "name": "Jonathan Taylor",
+   "pos": "RB",
+   "posRank": 4,
+   "team": "IND",
+   "consensus": 3.88,
+   "vbd": 129,
+   "mktOverall": 7.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 7
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 7
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 8
+    }
+   ],
+   "tilt": 1.192,
+   "proj": 317,
+   "floor": 250,
+   "ceiling": 350,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 4
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 3
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 4
+    },
+    {
+     "src": "Smyth",
+     "rank": 4
+    },
+    {
+     "src": "Holka",
+     "rank": 4
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 4
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.35,
+    "bust": 0.12,
+    "median": 16.9,
+    "sd": 12.44
+   },
+   "verdict": "Bell-cow rusher with rare positive rush EPA, but thin passing role and 320+ touch mileage cap him",
+   "badges": [
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "IND",
+    "opponents": [
+     "TEN",
+     "CIN",
+     "CLE"
+    ],
+    "rank": 21.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 9,
+   "name": "CeeDee Lamb",
+   "pos": "WR",
+   "posRank": 5,
+   "team": "DAL",
+   "consensus": 5.88,
+   "vbd": 99,
+   "mktOverall": 11.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 13
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 10
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 11
+    }
+   ],
+   "tilt": 1.218,
+   "proj": 294,
+   "floor": 235,
+   "ceiling": 330,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 6
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 5
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 6
+    },
+    {
+     "src": "Smyth",
+     "rank": 5
+    },
+    {
+     "src": "Holka",
+     "rank": 9
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 6
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 13,
+    "boom": 0.08,
+    "bust": 0.08,
+    "median": 17.1,
+    "sd": 5.98
+   },
+   "verdict": "2025 was TD-regression bad luck on missed games; volume and QB argue a rebound to WR1 range.",
+   "badges": [
+    "workhorse",
+    "td-dependent"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 25.2,
+    "wr2Rate": 58.2,
+    "games": 13
+   },
+   "playoffSos": {
+    "team": "DAL",
+    "opponents": [
+     "LA",
+     "JAX",
+     "NYG"
+    ],
+    "rank": 20.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 10,
+   "name": "Justin Jefferson",
+   "pos": "WR",
+   "posRank": 6,
+   "team": "MIN",
+   "consensus": 5.75,
+   "vbd": 99,
+   "mktOverall": 13,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 12
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 15
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 12
+    }
+   ],
+   "tilt": 1.144,
+   "proj": 294,
+   "floor": 215,
+   "ceiling": 335,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 5
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 6
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 7
+    },
+    {
+     "src": "Smyth",
+     "rank": 6
+    },
+    {
+     "src": "Holka",
+     "rank": 5
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 5
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0,
+    "bust": 0.29,
+    "median": 12.5,
+    "sd": 5.79
+   },
+   "verdict": "Elite target share but a -0.81 rec EPA/g and unsettled QB room make this a rare risk at his price.",
+   "badges": [
+    "elite",
+    "decline-risk"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 30.1,
+    "wr2Rate": 58.2,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "MIN",
+    "opponents": [
+     "DET",
+     "WAS",
+     "NYJ"
+    ],
+    "rank": 23
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 11,
+   "name": "James Cook III",
+   "pos": "RB",
+   "posRank": 5,
+   "team": "BUF",
+   "consensus": 5.63,
+   "vbd": 95,
+   "mktOverall": 10.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 10
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 9
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 13
+    }
+   ],
+   "tilt": 1.192,
+   "proj": 279,
+   "floor": 225,
+   "ceiling": 315,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 6
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 5
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 6
+    },
+    {
+     "src": "Smyth",
+     "rank": 5
+    },
+    {
+     "src": "Holka",
+     "rank": 6
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 7
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.24,
+    "bust": 0.12,
+    "median": 20.4,
+    "sd": 9.2
+   },
+   "verdict": "Locked-in rushing volume but heavily TD-fueled scoring and a thin 40-target receiving role",
+   "badges": [
+    "workhorse",
+    "td-dependent"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "BUF",
+    "opponents": [
+     "CHI",
+     "DEN",
+     "MIA"
+    ],
+    "rank": 13.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 12,
+   "name": "De'Von Achane",
+   "pos": "RB",
+   "posRank": 6,
+   "team": "MIA",
+   "consensus": 7.5,
+   "vbd": 88,
+   "mktOverall": 10,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 8
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 12
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 10
+    }
+   ],
+   "tilt": 1.234,
+   "proj": 293,
+   "floor": 240,
+   "ceiling": 340,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 5
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 7
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 5
+    },
+    {
+     "src": "Smyth",
+     "rank": 10
+    },
+    {
+     "src": "Holka",
+     "rank": 8
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 5
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.19,
+    "bust": 0,
+    "median": 17.75,
+    "sd": 7.02
+   },
+   "verdict": "High volume plus explosive efficiency and heavy receiving role give a PPR-proof floor and top-5 ceiling",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "MIA",
+    "opponents": [
+     "GB",
+     "LAC",
+     "BUF"
+    ],
+    "rank": 14.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 13,
+   "name": "Chase Brown",
+   "pos": "RB",
+   "posRank": 7,
+   "team": "CIN",
+   "consensus": 8.17,
+   "vbd": 88,
+   "mktOverall": 13,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 14
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 11
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 14
+    }
+   ],
+   "tilt": 1.213,
+   "proj": 273,
+   "floor": 225,
+   "ceiling": 315,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 8
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 6
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 7
+    },
+    {
+     "src": "Smyth",
+     "rank": 8
+    },
+    {
+     "src": "Holka",
+     "rank": 7
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 13
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0.18,
+    "bust": 0.06,
+    "median": 16,
+    "sd": 7.35
+   },
+   "verdict": "Steady three-down back with a strong receiving floor—ceiling and floor both hinge on Burrow's health",
+   "badges": [
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "CIN",
+    "opponents": [
+     "CAR",
+     "IND",
+     "BAL"
+    ],
+    "rank": 19
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "8 red-zone targets in 8 games with Burrow, and similar in 2024 — a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.",
+     "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 14,
+   "name": "Ashton Jeanty",
+   "pos": "RB",
+   "posRank": 8,
+   "team": "LV",
+   "consensus": 8.67,
+   "vbd": 88,
+   "mktOverall": 21.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 24
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 25
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 16
+    }
+   ],
+   "tilt": 1.15,
+   "proj": 281,
+   "floor": 195,
+   "ceiling": 320,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 14
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 12
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 8
+    },
+    {
+     "src": "Smyth",
+     "rank": 7
+    },
+    {
+     "src": "Holka",
+     "rank": 5
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 6
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0.24,
+    "bust": 0.24,
+    "median": 12.1,
+    "sd": 8.69
+   },
+   "verdict": "Heavy volume but the warning quadrant—dreadful rush efficiency needs Kubiak's scheme to unlock it",
+   "badges": [
+    "workhorse",
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "LV",
+    "opponents": [
+     "DEN",
+     "TEN",
+     "ARI"
+    ],
+    "rank": 15.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 15,
+   "name": "Drake London",
+   "pos": "WR",
+   "posRank": 7,
+   "team": "ATL",
+   "consensus": 6.63,
+   "vbd": 84,
+   "mktOverall": 14,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 17
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 16
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 9
+    }
+   ],
+   "tilt": 1.158,
+   "proj": 270,
+   "floor": 195,
+   "ceiling": 315,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 7
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 7
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 5
+    },
+    {
+     "src": "Smyth",
+     "rank": 7
+    },
+    {
+     "src": "Holka",
+     "rank": 6
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 7
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 12,
+    "boom": 0.33,
+    "bust": 0.25,
+    "median": 15.65,
+    "sd": 11.45
+   },
+   "verdict": "33% target share with Penix healthy is WR1 volume; the whole case rides on the QB staying upright.",
+   "badges": [
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 30.6,
+    "wr2Rate": 58.2,
+    "games": 12
+   },
+   "playoffSos": {
+    "team": "ATL",
+    "opponents": [
+     "WAS",
+     "TB",
+     "NO"
+    ],
+    "rank": 18.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 16,
+   "name": "Omarion Hampton",
+   "pos": "RB",
+   "posRank": 9,
+   "team": "LAC",
+   "consensus": 9.83,
+   "vbd": 84,
+   "mktOverall": 20.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 23
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 14
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 24
+    }
+   ],
+   "tilt": 1.157,
+   "proj": 279,
+   "floor": 175,
+   "ceiling": 300,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 13
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 9
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 12
+    },
+    {
+     "src": "Smyth",
+     "rank": 6
+    },
+    {
+     "src": "Holka",
+     "rank": 10
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 9
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 9,
+    "boom": 0.11,
+    "bust": 0.22,
+    "median": 14.7,
+    "sd": 8.08
+   },
+   "verdict": "Three-down breakout profile if healthy, but 2025 injury and Keaton Mitchell cap the confidence",
+   "badges": [
+    "injury-history",
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "LAC",
+    "opponents": [
+     "SF",
+     "MIA",
+     "KC"
+    ],
+    "rank": 18.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 17,
+   "name": "Derrick Henry",
+   "pos": "RB",
+   "posRank": 10,
+   "team": "BAL",
+   "consensus": 10.63,
+   "vbd": 83,
+   "mktOverall": 15.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 11
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 18
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 17
+    }
+   ],
+   "tilt": 1.192,
+   "proj": 274,
+   "floor": 200,
+   "ceiling": 305,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 7
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 11
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 9
+    },
+    {
+     "src": "Smyth",
+     "rank": 12
+    },
+    {
+     "src": "Holka",
+     "rank": 12
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 10
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.18,
+    "bust": 0.12,
+    "median": 13.1,
+    "sd": 10
+   },
+   "verdict": "Age-32 anomaly still rushing well, but pure-TD profile and the ever-present clock cap the case",
+   "badges": [
+    "workhorse",
+    "td-dependent",
+    "decline-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "BAL",
+    "opponents": [
+     "PIT",
+     "CLE",
+     "CIN"
+    ],
+    "rank": 19.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 18,
+   "name": "Kenneth Walker III",
+   "pos": "RB",
+   "posRank": 11,
+   "team": "KC",
+   "consensus": 10,
+   "vbd": 83,
+   "mktOverall": 17,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 15
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 13
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 23
+    }
+   ],
+   "tilt": 1.111,
+   "proj": 273,
+   "floor": 175,
+   "ceiling": 285,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 9
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 8
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 11
+    },
+    {
+     "src": "Smyth",
+     "rank": 9
+    },
+    {
+     "src": "Holka",
+     "rank": 9
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 14
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0,
+    "bust": 0.35,
+    "median": 9.6,
+    "sd": 6.53
+   },
+   "verdict": "Team change to KC is the upgrade—TD environment jumps, but efficiency and pass-down role are open",
+   "badges": [
+    "new-team",
+    "td-dependent"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "KC",
+    "opponents": [
+     "NE",
+     "SF",
+     "LAC"
+    ],
+    "rank": 10.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 19,
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "posRank": 12,
+   "team": "PHI",
+   "consensus": 10.75,
+   "vbd": 83,
+   "mktOverall": 19,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 21
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 17
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 19
+    }
+   ],
+   "tilt": 1.167,
+   "proj": 274,
+   "floor": 205,
+   "ceiling": 320,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 11
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 10
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 10
+    },
+    {
+     "src": "Smyth",
+     "rank": 11
+    },
+    {
+     "src": "Holka",
+     "rank": 11
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 11
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.06,
+    "bust": 0.19,
+    "median": 15.15,
+    "sd": 7.19
+   },
+   "verdict": "2024 spike regressed hard in 2025; big volume holds the floor but the ceiling needs efficiency back",
+   "badges": [
+    "workhorse",
+    "decline-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "PHI",
+    "opponents": [
+     "SEA",
+     "HOU",
+     "SF"
+    ],
+    "rank": 12.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 20,
+   "name": "Jeremiyah Love",
+   "pos": "RB",
+   "posRank": 13,
+   "team": "ARI",
+   "consensus": 12.5,
+   "vbd": 83,
+   "mktOverall": 28.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 20
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 38
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 28
+    }
+   ],
+   "tilt": 1,
+   "proj": 279,
+   "floor": 120,
+   "ceiling": 270,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 10
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 16
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 13
+    },
+    {
+     "src": "Smyth",
+     "rank": 13
+    },
+    {
+     "src": "Holka",
+     "rank": 15
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 8
+    }
+   ],
+   "favored": false,
+   "boom": null,
+   "verdict": "Talented rookie but an unsettled three-way Arizona muddle makes the RB13 price too rich",
+   "badges": [
+    "rookie",
+    "depth-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "ARI",
+    "opponents": [
+     "NYJ",
+     "NO",
+     "LV"
+    ],
+    "rank": 21.7
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "FSC",
+     "note": "Rostered by team 9, not a waiver target. Opens the season in a muddled committee (Braswell/Beck) so casual managers will undervalue him, but FSC expects his workload to ramp toward 17-18 PPG by the back half. Their call: buy-low trade around week 5 for roughly 4th-round redraft value.",
+     "source": "https://youtube.com/watch?v=f4o5i4kreu0"
+    }
+   ],
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-24",
+    "dir": "risk",
+    "note": "High ankle sprain since Aug 13 preseason debut. Has not practiced or been on the field since; will not practice this week or play the preseason finale. Cardinals 'hopeful' for the Sept 13 opener; HC Mike LaFleur has not committed to Week 1.",
+    "src": "Arizona Sports / NFL.com / Schefter"
+   }
+  },
+  {
+   "overall": 21,
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "posRank": 14,
+   "team": "GB",
+   "consensus": 13.25,
+   "vbd": 82,
+   "mktOverall": 27.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 22
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 30
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 31
+    }
+   ],
+   "tilt": 1.164,
+   "proj": 274,
+   "floor": 195,
+   "ceiling": 290,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 12
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 13
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 14
+    },
+    {
+     "src": "Smyth",
+     "rank": 14
+    },
+    {
+     "src": "Holka",
+     "rank": 13
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 12
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 15,
+    "boom": 0.2,
+    "bust": 0.2,
+    "median": 14.4,
+    "sd": 9.02
+   },
+   "verdict": "Fading trusty vet propped up by goal-line TDs in a committee-leaning Green Bay backfield",
+   "badges": [
+    "workhorse",
+    "td-dependent",
+    "decline-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "GB",
+    "opponents": [
+     "MIA",
+     "CHI",
+     "HOU"
+    ],
+    "rank": 17
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 22,
+   "name": "Josh Allen",
+   "pos": "QB",
+   "posRank": 1,
+   "team": "BUF",
+   "consensus": 1,
+   "vbd": 82,
+   "mktOverall": 32.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 28
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 35
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 34
+    }
+   ],
+   "tilt": 1.12,
+   "proj": 369,
+   "floor": 320,
+   "ceiling": 415,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 1
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 1
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 1
+    },
+    {
+     "src": "Smyth",
+     "rank": 1
+    },
+    {
+     "src": "Holka",
+     "rank": 1
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 1
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.38,
+    "bust": 0.19,
+    "median": 23.1,
+    "sd": 10.4
+   },
+   "verdict": "Elite dual-threat workhorse with unmatched floor; 112 carries and QB1-caliber passing make him the safe QB1.",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "BUF",
+    "opponents": [
+     "CHI",
+     "DEN",
+     "MIA"
+    ],
+    "rank": 18
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 23,
+   "name": "Breece Hall",
+   "pos": "RB",
+   "posRank": 15,
+   "team": "NYJ",
+   "consensus": 15.5,
+   "vbd": 75,
+   "mktOverall": 36.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 31
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 43
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 35
+    }
+   ],
+   "tilt": 1.125,
+   "proj": 273,
+   "floor": 175,
+   "ceiling": 290,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 16
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 18
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 16
+    },
+    {
+     "src": "Smyth",
+     "rank": 15
+    },
+    {
+     "src": "Holka",
+     "rank": 14
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 15
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.06,
+    "bust": 0.31,
+    "median": 11.55,
+    "sd": 7.62
+   },
+   "verdict": "Committee erosion cut his 2025, but receiving chops and an improved Jets offense keep bounce-back live",
+   "badges": [
+    "split-touches"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "NYJ",
+    "opponents": [
+     "ARI",
+     "NE",
+     "MIN"
+    ],
+    "rank": 14.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-23",
+    "dir": "risk",
+    "note": "Groin strain, HC Aaron Glenn says 2-3 weeks, expected back for the opener. Board has him 13 slots ahead of market, so the miss matters more here than it does at ADP.",
+    "src": "Yahoo camp injury tracker"
+   }
+  },
+  {
+   "overall": 24,
+   "name": "Brock Bowers",
+   "pos": "TE",
+   "posRank": 1,
+   "team": "LV",
+   "consensus": 1.38,
+   "vbd": 71,
+   "mktOverall": 25.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 16
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 24
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 37
+    }
+   ],
+   "tilt": 1.243,
+   "proj": 240,
+   "floor": 178,
+   "ceiling": 286,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 1
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 1
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 2
+    },
+    {
+     "src": "Smyth",
+     "rank": 1
+    },
+    {
+     "src": "Holka",
+     "rank": 2
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 2
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 12,
+    "boom": 0.25,
+    "bust": 0.08,
+    "median": 12.85,
+    "sd": 10.12
+   },
+   "verdict": "Elite bounce-back — 2024's 263-pt line and top red-zone share say the down 2025 was injury, not decline",
+   "badges": [
+    "elite",
+    "injury-history",
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "LV",
+    "opponents": [
+     "DEN",
+     "TEN",
+     "ARI"
+    ],
+    "rank": 22.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 25,
+   "name": "Trey McBride",
+   "pos": "TE",
+   "posRank": 2,
+   "team": "ARI",
+   "consensus": 1.63,
+   "vbd": 71,
+   "mktOverall": 24.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 18
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 27
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 29
+    }
+   ],
+   "tilt": 1.25,
+   "proj": 242,
+   "floor": 198,
+   "ceiling": 288,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 2
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 2
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 1
+    },
+    {
+     "src": "Smyth",
+     "rank": 2
+    },
+    {
+     "src": "Holka",
+     "rank": 1
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 1
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.53,
+    "bust": 0.06,
+    "median": 16.5,
+    "sd": 8.37
+   },
+   "verdict": "Elite volume TE1 — 27.9% target share and 169 looks are real, but a TD spike and QB downgrade cap the ceiling",
+   "badges": [
+    "elite",
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "ARI",
+    "opponents": [
+     "NYJ",
+     "NO",
+     "LV"
+    ],
+    "rank": 14
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 26,
+   "name": "Javonte Williams",
+   "pos": "RB",
+   "posRank": 16,
+   "team": "DAL",
+   "consensus": 16,
+   "vbd": 68,
+   "mktOverall": 34.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 30
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 34
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 40
+    }
+   ],
+   "tilt": 1.188,
+   "proj": 259,
+   "floor": 175,
+   "ceiling": 285,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 15
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 15
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 18
+    },
+    {
+     "src": "Smyth",
+     "rank": 16
+    },
+    {
+     "src": "Holka",
+     "rank": 16
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 16
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.13,
+    "bust": 0.13,
+    "median": 14.9,
+    "sd": 6.02
+   },
+   "verdict": "Dallas rebound looked good, but low yds/tgt screams TD reliance and rookie Blue threatens the role",
+   "badges": [
+    "td-dependent",
+    "depth-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "DAL",
+    "opponents": [
+     "LA",
+     "JAX",
+     "NYG"
+    ],
+    "rank": 14.3
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "Red-zone-target leader but Smyth expects some decline from that rate; still projects a good share. Buy the role, not last year's exact number.",
+     "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 27,
+   "name": "A.J. Brown",
+   "pos": "WR",
+   "posRank": 8,
+   "team": "NE",
+   "consensus": 8.63,
+   "vbd": 62,
+   "mktOverall": 21.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 26
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 20
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 18
+    }
+   ],
+   "tilt": 1.151,
+   "proj": 248,
+   "floor": 190,
+   "ceiling": 300,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 10
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 9
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 9
+    },
+    {
+     "src": "Smyth",
+     "rank": 8
+    },
+    {
+     "src": "Holka",
+     "rank": 7
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 10
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 15,
+    "boom": 0.27,
+    "bust": 0.27,
+    "median": 12.1,
+    "sd": 9.75
+   },
+   "verdict": "Clear-cut No. 1 in New England with a deep-ball QB fit; big ceiling, low floor on knee/hamstring risk.",
+   "badges": [
+    "new-team",
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 29.6,
+    "wr2Rate": 58.2,
+    "games": 15
+   },
+   "playoffSos": {
+    "team": "NE",
+    "opponents": [
+     "KC",
+     "NYJ",
+     "DEN"
+    ],
+    "rank": 11.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 28,
+   "name": "Kyren Williams",
+   "pos": "RB",
+   "posRank": 17,
+   "team": "LAR",
+   "consensus": 16.63,
+   "vbd": 57,
+   "mktOverall": 32,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 32
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 32
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 32
+    }
+   ],
+   "tilt": 1.213,
+   "proj": 232,
+   "floor": 175,
+   "ceiling": 265,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 17
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 14
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 15
+    },
+    {
+     "src": "Smyth",
+     "rank": 17
+    },
+    {
+     "src": "Holka",
+     "rank": 17
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 19
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.12,
+    "bust": 0.06,
+    "median": 16,
+    "sd": 6.11
+   },
+   "verdict": "Efficient and safe, but shrinking touch and goal-line share to Corum threatens the TD-based value",
+   "badges": [
+    "split-touches",
+    "td-dependent",
+    "decline-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "LA",
+    "opponents": [
+     "DAL",
+     "SEA",
+     "TB"
+    ],
+    "rank": 16.3
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "3rd among RBs in red-zone routes — the passing-game red-zone role is priced into his floor, so a bad rushing TD split hurts him less than it looks.",
+     "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 29,
+   "name": "Rashee Rice",
+   "pos": "WR",
+   "posRank": 9,
+   "team": "KC",
+   "consensus": 10.38,
+   "vbd": 53,
+   "mktOverall": 19,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 19
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 23
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 15
+    }
+   ],
+   "tilt": 1.2,
+   "proj": 270,
+   "floor": 185,
+   "ceiling": 295,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 8
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 12
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 8
+    },
+    {
+     "src": "Smyth",
+     "rank": 12
+    },
+    {
+     "src": "Holka",
+     "rank": 11
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 8
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 8,
+    "boom": 0.25,
+    "bust": 0.13,
+    "median": 20.9,
+    "sd": 8.11
+   },
+   "verdict": "29% target share and elite red-zone role in KC, but knee ramp and Nagy's exit cloud the volume.",
+   "badges": [
+    "injury-history",
+    "td-dependent"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 30.2,
+    "wr2Rate": 58.2,
+    "games": 8
+   },
+   "playoffSos": {
+    "team": "KC",
+    "opponents": [
+     "NE",
+     "SF",
+     "LAC"
+    ],
+    "rank": 15
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-23",
+    "dir": "risk",
+    "note": "Post-May knee cleanup. Has not appeared in either preseason game. Chiefs beat reporter Nate Taylor: still 'laboring at times... in and out of breaks'. Rapoport reports no further NFL discipline expected for the probation violation.",
+    "src": "Arrowhead Pride / KCSN"
+   }
+  },
+  {
+   "overall": 30,
+   "name": "George Pickens",
+   "pos": "WR",
+   "posRank": 10,
+   "team": "DAL",
+   "consensus": 10.67,
+   "vbd": 53,
+   "mktOverall": 23.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 29
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 21
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 21
+    }
+   ],
+   "tilt": 1.183,
+   "proj": 239,
+   "floor": 215,
+   "ceiling": 300,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 12
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 10
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 11
+    },
+    {
+     "src": "Smyth",
+     "rank": 9
+    },
+    {
+     "src": "Holka",
+     "rank": 8
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 14
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0.29,
+    "bust": 0.18,
+    "median": 14.8,
+    "sd": 9.65
+   },
+   "verdict": "17.2 PPG and 2.13 pts/tgt even as Dallas's WR2 — a WR1-upside profile priced as a WR3.",
+   "badges": [
+    "handcuff",
+    "breakout"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 22.6,
+    "wr2Rate": 29.5,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "DAL",
+    "opponents": [
+     "LA",
+     "JAX",
+     "NYG"
+    ],
+    "rank": 20.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 31,
+   "name": "Nico Collins",
+   "pos": "WR",
+   "posRank": 11,
+   "team": "HOU",
+   "consensus": 10.67,
+   "vbd": 53,
+   "mktOverall": 26.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 39
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 19
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 22
+    }
+   ],
+   "tilt": 1.2,
+   "proj": 249,
+   "floor": 205,
+   "ceiling": 295,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 15
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 8
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 12
+    },
+    {
+     "src": "Smyth",
+     "rank": 10
+    },
+    {
+     "src": "Holka",
+     "rank": 10
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 9
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 15,
+    "boom": 0.2,
+    "bust": 0.13,
+    "median": 14.5,
+    "sd": 6.5
+   },
+   "verdict": "Clear alpha with 12.7 aDOT and strong per-target efficiency — a high floor if the health and O-line hold.",
+   "badges": [
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 24.6,
+    "wr2Rate": 29.5,
+    "games": 15
+   },
+   "playoffSos": {
+    "team": "HOU",
+    "opponents": [
+     "JAX",
+     "PHI",
+     "GB"
+    ],
+    "rank": 14
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-19",
+    "dir": "tailwind",
+    "note": "Jayden Higgins (projected starting X opposite him) tore his ACL and is out for the season. Collins is the unambiguous alpha in Houston.",
+    "src": "Rapoport / ESPN"
+   }
+  },
+  {
+   "overall": 32,
+   "name": "Travis Etienne Jr.",
+   "pos": "RB",
+   "posRank": 18,
+   "team": "NO",
+   "consensus": 18.25,
+   "vbd": 49,
+   "mktOverall": 39.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 37
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 39
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 42
+    }
+   ],
+   "tilt": 1.171,
+   "proj": 242,
+   "floor": 175,
+   "ceiling": 275,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 18
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 17
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 19
+    },
+    {
+     "src": "Smyth",
+     "rank": 19
+    },
+    {
+     "src": "Holka",
+     "rank": 18
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 17
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.12,
+    "bust": 0.18,
+    "median": 16.5,
+    "sd": 6.94
+   },
+   "verdict": "Pass-catching rebound, but TD-fueled value plus a downgraded offense make me pass on the sleeper tag",
+   "badges": [
+    "td-dependent",
+    "new-team"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "NO",
+    "opponents": [
+     "TB",
+     "ARI",
+     "ATL"
+    ],
+    "rank": 22
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 33,
+   "name": "Chris Olave",
+   "pos": "WR",
+   "posRank": 12,
+   "team": "NO",
+   "consensus": 12.38,
+   "vbd": 48,
+   "mktOverall": 23,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 27
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 22
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 20
+    }
+   ],
+   "tilt": 1.225,
+   "proj": 245,
+   "floor": 200,
+   "ceiling": 290,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 11
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 11
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 10
+    },
+    {
+     "src": "Smyth",
+     "rank": 14
+    },
+    {
+     "src": "Holka",
+     "rank": 13
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 12
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.19,
+    "bust": 0.06,
+    "median": 15.2,
+    "sd": 7.91
+   },
+   "verdict": "29% target share and a WR7 finish when healthy; extension signed, clot cleared — buy the volume, fear the head.",
+   "badges": [
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 29.3,
+    "wr2Rate": 58.2,
+    "games": 16
+   },
+   "playoffSos": {
+    "team": "NO",
+    "opponents": [
+     "TB",
+     "ARI",
+     "ATL"
+    ],
+    "rank": 19
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-23",
+    "dir": "tailwind",
+    "note": "Saints rookie WR2 Jordyn Tyson's hamstring has his regular season in serious doubt. ESPN moved Olave up to a lower-tier WR1; he ran a 30.3% target share over Weeks 10-18 last year after the Shaheed trade.",
+    "src": "ESPN fantasy buzz / AS USA"
+   }
+  },
+  {
+   "overall": 34,
+   "name": "Malik Nabers",
+   "pos": "WR",
+   "posRank": 13,
+   "team": "NYG",
+   "consensus": 14.33,
+   "vbd": 44,
+   "mktOverall": 26,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 25
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 26
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 27
+    }
+   ],
+   "tilt": 1.071,
+   "proj": 232,
+   "floor": 170,
+   "ceiling": 300,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 9
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 13
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 15
+    },
+    {
+     "src": "Smyth",
+     "rank": 11
+    },
+    {
+     "src": "Holka",
+     "rank": 20
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 18
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 4,
+    "boom": 0.25,
+    "bust": 0.5,
+    "median": 8.05,
+    "sd": 16.12
+   },
+   "verdict": "Rookie WR6 on top-of-NFL target volume, but knee recovery and a run-leaning Harbaugh offense cap it.",
+   "badges": [
+    "injury-history",
+    "depth-risk"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 29.6,
+    "wr2Rate": 58.2,
+    "games": 4
+   },
+   "playoffSos": {
+    "team": "NYG",
+    "opponents": [
+     "CLE",
+     "DET",
+     "DAL"
+    ],
+    "rank": 22.7
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "FSC",
+     "note": "ACL recovery — avoided the PUP list (better than the 70-80% chance they gave it a month ago) but could still miss 1-3 games to start. ~80-90% odds of returning to pre-injury level, 20-25% reinjury risk over 2 years. Fine as a 3rd-round pick, too risky as a 2nd.",
+     "source": "https://youtu.be/vfynKvpALhQ"
+    }
+   ],
+   "expertSleeper": null,
+   "news": {
+    "date": "2026-08-24",
+    "dir": "tailwind",
+    "note": "Shed the red no-contact jersey Aug 24, took 11-on-11 and 7-on-7 reps. Harbaugh: won't guarantee Week 1 but it's 'reasonable to assume that', and he 'moved the best we've seen this summer.'",
+    "src": "ESPN Raanan / The Athletic Duggan"
+   }
+  },
+  {
+   "overall": 35,
+   "name": "Zay Flowers",
+   "pos": "WR",
+   "posRank": 14,
+   "team": "BAL",
+   "consensus": 15.75,
+   "vbd": 44,
+   "mktOverall": 32.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 41
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 31
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 25
+    }
+   ],
+   "tilt": 1.204,
+   "proj": 239,
+   "floor": 205,
+   "ceiling": 290,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 16
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 16
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 13
+    },
+    {
+     "src": "Smyth",
+     "rank": 17
+    },
+    {
+     "src": "Holka",
+     "rank": 15
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 15
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.12,
+    "bust": 0.12,
+    "median": 13,
+    "sd": 7.48
+   },
+   "verdict": "WR12 in Lamar's 13 games with 30% target share; new pass-friendly OC could unlock a career year.",
+   "badges": [
+    "breakout"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 29,
+    "wr2Rate": 58.2,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "BAL",
+    "opponents": [
+     "PIT",
+     "CLE",
+     "CIN"
+    ],
+    "rank": 12
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "FSC",
+     "note": "Quad contusion — minor, expected to miss only a few days of practice. Not a concern.",
+     "source": "https://youtu.be/vfynKvpALhQ"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 36,
+   "name": "Garrett Wilson",
+   "pos": "WR",
+   "posRank": 15,
+   "team": "NYJ",
+   "consensus": 15.67,
+   "vbd": 44,
+   "mktOverall": 33.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 34
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 40
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 26
+    }
+   ],
+   "tilt": 1.144,
+   "proj": 248,
+   "floor": 180,
+   "ceiling": 295,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 14
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 19
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 14
+    },
+    {
+     "src": "Smyth",
+     "rank": 20
+    },
+    {
+     "src": "Holka",
+     "rank": 16
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 11
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 7,
+    "boom": 0.14,
+    "bust": 0.29,
+    "median": 19.1,
+    "sd": 9.66
+   },
+   "verdict": "0.92 WOPR and 35% target share when healthy; talent is WR1-caliber, the offense and QB are not.",
+   "badges": [
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 30.4,
+    "wr2Rate": 58.2,
+    "games": 7
+   },
+   "playoffSos": {
+    "team": "NYJ",
+    "opponents": [
+     "ARI",
+     "NE",
+     "MIN"
+    ],
+    "rank": 9.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 37,
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "posRank": 16,
+   "team": "PHI",
+   "consensus": 15,
+   "vbd": 44,
+   "mktOverall": 34,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 43
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 29
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 30
+    }
+   ],
+   "tilt": 1.123,
+   "proj": 239,
+   "floor": 205,
+   "ceiling": 300,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 18
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 15
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 16
+    },
+    {
+     "src": "Smyth",
+     "rank": 13
+    },
+    {
+     "src": "Holka",
+     "rank": 12
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 16
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0.06,
+    "bust": 0.35,
+    "median": 9.3,
+    "sd": 7.8
+   },
+   "verdict": "Now Philly's undisputed No. 1 post-Brown trade; target share should jump toward 30% in a better scheme fit.",
+   "badges": [
+    "breakout"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 24.4,
+    "wr2Rate": 29.5,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "PHI",
+    "opponents": [
+     "SEA",
+     "HOU",
+     "SF"
+    ],
+    "rank": 9.3
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "FSC",
+     "note": "Hamstring injury, low concern — further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.",
+     "source": "https://youtu.be/vfynKvpALhQ"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 38,
+   "name": "Cam Skattebo",
+   "pos": "RB",
+   "posRank": 19,
+   "team": "NYG",
+   "consensus": 18.75,
+   "vbd": 44,
+   "mktOverall": 45.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 47
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 50
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 39
+    }
+   ],
+   "tilt": 1.188,
+   "proj": 242,
+   "floor": 155,
+   "ceiling": 275,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 21
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 21
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 17
+    },
+    {
+     "src": "Smyth",
+     "rank": 18
+    },
+    {
+     "src": "Holka",
+     "rank": 19
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 18
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 8,
+    "boom": 0.25,
+    "bust": 0.13,
+    "median": 14.15,
+    "sd": 8.62
+   },
+   "verdict": "Year-2 breakout bet with a three-down role, but weak efficiency and a crowded backfield temper it",
+   "badges": [
+    "breakout",
+    "depth-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "NYG",
+    "opponents": [
+     "CLE",
+     "DET",
+     "DAL"
+    ],
+    "rank": 17.3
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "Riser: 4 red-zone targets in only 6 games as a rookie — the ability showed up in a small sample.",
+     "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+    }
+   ],
+   "expertSleeper": {
+    "by": [
+     "ESPN"
+    ],
+    "why": "Emerging talent with a real jump in opportunity."
+   },
+   "news": null
+  },
+  {
+   "overall": 39,
+   "name": "Tetairoa McMillan",
+   "pos": "WR",
+   "posRank": 17,
+   "team": "CAR",
+   "consensus": 16.63,
+   "vbd": 40,
+   "mktOverall": 37.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 42
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 37
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 33
+    }
+   ],
+   "tilt": 1.162,
+   "proj": 240,
+   "floor": 195,
+   "ceiling": 290,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 17
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 18
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 17
+    },
+    {
+     "src": "Smyth",
+     "rank": 18
+    },
+    {
+     "src": "Holka",
+     "rank": 14
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 13
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.06,
+    "bust": 0.24,
+    "median": 11.5,
+    "sd": 7.07
+   },
+   "verdict": "87% snaps and 45.9% air-yards share as a rookie; a clean Year-2 breakout if Bryce Young keeps climbing.",
+   "badges": [
+    "breakout"
+   ],
+   "vetWR": {
+    "grade": "A",
+    "share": 25.4,
+    "wr2Rate": 58.2,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "CAR",
+    "opponents": [
+     "CIN",
+     "PIT",
+     "SEA"
+    ],
+    "rank": 10.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 40,
+   "name": "Colston Loveland",
+   "pos": "TE",
+   "posRank": 3,
+   "team": "CHI",
+   "consensus": 3.13,
+   "vbd": 39,
+   "mktOverall": 41,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 35
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 33
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 55
+    }
+   ],
+   "tilt": 1.075,
+   "proj": 206,
+   "floor": 150,
+   "ceiling": 258,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 3
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 3
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 3
+    },
+    {
+     "src": "Smyth",
+     "rank": 3
+    },
+    {
+     "src": "Holka",
+     "rank": 3
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 4
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.25,
+    "bust": 0.56,
+    "median": 6.9,
+    "sd": 8.5
+   },
+   "verdict": "Late-rookie surge is the whole thesis — 20 PPG and 80% route share down the stretch point to a real leap",
+   "badges": [
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "CHI",
+    "opponents": [
+     "BUF",
+     "GB",
+     "DET"
+    ],
+    "rank": 9.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 41,
+   "name": "Emeka Egbuka",
+   "pos": "WR",
+   "posRank": 18,
+   "team": "TB",
+   "consensus": 17.67,
+   "vbd": 37,
+   "mktOverall": 36.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 33
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 41
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 36
+    }
+   ],
+   "tilt": 1.102,
+   "proj": 229,
+   "floor": 190,
+   "ceiling": 290,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 13
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 20
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 18
+    },
+    {
+     "src": "Smyth",
+     "rank": 19
+    },
+    {
+     "src": "Holka",
+     "rank": 17
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 19
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0.18,
+    "bust": 0.41,
+    "median": 9,
+    "sd": 8.42
+   },
+   "verdict": "20.5 PPG through five weeks as a rookie; now the clear No. 1 with Evans gone — big Year-2 upside.",
+   "badges": [
+    "breakout",
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 23.5,
+    "wr2Rate": 29.5,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "TB",
+    "opponents": [
+     "NO",
+     "ATL",
+     "LA"
+    ],
+    "rank": 18.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 42,
+   "name": "Tyler Warren",
+   "pos": "TE",
+   "posRank": 4,
+   "team": "IND",
+   "consensus": 3.88,
+   "vbd": 36,
+   "mktOverall": 55,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 46
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 52
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 67
+    }
+   ],
+   "tilt": 1.148,
+   "proj": 209,
+   "floor": 155,
+   "ceiling": 242,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 4
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 4
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 4
+    },
+    {
+     "src": "Smyth",
+     "rank": 4
+    },
+    {
+     "src": "Holka",
+     "rank": 4
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 3
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.24,
+    "bust": 0.35,
+    "median": 9.5,
+    "sd": 4.88
+   },
+   "verdict": "Rock-steady sophomore — 21.5% target share and a 4.7 weekly stdev give the safest floor outside the top tier",
+   "badges": [
+    "breakout",
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "IND",
+    "opponents": [
+     "TEN",
+     "CIN",
+     "CLE"
+    ],
+    "rank": 21
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 43,
+   "name": "Tee Higgins",
+   "pos": "WR",
+   "posRank": 19,
+   "team": "CIN",
+   "consensus": 18.33,
+   "vbd": 36,
+   "mktOverall": 41,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 57
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 28
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 38
+    }
+   ],
+   "tilt": 1.176,
+   "proj": 219,
+   "floor": 165,
+   "ceiling": 250,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 22
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 14
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 19
+    },
+    {
+     "src": "Smyth",
+     "rank": 15
+    },
+    {
+     "src": "Holka",
+     "rank": 19
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 21
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 15,
+    "boom": 0.13,
+    "bust": 0.2,
+    "median": 11.4,
+    "sd": 8.23
+   },
+   "verdict": "Efficient, high-floor WR2 with WR1 upside whenever Burrow's healthy — injury risk is the only real knock.",
+   "badges": [
+    "injury-history"
+   ],
+   "vetWR": {
+    "grade": "C",
+    "share": 18.3,
+    "wr2Rate": 15.4,
+    "games": 15
+   },
+   "playoffSos": {
+    "team": "CIN",
+    "opponents": [
+     "CAR",
+     "IND",
+     "BAL"
+    ],
+    "rank": 21.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 44,
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "posRank": 2,
+   "team": "BAL",
+   "consensus": 2.25,
+   "vbd": 35,
+   "mktOverall": 46.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 36
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 47
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 56
+    }
+   ],
+   "tilt": 1.053,
+   "proj": 322,
+   "floor": 250,
+   "ceiling": 410,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 2
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 2
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 3
+    },
+    {
+     "src": "Smyth",
+     "rank": 2
+    },
+    {
+     "src": "Holka",
+     "rank": 3
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 2
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 13,
+    "boom": 0.23,
+    "bust": 0.38,
+    "median": 16.64,
+    "sd": 9.08
+   },
+   "verdict": "2024 was a historic 430-point ceiling; rushing-TD decline and 2025 injury pull the range wide.",
+   "badges": [
+    "elite",
+    "injury-history"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "BAL",
+    "opponents": [
+     "PIT",
+     "CLE",
+     "CIN"
+    ],
+    "rank": 19.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 45,
+   "name": "Drake Maye",
+   "pos": "QB",
+   "posRank": 3,
+   "team": "NE",
+   "consensus": 3,
+   "vbd": 34,
+   "mktOverall": 50,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 48
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 51
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 51
+    }
+   ],
+   "tilt": 1.186,
+   "proj": 319,
+   "floor": 285,
+   "ceiling": 375,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 4
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 3
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 2
+    },
+    {
+     "src": "Smyth",
+     "rank": 3
+    },
+    {
+     "src": "Holka",
+     "rank": 2
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 4
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.24,
+    "bust": 0,
+    "median": 20.48,
+    "sd": 5.39
+   },
+   "verdict": "League-best efficiency (CPOE 12.2, EPA 9.72) and rising volume; lowest-variance breakout at QB.",
+   "badges": [
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "NE",
+    "opponents": [
+     "KC",
+     "NYJ",
+     "DEN"
+    ],
+    "rank": 17.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 46,
+   "name": "Jayden Daniels",
+   "pos": "QB",
+   "posRank": 4,
+   "team": "WSH",
+   "consensus": 4.5,
+   "vbd": 32,
+   "mktOverall": 56.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 40
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 56
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 73
+    }
+   ],
+   "tilt": 1.137,
+   "proj": 318,
+   "floor": 235,
+   "ceiling": 375,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 3
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 5
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 6
+    },
+    {
+     "src": "Smyth",
+     "rank": 4
+    },
+    {
+     "src": "Holka",
+     "rank": 5
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 5
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 7,
+    "boom": 0,
+    "bust": 0.14,
+    "median": 17.74,
+    "sd": 6.36
+   },
+   "verdict": "Elite rushing volume and a 20.9 PPG rookie year; the 2025 injury, not talent, is the only knock.",
+   "badges": [
+    "injury-history",
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "WAS",
+    "opponents": [
+     "ATL",
+     "MIN",
+     "JAX"
+    ],
+    "rank": 11
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 47,
+   "name": "Joe Burrow",
+   "pos": "QB",
+   "posRank": 5,
+   "team": "CIN",
+   "consensus": 5.13,
+   "vbd": 29,
+   "mktOverall": 61.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 73
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 55
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 57
+    }
+   ],
+   "tilt": 1.053,
+   "proj": 304,
+   "floor": 235,
+   "ceiling": 385,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 8
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 4
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 4
+    },
+    {
+     "src": "Smyth",
+     "rank": 5
+    },
+    {
+     "src": "Holka",
+     "rank": 4
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 6
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 8,
+    "boom": 0.25,
+    "bust": 0.38,
+    "median": 19.82,
+    "sd": 8.58
+   },
+   "verdict": "Elite pocket passer with a passing-only QB1 ceiling; 2025 was injury, not decline — health is the bet.",
+   "badges": [
+    "injury-history",
+    "easy-playoffs"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "CIN",
+    "opponents": [
+     "CAR",
+     "IND",
+     "BAL"
+    ],
+    "rank": 15
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 48,
+   "name": "Ladd McConkey",
+   "pos": "WR",
+   "posRank": 20,
+   "team": "LAC",
+   "consensus": 20.25,
+   "vbd": 25,
+   "mktOverall": 42.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 51
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 36
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 41
+    }
+   ],
+   "tilt": 1.137,
+   "proj": 220,
+   "floor": 175,
+   "ceiling": 275,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 21
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 17
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 20
+    },
+    {
+     "src": "Smyth",
+     "rank": 22
+    },
+    {
+     "src": "Holka",
+     "rank": 18
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 20
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0,
+    "bust": 0.31,
+    "median": 11.6,
+    "sd": 6.86
+   },
+   "verdict": "Year-3 breakout hopes hinge on a target share he doesn't yet own; 21% share and 0.50 WOPR are modest.",
+   "badges": [
+    "breakout"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 20.7,
+    "wr2Rate": 29.5,
+    "games": 16
+   },
+   "playoffSos": {
+    "team": "LAC",
+    "opponents": [
+     "SF",
+     "MIA",
+     "KC"
+    ],
+    "rank": 15
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 49,
+   "name": "Bucky Irving",
+   "pos": "RB",
+   "posRank": 20,
+   "team": "TB",
+   "consensus": 20.75,
+   "vbd": 24,
+   "mktOverall": 49.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 49
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 54
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 45
+    }
+   ],
+   "tilt": 1.199,
+   "proj": 208,
+   "floor": 150,
+   "ceiling": 275,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 22
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 22
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 20
+    },
+    {
+     "src": "Smyth",
+     "rank": 20
+    },
+    {
+     "src": "Holka",
+     "rank": 20
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 22
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 10,
+    "boom": 0,
+    "bust": 0.1,
+    "median": 14.2,
+    "sd": 5.61
+   },
+   "verdict": "2024 RB1 line proves the ceiling; 2025 was injury-wrecked, and healthy he's a high-volume, high-efficiency back",
+   "badges": [
+    "injury-history",
+    "split-touches",
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "TB",
+    "opponents": [
+     "NO",
+     "ATL",
+     "LA"
+    ],
+    "rank": 14
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "FSC",
+     "note": "Shoulder dislocation/surgery, full camp participant and appears fully recovered; 10-20% instability/reinjury risk remains. FSC thinks the market hasn't repriced him despite the good news — backup Kenneth Gainwell profiles as a passing-down/2-minute back, not a real threat to his 65-70% share of TB touches.",
+     "source": "https://youtu.be/vfynKvpALhQ"
+    },
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "Buy-low on volume: Tampa Bay was a top-10 red-zone-volume offense for RBs in 2024 (Irving over 2 combined RZ touches/game before injury cut his 2025 short). New OC should restore that passing-game RZ role; Gainwell/Sean Tucker will chip in but Smyth doesn't expect a repeat of last year's near-zero goal-line share.",
+     "source": "https://www.youtube.com/watch?v=ktqvBN3vWd4"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 50,
+   "name": "Jaylen Waddle",
+   "pos": "WR",
+   "posRank": 21,
+   "team": "DEN",
+   "consensus": 20.83,
+   "vbd": 24,
+   "mktOverall": 44.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 44
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 42
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 47
+    }
+   ],
+   "tilt": 1.113,
+   "proj": 213,
+   "floor": 165,
+   "ceiling": 255,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 19
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 21
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 23
+    },
+    {
+     "src": "Smyth",
+     "rank": 16
+    },
+    {
+     "src": "Holka",
+     "rank": 23
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 23
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 16,
+    "boom": 0.06,
+    "bust": 0.38,
+    "median": 13.2,
+    "sd": 6.87
+   },
+   "verdict": "New Denver WR1 role plus league-leading pass volume make this a strong ascending bet at a WR20s price.",
+   "badges": [
+    "new-team",
+    "breakout"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 23,
+    "wr2Rate": 29.5,
+    "games": 16
+   },
+   "playoffSos": {
+    "team": "DEN",
+    "opponents": [
+     "LV",
+     "BUF",
+     "NE"
+    ],
+    "rank": 13.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 51,
+   "name": "Davante Adams",
+   "pos": "WR",
+   "posRank": 22,
+   "team": "LAR",
+   "consensus": 21.67,
+   "vbd": 23,
+   "mktOverall": 48.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 50
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 53
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 43
+    }
+   ],
+   "tilt": 1.172,
+   "proj": 233,
+   "floor": 180,
+   "ceiling": 270,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 20
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 25
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 21
+    },
+    {
+     "src": "Smyth",
+     "rank": 26
+    },
+    {
+     "src": "Holka",
+     "rank": 21
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 17
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 14,
+    "boom": 0.07,
+    "bust": 0.21,
+    "median": 15.1,
+    "sd": 6.84
+   },
+   "verdict": "WR9 on TD volume, not efficiency (-106 yards-over-expected); regression looms behind Nacua.",
+   "badges": [
+    "td-dependent",
+    "decline-risk"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 23.8,
+    "wr2Rate": 29.5,
+    "games": 14
+   },
+   "playoffSos": {
+    "team": "LA",
+    "opponents": [
+     "DAL",
+     "SEA",
+     "TB"
+    ],
+    "rank": 18.3
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 52,
+   "name": "Jalen Hurts",
+   "pos": "QB",
+   "posRank": 6,
+   "team": "PHI",
+   "consensus": 5.75,
+   "vbd": 21,
+   "mktOverall": 67.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 52
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 67
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 83
+    }
+   ],
+   "tilt": 1.12,
+   "proj": 321,
+   "floor": 265,
+   "ceiling": 350,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 5
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 6
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 8
+    },
+    {
+     "src": "Smyth",
+     "rank": 6
+    },
+    {
+     "src": "Holka",
+     "rank": 6
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 3
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.19,
+    "bust": 0.19,
+    "median": 19.45,
+    "sd": 7.58
+   },
+   "verdict": "Tush-push rushing TDs anchor a solid floor, but the offense's 2025 slide and brutal playoff slate cap upside.",
+   "badges": [
+    "workhorse",
+    "td-dependent",
+    "tough-playoffs"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "PHI",
+    "opponents": [
+     "SEA",
+     "HOU",
+     "SF"
+    ],
+    "rank": 10
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 53,
+   "name": "Quinshon Judkins",
+   "pos": "RB",
+   "posRank": 21,
+   "team": "CLE",
+   "consensus": 21.33,
+   "vbd": 20,
+   "mktOverall": 44.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 38
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 45
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 50
+    }
+   ],
+   "tilt": 1.132,
+   "proj": 225,
+   "floor": 150,
+   "ceiling": 260,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 19
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 20
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 22
+    },
+    {
+     "src": "Smyth",
+     "rank": 22
+    },
+    {
+     "src": "Holka",
+     "rank": 25
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 20
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 14,
+    "boom": 0.07,
+    "bust": 0.29,
+    "median": 10.3,
+    "sd": 6.73
+   },
+   "verdict": "Poor per-touch data and a Sampson timeshare on a weak offense cap him at flex-plus",
+   "badges": [
+    "split-touches",
+    "depth-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "CLE",
+    "opponents": [
+     "NYG",
+     "BAL",
+     "IND"
+    ],
+    "rank": 20.3
+   },
+   "videoNotes": [
+    {
+     "week": 1,
+     "analyst": "Smyth",
+     "note": "Negative: zero red-zone targets (as with Dobbins) — no pass-game red-zone role to fall back on.",
+     "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+    }
+   ],
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 54,
+   "name": "Terry McLaurin",
+   "pos": "WR",
+   "posRank": 23,
+   "team": "WSH",
+   "consensus": 24.13,
+   "vbd": 18,
+   "mktOverall": 52.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 60
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 49
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 48
+    }
+   ],
+   "tilt": 1.176,
+   "proj": 218,
+   "floor": 150,
+   "ceiling": 240,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 23
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 24
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 24
+    },
+    {
+     "src": "Smyth",
+     "rank": 25
+    },
+    {
+     "src": "Holka",
+     "rank": 25
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 22
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 10,
+    "boom": 0,
+    "bust": 0.2,
+    "median": 10.1,
+    "sd": 5.1
+   },
+   "verdict": "Elite in-game usage but 2025 efficiency crashed; Diggs caps ceiling — a volume bet on a Daniels rebound.",
+   "badges": [
+    "decline-risk",
+    "td-dependent"
+   ],
+   "vetWR": {
+    "grade": "B",
+    "share": 23.6,
+    "wr2Rate": 29.5,
+    "games": 10
+   },
+   "playoffSos": {
+    "team": "WAS",
+    "opponents": [
+     "ATL",
+     "MIN",
+     "JAX"
+    ],
+    "rank": 13.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 55,
+   "name": "D'Andre Swift",
+   "pos": "RB",
+   "posRank": 22,
+   "team": "CHI",
+   "consensus": 21.88,
+   "vbd": 18,
+   "mktOverall": 45,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 45
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 44
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 46
+    }
+   ],
+   "tilt": 1.188,
+   "proj": 212,
+   "floor": 165,
+   "ceiling": 245,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 20
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 19
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 21
+    },
+    {
+     "src": "Smyth",
+     "rank": 24
+    },
+    {
+     "src": "Holka",
+     "rank": 22
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 21
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.06,
+    "bust": 0.13,
+    "median": 14.35,
+    "sd": 6.67
+   },
+   "verdict": "Genuine three-down workhorse (223 car, 58% snaps) with rising rush EPA and a steady, low-variance floor",
+   "badges": [
+    "workhorse"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "CHI",
+    "opponents": [
+     "BUF",
+     "GB",
+     "DET"
+    ],
+    "rank": 15.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 56,
+   "name": "Harold Fannin Jr.",
+   "pos": "TE",
+   "posRank": 5,
+   "team": "CLE",
+   "consensus": 5.88,
+   "vbd": 17,
+   "mktOverall": 73.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 53
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 86
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 81
+    }
+   ],
+   "tilt": 1.183,
+   "proj": 187,
+   "floor": 135,
+   "ceiling": 222,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 5
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 9
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 6
+    },
+    {
+     "src": "Smyth",
+     "rank": 5
+    },
+    {
+     "src": "Holka",
+     "rank": 6
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 6
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 16,
+    "boom": 0.19,
+    "bust": 0.25,
+    "median": 11.15,
+    "sd": 5.73
+   },
+   "verdict": "Elite per-route rookie on a bad offense — the one profile where a great TE still produces through the muck",
+   "badges": [
+    "breakout",
+    "depth-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "CLE",
+    "opponents": [
+     "NYG",
+     "BAL",
+     "IND"
+    ],
+    "rank": 14
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 57,
+   "name": "David Montgomery",
+   "pos": "RB",
+   "posRank": 23,
+   "team": "HOU",
+   "consensus": 23.13,
+   "vbd": 17,
+   "mktOverall": 59.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 62
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 58
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 58
+    }
+   ],
+   "tilt": 1.09,
+   "proj": 192,
+   "floor": 130,
+   "ceiling": 205,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 26
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 23
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 24
+    },
+    {
+     "src": "Smyth",
+     "rank": 21
+    },
+    {
+     "src": "Holka",
+     "rank": 23
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 26
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 17,
+    "boom": 0.06,
+    "bust": 0.41,
+    "median": 8.3,
+    "sd": 6.72
+   },
+   "verdict": "New team, 37% snaps and TD-reliant; the 2024 RB2 line masks shrinking usage behind Woody Marks",
+   "badges": [
+    "td-dependent",
+    "new-team",
+    "decline-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "HOU",
+    "opponents": [
+     "JAX",
+     "PHI",
+     "GB"
+    ],
+    "rank": 12.7
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 58,
+   "name": "Sam LaPorta",
+   "pos": "TE",
+   "posRank": 6,
+   "team": "DET",
+   "consensus": 6.38,
+   "vbd": 16,
+   "mktOverall": 80.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 82
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 61
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 98
+    }
+   ],
+   "tilt": 1.117,
+   "proj": 189,
+   "floor": 128,
+   "ceiling": 232,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 8
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 5
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 7
+    },
+    {
+     "src": "Smyth",
+     "rank": 6
+    },
+    {
+     "src": "Holka",
+     "rank": 8
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 5
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 9,
+    "boom": 0.44,
+    "bust": 0.44,
+    "median": 10.3,
+    "sd": 6.45
+   },
+   "verdict": "Bounce-back bet — elite YAC and per-target efficiency on a great offense, if health and volume return",
+   "badges": [
+    "injury-history",
+    "breakout"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "DET",
+    "opponents": [
+     "MIN",
+     "NYG",
+     "CHI"
+    ],
+    "rank": 10
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 59,
+   "name": "Bhayshul Tuten",
+   "pos": "RB",
+   "posRank": 24,
+   "team": "JAX",
+   "consensus": 23.38,
+   "vbd": 16,
+   "mktOverall": 55.3,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 54
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 59
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 53
+    }
+   ],
+   "tilt": 1.048,
+   "proj": 205,
+   "floor": 90,
+   "ceiling": 205,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 23
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 24
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 23
+    },
+    {
+     "src": "Smyth",
+     "rank": 23
+    },
+    {
+     "src": "Holka",
+     "rank": 24
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 24
+    }
+   ],
+   "favored": true,
+   "boom": {
+    "g": 15,
+    "boom": 0,
+    "bust": 0.53,
+    "median": 4.8,
+    "sd": 4.92
+   },
+   "verdict": "Explosive talent but 2025 was a 21%-snap, 3.7-ypc committee sliver in a crowded JAX room",
+   "badges": [
+    "depth-risk"
+   ],
+   "vetWR": null,
+   "playoffSos": {
+    "team": "JAX",
+    "opponents": [
+     "HOU",
+     "DAL",
+     "WAS"
+    ],
+    "rank": 22
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  },
+  {
+   "overall": 60,
+   "name": "DJ Moore",
+   "pos": "WR",
+   "posRank": 24,
+   "team": "BUF",
+   "consensus": 25.33,
+   "vbd": 16,
+   "mktOverall": 55.7,
+   "overallVotes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 72
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 46
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 49
+    }
+   ],
+   "tilt": 1.102,
+   "proj": 210,
+   "floor": 130,
+   "ceiling": 215,
+   "votes": [
+    {
+     "src": "Field Yates (ESPN)",
+     "rank": 27
+    },
+    {
+     "src": "CBS consensus",
+     "rank": 22
+    },
+    {
+     "src": "FFC ADP (market)",
+     "rank": 25
+    },
+    {
+     "src": "Smyth",
+     "rank": 23
+    },
+    {
+     "src": "Holka",
+     "rank": 29
+    },
+    {
+     "src": "ESPN proj (2026-08-06)",
+     "rank": 26
+    }
+   ],
+   "favored": false,
+   "boom": {
+    "g": 17,
+    "boom": 0.06,
+    "bust": 0.41,
+    "median": 8.2,
+    "sd": 8.19
+   },
+   "verdict": "Bounce-back bet on a Buffalo opening and Josh Allen after a dismal, low-efficiency 2025.",
+   "badges": [
+    "new-team",
+    "decline-risk"
+   ],
+   "vetWR": {
+    "grade": "C",
+    "share": 16,
+    "wr2Rate": 15.4,
+    "games": 17
+   },
+   "playoffSos": {
+    "team": "BUF",
+    "opponents": [
+     "CHI",
+     "DEN",
+     "MIA"
+    ],
+    "rank": 18
+   },
+   "videoNotes": null,
+   "expertSleeper": null,
+   "news": null
+  }
+ ]
+}
