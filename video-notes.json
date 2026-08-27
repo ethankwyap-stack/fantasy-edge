@@ -1,41 +1,493 @@
 {
   "_note": "In-season video/TikTok takes injected by the fantasy-video-inject skill. Note-only, ALWAYS week-tagged: nothing here casts a vote in the board's value math. Notes older than TTL weeks stop being shown/injected.",
   "_ttlWeeks": 3,
-  "_updated": "2026-08-14",
+  "_updated": "2026-08-26",
   "notes": {
-    "jacory croskey-merritt": [{ "week": 1, "analyst": "Smyth", "note": "Concern: Washington's Tunsil tricep injury drags down the whole offense's red-zone trips, and the backfield split (White getting receiving work, little RB-target history under Jayden Daniels) means Croskey-Merritt's goal-line share alone may not be enough for weekly startable upside.", "source": "https://www.youtube.com/watch?v=ktqvBN3vWd4" }],
-    "jeremiyah love": [{ "week": 1, "analyst": "FSC", "note": "Rostered by team 9, not a waiver target. Opens the season in a muddled committee (Braswell/Beck) so casual managers will undervalue him, but FSC expects his workload to ramp toward 17-18 PPG by the back half. Their call: buy-low trade around week 5 for roughly 4th-round redraft value.", "source": "https://youtube.com/watch?v=f4o5i4kreu0" }],
-    "chase brown": [{ "week": 1, "analyst": "Smyth", "note": "8 red-zone targets in 8 games with Burrow, and similar in 2024 — a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "kyren williams": [{ "week": 1, "analyst": "Smyth", "note": "3rd among RBs in red-zone routes — the passing-game red-zone role is priced into his floor, so a bad rushing TD split hurts him less than it looks.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "christian mccaffrey": [{ "week": 1, "analyst": "Smyth", "note": "Far and away the leader in RB red-zone targets — the single biggest edge in the metric.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "javonte williams": [{ "week": 1, "analyst": "Smyth", "note": "Red-zone-target leader but Smyth expects some decline from that rate; still projects a good share. Buy the role, not last year's exact number.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "kenny gainwell": [{ "week": 1, "analyst": "Smyth", "note": "Red-zone target usage is a good sign for the Pittsburgh backfield duo — Gainwell's pass-game role gives him standalone value even in a split.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "jaylen warren": [{ "week": 1, "analyst": "Smyth", "note": "Other half of the Pittsburgh duo Smyth flags as a positive on RB red-zone targets.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "kenneth walker iii": [{ "week": 1, "analyst": "Smyth", "note": "Riser: Kareem Hunt's red-zone target volume from last season vacates into Walker's role.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "chuba hubbard": [{ "week": 1, "analyst": "Smyth", "note": "Riser: had the red-zone-target role last season and lands back in the same situation.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "cam skattebo": [{ "week": 1, "analyst": "Smyth", "note": "Riser: 4 red-zone targets in only 6 games as a rookie — the ability showed up in a small sample.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "james cook iii": [{ "week": 1, "analyst": "Smyth", "note": "Watch item: only 3 red-zone targets last year, but persistent reports the staff wants to throw to RBs more, and Buffalo is in the red zone a lot. Upside is in the change, not the history.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "d'andre swift": [{ "week": 1, "analyst": "Smyth", "note": "Negative: 1 red-zone target across the past two seasons, and Chicago ranks 32nd in RB red-zone target share under Caleb Williams — they go pass-heavy in the red zone without involving the back.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "tony pollard": [{ "week": 1, "analyst": "Smyth", "note": "Negative: only 1 red-zone target — no receiving role near the goal line, so his TD equity depends entirely on carries.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "jordan mason": [{ "week": 1, "analyst": "Smyth", "note": "Negative: only 1 red-zone target — offense goes pass-heavy in the red zone without targeting the RB.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "quinshon judkins": [{ "week": 1, "analyst": "Smyth", "note": "Negative: zero red-zone targets (as with Dobbins) — no pass-game red-zone role to fall back on.", "source": "https://www.tiktok.com/t/ZTAKNwtVX/" }],
-    "luther burden iii": [{ "week": 1, "analyst": "FSC", "note": "Groin/abductor strain upgraded to a ~1-month absence, which FSC reads as a partial (grade 2) tear given the timeline. 15-25% reinjury rate on return — fading him, not chasing the discount even if his price drops.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "mike evans": [{ "week": 1, "analyst": "FSC", "note": "Grade-1 quad strain on top of 9 lower-body injuries in 7 seasons and a team change; still not practicing a week+ later. ~30% hamstring-family recurrence rate. FSC would pass unless he falls a full round below current ADP.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "malik nabers": [{ "week": 1, "analyst": "FSC", "note": "ACL recovery — avoided the PUP list (better than the 70-80% chance they gave it a month ago) but could still miss 1-3 games to start. ~80-90% odds of returning to pre-injury level, 20-25% reinjury risk over 2 years. Fine as a 3rd-round pick, too risky as a 2nd.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "patrick mahomes": [{ "week": 1, "analyst": "FSC", "note": "Cleared for camp practicing unrestricted, will sit all preseason. Reinjury risk ~20-25% if held back a week or two, jumps to ~40% if he plays week 1 (inside the 9-month post-ACL-surgery threshold). Separately: his rush volume normalizes down and FSC worries about a 'silent killer' QB8-11 season like 2024.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "tucker kraft": [{ "week": 1, "analyst": "FSC", "note": "ACL tear from week 8 last year, off the PUP, ~10 months post-op by week 1 — expect ~4 weeks of reduced snaps/efficiency after his return. FSC is passing at his 6th-7th round price: his 2025 breakout games all came with Jayden Reed/Christian Watson/Matthew Golden hurt or ineffective, and that target competition is healthier this year.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "george kittle": [{ "week": 1, "analyst": "FSC", "note": "Achilles speed-bridge repair, off the pure PUP-only concern and running routes; return date unclear (6-9 months post-surgery ≈ mid-Oct, but speed-bridge patients have beaten that timeline before). <2% reinjury rate — FSC prefers him over Tucker Kraft as the swing injury-TE bet given the much lower recurrence risk.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "bucky irving": [
-      { "week": 1, "analyst": "FSC", "note": "Shoulder dislocation/surgery, full camp participant and appears fully recovered; 10-20% instability/reinjury risk remains. FSC thinks the market hasn't repriced him despite the good news — backup Kenneth Gainwell profiles as a passing-down/2-minute back, not a real threat to his 65-70% share of TB touches.", "source": "https://youtu.be/vfynKvpALhQ" },
-      { "week": 1, "analyst": "Smyth", "note": "Buy-low on volume: Tampa Bay was a top-10 red-zone-volume offense for RBs in 2024 (Irving over 2 combined RZ touches/game before injury cut his 2025 short). New OC should restore that passing-game RZ role; Gainwell/Sean Tucker will chip in but Smyth doesn't expect a repeat of last year's near-zero goal-line share.", "source": "https://www.youtube.com/watch?v=ktqvBN3vWd4" }
+    "jacory croskey-merritt": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Concern: Washington's Tunsil tricep injury drags down the whole offense's red-zone trips, and the backfield split (White getting receiving work, little RB-target history under Jayden Daniels) means Croskey-Merritt's goal-line share alone may not be enough for weekly startable upside.",
+        "source": "https://www.youtube.com/watch?v=ktqvBN3vWd4"
+      }
     ],
-    "tank dell": [{ "week": 1, "analyst": "FSC", "note": "~20 months post major Dec-2024 knee injury, officially back at camp but not yet cleared for 11-on-11 (only 7-on-7 so far). 50-80% odds of returning to pre-injury level. Price hasn't moved on the good news — FSC likes him as a very late-round dart in deep/best-ball formats, believes he's still Houston's #2 WR if healthy.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "zay flowers": [{ "week": 1, "analyst": "FSC", "note": "Quad contusion — minor, expected to miss only a few days of practice. Not a concern.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "devonta smith": [{ "week": 1, "analyst": "FSC", "note": "Hamstring injury, low concern — further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "xavier worthy": [{ "week": 1, "analyst": "FSC", "note": "Shoulder sprain on the same shoulder that had offseason surgery — team says he avoided a major injury, but FSC's concern is elevated because it's a repeat structure that has to hold up all year. Recommends holding off at current ADP until he's back on the field; ~15-25% recurrence rate.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "jordan james": [{ "week": 1, "analyst": "FSC", "note": "Fractured a rib July 30, currently not practicing with no official return date; typical recovery 4-6 weeks. Should have time to heal for week 1, but is missing camp reps his fellow backup Keelan Black is getting — FSC expects Black to beat him back and take the early lead for the 49ers' RB2 job behind McCaffrey.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "laremy tunsil": [{ "week": 1, "analyst": "FSC", "note": "Tricep tear, likely needs surgery, 4-6 month recovery — could miss most or all of the season, especially if Washington's record is bad enough to shut him down. Losing a top-tier LT off an already below-average line is a real drag on Jayden Daniels/Terry McLaurin/the Washington backfield, independent of any injury to those players themselves.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "jonathon brooks": [{ "week": 1, "analyst": "FSC", "note": "ACL recovery, full camp participant with no limitations, beat reporters calling him explosive again. ~60% odds of returning to pre-injury level (skews high given his age). Price has already run up (ADP ~120 to ~88) as the market caught up — FSC still likes him as a 3rd-round pick but the value edge from a month ago is mostly gone.", "source": "https://youtu.be/vfynKvpALhQ" }],
-    "alec pierce": [{ "week": 1, "analyst": "FSC", "note": "Started camp on the PUP list, still not practicing, no clear return timetable as of this recording (Aug 10-13). Watch for an update before drafting him.", "source": "https://youtu.be/vfynKvpALhQ" }]
+    "jeremiyah love": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Rostered by team 9, not a waiver target. Opens the season in a muddled committee (Braswell/Beck) so casual managers will undervalue him, but FSC expects his workload to ramp toward 17-18 PPG by the back half. Their call: buy-low trade around week 5 for roughly 4th-round redraft value.",
+        "source": "https://youtube.com/watch?v=f4o5i4kreu0"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Fine taking him mid-to-late third. He probably won't be the goal-line back and the injury nearly guarantees a slow start, but the PPR receiving volume is there and the preseason usage was strong (8 of 11 snaps, seven straight to open the game). Smyth's comp is Jahmyr Gibbs as a round-three rookie, not a first-round rookie price.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "chase brown": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "8 red-zone targets in 8 games with Burrow, and similar in 2024 — a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      }
+    ],
+    "kyren williams": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "3rd among RBs in red-zone routes — the passing-game red-zone role is priced into his floor, so a bad rushing TD split hurts him less than it looks.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      }
+    ],
+    "christian mccaffrey": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Far and away the leader in RB red-zone targets — the single biggest edge in the metric.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      }
+    ],
+    "javonte williams": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Red-zone-target leader but Smyth expects some decline from that rate; still projects a good share. Buy the role, not last year's exact number.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Higher on him recently — the Dallas RB2 competition has collapsed (the talk about limiting his workload has gone quiet; the backups are behind Malik Davis). Expect roughly a repeat of last year minus some goal-line luck, on a top-five offense.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "kenny gainwell": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Red-zone target usage is a good sign for the Pittsburgh backfield duo — Gainwell's pass-game role gives him standalone value even in a split.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      }
+    ],
+    "jaylen warren": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Other half of the Pittsburgh duo Smyth flags as a positive on RB red-zone targets.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Pittsburgh backfield is a floor play, not a ceiling play — volume is split but total volume is high in the Rodgers offense, and each back is a strong handcuff for the other. Smyth prefers Warren in full PPR, less so half.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "kenneth walker iii": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Riser: Kareem Hunt's red-zone target volume from last season vacates into Walker's role.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Foot scare — missed practice. Encouraging signs: no brace, no support, walking normally, so Smyth reads it as a precautionary camp rest for a star back rather than a real injury.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "chuba hubbard": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Riser: had the red-zone-target role last season and lands back in the same situation.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Carolina will NOT stay 50/50 for long — Canales historically picks one back and rides him. Precedent: Dowdle was the RB2 in fantasy for five weeks, Hubbard came back and it went 80/20 Hubbard immediately. Whoever wins it is an easy top-20 RB; both carry injury risk.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "cam skattebo": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Riser: 4 red-zone targets in only 6 games as a rookie — the ability showed up in a small sample.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Odds of a bell-cow role have gone up in the past two weeks — Tyrone Tracy and Devin Singletary as the RB2 competition is a great sign. Expect the team to ramp him slowly, but the volume signals all point the right way.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "james cook iii": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Watch item: only 3 red-zone targets last year, but persistent reports the staff wants to throw to RBs more, and Buffalo is in the red zone a lot. Upside is in the change, not the history.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      }
+    ],
+    "d'andre swift": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Negative: 1 red-zone target across the past two seasons, and Chicago ranks 32nd in RB red-zone target share under Caleb Williams — they go pass-heavy in the red zone without involving the back.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Moved UP to his RB21: Monangai's injury covers the first month, and pre-split last season Swift averaged nearly 16 ppg while the offense was still bad. Safe floor pick in a very risky RB range, even though his goal-line and target work are thin.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "tony pollard": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Negative: only 1 red-zone target — no receiving role near the goal line, so his TD equity depends entirely on carries.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Even lower. He has finished around RB23 three years running WHILE getting bell-cow volume (only he, Saquon and Henry hit 275+ touches three straight years). At 29, behind this line, with Tyjae Spears set for a bigger role and a likely-bad defense, Smyth doesn't see the turnaround.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "jordan mason": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Negative: only 1 red-zone target — offense goes pass-heavy in the red zone without targeting the RB.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      }
+    ],
+    "quinshon judkins": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Negative: zero red-zone targets (as with Dobbins) — no pass-game red-zone role to fall back on.",
+        "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Still a red flag. Smyth expects a Derrick Henry usage shape with none of the Henry upside — Dylan Sampson takes the receiving work, the O-line is entirely new with zero snaps together, and a worse defense means fewer positive game scripts.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "luther burden iii": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Groin/abductor strain upgraded to a ~1-month absence, which FSC reads as a partial (grade 2) tear given the timeline. 15-25% reinjury rate on return — fading him, not chasing the discount even if his price drops.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "mike evans": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Grade-1 quad strain on top of 9 lower-body injuries in 7 seasons and a team change; still not practicing a week+ later. ~30% hamstring-family recurrence rate. FSC would pass unless he falls a full round below current ADP.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "malik nabers": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "ACL recovery — avoided the PUP list (better than the 70-80% chance they gave it a month ago) but could still miss 1-3 games to start. ~80-90% odds of returning to pre-injury level, 20-25% reinjury risk over 2 years. Fine as a 3rd-round pick, too risky as a 2nd.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Looking healthy. Smyth is fine taking him at his WR24 slot over a TE like McBride on pure value.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "patrick mahomes": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Cleared for camp practicing unrestricted, will sit all preseason. Reinjury risk ~20-25% if held back a week or two, jumps to ~40% if he plays week 1 (inside the 9-month post-ACL-surgery threshold). Separately: his rush volume normalizes down and FSC worries about a 'silent killer' QB8-11 season like 2024.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "tucker kraft": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "ACL tear from week 8 last year, off the PUP, ~10 months post-op by week 1 — expect ~4 weeks of reduced snaps/efficiency after his return. FSC is passing at his 6th-7th round price: his 2025 breakout games all came with Jayden Reed/Christian Watson/Matthew Golden hurt or ineffective, and that target competition is healthier this year.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Moved UP to TE5 (from TE7) on camp news: full pads, full 11-on-11, heavy target volume — not a limited ramp-up. He has self-reported a snap count for the first month or two, but he survives on ~6 targets a game rather than needing volume, and Musgrave being hurt forces him onto the field.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "george kittle": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Achilles speed-bridge repair, off the pure PUP-only concern and running routes; return date unclear (6-9 months post-surgery ≈ mid-Oct, but speed-bridge patients have beaten that timeline before). <2% reinjury rate — FSC prefers him over Tucker Kraft as the swing injury-TE bet given the much lower recurrence risk.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "bucky irving": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Shoulder dislocation/surgery, full camp participant and appears fully recovered; 10-20% instability/reinjury risk remains. FSC thinks the market hasn't repriced him despite the good news — backup Kenneth Gainwell profiles as a passing-down/2-minute back, not a real threat to his 65-70% share of TB touches.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Buy-low on volume: Tampa Bay was a top-10 red-zone-volume offense for RBs in 2024 (Irving over 2 combined RZ touches/game before injury cut his 2025 short). New OC should restore that passing-game RZ role; Gainwell/Sean Tucker will chip in but Smyth doesn't expect a repeat of last year's near-zero goal-line share.",
+        "source": "https://www.youtube.com/watch?v=ktqvBN3vWd4"
+      },
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Positive signs. Sean Tucker could be cut (a clear plus if so), and even if not, Gainwell looks like a change-of-pace third-down back rather than a real threat — Smyth doesn't expect him to take more than a typical backup's share. More signs Irving sees red-zone work.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "tank dell": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "~20 months post major Dec-2024 knee injury, officially back at camp but not yet cleared for 11-on-11 (only 7-on-7 so far). 50-80% odds of returning to pre-injury level. Price hasn't moved on the good news — FSC likes him as a very late-round dart in deep/best-ball formats, believes he's still Houston's #2 WR if healthy.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "zay flowers": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Quad contusion — minor, expected to miss only a few days of practice. Not a concern.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "devonta smith": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Hamstring injury, low concern — further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "xavier worthy": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Shoulder sprain on the same shoulder that had offseason surgery — team says he avoided a major injury, but FSC's concern is elevated because it's a repeat structure that has to hold up all year. Recommends holding off at current ADP until he's back on the field; ~15-25% recurrence rate.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "jordan james": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Fractured a rib July 30, currently not practicing with no official return date; typical recovery 4-6 weeks. Should have time to heal for week 1, but is missing camp reps his fellow backup Keelan Black is getting — FSC expects Black to beat him back and take the early lead for the 49ers' RB2 job behind McCaffrey.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "laremy tunsil": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Tricep tear, likely needs surgery, 4-6 month recovery — could miss most or all of the season, especially if Washington's record is bad enough to shut him down. Losing a top-tier LT off an already below-average line is a real drag on Jayden Daniels/Terry McLaurin/the Washington backfield, independent of any injury to those players themselves.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "jonathon brooks": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "ACL recovery, full camp participant with no limitations, beat reporters calling him explosive again. ~60% odds of returning to pre-injury level (skews high given his age). Price has already run up (ADP ~120 to ~88) as the market caught up — FSC still likes him as a 3rd-round pick but the value edge from a month ago is mostly gone.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "alec pierce": [
+      {
+        "week": 1,
+        "analyst": "FSC",
+        "note": "Started camp on the PUP list, still not practicing, no clear return timetable as of this recording (Aug 10-13). Watch for an update before drafting him.",
+        "source": "https://youtu.be/vfynKvpALhQ"
+      }
+    ],
+    "david montgomery": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Cooling him off around RB20: Woody Marks is getting real work and this is trending toward a genuine split, not an RB2 split. Montgomery is a floor play with bust risk and no upside behind it — and Dan Campbell already cut him from ~50% to ~30% of touches last year.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "bhayshul tuten": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Still the green upside swing but camp has made him more boom/bust — some days he's the offense's best receiving weapon, other days he fumbles and loses goal-line work. LeQuint Allen's injury is a small plus for his pass-protection snaps.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "rhamondre stevenson": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Smyth now ranks him ABOVE TreVeyon Henderson. Camp reporting is consistently 'Stevenson is the early-down back and the pass blocker; Henderson change-of-pace if he can handle pass pro.' You get the starting RB on a top offense in round seven instead of round five.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "treveyon henderson": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Downgraded below Rhamondre Stevenson. Hasn't flashed the traits that drove last year's camp buzz, and the staff is framing him as change-of-pace contingent on pass protection. Top-5 upside is real but Smyth doesn't see a startable role early, which is hard to survive from a round-five pick.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "rico dowdle": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Other half of the Carolina split. Smyth sees ceiling here rather than floor — Canales goes all-in on one back, so this is a bet on which one, with Rashaad White / Hubbard / Dowdle as the three-year precedent for the winner paying off big.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "josh jacobs": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Fading him. An 'old 28' with a huge career touch count, a horrid offensive line, a possible suspension, a current injury, and the offense shifting to more three-receiver sets with tight ends hurt. Smyth would rather take Javonte Williams or Kyren Williams for similar production and less risk.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "rj harvey": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Warming up slightly. The staff has shown real commitment to him and the offseason noise (Dobbins, Coleman) has gone the other way. His ADP has slid from RB25 to RB31/32 while the news improved — that gap is the reason to take the shot, not the talent.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "kyle pitts": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Not a believer. The QB situation is scary even in the Penix case, and the split is damning: Pitts was not a top-12 TE in games where Drake London was on the field, under either QB.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "harold fannin jr.": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Small tick DOWN. His value is easy quick-hitting targets and YAC in a bad offense, and the rookie WR is projected to take some of those short/screen targets away. The offense being bad is priced in; losing the easy-target share is the new part.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "sam laporta": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Small tick DOWN on injury news — people Smyth trusts are cautious about it, and in a range where TE5-TE8 go inside six picks, a minor injury matters a lot. Detroit also has plenty of other options. He'd take him if he falls, not reach.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "ashton jeanty": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Injury is now being reported as possibly a LOW ankle sprain, not a high ankle sprain — likely limited in Week 1 but little effect on the rest of the season. He has a great Week 1 matchup, which is the annoying part. Smyth still wants him in the second round.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "nico collins": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Big bump — moved above Drake London. Smyth's under-the-radar worry was Jaden Higgins taking targets in a low-volume passing offense, and without Higgins that risk is gone. Boutte's arrival is a PLUS: it moves Collins into the Z role instead of being pressed every snap. He was the overall WR2 in points per game across his 15 healthy games in 2024.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "chris olave": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Ranked above Rashee Rice, which does not match ADP. The Jordan Tyson target-hog scenario has not materialized, so the only real worry left is the concussion history — and Smyth is fine paying that price.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "rashee rice": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Yellow flag in full PPR (red-ish in half). The knee is visibly not fully healthy, and the 'he's a YAC guy, separation doesn't matter' defense fails because YAC needs a healthy knee. A new OC likely means far fewer screens (he led the NFL in screens by 2x), and Kenneth Walker takes red-zone touches.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "dj moore": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Positive. He looks like the clear focal point in Buffalo under his old Panthers coach. Reference point: he was 6th in WR target share and only finished WR21 — in Buffalo, even 15th in target share should make him a top-15 receiver. Fine at his round-five price over riskier backs.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "terry mclaurin": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Diggs does NOT hurt him as much as the market thinks. Every report has Diggs as the SLOT receiver, not the WR2 — same as New England last year, where he came off the field in two-receiver sets. McLaurin stays the clear number-one target in the new offense.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "stefon diggs": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Reports point to a slot-only role that comes off the field in two-receiver sets. Solid PPR floor play in deeper leagues, but not the WR2 in target volume that people are pricing in.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "josh downs": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "ADP has dropped further than Smyth's opinion has — buy the discount. The Colts keep Downs in two-receiver sets and Keenan Allen only comes on for three-WR looks (playing outside, Downs slides to slot). Allen is entering year 14, in decline, and scored ~11-12 ppg last season, so the target hit is small.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "carnell tate": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Hesitant now. The ADP (WR32 for a top-five NFL draft pick) was the appeal, but his preseason was genuinely bad, and his path needs the Titans offense to be merely below-average rather than horrible. Smyth would rather take Brian Thomas Jr. one spot earlier and buy the Jacksonville offense instead.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "denzel boston": [
+      {
+        "week": 1,
+        "analyst": "Smyth",
+        "note": "Dynasty yes, redraft no. He profiles as the outside X receiver, which makes him heavily dependent on QB play and red-zone trips — and this offense is unlikely to give him either.",
+        "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ]
   }
 }
