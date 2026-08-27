@@ -6,3 +6,7 @@ trade-state.json
 .nflverse-cache
 lineup-state.json
 handcuff-state.json
+
+# Internal session notes — kept locally, not published
+HANDOFF.md
+handoff-archive/

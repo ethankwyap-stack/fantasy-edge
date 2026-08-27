@@ -24,6 +24,6 @@ jobs:
           SEASON: ${{ vars.SEASON || 2026 }}
       - run: |
           git config user.name ethankwyap-stack
-          git config user.email ethankw.yap@gmail.com
+          git config user.email 274671613+ethankwyap-stack@users.noreply.github.com
           git add calibration-log.json
           git diff --cached --quiet && echo "nothing changed" || (git commit -m "calibration log $(date -u +%F)" && git push)

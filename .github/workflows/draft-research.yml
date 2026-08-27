@@ -19,6 +19,6 @@ jobs:
       - run: |
           # commit as Ethan's account email — Vercel blocks deploys whose HEAD commit author it can't match
           git config user.name ethankwyap-stack
-          git config user.email ethankw.yap@gmail.com
+          git config user.email 274671613+ethankwyap-stack@users.noreply.github.com
           git add draft-analysis.json
           git diff --cached --quiet && echo "nothing to commit" || (git commit -m "draft research $(date -u +%F)" && git push)
