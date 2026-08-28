@@ -64,7 +64,11 @@
 </style>
 </head>
 <body>
-<h1>🏈 Fantasy Edge <span id="league" style="color:var(--dim);font-size:14px;font-weight:400"></span></h1>
+<h1>🏈 Fantasy Edge <span id="league" style="color:var(--dim);font-size:14px;font-weight:400"></span>
+  <select id="lgsel" style="font-size:14px;font-weight:400;width:auto;margin:0 0 0 8px;vertical-align:middle">
+    <option value="1">12-team league</option>
+    <option value="2">10-team league</option>
+  </select></h1>
 <nav>
   <button data-tab="draft" class="on">Draft Board</button>
   <button data-tab="lineup">Start/Sit</button>
@@ -1068,6 +1072,12 @@ function teamPicker() {
 }
 function render() { $('#view').className=''; $('#view').innerHTML = views[S.tab](); }
 function renderBody() { if (S.tab==='draft') $('#tbody').innerHTML = draftRows(); }
+// League switch: a full reload, not a re-fetch — LEAGUE/LQ/K are consts read at load
+// and the drafted/mine sets are already populated from the other league's storage keys.
+// The ?key= cookie is already set, so the bare path re-authenticates fine.
+$('#lgsel').value = LEAGUE;
+$('#lgsel').onchange = e => { location.search = e.target.value === '2' ? '?league=2' : ''; };
+
 document.querySelectorAll('nav button').forEach(b => b.onclick = () => { document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); S.tab=b.dataset.tab; render(); });
 load();
 // ponytail: full reload every 5 min keeps data live; websockets overkill for daily-changing data
