@@ -305,8 +305,13 @@ async function load() {
     REPL = {QB:Math.round(1.2*size), RB:Math.round(2.8*size), WR:Math.round(3.2*size), TE:Math.round(1.2*size), K:size, DST:size};
     $('#league').textContent = (league.settings?.name||'') + ' · Week ' + S.week;
     // FAAB: $1000 continuous-waiver budget, bids process 10am ET. Spend lives on each team.
-    S.faabBudget = league.settings?.acquisitionSettings?.acquisitionBudget || 0;
-    S.faabMin = league.settings?.acquisitionSettings?.minimumBid ?? 1;
+    // `acquisitionBudget` is present and nonzero (100) even in a non-FAAB league — it is a
+    // DEAD field there, exactly the trap league-history.js's faabROI() gates on. The only
+    // truth is isUsingAcquisitionBudget; without this the 10-team league renders invented
+    // dollar bids over rolling waiver priority. Zero budget = every FAAB UI switches off.
+    const acq = league.settings?.acquisitionSettings;
+    S.faabBudget = acq?.isUsingAcquisitionBudget ? (acq.acquisitionBudget || 0) : 0;
+    S.faabMin = acq?.minimumBid ?? 1;
     for (const t of S.teams) S.rosters[t.id] =(t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
     // guess my team via SWID match on owners; fall back to picker
     S.myTeamId = +localStorage[K.myTeam] || S.teams[0]?.id;
@@ -367,7 +372,8 @@ const teamName = t => t.name || (t.location||'') + ' ' + (t.nickname||'');
 // ponytail: fixed VBD tiers, not a model. Tune the percentages if bids keep coming in wrong.
 function bidCell(p) {
   const my = S.teams.find(t => t.id === S.myTeamId);
-  if (!S.faabBudget || !my) return '<td>—</td>';
+  if (!S.faabBudget) return '';   // no column at all in a non-FAAB league
+  if (!my) return '<td>—</td>';
   const left = faabLeft(my), v = p._vbd;
   const [lo, hi] = v >= 40 ? [15,25] : v >= 20 ? [8,14] : v >= 5 ? [3,7] : [1,2];
   const $ = pct => Math.max(S.faabMin, Math.round(left * pct / 100));
@@ -1004,9 +1010,9 @@ const views = {
     const fa = S.players.filter(p => !rostered.has(p.id));
     const hot = fa.filter(p => S.trending[(p.fullName||'').toLowerCase()]);
     return `${teamPicker()}${faabTable()}
-    ${hot.length?'<h2>🔥 Trending pickups (Sleeper add-counts, last 24h) still free in YOUR league</h2><table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Bid</th></tr>'+hot.map(p=>row(p,bidCell(p))).join('')+'</table>':''}
+    ${hot.length?'<h2>🔥 Trending pickups (Sleeper add-counts, last 24h) still free in YOUR league</h2><table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th>'+(S.faabBudget?'<th>Bid</th>':'')+'</tr>'+hot.map(p=>row(p,bidCell(p))).join('')+'</table>':''}
     <h2>Best available by rest-of-season value</h2>
-    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th><th>Bid</th></tr>${fa.slice(0,40).map(p=>row(p,bidCell(p))).join('')}</table>`;
+    <table><tr><th>Player</th><th>Pos</th><th>Proj</th><th>VBD</th>${S.faabBudget?'<th>Bid</th>':''}</tr>${fa.slice(0,40).map(p=>row(p,bidCell(p))).join('')}</table>`;
   },
   trades() {
     if (!rosterOf(S.myTeamId).length) return teamPicker() + '<div class="msg">No roster yet — this tab comes alive after your draft.</div>';
