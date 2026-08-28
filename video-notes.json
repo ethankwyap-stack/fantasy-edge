@@ -1,7 +1,7 @@
 {
   "_note": "In-season video/TikTok takes injected by the fantasy-video-inject skill. Note-only, ALWAYS week-tagged: nothing here casts a vote in the board's value math. Notes older than TTL weeks stop being shown/injected.",
   "_ttlWeeks": 3,
-  "_updated": "2026-08-26",
+  "_updated": "2026-08-28",
   "notes": {
     "jacory croskey-merritt": [
       {
@@ -9,6 +9,12 @@
         "analyst": "Smyth",
         "note": "Concern: Washington's Tunsil tricep injury drags down the whole offense's red-zone trips, and the backfield split (White getting receiving work, little RB-target history under Jayden Daniels) means Croskey-Merritt's goal-line share alone may not be enough for weekly startable upside.",
         "source": "https://www.youtube.com/watch?v=ktqvBN3vWd4"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Second opinion, more bullish than Smyth's: BDGE loves the value if healthy — showed real efficiency last year behind a banged-up line with a backup QB, and it's easier for an early-down back to catch dump-offs than for Rashod White to take early-down work. Caveat: an undisclosed lower-body injury as of late August, and Jayden Daniels has a very low RB target share.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "jeremiyah love": [
@@ -31,6 +37,12 @@
         "analyst": "Smyth",
         "note": "8 red-zone targets in 8 games with Burrow, and similar in 2024 — a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Third option in the receiving game with no backfield competition added (Sorsdahl-type only plays 3rd-and-long, ~24% of snaps). Cincinnati may be the NFL's highest-scoring offense; even a small run-heavy tilt inside the 5 could back him into the rushing TD lead.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "kyren williams": [
@@ -47,6 +59,12 @@
         "analyst": "Smyth",
         "note": "Far and away the leader in RB red-zone targets — the single biggest edge in the metric.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Camp absences are rest, not injury — no high ankle, MCL or hamstring. The predictable part is workload: 100+ targets, all the goal-line work, most early downs. Efficiency (3.9-4.0 YPC) doesn't matter at that volume.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "javonte williams": [
@@ -61,6 +79,12 @@
         "analyst": "Smyth",
         "note": "Higher on him recently — the Dallas RB2 competition has collapsed (the talk about limiting his workload has gone quiet; the backups are behind Malik Davis). Expect roughly a repeat of last year minus some goal-line luck, on a top-five offense.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Boring but real: Dallas should score a huge number of points with Pickens and Lamb healthy in year two. Jaydon Blue takes passing work, not early downs. BDGE projects 12-15 rushing TDs.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "kenny gainwell": [
@@ -97,6 +121,12 @@
         "analyst": "Smyth",
         "note": "Foot scare — missed practice. Encouraging signs: no brace, no support, walking normally, so Smyth reads it as a precautionary camp rest for a star back rather than a real injury.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Foot scare doesn't look serious. KC paid him to be the workhorse with no real backfield competition, and camp buzz is heavy screen usage early. Mahomes back from the ACL means they lean on him. Goal-line TD upside inside the 5.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "chuba hubbard": [
@@ -133,6 +163,12 @@
         "analyst": "Smyth",
         "note": "Watch item: only 3 red-zone targets last year, but persistent reports the staff wants to throw to RBs more, and Buffalo is in the red zone a lot. Upside is in the change, not the history.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "The hidden lever is receiving work: Ty Johnson has been out for weeks with an undisclosed injury. If Cook gets to 50-60 catches on top of 300 carries and goal-line work in an 11-win offense, he's a top-3 RB. Pete Carmichael from the Payton tree dumps off to backs constantly.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "d'andre swift": [
@@ -169,6 +205,12 @@
         "analyst": "Smyth",
         "note": "Negative: only 1 red-zone target — offense goes pass-heavy in the red zone without targeting the RB.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Role change: per The Athletic's Vikings beat, Minnesota is literally restructuring its run scheme around Mason on the San Francisco template. Aaron Jones is old and injury-prone. Committee risk is real but they want Mason to take the job. Cheap RB add.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "quinshon judkins": [
@@ -213,6 +255,12 @@
         "analyst": "Smyth",
         "note": "Looking healthy. Smyth is fine taking him at his WR24 slot over a TE like McBride on pure value.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Free at the 2/3 turn. Reports have flipped 180 in the last month — non-contact jersey shed, Harbaugh says Week 1 is reasonable. Wan'Dale Robinson gone. Expect ~90-95% of him for ~90% of the season; a couple rusty early weeks is the whole risk.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "patrick mahomes": [
@@ -235,6 +283,12 @@
         "analyst": "Smyth",
         "note": "Moved UP to TE5 (from TE7) on camp news: full pads, full 11-on-11, heavy target volume — not a limited ramp-up. He has self-reported a snap count for the first month or two, but he survives on ~6 targets a game rather than needing volume, and Musgrave being hurt forces him onto the field.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Mid-round set-and-forget TE. Back from the ACL tear and BDGE isn't worried; Green Bay's room is condensed and should throw more. Expect 8-9 point floors with 18-22 point spikes — better than any TE drafted after him.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "george kittle": [
@@ -287,6 +341,12 @@
         "analyst": "FSC",
         "note": "Hamstring injury, low concern — further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.",
         "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "With A.J. Brown gone he steps into the alpha role, and he's an elite separator who has produced every time Brown was off the field. His outside competition is Danta[v]ion Wicks; the rookie is slot-only. Could compete for the NFL lead in target share. Buy him if the market still prices him as a WR2.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "xavier worthy": [
@@ -327,6 +387,12 @@
         "analyst": "FSC",
         "note": "Started camp on the PUP list, still not practicing, no clear return timetable as of this recording (Aug 10-13). Watch for an update before drafting him.",
         "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Coming off offseason ankle surgery — may suit up Week 1 but will need roughly a month to ramp. Stash-and-bench, not a Week 1 start; the second-half version is worth about a 5th-round redraft price.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "david montgomery": [
@@ -407,6 +473,12 @@
         "analyst": "Smyth",
         "note": "Small tick DOWN on injury news — people Smyth trusts are cautious about it, and in a range where TE5-TE8 go inside six picks, a minor injury matters a lot. Detroit also has plenty of other options. He'd take him if he falls, not reach.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Drew Petzing takes over as OC — the coordinator who let Trey McBride eat. LaPorta returned to practice after a couple weeks out, so the injury isn't a concern.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "ashton jeanty": [
@@ -423,6 +495,12 @@
         "analyst": "Smyth",
         "note": "Big bump — moved above Drake London. Smyth's under-the-radar worry was Jaden Higgins taking targets in a low-volume passing offense, and without Higgins that risk is gone. Boutte's arrival is a PLUS: it moves Collins into the Z role instead of being pressed every snap. He was the overall WR2 in points per game across his 15 healthy games in 2024.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Target share should spike: Jayden Higgins tore his ACL and Tank Dell can't string practices together. Houston traded for Kayshon Boutte, a pure downfield X — if that moves Collins off the X (85% of his routes are outside, never in motion), it's a further boost. Mike Clay projects C.J. Stroud 8th in pass attempts.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "chris olave": [
@@ -471,6 +549,12 @@
         "analyst": "Smyth",
         "note": "ADP has dropped further than Smyth's opinion has — buy the discount. The Colts keep Downs in two-receiver sets and Keenan Allen only comes on for three-WR looks (playing outside, Downs slides to slot). Allen is entering year 14, in decline, and scored ~11-12 ppg last season, so the target hit is small.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Downgrade: new calf injury on top of the Keenan Allen signing, with Alec Pierce and Tyler Warren both expected ready for Week 1. BDGE has not seen Shane Steichen trust Downs as an every-down player. Sell-high window if anyone still prices him as the Colts' slot alpha.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
     "carnell tate": [
@@ -487,6 +571,142 @@
         "analyst": "Smyth",
         "note": "Dynasty yes, redraft no. He profiles as the outside X receiver, which makes him heavily dependent on QB play and red-zone trips — and this offense is unlikely to give him either.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      }
+    ],
+    "travis etienne jr.": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Alvin Kamara sprained his MCL and is out at least a month, so ETN has a clean bellcow window over the first ~4 weeks. Saints also get healthy O-linemen back plus David Edwards, run Kellen Moore's uptempo dome offense, and have one of the easiest early schedules. Buy/start him now, not later.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "tyler warren": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Vegas has his season reception line at 74.5 — higher than Tetairoa McMillan, Jaylen Waddle, Luther Burden. Colts are devoid of weapons (Pittman gone, Pierce recovering from ankle surgery, Downs with a calf). Set-and-forget TE1; don't trade him for a shinier name.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "michael pittman jr.": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Buy-low in PPR: BDGE ranks him OVER DK Metcalf straight up. Pittman fits what Aaron Rodgers is now (six catches a game over the middle) far better than Metcalf, who only works behind the LOS or 40 yards downfield. Kenny Gainwell gone, and the Arthur Smith -> Mike McCarthy switch should raise Pittsburgh's pass rate.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "dalton kincaid": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Highest-upside late TE on the board. Snap share should climb from ~50% to ~65%, and his per-snap / per-target / per-route metrics are already elite among fantasy TEs. PCL injury derailed 2025; healthy now and attached to Josh Allen. A top-4 TE finish would surprise nobody.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "christian watson": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Every-down role in a condensed Green Bay room (no Doubs, no Wicks). Golden plays pure X and Reed plays slot in 11 personnel, so Watson gets moved around for easy separation. Green Bay's O-line is bad at run blocking — Love's preseason snaps were mostly under-center play action, which points to a higher pass rate.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "matthew golden": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Camp reports say full-time player running the X role with a consolidated target share. Worth another chance in 2026 at a late price.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "j.k. dobbins": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Cheap RB2 in a great spot: Denver has the NFL's #1 O-line and Sean Payton's scheme feeds RB receptions. He saw 14+ carries in every game but one last year before the injury, and Denver re-signed him with real money. BDGE thinks R.J. Harvey is explosive but not a good runner.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "jakobi meyers": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Undervalued because he's boring. Jacksonville runs high-volume over-the-middle work under Liam Coen and Trevor Lawrence clearly trusts him and Parker Washington — sure hands, savvy routes, right place at the right time.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "parker washington": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Jacksonville's WR1 through the summer, and the team says he's essentially never coming off the field (11/12/13/21 personnel). All three of Jacksonville's 100-yard receiving games last season were his, all in the final quarter of the year.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "emeka egbuka": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Toe sprain was a 2-3 week timeline that started ~2 weeks ago, so no real Week 1 concern as of filming. Mike Evans is gone and Zac Robinson (the OC who moved Drake London all over the formation in Atlanta) will not ask Egbuka to play X — Tez Johnson and Jalen McMillan do that. Expect fantasy-friendly route volume.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "trevor lawrence": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "BDGE's QB6. Liam Coen calling plays, a trusted weapons group (Meyers, Parker Washington, Brenton Strange, BTJ stretching the field, Hunter on 20-30% of snaps), plus 4-6 rushing TDs a year. Cheap streaming-proof QB1.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "jayden daniels": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Round-6 QB with league-winning rushing upside — ~4,500 total yards and 30+ TDs as a rookie with almost 900 rushing yards. The Stefon Diggs signing gives him a real WR2 next to McLaurin.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "de'zhaun stribling": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Deep sleeper WR with a real path: SF's early-2nd rounder, huge camp and preseason buzz. Mike Evans re-aggravated a quad, Ricky Pearsall is out for the year, Jauan Jennings gone — the 49ers barely have receivers. Projects as a power slot for Purdy with Kittle back from the Achilles.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "puka nacua": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "BDGE's WR1 even accounting for a possible one-game suspension — he sees the setup as a repeat of Cooper Kupp's 2021.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "wan'dale robinson": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Very likely to lead the Titans in targets AND receptions. Brian Daboll came in and immediately gave him $70M, and he ran 140 targets in back-to-back seasons under Daboll in New York. Carnell Tate gets the yards; Robinson gets the PPR volume.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "colston loveland": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "Best bet among Bears pass catchers to return value. He averaged 18-20 PPR points per game down the stretch last year, and Ben Johnson's very first move was handpicking him 10th overall.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "jahmyr gibbs": [
+      {
+        "week": 1,
+        "analyst": "BDGE",
+        "note": "BDGE's 1.01, ahead of Bijan Robinson — Detroit is letting him be a true bellcow and this could be an all-time RB season. He rates Atlanta's QB situation as a genuine risk to Bijan.",
+        "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ]
   }
