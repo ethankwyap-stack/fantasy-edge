@@ -23,8 +23,11 @@ module.exports = async (req, res) => {
     return res.end(JSON.stringify({ error: 'Missing LEAGUE_ID / ESPN_S2 / SWID in .env' }));
   }
   const q = new URL(req.url, 'http://x').searchParams;
+  // ponytail: one extra league behind a fixed key, not a generic id passthrough — an
+  // arbitrary ?league= would let anyone aim his cookies at any ESPN league.
+  const leagueId = q.get('league') === '2' && env.LEAGUE_ID_2 ? env.LEAGUE_ID_2 : LEAGUE_ID;
   const views = (q.get('view') || 'mTeam').split(',').map(v => 'view=' + v).join('&');
-  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}?${views}`;
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${SEASON}/segments/0/leagues/${leagueId}?${views}`;
   const headers = { Cookie: `SWID=${SWID}; espn_s2=${ESPN_S2}` };
   if (q.get('filter')) headers['X-Fantasy-Filter'] = q.get('filter');
   const r = await fetch(url, { headers });

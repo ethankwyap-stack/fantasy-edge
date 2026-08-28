@@ -35,9 +35,13 @@ const SECRET = espn.loadEnv().APP_SECRET;
 http.createServer((req, res) => {
   // secret-link gate: visit /?key=SECRET once, cookie remembers you
   if (SECRET) {
-    const key = new URL(req.url, 'http://x').searchParams.get('key');
+    const u = new URL(req.url, 'http://x');
+    const key = u.searchParams.get('key');
     if (key === SECRET) {
-      res.writeHead(302, { 'Set-Cookie': `fe_key=${SECRET}; Path=/; Max-Age=31536000; HttpOnly; SameSite=Lax`, Location: '/' });
+      // Keep every other param across the redirect — ?key=X&league=2 must not land on a bare /.
+      u.searchParams.delete('key');
+      const rest = u.searchParams.toString();
+      res.writeHead(302, { 'Set-Cookie': `fe_key=${SECRET}; Path=/; Max-Age=31536000; HttpOnly; SameSite=Lax`, Location: u.pathname + (rest ? '?' + rest : '') });
       return res.end();
     }
     if (!(req.headers.cookie || '').includes('fe_key=' + SECRET)) {

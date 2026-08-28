@@ -13,7 +13,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Second opinion, more bullish than Smyth's: BDGE loves the value if healthy — showed real efficiency last year behind a banged-up line with a backup QB, and it's easier for an early-down back to catch dump-offs than for Rashod White to take early-down work. Caveat: an undisclosed lower-body injury as of late August, and Jayden Daniels has a very low RB target share.",
+        "note": "Second opinion, more bullish than Smyth's: BDGE loves the value if healthy \u2014 showed real efficiency last year behind a banged-up line with a backup QB, and it's easier for an early-down back to catch dump-offs than for Rashod White to take early-down work. Caveat: an undisclosed lower-body injury as of late August, and Jayden Daniels has a very low RB target share.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -29,13 +29,19 @@
         "analyst": "Smyth",
         "note": "Fine taking him mid-to-late third. He probably won't be the goal-line back and the injury nearly guarantees a slow start, but the PPR receiving volume is there and the preseason usage was strong (8 of 11 snaps, seven straight to open the game). Smyth's comp is Jahmyr Gibbs as a round-three rookie, not a first-round rookie price.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE is not drafting him: rookie who missed the camp reps he needs, ~10% reinjury rate, recovery runs right up against Week 1, and Tyler Allgeier likely opens as the starter. His plan is to let someone else own him and trade for him around Week 4.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "chase brown": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "8 red-zone targets in 8 games with Burrow, and similar in 2024 — a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.",
+        "note": "8 red-zone targets in 8 games with Burrow, and similar in 2024 \u2014 a real, repeated receiving role in the red zone, not a one-year blip. Smyth prices an RB red-zone target at 4.4x a normal carry, same as a goal-line carry.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
@@ -43,13 +49,19 @@
         "analyst": "BDGE",
         "note": "Third option in the receiving game with no backfield competition added (Sorsdahl-type only plays 3rd-and-long, ~24% of snaps). Cincinnati may be the NFL's highest-scoring offense; even a small run-heavy tilt inside the 5 could back him into the rushing TD lead.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE's single safest round-2 player and ranked 10th overall on his board: no backfield competition, elite offense and QB, and a real receiving role (4.1 rec / 5.2 targets per game, 88 targets).",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "kyren williams": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "3rd among RBs in red-zone routes — the passing-game red-zone role is priced into his floor, so a bad rushing TD split hurts him less than it looks.",
+        "note": "3rd among RBs in red-zone routes \u2014 the passing-game red-zone role is priced into his floor, so a bad rushing TD split hurts him less than it looks.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       }
     ],
@@ -57,14 +69,20 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Far and away the leader in RB red-zone targets — the single biggest edge in the metric.",
+        "note": "Far and away the leader in RB red-zone targets \u2014 the single biggest edge in the metric.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Camp absences are rest, not injury — no high ankle, MCL or hamstring. The predictable part is workload: 100+ targets, all the goal-line work, most early downs. Efficiency (3.9-4.0 YPC) doesn't matter at that volume.",
+        "note": "Camp absences are rest, not injury \u2014 no high ankle, MCL or hamstring. The predictable part is workload: 100+ targets, all the goal-line work, most early downs. Efficiency (3.9-4.0 YPC) doesn't matter at that volume.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Maybe the riskiest player in fantasy \u2014 30 years old, long injury history, and a decimated 49ers roster \u2014 but healthy he was the best fantasy RB last year and in 2023. Not currently hurt.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "javonte williams": [
@@ -77,7 +95,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Higher on him recently — the Dallas RB2 competition has collapsed (the talk about limiting his workload has gone quiet; the backups are behind Malik Davis). Expect roughly a repeat of last year minus some goal-line luck, on a top-five offense.",
+        "note": "Higher on him recently \u2014 the Dallas RB2 competition has collapsed (the talk about limiting his workload has gone quiet; the backups are behind Malik Davis). Expect roughly a repeat of last year minus some goal-line luck, on a top-five offense.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       },
       {
@@ -85,13 +103,19 @@
         "analyst": "BDGE",
         "note": "Boring but real: Dallas should score a huge number of points with Pickens and Lamb healthy in year two. Jaydon Blue takes passing work, not early downs. BDGE projects 12-15 rushing TDs.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Clean projection as long as he stays the best RB on Dallas \u2014 always in the red zone. Only risk is talent: Jaydon Blue or Malik Davis playing well could eat touches.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "kenny gainwell": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Red-zone target usage is a good sign for the Pittsburgh backfield duo — Gainwell's pass-game role gives him standalone value even in a split.",
+        "note": "Red-zone target usage is a good sign for the Pittsburgh backfield duo \u2014 Gainwell's pass-game role gives him standalone value even in a split.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       }
     ],
@@ -105,7 +129,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Pittsburgh backfield is a floor play, not a ceiling play — volume is split but total volume is high in the Rodgers offense, and each back is a strong handcuff for the other. Smyth prefers Warren in full PPR, less so half.",
+        "note": "Pittsburgh backfield is a floor play, not a ceiling play \u2014 volume is split but total volume is high in the Rodgers offense, and each back is a strong handcuff for the other. Smyth prefers Warren in full PPR, less so half.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -119,7 +143,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Foot scare — missed practice. Encouraging signs: no brace, no support, walking normally, so Smyth reads it as a precautionary camp rest for a star back rather than a real injury.",
+        "note": "Foot scare \u2014 missed practice. Encouraging signs: no brace, no support, walking normally, so Smyth reads it as a precautionary camp rest for a star back rather than a real injury.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       },
       {
@@ -127,6 +151,12 @@
         "analyst": "BDGE",
         "note": "Foot scare doesn't look serious. KC paid him to be the workhorse with no real backfield competition, and camp buzz is heavy screen usage early. Mahomes back from the ACL means they lean on him. Goal-line TD upside inside the 5.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "The whole risk is talent: if he is not a three-down bell cow for Kansas City they lean on Emmett Johnson, Brashard Smith in two-minute and a third-down back. Offense insulates him, play style makes him boom/bust.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "chuba hubbard": [
@@ -139,7 +169,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Carolina will NOT stay 50/50 for long — Canales historically picks one back and rides him. Precedent: Dowdle was the RB2 in fantasy for five weeks, Hubbard came back and it went 80/20 Hubbard immediately. Whoever wins it is an easy top-20 RB; both carry injury risk.",
+        "note": "Carolina will NOT stay 50/50 for long \u2014 Canales historically picks one back and rides him. Precedent: Dowdle was the RB2 in fantasy for five weeks, Hubbard came back and it went 80/20 Hubbard immediately. Whoever wins it is an easy top-20 RB; both carry injury risk.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -147,14 +177,20 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Riser: 4 red-zone targets in only 6 games as a rookie — the ability showed up in a small sample.",
+        "note": "Riser: 4 red-zone targets in only 6 games as a rookie \u2014 the ability showed up in a small sample.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Odds of a bell-cow role have gone up in the past two weeks — Tyrone Tracy and Devin Singletary as the RB2 competition is a great sign. Expect the team to ramp him slowly, but the volume signals all point the right way.",
+        "note": "Odds of a bell-cow role have gone up in the past two weeks \u2014 Tyrone Tracy and Devin Singletary as the RB2 competition is a great sign. Expect the team to ramp him slowly, but the volume signals all point the right way.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Coming off a tibia fracture, ankle dislocation and ruptured deltoid ligament \u2014 efficiency was already thin at 4.1 yards per carry, and the Giants signing Najee Harris is a warning sign.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "james cook iii": [
@@ -169,13 +205,19 @@
         "analyst": "BDGE",
         "note": "The hidden lever is receiving work: Ty Johnson has been out for weeks with an undisclosed injury. If Cook gets to 50-60 catches on top of 300 carries and goal-line work in an 11-win offense, he's a top-3 RB. Pete Carmichael from the Payton tree dumps off to backs constantly.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "The RB version of a clean projection \u2014 26.9 years old, no injury history, no competition for touches, led the NFL at 95.4 rush yds/game, and he wins whether Buffalo runs or passes more.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "d'andre swift": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Negative: 1 red-zone target across the past two seasons, and Chicago ranks 32nd in RB red-zone target share under Caleb Williams — they go pass-heavy in the red zone without involving the back.",
+        "note": "Negative: 1 red-zone target across the past two seasons, and Chicago ranks 32nd in RB red-zone target share under Caleb Williams \u2014 they go pass-heavy in the red zone without involving the back.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
@@ -183,13 +225,19 @@
         "analyst": "Smyth",
         "note": "Moved UP to his RB21: Monangai's injury covers the first month, and pre-split last season Swift averaged nearly 16 ppg while the offense was still bad. Safe floor pick in a very risky RB range, even though his goal-line and target work are thin.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe in the mid rounds: Chicago is a plus touch environment for RBs and his main competition, Kyle Monangai, has a knee hyperextension \u2014 so at minimum expect a hot start.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "tony pollard": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Negative: only 1 red-zone target — no receiving role near the goal line, so his TD equity depends entirely on carries.",
+        "note": "Negative: only 1 red-zone target \u2014 no receiving role near the goal line, so his TD equity depends entirely on carries.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
@@ -203,7 +251,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Negative: only 1 red-zone target — offense goes pass-heavy in the red zone without targeting the RB.",
+        "note": "Negative: only 1 red-zone target \u2014 offense goes pass-heavy in the red zone without targeting the RB.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
@@ -217,22 +265,34 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Negative: zero red-zone targets (as with Dobbins) — no pass-game red-zone role to fall back on.",
+        "note": "Negative: zero red-zone targets (as with Dobbins) \u2014 no pass-game red-zone role to fall back on.",
         "source": "https://www.tiktok.com/t/ZTAKNwtVX/"
       },
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Still a red flag. Smyth expects a Derrick Henry usage shape with none of the Henry upside — Dylan Sampson takes the receiving work, the O-line is entirely new with zero snaps together, and a worse defense means fewer positive game scripts.",
+        "note": "Still a red flag. Smyth expects a Derrick Henry usage shape with none of the Henry upside \u2014 Dylan Sampson takes the receiving work, the O-line is entirely new with zero snaps together, and a worse defense means fewer positive game scripts.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE's contrarian safe pick: as a 22-year-old rookie starter from Weeks 3-15 with no training camp behind the league's worst O-line he was still an RB2 producer. He projects him for 300 touches.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "luther burden iii": [
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Groin/abductor strain upgraded to a ~1-month absence, which FSC reads as a partial (grade 2) tear given the timeline. 15-25% reinjury rate on return — fading him, not chasing the discount even if his price drops.",
+        "note": "Groin/abductor strain upgraded to a ~1-month absence, which FSC reads as a partial (grade 2) tear given the timeline. 15-25% reinjury rate on return \u2014 fading him, not chasing the discount even if his price drops.",
         "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Risk worth taking if you like the talent \u2014 thin career production and a groin strain, but he is running in practice and the Chicago offense and projected role support an upside swing.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "mike evans": [
@@ -241,13 +301,19 @@
         "analyst": "FSC",
         "note": "Grade-1 quad strain on top of 9 lower-body injuries in 7 seasons and a team change; still not practicing a week+ later. ~30% hamstring-family recurrence rate. FSC would pass unless he falls a full round below current ADP.",
         "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE is taking him off his board entirely: chronic hamstring strains, a current quad injury and an earlier groin issue. He would let a league-mate pay the name price.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "malik nabers": [
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "ACL recovery — avoided the PUP list (better than the 70-80% chance they gave it a month ago) but could still miss 1-3 games to start. ~80-90% odds of returning to pre-injury level, 20-25% reinjury risk over 2 years. Fine as a 3rd-round pick, too risky as a 2nd.",
+        "note": "ACL recovery \u2014 avoided the PUP list (better than the 70-80% chance they gave it a month ago) but could still miss 1-3 games to start. ~80-90% odds of returning to pre-injury level, 20-25% reinjury risk over 2 years. Fine as a 3rd-round pick, too risky as a 2nd.",
         "source": "https://youtu.be/vfynKvpALhQ"
       },
       {
@@ -259,8 +325,14 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Free at the 2/3 turn. Reports have flipped 180 in the last month — non-contact jersey shed, Harbaugh says Week 1 is reasonable. Wan'Dale Robinson gone. Expect ~90-95% of him for ~90% of the season; a couple rusty early weeks is the whole risk.",
+        "note": "Free at the 2/3 turn. Reports have flipped 180 in the last month \u2014 non-contact jersey shed, Harbaugh says Week 1 is reasonable. Wan'Dale Robinson gone. Expect ~90-95% of him for ~90% of the season; a couple rusty early weeks is the whole risk.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Ranked in round 2 on his board but knee-dependent \u2014 one tweak from IR. The McCaffrey of WRs: first-round value at a third-round price if healthy.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "patrick mahomes": [
@@ -275,19 +347,19 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "ACL tear from week 8 last year, off the PUP, ~10 months post-op by week 1 — expect ~4 weeks of reduced snaps/efficiency after his return. FSC is passing at his 6th-7th round price: his 2025 breakout games all came with Jayden Reed/Christian Watson/Matthew Golden hurt or ineffective, and that target competition is healthier this year.",
+        "note": "ACL tear from week 8 last year, off the PUP, ~10 months post-op by week 1 \u2014 expect ~4 weeks of reduced snaps/efficiency after his return. FSC is passing at his 6th-7th round price: his 2025 breakout games all came with Jayden Reed/Christian Watson/Matthew Golden hurt or ineffective, and that target competition is healthier this year.",
         "source": "https://youtu.be/vfynKvpALhQ"
       },
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Moved UP to TE5 (from TE7) on camp news: full pads, full 11-on-11, heavy target volume — not a limited ramp-up. He has self-reported a snap count for the first month or two, but he survives on ~6 targets a game rather than needing volume, and Musgrave being hurt forces him onto the field.",
+        "note": "Moved UP to TE5 (from TE7) on camp news: full pads, full 11-on-11, heavy target volume \u2014 not a limited ramp-up. He has self-reported a snap count for the first month or two, but he survives on ~6 targets a game rather than needing volume, and Musgrave being hurt forces him onto the field.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       },
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Mid-round set-and-forget TE. Back from the ACL tear and BDGE isn't worried; Green Bay's room is condensed and should throw more. Expect 8-9 point floors with 18-22 point spikes — better than any TE drafted after him.",
+        "note": "Mid-round set-and-forget TE. Back from the ACL tear and BDGE isn't worried; Green Bay's room is condensed and should throw more. Expect 8-9 point floors with 18-22 point spikes \u2014 better than any TE drafted after him.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -295,7 +367,7 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Achilles speed-bridge repair, off the pure PUP-only concern and running routes; return date unclear (6-9 months post-surgery ≈ mid-Oct, but speed-bridge patients have beaten that timeline before). <2% reinjury rate — FSC prefers him over Tucker Kraft as the swing injury-TE bet given the much lower recurrence risk.",
+        "note": "Achilles speed-bridge repair, off the pure PUP-only concern and running routes; return date unclear (6-9 months post-surgery \u2248 mid-Oct, but speed-bridge patients have beaten that timeline before). <2% reinjury rate \u2014 FSC prefers him over Tucker Kraft as the swing injury-TE bet given the much lower recurrence risk.",
         "source": "https://youtu.be/vfynKvpALhQ"
       }
     ],
@@ -303,7 +375,7 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Shoulder dislocation/surgery, full camp participant and appears fully recovered; 10-20% instability/reinjury risk remains. FSC thinks the market hasn't repriced him despite the good news — backup Kenneth Gainwell profiles as a passing-down/2-minute back, not a real threat to his 65-70% share of TB touches.",
+        "note": "Shoulder dislocation/surgery, full camp participant and appears fully recovered; 10-20% instability/reinjury risk remains. FSC thinks the market hasn't repriced him despite the good news \u2014 backup Kenneth Gainwell profiles as a passing-down/2-minute back, not a real threat to his 65-70% share of TB touches.",
         "source": "https://youtu.be/vfynKvpALhQ"
       },
       {
@@ -315,7 +387,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Positive signs. Sean Tucker could be cut (a clear plus if so), and even if not, Gainwell looks like a change-of-pace third-down back rather than a real threat — Smyth doesn't expect him to take more than a typical backup's share. More signs Irving sees red-zone work.",
+        "note": "Positive signs. Sean Tucker could be cut (a clear plus if so), and even if not, Gainwell looks like a change-of-pace third-down back rather than a real threat \u2014 Smyth doesn't expect him to take more than a typical backup's share. More signs Irving sees red-zone work.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -323,7 +395,7 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "~20 months post major Dec-2024 knee injury, officially back at camp but not yet cleared for 11-on-11 (only 7-on-7 so far). 50-80% odds of returning to pre-injury level. Price hasn't moved on the good news — FSC likes him as a very late-round dart in deep/best-ball formats, believes he's still Houston's #2 WR if healthy.",
+        "note": "~20 months post major Dec-2024 knee injury, officially back at camp but not yet cleared for 11-on-11 (only 7-on-7 so far). 50-80% odds of returning to pre-injury level. Price hasn't moved on the good news \u2014 FSC likes him as a very late-round dart in deep/best-ball formats, believes he's still Houston's #2 WR if healthy.",
         "source": "https://youtu.be/vfynKvpALhQ"
       }
     ],
@@ -331,15 +403,21 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Quad contusion — minor, expected to miss only a few days of practice. Not a concern.",
+        "note": "Quad contusion \u2014 minor, expected to miss only a few days of practice. Not a concern.",
         "source": "https://youtu.be/vfynKvpALhQ"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe \u2014 first crack at being the No. 1 for a healthy Lamar Jackson, and he already posted a WR13 per-game / WR7 overall season.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "devonta smith": [
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Hamstring injury, low concern — further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.",
+        "note": "Hamstring injury, low concern \u2014 further along in recovery than the Eagles' rookie WR dealing with the same issue, and has existing chemistry with the QB. FSC expects him healthy for week 1 and is still drafting him at current price.",
         "source": "https://youtu.be/vfynKvpALhQ"
       },
       {
@@ -347,13 +425,19 @@
         "analyst": "BDGE",
         "note": "With A.J. Brown gone he steps into the alpha role, and he's an elite separator who has produced every time Brown was off the field. His outside competition is Danta[v]ion Wicks; the rookie is slot-only. Could compete for the NFL lead in target share. Buy him if the market still prices him as a WR2.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Three top-20 per-game seasons while sharing with A.J. Brown in a low-volume offense. With Brown gone FSE thinks he should cost a round earlier than he does on ESPN/Sleeper.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "xavier worthy": [
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Shoulder sprain on the same shoulder that had offseason surgery — team says he avoided a major injury, but FSC's concern is elevated because it's a repeat structure that has to hold up all year. Recommends holding off at current ADP until he's back on the field; ~15-25% recurrence rate.",
+        "note": "Shoulder sprain on the same shoulder that had offseason surgery \u2014 team says he avoided a major injury, but FSC's concern is elevated because it's a repeat structure that has to hold up all year. Recommends holding off at current ADP until he's back on the field; ~15-25% recurrence rate.",
         "source": "https://youtu.be/vfynKvpALhQ"
       }
     ],
@@ -361,7 +445,7 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Fractured a rib July 30, currently not practicing with no official return date; typical recovery 4-6 weeks. Should have time to heal for week 1, but is missing camp reps his fellow backup Keelan Black is getting — FSC expects Black to beat him back and take the early lead for the 49ers' RB2 job behind McCaffrey.",
+        "note": "Fractured a rib July 30, currently not practicing with no official return date; typical recovery 4-6 weeks. Should have time to heal for week 1, but is missing camp reps his fellow backup Keelan Black is getting \u2014 FSC expects Black to beat him back and take the early lead for the 49ers' RB2 job behind McCaffrey.",
         "source": "https://youtu.be/vfynKvpALhQ"
       }
     ],
@@ -369,7 +453,7 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "Tricep tear, likely needs surgery, 4-6 month recovery — could miss most or all of the season, especially if Washington's record is bad enough to shut him down. Losing a top-tier LT off an already below-average line is a real drag on Jayden Daniels/Terry McLaurin/the Washington backfield, independent of any injury to those players themselves.",
+        "note": "Tricep tear, likely needs surgery, 4-6 month recovery \u2014 could miss most or all of the season, especially if Washington's record is bad enough to shut him down. Losing a top-tier LT off an already below-average line is a real drag on Jayden Daniels/Terry McLaurin/the Washington backfield, independent of any injury to those players themselves.",
         "source": "https://youtu.be/vfynKvpALhQ"
       }
     ],
@@ -377,7 +461,7 @@
       {
         "week": 1,
         "analyst": "FSC",
-        "note": "ACL recovery, full camp participant with no limitations, beat reporters calling him explosive again. ~60% odds of returning to pre-injury level (skews high given his age). Price has already run up (ADP ~120 to ~88) as the market caught up — FSC still likes him as a 3rd-round pick but the value edge from a month ago is mostly gone.",
+        "note": "ACL recovery, full camp participant with no limitations, beat reporters calling him explosive again. ~60% odds of returning to pre-injury level (skews high given his age). Price has already run up (ADP ~120 to ~88) as the market caught up \u2014 FSC still likes him as a 3rd-round pick but the value edge from a month ago is mostly gone.",
         "source": "https://youtu.be/vfynKvpALhQ"
       }
     ],
@@ -391,7 +475,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Coming off offseason ankle surgery — may suit up Week 1 but will need roughly a month to ramp. Stash-and-bench, not a Week 1 start; the second-half version is worth about a 5th-round redraft price.",
+        "note": "Coming off offseason ankle surgery \u2014 may suit up Week 1 but will need roughly a month to ramp. Stash-and-bench, not a Week 1 start; the second-half version is worth about a 5th-round redraft price.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -399,7 +483,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Cooling him off around RB20: Woody Marks is getting real work and this is trending toward a genuine split, not an RB2 split. Montgomery is a floor play with bust risk and no upside behind it — and Dan Campbell already cut him from ~50% to ~30% of touches last year.",
+        "note": "Cooling him off around RB20: Woody Marks is getting real work and this is trending toward a genuine split, not an RB2 split. Montgomery is a floor play with bust risk and no upside behind it \u2014 and Dan Campbell already cut him from ~50% to ~30% of touches last year.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -407,8 +491,14 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Still the green upside swing but camp has made him more boom/bust — some days he's the offense's best receiving weapon, other days he fumbles and loses goal-line work. LeQuint Allen's injury is a small plus for his pass-protection snaps.",
+        "note": "Still the green upside swing but camp has made him more boom/bust \u2014 some days he's the offense's best receiving weapon, other days he fumbles and loses goal-line work. LeQuint Allen's injury is a small plus for his pass-protection snaps.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "The RB version of the Burden bet: almost no production, but he is the starting back for Liam Coen, whose system produced Bucky Irving in Tampa.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "rhamondre stevenson": [
@@ -425,13 +515,19 @@
         "analyst": "Smyth",
         "note": "Downgraded below Rhamondre Stevenson. Hasn't flashed the traits that drove last year's camp buzz, and the staff is framing him as change-of-pace contingent on pass protection. Top-5 upside is real but Smyth doesn't see a startable role early, which is hard to survive from a round-five pick.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Sliding down FSE's rankings \u2014 New England looks like a Josh McDaniels committee, and with a healthy Rhamondre Stevenson it is hard for Henderson to win the job outright. Only a Stevenson injury unlocks the lead role.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "rico dowdle": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Other half of the Carolina split. Smyth sees ceiling here rather than floor — Canales goes all-in on one back, so this is a bet on which one, with Rashaad White / Hubbard / Dowdle as the three-year precedent for the winner paying off big.",
+        "note": "Other half of the Carolina split. Smyth sees ceiling here rather than floor \u2014 Canales goes all-in on one back, so this is a bet on which one, with Rashaad White / Hubbard / Dowdle as the three-year precedent for the winner paying off big.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -441,13 +537,19 @@
         "analyst": "Smyth",
         "note": "Fading him. An 'old 28' with a huge career touch count, a horrid offensive line, a possible suspension, a current injury, and the offense shifting to more three-receiver sets with tight ends hurt. Smyth would rather take Javonte Williams or Kyren Williams for similar production and less risk.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Two misdemeanor charges filed for a May incident, NFL discipline unresolved as of Aug 28. Also 28.5 years old, faded late in each of the last two seasons, injured in two of three, with Marshawn Lloyd rising into a more even split.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "rj harvey": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Warming up slightly. The staff has shown real commitment to him and the offseason noise (Dobbins, Coleman) has gone the other way. His ADP has slid from RB25 to RB31/32 while the news improved — that gap is the reason to take the shot, not the talent.",
+        "note": "Warming up slightly. The staff has shown real commitment to him and the offseason noise (Dobbins, Coleman) has gone the other way. His ADP has slid from RB25 to RB31/32 while the news improved \u2014 that gap is the reason to take the shot, not the talent.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -471,43 +573,61 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Small tick DOWN on injury news — people Smyth trusts are cautious about it, and in a range where TE5-TE8 go inside six picks, a minor injury matters a lot. Detroit also has plenty of other options. He'd take him if he falls, not reach.",
+        "note": "Small tick DOWN on injury news \u2014 people Smyth trusts are cautious about it, and in a range where TE5-TE8 go inside six picks, a minor injury matters a lot. Detroit also has plenty of other options. He'd take him if he falls, not reach.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       },
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Drew Petzing takes over as OC — the coordinator who let Trey McBride eat. LaPorta returned to practice after a couple weeks out, so the injury isn't a concern.",
+        "note": "Drew Petzing takes over as OC \u2014 the coordinator who let Trey McBride eat. LaPorta returned to practice after a couple weeks out, so the injury isn't a concern.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe now that he is back at practice; the hip issue looks like a one-off bad hit. Detroit has the easiest schedule in football and FSE thinks they will be the best offense in the league, which outweighs sharing targets with St. Brown and Jameson Williams.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "ashton jeanty": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Injury is now being reported as possibly a LOW ankle sprain, not a high ankle sprain — likely limited in Week 1 but little effect on the rest of the season. He has a great Week 1 matchup, which is the annoying part. Smyth still wants him in the second round.",
+        "note": "Injury is now being reported as possibly a LOW ankle sprain, not a high ankle sprain \u2014 likely limited in Week 1 but little effect on the rest of the season. He has a great Week 1 matchup, which is the annoying part. Smyth still wants him in the second round.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Risky only because of the ankle. Their injury writer reads the low/high uncertainty as a probable grade-2 low ankle sprain, so missed time is live \u2014 and a volume-dependent back gets hurt more the more he touches it.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "nico collins": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Big bump — moved above Drake London. Smyth's under-the-radar worry was Jaden Higgins taking targets in a low-volume passing offense, and without Higgins that risk is gone. Boutte's arrival is a PLUS: it moves Collins into the Z role instead of being pressed every snap. He was the overall WR2 in points per game across his 15 healthy games in 2024.",
+        "note": "Big bump \u2014 moved above Drake London. Smyth's under-the-radar worry was Jaden Higgins taking targets in a low-volume passing offense, and without Higgins that risk is gone. Boutte's arrival is a PLUS: it moves Collins into the Z role instead of being pressed every snap. He was the overall WR2 in points per game across his 15 healthy games in 2024.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       },
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Target share should spike: Jayden Higgins tore his ACL and Tank Dell can't string practices together. Houston traded for Kayshon Boutte, a pure downfield X — if that moves Collins off the X (85% of his routes are outside, never in motion), it's a further boost. Mike Clay projects C.J. Stroud 8th in pass attempts.",
+        "note": "Target share should spike: Jayden Higgins tore his ACL and Tank Dell can't string practices together. Houston traded for Kayshon Boutte, a pure downfield X \u2014 if that moves Collins off the X (85% of his routes are outside, never in motion), it's a further boost. Mike Clay projects C.J. Stroud 8th in pass attempts.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE moved him up to 17th overall after the Jayden Higgins ACL tear. Kayshon Boutte is a career X receiver (75% of snaps), so Collins should finally get moved around the formation instead of only running big-boy routes into No. 1 corners \u2014 a possible career-high 28-30% target share.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "chris olave": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Ranked above Rashee Rice, which does not match ADP. The Jordan Tyson target-hog scenario has not materialized, so the only real worry left is the concussion history — and Smyth is fine paying that price.",
+        "note": "Ranked above Rashee Rice, which does not match ADP. The Jordan Tyson target-hog scenario has not materialized, so the only real worry left is the concussion history \u2014 and Smyth is fine paying that price.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -517,13 +637,19 @@
         "analyst": "Smyth",
         "note": "Yellow flag in full PPR (red-ish in half). The knee is visibly not fully healthy, and the 'he's a YAC guy, separation doesn't matter' defense fails because YAC needs a healthy knee. A new OC likely means far fewer screens (he led the NFL in screens by 2x), and Kenneth Walker takes red-zone touches.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Risky for off-field/suspension reasons, plus a poor training camp and Mahomes coming off an ACL. FSE will take him at ADP but not above it.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "dj moore": [
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Positive. He looks like the clear focal point in Buffalo under his old Panthers coach. Reference point: he was 6th in WR target share and only finished WR21 — in Buffalo, even 15th in target share should make him a top-15 receiver. Fine at his round-five price over riskier backs.",
+        "note": "Positive. He looks like the clear focal point in Buffalo under his old Panthers coach. Reference point: he was 6th in WR target share and only finished WR21 \u2014 in Buffalo, even 15th in target share should make him a top-15 receiver. Fine at his round-five price over riskier backs.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -531,8 +657,14 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Diggs does NOT hurt him as much as the market thinks. Every report has Diggs as the SLOT receiver, not the WR2 — same as New England last year, where he came off the field in two-receiver sets. McLaurin stays the clear number-one target in the new offense.",
+        "note": "Diggs does NOT hurt him as much as the market thinks. Every report has Diggs as the SLOT receiver, not the WR2 \u2014 same as New England last year, where he came off the field in two-receiver sets. McLaurin stays the clear number-one target in the new offense.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Risky both ways: 31 years old on a Washington offense that looks to be collapsing (Tunsil out at left tackle, Diggs added), and even in his big 2024 he was only WR16 per game despite 13 receiving TDs.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "stefon diggs": [
@@ -547,7 +679,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "ADP has dropped further than Smyth's opinion has — buy the discount. The Colts keep Downs in two-receiver sets and Keenan Allen only comes on for three-WR looks (playing outside, Downs slides to slot). Allen is entering year 14, in decline, and scored ~11-12 ppg last season, so the target hit is small.",
+        "note": "ADP has dropped further than Smyth's opinion has \u2014 buy the discount. The Colts keep Downs in two-receiver sets and Keenan Allen only comes on for three-WR looks (playing outside, Downs slides to slot). Allen is entering year 14, in decline, and scored ~11-12 ppg last season, so the target hit is small.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       },
       {
@@ -569,7 +701,7 @@
       {
         "week": 1,
         "analyst": "Smyth",
-        "note": "Dynasty yes, redraft no. He profiles as the outside X receiver, which makes him heavily dependent on QB play and red-zone trips — and this offense is unlikely to give him either.",
+        "note": "Dynasty yes, redraft no. He profiles as the outside X receiver, which makes him heavily dependent on QB play and red-zone trips \u2014 and this offense is unlikely to give him either.",
         "source": "https://www.youtube.com/watch?v=Z73XZkkqPrA"
       }
     ],
@@ -585,8 +717,14 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Vegas has his season reception line at 74.5 — higher than Tetairoa McMillan, Jaylen Waddle, Luther Burden. Colts are devoid of weapons (Pittman gone, Pierce recovering from ankle surgery, Downs with a calf). Set-and-forget TE1; don't trade him for a shinier name.",
+        "note": "Vegas has his season reception line at 74.5 \u2014 higher than Tetairoa McMillan, Jaylen Waddle, Luther Burden. Colts are devoid of weapons (Pittman gone, Pierce recovering from ankle surgery, Downs with a calf). Set-and-forget TE1; don't trade him for a shinier name.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Underrated mid-round league winner \u2014 Indianapolis has to funnel the offense through him with Alec Pierce coming off injury, Josh Downs' two-WR-set role unclear, and Keenan Allen old.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "michael pittman jr.": [
@@ -609,7 +747,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Every-down role in a condensed Green Bay room (no Doubs, no Wicks). Golden plays pure X and Reed plays slot in 11 personnel, so Watson gets moved around for easy separation. Green Bay's O-line is bad at run blocking — Love's preseason snaps were mostly under-center play action, which points to a higher pass rate.",
+        "note": "Every-down role in a condensed Green Bay room (no Doubs, no Wicks). Golden plays pure X and Reed plays slot in 11 personnel, so Watson gets moved around for easy separation. Green Bay's O-line is bad at run blocking \u2014 Love's preseason snaps were mostly under-center play action, which points to a higher pass rate.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -633,7 +771,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Undervalued because he's boring. Jacksonville runs high-volume over-the-middle work under Liam Coen and Trevor Lawrence clearly trusts him and Parker Washington — sure hands, savvy routes, right place at the right time.",
+        "note": "Undervalued because he's boring. Jacksonville runs high-volume over-the-middle work under Liam Coen and Trevor Lawrence clearly trusts him and Parker Washington \u2014 sure hands, savvy routes, right place at the right time.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -649,7 +787,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Toe sprain was a 2-3 week timeline that started ~2 weeks ago, so no real Week 1 concern as of filming. Mike Evans is gone and Zac Robinson (the OC who moved Drake London all over the formation in Atlanta) will not ask Egbuka to play X — Tez Johnson and Jalen McMillan do that. Expect fantasy-friendly route volume.",
+        "note": "Toe sprain was a 2-3 week timeline that started ~2 weeks ago, so no real Week 1 concern as of filming. Mike Evans is gone and Zac Robinson (the OC who moved Drake London all over the formation in Atlanta) will not ask Egbuka to play X \u2014 Tez Johnson and Jalen McMillan do that. Expect fantasy-friendly route volume.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -665,7 +803,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Round-6 QB with league-winning rushing upside — ~4,500 total yards and 30+ TDs as a rookie with almost 900 rushing yards. The Stefon Diggs signing gives him a real WR2 next to McLaurin.",
+        "note": "Round-6 QB with league-winning rushing upside \u2014 ~4,500 total yards and 30+ TDs as a rookie with almost 900 rushing yards. The Stefon Diggs signing gives him a real WR2 next to McLaurin.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -673,7 +811,7 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "Deep sleeper WR with a real path: SF's early-2nd rounder, huge camp and preseason buzz. Mike Evans re-aggravated a quad, Ricky Pearsall is out for the year, Jauan Jennings gone — the 49ers barely have receivers. Projects as a power slot for Purdy with Kittle back from the Achilles.",
+        "note": "Deep sleeper WR with a real path: SF's early-2nd rounder, huge camp and preseason buzz. Mike Evans re-aggravated a quad, Ricky Pearsall is out for the year, Jauan Jennings gone \u2014 the 49ers barely have receivers. Projects as a power slot for Purdy with Kittle back from the Achilles.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
       }
     ],
@@ -681,8 +819,14 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "BDGE's WR1 even accounting for a possible one-game suspension — he sees the setup as a repeat of Cooper Kupp's 2021.",
+        "note": "BDGE's WR1 even accounting for a possible one-game suspension \u2014 he sees the setup as a repeat of Cooper Kupp's 2021.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      },
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Elite when on the field (best fantasy WR last year, top-6 all three seasons, contract year) but carries real suspension risk from off-field allegations plus current muscle soreness. FSE guesses a suspension may be pushed back past the Australia opener.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ],
     "wan'dale robinson": [
@@ -705,8 +849,152 @@
       {
         "week": 1,
         "analyst": "BDGE",
-        "note": "BDGE's 1.01, ahead of Bijan Robinson — Detroit is letting him be a true bellcow and this could be an all-time RB season. He rates Atlanta's QB situation as a genuine risk to Bijan.",
+        "note": "BDGE's 1.01, ahead of Bijan Robinson \u2014 Detroit is letting him be a true bellcow and this could be an all-time RB season. He rates Atlanta's QB situation as a genuine risk to Bijan.",
         "source": "https://www.youtube.com/watch?v=LMvbtEF0Eew"
+      }
+    ],
+    "amon-ra st. brown": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safest WR in round 1: top-6 in three straight seasons, plays through injuries, and Detroit has the easiest schedule in football with Jameson Williams opening the field.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "ceedee lamb": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Clean, not explosive: top-12 WR four years running with Dak and heavy pass volume, but only 3 and 6 receiving TDs the last two years and George Pickens caps his ceiling.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "jonathan taylor": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE fades him: huge career touch count, age 27.5, missed 3/7/6 games in 2024/23/22, and the Colts around him got worse (Pitman gone, Pierce hurt, QB coming off an Achilles).",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "justin jefferson": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Talent is fine, the QB is the risk. Last year proved he is not QB-proof, and FSE does not trust Kyler Murray \u2014 Brissett produced more for McBride, Harrison and Wilson than Murray did.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "drake london": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "WR7 in points per game last season at age 25 with no repeatable injury pattern; he was playing out of his mind before the games he left early. Either Atlanta QB is good enough to feed him.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "brock bowers": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Cleanest TE projection in football, could outscore the WRs going near him. Risks are all situational \u2014 Jeanty banged up, Kubiak coming in, possible QB turmoil capping pass volume.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "derrick henry": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "No such thing as a safe 33-year-old RB. Note the shape of last year \u2014 he was not smashing his per-game numbers until huge Weeks 16-17; average games there and he finishes around RB12. Declan Doyle addition is a plus.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "trey mcbride": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe. He produced with this same offense and QB last year, and the situation improved (healthy Marvin Harrison, revamped RB room incl. the No. 3 overall pick).",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "george pickens": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe but capped. He made his money in Weeks 4-9 while CeeDee Lamb was out; without a Lamb injury he probably has no WR6 ceiling. Dallas volume and TD upside keep the floor high.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "breece hall": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Groin strain, expected healthy for Week 1. He was RB6 in points per game the last time the Jets offense was even half-decent, one year off an ACL, and 70+ catches gives him a floor. Question is Jets quality and true health.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "tee higgins": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe on touchdowns: 11 and 10 receiving TDs the last two years is repeatable with Burrow and Cincinnati's pass volume, even though Chase out-targets him by a mile.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "garrett wilson": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "One of FSE's favorite picks. Good headspace under Frank Reich with Geno Smith, and he averaged 19 PPG in his first five games last year with Justin Fields throwing before the injury.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "jaylen waddle": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Denver's clear WR1 on an offense that threw 612 times despite an elite defense, and FSE rates him well above Courtland Sutton at this stage. He calls ESPN's fifth-round price a big value gap.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "tetairoa mcmillan": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Bad offense, shaky QB, and Carolina is one of the slowest, lowest-pass-volume teams. Jaylen Coker's return from injury visibly cut his target-earning from Week 13 (Rams game) onward.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "jalen hurts": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safer than the skill players around him purely by being a QB with a long track record as a great producer.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "caleb williams": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Safe-ish for a QB \u2014 long-term optimism about the Ben Johnson offense in Chicago.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "jadarian price": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "Ranked well ahead of his ESPN/Sleeper price. The bet is Seattle's first-round draft capital and good film; the risk is that he was a weak prospect stuck behind Jeremiyah Love in college with his own injury history.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
+      }
+    ],
+    "marvin harrison jr.": [
+      {
+        "week": 1,
+        "analyst": "FSE",
+        "note": "FSE will take the risk \u2014 he has cost much more than this before, and had he stayed healthy down the stretch he might have shown the late-season production Michael Wilson did.",
+        "source": "https://www.youtube.com/watch?v=CcoMEgDUNlY"
       }
     ]
   }

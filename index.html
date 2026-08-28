@@ -76,9 +76,17 @@
 
 <script>
 const POS = {1:'QB',2:'RB',3:'WR',4:'TE',5:'K',16:'DST'};
+// ?league=2 = the 10-team league. Everything downstream (replacement level, roster
+// counts, snake picks) already reads the live team count, so nothing else is per-league.
+const LEAGUE = new URL(location.href).searchParams.get('league') === '2' ? '2' : '1';
+const LQ = LEAGUE === '2' ? '&league=2' : '';
+// Per-league localStorage. Sharing them would cross the 12-team league's drafted set
+// onto the 10-team board — every pick already made, struck off a draft that hasn't happened.
+const K = Object.fromEntries(['d','m','sl','tr','slot','myTeam'].map(k => [k, LEAGUE === '1' ? k : k + '2']));
+console.assert(K.d === (LEAGUE === '1' ? 'd' : 'd2'), 'league key namespacing broken');
 // ponytail: fixed replacement ranks scaled by league size at load; tune if league starts 2 QBs etc.
 let REPL = {QB:12, RB:28, WR:32, TE:12, K:12, DST:12};
-const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage.d||'[]')), mine:new Set(JSON.parse(localStorage.m||'[]')), sleepers:new Set(JSON.parse(localStorage.sl||'[]')), tradeRejects:new Set(JSON.parse(localStorage.tr||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, boom:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
+const S = { tab:'draft', players:[], teams:[], rosters:{}, myTeamId:null, drafted:new Set(JSON.parse(localStorage[K.d]||'[]')), mine:new Set(JSON.parse(localStorage[K.m]||'[]')), sleepers:new Set(JSON.parse(localStorage[K.sl]||'[]')), tradeRejects:new Set(JSON.parse(localStorage[K.tr]||'[]')), trending:{}, search:'', analysis:{}, ranks:{}, boom:{}, expanded:new Set(), meta:{}, injuries:{}, news:{}, bmUnmatched:[],
   // ponytail: filters are in-memory only — they reset on refresh, no localStorage key to go stale mid-draft
   pos:'', sort:'vbd', hideDrafted:true, badge:{} };
 
@@ -94,11 +102,11 @@ console.assert(snakePick(1,2,12)===2 && snakePick(2,2,12)===23 && snakePick(3,2,
 // his snake slot — just noted in the bar like the 10th above).
 // Also traded away his 2nd (pick 23) for the other manager's 2nd (pick 17) — round 2 is
 // gone too; pick 17 replaces it, same "fixed overall number, not his slot" situation.
-const TRADED_ROUNDS = new Set([2, 5, 7]);
+const TRADED_ROUNDS = LEAGUE === '1' ? new Set([2, 5, 7]) : new Set();
 
 // My next pick given how many players have already come off the board.
 function nextPick() {
-  const size = S.teams.length, slot = +localStorage.slot;
+  const size = S.teams.length, slot = +localStorage[K.slot];
   if (!size || !slot) return null;
   const made = S.drafted.size, onClock = made + 1;
   for (let r = 1; r <= 20; r++) {
@@ -110,7 +118,7 @@ function nextPick() {
 console.assert(!TRADED_ROUNDS.size || nextPick.toString().includes('TRADED_ROUNDS'), 'traded-round skip removed');
 
 const $ = s => document.querySelector(s);
-const espn = v => fetch('/api/espn?view='+v).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
+const espn = v => fetch('/api/espn?view='+v+LQ).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
 
 function seasonProj(p) {
   // statSourceId 1 = projected, scoringPeriodId 0 = full season
@@ -263,7 +271,7 @@ async function load() {
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
     const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes, sos] = await Promise.all([
       espn('mTeam,mRoster,mSettings,mMatchup'),
-      fetch('/api/espn?view=kona_player_info&filter='+filter).then(r=>r.json()),
+      fetch('/api/espn?view=kona_player_info&filter='+filter+LQ).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
       fetch('/draft-analysis.json').then(r=>r.json()).catch(()=>({})),
       fetch('/analyst-ranks.json').then(r=>r.json()).catch(()=>({players:{}})),
@@ -297,7 +305,7 @@ async function load() {
     S.faabMin = league.settings?.acquisitionSettings?.minimumBid ?? 1;
     for (const t of S.teams) S.rosters[t.id] =(t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
     // guess my team via SWID match on owners; fall back to picker
-    S.myTeamId = +localStorage.myTeam || S.teams[0]?.id;
+    S.myTeamId = +localStorage[K.myTeam] || S.teams[0]?.id;
     // K/DST excluded from the draft board — he only drafts them with his last 2 picks, no need to clutter the pool
     S.players = (playerData.players||[]).map(x => x.player).filter(p => POS[p.defaultPositionId] && !['K','DST'].includes(POS[p.defaultPositionId]));
     // VBD: projection minus replacement-level projection at position
@@ -317,7 +325,7 @@ async function load() {
 }
 
 function toggle(set, key, id) { set.has(id) ? set.delete(id) : set.add(id); localStorage[key] = JSON.stringify([...set]); render(); }
-window.tDraft = id => toggle(S.drafted, 'd', id);
+window.tDraft = id => toggle(S.drafted, K.d, id);
 // Bookmarklet sync: ESPN mock-draft tab posts picks here across origins, since it can't write our localStorage directly.
 window.addEventListener('message', e => {
   if (!/^https:\/\/([a-z0-9-]+\.)?espn\.com$/.test(e.origin)) return;
@@ -331,14 +339,14 @@ window.addEventListener('message', e => {
     if (p) { if (!S.drafted.has(p.id)) { S.drafted.add(p.id); changed = true; } }
     else missed.push(name);
   }
-  if (changed) localStorage.d = JSON.stringify([...S.drafted]);
+  if (changed) localStorage[K.d] = JSON.stringify([...S.drafted]);
   // only re-render on real change — the bookmarklet resends the full list every 2s, and
   // re-rendering on every message would yank the board while he's scrolling it
   if (missed.join('|') !== S.bmUnmatched.join('|')) { S.bmUnmatched = missed; changed = true; }
   if (changed) render();
 });
-window.tMine = id => { if (!S.mine.has(id)) S.drafted.add(id); toggle(S.mine, 'm', id); localStorage.d = JSON.stringify([...S.drafted]); };
-window.setTeam = id => { S.myTeamId = +id; localStorage.myTeam = id; render(); };
+window.tMine = id => { if (!S.mine.has(id)) S.drafted.add(id); toggle(S.mine, K.m, id); localStorage[K.d] = JSON.stringify([...S.drafted]); };
+window.setTeam = id => { S.myTeamId = +id; localStorage[K.myTeam] = id; render(); };
 
 function row(p, extra='') {
   const pos = POS[p.defaultPositionId];
@@ -464,7 +472,7 @@ window.lpDown = id => { lpFired = false; lpTimer = setTimeout(() => { lpFired = 
 window.lpUp = () => clearTimeout(lpTimer);
 window.tSleeper = id => {
   S.sleepers.has(id) ? S.sleepers.delete(id) : S.sleepers.add(id);
-  localStorage.sl = JSON.stringify([...S.sleepers]);
+  localStorage[K.sl] = JSON.stringify([...S.sleepers]);
   navigator.vibrate?.(30);
   render();
 };
@@ -715,7 +723,7 @@ function findTrades() {
 }
 // Stable id for a proposal so a reject survives re-render (rosters/valuations can reorder the list).
 const tradeKey = p => `${p.t.id}:${p.s.map(x=>x.id).sort().join(',')}:${p.g.map(x=>x.id).sort().join(',')}`;
-window.rejectTrade = key => { S.tradeRejects.add(key); localStorage.tr = JSON.stringify([...S.tradeRejects]); render(); };
+window.rejectTrade = key => { S.tradeRejects.add(key); localStorage[K.tr] = JSON.stringify([...S.tradeRejects]); render(); };
 // The other side's reason, read off their own lineup: who they were starting that our player replaces.
 function whyThem(th, give, get) {
   const goneIds = new Set(give.map(p => p.id));
@@ -947,7 +955,7 @@ function newsLine(name) {
 const views = {
   draft() {
     return slotBar() + filterBar() + `<input type="search" placeholder="Search player…" value="${S.search}" oninput="S.search=this.value.toLowerCase();renderBody()">
-    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement, blending ESPN's projection, market ADP, and every analyst board (tap a row to see each source's vote). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage.d='[]';localStorage.m='[]';render()}">Reset</button></div>
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Tap ✕ when anyone drafts a player, ★ when YOU draft them. ${Object.keys(S.analysis).length?'Tap a row for the full research report. ':''}Sorted by value over replacement, blending ESPN's projection, market ADP, and every analyst board (tap a row to see each source's vote). <button class="btn" onclick="if(confirm('Reset draft board?')){S.drafted.clear();S.mine.clear();localStorage[K.d]='[]';localStorage[K.m]='[]';render()}">Reset</button></div>
     ${S.bmUnmatched.length ? `<div style="color:var(--bad);font-size:13px;margin-bottom:8px">Bookmarklet couldn't match: ${S.bmUnmatched.map(esc).join(', ')} — tap ✕ for ${S.bmUnmatched.length===1?'it':'them'} manually.</div>` : ''}
     <table><tr><th>Player</th><th>Pos</th><th>ESPN proj</th><th>Value</th><th>Floor–Ceiling</th><th></th></tr><tbody id="tbody">${draftRows()}</tbody></table>`;
   },
@@ -1041,9 +1049,9 @@ const views = {
     }</table>`;
   }
 };
-window.setSlot = v => { localStorage.slot = v; render(); };
+window.setSlot = v => { localStorage[K.slot] = v; render(); };
 function slotBar() {
-  const size = S.teams.length, slot = +localStorage.slot, np = nextPick();
+  const size = S.teams.length, slot = +localStorage[K.slot], np = nextPick();
   const opts = Array.from({length:size}, (_,i) => `<option value="${i+1}" ${i+1===slot?'selected':''}>${i+1}</option>`).join('');
   const status = np
     ? (np.away === 0 ? `<b class="onclock">YOU'RE ON THE CLOCK — pick #${np.pick} (round ${np.round})</b>`
