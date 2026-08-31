@@ -7,6 +7,12 @@ something actually changes.
 
 Built and run at zero infrastructure cost.
 
+![The draft board — value over replacement, computed tiers, and a consensus rank blending
+ESPN, market ADP, and every analyst board](docs/draft-board.png)
+
+The live site is deployed but link-gated, since it reads a private league's rosters through
+personal ESPN cookies. The screenshot above is the real app against the real league.
+
 ## What it does
 
 | Tool | What it answers |
@@ -85,4 +91,4 @@ production values live in Vercel and GitHub Actions secrets.
 
 ---
 
-Built by Ethan Yap · UC Davis
+Built by **Ethan Yap** · UC Davis · [github.com/ethankwyap-stack](https://github.com/ethankwyap-stack)
