@@ -278,17 +278,17 @@
     "note": ""
    }
   ],
-  "sam laporta": [
+  "tucker kraft": [
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 6,
-    "note": "2025 adjusted fantasy PPG 11.9 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 5,
+    "note": "2025 adjusted fantasy PPG 16.2 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "TE",
-    "rank": 8,
+    "rank": 5,
     "note": ""
    }
   ],
@@ -338,7 +338,7 @@
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 5,
+    "rank": 6,
     "note": ""
    },
    {
@@ -362,67 +362,11 @@
     "note": ""
    }
   ],
-  "ashton jeanty": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 7,
-    "note": "2025 adjusted fantasy PPG 14.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 5,
-    "note": ""
-   }
-  ],
-  "drake london": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 7,
-    "note": "2025 adjusted fantasy PPG 19.7 (w/ Penix & pre injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 6,
-    "note": ""
-   }
-  ],
-  "tucker kraft": [
-   {
-    "analyst": "Smyth",
-    "pos": "TE",
-    "rank": 7,
-    "note": "2025 adjusted fantasy PPG 16.2 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "TE",
-    "rank": 5,
-    "note": ""
-   }
-  ],
-  "justin herbert": [
-   {
-    "analyst": "Smyth",
-    "pos": "QB",
-    "rank": 8,
-    "note": "2025 adjusted fantasy PPG 17.5 (17 Darre) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "QB",
-    "rank": 7,
-    "note": ""
-   }
-  ],
   "chase brown": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 8,
+    "rank": 7,
     "note": "2025 adjusted fantasy PPG 21.0 (w/ Joe Burrow) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -436,13 +380,69 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 8,
+    "rank": 7,
     "note": "2025 adjusted fantasy PPG 14.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
     "rank": 7,
+    "note": ""
+   }
+  ],
+  "sam laporta": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 7,
+    "note": "2025 adjusted fantasy PPG 11.9 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 8,
+    "note": ""
+   }
+  ],
+  "trevor lawrence": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 8,
+    "note": "2025 adjusted fantasy PPG 19.9 (5 Tyler) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 9,
+    "note": ""
+   }
+  ],
+  "kenneth walker iii": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 8,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 9,
+    "note": ""
+   }
+  ],
+  "nico collins": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 8,
+    "note": "2025 adjusted fantasy PPG 15.0 (full games w/ Stroud) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 10,
     "note": ""
    }
   ],
@@ -460,45 +460,45 @@
     "note": ""
    }
   ],
-  "trevor lawrence": [
+  "justin herbert": [
    {
     "analyst": "Smyth",
     "pos": "QB",
     "rank": 9,
-    "note": "2025 adjusted fantasy PPG 19.9 (5 Tyler) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 17.5 (17 Darre) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "QB",
-    "rank": 9,
+    "rank": 7,
     "note": ""
    }
   ],
-  "kenneth walker iii": [
+  "ashton jeanty": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 9,
-    "note": ""
+    "note": "2025 adjusted fantasy PPG 14.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 9,
+    "rank": 5,
     "note": ""
    }
   ],
-  "george pickens": [
+  "drake london": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 9,
-    "note": "2025 adjusted fantasy PPG 16.1 (in games w/ Lamb) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 19.7 (w/ Penix & pre injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 8,
+    "rank": 6,
     "note": ""
    }
   ],
@@ -530,31 +530,31 @@
     "note": ""
    }
   ],
-  "saquon barkley": [
+  "de'von achane": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 11,
-    "note": "2025 adjusted fantasy PPG 14.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 10,
+    "note": "2025 adjusted fantasy PPG 20.4 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 11,
+    "rank": 8,
     "note": ""
    }
   ],
-  "rashee rice": [
+  "george pickens": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 12,
-    "note": "2025 adjusted fantasy PPG 18.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 10,
+    "note": "2025 adjusted fantasy PPG 16.1 (in games w/ Lamb) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 11,
+    "rank": 8,
     "note": ""
    }
   ],
@@ -586,31 +586,31 @@
     "note": ""
    }
   ],
-  "de'von achane": [
+  "saquon barkley": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 10,
-    "note": "2025 adjusted fantasy PPG 20.4 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 11,
+    "note": "2025 adjusted fantasy PPG 14.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 8,
+    "rank": 11,
     "note": ""
    }
   ],
-  "nico collins": [
+  "malik nabers": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 10,
-    "note": "2025 adjusted fantasy PPG 15.0 (full games w/ Stroud) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 11,
+    "note": ""
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 10,
+    "rank": 20,
     "note": ""
    }
   ],
@@ -656,17 +656,17 @@
     "note": ""
    }
   ],
-  "devonta smith": [
+  "chris olave": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 13,
-    "note": "2025 adjusted fantasy PPG 12.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 12,
+    "note": "2025 adjusted fantasy PPG 18.8 (w/ Shough) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 12,
+    "rank": 13,
     "note": ""
    }
   ],
@@ -712,17 +712,17 @@
     "note": ""
    }
   ],
-  "malik nabers": [
+  "rashee rice": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 11,
-    "note": ""
+    "rank": 13,
+    "note": "2025 adjusted fantasy PPG 18.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 20,
+    "rank": 11,
     "note": ""
    }
   ],
@@ -748,31 +748,31 @@
     "note": ""
    }
   ],
-  "josh jacobs": [
+  "breece hall": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 14,
-    "note": "2025 adjusted fantasy PPG 18.0 (in healthy games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 13.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 13,
+    "rank": 14,
     "note": ""
    }
   ],
-  "chris olave": [
+  "devonta smith": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 14,
-    "note": "2025 adjusted fantasy PPG 18.8 (w/ Shough) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 12.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 13,
+    "rank": 12,
     "note": ""
    }
   ],
@@ -804,17 +804,17 @@
     "note": ""
    }
   ],
-  "breece hall": [
+  "javonte williams": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 15,
-    "note": "2025 adjusted fantasy PPG 13.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 16.2 (before wk15 injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 14,
+    "rank": 16,
     "note": ""
    }
   ],
@@ -864,7 +864,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 17,
+    "rank": 16,
     "note": "2025 adjusted fantasy PPG 14.7 (Wk7 on w/ Corum) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -888,12 +888,12 @@
     "note": ""
    }
   ],
-  "oronde gadsden ii": [
+  "dalton schultz": [
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 24,
-    "note": ""
+    "rank": 16,
+    "note": "2025 adjusted fantasy PPG 10.5 (w/ C.J. Stroud) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
   "jared goff": [
@@ -910,17 +910,17 @@
     "note": ""
    }
   ],
-  "javonte williams": [
+  "travis etienne jr.": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 16,
-    "note": "2025 adjusted fantasy PPG 16.2 (before wk15 injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 17,
+    "note": ""
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 16,
+    "rank": 18,
     "note": ""
    }
   ],
@@ -938,17 +938,17 @@
     "note": ""
    }
   ],
-  "chig okonkwo": [
+  "juwan johnson": [
    {
     "analyst": "Smyth",
     "pos": "TE",
     "rank": 17,
-    "note": "2025 adjusted fantasy PPG 7.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 12.0 (w/ Tyler Shough) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "TE",
-    "rank": 18,
+    "rank": 17,
     "note": ""
    }
   ],
@@ -966,40 +966,46 @@
     "note": ""
    }
   ],
-  "cam skattebo": [
+  "bucky irving": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 18,
-    "note": "2025 adjusted fantasy PPG 19.1 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 14.0 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 19,
+    "rank": 20,
     "note": ""
    }
   ],
-  "tetairoa mcmillan": [
+  "garrett wilson": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 18,
-    "note": "2025 adjusted fantasy PPG 12.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": ""
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 14,
+    "rank": 16,
     "note": ""
    }
   ],
-  "t.j. hockenson": [
+  "chig okonkwo": [
    {
     "analyst": "Smyth",
     "pos": "TE",
     "rank": 18,
-    "note": "2025 adjusted fantasy PPG 7.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 7.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 18,
+    "note": ""
    }
   ],
   "tyler shough": [
@@ -1016,40 +1022,40 @@
     "note": ""
    }
   ],
-  "bucky irving": [
+  "cam skattebo": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 20,
-    "note": "2025 adjusted fantasy PPG 14.0 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 19,
+    "note": "2025 adjusted fantasy PPG 19.1 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 20,
+    "rank": 19,
     "note": ""
    }
   ],
-  "emeka egbuka": [
+  "tetairoa mcmillan": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 19,
-    "note": "2025 adjusted fantasy PPG 13.1 (Pre Wk16 snap count) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 12.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 17,
+    "rank": 14,
     "note": ""
    }
   ],
-  "kenyon sadiq": [
+  "t.j. hockenson": [
    {
     "analyst": "Smyth",
     "pos": "TE",
     "rank": 19,
-    "note": ""
+    "note": "2025 adjusted fantasy PPG 7.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
   "baker mayfield": [
@@ -1066,35 +1072,35 @@
     "note": ""
    }
   ],
-  "travis etienne jr.": [
+  "d'andre swift": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 19,
-    "note": ""
+    "rank": 20,
+    "note": "2025 adjusted fantasy PPG 12.9 (w/ Monangai in 2H) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 18,
-    "note": ""
-   }
-  ],
-  "luther burden iii": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 21,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
     "rank": 22,
     "note": ""
    }
   ],
-  "greg dulcich": [
+  "emeka egbuka": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 20,
+    "note": "2025 adjusted fantasy PPG 13.1 (Pre Wk16 snap count) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 17,
+    "note": ""
+   }
+  ],
+  "terrance ferguson": [
    {
     "analyst": "Smyth",
     "pos": "TE",
@@ -1116,11 +1122,67 @@
     "note": ""
    }
   ],
-  "david montgomery": [
+  "quinshon judkins": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 21,
+    "note": "2025 adjusted fantasy PPG 12.5 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 25,
+    "note": ""
+   }
+  ],
+  "luther burden iii": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 21,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 22,
+    "note": ""
+   }
+  ],
+  "brenton strange": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 21,
+    "note": "2025 adjusted fantasy PPG 9.8 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "TE",
+    "rank": 16,
+    "note": ""
+   }
+  ],
+  "sam darnold": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 22,
+    "note": "2025 adjusted fantasy PPG 14.2 (24 Mark) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "QB",
+    "rank": 23,
+    "note": ""
+   }
+  ],
+  "david montgomery": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 22,
     "note": "2025 adjusted fantasy PPG 9.9 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1130,33 +1192,33 @@
     "note": ""
    }
   ],
-  "garrett wilson": [
+  "dj moore": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 20,
-    "note": ""
+    "rank": 22,
+    "note": "2025 adjusted fantasy PPG 10.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 16,
+    "rank": 29,
     "note": ""
    }
   ],
-  "terrance ferguson": [
+  "hunter henry": [
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 21,
-    "note": ""
+    "rank": 22,
+    "note": "2025 adjusted fantasy PPG 9.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
   "cam ward": [
    {
     "analyst": "Smyth",
     "pos": "QB",
-    "rank": 22,
+    "rank": 23,
     "note": "2025 adjusted fantasy PPG 11.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1184,7 +1246,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 22,
+    "rank": 23,
     "note": "2025 adjusted fantasy PPG 11.0 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1194,73 +1256,11 @@
     "note": ""
    }
   ],
-  "juwan johnson": [
+  "kenyon sadiq": [
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 16,
-    "note": "2025 adjusted fantasy PPG 12.0 (w/ Tyler Shough) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "TE",
-    "rank": 17,
-    "note": ""
-   }
-  ],
-  "sam darnold": [
-   {
-    "analyst": "Smyth",
-    "pos": "QB",
     "rank": 23,
-    "note": "2025 adjusted fantasy PPG 14.2 (24 Mark) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "QB",
-    "rank": 23,
-    "note": ""
-   }
-  ],
-  "d'andre swift": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 24,
-    "note": "2025 adjusted fantasy PPG 12.9 (w/ Monangai in 2H) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 22,
-    "note": ""
-   }
-  ],
-  "dj moore": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 23,
-    "note": "2025 adjusted fantasy PPG 10.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 29,
-    "note": ""
-   }
-  ],
-  "brenton strange": [
-   {
-    "analyst": "Smyth",
-    "pos": "TE",
-    "rank": 22,
-    "note": "2025 adjusted fantasy PPG 9.8 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "TE",
-    "rank": 16,
     "note": ""
    }
   ],
@@ -1272,61 +1272,17 @@
     "note": "2025 adjusted fantasy PPG 14.1 (25 T.J.) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
-  "treveyon henderson": [
+  "jadarian price": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 25,
-    "note": "2025 adjusted fantasy PPG 9.5 (2H w/ 2 healthy RBs) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 21,
+    "rank": 24,
     "note": ""
-   }
-  ],
-  "terry mclaurin": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 25,
-    "note": "2025 adjusted fantasy PPG 11.4 (too small sample w/ QB) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 25,
-    "note": ""
-   }
-  ],
-  "hunter henry": [
-   {
-    "analyst": "Smyth",
-    "pos": "TE",
-    "rank": 23,
-    "note": "2025 adjusted fantasy PPG 9.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   }
-  ],
-  "daniel jones": [
-   {
-    "analyst": "Smyth",
-    "pos": "QB",
-    "rank": 25,
-    "note": "2025 adjusted fantasy PPG 18.8 (in complete games    9 Dalla) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   }
-  ],
-  "quinshon judkins": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 22,
-    "note": "2025 adjusted fantasy PPG 12.5 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 25,
+    "rank": 28,
     "note": ""
    }
   ],
@@ -1341,6 +1297,50 @@
     "analyst": "Holka",
     "pos": "WR",
     "rank": 28,
+    "note": ""
+   }
+  ],
+  "greg dulcich": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 24,
+    "note": ""
+   }
+  ],
+  "daniel jones": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 25,
+    "note": "2025 adjusted fantasy PPG 18.8 (in complete games    9 Dalla) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   }
+  ],
+  "rhamondre stevenson": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 25,
+    "note": "2025 adjusted fantasy PPG 13.5 (in full games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 27,
+    "note": ""
+   }
+  ],
+  "terry mclaurin": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 25,
+    "note": "2025 adjusted fantasy PPG 11.4 (too small sample w/ QB) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 25,
     "note": ""
    }
   ],
@@ -1360,40 +1360,40 @@
     "note": ""
    }
   ],
-  "chuba hubbard": [
+  "treveyon henderson": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 32,
-    "note": "2025 adjusted fantasy PPG 10.8 (w/ full snaps) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 33,
-    "note": ""
-   }
-  ],
-  "davante adams": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
     "rank": 26,
-    "note": "2025 adjusted fantasy PPG 15.3 (healthy gms w/ Puka) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 9.5 (2H w/ 2 healthy RBs) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
-    "pos": "WR",
+    "pos": "RB",
     "rank": 21,
     "note": ""
    }
   ],
-  "dalton schultz": [
+  "parker washington": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 26,
+    "note": "2025 adjusted fantasy PPG 12.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 35,
+    "note": ""
+   }
+  ],
+  "oronde gadsden ii": [
    {
     "analyst": "Smyth",
     "pos": "TE",
     "rank": 26,
-    "note": "2025 adjusted fantasy PPG 10.5 (w/ C.J. Stroud) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": ""
    }
   ],
   "c.j. stroud": [
@@ -1410,31 +1410,31 @@
     "note": ""
    }
   ],
-  "jadarian price": [
+  "jaylen warren": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 28,
-    "note": ""
+    "rank": 27,
+    "note": "2025 adjusted fantasy PPG 13.4 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 28,
+    "rank": 26,
     "note": ""
    }
   ],
-  "christian watson": [
+  "davante adams": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 27,
-    "note": "2025 adjusted fantasy PPG 12.3 (w/ Jordan Love) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 15.3 (healthy gms w/ Puka) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 26,
+    "rank": 21,
     "note": ""
    }
   ],
@@ -1454,31 +1454,31 @@
     "note": "2025 adjusted fantasy PPG 18.9 (as starter           8 Travi) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
-  "rhamondre stevenson": [
+  "rico dowdle": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 30,
-    "note": "2025 adjusted fantasy PPG 13.5 (in full games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 28,
+    "note": "2025 adjusted fantasy PPG 11.7 (w/ Hubbard returned) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 27,
+    "rank": 29,
     "note": ""
    }
   ],
-  "mike evans": [
+  "christian watson": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 29,
-    "note": "2025 adjusted fantasy PPG 12.1 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 28,
+    "note": "2025 adjusted fantasy PPG 12.3 (w/ Jordan Love) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 27,
+    "rank": 26,
     "note": ""
    }
   ],
@@ -1498,35 +1498,35 @@
     "note": ""
    }
   ],
-  "jaylen warren": [
+  "josh jacobs": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 26,
-    "note": "2025 adjusted fantasy PPG 13.4 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 29,
+    "note": "2025 adjusted fantasy PPG 18.0 (in healthy games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 26,
+    "rank": 13,
     "note": ""
    }
   ],
-  "parker washington": [
+  "jameson williams": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 28,
-    "note": "2025 adjusted fantasy PPG 12.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 29,
+    "note": "2025 adjusted fantasy PPG 16.2 (before wk15 injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 35,
+    "rank": 24,
     "note": ""
    }
   ],
-  "eli stowers": [
+  "gunnar helm": [
    {
     "analyst": "Smyth",
     "pos": "TE",
@@ -1542,35 +1542,35 @@
     "note": "2025 adjusted fantasy PPG 13.7 (in complete games     26 Chig) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
-  "rico dowdle": [
+  "rj harvey": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 29,
-    "note": "2025 adjusted fantasy PPG 11.7 (w/ Hubbard returned) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 30,
+    "note": "2025 adjusted fantasy PPG 10.0 (w/ JK Dobbins) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 29,
+    "rank": 31,
     "note": ""
    }
   ],
-  "jameson williams": [
+  "marvin harrison jr.": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 30,
-    "note": "2025 adjusted fantasy PPG 16.2 (before wk15 injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": ""
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 24,
+    "rank": 31,
     "note": ""
    }
   ],
-  "gunnar helm": [
+  "pat freiermuth": [
    {
     "analyst": "Smyth",
     "pos": "TE",
@@ -1586,17 +1586,91 @@
     "note": "2025 adjusted fantasy PPG 11.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
-  "rj harvey": [
+  "chuba hubbard": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 31,
-    "note": "2025 adjusted fantasy PPG 10.0 (w/ JK Dobbins) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 10.8 (w/ full snaps) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
+    "rank": 33,
+    "note": ""
+   }
+  ],
+  "mike evans": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
     "rank": 31,
+    "note": "2025 adjusted fantasy PPG 12.1 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 27,
+    "note": ""
+   }
+  ],
+  "darnell washington": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 31,
+    "note": ""
+   }
+  ],
+  "shedeur sanders": [
+   {
+    "analyst": "Smyth",
+    "pos": "QB",
+    "rank": 32,
+    "note": "2025 adjusted fantasy PPG 12.0 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   }
+  ],
+  "jonathon brooks": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 32,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 41,
+    "note": ""
+   }
+  ],
+  "brian thomas jr.": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 32,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 34,
+    "note": ""
+   }
+  ],
+  "eli stowers": [
+   {
+    "analyst": "Smyth",
+    "pos": "TE",
+    "rank": 32,
+    "note": ""
+   }
+  ],
+  "marshawn lloyd": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 33,
     "note": ""
    }
   ],
@@ -1614,27 +1688,11 @@
     "note": ""
    }
   ],
-  "pat freiermuth": [
-   {
-    "analyst": "Smyth",
-    "pos": "TE",
-    "rank": 31,
-    "note": ""
-   }
-  ],
-  "shedeur sanders": [
-   {
-    "analyst": "Smyth",
-    "pos": "QB",
-    "rank": 32,
-    "note": "2025 adjusted fantasy PPG 12.0 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   }
-  ],
   "tony pollard": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 33,
+    "rank": 34,
     "note": "2025 adjusted fantasy PPG 10.8 (in Spears full games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1644,53 +1702,17 @@
     "note": ""
    }
   ],
-  "brian thomas jr.": [
+  "michael wilson": [
    {
     "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 31,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
     "pos": "WR",
     "rank": 34,
-    "note": ""
-   }
-  ],
-  "darnell washington": [
-   {
-    "analyst": "Smyth",
-    "pos": "TE",
-    "rank": 32,
-    "note": ""
-   }
-  ],
-  "jonathon brooks": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 27,
-    "note": ""
+    "note": "2025 adjusted fantasy PPG 13.0 (*5 PPG w/ Marv healthy) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
-    "pos": "RB",
+    "pos": "WR",
     "rank": 41,
-    "note": ""
-   }
-  ],
-  "marvin harrison jr.": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 32,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 31,
     "note": ""
    }
   ],
@@ -1708,17 +1730,17 @@
     "note": ""
    }
   ],
-  "jordyn tyson": [
+  "dk metcalf": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 40,
-    "note": ""
+    "rank": 35,
+    "note": "2025 adjusted fantasy PPG 12.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 40,
+    "rank": 30,
     "note": ""
    }
   ],
@@ -1726,7 +1748,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 34,
+    "rank": 36,
     "note": "2025 adjusted fantasy PPG 9.5 (2H w/ healthy Swift) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1736,95 +1758,11 @@
     "note": ""
    }
   ],
-  "alec pierce": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 34,
-    "note": "2025 adjusted fantasy PPG 11.5 (w/ Daniel Jones) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 32,
-    "note": ""
-   }
-  ],
-  "rachaad white": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 36,
-    "note": "2025 adjusted fantasy PPG 11.6 (as starter) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 39,
-    "note": ""
-   }
-  ],
-  "makai lemon": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 44,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 45,
-    "note": ""
-   }
-  ],
-  "j.k. dobbins": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 38,
-    "note": "2025 adjusted fantasy PPG 11.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 34,
-    "note": ""
-   }
-  ],
-  "michael wilson": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 38,
-    "note": "2025 adjusted fantasy PPG 13.0 (*5 PPG w/ Marv healthy) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 41,
-    "note": ""
-   }
-  ],
-  "kenny gainwell": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 39,
-    "note": "2025 adjusted fantasy PPG 10.6 (w/ Warren healthy) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 35,
-    "note": ""
-   }
-  ],
   "chris godwin jr.": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 35,
+    "rank": 36,
     "note": ""
    },
    {
@@ -1848,17 +1786,17 @@
     "note": ""
    }
   ],
-  "dk metcalf": [
+  "alec pierce": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 36,
-    "note": "2025 adjusted fantasy PPG 12.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "rank": 37,
+    "note": "2025 adjusted fantasy PPG 11.5 (w/ Daniel Jones) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 30,
+    "rank": 32,
     "note": ""
    }
   ],
@@ -1866,13 +1804,63 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 40,
+    "rank": 38,
     "note": ""
    },
    {
     "analyst": "Holka",
     "pos": "RB",
     "rank": 43,
+    "note": ""
+   }
+  ],
+  "quentin johnston": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 38,
+    "note": "2025 adjusted fantasy PPG 11.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 42,
+    "note": ""
+   }
+  ],
+  "j.k. dobbins": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 39,
+    "note": "2025 adjusted fantasy PPG 11.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 34,
+    "note": ""
+   }
+  ],
+  "de'zhaun stribling": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 39,
+    "note": ""
+   }
+  ],
+  "rachaad white": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 40,
+    "note": "2025 adjusted fantasy PPG 11.6 (as starter) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 39,
     "note": ""
    }
   ],
@@ -1880,7 +1868,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 37,
+    "rank": 40,
     "note": ""
    },
    {
@@ -1890,39 +1878,17 @@
     "note": ""
    }
   ],
-  "zach charbonnet": [
+  "kenny gainwell": [
    {
     "analyst": "Smyth",
     "pos": "RB",
     "rank": 41,
-    "note": "2025 adjusted fantasy PPG 11.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+    "note": "2025 adjusted fantasy PPG 10.6 (w/ Warren healthy) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "RB",
-    "rank": 48,
-    "note": ""
-   }
-  ],
-  "stefon diggs": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 39,
-    "note": "2025 adjusted fantasy PPG 11.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   }
-  ],
-  "chris rodriguez jr.": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 42,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 45,
+    "rank": 35,
     "note": ""
    }
   ],
@@ -1940,11 +1906,39 @@
     "note": ""
    }
   ],
+  "chris rodriguez jr.": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 42,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 45,
+    "note": ""
+   }
+  ],
+  "jayden reed": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 42,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 49,
+    "note": ""
+   }
+  ],
   "aaron jones sr.": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 44,
+    "rank": 43,
     "note": ""
    },
    {
@@ -1954,189 +1948,17 @@
     "note": ""
    }
   ],
-  "deebo samuel sr.": [
+  "kc concepcion": [
    {
     "analyst": "Smyth",
     "pos": "WR",
     "rank": 43,
     "note": ""
-   }
-  ],
-  "keaton mitchell": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 45,
-    "note": ""
-   }
-  ],
-  "quentin johnston": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 42,
-    "note": "2025 adjusted fantasy PPG 11.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
     "analyst": "Holka",
     "pos": "WR",
-    "rank": 42,
-    "note": ""
-   }
-  ],
-  "isiah pacheco": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 49,
-    "note": "2025 adjusted fantasy PPG 6.7 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 49,
-    "note": ""
-   }
-  ],
-  "jordan addison": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 46,
-    "note": "2025 adjusted fantasy PPG 9.7 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 50,
-    "note": ""
-   }
-  ],
-  "tank bigsby": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 46,
-    "note": ""
-   }
-  ],
-  "jakobi meyers": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 48,
-    "note": "2025 adjusted fantasy PPG 11.4 (full games w/ JAX) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 46,
-    "note": ""
-   }
-  ],
-  "tyler allgeier": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 47,
-    "note": "2025 adjusted fantasy PPG 7.2 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 46,
-    "note": ""
-   }
-  ],
-  "michael pittman jr.": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 45,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 38,
-    "note": ""
-   }
-  ],
-  "alvin kamara": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 48,
-    "note": "2025 adjusted fantasy PPG 9.7 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 44,
-    "note": ""
-   }
-  ],
-  "jayden reed": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 47,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 49,
-    "note": ""
-   }
-  ],
-  "ray davis": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 50,
-    "note": ""
-   }
-  ],
-  "romeo doubs": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 50,
-    "note": "2025 adjusted fantasy PPG 11.4 (w/ Jordan Love) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 58,
-    "note": ""
-   }
-  ],
-  "tyrone tracy jr.": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 53,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 47,
-    "note": ""
-   }
-  ],
-  "matthew golden": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 51,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 53,
+    "rank": 54,
     "note": ""
    }
   ],
@@ -2144,7 +1966,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 54,
+    "rank": 44,
     "note": "2025 adjusted fantasy PPG 10.7 (healthy post Wk4) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -2154,33 +1976,11 @@
     "note": ""
    }
   ],
-  "de'zhaun stribling": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 49,
-    "note": ""
-   }
-  ],
-  "tyjae spears": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 43,
-    "note": "2025 adjusted fantasy PPG 9.2 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 40,
-    "note": ""
-   }
-  ],
   "wan'dale robinson": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 52,
+    "rank": 44,
     "note": "2025 adjusted fantasy PPG 13.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -2190,7 +1990,157 @@
     "note": ""
    }
   ],
-  "jonah coleman": [
+  "tyler allgeier": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 45,
+    "note": "2025 adjusted fantasy PPG 7.2 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 46,
+    "note": ""
+   }
+  ],
+  "makai lemon": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 45,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 45,
+    "note": ""
+   }
+  ],
+  "zach charbonnet": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 46,
+    "note": "2025 adjusted fantasy PPG 11.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 48,
+    "note": ""
+   }
+  ],
+  "michael pittman jr.": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 46,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 38,
+    "note": ""
+   }
+  ],
+  "keaton mitchell": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 47,
+    "note": ""
+   }
+  ],
+  "stefon diggs": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 47,
+    "note": "2025 adjusted fantasy PPG 11.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   }
+  ],
+  "isiah pacheco": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 48,
+    "note": "2025 adjusted fantasy PPG 6.7 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 49,
+    "note": ""
+   }
+  ],
+  "romeo doubs": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 48,
+    "note": "2025 adjusted fantasy PPG 11.4 (w/ Jordan Love) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 58,
+    "note": ""
+   }
+  ],
+  "tyjae spears": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 49,
+    "note": "2025 adjusted fantasy PPG 9.2 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 40,
+    "note": ""
+   }
+  ],
+  "matthew golden": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 49,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 53,
+    "note": ""
+   }
+  ],
+  "mike washington jr.": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 50,
+    "note": ""
+   }
+  ],
+  "jordan addison": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 50,
+    "note": "2025 adjusted fantasy PPG 9.7 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 50,
+    "note": ""
+   }
+  ],
+  "ray davis": [
    {
     "analyst": "Smyth",
     "pos": "RB",
@@ -2198,7 +2148,51 @@
     "note": ""
    }
   ],
-  "xavier worthy": [
+  "jakobi meyers": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 51,
+    "note": "2025 adjusted fantasy PPG 11.4 (full games w/ JAX) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 46,
+    "note": ""
+   }
+  ],
+  "tank bigsby": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 52,
+    "note": ""
+   }
+  ],
+  "jonah coleman": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 53,
+    "note": ""
+   }
+  ],
+  "jordyn tyson": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 52,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 40,
+    "note": ""
+   }
+  ],
+  "jalen coker": [
    {
     "analyst": "Smyth",
     "pos": "WR",
@@ -2208,7 +2202,51 @@
    {
     "analyst": "Holka",
     "pos": "WR",
+    "rank": 51,
+    "note": ""
+   }
+  ],
+  "alvin kamara": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 54,
+    "note": "2025 adjusted fantasy PPG 9.7 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 44,
+    "note": ""
+   }
+  ],
+  "emmett johnson": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 55,
+    "note": ""
+   }
+  ],
+  "xavier worthy": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 54,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
     "rank": 52,
+    "note": ""
+   }
+  ],
+  "deebo samuel sr.": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 55,
     "note": ""
    }
   ],
@@ -2220,129 +2258,11 @@
     "note": ""
    }
   ],
-  "jayden higgins": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 54,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 47,
-    "note": ""
-   }
-  ],
-  "emmett johnson": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 57,
-    "note": ""
-   }
-  ],
-  "dylan sampson": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 58,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "RB",
-    "rank": 50,
-    "note": ""
-   }
-  ],
-  "kc concepcion": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 55,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 54,
-    "note": ""
-   }
-  ],
-  "travis hunter": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 58,
-    "note": ""
-   }
-  ],
-  "mike washington jr.": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 55,
-    "note": ""
-   }
-  ],
-  "jaydon blue": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 59,
-    "note": ""
-   }
-  ],
-  "tre tucker": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 57,
-    "note": "2025 adjusted fantasy PPG 9.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
-   }
-  ],
-  "jalen coker": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 56,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 51,
-    "note": ""
-   }
-  ],
-  "isaiah davis": [
-   {
-    "analyst": "Smyth",
-    "pos": "RB",
-    "rank": 60,
-    "note": ""
-   }
-  ],
-  "rashid shaheed": [
-   {
-    "analyst": "Smyth",
-    "pos": "WR",
-    "rank": 59,
-    "note": ""
-   },
-   {
-    "analyst": "Holka",
-    "pos": "WR",
-    "rank": 57,
-    "note": ""
-   }
-  ],
   "khalil shakir": [
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 60,
+    "rank": 56,
     "note": "2025 adjusted fantasy PPG 11.2 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -2352,11 +2272,79 @@
     "note": ""
    }
   ],
-  "marshawn lloyd": [
+  "dylan sampson": [
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 52,
+    "rank": 57,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 50,
+    "note": ""
+   }
+  ],
+  "rashid shaheed": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 57,
+    "note": ""
+   },
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 57,
+    "note": ""
+   }
+  ],
+  "malik davis": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 58,
+    "note": ""
+   }
+  ],
+  "tre tucker": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 58,
+    "note": "2025 adjusted fantasy PPG 9.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
+   }
+  ],
+  "braelon allen": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 59,
+    "note": ""
+   }
+  ],
+  "cyrus allen": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 59,
+    "note": ""
+   }
+  ],
+  "kaelon black": [
+   {
+    "analyst": "Smyth",
+    "pos": "RB",
+    "rank": 60,
+    "note": ""
+   }
+  ],
+  "adonai mitchell": [
+   {
+    "analyst": "Smyth",
+    "pos": "WR",
+    "rank": 60,
     "note": ""
    }
   ],
@@ -2376,6 +2364,14 @@
     "note": ""
    }
   ],
+  "jayden higgins": [
+   {
+    "analyst": "Holka",
+    "pos": "WR",
+    "rank": 47,
+    "note": ""
+   }
+  ],
   "jauan jennings": [
    {
     "analyst": "Holka",
@@ -2389,6 +2385,14 @@
     "analyst": "Holka",
     "pos": "WR",
     "rank": 56,
+    "note": ""
+   }
+  ],
+  "tyrone tracy jr.": [
+   {
+    "analyst": "Holka",
+    "pos": "RB",
+    "rank": 47,
     "note": ""
    }
   ]
