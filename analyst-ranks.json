@@ -492,7 +492,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 9,
+    "rank": 10,
     "note": "2025 adjusted fantasy PPG 19.7 (w/ Penix & pre injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -548,7 +548,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 10,
+    "rank": 9,
     "note": "2025 adjusted fantasy PPG 16.1 (in games w/ Lamb) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -660,7 +660,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 12,
+    "rank": 13,
     "note": "2025 adjusted fantasy PPG 18.8 (w/ Shough) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -716,7 +716,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 13,
+    "rank": 14,
     "note": "2025 adjusted fantasy PPG 18.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -752,7 +752,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 14,
+    "rank": 15,
     "note": "2025 adjusted fantasy PPG 13.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -766,7 +766,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 14,
+    "rank": 12,
     "note": "2025 adjusted fantasy PPG 12.1 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -808,7 +808,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 15,
+    "rank": 14,
     "note": "2025 adjusted fantasy PPG 16.2 (before wk15 injury) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -892,7 +892,7 @@
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 16,
+    "rank": 17,
     "note": "2025 adjusted fantasy PPG 10.5 (w/ C.J. Stroud) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
@@ -942,7 +942,7 @@
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 17,
+    "rank": 18,
     "note": "2025 adjusted fantasy PPG 12.0 (w/ Tyler Shough) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -998,7 +998,7 @@
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 18,
+    "rank": 19,
     "note": "2025 adjusted fantasy PPG 7.3 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1054,7 +1054,7 @@
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 19,
+    "rank": 20,
     "note": "2025 adjusted fantasy PPG 7.5 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    }
   ],
@@ -1062,7 +1062,7 @@
    {
     "analyst": "Smyth",
     "pos": "QB",
-    "rank": 20,
+    "rank": 21,
     "note": "2025 adjusted fantasy PPG 16.8 (in complete games    21 Orond) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1104,7 +1104,7 @@
    {
     "analyst": "Smyth",
     "pos": "TE",
-    "rank": 20,
+    "rank": 16,
     "note": ""
    }
   ],
@@ -1112,7 +1112,7 @@
    {
     "analyst": "Smyth",
     "pos": "QB",
-    "rank": 21,
+    "rank": 20,
     "note": "2025 adjusted fantasy PPG 17.4 (in complete games   18 Brent) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1196,7 +1196,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 22,
+    "rank": 23,
     "note": "2025 adjusted fantasy PPG 10.8 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1246,7 +1246,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 23,
+    "rank": 22,
     "note": "2025 adjusted fantasy PPG 11.0 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1276,7 +1276,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 24,
+    "rank": 25,
     "note": ""
    },
    {
@@ -1320,7 +1320,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 25,
+    "rank": 24,
     "note": "2025 adjusted fantasy PPG 13.5 (in full games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1428,7 +1428,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 27,
+    "rank": 28,
     "note": "2025 adjusted fantasy PPG 15.3 (healthy gms w/ Puka) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1472,7 +1472,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 28,
+    "rank": 27,
     "note": "2025 adjusted fantasy PPG 12.3 (w/ Jordan Love) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1502,7 +1502,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 29,
+    "rank": 39,
     "note": "2025 adjusted fantasy PPG 18.0 (in healthy games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1670,7 +1670,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 33,
+    "rank": 29,
     "note": ""
    }
   ],
@@ -1692,7 +1692,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 34,
+    "rank": 33,
     "note": "2025 adjusted fantasy PPG 10.8 (in Spears full games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1720,7 +1720,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 35,
+    "rank": 34,
     "note": "2025 adjusted fantasy PPG 8.8 (Since Wk7 full snaps) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1748,7 +1748,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 36,
+    "rank": 35,
     "note": "2025 adjusted fantasy PPG 9.5 (2H w/ healthy Swift) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1776,7 +1776,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 37,
+    "rank": 36,
     "note": "2025 adjusted fantasy PPG 6.3 (full games w/ Jones) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -1804,7 +1804,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 38,
+    "rank": 37,
     "note": ""
    },
    {
@@ -1832,7 +1832,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 39,
+    "rank": 38,
     "note": "2025 adjusted fantasy PPG 11.6 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -2066,7 +2066,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 48,
+    "rank": 53,
     "note": "2025 adjusted fantasy PPG 6.7 — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -2122,7 +2122,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 50,
+    "rank": 48,
     "note": ""
    }
   ],
@@ -2144,7 +2144,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 51,
+    "rank": 50,
     "note": ""
    }
   ],
@@ -2174,7 +2174,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 53,
+    "rank": 51,
     "note": ""
    }
   ],
@@ -2210,7 +2210,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 54,
+    "rank": 59,
     "note": "2025 adjusted fantasy PPG 9.7 (in complete games) — Smyth's context-adjusted rate stat (removes injury/backup-QB/part-time-role noise, adds Wk18+playoffs)"
    },
    {
@@ -2224,7 +2224,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 55,
+    "rank": 54,
     "note": ""
    }
   ],
@@ -2254,7 +2254,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 56,
+    "rank": 55,
     "note": ""
    }
   ],
@@ -2276,7 +2276,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 57,
+    "rank": 60,
     "note": ""
    },
    {
@@ -2304,7 +2304,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 58,
+    "rank": 56,
     "note": ""
    }
   ],
@@ -2320,7 +2320,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 59,
+    "rank": 57,
     "note": ""
    }
   ],
@@ -2328,7 +2328,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 59,
+    "rank": 60,
     "note": ""
    }
   ],
@@ -2336,7 +2336,7 @@
    {
     "analyst": "Smyth",
     "pos": "RB",
-    "rank": 60,
+    "rank": 58,
     "note": ""
    }
   ],
@@ -2344,7 +2344,7 @@
    {
     "analyst": "Smyth",
     "pos": "WR",
-    "rank": 60,
+    "rank": 59,
     "note": ""
    }
   ],
