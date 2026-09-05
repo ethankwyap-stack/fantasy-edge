@@ -3,7 +3,8 @@ on:
   schedule:
     # Daily, 7am PDT (14:00 UTC, drifts to 6am after Nov PST switch, accepted like the other
     # crons) — after the injury report settles overnight, before the day's FAAB deadline.
-    - cron: '0 14 * * *'
+    # :09 not :00 — GitHub drops overflow from the top-of-hour queue.
+    - cron: '9 14 * * *'
   workflow_dispatch:
 jobs:
   check:

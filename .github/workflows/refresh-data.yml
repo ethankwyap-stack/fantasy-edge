@@ -5,7 +5,8 @@ name: Weekly data refresh
 # Sept-Dec only — there is nothing to refresh in the offseason.
 on:
   schedule:
-    - cron: '0 13 * 9-12 2'
+    # :09 not :00 — GitHub drops overflow from the top-of-hour queue.
+    - cron: '9 13 * 9-12 2'
   workflow_dispatch:
 permissions:
   contents: write

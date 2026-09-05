@@ -3,7 +3,9 @@ on:
   schedule:
     # Same hourly 6am-9pm PDT window as waiver-alert.yml (drifts 1h after the Nov PST switch,
     # accepted there for the same reason).
-    - cron: '0 13-23,0-4 * * *'
+    # :19 not :00 — GitHub drops overflow from the top-of-hour queue. A
+    # different minute from waiver-alert so the two never queue together.
+    - cron: '19 13-23,0-4 * * *'
   workflow_dispatch:
 jobs:
   alert:

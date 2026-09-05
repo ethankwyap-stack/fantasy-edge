@@ -4,7 +4,8 @@ on:
     # ponytail: 5x/day (6am, 9am, 12pm, 3pm, 6pm PDT) pinned in UTC; drifts 1h after the Nov PST switch, acceptable.
     # 6am start is deliberate: FAAB bids process at 10am ET (7am PDT), so this is the last run
     # before the deadline that still leaves an hour to act on it.
-    - cron: '0 13,16,19,22,1 * * *'
+    # :23 not :00 — GitHub drops overflow from the top-of-hour queue.
+    - cron: '23 13,16,19,22,1 * * *'
   workflow_dispatch:
 jobs:
   alert:
