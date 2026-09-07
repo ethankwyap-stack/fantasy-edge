@@ -1,0 +1,168 @@
+{
+  "generated": "2026-09-07T15:21:03.954Z",
+  "bootstraps": 2000,
+  "n": 4536,
+  "unit": "cluster bootstrap resamples PLAYERS, not player-weeks",
+  "byPosition": {
+    "QB": {
+      "n": 648,
+      "players": 46,
+      "accuratePct": {
+        "est": 23.302,
+        "lo": 19.256,
+        "hi": 27.055
+      },
+      "vsChance": {
+        "observed": 8.498,
+        "chanceMean": 8.879,
+        "chanceLo": 8.668,
+        "chanceHi": 9.082,
+        "p": 0
+      },
+      "spearman": {
+        "est": 0.151,
+        "lo": -0.357,
+        "hi": 0.51
+      },
+      "pctErrorPositive": 68.673,
+      "topVsBottom": {
+        "slices": [
+          "1-6",
+          "7-12"
+        ],
+        "pointsErrDiff": {
+          "est": -0.016,
+          "lo": -0.056,
+          "hi": 0.026,
+          "p": 0.49
+        },
+        "rankErrDiff": {
+          "est": 1.015,
+          "lo": 0.135,
+          "hi": 2.239,
+          "p": 0.023
+        }
+      }
+    },
+    "TE": {
+      "n": 648,
+      "players": 58,
+      "accuratePct": {
+        "est": 23.457,
+        "lo": 19.873,
+        "hi": 27.682
+      },
+      "vsChance": {
+        "observed": 12.272,
+        "chanceMean": 12.961,
+        "chanceLo": 12.747,
+        "chanceHi": 13.167,
+        "p": 0
+      },
+      "spearman": {
+        "est": 0.29,
+        "lo": -0.175,
+        "hi": 0.811
+      },
+      "pctErrorPositive": 72.685,
+      "topVsBottom": {
+        "slices": [
+          "1-6",
+          "7-12"
+        ],
+        "pointsErrDiff": {
+          "est": -0.062,
+          "lo": -0.119,
+          "hi": -0.003,
+          "p": 0.04
+        },
+        "rankErrDiff": {
+          "est": -3.383,
+          "lo": -5.708,
+          "hi": -0.984,
+          "p": 0.004
+        }
+      }
+    },
+    "RB": {
+      "n": 1620,
+      "players": 113,
+      "accuratePct": {
+        "est": 16.111,
+        "lo": 14.091,
+        "hi": 18.197
+      },
+      "vsChance": {
+        "observed": 13.473,
+        "chanceMean": 15.275,
+        "chanceLo": 14.933,
+        "chanceHi": 15.62,
+        "p": 0
+      },
+      "spearman": {
+        "est": 0.27,
+        "lo": -0.151,
+        "hi": 0.596
+      },
+      "pctErrorPositive": 60.556,
+      "topVsBottom": {
+        "slices": [
+          "1-6",
+          "21-30"
+        ],
+        "pointsErrDiff": {
+          "est": -0.103,
+          "lo": -0.149,
+          "hi": -0.053,
+          "p": 0
+        },
+        "rankErrDiff": {
+          "est": -1.267,
+          "lo": -3.16,
+          "hi": 1.078,
+          "p": 0.248
+        }
+      }
+    },
+    "WR": {
+      "n": 1620,
+      "players": 110,
+      "accuratePct": {
+        "est": 10.185,
+        "lo": 8.024,
+        "hi": 12.265
+      },
+      "vsChance": {
+        "observed": 23.77,
+        "chanceMean": 25.019,
+        "chanceLo": 24.682,
+        "chanceHi": 25.355,
+        "p": 0
+      },
+      "spearman": {
+        "est": 0.2,
+        "lo": -0.215,
+        "hi": 0.434
+      },
+      "pctErrorPositive": 69.877,
+      "topVsBottom": {
+        "slices": [
+          "1-6",
+          "21-30"
+        ],
+        "pointsErrDiff": {
+          "est": -0.093,
+          "lo": -0.138,
+          "hi": -0.049,
+          "p": 0
+        },
+        "rankErrDiff": {
+          "est": -2.01,
+          "lo": -5.304,
+          "hi": 2.619,
+          "p": 0.323
+        }
+      }
+    }
+  }
+}

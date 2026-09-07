@@ -27,6 +27,7 @@ const TIERS = [['accurate', 0, 2], ['less accurate', 3, 5], ['not accurate', 6, 
 const SLICES = { QB: [[1, 6], [7, 12]], TE: [[1, 6], [7, 12]],
                  RB: [[1, 6], [7, 12], [13, 20], [21, 30]], WR: [[1, 6], [7, 12], [13, 20], [21, 30]] };
 const OUT = 'rank-accuracy.json';
+const RAW = 'rank-accuracy-raw.json';
 
 // The FOUR stat discriminators (seasonId / statSourceId / scoringPeriodId / statSplitTypeId).
 // A weekly entry is statSplitTypeId 1; statSplitTypeId 0 on scoringPeriodId 0 is the SEASON
@@ -174,6 +175,9 @@ async function main() {
   }
   const res = report(all);
   fs.writeFileSync(OUT, JSON.stringify(res, null, 2));
+  // Raw graded player-weeks, for scripts/rank-accuracy-stats.js. Every headline number is
+  // derived from this array, so a test can re-derive it instead of trusting the summary.
+  fs.writeFileSync(RAW, JSON.stringify(all));
   for (const pos of Object.keys(BAND)) {
     const c = res.byPosition[pos].combined;
     console.log(`\n${pos} (n=${c.n})  accurate ${c.pct['accurate']}% | less ${c.pct['less accurate']}% | not ${c.pct['not accurate']}%`);
@@ -181,7 +185,7 @@ async function main() {
     for (const [k, s] of Object.entries(res.byPosition[pos].slices))
       console.log(`   proj ${k.padEnd(6)} n=${String(s.n).padStart(4)}  |err| ${s.meanAbsErr}  signed ${s.meanSignedErr}  ptsErr ${s.meanPtsErr}`);
   }
-  console.log(`\nwrote ${OUT}`);
+  console.log(`\nwrote ${OUT} + ${RAW} (${all.length} graded player-weeks)`);
 }
 
 if (require.main === module) {
