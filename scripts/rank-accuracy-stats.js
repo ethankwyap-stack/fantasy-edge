@@ -105,6 +105,97 @@ function spearman(recs) {
   return rhos;
 }
 
+
+// ---------------------------------------------------------------------------
+// Formal hypothesis tests. H0 = "no change" (the player finishes where he was
+// projected), H1 = "change".
+//
+// FAIRNESS FIX, and it is the whole reason this section is not just a re-read of
+// main()'s numbers: `realRank` in the raw file is a rank inside the FULL live pool
+// (~90 WRs with a stat row), while `projRank` is a rank inside the graded top 30.
+// Comparing them directly builds in a guaranteed downward shift that has nothing to
+// do with being wrong — a projected WR30 cannot finish better than 30th on a scale
+// he shares with 60 more men. So every test below re-ranks the actuals WITHIN the
+// graded set first, which is the only version of "no change" that could ever be true.
+function withinSetShifts(recs) {
+  const key = r => `${r.season}|${r.week}|${r.pos}`;
+  const groups = new Map();
+  for (const r of recs) { if (!groups.has(key(r))) groups.set(key(r), []); groups.get(key(r)).push(r); }
+  const out = [];
+  for (const g of groups.values()) {
+    const order = [...g].sort((a, b) => a.realRank - b.realRank);
+    const rr = new Map(order.map((r, i) => [r, i + 1]));
+    for (const r of g) out.push({ ...r, shift: rr.get(r) - r.projRank });
+  }
+  return out;
+}
+
+// Holm-Bonferroni: testing four positions is four chances to get lucky. Holm is
+// uniformly more powerful than plain Bonferroni and just as easy to defend.
+function holm(pvals) {
+  const idx = pvals.map((p, i) => [p, i]).sort((a, b) => a[0] - b[0]);
+  const m = pvals.length, adj = new Array(m);
+  let run = 0;
+  idx.forEach(([p, i], k) => { run = Math.max(run, (m - k) * p); adj[i] = Math.min(1, +run.toFixed(4)); });
+  return adj;
+}
+
+// Two-sided cluster-bootstrap test of H0: stat(sample) === h0. The +1s are a
+// Davison-Hinkley correction — a bootstrap can never honestly report p = 0, only
+// "smaller than 1/(B+1)", and printing a bare 0 invites over-claiming.
+function testAgainst(recs, stat, h0, seed) {
+  const b = clusterBoot(recs, stat, seed);
+  const groups = [...byPlayer(recs).values()], rand = rng(seed + 1), draws = [];
+  for (let i = 0; i < B; i++) {
+    const s = [];
+    for (let j = 0; j < groups.length; j++) s.push(...groups[Math.floor(rand() * groups.length)]);
+    draws.push(stat(s));
+  }
+  const side = Math.min(draws.filter(v => v <= h0).length, draws.filter(v => v >= h0).length);
+  return { est: r3(b.est), lo: r3(b.lo), hi: r3(b.hi), h0, p: Math.min(1, 2 * (side + 1) / (draws.length + 1)) };
+}
+
+function hypothesis() {
+  if (!fs.existsSync(RAW)) { console.error(`missing ${RAW}`); process.exit(1); }
+  const all = withinSetShifts(JSON.parse(fs.readFileSync(RAW)));
+  const positions = Object.keys(SLICES);
+  const tests = [
+    { id: 'no-move', h0: 0,
+      label: 'H0: the projected rank IS the finishing rank (mean |shift| = 0)',
+      stat: s => mean(s.map(r => Math.abs(r.shift))) },
+    { id: 'no-bias', h0: 0,
+      label: 'H0: shifts are unbiased (mean signed shift = 0) — no systematic fall or rise',
+      stat: s => mean(s.map(r => r.shift)) },
+    { id: 'symmetry', h0: 50,
+      label: 'H0: a mover is as likely to rise as to fall (P(fall) = 50%)',
+      stat: s => { const m = s.filter(r => r.shift !== 0); return 100 * m.filter(r => r.shift > 0).length / m.length; } },
+  ];
+  const out = { generated: new Date().toISOString(), bootstraps: B,
+    note: 'actuals re-ranked WITHIN the graded set; p-values Holm-corrected across the 4 positions',
+    tests: {} };
+
+  console.log('Hypothesis tests — H0 = no change, H1 = change');
+  console.log(`${all.length} graded player-weeks, ${byPlayer(all).size} players, ${B} cluster bootstraps`);
+  console.log('Actuals re-ranked within the graded set, so "no change" is a reachable outcome.\n');
+
+  for (const t of tests) {
+    const raw = positions.map((pos, i) => testAgainst(all.filter(r => r.pos === pos), t.stat, t.h0, 100 + i));
+    const adj = holm(raw.map(r => r.p));
+    console.log(t.label);
+    out.tests[t.id] = { h0: t.label, byPosition: {} };
+    positions.forEach((pos, i) => {
+      const r = raw[i], pa = adj[i], rej = pa < 0.05;
+      out.tests[t.id].byPosition[pos] = { ...r, pHolm: pa, reject: rej };
+      console.log(`  ${pos}  est ${String(r.est).padStart(7)}  95% CI [${r.lo}, ${r.hi}]`
+        + `  p ${r.p <= 0.001 ? '<0.001' : r.p.toFixed(3)}  Holm ${pa <= 0.001 ? '<0.001' : pa.toFixed(3)}`
+        + `  -> ${rej ? 'REJECT H0' : 'fail to reject'}`);
+    });
+    console.log('');
+  }
+  fs.writeFileSync('rank-accuracy-hypothesis.json', JSON.stringify(out, null, 2));
+  console.log('wrote rank-accuracy-hypothesis.json');
+}
+
 function selftest() {
   const A = require('assert');
   // clusterBoot must treat one player's many weeks as ONE observation, not many: a dataset
@@ -130,6 +221,25 @@ function selftest() {
   // bootDiff must report a p near 1 when the two samples are the same thing
   const d = bootDiff(many, many.map(r => ({ ...r })), st);
   A.equal(d.est, 0, 'identical samples differ by zero');
+  // withinSetShifts must make "no change" REACHABLE: a week whose projected order is
+  // exactly the finishing order has to give all-zero shifts, even though realRank counts
+  // from a bigger pool (every realRank here is offset by 40).
+  const wk = Array.from({ length: 10 }, (_, i) => ({ ...mk('w' + i, 0), pos: 'RB', season: 2025, week: 3, projRank: i + 1, realRank: 41 + i }));
+  A.ok(withinSetShifts(wk).every(r => r.shift === 0), 'within-set re-rank makes no-change reachable');
+  // and a genuine swap of the top two must survive as +1 / -1, not get normalised away
+  const sw = withinSetShifts([{ ...wk[0], realRank: 42 }, { ...wk[1], realRank: 41 }, ...wk.slice(2)]);
+  A.deepEqual(sw.slice(0, 2).map(r => r.shift), [1, -1], 'a genuine swap survives the re-rank');
+
+  // Holm must never lower a p-value and must be no harsher than Bonferroni
+  const hp = [0.01, 0.04, 0.03, 0.2], h = holm(hp);
+  A.ok(h.every((v, i) => v >= hp[i]), 'Holm never lowers a p-value');
+  A.ok(h[0] <= 4 * 0.01 + 1e-9, 'Holm is no harsher than Bonferroni');
+
+  // testAgainst must fail to reject a TRUE H0 and reject a plainly false one
+  const flat = Array.from({ length: 60 }, (_, i) => ({ name: 'f' + i, shift: i % 2 ? 1 : -1 }));
+  A.ok(testAgainst(flat, z => mean(z.map(r => r.shift)), 0, 5).p > 0.05, 'true H0 not rejected');
+  A.ok(testAgainst(flat, z => mean(z.map(r => Math.abs(r.shift))), 0, 5).p < 0.05, 'false H0 rejected');
+
   console.log('selftest OK');
 }
 
@@ -178,5 +288,10 @@ function main() {
   console.log('wrote rank-accuracy-stats.json');
 }
 
-if (require.main === module) { process.argv.includes('--selftest') ? selftest() : main(); }
-module.exports = { clusterBoot, bootDiff, permTest, spearman };
+if (require.main === module) {
+  const a = process.argv.slice(2);
+  if (a.includes('--selftest')) selftest();
+  else if (a.includes('--hypothesis')) hypothesis();
+  else main();
+}
+module.exports = { clusterBoot, bootDiff, permTest, spearman, withinSetShifts, holm, testAgainst };

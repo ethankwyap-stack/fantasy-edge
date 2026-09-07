@@ -1,0 +1,130 @@
+{
+  "generated": "2026-09-07T15:47:32.519Z",
+  "bootstraps": 2000,
+  "note": "actuals re-ranked WITHIN the graded set; p-values Holm-corrected across the 4 positions",
+  "tests": {
+    "no-move": {
+      "h0": "H0: the projected rank IS the finishing rank (mean |shift| = 0)",
+      "byPosition": {
+        "QB": {
+          "est": 3.611,
+          "lo": 3.438,
+          "hi": 3.8,
+          "h0": 0,
+          "p": 0.0009995002498750624,
+          "pHolm": 0.004,
+          "reject": true
+        },
+        "TE": {
+          "est": 3.244,
+          "lo": 3.01,
+          "hi": 3.453,
+          "h0": 0,
+          "p": 0.0009995002498750624,
+          "pHolm": 0.004,
+          "reject": true
+        },
+        "RB": {
+          "est": 8.306,
+          "lo": 8.054,
+          "hi": 8.576,
+          "h0": 0,
+          "p": 0.0009995002498750624,
+          "pHolm": 0.004,
+          "reject": true
+        },
+        "WR": {
+          "est": 8.833,
+          "lo": 8.582,
+          "hi": 9.093,
+          "h0": 0,
+          "p": 0.0009995002498750624,
+          "pHolm": 0.004,
+          "reject": true
+        }
+      }
+    },
+    "no-bias": {
+      "h0": "H0: shifts are unbiased (mean signed shift = 0) — no systematic fall or rise",
+      "byPosition": {
+        "QB": {
+          "est": 0,
+          "lo": -0.725,
+          "hi": 0.642,
+          "h0": 0,
+          "p": 1,
+          "pHolm": 1,
+          "reject": false
+        },
+        "TE": {
+          "est": 0,
+          "lo": -0.607,
+          "hi": 0.508,
+          "h0": 0,
+          "p": 0.9685157421289355,
+          "pHolm": 1,
+          "reject": false
+        },
+        "RB": {
+          "est": 0,
+          "lo": -1.034,
+          "hi": 0.966,
+          "h0": 0,
+          "p": 0.9515242378810594,
+          "pHolm": 1,
+          "reject": false
+        },
+        "WR": {
+          "est": 0,
+          "lo": -1.096,
+          "hi": 1.1,
+          "h0": 0,
+          "p": 0.9865067466266867,
+          "pHolm": 1,
+          "reject": false
+        }
+      }
+    },
+    "symmetry": {
+      "h0": "H0: a mover is as likely to rise as to fall (P(fall) = 50%)",
+      "byPosition": {
+        "QB": {
+          "est": 50.592,
+          "lo": 42.373,
+          "hi": 58.222,
+          "h0": 50,
+          "p": 0.9165417291354323,
+          "pHolm": 1,
+          "reject": false
+        },
+        "TE": {
+          "est": 51.22,
+          "lo": 44.597,
+          "hi": 56.984,
+          "h0": 50,
+          "p": 0.7166416791604198,
+          "pHolm": 1,
+          "reject": false
+        },
+        "RB": {
+          "est": 49.711,
+          "lo": 45.032,
+          "hi": 54.016,
+          "h0": 50,
+          "p": 0.8675662168915542,
+          "pHolm": 1,
+          "reject": false
+        },
+        "WR": {
+          "est": 50.321,
+          "lo": 46.007,
+          "hi": 54.979,
+          "h0": 50,
+          "p": 0.9085457271364318,
+          "pHolm": 1,
+          "reject": false
+        }
+      }
+    }
+  }
+}
