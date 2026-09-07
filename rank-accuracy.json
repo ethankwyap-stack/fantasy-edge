@@ -1,0 +1,742 @@
+{
+  "generated": "2026-09-07T15:16:02.760Z",
+  "seasons": [
+    2023,
+    2024,
+    2025
+  ],
+  "tiers": [
+    [
+      "accurate",
+      0,
+      2
+    ],
+    [
+      "less accurate",
+      3,
+      5
+    ],
+    [
+      "not accurate",
+      6,
+      null
+    ]
+  ],
+  "note": "meanPtsErr is the valid cross-slice volatility measure; rank error is bounded at band edges.",
+  "byPosition": {
+    "QB": {
+      "combined": {
+        "n": 648,
+        "tiers": {
+          "accurate": 151,
+          "less accurate": 144,
+          "not accurate": 353
+        },
+        "pct": {
+          "accurate": 23.3,
+          "less accurate": 22.2,
+          "not accurate": 54.5
+        },
+        "meanAbsErr": 8.5,
+        "meanSignedErr": 6.48,
+        "meanPtsErr": 0.34
+      },
+      "slices": {
+        "1-6": {
+          "n": 324,
+          "tiers": {
+            "accurate": 83,
+            "less accurate": 68,
+            "not accurate": 173
+          },
+          "pct": {
+            "accurate": 25.6,
+            "less accurate": 21,
+            "not accurate": 53.4
+          },
+          "meanAbsErr": 9.01,
+          "meanSignedErr": 8.25,
+          "meanPtsErr": 0.33
+        },
+        "7-12": {
+          "n": 324,
+          "tiers": {
+            "accurate": 68,
+            "less accurate": 76,
+            "not accurate": 180
+          },
+          "pct": {
+            "accurate": 21,
+            "less accurate": 23.5,
+            "not accurate": 55.6
+          },
+          "meanAbsErr": 7.99,
+          "meanSignedErr": 4.7,
+          "meanPtsErr": 0.35
+        }
+      },
+      "bySeason": {
+        "2023": {
+          "n": 216,
+          "tiers": {
+            "accurate": 52,
+            "less accurate": 52,
+            "not accurate": 112
+          },
+          "pct": {
+            "accurate": 24.1,
+            "less accurate": 24.1,
+            "not accurate": 51.9
+          },
+          "meanAbsErr": 8.38,
+          "meanSignedErr": 6.34,
+          "meanPtsErr": 0.33
+        },
+        "2024": {
+          "n": 216,
+          "tiers": {
+            "accurate": 54,
+            "less accurate": 47,
+            "not accurate": 115
+          },
+          "pct": {
+            "accurate": 25,
+            "less accurate": 21.8,
+            "not accurate": 53.2
+          },
+          "meanAbsErr": 8.25,
+          "meanSignedErr": 6.19,
+          "meanPtsErr": 0.35
+        },
+        "2025": {
+          "n": 216,
+          "tiers": {
+            "accurate": 45,
+            "less accurate": 45,
+            "not accurate": 126
+          },
+          "pct": {
+            "accurate": 20.8,
+            "less accurate": 20.8,
+            "not accurate": 58.3
+          },
+          "meanAbsErr": 8.88,
+          "meanSignedErr": 6.9,
+          "meanPtsErr": 0.34
+        }
+      }
+    },
+    "RB": {
+      "combined": {
+        "n": 1620,
+        "tiers": {
+          "accurate": 261,
+          "less accurate": 241,
+          "not accurate": 1118
+        },
+        "pct": {
+          "accurate": 16.1,
+          "less accurate": 14.9,
+          "not accurate": 69
+        },
+        "meanAbsErr": 13.47,
+        "meanSignedErr": 6.82,
+        "meanPtsErr": 0.43
+      },
+      "slices": {
+        "1-6": {
+          "n": 324,
+          "tiers": {
+            "accurate": 73,
+            "less accurate": 60,
+            "not accurate": 191
+          },
+          "pct": {
+            "accurate": 22.5,
+            "less accurate": 18.5,
+            "not accurate": 59
+          },
+          "meanAbsErr": 12.41,
+          "meanSignedErr": 11.76,
+          "meanPtsErr": 0.38
+        },
+        "7-12": {
+          "n": 324,
+          "tiers": {
+            "accurate": 68,
+            "less accurate": 50,
+            "not accurate": 206
+          },
+          "pct": {
+            "accurate": 21,
+            "less accurate": 15.4,
+            "not accurate": 63.6
+          },
+          "meanAbsErr": 13.56,
+          "meanSignedErr": 11.13,
+          "meanPtsErr": 0.4
+        },
+        "13-20": {
+          "n": 432,
+          "tiers": {
+            "accurate": 55,
+            "less accurate": 60,
+            "not accurate": 317
+          },
+          "pct": {
+            "accurate": 12.7,
+            "less accurate": 13.9,
+            "not accurate": 73.4
+          },
+          "meanAbsErr": 13.94,
+          "meanSignedErr": 6.87,
+          "meanPtsErr": 0.43
+        },
+        "21-30": {
+          "n": 540,
+          "tiers": {
+            "accurate": 65,
+            "less accurate": 71,
+            "not accurate": 404
+          },
+          "pct": {
+            "accurate": 12,
+            "less accurate": 13.1,
+            "not accurate": 74.8
+          },
+          "meanAbsErr": 13.68,
+          "meanSignedErr": 1.23,
+          "meanPtsErr": 0.48
+        }
+      },
+      "bySeason": {
+        "2023": {
+          "n": 540,
+          "tiers": {
+            "accurate": 82,
+            "less accurate": 82,
+            "not accurate": 376
+          },
+          "pct": {
+            "accurate": 15.2,
+            "less accurate": 15.2,
+            "not accurate": 69.6
+          },
+          "meanAbsErr": 15.04,
+          "meanSignedErr": 7.96,
+          "meanPtsErr": 0.45
+        },
+        "2024": {
+          "n": 540,
+          "tiers": {
+            "accurate": 99,
+            "less accurate": 85,
+            "not accurate": 356
+          },
+          "pct": {
+            "accurate": 18.3,
+            "less accurate": 15.7,
+            "not accurate": 65.9
+          },
+          "meanAbsErr": 12.6,
+          "meanSignedErr": 6.17,
+          "meanPtsErr": 0.41
+        },
+        "2025": {
+          "n": 540,
+          "tiers": {
+            "accurate": 80,
+            "less accurate": 74,
+            "not accurate": 386
+          },
+          "pct": {
+            "accurate": 14.8,
+            "less accurate": 13.7,
+            "not accurate": 71.5
+          },
+          "meanAbsErr": 12.78,
+          "meanSignedErr": 6.32,
+          "meanPtsErr": 0.43
+        }
+      }
+    },
+    "WR": {
+      "combined": {
+        "n": 1620,
+        "tiers": {
+          "accurate": 165,
+          "less accurate": 179,
+          "not accurate": 1276
+        },
+        "pct": {
+          "accurate": 10.2,
+          "less accurate": 11,
+          "not accurate": 78.8
+        },
+        "meanAbsErr": 23.77,
+        "meanSignedErr": 18.44,
+        "meanPtsErr": 0.46
+      },
+      "slices": {
+        "1-6": {
+          "n": 324,
+          "tiers": {
+            "accurate": 60,
+            "less accurate": 45,
+            "not accurate": 219
+          },
+          "pct": {
+            "accurate": 18.5,
+            "less accurate": 13.9,
+            "not accurate": 67.6
+          },
+          "meanAbsErr": 21.42,
+          "meanSignedErr": 20.94,
+          "meanPtsErr": 0.4
+        },
+        "7-12": {
+          "n": 324,
+          "tiers": {
+            "accurate": 33,
+            "less accurate": 33,
+            "not accurate": 258
+          },
+          "pct": {
+            "accurate": 10.2,
+            "less accurate": 10.2,
+            "not accurate": 79.6
+          },
+          "meanAbsErr": 26.78,
+          "meanSignedErr": 24.44,
+          "meanPtsErr": 0.46
+        },
+        "13-20": {
+          "n": 432,
+          "tiers": {
+            "accurate": 36,
+            "less accurate": 54,
+            "not accurate": 342
+          },
+          "pct": {
+            "accurate": 8.3,
+            "less accurate": 12.5,
+            "not accurate": 79.2
+          },
+          "meanAbsErr": 23.7,
+          "meanSignedErr": 18.71,
+          "meanPtsErr": 0.45
+        },
+        "21-30": {
+          "n": 540,
+          "tiers": {
+            "accurate": 36,
+            "less accurate": 47,
+            "not accurate": 457
+          },
+          "pct": {
+            "accurate": 6.7,
+            "less accurate": 8.7,
+            "not accurate": 84.6
+          },
+          "meanAbsErr": 23.43,
+          "meanSignedErr": 13.13,
+          "meanPtsErr": 0.49
+        }
+      },
+      "bySeason": {
+        "2023": {
+          "n": 540,
+          "tiers": {
+            "accurate": 59,
+            "less accurate": 64,
+            "not accurate": 417
+          },
+          "pct": {
+            "accurate": 10.9,
+            "less accurate": 11.9,
+            "not accurate": 77.2
+          },
+          "meanAbsErr": 25.74,
+          "meanSignedErr": 20.29,
+          "meanPtsErr": 0.47
+        },
+        "2024": {
+          "n": 540,
+          "tiers": {
+            "accurate": 52,
+            "less accurate": 55,
+            "not accurate": 433
+          },
+          "pct": {
+            "accurate": 9.6,
+            "less accurate": 10.2,
+            "not accurate": 80.2
+          },
+          "meanAbsErr": 22.64,
+          "meanSignedErr": 17.02,
+          "meanPtsErr": 0.45
+        },
+        "2025": {
+          "n": 540,
+          "tiers": {
+            "accurate": 54,
+            "less accurate": 60,
+            "not accurate": 426
+          },
+          "pct": {
+            "accurate": 10,
+            "less accurate": 11.1,
+            "not accurate": 78.9
+          },
+          "meanAbsErr": 22.92,
+          "meanSignedErr": 18.01,
+          "meanPtsErr": 0.44
+        }
+      }
+    },
+    "TE": {
+      "combined": {
+        "n": 648,
+        "tiers": {
+          "accurate": 152,
+          "less accurate": 110,
+          "not accurate": 386
+        },
+        "pct": {
+          "accurate": 23.5,
+          "less accurate": 17,
+          "not accurate": 59.6
+        },
+        "meanAbsErr": 12.27,
+        "meanSignedErr": 10.58,
+        "meanPtsErr": 0.5
+      },
+      "slices": {
+        "1-6": {
+          "n": 324,
+          "tiers": {
+            "accurate": 92,
+            "less accurate": 67,
+            "not accurate": 165
+          },
+          "pct": {
+            "accurate": 28.4,
+            "less accurate": 20.7,
+            "not accurate": 50.9
+          },
+          "meanAbsErr": 10.58,
+          "meanSignedErr": 9.72,
+          "meanPtsErr": 0.47
+        },
+        "7-12": {
+          "n": 324,
+          "tiers": {
+            "accurate": 60,
+            "less accurate": 43,
+            "not accurate": 221
+          },
+          "pct": {
+            "accurate": 18.5,
+            "less accurate": 13.3,
+            "not accurate": 68.2
+          },
+          "meanAbsErr": 13.96,
+          "meanSignedErr": 11.44,
+          "meanPtsErr": 0.53
+        }
+      },
+      "bySeason": {
+        "2023": {
+          "n": 216,
+          "tiers": {
+            "accurate": 49,
+            "less accurate": 40,
+            "not accurate": 127
+          },
+          "pct": {
+            "accurate": 22.7,
+            "less accurate": 18.5,
+            "not accurate": 58.8
+          },
+          "meanAbsErr": 13.23,
+          "meanSignedErr": 11.36,
+          "meanPtsErr": 0.51
+        },
+        "2024": {
+          "n": 216,
+          "tiers": {
+            "accurate": 50,
+            "less accurate": 39,
+            "not accurate": 127
+          },
+          "pct": {
+            "accurate": 23.1,
+            "less accurate": 18.1,
+            "not accurate": 58.8
+          },
+          "meanAbsErr": 11.21,
+          "meanSignedErr": 9.39,
+          "meanPtsErr": 0.5
+        },
+        "2025": {
+          "n": 216,
+          "tiers": {
+            "accurate": 53,
+            "less accurate": 31,
+            "not accurate": 132
+          },
+          "pct": {
+            "accurate": 24.5,
+            "less accurate": 14.4,
+            "not accurate": 61.1
+          },
+          "meanAbsErr": 12.38,
+          "meanSignedErr": 11,
+          "meanPtsErr": 0.49
+        }
+      }
+    }
+  },
+  "worstMisses": [
+    {
+      "name": "A.J. Brown",
+      "pos": "WR",
+      "projRank": 6,
+      "realRank": 205,
+      "err": 199,
+      "projPts": 17.26381006,
+      "actualPts": -0.1,
+      "ptsErr": 1.0057924640998976,
+      "season": 2023,
+      "week": 18
+    },
+    {
+      "name": "Jamal Agnew",
+      "pos": "WR",
+      "projRank": 18,
+      "realRank": 192,
+      "err": 174,
+      "projPts": 2.98288925,
+      "actualPts": -0.2,
+      "ptsErr": 1.0670490867201994,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Cody Thompson",
+      "pos": "WR",
+      "projRank": 20,
+      "realRank": 189,
+      "err": 169,
+      "projPts": 1.73388237,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Trent Taylor",
+      "pos": "WR",
+      "projRank": 25,
+      "realRank": 183,
+      "err": 158,
+      "projPts": 0.57112566,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Keith Kirkwood",
+      "pos": "WR",
+      "projRank": 22,
+      "realRank": 176,
+      "err": 154,
+      "projPts": 1.03594061,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Scott Miller",
+      "pos": "WR",
+      "projRank": 24,
+      "realRank": 173,
+      "err": 149,
+      "projPts": 0.80864743,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Marquise Goodwin",
+      "pos": "WR",
+      "projRank": 21,
+      "realRank": 160,
+      "err": 139,
+      "projPts": 1.12594548,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Sterling Shepard",
+      "pos": "WR",
+      "projRank": 15,
+      "realRank": 142,
+      "err": 127,
+      "projPts": 5.54047778,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Jakob Johnson",
+      "pos": "RB",
+      "projRank": 16,
+      "realRank": 140,
+      "err": 124,
+      "projPts": 0.54186582,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Olamide Zaccheaus",
+      "pos": "WR",
+      "projRank": 23,
+      "realRank": 145,
+      "err": 122,
+      "projPts": 0.91460971,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Randall Cobb",
+      "pos": "WR",
+      "projRank": 16,
+      "realRank": 137,
+      "err": 121,
+      "projPts": 4.14773737,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Jason Cabinda",
+      "pos": "RB",
+      "projRank": 15,
+      "realRank": 133,
+      "err": 118,
+      "projPts": 0.62597617,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Keith Smith",
+      "pos": "RB",
+      "projRank": 17,
+      "realRank": 135,
+      "err": 118,
+      "projPts": 0.50577368,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Mecole Hardman",
+      "pos": "WR",
+      "projRank": 11,
+      "realRank": 129,
+      "err": 118,
+      "projPts": 6.58956666,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Rashee Rice",
+      "pos": "WR",
+      "projRank": 2,
+      "realRank": 120,
+      "err": 118,
+      "projPts": 19.40092875,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2024,
+      "week": 4
+    },
+    {
+      "name": "Hunter Renfrow",
+      "pos": "WR",
+      "projRank": 5,
+      "realRank": 122,
+      "err": 117,
+      "projPts": 8.33216532,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "CeeDee Lamb",
+      "pos": "WR",
+      "projRank": 1,
+      "realRank": 117,
+      "err": 116,
+      "projPts": 20.00302814,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2025,
+      "week": 3
+    },
+    {
+      "name": "Godwin Igwebuike",
+      "pos": "RB",
+      "projRank": 13,
+      "realRank": 128,
+      "err": 115,
+      "projPts": 1.07955497,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    },
+    {
+      "name": "Deebo Samuel",
+      "pos": "WR",
+      "projRank": 9,
+      "realRank": 123,
+      "err": 114,
+      "projPts": 16.58225024,
+      "actualPts": 0.6,
+      "ptsErr": 0.9638167322699865,
+      "season": 2023,
+      "week": 4
+    },
+    {
+      "name": "Chase Claypool",
+      "pos": "WR",
+      "projRank": 8,
+      "realRank": 121,
+      "err": 113,
+      "projPts": 7.82568929,
+      "actualPts": 0,
+      "ptsErr": 1,
+      "season": 2023,
+      "week": 1
+    }
+  ]
+}
