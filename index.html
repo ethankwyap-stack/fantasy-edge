@@ -75,6 +75,7 @@
   <button data-tab="waivers">Waivers</button>
   <button data-tab="trades">Trades</button>
   <button data-tab="sos">Playoff SoS</button>
+  <button data-tab="usage">Usage</button>
 </nav>
 <div id="view" class="msg">Loading league data…</div>
 
@@ -273,7 +274,7 @@ async function load() {
     // 450 matches the research pool (scripts/draft-research.js) so every player Claude
     // analyzed actually renders — at 400 the deepest sleepers were paid for and never shown.
     const filter = encodeURIComponent(JSON.stringify({players:{limit:450, sortDraftRanks:{sortPriority:1, sortAsc:true, value:'PPR'}}}));
-    const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes, sos] = await Promise.all([
+    const [league, playerData, trending, analysis, ranks, injuries, news, boom, vnotes, sos, usage] = await Promise.all([
       espn('mTeam,mRoster,mSettings,mMatchup'),
       fetch('/api/espn?view=kona_player_info&filter='+filter+LQ).then(r=>r.json()),
       fetch('https://api.sleeper.app/v1/players/nfl/trending/add?limit=50').then(r=>r.json()).catch(()=>[]),
@@ -283,9 +284,12 @@ async function load() {
       fetch('/api/nfl?feed=news').then(r=>r.json()).catch(()=>({data:[]})),
       fetch('/boom-rates.json').then(r=>r.json()).catch(()=>({players:{}})),
       fetch('/video-notes.json').then(r=>r.json()).catch(()=>({notes:{}})),
-      fetch('/playoff-sos.json').then(r=>r.json()).catch(()=>({rows:[]}))
+      fetch('/playoff-sos.json').then(r=>r.json()).catch(()=>({rows:[]})),
+      // league 1 only: the report is built from LEAGUE_ID's rosters
+      LEAGUE === '2' ? {rows:[]} : fetch('/usage-report.json').then(r=>r.json()).catch(()=>({rows:[]}))
     ]);
     S.sos = sos;
+    S.usage = usage;
     S.vnotes = vnotes.notes || {};
     S.vnoteTtl = vnotes._ttlWeeks || 3;
     S.boom = boom.players || {};
@@ -1057,8 +1061,29 @@ const views = {
     <table><tr><th>NFL Team</th><th>Avg</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>Wk ${S.sos.weeks.join('/')} opponents</th></tr>${
       sorted.map(r => `<tr><td>${esc(r.team)}</td><td>${cell(r)(avg(r))}</td><td>${cell(r)(r.avgOppDefRank.QB)}</td><td>${cell(r)(r.avgOppDefRank.RB)}</td><td>${cell(r)(r.avgOppDefRank.WR)}</td><td>${cell(r)(r.avgOppDefRank.TE)}</td><td class="meta">${r.opponents.map(o=>o||'BYE').join(', ')}</td></tr>`).join('')
     }</table>`;
+  },
+  usage() {
+    const U = S.usage || {}, rows = U.rows || [];
+    if (!rows.length) return '<div class="msg">No usage data yet — it builds every Tuesday (weekly data refresh), or run <code>node --env-file=.env scripts/usage-report.js</code>. League 1 only.</div>';
+    const who = S.uwho ?? String(S.myTeamId ?? 'all'), pos = S.upos || 'ALL';
+    const v = x => x == null ? '—' : x;
+    const list = rows.filter(r => (pos === 'ALL' || r.pos === pos)
+      && (who === 'all' || (who === 'fa' ? r.ownedBy == null : String(r.ownedBy) === who)))
+      .sort((a, b) => a.pos.localeCompare(b.pos) || (b.wopr || 0) + (b.carryShare || 0) / 100 - (a.wopr || 0) - (a.carryShare || 0) / 100);
+    const flag = f => f === 'buy-low' ? '<span class="chip good">buy-low</span>' : f === 'sell-high' ? '<span class="chip risk">sell-high</span>' : '';
+    const ftn = f => f ? `${f.charted} charted tgts · play-action ${f.playAction}% · screen ${f.screen}% · motion ${f.motion}% · catchable ${f.catchable}% · contested ${f.contested}% · drops ${f.drops}` : 'no FTN-charted targets';
+    const teamOpts = Object.entries(U.teams || {}).map(([id, n]) => `<option value="${id}" ${who===id?'selected':''}>${esc(n)}${+id===S.myTeamId?' (you)':''}</option>`).join('');
+    return `<h2>Usage — ${U.season} season to date (week ${(U.weeks||[]).join(', ')})</h2>
+    <div style="color:var(--dim);font-size:13px;margin-bottom:8px">Role, not skill: snap/target/carry share settle within 2-3 weeks, points don't. <b>buy-low</b> = role ranks far above his points. <b>sell-high</b> = points far above his role. Tgt% / Car% = share of his NFL team's totals; Air% = share of team air yards; aDOT = avg target depth; RZ = targets/carries inside the 20; GL = carries inside the 5. Tap a row for FTN charting.${(U.unmatched||[]).length ? ` Not shown (no ${U.season} stats yet): ${U.unmatched.map(esc).join(', ')}.` : ''}</div>
+    <div class="slotbar"><select onchange="setUsage('who',this.value)"><option value="all" ${who==='all'?'selected':''}>Everyone</option><option value="fa" ${who==='fa'?'selected':''}>Best free agents</option>${teamOpts}</select>
+    ${['ALL','QB','RB','WR','TE'].map(p => `<span class="fchip ${pos===p?'on':''}" onclick="setUsage('pos','${p}')">${p}</span>`).join(' ')}</div>
+    <div class="tbl-wrap"><table><tr><th>Player</th><th>Snap%</th><th>Tgt%</th><th>Air%</th><th>aDOT</th><th>WOPR</th><th>Car%</th><th>RZ</th><th>GL</th><th>PPG</th></tr>${
+      list.map(r => `<tr onclick="this.nextElementSibling.hidden=!this.nextElementSibling.hidden" style="cursor:pointer"><td><b>${esc(r.name)}</b> ${flag(r.flag)}<br><span class="meta">${r.pos} · ${esc(r.team)} · ${r.ownedBy==null?'FA':esc(U.teams[r.ownedBy]||'')}</span></td><td>${v(r.snapPct)}</td><td>${v(r.tgtShare)}</td><td>${v(r.airShare)}</td><td>${v(r.adot)}</td><td>${v(r.wopr)}</td><td>${v(r.carryShare)}</td><td>${r.rzTgt}/${r.rzCar}</td><td>${r.glCar}</td><td>${v(r.ppg)}</td></tr>
+      <tr hidden><td colspan="10" class="meta">${ftn(r.ftn)}${r.pos==='QB'?` · EPA ${v(r.epa)} · CPOE ${v(r.cpoe)}`:''}${r.roleRank?` · role ${r.pos}${r.roleRank} vs points ${r.pos}${r.ptsRank}`:''}</td></tr>`).join('')
+    }</table></div>`;
   }
 };
+window.setUsage = (k, v) => { S['u'+k] = v; render(); };
 window.setSlot = v => { localStorage[K.slot] = v; render(); };
 function slotBar() {
   const size = S.teams.length, slot = +localStorage[K.slot], np = nextPick();

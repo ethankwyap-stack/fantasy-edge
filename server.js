@@ -23,6 +23,9 @@ const VNOTES = (() => { try { return fs.readFileSync(VNOTES_PATH); } catch { ret
 // Same literal-path rule for Vercel tracing; a missing file is fine — the tab just says so.
 const SOS_PATH = path.join(__dirname, 'playoff-sos.json');
 const SOS = (() => { try { return fs.readFileSync(SOS_PATH); } catch { return Buffer.from('{"rows":[]}'); } })();
+// Weekly usage report (scripts/usage-report.js). Same literal-path rule for Vercel tracing.
+const USAGE_PATH = path.join(__dirname, 'usage-report.json');
+const USAGE = (() => { try { return fs.readFileSync(USAGE_PATH); } catch { return Buffer.from('{"rows":[]}'); } })();
 // 2025 season postmortem data story. Same literal-path rule for Vercel tracing.
 // The file is also published as a claude.ai Artifact, so it stays artifact-shaped:
 // no doctype, no <head>, no <meta charset>. That's why this route sends charset
@@ -71,6 +74,10 @@ http.createServer((req, res) => {
   if (req.url.startsWith('/playoff-sos.json')) {
     res.setHeader('Content-Type', 'application/json');
     try { return res.end(fs.readFileSync(SOS_PATH)); } catch { return res.end(SOS); }
+  }
+  if (req.url.startsWith('/usage-report.json')) {
+    res.setHeader('Content-Type', 'application/json');
+    try { return res.end(fs.readFileSync(USAGE_PATH)); } catch { return res.end(USAGE); }
   }
   if (req.url.startsWith('/2025-postmortem')) {
     if (!POSTMORTEM) { res.statusCode = 404; return res.end('Postmortem page not found.'); }

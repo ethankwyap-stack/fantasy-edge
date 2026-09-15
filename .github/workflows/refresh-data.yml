@@ -21,6 +21,7 @@ jobs:
       # Assertions first: if the engine is broken, fail loudly instead of committing bad numbers.
       - run: node scripts/boom-rates.js --selftest
       - run: node scripts/seed-odds.js --selftest
+      - run: node scripts/usage-report.js --selftest
 
       # No .nflverse-cache in a fresh runner, so this always downloads current data.
       # boom-rates.js also refuses to read a cached file for the in-progress season.
@@ -30,6 +31,14 @@ jobs:
 
       # Seed odds need the live league (record so far + remaining schedule).
       - run: node scripts/seed-odds.js --iters 20000
+        env:
+          LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          SEASON: ${{ vars.SEASON || 2026 }}
+
+      # Smyth-style role data for every rostered player + best free agents (Usage tab).
+      - run: node scripts/usage-report.js
         env:
           LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
           ESPN_S2: ${{ secrets.ESPN_S2 }}
@@ -53,5 +62,5 @@ jobs:
           # commit as Ethan's account email — Vercel blocks deploys whose HEAD commit author it can't match
           git config user.name ethankwyap-stack
           git config user.email 274671613+ethankwyap-stack@users.noreply.github.com
-          git add boom-rates.json seed-odds.json
+          git add boom-rates.json seed-odds.json usage-report.json
           git diff --cached --quiet && echo "nothing changed" || (git commit -m "weekly data refresh $(date -u +%F)" && git push)
