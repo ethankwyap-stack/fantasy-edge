@@ -1,10 +1,10 @@
 name: Projection calibration log
 # Grades last week's sources (ESPN weekly proj, market ADP, each ranked analyst) against what
-# actually happened, per position. 13:20 UTC Tuesday = 6:20am PT, staggered 20min after the
+# actually happened, per position. 14:29 UTC Tuesday = 7:29am PT, staggered 20min after the
 # weekly data refresh so both crons don't push to the repo at the same moment. Sept-Dec only.
 on:
   schedule:
-    - cron: '20 13 * 9-12 2'
+    - cron: '29 14 * 9-12 2'
   workflow_dispatch:
 permissions:
   contents: write

@@ -1,12 +1,12 @@
 name: Weekly data refresh
 # Boom rates and seed odds are static JSON committed to the repo, so they only change
 # when something regenerates them. NFL games finish Monday night; nflverse publishes the
-# updated weekly files within a day. 13:00 UTC Tuesday = 6am PT, comfortably after.
+# updated weekly files within a day. 14:09 UTC Tuesday = 7:09am PT, comfortably after.
 # Sept-Dec only — there is nothing to refresh in the offseason.
 on:
   schedule:
     # :09 not :00 — GitHub drops overflow from the top-of-hour queue.
-    - cron: '9 13 * 9-12 2'
+    - cron: '9 14 * 9-12 2'
   workflow_dispatch:
 permissions:
   contents: write
