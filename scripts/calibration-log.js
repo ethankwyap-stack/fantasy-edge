@@ -32,7 +32,7 @@ const POS = { 1: 'QB', 2: 'RB', 3: 'WR', 4: 'TE', 5: 'K', 16: 'D/ST' };
 
 async function espn(views, opts = {}) {
   const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}?`
-    + views.map(v => `view=${v}`).join('&');
+    + views.map(v => `view=${v}`).join('&') + (opts.sp ? `&scoringPeriodId=${opts.sp}` : '');
   const headers = { Cookie: `SWID=${SWID}; espn_s2=${ESPN_S2}` };
   if (opts.filter) headers['x-fantasy-filter'] = JSON.stringify(opts.filter);
   const res = await fetch(url, { headers });
@@ -69,7 +69,9 @@ function rankOf(values) {
 
 async function fetchWeekRows(wk) {
   const guides = loadGuides();
+  // scoringPeriodId is required: without it ESPN returns only the current period's stats and every week-N actual is missing
   const pool = await espn(['kona_player_info'], {
+    sp: wk,
     filter: { players: { limit: 600, sortDraftRanks: { sortPriority: 1, sortAsc: true, value: 'PPR' } } },
   });
   const rows = [];
@@ -100,7 +102,6 @@ function gradeWeek(rows) {
 
   const out = {};
   for (const [pos, players] of Object.entries(byPos)) {
-    const actualRank = rankOf(players.map(p => ({ id: p.id, v: -p.actual }))); // higher actual = better
     const sources = { espnProj: p => (p.proj != null ? -p.proj : null), marketADP: p => p.adp };
     const analystNames = [...new Set(players.flatMap(p => Object.keys(p.analystRanks)))];
     for (const name of analystNames) sources[name] = p => p.analystRanks[name] ?? null;
@@ -109,6 +110,9 @@ function gradeWeek(rows) {
     for (const [src, getV] of Object.entries(sources)) {
       const have = players.filter(p => getV(p) != null);
       if (!have.length) continue;
+      // rank BOTH sides within `have` — a source covering a subset otherwise pairs ranks from two
+      // different pools and spearman() goes below -1 (Holka TE read -13.8 in week 1)
+      const actualRank = rankOf(have.map(p => ({ id: p.id, v: -p.actual }))); // higher actual = better
       const srcRank = rankOf(have.map(p => ({ id: p.id, v: getV(p) })));
       const pairs = have.map(p => [actualRank[p.id], srcRank[p.id]]);
       const rho = spearman(pairs);
@@ -158,6 +162,11 @@ function selftest() {
   assert.strictEqual(graded.RB.espnProj.spearman, 1, 'perfect agreement must be rho 1');
   assert.strictEqual(graded.RB.marketADP.spearman, -1, 'reversed order must be rho -1');
   assert.ok(!graded.RB.X, 'a source with only 3 graded players (n<4) must be dropped, not scored');
+
+  // an analyst who ranked only the bottom 4 (in correct order) must score rho 1 — actual ranks
+  // have to be re-counted 1..n inside the players he ranked, or ranks 2-5 vs 1-4 breaks the formula
+  const partial = gradeWeek(rows.map(r => ({ ...r, analystRanks: r.id > 1 ? { Y: r.id } : {} })));
+  assert.strictEqual(partial.RB.Y.spearman, 1, 'partial-coverage source must be ranked within its own players');
 
   assert.strictEqual(spearman([[1, 1], [2, 2], [3, 3]]), null, 'n<4 returns null');
   assert.strictEqual(spearman([[1, 1], [2, 2], [3, 3], [4, 4]]), 1, 'n=4 perfect agreement');
