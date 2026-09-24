@@ -123,6 +123,17 @@ function nextPick() {
 console.assert(!TRADED_ROUNDS.size || nextPick.toString().includes('TRADED_ROUNDS'), 'traded-round skip removed');
 
 const $ = s => document.querySelector(s);
+// usage-report.json is built Tuesdays, so its ownedBy goes stale after any trade/add/drop.
+// Re-derive it from the live ESPN rosters on every load. Same name norm as usage-report.js.
+const unorm = s => String(s || '').toLowerCase().replace(/\s+(jr|sr|ii|iii|iv|v)\.?$/, '').replace(/[^a-z]/g, '');
+function liveOwners(rows, rosters) {
+  const owner = {};
+  for (const [id, ps] of Object.entries(rosters)) for (const p of ps) owner[unorm(p.fullName)] = +id;
+  for (const r of rows) r.ownedBy = owner[unorm(r.name)] ?? null;
+}
+{ const rows = [{name:'Derrick Henry', ownedBy:1}, {name:'Chase Brown', ownedBy:7}, {name:'Kenneth Walker III', ownedBy:null}];
+  liveOwners(rows, {1:[{fullName:'Chase Brown'}], 7:[{fullName:'Derrick Henry'}, {fullName:'Kenneth Walker'}]});
+  console.assert(rows[0].ownedBy === 7 && rows[1].ownedBy === 1 && rows[2].ownedBy === 7, 'usage ownership not live'); }
 const espn = v => fetch('/api/espn?view='+v+LQ).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e.error||r.status)));
 
 function seasonProj(p) {
@@ -317,6 +328,7 @@ async function load() {
     S.faabBudget = acq?.isUsingAcquisitionBudget ? (acq.acquisitionBudget || 0) : 0;
     S.faabMin = acq?.minimumBid ?? 1;
     for (const t of S.teams) S.rosters[t.id] =(t.roster?.entries||[]).map(e => e.playerPoolEntry?.player).filter(Boolean);
+    if (S.usage.rows?.length) { liveOwners(S.usage.rows, S.rosters); S.usage.teams = Object.fromEntries(S.teams.map(t => [t.id, teamName(t)])); }
     // guess my team via SWID match on owners; fall back to picker
     S.myTeamId = +localStorage[K.myTeam] || S.teams[0]?.id;
     // K/DST excluded from the draft board — he only drafts them with his last 2 picks, no need to clutter the pool
