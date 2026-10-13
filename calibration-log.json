@@ -375,7 +375,101 @@
           "spearman": 0.293
         }
       }
+    },
+    "5": {
+      "RB": {
+        "espnProj": {
+          "n": 112,
+          "spearman": 0.865
+        },
+        "marketADP": {
+          "n": 119,
+          "spearman": 0.705
+        },
+        "Smyth": {
+          "n": 56,
+          "spearman": 0.431
+        },
+        "Holka": {
+          "n": 47,
+          "spearman": 0.366
+        }
+      },
+      "WR": {
+        "espnProj": {
+          "n": 173,
+          "spearman": 0.781
+        },
+        "marketADP": {
+          "n": 181,
+          "spearman": 0.651
+        },
+        "Smyth": {
+          "n": 55,
+          "spearman": 0.465
+        },
+        "Holka": {
+          "n": 54,
+          "spearman": 0.495
+        }
+      },
+      "TE": {
+        "espnProj": {
+          "n": 103,
+          "spearman": 0.794
+        },
+        "marketADP": {
+          "n": 116,
+          "spearman": 0.721
+        },
+        "Smyth": {
+          "n": 30,
+          "spearman": 0.442
+        },
+        "Holka": {
+          "n": 17,
+          "spearman": 0.206
+        }
+      },
+      "QB": {
+        "espnProj": {
+          "n": 69,
+          "spearman": 0.86
+        },
+        "marketADP": {
+          "n": 76,
+          "spearman": 0.77
+        },
+        "Smyth": {
+          "n": 30,
+          "spearman": 0.26
+        },
+        "Holka": {
+          "n": 23,
+          "spearman": 0.274
+        }
+      },
+      "D/ST": {
+        "espnProj": {
+          "n": 30,
+          "spearman": 0.263
+        },
+        "marketADP": {
+          "n": 30,
+          "spearman": 0.301
+        }
+      },
+      "K": {
+        "espnProj": {
+          "n": 29,
+          "spearman": 0.186
+        },
+        "marketADP": {
+          "n": 29,
+          "spearman": 0.4
+        }
+      }
     }
   },
-  "generated": "week 4"
+  "generated": "week 5"
 }
