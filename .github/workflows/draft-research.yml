@@ -9,10 +9,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: npm install @anthropic-ai/sdk --no-fund --no-audit
+      # Claude runs via `claude -p`, billed to the Claude plan through CLAUDE_CODE_OAUTH_TOKEN.
+      - run: npm install -g @anthropic-ai/claude-code@2.1.299 --no-fund --no-audit
       - run: node scripts/draft-research.js
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           LEAGUE_ID: ${{ secrets.LEAGUE_ID }}
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}

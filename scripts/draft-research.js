@@ -2,7 +2,7 @@
 // (ESPN current top 450 minus K/DST + 2024/2025 weekly actuals, Sleeper depth charts,
 //  NFL schedule, expert-sleepers.json, draft-guide.json), batches ~20 players per
 // position group to Claude, writes draft-analysis.json after every batch.
-// Dry-runs without ANTHROPIC_API_KEY: all fetches + sample prompt, no Claude call.
+// Dry-runs without CLAUDE_CODE_OAUTH_TOKEN (or CLAUDE_LIVE=1 to use your own `claude` login): all fetches + sample prompt, no Claude call.
 // Flags: --resume (skip players already in draft-analysis.json, retry failed batches)
 //        --sentiment-list (print the rookies/unsettled backfields worth a sentiment query, then stop)
 //        --sentiment-fetch [--limit N] (run those queries, write sentiment.json, then stop)
@@ -554,13 +554,13 @@ async function main() {
 
   const userMsg = b => `Position group: ${b.pos} — ${b.items.length} players, listed in current draft-rank order. Analyze every one.\n\n${b.items.map(x => x.text).join('\n')}`;
 
-  if (!process.env.ANTHROPIC_API_KEY) {
+  const claude = require('./claude-cli');
+  if (!claude.live()) {
     console.log(`--- sample batch prompt (${batches[0].pos}) ---\n${userMsg(batches[0])}\n--- end sample ---`);
-    return console.log(`Dry run complete: ${items.length} players, ${batches.length} batches ready. Set ANTHROPIC_API_KEY to generate.`);
+    return console.log(`Dry run complete: ${items.length} players, ${batches.length} batches ready. Set CLAUDE_CODE_OAUTH_TOKEN or CLAUDE_LIVE=1 to generate.`);
   }
 
-  const Anthropic = require('@anthropic-ai/sdk');
-  const client = new Anthropic();
+  const client = claude.client;
   const out = { generated: new Date().toISOString(), season: +SEASON, players: {} };
 
   // --resume keeps players already in draft-analysis.json and skips their batches, so a

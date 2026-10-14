@@ -364,14 +364,13 @@ ${videoLines.join('\n') || '(none)'}`;
 
   console.log('--- prompt ---\n' + prompt + '\n--- end prompt ---');
 
-  if (!process.env.ANTHROPIC_API_KEY) {
+  const claude = require('./claude-cli');
+  if (!claude.live()) {
     fs.writeFileSync(STATE_FILE, JSON.stringify(state));
-    return console.log('No ANTHROPIC_API_KEY — dry run, state saved, stopping before Claude.');
+    return console.log('No CLAUDE_CODE_OAUTH_TOKEN (or CLAUDE_LIVE=1) — dry run, state saved, stopping before Claude.');
   }
 
-  const Anthropic = require('@anthropic-ai/sdk');
-  const client = new Anthropic();
-  const response = await client.messages.create({
+  const response = await claude.client.messages.create({
     model: 'claude-sonnet-5',
     max_tokens: 1024,
     system: (faab ? `This league uses FAAB continuous waivers: every add is a blind bid, minimum $${faab.min}, and bids process daily at 10am ET. For EVERY add you recommend, give a bid as a dollar range AND as a percent of my remaining budget (e.g. "bid $45-60, 5-6% of your $1000"). Size the bid to how much the player actually moves my starting lineup, not to how many people are adding him, and check the budget table: if the rivals who need his position are nearly broke, bid at the low end. Say "wait" if he will still be there tomorrow.\n\n` : '') +
