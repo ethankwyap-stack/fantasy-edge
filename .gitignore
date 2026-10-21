@@ -11,3 +11,5 @@ handcuff-state.json
 HANDOFF.md
 handoff-archive/
 rank-accuracy-raw.json
+agensi/dist/
+.fantasy-cache
