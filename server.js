@@ -86,4 +86,4 @@ http.createServer((req, res) => {
   }
   res.setHeader('Content-Type', 'text/html');
   res.end(INDEX);
-}).listen(PORT, () => console.log('Fantasy Edge → http://localhost:' + PORT));
+}).listen(PORT, '127.0.0.1', () => console.log('Fantasy Edge → http://localhost:' + PORT));
