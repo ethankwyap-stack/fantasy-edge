@@ -61,7 +61,8 @@ async function main() {
   if (firstRun) return console.log(`First run — seeded ${trades.length} existing trade(s), no alert.`);
   if (!fresh.length) return console.log(`${trades.length} trade(s) live, none new since last run.`);
 
-  console.log(`${fresh.length} new trade(s):\n` + fresh.map(fmt).join('\n'));
+  // ponytail: Actions logs are public on a public repo, so team names only print locally
+  console.log(`${fresh.length} new trade(s)` + (process.env.GITHUB_ACTIONS ? '.' : ':\n' + fresh.map(fmt).join('\n')));
 
   if (!TELEGRAM_BOT_TOKEN) return console.log('No TELEGRAM_BOT_TOKEN — dry run, state saved, not sending.');
 

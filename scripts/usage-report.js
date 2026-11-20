@@ -169,7 +169,7 @@ async function main() {
     .map(p => p.fullName);
   fs.writeFileSync(OUT, JSON.stringify({
     generated: new Date().toISOString(), season: SEASON, weeks,
-    teams: Object.fromEntries(lg.teams.map(t => [t.id, t.name || String(t.id)])),
+    teams: Object.fromEntries(lg.teams.map(t => [t.id, 'Team ' + t.id]) /* ponytail: league team names stay out of this public repo; the app shows live names */),
     unmatched, rows,
   }));
   console.log(`usage-report.json — season ${SEASON}, weeks ${weeks.join(',')}: ${owned.length} rostered + ${rows.length - owned.length} free agents`);

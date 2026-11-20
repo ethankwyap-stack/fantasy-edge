@@ -150,7 +150,7 @@ async function load() {
   const regWeeks = sched.matchupPeriodCount;
 
   const teams = lg.teams.map(t => ({
-    id: t.id, name: t.name || t.abbrev,
+    id: t.id, name: 'Team ' + t.id, // ponytail: seed-odds.json is committed to a public repo, so no league team names
     players: (t.roster?.entries || []).map(e => {
       const p = e.playerPoolEntry.player;
       const wk = {};
@@ -182,7 +182,7 @@ function selftest() {
   const base = Object.fromEntries(teams.map(t => [t.id, { w: 0, l: 0, t: 0, pf: 0 }]));
   // Full round-robin — the zero-variance check below only holds on a BALANCED schedule.
   // On the real 12-team/14-week schedule two adjacent pairs legitimately swap on strength of
-  // schedule (verified: Rome 12-2 seeds above Skat 10-4 despite Skat projecting 0.2/wk higher).
+  // schedule (verified: a 12-2 team seeds above a 10-4 team despite the 10-4 team projecting 0.2/wk higher).
   const remaining = [ { wk: 1, home: 1, away: 2 }, { wk: 1, home: 3, away: 4 },
                       { wk: 2, home: 1, away: 3 }, { wk: 2, home: 2, away: 4 },
                       { wk: 3, home: 1, away: 4 }, { wk: 3, home: 2, away: 3 } ];

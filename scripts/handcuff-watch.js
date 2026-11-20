@@ -161,7 +161,7 @@ async function main() {
 
   console.log(`${'Injured starter'.padEnd(22)} ${'Team'.padEnd(5)} ${'Handcuff'.padEnd(22)} ${'Role'.padEnd(24)} Action`);
   for (const r of rows)
-    console.log(`${(r.inj.name + ' (' + r.inj.status + ')').padEnd(22)} ${r.inj.team.padEnd(5)} ${r.cuff.name.padEnd(22)} ${(r.roleLabel || 'no games yet').padEnd(24)} ${r.action}`);
+    console.log(`${(r.inj.name + ' (' + r.inj.status + ')').padEnd(22)} ${r.inj.team.padEnd(5)} ${r.cuff.name.padEnd(22)} ${(r.roleLabel || 'no games yet').padEnd(24)} ${process.env.GITHUB_ACTIONS ? r.action.replace(/^owned by .+? —/, 'owned by another team —') : r.action}`); // ponytail: public Actions logs, no team names
 
   if (myBudget != null) console.log(`\nYour remaining FAAB: $${myBudget}`);
   console.log('\nRole signal needs real season carries — early in the year most of these will read');
@@ -234,7 +234,7 @@ function selftest() {
   assert.strictEqual(suggestion('committee', { owner: null }), 'skip or $1 flier — committee backfields are where the 63% rate breaks down');
   assert.strictEqual(suggestion(undefined, { owner: null }), 'light bid ~5% — depth chart order only, confirm role once he actually plays');
   assert.strictEqual(suggestion('clear backfield', { owner: 'you' }), 'already yours — no action');
-  assert.strictEqual(suggestion('clear backfield', { owner: 'Nico Suave' }), 'owned by Nico Suave — no action');
+  assert.strictEqual(suggestion('clear backfield', { owner: 'Team E' }), 'owned by Team E — no action');
 
   const rowsA = [{ inj: { name: 'Zach Charbonnet' }, cuff: { name: 'Emanuel Wilson' } }];
   const rowsB = [{ inj: { name: 'Zach Charbonnet' }, cuff: { name: 'Emanuel Wilson' } }];

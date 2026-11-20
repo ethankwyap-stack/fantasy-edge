@@ -57,18 +57,18 @@
   },
   "live": {
     "teams": {
-      "1": "Waddling to LaPorta Potty",
-      "2": "Magic in the Hamptons",
-      "3": "Antonio Williams and Friends",
-      "4": "Osama Bin London",
-      "6": "Sutton on the Bench",
-      "7": "2 gurls 1 kupp",
-      "8": "Najee Germany ",
-      "9": "Sadih My Love Hall Down",
-      "10": "I Have KincAIDS",
-      "11": "Lamar-a-lago",
-      "12": "Flower+Water=making bread",
-      "13": "Dart on McCokkey"
+      "1": "Team 1",
+      "2": "Team 2",
+      "3": "Team 3",
+      "4": "Team 4",
+      "6": "Team 6",
+      "7": "Team 7",
+      "8": "Team 8",
+      "9": "Team 9",
+      "10": "Team 10",
+      "11": "Team 11",
+      "12": "Team 12",
+      "13": "Team 13"
     },
     "rows": [
       {

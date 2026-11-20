@@ -24,7 +24,7 @@
  "teams": [
   {
    "id": 4,
-   "name": "Osama Bin London",
+   "name": "Team 4",
    "projWeekly": 134.1,
    "seedProbs": [
     0.97555,
@@ -45,7 +45,7 @@
   },
   {
    "id": 10,
-   "name": "I Have KincAIDS",
+   "name": "Team 10",
    "projWeekly": 111.9,
    "seedProbs": [
     0.0236,
@@ -66,7 +66,7 @@
   },
   {
    "id": 1,
-   "name": "Bijan al Gaib",
+   "name": "Team 1",
    "projWeekly": 115.8,
    "seedProbs": [
     0.00065,
@@ -87,7 +87,7 @@
   },
   {
    "id": 13,
-   "name": "Moore on McConkey",
+   "name": "Team 13",
    "projWeekly": 113.2,
    "seedProbs": [
     0.0002,
@@ -108,7 +108,7 @@
   },
   {
    "id": 3,
-   "name": "COOKin this PATRIOTic MCDICC",
+   "name": "Team 3",
    "projWeekly": 110.9,
    "seedProbs": [
     0,
@@ -129,7 +129,7 @@
   },
   {
    "id": 7,
-   "name": "Shough Your Shoughing Mouth",
+   "name": "Team 7",
    "projWeekly": 111.6,
    "seedProbs": [
     0,
@@ -150,7 +150,7 @@
   },
   {
    "id": 11,
-   "name": "Lamar-a-lago",
+   "name": "Team 11",
    "projWeekly": 102.9,
    "seedProbs": [
     0,
@@ -171,7 +171,7 @@
   },
   {
    "id": 2,
-   "name": "Bass Pro Shop",
+   "name": "Team 2",
    "projWeekly": 106.5,
    "seedProbs": [
     0,
@@ -192,7 +192,7 @@
   },
   {
    "id": 8,
-   "name": "Ollie Garden II",
+   "name": "Team 8",
    "projWeekly": 98.5,
    "seedProbs": [
     0,
@@ -213,7 +213,7 @@
   },
   {
    "id": 9,
-   "name": "Dih My Love Hall Down",
+   "name": "Team 9",
    "projWeekly": 99.1,
    "seedProbs": [
     0,
@@ -234,7 +234,7 @@
   },
   {
    "id": 6,
-   "name": "Boston Tee Party",
+   "name": "Team 6",
    "projWeekly": 106.6,
    "seedProbs": [
     0,
@@ -255,7 +255,7 @@
   },
   {
    "id": 12,
-   "name": "Dee flowering Loveland",
+   "name": "Team 12",
    "projWeekly": 99.4,
    "seedProbs": [
     0,

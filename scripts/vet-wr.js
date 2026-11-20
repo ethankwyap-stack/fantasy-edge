@@ -170,7 +170,7 @@ async function live(prev) {
     });
   }
   rows.sort((a, b) => b.share - a.share);
-  const teams = Object.fromEntries(lg.teams.map(t => [t.id, t.name || String(t.id)]));
+  const teams = Object.fromEntries(lg.teams.map(t => [t.id, 'Team ' + t.id]) /* ponytail: league team names stay out of this public repo; the app shows live names */);
   return { teams, rows };
 }
 

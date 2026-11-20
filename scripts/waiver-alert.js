@@ -362,7 +362,9 @@ ${newsLines.join('\n') || '(none)'}
 Video/podcast takes I injected (week-tagged; opinion, not data — weigh below the usage numbers above):
 ${videoLines.join('\n') || '(none)'}`;
 
-  console.log('--- prompt ---\n' + prompt + '\n--- end prompt ---');
+  // ponytail: Actions logs are public on a public repo; the prompt and advice name league teams
+  const PUBLIC_LOG = !!process.env.GITHUB_ACTIONS;
+  if (!PUBLIC_LOG) console.log('--- prompt ---\n' + prompt + '\n--- end prompt ---');
 
   const claude = require('./claude-cli');
   if (!claude.live()) {
@@ -390,7 +392,7 @@ ${videoLines.join('\n') || '(none)'}`;
   const fresh = lines.filter(l => !state.sent.includes(sha(l)));
   if (!fresh.length) {
     fs.writeFileSync(STATE_FILE, JSON.stringify(state));
-    return console.log('All recommendations already sent previously — staying silent.\n' + advice);
+    return console.log('All recommendations already sent previously — staying silent.' + (PUBLIC_LOG ? '' : '\n' + advice));
   }
   state.sent.push(...fresh.map(sha));
   state.sent = state.sent.slice(-300);
@@ -400,7 +402,7 @@ ${videoLines.join('\n') || '(none)'}`;
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: '🏈 Fantasy Edge — recommended moves:\n\n' + fresh.join('\n') }),
   });
-  console.log('Sent:\n' + fresh.join('\n'));
+  console.log(PUBLIC_LOG ? `Sent ${fresh.length} recommendation(s).` : 'Sent:\n' + fresh.join('\n'));
 }
 // node scripts/waiver-alert.js --selftest — free, no network, covers the delta logic
 // a preseason dry run can never reach.

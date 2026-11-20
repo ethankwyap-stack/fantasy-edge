@@ -1,25 +1,49 @@
 # Fantasy Edge
 
-A decision-support suite for a private ESPN fantasy football league (PPR). It turns raw
-league, market, and play-by-play data into ranked, explainable recommendations — draft
-board, start/sit, waiver pickups, trade targets — and pushes alerts to Telegram when
-something actually changes.
+**A data tool I built for my ESPN fantasy football league. It blends ESPN, market and analyst rankings into one draft board, runs 20,000 simulated seasons for playoff odds, and pings me on Telegram only when something actually changes.**
 
-Built and run at zero infrastructure cost.
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?logo=javascript&logoColor=black)
+![Node](https://img.shields.io/badge/Node-Vercel%20functions-000000?logo=vercel)
+![Automation](https://img.shields.io/badge/GitHub%20Actions-6%20scheduled%20jobs-2088FF?logo=githubactions&logoColor=white)
+![Cost](https://img.shields.io/badge/hosting-%240-success)
+
+A decision-support suite for a private ESPN league (PPR scoring). It turns raw league,
+market, and play-by-play data into ranked, explainable recommendations: draft board,
+start/sit, waiver pickups, trade targets.
 
 ![The draft board — value over replacement, computed tiers, and a consensus rank blending
 ESPN, market ADP, and every analyst board](docs/draft-board.png)
 
-The live site is deployed but link-gated, since it reads a private league's rosters through
+The live site is deployed but locked behind a secret link, since it reads a private league's rosters through
 personal ESPN cookies. The screenshot above is the real app against the real league.
+Other managers' team names are replaced with "Team 4" etc. in this repo.
+
+## What the data told me about my own season
+
+After the 2025 season I turned the tool on myself: seven studies across all 12 teams and
+14 weeks, plus one across three NFL seasons. The result is a one-page postmortem,
+[`site/2025-postmortem.html`](site/2025-postmortem.html):
+
+![2025 postmortem: "You didn't lose on talent. You lost on deployment."](docs/postmortem.png)
+
+- **My draft found the most value in the league:** my team beat its preseason projection by 558 points more than the league average did.
+- **I lost on lineups.** I left 222 points on my bench, and only 26% of the points my waiver pickups scored came while they were in my lineup.
+- **I traded too much.** I came out ahead on 4 of 14 trades.
+- **Handcuffs beat sleepers.** Across three NFL seasons, a backup running back who inherits the job
+  became startable 63% of the time, and the rate barely moved year to year. Speculative late-round
+  running backs in my 2025 draft hit 19%. The two numbers measure different groups, so this is a
+  strong hint, not proof.
+
+Each finding turned into a rule for 2026 and a feature in the app (for example, a daily
+handcuff watch that alerts me when a starter goes down).
 
 ## What it does
 
 | Tool | What it answers |
 |---|---|
-| **Draft board** | Who is the best pick right now, and by how much? Value-based drafting (VBD) with computed tiers and cliff detection. |
+| **Draft board** | Who is the best pick right now, and by how much? Value-based drafting (VBD: how many more points a player scores than a replacement-level player at his position) with computed tiers and cliff detection. |
 | **Start / Sit** | Which lineup maximizes projected points this week? |
-| **Waiver finder** | Who should I bid on, and how much of my FAAB budget? |
+| **Waiver finder** | Who should I bid on, and how much of my FAAB budget (the free-agent bidding money each team gets per season)? |
 | **Trade finder** | Which two rosters have a mutually profitable swap? |
 | **Seed simulator** | Monte Carlo over the remaining schedule — what are my playoff odds? |
 | **Live draft sync** | A bookmarklet scrapes an in-progress ESPN draft and crosses picks off the board in real time. |
@@ -57,9 +81,9 @@ Adding an analyst is a file drop, not a code change.
 ## Stack
 
 Plain HTML + JS single page, no framework. Node server, deployed as a Vercel function.
-Seven GitHub Actions workflows run the scheduled jobs. State persists through the
-Actions cache. Alerts are change-driven — the LLM is only called when the underlying
-data actually moved, which is what keeps the cost at zero.
+Seven GitHub Actions workflows (six on a schedule) run the jobs. State persists through the
+Actions cache. Alerts are change-driven: Claude is only called when the underlying data actually moved.
+Hosting is free; the AI calls run on my existing Claude subscription.
 
 ## Engineering notes
 
@@ -89,6 +113,14 @@ node server.js   # http://localhost:4650
 Needs a `.env` with `LEAGUE_ID`, `ESPN_S2`, `SWID`. No secrets are committed —
 production values live in Vercel and GitHub Actions secrets.
 
+## How I built it
+
+I designed every model and rule here, chose what to measure, and checked the answers
+against what really happened in my league. I wrote the code with
+[Claude Code](https://claude.com/claude-code) as my pair programmer. The part I'm proudest
+of is the habit the engineering notes above show: never trust a number until it matches
+a known-good baseline.
+
 ---
 
-Built by **Ethan Yap** · UC Davis · [github.com/ethankwyap-stack](https://github.com/ethankwyap-stack)
+Built by **Ethan Yap** · UC Davis · [LinkedIn](https://www.linkedin.com/in/ethan-yap-827a45346/)
